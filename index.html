@@ -1,1 +1,341 @@
-data:text/html,<body style=margin:0;background:#000;><div style=position:fixed;z-index:999;color:transparent;text-shadow:0 0 10px #f00,0 0 20px #ff0,0 0 30px #0ff;font:bold 10vw sans-serif;text-align:center>生日快乐！</div><canvas id=c></canvas><script>const c=document.querySelector('#c'),d=c.getContext('2d');function r(){c.width=innerWidth,c.height=innerHeight}d.fillStyle='#000',d.fillRect(0,0,c.width,c.height);setInterval(()=>{for(let e=0;e<9;e++){let t=Math.random()*c.width,n=Math.random()*c.height,o=360*Math.random();d.beginPath(),d.arc(t,n,3,0,2*Math.PI),d.fillStyle=`hsl(${o},99%,50%)`,d.fill()}},50),c.onclick=e=>{let t=e.clientX,n=e.clientY;for(let e=0;e<99;e++){let o=2*Math.PI*Math.random(),i=7*Math.random();setTimeout(()=>{let e=0;const c=()=>{e+=.05,d.beginPath(),d.arc(t+Math.cos(o)*i*e,n+Math.sin(o)*i*e+3*e**2,2,0,2*Math.PI),d.fillStyle=`hsla(${o*180/Math.PI},99%,50%,${1-e})`,d.fill(),e<1&&requestAnimationFrame(c)};c()},30*e)}};</script>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日烟花</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #000428, #004e92);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            touch-action: manipulation;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .birthday-container {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.5);
+            max-width: 90%;
+            animation: pulse 3s infinite;
+        }
+
+        .birthday-text {
+            font: bold 10vw 'Microsoft Yahei', sans-serif;
+            background: linear-gradient(45deg, #ff0, #f0f, #0ff, #f00);
+            -webkit-background-clip: text;
+            color: transparent;
+            text-align: center;
+            animation: glow 2s ease-in-out infinite;
+            margin: 20px 0;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            line-height: 1.2;
+        }
+
+        .message {
+            color: white;
+            font-size: 5vw;
+            margin: 20px 0;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .name {
+            font-size: 8vw;
+            color: #FFD700;
+            font-weight: bold;
+            margin: 30px 0;
+            text-shadow: 0 0 20px #FFD700;
+            animation: zoom 5s infinite;
+        }
+
+        .instructions {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 4vw;
+            margin-top: 30px;
+            animation: fade 3s infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { text-shadow: 0 0 20px #fff, 0 0 30px #ff0; }
+            50% { text-shadow: 0 0 30px #ff0, 0 0 40px #ff0, 0 0 50px #ff0; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 50px rgba(255, 215, 0, 0.5); }
+            50% { transform: scale(1.02); box-shadow: 0 0 70px rgba(255, 215, 0, 0.8); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes zoom {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        @keyframes fade {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            touch-action: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="birthday-container">
+        <div class="birthday-text">🎉生日快乐！🎂</div>
+        <div class="message">亲爱的朋友</div>
+        <div class="name">[你的名字]</div>
+        <div class="message">愿你的每一天都如烟花般绚烂</div>
+        <div class="instructions">点击屏幕发射烟花</div>
+    </div>
+    <canvas id="fireworks"></canvas>
+
+    <script>
+        const canvas = document.getElementById('fireworks');
+        const ctx = canvas.getContext('2d');
+        let starsCreated = false;
+        let fireworks = [];
+        let particles = [];
+        let mouse = { x: 0, y: 0, isDown: false };
+        let birthdayTime = new Date().getTime();
+        let birthdayPersonName = "魏贝";
+        
+        // 生日祝福语
+        const birthdayMessages = [
+            "愿你的每一天都充满阳光和欢笑",
+            "新的一岁，新的开始，新的精彩",
+            "愿所有的美好都如期而至",
+            "生日快乐，梦想成真",
+            "友谊长存，时光不老"
+        ];
+
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            if(!starsCreated) createStars();
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        // 创建背景星星
+        function createStars() {
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+            for(let i=0; i<200; i++) {
+                const x = Math.random() * canvas.width;
+                const y = Math.random() * canvas.height;
+                const radius = Math.random() * 2;
+                
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            starsCreated = true;
+        }
+
+        class Firework {
+            constructor(targetX, targetY, color) {
+                this.x = canvas.width / 2;
+                this.y = canvas.height;
+                this.targetX = targetX || Math.random() * canvas.width;
+                this.targetY = targetY || Math.random() * canvas.height * 0.5;
+                this.speed = 3 + Math.random() * 4;
+                this.particles = [];
+                this.exploded = false;
+                this.color = color || `hsl(${Math.random() * 360}, 100%, 50%)`;
+                this.radius = 3;
+                this.alpha = 1;
+            }
+
+            update() {
+                if(!this.exploded) {
+                    // 计算到目标的距离
+                    const dx = this.targetX - this.x;
+                    const dy = this.targetY - this.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    // 移动烟花
+                    this.x += dx / distance * this.speed;
+                    this.y += dy / distance * this.speed;
+                    
+                    // 如果接近目标，爆炸
+                    if(distance < 5) this.explode();
+                    return false;
+                }
+                
+                // 更新粒子
+                this.particles.forEach((p, i) => {
+                    p.x += Math.cos(p.angle) * p.speed;
+                    p.y += Math.sin(p.angle) * p.speed + 1.5;
+                    p.alpha -= p.decay;
+                    p.speed *= 0.97;
+                    
+                    if(p.alpha <= 0) this.particles.splice(i, 1);
+                });
+                
+                return this.particles.length === 0;
+            }
+
+            explode() {
+                const particleCount = 120 + Math.random() * 80;
+                for(let i=0; i<particleCount; i++) {
+                    this.particles.push({
+                        x: this.x,
+                        y: this.y,
+                        angle: Math.PI * 2 * Math.random(),
+                        speed: 2 + Math.random() * 6,
+                        alpha: 1,
+                        decay: Math.random() * 0.015 + 0.01,
+                        radius: Math.random() * 2 + 1,
+                        color: this.color,
+                        gravity: 0.1
+                    });
+                }
+                this.exploded = true;
+                
+                // 随机显示生日祝福
+                if(Math.random() > 0.7) {
+                    createFloatingText(
+                        birthdayMessages[Math.floor(Math.random() * birthdayMessages.length)],
+                        this.x, this.y
+                    );
+                }
+            }
+
+            draw() {
+                if(!this.exploded) {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2);
+                    ctx.fillStyle = this.color;
+                    ctx.fill();
+                    
+                    // 绘制烟花尾迹
+                    ctx.beginPath();
+                    ctx.moveTo(canvas.width/2, canvas.height);
+                    ctx.lineTo(this.x, this.y);
+                    ctx.strokeStyle = this.color;
+                    ctx.lineWidth = 2;
+                    ctx.stroke();
+                }
+
+                this.particles.forEach(p => {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI*2);
+                    ctx.fillStyle = `hsla(${p.color.split('(')[1].split(')')[0]}, ${p.alpha})`;
+                    ctx.fill();
+                });
+            }
+        }
+
+        class FloatingText {
+            constructor(text, x, y) {
+                this.text = text;
+                this.x = x;
+                this.y = y;
+                this.alpha = 1;
+                this.life = 150;
+                this.size = 20 + Math.random() * 20;
+                this.color = `hsl(${Math.random() * 360}, 100%, 70%)`;
+            }
+            
+            update() {
+                this.y -= 1;
+                this.alpha -= 0.01;
+                this.life--;
+                return this.life > 0;
+            }
+            
+            draw() {
+                ctx.font = `${this.size}px Arial`;
+                ctx.fillStyle = `rgba(255, 255, 255, ${this.alpha})`;
+                ctx.textAlign = 'center';
+                ctx.fillText(this.text, this.x, this.y);
+            }
+        }
+        
+        let floatingTexts = [];
+        
+        function createFloatingText(text, x, y) {
+            floatingTexts.push(new FloatingText(text, x, y));
+        }
+
+        function animate() {
+            // 创建半透明黑色背景（制造拖尾效果）
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // 重新绘制星星
+            createStars();
+            
+            // 随机创建烟花
+            if(Math.random() < 0.025) {
+                fireworks.push(new Firework());
+            }
+            
+            // 如果鼠标按下，在鼠标位置创建烟花
+            if(mouse.isDown) {
+                fireworks.push(new Firework(mouse.x, mouse.y));
+                mouse.isDown = false;
+            }
+            
+            // 更新并绘制烟花
+            fireworks.forEach((fw, i) => {
+                if(fw.update()) fireworks.splice(i, 1);
+                fw.draw();
+            });
+            
+            // 更新并绘制浮动文字
+            floatingTexts.forEach((text, i) => {
+                if(!text.update()) floatingTexts.splice(i, 1);
+                text.draw();
+            });
+            
+            // 每10秒显示一次生日祝福
+            const now = new Date().getTime();
+            if(now - birthdayTime > 10000) {
+                createFloatingText(`生日快乐，${birthdayPersonName}！`, 
+                                  canvas.width/2, canvas.height/2);
+                birthdayTime = now;
+            }
+            
+            requestAnimationFrame(animate);
+        }
+
+        // 鼠标/触摸事件处理
+        canvas.addEventListener('mousedown', (e) => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+            mouse.isDown = true;
+        });
+
+        canvas.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            mouse.x = e.touches[0].clientX;
+            mouse.y = e.touches[0].clientY;
+            mouse.isDown = true;
+        }, { passive: false });
+
+        // 开始动画
+        animate();
+    </script>
+</body>
+</html>
