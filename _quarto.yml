@@ -1,0 +1,23 @@
+project:
+  type: website
+
+execute:
+  freeze: auto
+
+website:
+  description: "一个用于记录生活中的知识的博客"
+  site-url: https://www.qmdthings.top
+  # you must change this appropriately for RSS feeds to work properly
+  title: "QMD的杂货间"
+  navbar:
+    left:
+      - about.qmd
+      - icon: github
+        href: https://github.com/
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true

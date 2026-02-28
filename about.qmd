@@ -1,0 +1,17 @@
+---
+title: "QMD"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: '{{{< iconify simple-icons:github >}}}'
+      text: Github
+      href: https://github.com/Qmdm
+    - icon: "{{< iconify simple-icons:gitee >}}"
+      text: Gitee
+      href: https://gitee.com/qmdking
+---
+
+China Three Gorges University | Yichang, Hubei
+Just fun!
+
