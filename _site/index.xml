@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>QMD的杂货间</title>
-<link>https://your-website-url.example.com/</link>
-<atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://qmdthings.top/</link>
+<atom:link href="https://qmdthings.top/index.xml" rel="self" type="application/rss+xml"/>
 <description>一个用于记录生活中的知识的博客</description>
 <generator>quarto-1.8.27</generator>
 <lastBuildDate>Fri, 27 Feb 2026 16:00:00 GMT</lastBuildDate>
 <item>
   <title>Post With Code</title>
   <dc:creator>Harlow Malloc</dc:creator>
-  <link>https://your-website-url.example.com/posts/post-with-code/</link>
+  <link>https://qmdthings.top/posts/post-with-code/</link>
   <description><![CDATA[ 
 
 
@@ -29,14 +29,14 @@
   <category>news</category>
   <category>code</category>
   <category>analysis</category>
-  <guid>https://your-website-url.example.com/posts/post-with-code/</guid>
+  <guid>https://qmdthings.top/posts/post-with-code/</guid>
   <pubDate>Fri, 27 Feb 2026 16:00:00 GMT</pubDate>
-  <media:content url="https://your-website-url.example.com/posts/post-with-code/image.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://qmdthings.top/posts/post-with-code/image.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Welcome To My Blog</title>
   <dc:creator>Tristan O&#39;Malley</dc:creator>
-  <link>https://your-website-url.example.com/posts/welcome/</link>
+  <link>https://qmdthings.top/posts/welcome/</link>
   <description><![CDATA[ 
 
 
@@ -44,14 +44,14 @@
 
 
 <p>This is the first post in a Quarto blog. Welcome!</p>
-<p><img src="https://your-website-url.example.com/posts/welcome/thumbnail.jpg" class="img-fluid"></p>
+<p><img src="https://qmdthings.top/posts/welcome/thumbnail.jpg" class="img-fluid"></p>
 <p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
 
 
 
  ]]></description>
   <category>news</category>
-  <guid>https://your-website-url.example.com/posts/welcome/</guid>
+  <guid>https://qmdthings.top/posts/welcome/</guid>
   <pubDate>Tue, 24 Feb 2026 16:00:00 GMT</pubDate>
 </item>
 </channel>

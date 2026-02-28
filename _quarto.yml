@@ -6,7 +6,7 @@ execute:
 
 website:
   description: "一个用于记录生活中的知识的博客"
-  site-url: https://www.qmdthings.top
+  site-url: https://qmdthings.top
   # you must change this appropriately for RSS feeds to work properly
   title: "QMD的杂货间"
   navbar:
