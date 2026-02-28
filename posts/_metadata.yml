@@ -6,3 +6,20 @@ freeze: true
 
 # Enable banner style title blocks
 title-block-banner: true
+
+# website:
+#   comments:
+#     giscus:
+#       repo: Qmdm/qmdthings
+#       repo-id: "R_kgDORbFbCw"
+#       category: "Announcements"
+#       category-id: "DIC_kwDORbFbC84C3afM"
+#       mapping: "pathname"
+#       reactions-enabled: true
+#       input-position: "bottom"
+#       theme: "light"
+#       language: "zh-CN"
+#
+#   # hypothesis:
+#   #   theme: clean
+#   #   openSidebar: true

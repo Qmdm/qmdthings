@@ -1,0 +1,17 @@
+---
+title: "A"
+author: "QMD"
+date: "2026/03/01"
+sidebar: true
+format:
+  html:
+    fig-width: 8
+    fig-height: 4
+    code-fold: true
+---
+# first
+This is A()
+
+- 1
+- 2
+# secord

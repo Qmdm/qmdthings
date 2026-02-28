@@ -1,5 +1,5 @@
 ---
-title: "第一次blog"
+title: "流体与流体力学"
 author: "QMD"
 date: "2026/02/28"
 format:
@@ -8,6 +8,3 @@ format:
     fig-height: 4
     code-fold: true
 ---
-
-第一次用quarto写blog, 分享一下小经验吧qwq, 多多关照. 
-

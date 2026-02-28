@@ -1,17 +1,18 @@
 ---
 title: "QMD"
 image: profile.jpg
+image-alt: 这里应该有一只濑户璨
 about:
   template: jolla
   links:
-    - icon: '{{{< iconify simple-icons:github >}}}'
+    - icon: github
       text: Github
       href: https://github.com/Qmdm
-    - icon: "{{< iconify simple-icons:gitee >}}"
-      text: Gitee
-      href: https://gitee.com/qmdking
+    - icon: envelope
+      text: Email
+      href: mailto:thekingqmd@163.com
 ---
 
-China Three Gorges University | Yichang, Hubei
-Just fun!
+**C**hina **T**hree **G**orges **U**niversity | Yichang, Hubei
 
+A **lazy** college student majoring in mechanical engineering

@@ -1,16 +1,13 @@
 ---
-#博客主页
-title: "QMD的杂货间"
+title: "杂乱的Blog"
 listing:
   contents: posts
   feed: true
   sort: "date desc"
   type: default
   categories: true
-  sort-ui: false
+  sort-ui: true
   filter-ui: false
 page-layout: full
 title-block-banner: true
 ---
-
-

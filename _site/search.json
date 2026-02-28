@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "QMD的杂货间",
+    "title": "杂乱的Blog",
     "section": "",
-    "text": "Post With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nFeb 28, 2026\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 25, 2026\n\n\nTristan O’Malley\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n\n\n\n\n\n\n\n\n\n\nA\n\n\n\n\n\n\n\n\nMar 1, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n第一次blog\n\n\n\n\n\n\n\n\nFeb 28, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n流体与流体力学\n\n\n\n\n\n\n\n\nFeb 28, 2026\n\n\nQMD\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -25,6 +25,34 @@
     "href": "about.html",
     "title": "QMD",
     "section": "",
-    "text": "China Three Gorges University | Yichang, Hubei Just fun!"
+    "text": "China Three Gorges University | Yichang, Hubei\nA lazy college student majoring in mechanical engineering"
+  },
+  {
+    "objectID": "posts/第一次blog/index.html",
+    "href": "posts/第一次blog/index.html",
+    "title": "第一次blog",
+    "section": "",
+    "text": "第一次用quarto写blog, 分享一下小经验吧qwq, 多多关照."
+  },
+  {
+    "objectID": "posts/离散数学/index.html",
+    "href": "posts/离散数学/index.html",
+    "title": "离散数学",
+    "section": "",
+    "text": "离散数学"
+  },
+  {
+    "objectID": "posts/流体与流体力学/index.html",
+    "href": "posts/流体与流体力学/index.html",
+    "title": "流体与流体力学",
+    "section": "",
+    "text": "wonderful"
+  },
+  {
+    "objectID": "posts/第一次blog/a.html",
+    "href": "posts/第一次blog/a.html",
+    "title": "A",
+    "section": "",
+    "text": "first\nThis is A()\n\n1\n2 # secord"
   }
 ]

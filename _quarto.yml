@@ -5,16 +5,60 @@ project:
 execute:
   freeze: auto
 
+# tell quarto to read the sidebar file
+metadata-files:
+  - _sidebar.yml
+# tell quartodoc to generate the sidebar file
+quartodoc:
+  sidebar: "_sidebar.yml"
+  # other options ...
+
 website:
-  description: "一个用于记录生活中的知识的博客"
+  title: "QMD的杂物间"
+  description: "琐事随笔"
   site-url: https://qmdthings.top
   # you must change this appropriately for RSS feeds to work properly
-  title: "QMD的杂货间"
+  reader-mode: true
+  search:
+    location: sidebar
+  body-header: |
+    ---
+  body-footer: |
+    ---
+  margin-header: ""
+  margin-footer: ""
+  page-navigation: true
   navbar:
+    title: "Navi"
+    background: "#4E9AB0"
     left:
-      - about.qmd
+      - text: "Home"
+        href: index.qmd
+      - text: "About"
+        href: about.qmd
+      - text: "Blogs"
+        menu:
+          - text: "流体与流体力学"
+            href: posts/流体与流体力学/
+
+      - text: "Fun"
+        menu:
+          - text: "原神,启动!"
+            href: https://ys.mihoyo.com/cloud/#/
+    right:
+      - icon: rss
+        href: index.xml
+  sidebar:
+    title: "侧边栏"
+    search: true
+    style: docked
+    tools:
       - icon: github
         href: https://github.com/
+  # announcement:
+  #   content: "欢迎!"
+  #   position: below-navbar
+
 format:
   html:
     theme:
