@@ -5,12 +5,37 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>QMD的杂货间</title>
+<title>QMD的杂物间</title>
 <link>https://qmdthings.top/</link>
 <atom:link href="https://qmdthings.top/index.xml" rel="self" type="application/rss+xml"/>
-<description>一个用于记录生活中的知识的博客</description>
+<description>琐事随笔</description>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Sat, 28 Feb 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 01 Mar 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>A</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/posts/第一次blog/a.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<hr>
+<section id="first" class="level1">
+<h1>first</h1>
+<p>This is A()</p>
+<ul>
+<li>1</li>
+<li>2 # secord</li>
+</ul>
+
+
+</section>
+
+<hr> ]]></description>
+  <guid>https://qmdthings.top/posts/第一次blog/a.html</guid>
+  <pubDate>Sun, 01 Mar 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>第一次blog</title>
   <dc:creator>QMD </dc:creator>
@@ -21,12 +46,29 @@
 
 
 
-<p>第一次用quarto写blog,分享一下小经验吧qwq,多多关照.</p>
+<hr><p>第一次用quarto写blog, 分享一下小经验吧qwq, 多多关照.</p>
 
 
 
- ]]></description>
+<hr> ]]></description>
   <guid>https://qmdthings.top/posts/第一次blog/</guid>
+  <pubDate>Sat, 28 Feb 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>流体与流体力学</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/posts/流体与流体力学/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<hr>
+
+<hr> ]]></description>
+  <guid>https://qmdthings.top/posts/流体与流体力学/</guid>
   <pubDate>Sat, 28 Feb 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>
