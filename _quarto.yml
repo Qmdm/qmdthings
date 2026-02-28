@@ -1,6 +1,7 @@
 project:
   type: website
-
+  resources:
+    - README.md
 execute:
   freeze: auto
 
