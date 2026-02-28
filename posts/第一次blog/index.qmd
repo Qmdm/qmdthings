@@ -1,0 +1,12 @@
+---
+title: "第一次blog"
+author: "QMD"
+date: "2026/02/28"
+format:
+  html:
+    fig-width: 8
+    fig-height: 4
+    code-fold: true
+---
+
+第一次用quarto写blog,分享一下小经验吧qwq,多多关照.
