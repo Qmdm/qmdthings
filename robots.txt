@@ -1,1 +1,1 @@
-Sitemap: https://qmdthings.top/sitemap.xml
+Sitemap: qmdthings.top/sitemap.xml
