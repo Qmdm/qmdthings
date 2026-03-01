@@ -1,7 +1,9 @@
 ---
-title: "杂乱的Blog"
+title: "杂乱的Blogs"
 listing:
-  contents: posts
+  contents: 
+    - posts
+    - notes
   feed: true
   sort: "date desc"
   type: default

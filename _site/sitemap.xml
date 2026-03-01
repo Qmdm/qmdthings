@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://qmdthings.top/index.html</loc>
-    <lastmod>2026-02-28T17:35:47.194Z</lastmod>
+    <lastmod>2026-03-01T07:33:43.550Z</lastmod>
   </url>
   <url>
     <loc>https://qmdthings.top/posts/welcome/index.html</loc>
@@ -35,5 +35,13 @@
   <url>
     <loc>https://qmdthings.top/posts/第一次blog/b.html</loc>
     <lastmod>2026-03-01T04:58:59.130Z</lastmod>
+  </url>
+  <url>
+    <loc>https://qmdthings.top/notes/流体与流体力学/index.html</loc>
+    <lastmod>2026-03-01T07:51:25.246Z</lastmod>
+  </url>
+  <url>
+    <loc>https://qmdthings.top/notes/R语言/index.html</loc>
+    <lastmod>2026-03-01T07:50:53.909Z</lastmod>
   </url>
 </urlset>

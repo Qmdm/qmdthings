@@ -2,11 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/第一次blog/b.html",
-      "/posts/第一次blog/a.html",
-      "/posts/R语言/index.html",
-      "/posts/第一次blog/index.html",
-      "/posts/流体与流体力学/index.html"
+      "/notes/流体与流体力学/index.html",
+      "/notes/R语言/index.html",
+      "/posts/第一次blog/index.html"
     ]
   }
 ]

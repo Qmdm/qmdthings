@@ -12,47 +12,85 @@
 <generator>quarto-1.8.27</generator>
 <lastBuildDate>Sat, 28 Feb 2026 16:00:00 GMT</lastBuildDate>
 <item>
-  <title>A</title>
+  <title>流体与流体力学</title>
   <dc:creator>QMD </dc:creator>
-  <link>https://qmdthings.top/posts/第一次blog/a.html</link>
+  <link>https://qmdthings.top/notes/流体与流体力学/</link>
   <description><![CDATA[ 
 
+<p id="hitokoto">
+  hitokoto!
+</p>
+
+<script>
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+  fetch("https://v1.hitokoto.cn?c=k")
+    .then((response) => response.json())
+    .then((data) => {
+      const hitokoto = document.querySelector("#hitokoto_text");
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+      hitokoto.innerText = data.hitokoto;
+    })
+    .catch(console.error);
+
+  hitokotoElement.addEventListener("click", function (event) {
+    event.preventDefault();
+  });
+</script>
 
 
 
 
-<hr>
-<section id="first" class="level1">
-<h1>first</h1>
-<p>This is A()</p>
-<ul>
-<li>1</li>
-<li>2 # secord</li>
-</ul>
+
+<section id="流体与流体力学" class="level1">
+<h1>流体与流体力学</h1>
 
 
 </section>
 
-<hr> ]]></description>
-  <guid>https://qmdthings.top/posts/第一次blog/a.html</guid>
+ ]]></description>
+  <guid>https://qmdthings.top/notes/流体与流体力学/</guid>
   <pubDate>Sat, 28 Feb 2026 16:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>R语言概述</title>
+  <title>R语言</title>
   <dc:creator>QMD </dc:creator>
-  <link>https://qmdthings.top/posts/R语言/</link>
+  <link>https://qmdthings.top/notes/R语言/</link>
   <description><![CDATA[ 
 
+<p id="hitokoto">
+  hitokoto!
+</p>
+
+<script>
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+  fetch("https://v1.hitokoto.cn?c=k")
+    .then((response) => response.json())
+    .then((data) => {
+      const hitokoto = document.querySelector("#hitokoto_text");
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+      hitokoto.innerText = data.hitokoto;
+    })
+    .catch(console.error);
+
+  hitokotoElement.addEventListener("click", function (event) {
+    event.preventDefault();
+  });
+</script>
 
 
 
 
 
+<section id="r语言" class="level1">
+<h1>R语言</h1>
 
-<hr>
 
-<hr> ]]></description>
-  <guid>https://qmdthings.top/posts/R语言/</guid>
+</section>
+
+ ]]></description>
+  <guid>https://qmdthings.top/notes/R语言/</guid>
   <pubDate>Sat, 28 Feb 2026 16:00:00 GMT</pubDate>
 </item>
 <item>
@@ -61,35 +99,37 @@
   <link>https://qmdthings.top/posts/第一次blog/</link>
   <description><![CDATA[ 
 
+<p id="hitokoto">
+  hitokoto!
+</p>
+
+<script>
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+  fetch("https://v1.hitokoto.cn?c=k")
+    .then((response) => response.json())
+    .then((data) => {
+      const hitokoto = document.querySelector("#hitokoto_text");
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+      hitokoto.innerText = data.hitokoto;
+    })
+    .catch(console.error);
+
+  hitokotoElement.addEventListener("click", function (event) {
+    event.preventDefault();
+  });
+</script>
 
 
 
 
 
-<hr><p>第一次用quarto写blog, 分享一下小经验吧qwq, 多多关照.</p>
+<p>第一次用quarto写blog, 分享一下小经验吧qwq, 多多关照.</p>
 
 
 
-<hr> ]]></description>
+ ]]></description>
   <guid>https://qmdthings.top/posts/第一次blog/</guid>
-  <pubDate>Fri, 27 Feb 2026 16:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>流体与流体力学</title>
-  <dc:creator>QMD </dc:creator>
-  <link>https://qmdthings.top/posts/流体与流体力学/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-
-
-<hr>
-
-<hr> ]]></description>
-  <guid>https://qmdthings.top/posts/流体与流体力学/</guid>
   <pubDate>Fri, 27 Feb 2026 16:00:00 GMT</pubDate>
 </item>
 </channel>
