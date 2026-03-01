@@ -20,6 +20,7 @@
 
 
 
+
 <hr>
 <section id="first" class="level1">
 <h1>first</h1>
@@ -37,10 +38,29 @@
   <pubDate>Sat, 28 Feb 2026 16:00:00 GMT</pubDate>
 </item>
 <item>
+  <title>R语言概述</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/posts/R语言/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+<hr>
+
+<hr> ]]></description>
+  <guid>https://qmdthings.top/posts/R语言/</guid>
+  <pubDate>Sat, 28 Feb 2026 16:00:00 GMT</pubDate>
+</item>
+<item>
   <title>第一次blog</title>
   <dc:creator>QMD </dc:creator>
   <link>https://qmdthings.top/posts/第一次blog/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -59,6 +79,7 @@
   <dc:creator>QMD </dc:creator>
   <link>https://qmdthings.top/posts/流体与流体力学/</link>
   <description><![CDATA[ 
+
 
 
 

@@ -2,6 +2,7 @@ project:
   type: website
   resources:
     - README.md
+    - 404.qmd
 execute:
   freeze: auto
 
@@ -18,16 +19,30 @@ website:
   description: "琐事随笔"
   site-url: https://qmdthings.top
   # you must change this appropriately for RSS feeds to work properly
+
   reader-mode: true
+
+  # Search
   search:
     location: sidebar
-  body-header: |
-    ---
-  body-footer: |
-    ---
-  margin-header: ""
-  margin-footer: ""
+
+  # body-header: |
+  #   ---
+  #
+  # body-footer: |
+  #   ---
+  #
+  # margin-header: ""
+  #
+  # margin-footer: ""
+
+  # Page
   page-navigation: true
+  # back-to-top-navigation: true
+  page-footer:
+    center: "毎日マリーゴールドを1つ"
+
+  # NavBar
   navbar:
     title: "Navi"
     background: "#4E9AB0"
@@ -36,33 +51,33 @@ website:
         href: index.qmd
       - text: "About"
         href: about.qmd
-      - text: "Blogs"
-        menu:
-          - text: "流体与流体力学"
-            href: posts/流体与流体力学/
-
-      - text: "Fun"
-        menu:
-          - text: "原神,启动!"
-            href: https://ys.mihoyo.com/cloud/#/
+      - sidebar:blogs
+      - sidebar:fun
     right:
       - icon: rss
         href: index.xml
+
+  # SideBar
   sidebar:
-    title: "侧边栏"
-    search: true
-    style: docked
-    tools:
-      - icon: github
-        href: https://github.com/
+    - id: blogs
+      title: "Blogs"
+      contents: posts
+      tools:
+        - icon: github
+          href: https://github.com/
+
+    - id: fun
+      title: "Fun"
+
   # announcement:
   #   content: "欢迎!"
   #   position: below-navbar
 
 format:
   html:
+    respect-user-color-scheme: true
     theme:
-      - cosmo
-      - brand
+      light: flatly
+      dark: darkly
     css: styles.css
     toc: true

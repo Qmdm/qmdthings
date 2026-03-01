@@ -1,0 +1,11 @@
+---
+title: "R语言概述"
+author: "QMD"
+date: "2026/03/01"
+format:
+  html:
+    fig-width: 8
+    fig-height: 4
+    code-fold: true
+---
+
