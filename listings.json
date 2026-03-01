@@ -2,6 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/第一次blog/b.html",
+      "/posts/R语言/index.html",
       "/posts/第一次blog/a.html",
       "/posts/第一次blog/index.html",
       "/posts/流体与流体力学/index.html"

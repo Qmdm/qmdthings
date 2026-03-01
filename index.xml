@@ -12,6 +12,24 @@
 <generator>quarto-1.8.27</generator>
 <lastBuildDate>Sun, 01 Mar 2026 00:00:00 GMT</lastBuildDate>
 <item>
+  <title>R语言概述</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/posts/R语言/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+
+
+ ]]></description>
+  <guid>https://qmdthings.top/posts/R语言/</guid>
+  <pubDate>Sun, 01 Mar 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
   <title>A</title>
   <dc:creator>QMD </dc:creator>
   <link>https://qmdthings.top/posts/第一次blog/a.html</link>
@@ -20,7 +38,8 @@
 
 
 
-<hr>
+
+
 <section id="first" class="level1">
 <h1>first</h1>
 <p>This is A()</p>
@@ -32,7 +51,7 @@
 
 </section>
 
-<hr> ]]></description>
+ ]]></description>
   <guid>https://qmdthings.top/posts/第一次blog/a.html</guid>
   <pubDate>Sun, 01 Mar 2026 00:00:00 GMT</pubDate>
 </item>
@@ -46,11 +65,12 @@
 
 
 
-<hr><p>第一次用quarto写blog, 分享一下小经验吧qwq, 多多关照.</p>
+
+<p>第一次用quarto写blog, 分享一下小经验吧qwq, 多多关照.</p>
 
 
 
-<hr> ]]></description>
+ ]]></description>
   <guid>https://qmdthings.top/posts/第一次blog/</guid>
   <pubDate>Sat, 28 Feb 2026 00:00:00 GMT</pubDate>
 </item>
@@ -65,9 +85,10 @@
 
 
 
-<hr>
 
-<hr> ]]></description>
+
+
+ ]]></description>
   <guid>https://qmdthings.top/posts/流体与流体力学/</guid>
   <pubDate>Sat, 28 Feb 2026 00:00:00 GMT</pubDate>
 </item>
