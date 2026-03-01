@@ -3,10 +3,9 @@ title: "流体与流体力学"
 author: "QMD"
 date: "2026/03/01"
 description: "流体与流体力学"
-format:
-  html:
-    fig-width: 8
-    fig-height: 4
-    code-fold: true
+categories: [ Notes ]
 ---
 # 流体与流体力学
+
+
+

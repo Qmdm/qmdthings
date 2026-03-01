@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "杂乱的Blogs",
+    "title": "杂乱的Notes/Blogs",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n\n\n\n\n\n\n\n\n\n\n流体与流体力学\n\n\n流体与流体力学\n\n\n\n\n\nMar 1, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\nR语言\n\n\n基本的R语言的用法\n\n\n\n\n\nMar 1, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n第一次blog\n\n\n\n\n\n\n\n\nFeb 28, 2026\n\n\nQMD\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n\n\n\n\n\n\n\n\n\n\n第一次blog\n\n\n\nBlogs\n\n\n\n使用quarto来写blog\n\n\n\n\n\nMar 1, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n流体与流体力学\n\n\n\nNotes\n\n\n\n流体与流体力学\n\n\n\n\n\nMar 1, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\nR语言\n\n\n\n计算机语言\n\nNotes\n\n\n\n基本的R语言的用法\n\n\n\n\n\nMar 1, 2026\n\n\nQMD\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -32,7 +32,7 @@
     "href": "posts/第一次blog/index.html",
     "title": "第一次blog",
     "section": "",
-    "text": "hitokoto!\n\n\n\n\n\n\n\n\n第一次用quarto写blog, 分享一下小经验吧qwq, 多多关照.",
+    "text": "hitokoto!\n\n\n\n\n\n\n\n\n第一次用quarto搭建网站来写blog与记录笔记，因为我手上有一个域名还没到期。qwq\n了解到quarto还是因为想要有一个好的笔记系统来代替obsidian，现在切换到quarto + nvim 不知道怎么样。\n\n\n\nReuseCC BY-NC-SA 4.0",
     "crumbs": [
       "Posts",
       "第一次blog"
@@ -84,7 +84,7 @@
     "href": "notes/流体与流体力学/index.html",
     "title": "流体与流体力学",
     "section": "",
-    "text": "hitokoto!\n\n\n\n\n\n\n\n\n\n流体与流体力学",
+    "text": "hitokoto!\n\n\n\n\n\n\n\n\n\n流体与流体力学\n\n\n\n\nReuseCC BY-NC-SA 4.0",
     "crumbs": [
       "Notes",
       "流体与流体力学"
@@ -95,7 +95,7 @@
     "href": "notes/R语言/index.html",
     "title": "R语言",
     "section": "",
-    "text": "hitokoto!\n\n\n\n\n\n\n\n\n\nR语言",
+    "text": "hitokoto!\n\n\n\n\n\n\n\n\n\nR语言\n\n\n\n\nReuseCC BY-NC-SA 4.0",
     "crumbs": [
       "Notes",
       "R语言"

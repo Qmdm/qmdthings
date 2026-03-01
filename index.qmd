@@ -1,5 +1,5 @@
 ---
-title: "杂乱的Blogs"
+title: "杂乱的Notes/Blogs"
 listing:
   contents: 
     - posts

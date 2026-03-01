@@ -9,6 +9,8 @@ title-block-banner: true
 
 page-navigation: true
 
+license: "CC BY-NC-SA"
+
 format:
   html:
     include-before-body: ../_includes/hitokoto.html

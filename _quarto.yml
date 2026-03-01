@@ -1,10 +1,6 @@
 project:
   type: website
-  resources:
-    - _includes
-    - notes
-    - README.md
-    - 404.qmd
+  resources: [_includes, notes, posts, README.md, 404.qmd]
 execute:
   freeze: auto
 
@@ -20,17 +16,8 @@ website:
   search:
     location: sidebar
 
-  # body-header: |
-  #   ---
-  #
-  # body-footer: |
-  # margin-header: ""
-  #
-  # margin-footer: ""
-
   # Page
   page-footer:
-    left: "© 2026"
     center: "毎日マリーゴールドを1つ"
     right:
       - text: "Powered by quarto."
