@@ -12,6 +12,47 @@
 <generator>quarto-1.8.27</generator>
 <lastBuildDate>Sun, 01 Mar 2026 00:00:00 GMT</lastBuildDate>
 <item>
+  <title>第一次blog</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/posts/第一次blog/</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+  hitokoto!
+</p>
+
+<script>
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+  fetch("https://v1.hitokoto.cn?c=k")
+    .then((response) => response.json())
+    .then((data) => {
+      const hitokoto = document.querySelector("#hitokoto_text");
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+      hitokoto.innerText = data.hitokoto;
+    })
+    .catch(console.error);
+
+  hitokotoElement.addEventListener("click", function (event) {
+    event.preventDefault();
+  });
+</script>
+
+
+
+
+
+<p>第一次用quarto搭建网站来写blog与记录笔记，因为我手上有一个域名还没到期。qwq</p>
+<p>了解到quarto还是因为想要有一个好的笔记系统来代替obsidian，现在切换到quarto + nvim 不知道怎么样。</p>
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>Blogs</category>
+  <guid>https://qmdthings.top/posts/第一次blog/</guid>
+  <pubDate>Sun, 01 Mar 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
   <title>R语言</title>
   <dc:creator>QMD </dc:creator>
   <link>https://qmdthings.top/notes/R语言/</link>
@@ -48,7 +89,9 @@
 
 </section>
 
- ]]></description>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>计算机语言</category>
+  <category>Notes</category>
   <guid>https://qmdthings.top/notes/R语言/</guid>
   <pubDate>Sun, 01 Mar 2026 00:00:00 GMT</pubDate>
 </item>
@@ -89,48 +132,10 @@
 
 </section>
 
- ]]></description>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>Notes</category>
   <guid>https://qmdthings.top/notes/流体与流体力学/</guid>
   <pubDate>Sun, 01 Mar 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>第一次blog</title>
-  <dc:creator>QMD </dc:creator>
-  <link>https://qmdthings.top/posts/第一次blog/</link>
-  <description><![CDATA[ 
-
-<p id="hitokoto">
-  hitokoto!
-</p>
-
-<script>
-  const hitokotoElement = document.querySelector("#hitokoto_text");
-
-  fetch("https://v1.hitokoto.cn?c=k")
-    .then((response) => response.json())
-    .then((data) => {
-      const hitokoto = document.querySelector("#hitokoto_text");
-      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
-      hitokoto.innerText = data.hitokoto;
-    })
-    .catch(console.error);
-
-  hitokotoElement.addEventListener("click", function (event) {
-    event.preventDefault();
-  });
-</script>
-
-
-
-
-
-<p>第一次用quarto写blog, 分享一下小经验吧qwq, 多多关照.</p>
-
-
-
- ]]></description>
-  <guid>https://qmdthings.top/posts/第一次blog/</guid>
-  <pubDate>Sat, 28 Feb 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

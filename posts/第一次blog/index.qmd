@@ -1,0 +1,16 @@
+---
+title: "第一次blog"
+author: "QMD"
+date: "2026/03/01"
+description: "使用quarto来写blog"
+categories: [ "Blogs" ]
+---
+
+第一次用quarto搭建网站来写blog与记录笔记，因为我手上有一个域名还没到期。qwq
+
+
+了解到quarto还是因为想要有一个好的笔记系统来代替obsidian，现在切换到quarto + nvim 不知道怎么样。
+
+
+
+
