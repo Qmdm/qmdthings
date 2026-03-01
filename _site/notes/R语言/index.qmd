@@ -2,7 +2,7 @@
 title: "R语言"
 author: "QMD"
 date: "2026/03/01"
-description: "基本的R语言的用法"
+description: "一门专门为统计计算，数据分析和图形绘制而设计的编程语言。"
 categories: [ 计算机语言,Notes ]
 ---
 
