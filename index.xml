@@ -81,8 +81,8 @@
 
 
 
-<section id="一-热力学基本概念研究的基石" class="level3">
-<h3 class="anchored" data-anchor-id="一-热力学基本概念研究的基石">一、 热力学基本概念（研究的基石）</h3>
+<section id="热力学基本概念研究的基石" class="level1">
+<h1>热力学基本概念（研究的基石）</h1>
 <p>在进行任何热力学计算前，必须先定义研究的对象及其性质。</p>
 <ol type="1">
 <li><strong>系统与环境 (System and Environment)</strong>：
@@ -113,8 +113,8 @@
 </ul></li>
 </ol>
 </section>
-<section id="二-热力学第一定律能量守恒" class="level3">
-<h3 class="anchored" data-anchor-id="二-热力学第一定律能量守恒">二、 热力学第一定律（能量守恒）</h3>
+<section id="热力学第一定律能量守恒" class="level1">
+<h1>热力学第一定律（能量守恒）</h1>
 <p>这是热化学的理论核心，描述了能量转化的定量关系。</p>
 <ol type="1">
 <li><strong>热力学能 (<img src="https://latex.codecogs.com/png.latex?U">)</strong>：又称<strong>内能</strong>，是系统内部运动能量的总和（包括分子平动、转动、振动及电子和核运动）。它是状态函数，目前尚无法测定绝对数值。,</li>
@@ -126,8 +126,8 @@
 <li><strong>第一定律数学表达式</strong>：<strong><img src="https://latex.codecogs.com/png.latex?%5CDelta%20U%20=%20q%20+%20w"></strong>。能量在转化过程中是守恒的。</li>
 </ol>
 </section>
-<section id="三-反应热与焓化学反应的能量效应" class="level3">
-<h3 class="anchored" data-anchor-id="三-反应热与焓化学反应的能量效应">三、 反应热与焓（化学反应的能量效应）</h3>
+<section id="反应热与焓化学反应的能量效应" class="level1">
+<h1>反应热与焓（化学反应的能量效应）</h1>
 <ol type="1">
 <li><strong>等容反应热 (<img src="https://latex.codecogs.com/png.latex?Q_V">)</strong>：在定容且不做非体积功的过程中，系统吸收的热量等于内能的变化（<strong><img src="https://latex.codecogs.com/png.latex?Q_V%20=%20%5CDelta%20U"></strong>）。</li>
 <li><strong>等压反应热 (<img src="https://latex.codecogs.com/png.latex?Q_p">) 与 焓 (<img src="https://latex.codecogs.com/png.latex?H">)</strong>：
@@ -142,8 +142,8 @@
 <li><strong>反应进度 (<img src="https://latex.codecogs.com/png.latex?%5Cxi">)</strong>：描述反应进行的程度，单位为 mol。对于同一反应方程式，各组分计算出的反应进度相同。</li>
 </ol>
 </section>
-<section id="四-热化学定律与标准焓变计算工程计算的核心" class="level3">
-<h3 class="anchored" data-anchor-id="四-热化学定律与标准焓变计算工程计算的核心">四、 热化学定律与标准焓变计算（工程计算的核心）</h3>
+<section id="热化学定律与标准焓变计算工程计算的核心" class="level1">
+<h1>热化学定律与标准焓变计算（工程计算的核心）</h1>
 <ol type="1">
 <li><strong>标准状态</strong>：规定压力为 <img src="https://latex.codecogs.com/png.latex?100%5Ctext%7B%20kPa%7D"> 下的纯物质状态（气体为理想气体）。</li>
 <li><strong>标准摩尔生成焓 (<img src="https://latex.codecogs.com/png.latex?%5CDelta_f%20H_m%5E%5Ctheta">)</strong>：在标准态下，由<strong>最稳定单质</strong>生成 1mol 物质时的焓变。注意：最稳定单质的标准生成焓定为 0。</li>
@@ -155,10 +155,10 @@
 </ul></li>
 </ol>
 </section>
-<section id="熵" class="level2">
-<h2 class="anchored" data-anchor-id="熵">熵</h2>
-<section id="一-自发过程及其特征" class="level3">
-<h3 class="anchored" data-anchor-id="一-自发过程及其特征">一、 自发过程及其特征</h3>
+<section id="熵" class="level1">
+<h1>熵</h1>
+<section id="自发过程及其特征" class="level2">
+<h2 class="anchored" data-anchor-id="自发过程及其特征">自发过程及其特征</h2>
 <ol type="1">
 <li><strong>定义</strong>：指在给定条件下，不需外界做功就能自动进行的过程。</li>
 <li><strong>特征</strong>：
@@ -169,8 +169,8 @@
 </ul></li>
 </ol>
 </section>
-<section id="二-熵与热力学第二第三定律" class="level3">
-<h3 class="anchored" data-anchor-id="二-熵与热力学第二第三定律">二、 熵与热力学第二、第三定律</h3>
+<section id="熵与热力学第二第三定律" class="level2">
+<h2 class="anchored" data-anchor-id="熵与热力学第二第三定律">熵与热力学第二、第三定律</h2>
 <p>这是判断反应方向的第一个维度——<strong>混乱度</strong>。</p>
 <ol type="1">
 <li><strong>熵 (<img src="https://latex.codecogs.com/png.latex?S">) 的定义</strong>：描述系统内部微观粒子混乱程度的状态函数。系统越混乱，微观状态数越多，熵值越大。</li>
@@ -186,8 +186,8 @@
 </ul></li>
 </ol>
 </section>
-<section id="三-吉布斯自由能-g反应方向的终极判据" class="level3">
-<h3 class="anchored" data-anchor-id="三-吉布斯自由能-g反应方向的终极判据">三、 吉布斯自由能 (<img src="https://latex.codecogs.com/png.latex?G">)：反应方向的终极判据</h3>
+<section id="吉布斯自由能-g反应方向的终极判据" class="level2">
+<h2 class="anchored" data-anchor-id="吉布斯自由能-g反应方向的终极判据">吉布斯自由能 (<img src="https://latex.codecogs.com/png.latex?G">)：反应方向的终极判据</h2>
 <p>由于大多数化学反应是在恒温、恒压下进行的，单纯用熵（需考虑整个宇宙或隔离系统）不方便，因此引入了<strong>吉布斯自由能</strong>。</p>
 <ol type="1">
 <li><strong>定义推导</strong>： 为了在系统内部找到判据，科学家定义了 <img src="https://latex.codecogs.com/png.latex?G%20=%20H%20-%20TS">。</li>
@@ -201,8 +201,8 @@
 <li><strong>物理意义</strong>：<img src="https://latex.codecogs.com/png.latex?%5CDelta%20G"> 等于系统在等温等压过程中所能做的<strong>最大有用功</strong>（即非体积功，<img src="https://latex.codecogs.com/png.latex?W'">）。</li>
 </ol>
 </section>
-<section id="四-标准摩尔反应自由能变的计算" class="level3">
-<h3 class="anchored" data-anchor-id="四-标准摩尔反应自由能变的计算">四、 标准摩尔反应自由能变的计算</h3>
+<section id="标准摩尔反应自由能变的计算" class="level2">
+<h2 class="anchored" data-anchor-id="标准摩尔反应自由能变的计算">标准摩尔反应自由能变的计算</h2>
 <ol type="1">
 <li><strong>利用标准摩尔生成自由能 (<img src="https://latex.codecogs.com/png.latex?%5CDelta_f%20G_m%5E%5Ctheta">)</strong>：
 <ul>
@@ -212,8 +212,8 @@
 <li><strong>利用 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20H"> 和 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20S"> 计算</strong>： 先查表求出 <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20H_m%5E%5Ctheta"> 和 <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20S_m%5E%5Ctheta">，再代入 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20=%20%5CDelta%20H%20-%20T%5CDelta%20S">。</li>
 </ol>
 </section>
-<section id="五-温度对反应方向的影响重点推导" class="level3">
-<h3 class="anchored" data-anchor-id="五-温度对反应方向的影响重点推导">五、 温度对反应方向的影响（重点推导）</h3>
+<section id="温度对反应方向的影响" class="level2">
+<h2 class="anchored" data-anchor-id="温度对反应方向的影响">温度对反应方向的影响</h2>
 <p>根据 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20=%20%5CDelta%20H%20-%20T%5CDelta%20S">，反应能否自发取决于 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20H"> 和 <img src="https://latex.codecogs.com/png.latex?-T%5CDelta%20S"> 的相互权衡：</p>
 <table class="caption-top table">
 <colgroup>
