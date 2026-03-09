@@ -1,0 +1,8 @@
+---
+title: "无机物单质及化合物"
+author: "QMD"
+date: "2026/03/09"
+description: "工程化学第六章"
+categories: [ "工程化学" ]
+---
+

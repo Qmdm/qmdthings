@@ -1,0 +1,8 @@
+---
+title: "合成高分子材料"
+author: "QMD"
+date: "2026/03/09"
+description: "工程化学第九章"
+categories: [ "工程化学" ]
+---
+

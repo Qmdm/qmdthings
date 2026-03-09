@@ -11,11 +11,75 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "QMD",
+    "objectID": "notes/工程化学/9. 合成高分子材料.html",
+    "href": "notes/工程化学/9. 合成高分子材料.html",
+    "title": "合成高分子材料",
     "section": "",
-    "text": "China Three Gorges University | Yichang, Hubei\nA lazy college student majoring in mechanical engineering"
+    "text": "hitokoto!\n\n\n\n\n\n\n\n\n\n\n\nReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Notes",
+      "工程化学",
+      "合成高分子材料"
+    ]
+  },
+  {
+    "objectID": "notes/工程化学/5. 物质结构基础.html",
+    "href": "notes/工程化学/5. 物质结构基础.html",
+    "title": "物质结构基础",
+    "section": "",
+    "text": "hitokoto!\n\n\n\n\n\n\n\n\n\n\n\nReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Notes",
+      "工程化学",
+      "物质结构基础"
+    ]
+  },
+  {
+    "objectID": "notes/工程化学/8. 有机化学和有机化合物.html",
+    "href": "notes/工程化学/8. 有机化学和有机化合物.html",
+    "title": "有机化学与有机化合物",
+    "section": "",
+    "text": "hitokoto!\n\n\n\n\n\n\n\n\n\n\n\nReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Notes",
+      "工程化学",
+      "有机化学与有机化合物"
+    ]
+  },
+  {
+    "objectID": "notes/工程化学/1. 热化学基础.html",
+    "href": "notes/工程化学/1. 热化学基础.html",
+    "title": "热化学基础",
+    "section": "",
+    "text": "hitokoto!",
+    "crumbs": [
+      "Notes",
+      "工程化学",
+      "热化学基础"
+    ]
+  },
+  {
+    "objectID": "notes/工程化学/1. 热化学基础.html#熵",
+    "href": "notes/工程化学/1. 热化学基础.html#熵",
+    "title": "热化学基础",
+    "section": "熵",
+    "text": "熵\n\n一、 自发过程及其特征\n\n定义：指在给定条件下，不需外界做功就能自动进行的过程。\n特征：\n\n方向性：自发过程都有一定的方向，其逆过程是非自发的。\n限度：自发过程会进行到某种平衡态。\n有用功：自发过程可以被利用来做有用功（如原电池放电）。\n\n\n\n\n二、 熵与热力学第二、第三定律\n这是判断反应方向的第一个维度——混乱度。\n\n熵 (\\(S\\)) 的定义：描述系统内部微观粒子混乱程度的状态函数。系统越混乱，微观状态数越多，熵值越大。\n热力学第三定律：在 \\(0\\text{ K}\\)（绝对零度）时，任何纯物质完美晶体的熵值为零。\n\n意义：由此规定了物质的标准摩尔熵 (\\(S_m^\\theta\\))。因为 \\(0\\text{ K}\\) 时为 \\(0\\)，所以常温下所有物质的熵值均为正值（注意：这与生成焓不同，单质的熵不为零）。\n\n热力学第二定律（熵增原理）：在隔离系统中，自发过程总是朝着熵增加的方向进行，即 \\(\\Delta S_{隔离} &gt; 0\\)。\n反应熵变的计算：\n\n推导公式：\\(\\Delta_r S_m^\\theta = \\sum \\nu_B S_m^\\theta(\\text{生成物}) - \\sum \\nu_B S_m^\\theta(\\text{反应物})\\)。\n定性判断：通常气体分子数增加的反应（\\(\\Delta n(g) &gt; 0\\)），其熵变 \\(\\Delta S &gt; 0\\)。\n\n\n\n\n三、 吉布斯自由能 (\\(G\\))：反应方向的终极判据\n由于大多数化学反应是在恒温、恒压下进行的，单纯用熵（需考虑整个宇宙或隔离系统）不方便，因此引入了吉布斯自由能。\n\n定义推导： 为了在系统内部找到判据，科学家定义了 \\(G = H - TS\\)。\n吉布斯-亥姆霍兹方程（核心公式）： 在恒温条件下，系统状态改变时的自由能变为： \\[\\mathbf{\\Delta G = \\Delta H - T\\Delta S}\\]\n自发性判据（恒温恒压且不做非体积功）：\n\n\\(\\Delta G &lt; 0\\)：反应正向自发进行。\n\\(\\Delta G = 0\\)：反应达到平衡状态。\n\\(\\Delta G &gt; 0\\)：反应正向非自发，逆向自发。\n\n物理意义：\\(\\Delta G\\) 等于系统在等温等压过程中所能做的最大有用功（即非体积功，\\(W'\\)）。\n\n\n\n四、 标准摩尔反应自由能变的计算\n\n利用标准摩尔生成自由能 (\\(\\Delta_f G_m^\\theta\\))：\n\n定义：标准态下，由稳定单质生成 \\(1\\text{ mol}\\) 物质时的自由能变。稳定单质的 \\(\\Delta_f G_m^\\theta = 0\\)。\n公式：\\(\\Delta_r G_m^\\theta = \\sum \\nu_B \\Delta_f G_m^\\theta(\\text{生成物}) - \\sum \\nu_B \\Delta_f G_m^\\theta(\\text{反应物})\\)。\n\n利用 \\(\\Delta H\\) 和 \\(\\Delta S\\) 计算： 先查表求出 \\(\\Delta_r H_m^\\theta\\) 和 \\(\\Delta_r S_m^\\theta\\)，再代入 \\(\\Delta G = \\Delta H - T\\Delta S\\)。\n\n\n\n五、 温度对反应方向的影响（重点推导）\n根据 \\(\\Delta G = \\Delta H - T\\Delta S\\)，反应能否自发取决于 \\(\\Delta H\\) 和 \\(-T\\Delta S\\) 的相互权衡：\n\n\n\n\n\n\n\n\n\n\n类别\n\\(\\Delta H\\)\n\\(\\Delta S\\)\n\\(\\Delta G\\) 特征\n反应自发性\n\n\n\n\n1\n\\(-\\) (放热)\n\\(+\\) (增熵)\n始终为 \\(-\\)\n任何温度下均自发\n\n\n2\n\\(+\\) (吸热)\n\\(-\\) (减熵)\n始终为 \\(+\\)\n任何温度下均不自发\n\n\n3\n\\(+\\) (吸热)\n\\(+\\) (增熵)\n高温为 \\(-\\), 低温为 \\(+\\)\n高温自发（熵驱动型）\n\n\n4\n\\(-\\) (放热)\n\\(-\\) (减熵)\n低温为 \\(-\\), 高温为 \\(+\\)\n低温自发（焓驱动型）\n\n\n\n\n转折温度 (\\(T_{转}\\)) 的推导： 当反应由自发转变为非自发时，处于平衡态 \\(\\Delta G = 0\\)。 由 \\(0 = \\Delta H - T_{转}\\Delta S\\) 得： \\[\\mathbf{T_{转} = \\frac{\\Delta H}{\\Delta S}}\\] 这在工程上极具价值，例如可以用它计算碳酸钙分解所需的最低热处理温度。",
+    "crumbs": [
+      "Notes",
+      "工程化学",
+      "热化学基础"
+    ]
+  },
+  {
+    "objectID": "notes/R语言/index.html",
+    "href": "notes/R语言/index.html",
+    "title": "R语言",
+    "section": "",
+    "text": "hitokoto!\n\n\n\n\n\n\n\n\n\nR语言\n\n\n\n\nReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Notes",
+      "R语言"
+    ]
   },
   {
     "objectID": "posts/第一次blog/index.html",
@@ -33,17 +97,97 @@
     "href": "index.html",
     "title": "杂乱的Notes/Blogs",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n\n\n\n\n\n\n\n\n\n\n第一次blog\n\n\n\nBlogs\n\n\n\n使用quarto来写blog\n\n\n\n\n\nMar 1, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\nR语言\n\n\n\n计算机语言\n\nNotes\n\n\n\n一门专门为统计计算，数据分析和图形绘制而设计的编程语言。\n\n\n\n\n\nMar 1, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n流体与流体力学\n\n\n\nNotes\n\n\n\n流体与流体力学\n\n\n\n\n\nMar 1, 2026\n\n\nQMD\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n\n\n\n\n\n\n\n\n\n\n溶液\n\n\n\n工程化学\n\n\n\n工程化学第三章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n热化学基础\n\n\n\n工程化学\n\n\n\n工程化学的第一章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n化学平衡与化学反应速率\n\n\n\n工程化学\n\n\n\n工程化学第二章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n有机化学与有机化合物\n\n\n\n工程化学\n\n\n\n工程化学第八章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n金属材料与无机非金属材料\n\n\n\n工程化学\n\n\n\n工程化学第六章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n物质结构基础\n\n\n\n工程化学\n\n\n\n工程化学第五章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n氧化还原反应与电化学\n\n\n\n工程化学\n\n\n\n工程化学第四章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n合成高分子材料\n\n\n\n工程化学\n\n\n\n工程化学第九章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n无机物单质及化合物\n\n\n\n工程化学\n\n\n\n工程化学第六章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n第一次blog\n\n\n\nBlogs\n\n\n\n使用quarto来写blog\n\n\n\n\n\nMar 1, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\nLinux上面也有NFC\n\n\n\nLinux\n\nBlog\n\n\n\n介绍NFC相关知识,然后使用(玩一下)NFC进行一些操作\n\n\n\n\n\nMar 1, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\nR语言\n\n\n\n计算机语言\n\nNotes\n\n\n\n一门专门为统计计算，数据分析和图形绘制而设计的编程语言。\n\n\n\n\n\nMar 1, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n流体与流体力学\n\n\n\nNotes\n\n\n\n流体与流体力学\n\n\n\n\n\nMar 1, 2026\n\n\nQMD\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "notes/R语言/index.html",
-    "href": "notes/R语言/index.html",
-    "title": "R语言",
+    "objectID": "posts/生活/Linux上面也有NFC!.html",
+    "href": "posts/生活/Linux上面也有NFC!.html",
+    "title": "Linux上面也有NFC",
     "section": "",
-    "text": "hitokoto!\n\n\n\n\n\n\n\n\n\nR语言\n\n\n\n\nReuseCC BY-NC-SA 4.0",
+    "text": "hitokoto!",
+    "crumbs": [
+      "Posts",
+      "生活",
+      "Linux上面也有NFC"
+    ]
+  },
+  {
+    "objectID": "posts/生活/Linux上面也有NFC!.html#nfcnear-field-communication",
+    "href": "posts/生活/Linux上面也有NFC!.html#nfcnear-field-communication",
+    "title": "Linux上面也有NFC",
+    "section": "NFC(Near Field Communication)",
+    "text": "NFC(Near Field Communication)\n近场通信,本质上是一种电磁感应,与WIFI,蓝牙这种发射接受电磁波的不一样,这也铸就了NFC的一些特性: 距离短,速度快(无需配对),功耗低,安全性高(因为必须物理近距离qwq)\nNFC非常强大,它可以有三种用途(一个NFC,三次满足!) - 卡模拟(Card Emulation): 手机刷公交,门禁卡,NFC支付,卡包app,身份验证令牌 - 读卡器(Reader/Writer): 用手机给公交卡充值,扫描NFC标签 - 点对点模式(P2P): 华为纯血鸿蒙”碰一碰”的文件图片互传\n但是这也铸成了一些安全隐患:\n\n\n\n买一个NFC贴纸玩一玩,碰一碰就能自动执行任务",
+    "crumbs": [
+      "Posts",
+      "生活",
+      "Linux上面也有NFC"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "QMD",
+    "section": "",
+    "text": "China Three Gorges University | Yichang, Hubei\nA lazy college student majoring in mechanical engineering"
+  },
+  {
+    "objectID": "notes/工程化学/3. 溶液.html",
+    "href": "notes/工程化学/3. 溶液.html",
+    "title": "溶液",
+    "section": "",
+    "text": "hitokoto!\n\n\n\n\n\n\n\n\n\n\n\nReuseCC BY-NC-SA 4.0",
     "crumbs": [
       "Notes",
-      "R语言"
+      "工程化学",
+      "溶液"
+    ]
+  },
+  {
+    "objectID": "notes/工程化学/2. 化学平衡与化学反应速率.html",
+    "href": "notes/工程化学/2. 化学平衡与化学反应速率.html",
+    "title": "化学平衡与化学反应速率",
+    "section": "",
+    "text": "hitokoto!\n\n\n\n\n\n\n\n\n\n一、 化学平衡的定义与特征\n\n定义：在一定条件下的可逆反应中，当正反应速率与逆反应速率相等时，系统中各物质的浓度（或分压）不再随时间改变，此时系统所处的状态称为化学平衡状态。\n特征：\n\n动态平衡：反应并未停止，只是正逆速率相等。\n定态：宏观性质（如压力、温度、组成）保持不变。\n可逆性：平衡可以从正向或逆向两个方向达到。\n\n\n\n\n二、 化学平衡常数 (Equilibrium Constant)\n对于气相反应：\\(aA(g) + bB(g) \\rightleftharpoons cC(g) + dD(g)\\)\n\n经验平衡常数：\n\n\\(K_c\\)（浓度平衡常数）：\\(K_c = \\frac{[C]^c [D]^d}{[A]^a [B]^b}\\)。\n\\(K_p\\)（压力平衡常数）：\\(K_p = \\frac{p(C)^c p(D)^d}{p(A)^a p(B)^b}\\)。\n\n\\(K_p\\) 与 \\(K_c\\) 的关系推导：\n\n根据理想气体状态方程 \\(p = cRT\\)，代入 \\(K_p\\) 表达式中：\n\\(K_p = \\frac{(c_C RT)^c (c_D RT)^d}{(c_A RT)^a (c_B RT)^b} = \\frac{c_C^c c_D^d}{c_A^a c_B^b} \\cdot (RT)^{(c+d)-(a+b)}\\)\n得出结论：\\(K_p = K_c(RT)^{\\Delta n}\\)（其中 \\(\\Delta n\\) 为生成物与反应物气态物质的化学计量数之差）。\n\n\n\n\n三、 平衡常数与吉布斯自由能的关系（核心推导）\n这是连接热力学与化学平衡的桥梁。\n\n范特霍夫等温方程 (Van’t Hoff Isotherm)： 在非标准状态下，反应的自由能变 \\(\\Delta_r G_m(T)\\) 与标准自由能变 \\(\\Delta_r G_m^\\theta(T)\\) 的关系为： \\(\\Delta_r G_m(T) = \\Delta_r G_m^\\theta(T) + RT \\ln Q\\)，其中 \\(Q\\) 为反应商。\n标准平衡常数 \\(K^\\theta\\) 的推导：\n\n当反应达到平衡时，系统不具备做功本领，即 \\(\\Delta_r G_m(T) = 0\\)。\n此时的反应商 \\(Q\\) 等于标准平衡常数 \\(K^\\theta\\)。\n代入等温方程：\\(0 = \\Delta_r G_m^\\theta(T) + RT \\ln K^\\theta\\)。\n得出核心公式：\\(\\Delta_r G_m^\\theta(T) = -RT \\ln K^\\theta\\)（或 \\(\\lg K^\\theta = -\\frac{\\Delta_r G_m^\\theta}{2.303RT}\\)）。\n\n\n\n\n四、 化学平衡移动的判定\n利用反应商 \\(Q\\) 与平衡常数 \\(K\\) 的比较，可以判定反应进行的方向： * \\(Q &lt; K\\)：反应向正反应方向进行。 * \\(Q = K\\)：反应处于平衡状态。 * \\(Q &gt; K\\)：反应向逆反应方向进行。\n\n\n五、 影响化学平衡的因素（吕·查德里原理）\n\n浓度/压力：增大反应物浓度或减小生成物浓度，平衡向正向移动。\n温度对平衡常数的影响（范特霍夫方程推导）：\n\n结合 \\(\\Delta_r G_m^\\theta = \\Delta_r H_m^\\theta - T\\Delta_r S_m^\\theta\\) 和 \\(\\Delta_r G_m^\\theta = -RT \\ln K^\\theta\\)。\n得 \\(\\ln K^\\theta = -\\frac{\\Delta_r H_m^\\theta}{RT} + \\frac{\\Delta_r S_m^\\theta}{R}\\)。\n假设在一定温度范围内 \\(\\Delta H\\) 和 \\(\\Delta S\\) 为常数，对于两个不同温度 \\(T_1\\) 和 \\(T_2\\)：\n\\(\\lg \\frac{K_2^\\theta}{K_1^\\theta} = \\frac{\\Delta_r H_m^\\theta}{2.303R} \\left( \\frac{1}{T_1} - \\frac{1}{T_2} \\right)\\)。\n结论：吸热反应（\\(\\Delta H &gt; 0\\)）升温时 \\(K\\) 增大，平衡正移；放热反应（\\(\\Delta H &lt; 0\\)）升温时 \\(K\\) 减小，平衡逆移。\n\n\n\n\n六、 多重平衡 (Multiple Equilibria)\n若一个化学反应可以由另外几个反应相加减得到，则该反应的平衡常数等于相关反应平衡常数的积或商。 * 例如：反应 (3) = 反应 (1) + 反应 (2)，则 \\(K_3 = K_1 \\cdot K_2\\)。\n掌握了这些知识点及其推导过程，你就能应对工程计算中关于平衡限度和环境条件（温压浓）改变对反应产率的影响分析了。\n\n\n\n\nReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Notes",
+      "工程化学",
+      "化学平衡与化学反应速率"
+    ]
+  },
+  {
+    "objectID": "notes/工程化学/7. 金属材料与无机非金属材料.html",
+    "href": "notes/工程化学/7. 金属材料与无机非金属材料.html",
+    "title": "金属材料与无机非金属材料",
+    "section": "",
+    "text": "hitokoto!\n\n\n\n\n\n\n\n\n\n\n\nReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Notes",
+      "工程化学",
+      "金属材料与无机非金属材料"
+    ]
+  },
+  {
+    "objectID": "notes/工程化学/4. 氧化还原与电化学.html",
+    "href": "notes/工程化学/4. 氧化还原与电化学.html",
+    "title": "氧化还原反应与电化学",
+    "section": "",
+    "text": "hitokoto!\n\n\n\n\n\n\n\n\n\n\n\nReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Notes",
+      "工程化学",
+      "氧化还原反应与电化学"
+    ]
+  },
+  {
+    "objectID": "notes/工程化学/6. 无机物单质及化合物.html",
+    "href": "notes/工程化学/6. 无机物单质及化合物.html",
+    "title": "无机物单质及化合物",
+    "section": "",
+    "text": "hitokoto!\n\n\n\n\n\n\n\n\n\n\n\nReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Notes",
+      "工程化学",
+      "无机物单质及化合物"
     ]
   }
 ]
