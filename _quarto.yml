@@ -9,6 +9,7 @@ website:
   description: "琐事随笔"
   site-url: https://qmdthings.top
   # you must change this appropriately for RSS feeds to work properly
+  site-path: /
 
   reader-mode: true
 
