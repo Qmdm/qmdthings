@@ -77,6 +77,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -497,8 +526,20 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#一-核外电子的运动状态量子力学模型" id="toc-一-核外电子的运动状态量子力学模型" class="nav-link active" data-scroll-target="#一-核外电子的运动状态量子力学模型">一、 核外电子的运动状态（量子力学模型）</a></li>
+  <li><a href="#二-核外电子排布原则能量最低原理" id="toc-二-核外电子排布原则能量最低原理" class="nav-link" data-scroll-target="#二-核外电子排布原则能量最低原理">二、 核外电子排布原则（能量最低原理）</a></li>
+  <li><a href="#三-元素周期律" id="toc-三-元素周期律" class="nav-link" data-scroll-target="#三-元素周期律">三、 元素周期律</a></li>
+  <li><a href="#四-化学键理论物质的结合" id="toc-四-化学键理论物质的结合" class="nav-link" data-scroll-target="#四-化学键理论物质的结合">四、 化学键理论（物质的结合）</a></li>
+  <li><a href="#五-杂化轨道理论空间构型的推导" id="toc-五-杂化轨道理论空间构型的推导" class="nav-link" data-scroll-target="#五-杂化轨道理论空间构型的推导">五、 杂化轨道理论（空间构型的推导）</a></li>
+  <li><a href="#六-分子间作用力与氢键" id="toc-六-分子间作用力与氢键" class="nav-link" data-scroll-target="#六-分子间作用力与氢键">六、 分子间作用力与氢键</a></li>
+  <li><a href="#总结" id="toc-总结" class="nav-link" data-scroll-target="#总结">总结</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -528,8 +569,78 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<p>根据您正在学习的刘立明主编《工程化学基础教程》及相关大纲资料，<strong>第五章的内容为“物质结构基础”</strong>。</p>
+<p>本章的逻辑是从微观粒子（电子、原子）的运动规律出发，解释原子如何通过化学键结合成分子，并最终决定物质的宏观性质。以下是本章所有核心知识点的详细讲解与逻辑推导：</p>
+<section id="一-核外电子的运动状态量子力学模型" class="level3">
+<h3 class="anchored" data-anchor-id="一-核外电子的运动状态量子力学模型">一、 核外电子的运动状态（量子力学模型）</h3>
+<p>与宏观机械运动不同，微观电子的运动具有<strong>波粒二象性</strong>。</p>
+<ol type="1">
+<li><strong>波函数与原子轨道</strong>：
+<ul>
+<li>电子的运动状态用<strong>波函数 <span class="math inline">\(\psi\)</span></strong>（又称原子轨道）来描述。</li>
+<li><strong><span class="math inline">\(\psi^2\)</span> 的物理意义</strong>：代表电子在空间某处出现的<strong>概率密度</strong>，其形象化表示即为<strong>电子云</strong>。</li>
+</ul></li>
+<li><strong>四个量子数（电子的“住址”）</strong>：
+<ul>
+<li><strong>主量子数 (<span class="math inline">\(n\)</span>)</strong>：决定电子层（能层）和轨道能量。取值为正整数 <span class="math inline">\(1, 2, 3...\)</span>。</li>
+<li><strong>角量子数 (<span class="math inline">\(l\)</span>)</strong>：决定能级（电子亚层）和轨道的形状（如 <span class="math inline">\(s\)</span> 为球形，<span class="math inline">\(p\)</span> 为哑铃形）。取值为 <span class="math inline">\(0\)</span> 到 <span class="math inline">\((n-1)\)</span>。</li>
+<li><strong>磁量子数 (<span class="math inline">\(m\)</span>)</strong>：决定轨道在空间的伸展方向。取值为 <span class="math inline">\(0, \pm 1... \pm l\)</span>。</li>
+<li><strong>自旋量子数 (<span class="math inline">\(m_s\)</span>)</strong>：描述电子的自旋方向，取值为 <span class="math inline">\(\pm 1/2\)</span>。</li>
+</ul></li>
+</ol>
+</section>
+<section id="二-核外电子排布原则能量最低原理" class="level3">
+<h3 class="anchored" data-anchor-id="二-核外电子排布原则能量最低原理">二、 核外电子排布原则（能量最低原理）</h3>
+<p>电子在原子核外的排布必须遵循以下三大规律： 1. <strong>泡利不相容原理</strong>：一个原子轨道内最多只能容纳两个自旋方向相反的电子。即一个原子中不可能有两个电子的四个量子数完全相同。 2. <strong>能量最低原理</strong>：电子尽可能先占据能量最低的轨道。 3. <strong>洪特规则</strong>：在能量相同的轨道（等价轨道）上，电子尽可能分占不同的轨道且自旋方向相同，此时系统能量最低。</p>
+</section>
+<section id="三-元素周期律" class="level3">
+<h3 class="anchored" data-anchor-id="三-元素周期律">三、 元素周期律</h3>
+<ul>
+<li><strong>周期性本质</strong>：随着核电荷数递增，原子的<strong>核外电子排布呈现周期性变化</strong>。</li>
+<li><strong>性质递变</strong>：
+<ul>
+<li><strong>原子半径</strong>：同周期从左到右减小；同族从上到下增大。</li>
+<li><strong>电负性</strong>：衡量原子吸引电子能力的强弱。同周期从左到右增大。</li>
+</ul></li>
+</ul>
+</section>
+<section id="四-化学键理论物质的结合" class="level3">
+<h3 class="anchored" data-anchor-id="四-化学键理论物质的结合">四、 化学键理论（物质的结合）</h3>
+<p>化学键是原子间强烈的相互作用，分为离子键、共价键、金属键等。</p>
+<ol type="1">
+<li><strong>离子键</strong>：依靠正、负离子间的静电引力形成（如食盐 <span class="math inline">\(NaCl\)</span>）。</li>
+<li><strong>共价键（价键理论, VB）</strong>：
+<ul>
+<li><strong>本质</strong>：原子间通过<strong>电子对重叠</strong>（形成共有电子对）而结合。</li>
+<li><strong>特征</strong>：具有<strong>方向性</strong>和<strong>饱和性</strong>。</li>
+<li><strong>分类</strong>：包括 <span class="math inline">\(\sigma\)</span> 键（头碰头，较稳固）和 <span class="math inline">\(\pi\)</span> 键（肩并肩）。</li>
+</ul></li>
+</ol>
+</section>
+<section id="五-杂化轨道理论空间构型的推导" class="level3">
+<h3 class="anchored" data-anchor-id="五-杂化轨道理论空间构型的推导">五、 杂化轨道理论（空间构型的推导）</h3>
+<p>为了解释多原子分子（如甲烷 <span class="math inline">\(CH_4\)</span>）的空间构型，化学家提出了<strong>杂化轨道理论</strong>。</p>
+<ul>
+<li><strong>推导逻辑</strong>：在形成分子时，中心原子能量相近的原子轨道（如一个 <span class="math inline">\(s\)</span> 和三个 <span class="math inline">\(p\)</span>）会重新组合，形成一组能量相同的新轨道，称为<strong>杂化轨道</strong>。</li>
+<li><strong>常见类型与形状</strong>：
+<ul>
+<li><strong><span class="math inline">\(sp\)</span> 杂化</strong>：形成 2 个轨道，角度 <span class="math inline">\(180^\circ\)</span>，分子呈<strong>直线型</strong>（如 <span class="math inline">\(BeCl_2\)</span>）。</li>
+<li><strong><span class="math inline">\(sp^2\)</span> 杂化</strong>：形成 3 个轨道，角度 <span class="math inline">\(120^\circ\)</span>，分子呈<strong>平面正三角形</strong>（如 <span class="math inline">\(BF_3\)</span>）。</li>
+<li><strong><span class="math inline">\(sp^3\)</span> 杂化</strong>：形成 4 个轨道，角度 <span class="math inline">\(109.5^\circ\)</span>，分子呈<strong>正四面体型</strong>（如 <span class="math inline">\(CH_4\)</span>）。</li>
+</ul></li>
+</ul>
+</section>
+<section id="六-分子间作用力与氢键" class="level3">
+<h3 class="anchored" data-anchor-id="六-分子间作用力与氢键">六、 分子间作用力与氢键</h3>
+<p>这些力决定了物质的物理性质（如熔沸点、溶解性）。 * <strong>范德华力</strong>：普遍存在于分子间，较弱。 * <strong>氢键</strong>：强于范德华力但弱于化学键。它解释了为什么水（<span class="math inline">\(H_2O\)</span>）的沸点异常高。</p>
+</section>
+<section id="总结" class="level3">
+<h3 class="anchored" data-anchor-id="总结">总结</h3>
+<p>第五章的知识脉络是：<strong>量子数决定电子分布 <span class="math inline">\(\rightarrow\)</span> 电子排布决定元素性质 <span class="math inline">\(\rightarrow\)</span> 化学键与杂化轨道决定分子构型 <span class="math inline">\(\rightarrow\)</span> 最终决定材料的性能（如金属的延展性、半导体的导电性等）</strong>。</p>
+<p>如果您需要针对某个特定的量子数计算或杂化轨道判断进行练习，我可以为您提供具体案例。</p>
 
 
+</section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

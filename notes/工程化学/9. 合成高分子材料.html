@@ -76,6 +76,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -496,8 +525,19 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#溶度积常数-k_sp-的定义" id="toc-溶度积常数-k_sp-的定义" class="nav-link active" data-scroll-target="#溶度积常数-k_sp-的定义">1. 溶度积常数 (<span class="math inline">\(K_{sp}\)</span>) 的定义</a></li>
+  <li><a href="#溶解度-s-与-k_sp-的关系及推导" id="toc-溶解度-s-与-k_sp-的关系及推导" class="nav-link" data-scroll-target="#溶解度-s-与-k_sp-的关系及推导">2. 溶解度 (<span class="math inline">\(s\)</span>) 与 <span class="math inline">\(K_{sp}\)</span> 的关系及推导</a></li>
+  <li><a href="#溶度积规则沉淀生成的判定" id="toc-溶度积规则沉淀生成的判定" class="nav-link" data-scroll-target="#溶度积规则沉淀生成的判定">3. 溶度积规则（沉淀生成的判定）</a></li>
+  <li><a href="#影响沉淀溶解平衡的因素" id="toc-影响沉淀溶解平衡的因素" class="nav-link" data-scroll-target="#影响沉淀溶解平衡的因素">4. 影响沉淀溶解平衡的因素</a></li>
+  <li><a href="#分步沉淀-fractional-precipitation" id="toc-分步沉淀-fractional-precipitation" class="nav-link" data-scroll-target="#分步沉淀-fractional-precipitation">5. 分步沉淀 (Fractional Precipitation)</a></li>
+  <li><a href="#沉淀的转化-precipitation-transformation" id="toc-沉淀的转化-precipitation-transformation" class="nav-link" data-scroll-target="#沉淀的转化-precipitation-transformation">6. 沉淀的转化 (Precipitation Transformation)</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -527,8 +567,37 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<section id="溶度积常数-k_sp-的定义" class="level3">
+<h3 class="anchored" data-anchor-id="溶度积常数-k_sp-的定义">1. 溶度积常数 (<span class="math inline">\(K_{sp}\)</span>) 的定义</h3>
+<p>对于难溶电解质 <span class="math inline">\(A_m B_n\)</span> 在水中的饱和溶液，存在如下动态平衡： <span class="math display">\[A_m B_n(s) \rightleftharpoons m A^{n+}(aq) + n B^{m-}(aq)\]</span> * <strong>概念</strong>：在一定温度下，难溶电解质的饱和溶液中，各离子浓度幂的乘积是一个常数，称为<strong>溶度积常数 (<span class="math inline">\(K_{sp}\)</span>)</strong>。 * <strong>表达式</strong>：<span class="math display">\[\mathbf{K_{sp} = [A^{n+}]^m \cdot [B^{m-}]^n}\]</span>。 * <strong>物理意义</strong>：<span class="math inline">\(K_{sp}\)</span> 反映了难溶电解质在水中的<strong>溶解能力</strong>。在相同类型（如均为 <span class="math inline">\(AB\)</span> 型）的电解质中，<span class="math inline">\(K_{sp}\)</span> 越小，溶解度越小。</p>
+</section>
+<section id="溶解度-s-与-k_sp-的关系及推导" class="level3">
+<h3 class="anchored" data-anchor-id="溶解度-s-与-k_sp-的关系及推导">2. 溶解度 (<span class="math inline">\(s\)</span>) 与 <span class="math inline">\(K_{sp}\)</span> 的关系及推导</h3>
+<p>这是定量计算的核心。 * <strong>推导过程（以 <span class="math inline">\(A_m B_n\)</span> 为例）</strong>： 1. 设难溶电解质的溶解度为 <span class="math inline">\(s\)</span> (mol·dm⁻³)。 2. 平衡时：<span class="math inline">\([A^{n+}] = ms\)</span>，<span class="math inline">\([B^{m-}] = ns\)</span>。 3. 代入溶度积公式：<span class="math inline">\(K_{sp} = (ms)^m \cdot (ns)^n = m^m \cdot n^n \cdot s^{m+n}\)</span>。 * <strong>常见类型结论</strong>： * <strong><span class="math inline">\(AB\)</span> 型</strong>（如 <span class="math inline">\(AgCl\)</span>）：<span class="math inline">\(K_{sp} = s^2 \Rightarrow \mathbf{s = \sqrt{K_{sp}}}\)</span>。 * <strong><span class="math inline">\(A_2 B\)</span> 或 <span class="math inline">\(AB_2\)</span> 型</strong>（如 <span class="math inline">\(Ag_2 CrO_4\)</span> 或 <span class="math inline">\(PbF_2\)</span>）：<span class="math inline">\(K_{sp} = (2s)^2 \cdot s = 4s^3 \Rightarrow \mathbf{s = \sqrt{K_{sp}/4}}\)</span>。</p>
+</section>
+<section id="溶度积规则沉淀生成的判定" class="level3">
+<h3 class="anchored" data-anchor-id="溶度积规则沉淀生成的判定">3. 溶度积规则（沉淀生成的判定）</h3>
+<p>类似于化学平衡中的 <span class="math inline">\(Q\)</span> 与 <span class="math inline">\(K\)</span> 的比较： * <strong>离子积 (<span class="math inline">\(Q\)</span>)</strong>：溶液中离子浓度幂的乘积（不一定是饱和状态）。 * <strong>判定标准</strong>： * <strong><span class="math inline">\(Q &gt; K_{sp}\)</span></strong>：溶液过饱和，<strong>有沉淀析出</strong>，直到 <span class="math inline">\(Q = K_{sp}\)</span>。 * <strong><span class="math inline">\(Q = K_{sp}\)</span></strong>：溶液恰好饱和，处于<strong>沉淀溶解平衡状态</strong>。 * <strong><span class="math inline">\(Q &lt; K_{sp}\)</span></strong>：溶液未饱和，<strong>无沉淀析出</strong>；若有固体存在，则固体继续溶解。</p>
+</section>
+<section id="影响沉淀溶解平衡的因素" class="level3">
+<h3 class="anchored" data-anchor-id="影响沉淀溶解平衡的因素">4. 影响沉淀溶解平衡的因素</h3>
+<ul>
+<li><strong>同离子效应</strong>：在难溶电解质溶液中加入含有相同离子的强电解质，平衡会向生成沉淀的方向移动，从而使难溶物的<strong>溶解度显著降低</strong>。</li>
+<li><strong>盐效应</strong>：在难溶电解质溶液中加入不含相同离子的强电解质，会稍微增大溶解度（但在基础工程计算中通常忽略不计）。</li>
+<li><strong>酸效应（pH 影响）</strong>：如果沉淀的阴离子是弱酸根（如 <span class="math inline">\(CO_3^{2-}, OH^-\)</span>），降低 pH（加酸）会使阴离子浓度下降，导致平衡右移，<strong>沉淀溶解</strong>。</li>
+<li><strong>配位效应</strong>：加入能与金属离子形成稳定配合物的试剂，会显著增大溶解度。</li>
+</ul>
+</section>
+<section id="分步沉淀-fractional-precipitation" class="level3">
+<h3 class="anchored" data-anchor-id="分步沉淀-fractional-precipitation">5. 分步沉淀 (Fractional Precipitation)</h3>
+<p>当溶液中存在多种离子都能与同一种试剂产生沉淀时，它们被沉淀出来的先后顺序。 * <strong>基本原理</strong>：哪种物质先达到其 <span class="math inline">\(K_{sp}\)</span> 所要求的浓度积，哪种物质就<strong>先沉淀</strong>。 * <strong>应用</strong>：通过控制加入试剂的浓度或调节 pH 值，可以实现离子的分离。</p>
+</section>
+<section id="沉淀的转化-precipitation-transformation" class="level3">
+<h3 class="anchored" data-anchor-id="沉淀的转化-precipitation-transformation">6. 沉淀的转化 (Precipitation Transformation)</h3>
+<p>一种难溶电解质转化为另一种更难溶电解质的过程。 * <strong>规律</strong>：通常是 <strong><span class="math inline">\(K_{sp}\)</span> 较大的转化为 <span class="math inline">\(K_{sp}\)</span> 更小的</strong>（例如 <span class="math inline">\(AgCl \rightarrow AgI\)</span>）。 * <strong>转化平衡常数 (<span class="math inline">\(K\)</span>) 的推导</strong>： 对于反应 <span class="math inline">\(AgCl(s) + I^-(aq) \rightleftharpoons AgI(s) + Cl^-(aq)\)</span>： <span class="math display">\[K = \frac{[Cl^-]}{[I^-]} = \frac{[Cl^-][Ag^+]}{[I^-][Ag^+]} = \frac{K_{sp}(AgCl)}{K_{sp}(AgI)}\]</span> 若 <span class="math inline">\(K_{sp}(AgCl) \gg K_{sp}(AgI)\)</span>，则平衡常数 <span class="math inline">\(K\)</span> 非常大，转化非常彻底。</p>
 
 
+</section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

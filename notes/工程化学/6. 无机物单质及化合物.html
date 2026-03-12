@@ -77,6 +77,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -497,8 +526,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#一-无机化合物的物理性质规律" id="toc-一-无机化合物的物理性质规律" class="nav-link active" data-scroll-target="#一-无机化合物的物理性质规律">一、 无机化合物的物理性质规律</a></li>
+  <li><a href="#二-无机化合物的化学性质递变" id="toc-二-无机化合物的化学性质递变" class="nav-link" data-scroll-target="#二-无机化合物的化学性质递变">二、 无机化合物的化学性质递变</a></li>
+  <li><a href="#三-配位化合物配合物基础-本章理论核心" id="toc-三-配位化合物配合物基础-本章理论核心" class="nav-link" data-scroll-target="#三-配位化合物配合物基础-本章理论核心">三、 配位化合物（配合物）基础 —— 本章理论核心</a></li>
+  <li><a href="#四-工程材料化学应用" id="toc-四-工程材料化学应用" class="nav-link" data-scroll-target="#四-工程材料化学应用">四、 工程材料化学应用</a></li>
+  <li><a href="#五-核心概念的逻辑关联" id="toc-五-核心概念的逻辑关联" class="nav-link" data-scroll-target="#五-核心概念的逻辑关联">五、 核心概念的逻辑关联</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -528,8 +567,78 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<section id="一-无机化合物的物理性质规律" class="level3">
+<h3 class="anchored" data-anchor-id="一-无机化合物的物理性质规律">一、 无机化合物的物理性质规律</h3>
+<p>本部分利用第五章的物质结构理论，推导宏观性质的变化规律：</p>
+<ol type="1">
+<li><strong>熔沸点与硬度</strong>：
+<ul>
+<li><strong>推导逻辑</strong>：物质的熔沸点取决于质点间作用力的强弱。</li>
+<li><strong>规律</strong>：原子晶体（如金刚石）&gt; 离子晶体 &gt; 金属晶体 &gt; 分子晶体。</li>
+</ul></li>
+<li><strong>溶解性</strong>：
+<ul>
+<li><strong>推导逻辑</strong>：遵循“相似相溶”原理。极性溶质易溶于极性溶剂（如水），非极性溶质易溶于非极性溶剂（如苯）。</li>
+</ul></li>
+</ol>
+</section>
+<section id="二-无机化合物的化学性质递变" class="level3">
+<h3 class="anchored" data-anchor-id="二-无机化合物的化学性质递变">二、 无机化合物的化学性质递变</h3>
+<p>利用周期律推导同周期或同族元素化合物的性质变化：</p>
+<ol type="1">
+<li><strong>酸碱性</strong>：
+<ul>
+<li><strong>规律</strong>：同周期从左到右，最高价氧化物水化物的酸性增强，碱性减弱；同族从上到下，酸性减弱，碱性增强。</li>
+</ul></li>
+<li><strong>氧化还原性</strong>：
+<ul>
+<li><strong>推导逻辑</strong>：与其电负性及电极电势相关。高氧化态通常具有氧化性，低氧化态具有还原性。</li>
+</ul></li>
+</ol>
+</section>
+<section id="三-配位化合物配合物基础-本章理论核心" class="level3">
+<h3 class="anchored" data-anchor-id="三-配位化合物配合物基础-本章理论核心">三、 配位化合物（配合物）基础 —— 本章理论核心</h3>
+<p>配合物是由中心原子（或离子）与配体通过配位键结合而成的复杂离子或分子。</p>
+<ol type="1">
+<li><strong>组成结构</strong>：
+<ul>
+<li><strong>中心原子</strong>：通常是过渡金属离子。</li>
+<li><strong>配体</strong>：含有孤对电子的分子或离子（如 <span class="math inline">\(NH_3, Cl^-, H_2O\)</span>）。</li>
+<li><strong>配位数</strong>：中心原子结合配体的数目。</li>
+</ul></li>
+<li><strong>螯合物 (Chelates)</strong>：
+<ul>
+<li><strong>定义</strong>：多齿配体与同一个中心原子形成具有环状结构的配合物。</li>
+<li><strong>特性</strong>：螯合物比一般的单齿配合物具有极高的稳定性（即<strong>螯合效应</strong>）。</li>
+</ul></li>
+<li><strong>配合物成键理论的推导（价键理论）</strong>：
+<ul>
+<li><strong>核心思想</strong>：中心原子提供<strong>空轨道</strong>，配体提供<strong>孤对电子</strong>，两者通过<strong>杂化</strong>形成配位键。</li>
+<li><strong>推导示例</strong>：例如 <span class="math inline">\([Cu(NH_3)_4]^{2+}\)</span>，铜离子通过 <span class="math inline">\(dsp^2\)</span> 杂化，形成平面四方形结构。</li>
+</ul></li>
+</ol>
+</section>
+<section id="四-工程材料化学应用" class="level3">
+<h3 class="anchored" data-anchor-id="四-工程材料化学应用">四、 工程材料化学应用</h3>
+<p>作为机械专业的学生，这一部分将化学理论与实际材料性能挂钩：</p>
+<ol type="1">
+<li><strong>金属材料与合金</strong>：
+<ul>
+<li><strong>合金化原理</strong>：通过引入其他元素改变基体金属的结构，从而提高强度、硬度或耐腐蚀性。</li>
+</ul></li>
+<li><strong>无机非金属材料</strong>：
+<ul>
+<li><strong>传统材料</strong>：水泥、玻璃、陶瓷的化学组成与硬化原理（如水泥的水化反应）。</li>
+<li><strong>新型材料</strong>：如纳米材料、超导材料和半导体材料的特性。</li>
+</ul></li>
+</ol>
+</section>
+<section id="五-核心概念的逻辑关联" class="level3">
+<h3 class="anchored" data-anchor-id="五-核心概念的逻辑关联">五、 核心概念的逻辑关联</h3>
+<p>本章的知识点并非孤立，它们形成了一个完整的应用链条： * 通过<strong>结构理论</strong>（杂化、晶体类型）预测<strong>物理性质</strong>（硬度、熔点）； * 通过<strong>热力学和电极电势</strong>预测<strong>化学稳定性</strong>（氧化还原、酸碱）； * 利用<strong>配位化学</strong>解决金属的提取、提纯及化学转化膜处理（如发黑、磷化）。</p>
 
 
+</section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

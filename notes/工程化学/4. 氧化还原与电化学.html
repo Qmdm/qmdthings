@@ -77,6 +77,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -497,8 +526,19 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#一-氧化还原反应基础" id="toc-一-氧化还原反应基础" class="nav-link active" data-scroll-target="#一-氧化还原反应基础">一、 氧化还原反应基础</a></li>
+  <li><a href="#二-原电池-galvanic-cells" id="toc-二-原电池-galvanic-cells" class="nav-link" data-scroll-target="#二-原电池-galvanic-cells">二、 原电池 (Galvanic Cells)</a></li>
+  <li><a href="#三-电极电势与电池电动势" id="toc-三-电极电势与电池电动势" class="nav-link" data-scroll-target="#三-电极电势与电池电动势">三、 电极电势与电池电动势</a></li>
+  <li><a href="#四-能斯特方程-nernst-equation-核心推导" id="toc-四-能斯特方程-nernst-equation-核心推导" class="nav-link" data-scroll-target="#四-能斯特方程-nernst-equation-核心推导">四、 能斯特方程 (Nernst Equation) —— 核心推导</a></li>
+  <li><a href="#五-电化学与热力学的关系" id="toc-五-电化学与热力学的关系" class="nav-link" data-scroll-target="#五-电化学与热力学的关系">五、 电化学与热力学的关系</a></li>
+  <li><a href="#六-金属腐蚀与防护-corrosion-and-protection" id="toc-六-金属腐蚀与防护-corrosion-and-protection" class="nav-link" data-scroll-target="#六-金属腐蚀与防护-corrosion-and-protection">六、 金属腐蚀与防护 (Corrosion and Protection)</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -528,8 +568,75 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<section id="一-氧化还原反应基础" class="level3">
+<h3 class="anchored" data-anchor-id="一-氧化还原反应基础">一、 氧化还原反应基础</h3>
+<ol type="1">
+<li><strong>氧化还原电对</strong>：任何氧化还原反应都由两个半反应组成，每个半反应包含一种元素的两种不同氧化态（如 <span class="math inline">\(Zn^{2+}/Zn\)</span>），称为氧化还原电对。</li>
+<li><strong>氧化数</strong>：用于电化学计算中确定转移电子数 <span class="math inline">\(n\)</span> 的关键参数。</li>
+</ol>
+</section>
+<section id="二-原电池-galvanic-cells" class="level3">
+<h3 class="anchored" data-anchor-id="二-原电池-galvanic-cells">二、 原电池 (Galvanic Cells)</h3>
+<ol type="1">
+<li><strong>构造</strong>：由两个电极（正极、负极）、电解质溶液和<strong>盐桥</strong>组成。</li>
+<li><strong>电池符号表示法</strong>：
+<ul>
+<li>负极在左，正极在右；</li>
+<li>单竖线“|”表示相界面，双竖线“||”表示盐桥。</li>
+<li>需注明物质状态和浓度。例如：<span class="math inline">\((-)\ Zn(s) | Zn^{2+}(c_1) || Cu^{2+}(c_2) | Cu(s)\ (+)\)</span>。</li>
+</ul></li>
+</ol>
+</section>
+<section id="三-电极电势与电池电动势" class="level3">
+<h3 class="anchored" data-anchor-id="三-电极电势与电池电动势">三、 电极电势与电池电动势</h3>
+<ol type="1">
+<li><strong>标准氢电极 (SHE)</strong>：人为规定在任何温度下，标准态氢电极的电势为零（<span class="math inline">\(E^\theta(H^+/H_2) = 0\text{ V}\)</span>）。</li>
+<li><strong>标准电极电势 (<span class="math inline">\(E^\theta\)</span>)</strong>：以标准氢电极作负极，目标电极作正极组成的电池在标准态下的电动势。</li>
+<li><strong>电池电动势 (<span class="math inline">\(E\)</span>) 的计算</strong>： <span class="math display">\[\mathbf{E = E_{正} - E_{负}}\]</span> （注意：计算电动势时，电势高的为正极，电势低的为负极）。</li>
+</ol>
+</section>
+<section id="四-能斯特方程-nernst-equation-核心推导" class="level3">
+<h3 class="anchored" data-anchor-id="四-能斯特方程-nernst-equation-核心推导">四、 能斯特方程 (Nernst Equation) —— 核心推导</h3>
+<p>这是描述浓度（或分压）和温度对电极电势影响的最重要公式。</p>
+<ul>
+<li><strong>热力学推导基础</strong>： 在第二、三章中，我们知道 <span class="math inline">\(\Delta_r G_m = \Delta_r G_m^\theta + RT \ln Q\)</span>。 由于 <span class="math inline">\(\Delta_r G_m\)</span> 是体系对外做的最大有用功（非体积功），在电化学中，这个功就是电功：<span class="math inline">\(W' = -nFE\)</span>。 因此：<span class="math inline">\(-nFE = -nFE^\theta + RT \ln Q\)</span>。</li>
+<li><strong>推导过程</strong>：
+<ol type="1">
+<li>两边同时除以 <span class="math inline">\(-nF\)</span>：<span class="math inline">\(E = E^\theta - \frac{RT}{nF} \ln Q\)</span>。</li>
+<li>在常温（<span class="math inline">\(298.15\text{ K}\)</span>）下，代入 <span class="math inline">\(R\)</span>、<span class="math inline">\(T\)</span>、<span class="math inline">\(F\)</span> 的常数，并将自然对数 <span class="math inline">\(\ln\)</span> 换为常用对数 <span class="math inline">\(\lg\)</span>（乘以 <span class="math inline">\(2.303\)</span>）： <span class="math display">\[\mathbf{E = E^\theta - \frac{0.0592}{n} \lg Q}\]</span></li>
+</ol></li>
+<li><strong>具体应用（以电极电势为例）</strong>： 对于电极反应：<span class="math inline">\(Ox + ne^- \rightleftharpoons Red\)</span> <span class="math display">\[\mathbf{E(Ox/Red) = E^\theta(Ox/Red) + \frac{0.0592}{n} \lg \frac{[Ox]}{[Red]}}\]</span> （注意：纯固体、纯液体的浓度项不列入公式，气体用分压表示）。</li>
+</ul>
+</section>
+<section id="五-电化学与热力学的关系" class="level3">
+<h3 class="anchored" data-anchor-id="五-电化学与热力学的关系">五、 电化学与热力学的关系</h3>
+<ol type="1">
+<li><strong>与吉布斯自由能的关系</strong>： <span class="math display">\[\mathbf{\Delta_r G_m = -nFE}\]</span> <span class="math display">\[\mathbf{\Delta_r G_m^\theta = -nFE^\theta}\]</span> 这可以用来判断氧化还原反应的方向：如果 <strong><span class="math inline">\(E &gt; 0\)</span></strong>（即 <span class="math inline">\(\Delta G &lt; 0\)</span>），反应正向自发进行。</li>
+<li><strong>与平衡常数 (<span class="math inline">\(K^\theta\)</span>) 的关系</strong>： 当反应达到平衡时，<span class="math inline">\(E = 0\)</span> 且 <span class="math inline">\(Q = K^\theta\)</span>。 代入能斯特方程：<span class="math inline">\(0 = E^\theta - \frac{RT}{nF} \ln K^\theta\)</span>。 得出推导结果： <span class="math display">\[\mathbf{\lg K^\theta = \frac{nE^\theta}{0.0592}}\]</span> 这意味着我们可以通过查表获得标准电极电势，从而计算出反应的平衡常数。</li>
+</ol>
+</section>
+<section id="六-金属腐蚀与防护-corrosion-and-protection" class="level3">
+<h3 class="anchored" data-anchor-id="六-金属腐蚀与防护-corrosion-and-protection">六、 金属腐蚀与防护 (Corrosion and Protection)</h3>
+<ol type="1">
+<li><strong>腐蚀分类</strong>：
+<ul>
+<li><strong>化学腐蚀</strong>：金属直接与干燥气体或非电解质发生反应。</li>
+<li><strong>电化学腐蚀</strong>：金属在电解质溶液中形成微电池，发生氧化反应（主要发生在阳极）,。</li>
+</ul></li>
+<li><strong>防护方法</strong>：
+<ul>
+<li><strong>改变金属组成</strong>（如不锈钢）。</li>
+<li><strong>覆盖保护层</strong>（涂漆、镀层）。</li>
+<li><strong>电化学保护法</strong>：
+<ul>
+<li><strong>牺牲阳极保护法</strong>：连接比保护金属更活泼的金属（如在铁船体上挂锌块）。</li>
+<li><strong>外加电流阴极保护法</strong>：将被保护金属接在电源负极上,。</li>
+</ul></li>
+</ul></li>
+</ol>
 
 
+</section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

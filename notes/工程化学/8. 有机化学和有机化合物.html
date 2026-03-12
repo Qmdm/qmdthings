@@ -77,6 +77,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -497,8 +526,20 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#酸碱质子理论-brønsted-lowry-theory" id="toc-酸碱质子理论-brønsted-lowry-theory" class="nav-link active" data-scroll-target="#酸碱质子理论-brønsted-lowry-theory">1. 酸碱质子理论 (Brønsted-Lowry Theory)</a></li>
+  <li><a href="#水的自耦电离与溶液的酸碱性" id="toc-水的自耦电离与溶液的酸碱性" class="nav-link" data-scroll-target="#水的自耦电离与溶液的酸碱性">2. 水的自耦电离与溶液的酸碱性</a></li>
+  <li><a href="#共轭酸碱对-k_a-与-k_b-的关系推导" id="toc-共轭酸碱对-k_a-与-k_b-的关系推导" class="nav-link" data-scroll-target="#共轭酸碱对-k_a-与-k_b-的关系推导">3. 共轭酸碱对 <span class="math inline">\(K_a\)</span> 与 <span class="math inline">\(K_b\)</span> 的关系推导</a></li>
+  <li><a href="#弱酸弱碱溶液-ph-的计算推导" id="toc-弱酸弱碱溶液-ph-的计算推导" class="nav-link" data-scroll-target="#弱酸弱碱溶液-ph-的计算推导">4. 弱酸/弱碱溶液 pH 的计算推导</a></li>
+  <li><a href="#同离子效应与缓冲溶液" id="toc-同离子效应与缓冲溶液" class="nav-link" data-scroll-target="#同离子效应与缓冲溶液">5. 同离子效应与缓冲溶液</a></li>
+  <li><a href="#缓冲公式的推导-henderson-hasselbalch-equation" id="toc-缓冲公式的推导-henderson-hasselbalch-equation" class="nav-link" data-scroll-target="#缓冲公式的推导-henderson-hasselbalch-equation">6. 缓冲公式的推导 (Henderson-Hasselbalch Equation)</a></li>
+  <li><a href="#酸碱指示剂" id="toc-酸碱指示剂" class="nav-link" data-scroll-target="#酸碱指示剂">7. 酸碱指示剂</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -528,8 +569,72 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<section id="酸碱质子理论-brønsted-lowry-theory" class="level3">
+<h3 class="anchored" data-anchor-id="酸碱质子理论-brønsted-lowry-theory">1. 酸碱质子理论 (Brønsted-Lowry Theory)</h3>
+<p>这是现代酸碱化学的基础。 * <strong>定义</strong>：凡是能给出质子（<span class="math inline">\(H^+\)</span>）的分子或离子都是<strong>酸</strong>；凡是能接受质子的分子或离子都是<strong>碱</strong>。 * <strong>共轭酸碱对</strong>：酸给出质子后变成其<strong>共轭碱</strong>，碱接受质子后变成其<strong>共轭酸</strong>（例如 <span class="math inline">\(NH_4^+ / NH_3\)</span>）。 * <strong>酸碱反应的本质</strong>：是两对共轭酸碱对之间的<strong>质子传递</strong>反应。</p>
+</section>
+<section id="水的自耦电离与溶液的酸碱性" class="level3">
+<h3 class="anchored" data-anchor-id="水的自耦电离与溶液的酸碱性">2. 水的自耦电离与溶液的酸碱性</h3>
+<ul>
+<li><strong>自耦电离平衡</strong>：<span class="math inline">\(H_2O + H_2O \rightleftharpoons H_3O^+ + OH^-\)</span>。</li>
+<li><strong>水的离子积常数 (<span class="math inline">\(K_w\)</span>)</strong>： <span class="math display">\[\mathbf{K_w = [H_3O^+][OH^-]}\]</span> 在 <span class="math inline">\(298.15 \text{ K}\)</span> 时，<span class="math inline">\(K_w = 1.0 \times 10^{-14}\)</span>。由于该反应是吸热的，温度越高，<span class="math inline">\(K_w\)</span> 越大。</li>
+<li><strong>pH 的定义</strong>：<span class="math inline">\(pH = -\lg[H_3O^+]\)</span>。</li>
+</ul>
+</section>
+<section id="共轭酸碱对-k_a-与-k_b-的关系推导" class="level3">
+<h3 class="anchored" data-anchor-id="共轭酸碱对-k_a-与-k_b-的关系推导">3. 共轭酸碱对 <span class="math inline">\(K_a\)</span> 与 <span class="math inline">\(K_b\)</span> 的关系推导</h3>
+<p>这是酸碱平衡中最重要的定量关系之一。</p>
+<ul>
+<li><strong>推导过程</strong>：
+<ol type="1">
+<li>设弱酸 <span class="math inline">\(HA\)</span> 的电离：<span class="math inline">\(HA + H_2O \rightleftharpoons H_3O^+ + A^-\)</span>，<span class="math inline">\(K_a = \frac{[H_3O^+][A^-]}{[HA]}\)</span>。</li>
+<li>其共轭碱 <span class="math inline">\(A^-\)</span> 的水解（电离）：<span class="math inline">\(A^- + H_2O \rightleftharpoons OH^- + HA\)</span>，<span class="math inline">\(K_b = \frac{[OH^-][HA]}{[A^-]}\)</span>。</li>
+<li>将 <span class="math inline">\(K_a\)</span> 与 <span class="math inline">\(K_b\)</span> 相乘： <span class="math inline">\(K_a \cdot K_b = \left( \frac{[H_3O^+][A^-]}{[HA]} \right) \cdot \left( \frac{[OH^-][HA]}{[A^-]} \right) = [H_3O^+][OH^-]\)</span></li>
+<li><strong>结论</strong>：<span class="math display">\[\mathbf{K_a \cdot K_b = K_w}\]</span>（或 <span class="math inline">\(pK_a + pK_b = pK_w\)</span>）。这说明酸的强度越大，其共轭碱的强度就越小。</li>
+</ol></li>
+</ul>
+</section>
+<section id="弱酸弱碱溶液-ph-的计算推导" class="level3">
+<h3 class="anchored" data-anchor-id="弱酸弱碱溶液-ph-的计算推导">4. 弱酸/弱碱溶液 pH 的计算推导</h3>
+<p>对于一元弱酸 <span class="math inline">\(HA\)</span>（初始浓度为 <span class="math inline">\(c\)</span>），其电离平衡为：<span class="math inline">\(HA \rightleftharpoons H^+ + A^-\)</span>。</p>
+<ul>
+<li><strong>推导过程</strong>：
+<ol type="1">
+<li>设平衡时 <span class="math inline">\([H^+] = [A^-] = x\)</span>，则平衡时 <span class="math inline">\([HA] = c - x\)</span>。</li>
+<li>代入平衡常数式：<span class="math inline">\(K_a = \frac{x^2}{c-x}\)</span>。</li>
+<li><strong>近似处理</strong>：当 <span class="math inline">\(c/K_a \ge 400\)</span> 时（即酸极弱且浓度不太稀），可以认为 <span class="math inline">\(c-x \approx c\)</span>。</li>
+<li>得出计算公式：<span class="math inline">\(x^2 = K_a \cdot c \Rightarrow \mathbf{[H^+] = \sqrt{K_a c}}\)</span>。</li>
+<li>同理，弱碱溶液的 <span class="math inline">\(\mathbf{[OH^-] = \sqrt{K_b c}}\)</span>。</li>
+</ol></li>
+</ul>
+</section>
+<section id="同离子效应与缓冲溶液" class="level3">
+<h3 class="anchored" data-anchor-id="同离子效应与缓冲溶液">5. 同离子效应与缓冲溶液</h3>
+<ul>
+<li><strong>同离子效应</strong>：在弱电解质溶液中加入含有相同离子的强电解质（如在 <span class="math inline">\(HAc\)</span> 中加 <span class="math inline">\(NaAc\)</span>），平衡会逆向移动，从而降低弱电解质的电离度。</li>
+<li><strong>缓冲溶液 (Buffer Solutions)</strong>：由弱酸及其共轭碱（如 <span class="math inline">\(HAc - NaAc\)</span>）组成的混合溶液，能抵抗少量强酸、强碱或稀释对 pH 的影响。</li>
+</ul>
+</section>
+<section id="缓冲公式的推导-henderson-hasselbalch-equation" class="level3">
+<h3 class="anchored" data-anchor-id="缓冲公式的推导-henderson-hasselbalch-equation">6. 缓冲公式的推导 (Henderson-Hasselbalch Equation)</h3>
+<p>这是计算缓冲溶液 pH 的核心公式。</p>
+<ul>
+<li><strong>推导过程</strong>：
+<ol type="1">
+<li>对于缓冲体系 <span class="math inline">\(HA - A^-\)</span>，<span class="math inline">\(K_a = \frac{[H^+][A^-]}{[HA]}\)</span>。</li>
+<li>整理得：<span class="math inline">\([H^+] = K_a \cdot \frac{[HA]}{[A^-]}\)</span>。</li>
+<li>两边取负对数：<span class="math inline">\(-\lg[H^+] = -\lg K_a - \lg \frac{[HA]}{[A^-]}\)</span>。</li>
+<li><strong>最终表达式</strong>：<span class="math display">\[\mathbf{pH = pK_a + \lg \frac{[A^-]}{[HA]}}\]</span>（或 <span class="math inline">\(\mathbf{pH = pK_a + \lg \frac{c_{\text{碱}}}{c_{\text{酸}}}}\)</span>）。</li>
+</ol></li>
+<li><strong>缓冲范围</strong>：通常在 <span class="math inline">\(pH = pK_a \pm 1\)</span> 之间。当 <span class="math inline">\(c_{\text{碱}} = c_{\text{酸}}\)</span> 时，缓冲能力最强，此时 <span class="math inline">\(pH = pK_a\)</span>。</li>
+</ul>
+</section>
+<section id="酸碱指示剂" class="level3">
+<h3 class="anchored" data-anchor-id="酸碱指示剂">7. 酸碱指示剂</h3>
+<p>指示剂本身是弱的有机酸或碱（用 <span class="math inline">\(HIn\)</span> 表示），其酸式和碱式具有不同颜色。当溶液的 <span class="math inline">\([H^+]\)</span> 改变到使其酸碱型比例发生反转时，颜色随之改变（变色范围通常为 <span class="math inline">\(pH = pK_{In} \pm 1\)</span>）。</p>
 
 
+</section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
