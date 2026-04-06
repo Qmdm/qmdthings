@@ -1,0 +1,115 @@
+
+
+
+
+$$
+\frac{\partial S(x,t)}{\partial t} = d_1\Delta S+\eta \nabla (S\nabla I(x,t-\tau))+rS(1-\frac{\tilde{S}}{k})-\frac{\beta SI}{1+\alpha I}-\mu_1S
+$$
+
+$$
+\frac{\partial I(x,t)}{\partial t} = d_2\Delta I+\eta \nabla (I\nabla I(x,t-\tau))+\frac{\beta SI}{1+\alpha I}+(A-\mu_2)I
+$$
+
+$$
+\frac{\partial S(x,t)}{\partial v}=\frac{\partial I(x,t)}{\partial v}=0
+$$
+
+$$
+\tilde{S}=\int^{\pi}_{0} \frac{1}{\pi}S(y,t)dy
+$$
+
+```{R}
+library(deSolve)
+library(plotly)
+
+# --- 1. 参数设置 (严格对齐论文 Fig 7) ---
+L <- pi
+N <- 80 
+dx <- L / (N - 1)
+x <- seq(0, L, length.out = N)
+tau_val <- 0.7
+
+params <- list(
+  A = 0.08, r = 1.0, K = 5.0, beta = 1.0, alpha = 1.0,
+  mu1 = 0.2, mu2 = 0.45, d1 = 0.02, d2 = 0.02, eta = 0.02
+)
+
+# 正稳态基准
+S_star <- 0.95145
+I_star <- 1.5622
+
+# 初始值：必须有微小空间扰动，否则系统永远保持平面
+# 这里改用更强的扰动（sin/cos混合）以便快速诱发斑图形成
+yini <- c(S = S_star + 0.05 * cos(x), 
+          I = I_star + 0.05 * cos(x))
+
+# --- 2. PDE 系统 ---
+pde_system <- function(t, y, parms) {
+  S <- y[1:N]
+  I <- y[(N+1):(2*N)]
+  
+  # 非局部项
+  S_tilde <- mean(S) 
+  
+  # 时滞项处理
+  if (t < tau_val) {
+    I_lag <- I_star + 0.05 * cos(x)
+  } else {
+    I_lag_raw <- try(lagvalue(t - tau_val), silent = TRUE)
+    I_lag <- if(inherits(I_lag_raw, "try-error")) I else I_lag_raw[(N+1):(2*N)]
+  }
+
+  # 差分算子
+  get_grad <- function(u) {
+    g <- numeric(N)
+    g[2:(N-1)] <- (u[3:N] - u[1:(N-2)]) / (2 * dx)
+    return(g)
+  }
+  get_lap <- function(u) {
+    l <- numeric(N)
+    l[2:(N-1)] <- (u[3:N] - 2*u[2:(N-1)] + u[1:(N-2)]) / (dx^2)
+    l[1] <- 2*(u[2] - u[1]) / (dx^2)
+    l[N] <- 2*(u[N-1] - u[N]) / (dx^2)
+    return(l)
+  }
+
+  grad_I_lag <- get_grad(I_lag)
+  lap_I_lag  <- get_lap(I_lag)
+  
+  # 记忆扩散项
+  taxis_S <- parms$eta * (get_grad(S) * grad_I_lag + S * lap_I_lag)
+  taxis_I <- parms$eta * (get_grad(I) * grad_I_lag + I * lap_I_lag)
+
+  dS <- parms$d1 * get_lap(S) + taxis_S + parms$r*S*(1 - S_tilde/parms$K) - 
+        (parms$beta*S*I)/(1 + parms$alpha*I) - parms$mu1*S
+  
+  dI <- parms$d2 * get_lap(I) + taxis_I + (parms$beta*S*I)/(1 + parms$alpha*I) + 
+        (parms$A - parms$mu2)*I
+  
+  return(list(c(dS, dI)))
+}
+
+# --- 3. 求解 (放宽容差防止卡死) ---
+times <- seq(0, 400, by = 2) 
+
+# 使用 rtol/atol 放宽精度，增加 hini 强制小步长启动
+out <- dede(y = yini, times = times, func = pde_system, parms = params, 
+            atol = 1e-4, rtol = 1e-4, hini = 0.01,
+            control = list(mxhist = 1e6))
+
+# --- 4. 绘图 (修正 Z 轴范围) ---
+I_mat <- out[, (N+2):(2*N+1)]
+
+plot_ly(z = ~I_mat, x = ~x, y = out[,1], type = "surface") %>%
+  layout(
+    title = "Fig 7: I(x,t) Inhomogeneous Steady-state",
+    scene = list(
+      xaxis = list(title = "x",range = c(0, 4)),
+      yaxis = list(title = "t",range = c(0, 400)),
+      zaxis = list(title = "I(x,t)", range = c(1, 2)) # 修改此处：包含 1.56
+    )
+  )
+```
+
+
+

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,6 +12,9 @@
 
 <title>第一次blog – QMD的杂物间</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -22,6 +25,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -36,19 +74,18 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../posts/生活/Linux上面也有NFC!.html" rel="next">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-49c9dac6fae8e09f4ca8bec003b153f0.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d192a1900f7094c40a97df524aaaf925.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-49c9dac6fae8e09f4ca8bec003b153f0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-9dcd20d7b2681355f6abe7981ac55450.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-092b988654828d32d470bcb84ee690ff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-9dcd20d7b2681355f6abe7981ac55450.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-30fc95c635603abe8be3e3ab83d24af1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-4de8fd7c3bc4270ae2f06e5c86e10f5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-30fc95c635603abe8be3e3ab83d24af1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -298,14 +335,6 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-notes">    
         <li class="dropdown-header">Notes</li>
         <li>
-    <a class="dropdown-item" href="../../notes/R语言/index.html">
- <span class="dropdown-text">R语言</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../notes/流体与流体力学/index.html">
- <span class="dropdown-text">流体与流体力学</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="../../notes/工程化学/1. 热化学基础.html">
  <span class="dropdown-text">工程化学</span></a>
   </li>  
@@ -360,7 +389,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/第一次blog/index.html">Posts</a></li><li class="breadcrumb-item"><a href="../../posts/第一次blog/index.html">第一次blog</a></li></ol></nav>
-      <h1 class="title">第一次blog</h1>
+      <div class="quarto-title-block"><div><h1 class="title">第一次blog</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source Code</button></div></div>
                   <div>
         <div class="description">
           使用quarto来写blog
@@ -433,6 +462,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Linux上面也有NFC</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/生活/好玩的模拟.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Random Stokes Wave</span></a>
+  </div>
+</li>
       </ul>
   </li>
       </ul>
@@ -475,7 +510,55 @@ ul.task-list li input[type="checkbox"] {
 
 <p>第一次用quarto搭建网站来写blog与记录笔记，因为我手上有一个域名还没到期。qwq</p>
 <p>了解到quarto还是因为想要有一个好的笔记系统来代替obsidian，现在切换到quarto + nvim 不知道怎么样。</p>
+<div class="cell" data-layout-align="center">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(metR)</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># 1. 创建网格数据，模拟稳态势流场 (Laplacian Potential Field)</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="co"># 模拟一个偶极子流场，它是拉普拉斯方程的一个经典解</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>grid <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">x =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="at">length.out =</span> <span class="dv">40</span>), </span>
+<span id="cb1-7"><a href="#cb1-7"></a>                    <span class="at">y =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="at">length.out =</span> <span class="dv">40</span>))</span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co"># 计算速度势 phi 和流函数 psi (基于算子性质)</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>grid<span class="sc">$</span>phi <span class="ot">&lt;-</span> grid<span class="sc">$</span>x <span class="sc">/</span> (grid<span class="sc">$</span>x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> grid<span class="sc">$</span>y<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="fl">0.5</span>) </span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="co"># 计算速度分量 (梯度算子作用的结果)</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a>grid<span class="sc">$</span>u <span class="ot">&lt;-</span> ( (grid<span class="sc">$</span>y<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="fl">0.5</span> <span class="sc">-</span> grid<span class="sc">$</span>x<span class="sc">^</span><span class="dv">2</span>) <span class="sc">/</span> (grid<span class="sc">$</span>x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> grid<span class="sc">$</span>y<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="fl">0.5</span>)<span class="sc">^</span><span class="dv">2</span> )</span>
+<span id="cb1-13"><a href="#cb1-13"></a>grid<span class="sc">$</span>v <span class="ot">&lt;-</span> ( <span class="sc">-</span><span class="dv">2</span> <span class="sc">*</span> grid<span class="sc">$</span>x <span class="sc">*</span> grid<span class="sc">$</span>y <span class="sc">/</span> (grid<span class="sc">$</span>x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> grid<span class="sc">$</span>y<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="fl">0.5</span>)<span class="sc">^</span><span class="dv">2</span> )</span>
+<span id="cb1-14"><a href="#cb1-14"></a></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="co"># 2. 绘图</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="fu">ggplot</span>(grid, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a>  <span class="co"># 绘制等势线 (Equipotential lines)</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a>  <span class="fu">geom_contour</span>(<span class="fu">aes</span>(<span class="at">z =</span> phi, <span class="at">color =</span> ..level..), <span class="at">bins =</span> <span class="dv">20</span>, <span class="at">size =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a>  <span class="co"># 绘制流线 (Streamlines)</span></span>
+<span id="cb1-20"><a href="#cb1-20"></a>  <span class="fu">geom_streamline</span>(<span class="fu">aes</span>(<span class="at">dx =</span> u, <span class="at">dy =</span> v), <span class="at">color =</span> <span class="st">"#2c3e50"</span>, </span>
+<span id="cb1-21"><a href="#cb1-21"></a>                  <span class="at">arrow.length =</span> <span class="fl">0.4</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a>  <span class="fu">scale_color_viridis_c</span>(<span class="at">option =</span> <span class="st">"mako"</span>, <span class="at">guide =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb1-23"><a href="#cb1-23"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb1-24"><a href="#cb1-24"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-25"><a href="#cb1-25"></a>    <span class="at">title =</span> <span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">"Steady-State Potential Flow: "</span>, nabla<span class="sc">^</span><span class="dv">2</span>, phi <span class="sc">==</span> <span class="dv">0</span>)),</span>
+<span id="cb1-26"><a href="#cb1-26"></a>    <span class="at">subtitle =</span> <span class="st">"Visualizing the Laplace Operator in a Dipole Field"</span>,</span>
+<span id="cb1-27"><a href="#cb1-27"></a>    <span class="at">x =</span> <span class="st">"x-axis"</span>, <span class="at">y =</span> <span class="st">"y-axis"</span></span>
+<span id="cb1-28"><a href="#cb1-28"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-29"><a href="#cb1-29"></a>  <span class="fu">theme</span>(</span>
+<span id="cb1-30"><a href="#cb1-30"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">family =</span> <span class="st">"Libertinus Serif"</span>),</span>
+<span id="cb1-31"><a href="#cb1-31"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-32"><a href="#cb1-32"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">16</span>)</span>
+<span id="cb1-33"><a href="#cb1-33"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-34"><a href="#cb1-34"></a>  <span class="fu">coord_fixed</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 
+
+<!-- -->
 
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
@@ -562,6 +645,57 @@ ul.task-list li input[type="checkbox"] {
         container: window.document.getElementById('quarto-embedded-source-code-modal')
       });
       clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -900,7 +1034,64 @@ ul.task-list li input[type="checkbox"] {
         <span class="nav-page-text">Linux上面也有NFC</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
-</nav>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="an">title:</span><span class="co"> "第一次blog"</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="an">author:</span><span class="co"> "QMD"</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="an">date:</span><span class="co"> "2026/03/01"</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="an">description:</span><span class="co"> "使用quarto来写blog"</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="an">categories:</span><span class="co"> [ "Blogs" ]</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="co">---</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a></span>
+<span id="cb2-10"><a href="#cb2-10"></a>第一次用quarto搭建网站来写blog与记录笔记，因为我手上有一个域名还没到期。qwq</span>
+<span id="cb2-11"><a href="#cb2-11"></a></span>
+<span id="cb2-12"><a href="#cb2-12"></a></span>
+<span id="cb2-13"><a href="#cb2-13"></a>了解到quarto还是因为想要有一个好的笔记系统来代替obsidian，现在切换到quarto + nvim 不知道怎么样。</span>
+<span id="cb2-14"><a href="#cb2-14"></a></span>
+<span id="cb2-15"><a href="#cb2-15"></a>模拟一个偶极子流场，它是拉普拉斯方程的一个经典解</span>
+<span id="cb2-16"><a href="#cb2-16"></a></span>
+<span id="cb2-17"><a href="#cb2-17"></a></span>
+<span id="cb2-20"><a href="#cb2-20"></a><span class="in">```{R}</span></span>
+<span id="cb2-21"><a href="#cb2-21"></a><span class="co">#| fig-align: center</span></span>
+<span id="cb2-22"><a href="#cb2-22"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-23"><a href="#cb2-23"></a><span class="fu">library</span>(metR)</span>
+<span id="cb2-24"><a href="#cb2-24"></a></span>
+<span id="cb2-25"><a href="#cb2-25"></a><span class="co"># 1. 创建网格数据，模拟稳态势流场 (Laplacian Potential Field)</span></span>
+<span id="cb2-26"><a href="#cb2-26"></a></span>
+<span id="cb2-27"><a href="#cb2-27"></a>grid <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">x =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="at">length.out =</span> <span class="dv">40</span>), </span>
+<span id="cb2-28"><a href="#cb2-28"></a>                    <span class="at">y =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="at">length.out =</span> <span class="dv">40</span>))</span>
+<span id="cb2-29"><a href="#cb2-29"></a></span>
+<span id="cb2-30"><a href="#cb2-30"></a><span class="co"># 计算速度势 phi 和流函数 psi (基于算子性质)</span></span>
+<span id="cb2-31"><a href="#cb2-31"></a>grid<span class="sc">$</span>phi <span class="ot">&lt;-</span> grid<span class="sc">$</span>x <span class="sc">/</span> (grid<span class="sc">$</span>x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> grid<span class="sc">$</span>y<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="fl">0.5</span>) </span>
+<span id="cb2-32"><a href="#cb2-32"></a><span class="co"># 计算速度分量 (梯度算子作用的结果)</span></span>
+<span id="cb2-33"><a href="#cb2-33"></a>grid<span class="sc">$</span>u <span class="ot">&lt;-</span> ( (grid<span class="sc">$</span>y<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="fl">0.5</span> <span class="sc">-</span> grid<span class="sc">$</span>x<span class="sc">^</span><span class="dv">2</span>) <span class="sc">/</span> (grid<span class="sc">$</span>x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> grid<span class="sc">$</span>y<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="fl">0.5</span>)<span class="sc">^</span><span class="dv">2</span> )</span>
+<span id="cb2-34"><a href="#cb2-34"></a>grid<span class="sc">$</span>v <span class="ot">&lt;-</span> ( <span class="sc">-</span><span class="dv">2</span> <span class="sc">*</span> grid<span class="sc">$</span>x <span class="sc">*</span> grid<span class="sc">$</span>y <span class="sc">/</span> (grid<span class="sc">$</span>x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> grid<span class="sc">$</span>y<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="fl">0.5</span>)<span class="sc">^</span><span class="dv">2</span> )</span>
+<span id="cb2-35"><a href="#cb2-35"></a></span>
+<span id="cb2-36"><a href="#cb2-36"></a><span class="co"># 2. 绘图</span></span>
+<span id="cb2-37"><a href="#cb2-37"></a><span class="fu">ggplot</span>(grid, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
+<span id="cb2-38"><a href="#cb2-38"></a>  <span class="co"># 绘制等势线 (Equipotential lines)</span></span>
+<span id="cb2-39"><a href="#cb2-39"></a>  <span class="fu">geom_contour</span>(<span class="fu">aes</span>(<span class="at">z =</span> phi, <span class="at">color =</span> ..level..), <span class="at">bins =</span> <span class="dv">20</span>, <span class="at">size =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb2-40"><a href="#cb2-40"></a>  <span class="co"># 绘制流线 (Streamlines)</span></span>
+<span id="cb2-41"><a href="#cb2-41"></a>  <span class="fu">geom_streamline</span>(<span class="fu">aes</span>(<span class="at">dx =</span> u, <span class="at">dy =</span> v), <span class="at">color =</span> <span class="st">"#2c3e50"</span>, </span>
+<span id="cb2-42"><a href="#cb2-42"></a>                  <span class="at">arrow.length =</span> <span class="fl">0.4</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb2-43"><a href="#cb2-43"></a>  <span class="fu">scale_color_viridis_c</span>(<span class="at">option =</span> <span class="st">"mako"</span>, <span class="at">guide =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb2-44"><a href="#cb2-44"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb2-45"><a href="#cb2-45"></a>  <span class="fu">labs</span>(</span>
+<span id="cb2-46"><a href="#cb2-46"></a>    <span class="at">title =</span> <span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">"Steady-State Potential Flow: "</span>, nabla<span class="sc">^</span><span class="dv">2</span>, phi <span class="sc">==</span> <span class="dv">0</span>)),</span>
+<span id="cb2-47"><a href="#cb2-47"></a>    <span class="at">subtitle =</span> <span class="st">"Visualizing the Laplace Operator in a Dipole Field"</span>,</span>
+<span id="cb2-48"><a href="#cb2-48"></a>    <span class="at">x =</span> <span class="st">"x-axis"</span>, <span class="at">y =</span> <span class="st">"y-axis"</span></span>
+<span id="cb2-49"><a href="#cb2-49"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-50"><a href="#cb2-50"></a>  <span class="fu">theme</span>(</span>
+<span id="cb2-51"><a href="#cb2-51"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">family =</span> <span class="st">"Libertinus Serif"</span>),</span>
+<span id="cb2-52"><a href="#cb2-52"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb2-53"><a href="#cb2-53"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">16</span>)</span>
+<span id="cb2-54"><a href="#cb2-54"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-55"><a href="#cb2-55"></a>  <span class="fu">coord_fixed</span>()</span>
+<span id="cb2-56"><a href="#cb2-56"></a><span class="in">```</span></span>
+<span id="cb2-57"><a href="#cb2-57"></a></span>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

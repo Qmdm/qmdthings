@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,6 +12,9 @@
 
 <title>有机化学与有机化合物 – QMD的杂物间</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -22,6 +25,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -37,19 +75,18 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../notes/工程化学/7. 金属材料与无机非金属材料.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-49c9dac6fae8e09f4ca8bec003b153f0.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d192a1900f7094c40a97df524aaaf925.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-49c9dac6fae8e09f4ca8bec003b153f0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-9dcd20d7b2681355f6abe7981ac55450.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-092b988654828d32d470bcb84ee690ff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-9dcd20d7b2681355f6abe7981ac55450.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-30fc95c635603abe8be3e3ab83d24af1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-4de8fd7c3bc4270ae2f06e5c86e10f5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-30fc95c635603abe8be3e3ab83d24af1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -78,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -328,14 +365,6 @@ window.Quarto = {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-notes">    
         <li class="dropdown-header">Notes</li>
         <li>
-    <a class="dropdown-item" href="../../notes/R语言/index.html">
- <span class="dropdown-text">R语言</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../notes/流体与流体力学/index.html">
- <span class="dropdown-text">流体与流体力学</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="../../notes/工程化学/1. 热化学基础.html">
  <span class="dropdown-text">工程化学</span></a>
   </li>  
@@ -377,7 +406,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/R语言/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/工程化学/1. 热化学基础.html">工程化学</a></li><li class="breadcrumb-item"><a href="../../notes/工程化学/8. 有机化学和有机化合物.html">有机化学与有机化合物</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Notes</li><li class="breadcrumb-item"><a href="../../notes/工程化学/1. 热化学基础.html">工程化学</a></li><li class="breadcrumb-item"><a href="../../notes/工程化学/8. 有机化学和有机化合物.html">有机化学与有机化合物</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -389,8 +418,8 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/R语言/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/工程化学/1. 热化学基础.html">工程化学</a></li><li class="breadcrumb-item"><a href="../../notes/工程化学/8. 有机化学和有机化合物.html">有机化学与有机化合物</a></li></ol></nav>
-      <h1 class="title">有机化学与有机化合物</h1>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Notes</li><li class="breadcrumb-item"><a href="../../notes/工程化学/1. 热化学基础.html">工程化学</a></li><li class="breadcrumb-item"><a href="../../notes/工程化学/8. 有机化学和有机化合物.html">有机化学与有机化合物</a></li></ol></nav>
+      <div class="quarto-title-block"><div><h1 class="title">有机化学与有机化合物</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source Code</button></div></div>
                   <div>
         <div class="description">
           工程化学第八章
@@ -442,18 +471,6 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notes/R语言/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R语言</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notes/流体与流体力学/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">流体与流体力学</span></a>
-  </div>
-</li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
@@ -634,6 +651,8 @@ window.Quarto = {
 <p>指示剂本身是弱的有机酸或碱（用 <span class="math inline">\(HIn\)</span> 表示），其酸式和碱式具有不同颜色。当溶液的 <span class="math inline">\([H^+]\)</span> 改变到使其酸碱型比例发生反转时，颜色随之改变（变色范围通常为 <span class="math inline">\(pH = pK_{In} \pm 1\)</span>）。</p>
 
 
+<!-- -->
+
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
@@ -720,6 +739,57 @@ window.Quarto = {
         container: window.document.getElementById('quarto-embedded-source-code-modal')
       });
       clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -1061,7 +1131,65 @@ window.Quarto = {
         <span class="nav-page-text">合成高分子材料</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
-</nav>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> "有机化学与有机化合物"</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="an">author:</span><span class="co"> "QMD"</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="an">date:</span><span class="co"> "2026/03/09"</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="an">description:</span><span class="co"> "工程化学第八章"</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="an">categories:</span><span class="co"> [ "工程化学" ]</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co">---</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="fu">### 1. 酸碱质子理论 (Brønsted-Lowry Theory)</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>这是现代酸碱化学的基础。</span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="ss">*   </span>**定义**：凡是能给出质子（$H^+$）的分子或离子都是**酸**；凡是能接受质子的分子或离子都是**碱**。</span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="ss">*   </span>**共轭酸碱对**：酸给出质子后变成其**共轭碱**，碱接受质子后变成其**共轭酸**（例如 $NH_4^+ / NH_3$）。</span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="ss">*   </span>**酸碱反应的本质**：是两对共轭酸碱对之间的**质子传递**反应。</span>
+<span id="cb1-14"><a href="#cb1-14"></a></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="fu">### 2. 水的自耦电离与溶液的酸碱性</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="ss">*   </span>**自耦电离平衡**：$H_2O + H_2O \rightleftharpoons H_3O^+ + OH^-$。</span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="ss">*   </span>**水的离子积常数 ($K_w$)**：</span>
+<span id="cb1-18"><a href="#cb1-18"></a>    $$\mathbf{K_w = <span class="co">[</span><span class="ot">H_3O^+</span><span class="co">][OH^-]</span>}$$</span>
+<span id="cb1-19"><a href="#cb1-19"></a>    在 $298.15 \text{ K}$ 时，$K_w = 1.0 \times 10^{-14}$。由于该反应是吸热的，温度越高，$K_w$ 越大。</span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="ss">*   </span>**pH 的定义**：$pH = -\lg<span class="co">[</span><span class="ot">H_3O^+</span><span class="co">]</span>$。</span>
+<span id="cb1-21"><a href="#cb1-21"></a></span>
+<span id="cb1-22"><a href="#cb1-22"></a><span class="fu">### 3. 共轭酸碱对 $K_a$ 与 $K_b$ 的关系推导</span></span>
+<span id="cb1-23"><a href="#cb1-23"></a>这是酸碱平衡中最重要的定量关系之一。</span>
+<span id="cb1-24"><a href="#cb1-24"></a></span>
+<span id="cb1-25"><a href="#cb1-25"></a><span class="ss">*   </span>**推导过程**：</span>
+<span id="cb1-26"><a href="#cb1-26"></a><span class="ss">    1.  </span>设弱酸 $HA$ 的电离：$HA + H_2O \rightleftharpoons H_3O^+ + A^-$，$K_a = \frac{<span class="co">[</span><span class="ot">H_3O^+</span><span class="co">][A^-]</span>}{<span class="co">[</span><span class="ot">HA</span><span class="co">]</span>}$。</span>
+<span id="cb1-27"><a href="#cb1-27"></a><span class="ss">    2.  </span>其共轭碱 $A^-$ 的水解（电离）：$A^- + H_2O \rightleftharpoons OH^- + HA$，$K_b = \frac{<span class="co">[</span><span class="ot">OH^-</span><span class="co">][HA]</span>}{<span class="co">[</span><span class="ot">A^-</span><span class="co">]</span>}$。</span>
+<span id="cb1-28"><a href="#cb1-28"></a><span class="ss">    3.  </span>将 $K_a$ 与 $K_b$ 相乘：</span>
+<span id="cb1-29"><a href="#cb1-29"></a>        $K_a \cdot K_b = \left( \frac{<span class="co">[</span><span class="ot">H_3O^+</span><span class="co">][A^-]</span>}{<span class="co">[</span><span class="ot">HA</span><span class="co">]</span>} \right) \cdot \left( \frac{<span class="co">[</span><span class="ot">OH^-</span><span class="co">][HA]</span>}{<span class="co">[</span><span class="ot">A^-</span><span class="co">]</span>} \right) = <span class="co">[</span><span class="ot">H_3O^+</span><span class="co">][OH^-]</span>$</span>
+<span id="cb1-30"><a href="#cb1-30"></a><span class="ss">    4.  </span>**结论**：$$\mathbf{K_a \cdot K_b = K_w}$$（或 $pK_a + pK_b = pK_w$）。这说明酸的强度越大，其共轭碱的强度就越小。</span>
+<span id="cb1-31"><a href="#cb1-31"></a></span>
+<span id="cb1-32"><a href="#cb1-32"></a><span class="fu">### 4. 弱酸/弱碱溶液 pH 的计算推导</span></span>
+<span id="cb1-33"><a href="#cb1-33"></a>对于一元弱酸 $HA$（初始浓度为 $c$），其电离平衡为：$HA \rightleftharpoons H^+ + A^-$。</span>
+<span id="cb1-34"><a href="#cb1-34"></a></span>
+<span id="cb1-35"><a href="#cb1-35"></a><span class="ss">*   </span>**推导过程**：</span>
+<span id="cb1-36"><a href="#cb1-36"></a><span class="ss">    1.  </span>设平衡时 $<span class="co">[</span><span class="ot">H^+</span><span class="co">]</span> = <span class="co">[</span><span class="ot">A^-</span><span class="co">]</span> = x$，则平衡时 $<span class="co">[</span><span class="ot">HA</span><span class="co">]</span> = c - x$。</span>
+<span id="cb1-37"><a href="#cb1-37"></a><span class="ss">    2.  </span>代入平衡常数式：$K_a = \frac{x^2}{c-x}$。</span>
+<span id="cb1-38"><a href="#cb1-38"></a><span class="ss">    3.  </span>**近似处理**：当 $c/K_a \ge 400$ 时（即酸极弱且浓度不太稀），可以认为 $c-x \approx c$。</span>
+<span id="cb1-39"><a href="#cb1-39"></a><span class="ss">    4.  </span>得出计算公式：$x^2 = K_a \cdot c \Rightarrow \mathbf{<span class="co">[</span><span class="ot">H^+</span><span class="co">]</span> = \sqrt{K_a c}}$。</span>
+<span id="cb1-40"><a href="#cb1-40"></a><span class="ss">    5.  </span>同理，弱碱溶液的 $\mathbf{<span class="co">[</span><span class="ot">OH^-</span><span class="co">]</span> = \sqrt{K_b c}}$。</span>
+<span id="cb1-41"><a href="#cb1-41"></a></span>
+<span id="cb1-42"><a href="#cb1-42"></a><span class="fu">### 5. 同离子效应与缓冲溶液</span></span>
+<span id="cb1-43"><a href="#cb1-43"></a><span class="ss">*   </span>**同离子效应**：在弱电解质溶液中加入含有相同离子的强电解质（如在 $HAc$ 中加 $NaAc$），平衡会逆向移动，从而降低弱电解质的电离度。</span>
+<span id="cb1-44"><a href="#cb1-44"></a><span class="ss">*   </span>**缓冲溶液 (Buffer Solutions)**：由弱酸及其共轭碱（如 $HAc - NaAc$）组成的混合溶液，能抵抗少量强酸、强碱或稀释对 pH 的影响。</span>
+<span id="cb1-45"><a href="#cb1-45"></a></span>
+<span id="cb1-46"><a href="#cb1-46"></a><span class="fu">### 6. 缓冲公式的推导 (Henderson-Hasselbalch Equation)</span></span>
+<span id="cb1-47"><a href="#cb1-47"></a>这是计算缓冲溶液 pH 的核心公式。</span>
+<span id="cb1-48"><a href="#cb1-48"></a></span>
+<span id="cb1-49"><a href="#cb1-49"></a><span class="ss">*   </span>**推导过程**：</span>
+<span id="cb1-50"><a href="#cb1-50"></a><span class="ss">    1.  </span>对于缓冲体系 $HA - A^-$，$K_a = \frac{<span class="co">[</span><span class="ot">H^+</span><span class="co">][A^-]</span>}{<span class="co">[</span><span class="ot">HA</span><span class="co">]</span>}$。</span>
+<span id="cb1-51"><a href="#cb1-51"></a><span class="ss">    2.  </span>整理得：$<span class="co">[</span><span class="ot">H^+</span><span class="co">]</span> = K_a \cdot \frac{<span class="co">[</span><span class="ot">HA</span><span class="co">]</span>}{<span class="co">[</span><span class="ot">A^-</span><span class="co">]</span>}$。</span>
+<span id="cb1-52"><a href="#cb1-52"></a><span class="ss">    3.  </span>两边取负对数：$-\lg<span class="co">[</span><span class="ot">H^+</span><span class="co">]</span> = -\lg K_a - \lg \frac{<span class="co">[</span><span class="ot">HA</span><span class="co">]</span>}{<span class="co">[</span><span class="ot">A^-</span><span class="co">]</span>}$。</span>
+<span id="cb1-53"><a href="#cb1-53"></a><span class="ss">    4.  </span>**最终表达式**：$$\mathbf{pH = pK_a + \lg \frac{[A^-]}{[HA]}}$$（或 $\mathbf{pH = pK_a + \lg \frac{c_{\text{碱}}}{c_{\text{酸}}}}$）。</span>
+<span id="cb1-54"><a href="#cb1-54"></a><span class="ss">*   </span>**缓冲范围**：通常在 $pH = pK_a \pm 1$ 之间。当 $c_{\text{碱}} = c_{\text{酸}}$ 时，缓冲能力最强，此时 $pH = pK_a$。</span>
+<span id="cb1-55"><a href="#cb1-55"></a></span>
+<span id="cb1-56"><a href="#cb1-56"></a><span class="fu">### 7. 酸碱指示剂</span></span>
+<span id="cb1-57"><a href="#cb1-57"></a>指示剂本身是弱的有机酸或碱（用 $HIn$ 表示），其酸式和碱式具有不同颜色。当溶液的 $<span class="co">[</span><span class="ot">H^+</span><span class="co">]</span>$ 改变到使其酸碱型比例发生反转时，颜色随之改变（变色范围通常为 $pH = pK_{In} \pm 1$）。</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

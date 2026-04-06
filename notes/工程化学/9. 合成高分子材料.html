@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,6 +12,9 @@
 
 <title>合成高分子材料 – QMD的杂物间</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -22,6 +25,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -36,19 +74,18 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../notes/工程化学/8. 有机化学和有机化合物.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-49c9dac6fae8e09f4ca8bec003b153f0.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d192a1900f7094c40a97df524aaaf925.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-49c9dac6fae8e09f4ca8bec003b153f0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-9dcd20d7b2681355f6abe7981ac55450.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-092b988654828d32d470bcb84ee690ff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-9dcd20d7b2681355f6abe7981ac55450.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-30fc95c635603abe8be3e3ab83d24af1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-4de8fd7c3bc4270ae2f06e5c86e10f5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-30fc95c635603abe8be3e3ab83d24af1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -77,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -327,14 +364,6 @@ window.Quarto = {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-notes">    
         <li class="dropdown-header">Notes</li>
         <li>
-    <a class="dropdown-item" href="../../notes/R语言/index.html">
- <span class="dropdown-text">R语言</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../notes/流体与流体力学/index.html">
- <span class="dropdown-text">流体与流体力学</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="../../notes/工程化学/1. 热化学基础.html">
  <span class="dropdown-text">工程化学</span></a>
   </li>  
@@ -376,7 +405,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/R语言/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/工程化学/1. 热化学基础.html">工程化学</a></li><li class="breadcrumb-item"><a href="../../notes/工程化学/9. 合成高分子材料.html">合成高分子材料</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Notes</li><li class="breadcrumb-item"><a href="../../notes/工程化学/1. 热化学基础.html">工程化学</a></li><li class="breadcrumb-item"><a href="../../notes/工程化学/9. 合成高分子材料.html">合成高分子材料</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -388,8 +417,8 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/R语言/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/工程化学/1. 热化学基础.html">工程化学</a></li><li class="breadcrumb-item"><a href="../../notes/工程化学/9. 合成高分子材料.html">合成高分子材料</a></li></ol></nav>
-      <h1 class="title">合成高分子材料</h1>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Notes</li><li class="breadcrumb-item"><a href="../../notes/工程化学/1. 热化学基础.html">工程化学</a></li><li class="breadcrumb-item"><a href="../../notes/工程化学/9. 合成高分子材料.html">合成高分子材料</a></li></ol></nav>
+      <div class="quarto-title-block"><div><h1 class="title">合成高分子材料</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source Code</button></div></div>
                   <div>
         <div class="description">
           工程化学第九章
@@ -441,18 +470,6 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notes/R语言/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R语言</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notes/流体与流体力学/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">流体与流体力学</span></a>
-  </div>
-</li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
@@ -597,6 +614,8 @@ window.Quarto = {
 <p>一种难溶电解质转化为另一种更难溶电解质的过程。 * <strong>规律</strong>：通常是 <strong><span class="math inline">\(K_{sp}\)</span> 较大的转化为 <span class="math inline">\(K_{sp}\)</span> 更小的</strong>（例如 <span class="math inline">\(AgCl \rightarrow AgI\)</span>）。 * <strong>转化平衡常数 (<span class="math inline">\(K\)</span>) 的推导</strong>： 对于反应 <span class="math inline">\(AgCl(s) + I^-(aq) \rightleftharpoons AgI(s) + Cl^-(aq)\)</span>： <span class="math display">\[K = \frac{[Cl^-]}{[I^-]} = \frac{[Cl^-][Ag^+]}{[I^-][Ag^+]} = \frac{K_{sp}(AgCl)}{K_{sp}(AgI)}\]</span> 若 <span class="math inline">\(K_{sp}(AgCl) \gg K_{sp}(AgI)\)</span>，则平衡常数 <span class="math inline">\(K\)</span> 非常大，转化非常彻底。</p>
 
 
+<!-- -->
+
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
@@ -683,6 +702,57 @@ window.Quarto = {
         container: window.document.getElementById('quarto-embedded-source-code-modal')
       });
       clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -1021,7 +1091,59 @@ window.Quarto = {
   </div>
   <div class="nav-page nav-page-next">
   </div>
-</nav>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> "合成高分子材料"</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="an">author:</span><span class="co"> "QMD"</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="an">date:</span><span class="co"> "2026/03/09"</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="an">description:</span><span class="co"> "工程化学第九章"</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="an">categories:</span><span class="co"> [ "工程化学" ]</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co">---</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="fu">### 1. 溶度积常数 ($K_{sp}$) 的定义</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>对于难溶电解质 $A_m B_n$ 在水中的饱和溶液，存在如下动态平衡：</span>
+<span id="cb1-11"><a href="#cb1-11"></a>$$A_m B_n(s) \rightleftharpoons m A^{n+}(aq) + n B^{m-}(aq)$$</span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="ss">*   </span>**概念**：在一定温度下，难溶电解质的饱和溶液中，各离子浓度幂的乘积是一个常数，称为**溶度积常数 ($K_{sp}$)**。</span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="ss">*   </span>**表达式**：$$\mathbf{K_{sp} = <span class="co">[</span><span class="ot">A^{n+}</span><span class="co">]</span>^m \cdot <span class="co">[</span><span class="ot">B^{m-}</span><span class="co">]</span>^n}$$。</span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="ss">*   </span>**物理意义**：$K_{sp}$ 反映了难溶电解质在水中的**溶解能力**。在相同类型（如均为 $AB$ 型）的电解质中，$K_{sp}$ 越小，溶解度越小。</span>
+<span id="cb1-15"><a href="#cb1-15"></a></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="fu">### 2. 溶解度 ($s$) 与 $K_{sp}$ 的关系及推导</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a>这是定量计算的核心。</span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="ss">*   </span>**推导过程（以 $A_m B_n$ 为例）**：</span>
+<span id="cb1-19"><a href="#cb1-19"></a><span class="ss">    1.  </span>设难溶电解质的溶解度为 $s$ (mol·dm⁻³)。</span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="ss">    2.  </span>平衡时：$<span class="co">[</span><span class="ot">A^{n+}</span><span class="co">]</span> = ms$，$<span class="co">[</span><span class="ot">B^{m-}</span><span class="co">]</span> = ns$。</span>
+<span id="cb1-21"><a href="#cb1-21"></a><span class="ss">    3.  </span>代入溶度积公式：$K_{sp} = (ms)^m \cdot (ns)^n = m^m \cdot n^n \cdot s^{m+n}$。</span>
+<span id="cb1-22"><a href="#cb1-22"></a><span class="ss">*   </span>**常见类型结论**：</span>
+<span id="cb1-23"><a href="#cb1-23"></a><span class="ss">    *   </span>**$AB$ 型**（如 $AgCl$）：$K_{sp} = s^2 \Rightarrow \mathbf{s = \sqrt{K_{sp}}}$。</span>
+<span id="cb1-24"><a href="#cb1-24"></a><span class="ss">    *   </span>**$A_2 B$ 或 $AB_2$ 型**（如 $Ag_2 CrO_4$ 或 $PbF_2$）：$K_{sp} = (2s)^2 \cdot s = 4s^3 \Rightarrow \mathbf{s = \sqrt{K_{sp}/4}}$。</span>
+<span id="cb1-25"><a href="#cb1-25"></a></span>
+<span id="cb1-26"><a href="#cb1-26"></a><span class="fu">### 3. 溶度积规则（沉淀生成的判定）</span></span>
+<span id="cb1-27"><a href="#cb1-27"></a>类似于化学平衡中的 $Q$ 与 $K$ 的比较：</span>
+<span id="cb1-28"><a href="#cb1-28"></a><span class="ss">*   </span>**离子积 ($Q$)**：溶液中离子浓度幂的乘积（不一定是饱和状态）。</span>
+<span id="cb1-29"><a href="#cb1-29"></a><span class="ss">*   </span>**判定标准**：</span>
+<span id="cb1-30"><a href="#cb1-30"></a><span class="ss">    *   </span>**$Q &gt; K_{sp}$**：溶液过饱和，**有沉淀析出**，直到 $Q = K_{sp}$。</span>
+<span id="cb1-31"><a href="#cb1-31"></a><span class="ss">    *   </span>**$Q = K_{sp}$**：溶液恰好饱和，处于**沉淀溶解平衡状态**。</span>
+<span id="cb1-32"><a href="#cb1-32"></a><span class="ss">    *   </span>**$Q &lt; K_{sp}$**：溶液未饱和，**无沉淀析出**；若有固体存在，则固体继续溶解。</span>
+<span id="cb1-33"><a href="#cb1-33"></a></span>
+<span id="cb1-34"><a href="#cb1-34"></a><span class="fu">### 4. 影响沉淀溶解平衡的因素</span></span>
+<span id="cb1-35"><a href="#cb1-35"></a><span class="ss">*   </span>**同离子效应**：在难溶电解质溶液中加入含有相同离子的强电解质，平衡会向生成沉淀的方向移动，从而使难溶物的**溶解度显著降低**。</span>
+<span id="cb1-36"><a href="#cb1-36"></a><span class="ss">*   </span>**盐效应**：在难溶电解质溶液中加入不含相同离子的强电解质，会稍微增大溶解度（但在基础工程计算中通常忽略不计）。</span>
+<span id="cb1-37"><a href="#cb1-37"></a><span class="ss">*   </span>**酸效应（pH 影响）**：如果沉淀的阴离子是弱酸根（如 $CO_3^{2-}, OH^-$），降低 pH（加酸）会使阴离子浓度下降，导致平衡右移，**沉淀溶解**。</span>
+<span id="cb1-38"><a href="#cb1-38"></a><span class="ss">*   </span>**配位效应**：加入能与金属离子形成稳定配合物的试剂，会显著增大溶解度。</span>
+<span id="cb1-39"><a href="#cb1-39"></a></span>
+<span id="cb1-40"><a href="#cb1-40"></a><span class="fu">### 5. 分步沉淀 (Fractional Precipitation)</span></span>
+<span id="cb1-41"><a href="#cb1-41"></a>当溶液中存在多种离子都能与同一种试剂产生沉淀时，它们被沉淀出来的先后顺序。</span>
+<span id="cb1-42"><a href="#cb1-42"></a><span class="ss">*   </span>**基本原理**：哪种物质先达到其 $K_{sp}$ 所要求的浓度积，哪种物质就**先沉淀**。</span>
+<span id="cb1-43"><a href="#cb1-43"></a><span class="ss">*   </span>**应用**：通过控制加入试剂的浓度或调节 pH 值，可以实现离子的分离。</span>
+<span id="cb1-44"><a href="#cb1-44"></a></span>
+<span id="cb1-45"><a href="#cb1-45"></a><span class="fu">### 6. 沉淀的转化 (Precipitation Transformation)</span></span>
+<span id="cb1-46"><a href="#cb1-46"></a>一种难溶电解质转化为另一种更难溶电解质的过程。</span>
+<span id="cb1-47"><a href="#cb1-47"></a><span class="ss">*   </span>**规律**：通常是 **$K_{sp}$ 较大的转化为 $K_{sp}$ 更小的**（例如 $AgCl \rightarrow AgI$）。</span>
+<span id="cb1-48"><a href="#cb1-48"></a><span class="ss">*   </span>**转化平衡常数 ($K$) 的推导**：</span>
+<span id="cb1-49"><a href="#cb1-49"></a>    对于反应 $AgCl(s) + I^-(aq) \rightleftharpoons AgI(s) + Cl^-(aq)$：</span>
+<span id="cb1-50"><a href="#cb1-50"></a>    $$K = \frac{<span class="co">[</span><span class="ot">Cl^-</span><span class="co">]</span>}{<span class="co">[</span><span class="ot">I^-</span><span class="co">]</span>} = \frac{<span class="co">[</span><span class="ot">Cl^-</span><span class="co">][Ag^+]</span>}{<span class="co">[</span><span class="ot">I^-</span><span class="co">][Ag^+]</span>} = \frac{K_{sp}(AgCl)}{K_{sp}(AgI)}$$</span>
+<span id="cb1-51"><a href="#cb1-51"></a>    若 $K_{sp}(AgCl) \gg K_{sp}(AgI)$，则平衡常数 $K$ 非常大，转化非常彻底。</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
