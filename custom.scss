@@ -19,6 +19,8 @@ $font-family-monospace:   "JetBrains Mono", monospace;
 $font-size-root:          16px;
 $line-height-base:        1.8;
 
+$enable-responsive-font-sizes: true;
+
 /*-- scss:rules --*/
 
 body {
@@ -52,4 +54,28 @@ div.sourceCode::-webkit-scrollbar {
 code span.co {
   font-style: italic;
   color: #8b949e;
+}
+
+
+/* 官方移动端微调 */
+.quarto-title-banner .title {
+  @include media-breakpoint-down(sm) {
+    font-size: 1.5rem !important; 
+    line-height: 1.2;
+  }
+}
+
+mjx-container {
+  display: inline-grid;
+  overflow-x: auto; /* 核心：允许水平滚动而非撑开 */
+  overflow-y: hidden;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/* 针对展示型公式 ($$ ... $$) */
+mjx-container[display="true"] {
+  display: block;
+  width: 100%;
+  margin: 1em 0;
 }

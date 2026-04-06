@@ -1363,6 +1363,7 @@
 
 <p>第一次用quarto搭建网站来写blog与记录笔记，因为我手上有一个域名还没到期。qwq</p>
 <p>了解到quarto还是因为想要有一个好的笔记系统来代替obsidian，现在切换到quarto + nvim 不知道怎么样。</p>
+<p>模拟一个偶极子流场，它是拉普拉斯方程的一个经典解</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1376,9 +1377,7 @@ font-style: inherit;">library</span>(metR)</span>
 <span id="cb1-4"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># 1. 创建网格数据，模拟稳态势流场 (Laplacian Potential Field)</span></span>
-<span id="cb1-5"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># 模拟一个偶极子流场，它是拉普拉斯方程的一个经典解</span></span>
+<span id="cb1-5"></span>
 <span id="cb1-6">grid <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
@@ -1955,7 +1954,7 @@ animate()
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
   <guid>https://qmdthings.top/posts/生活/好玩的模拟.html</guid>
-  <pubDate>Mon, 06 Apr 2026 16:41:49 GMT</pubDate>
+  <pubDate>Mon, 06 Apr 2026 17:10:06 GMT</pubDate>
 </item>
 </channel>
 </rss>
