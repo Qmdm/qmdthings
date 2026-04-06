@@ -10,7 +10,1306 @@
 <atom:link href="https://qmdthings.top/index.xml" rel="self" type="application/rss+xml"/>
 <description>琐事随笔</description>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Sat, 28 Feb 2026 16:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 08 Mar 2026 16:00:00 GMT</lastBuildDate>
+<item>
+  <title>热化学基础</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/notes/工程化学/1. 热化学基础.html</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+
+  hitokoto!
+
+</p>
+
+
+
+<script>
+
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+
+
+  fetch("https://v1.hitokoto.cn?c=k")
+
+    .then((response) => response.json())
+
+    .then((data) => {
+
+      const hitokoto = document.querySelector("#hitokoto_text");
+
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+
+      hitokoto.innerText = data.hitokoto;
+
+    })
+
+    .catch(console.error);
+
+
+
+  hitokotoElement.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+  });
+
+</script>
+
+
+
+
+
+
+<section id="热力学基本概念研究的基石" class="level1">
+<h1>热力学基本概念（研究的基石）</h1>
+<p>在进行任何热力学计算前，必须先定义研究的对象及其性质。</p>
+<ol type="1">
+<li><strong>系统与环境 (System and Environment)</strong>：
+<ul>
+<li><strong>系统</strong>：作为研究对象的那一部分物质或空间。</li>
+<li><strong>环境</strong>：系统之外，与系统密切联系的其它物质和空间。</li>
+<li><strong>系统的分类</strong>：
+<ul>
+<li><strong>开放系统</strong>：既有物质交换，又有能量交换。</li>
+<li><strong>封闭系统</strong>：只有能量交换，没有物质交换。</li>
+<li><strong>隔离系统</strong>：既无物质交换，也无能量交换。</li>
+</ul></li>
+</ul></li>
+<li><strong>相 (Phase)</strong>：
+<ul>
+<li>系统中任何<strong>物理和化学性质完全相同的、均匀的部分</strong>称为相。相与相之间有明确的界面。</li>
+<li><strong>单相系统</strong>为均匀系统；<strong>多相系统</strong>为不均匀系统。</li>
+</ul></li>
+<li><strong>状态与状态函数 (State and State Function)</strong>：
+<ul>
+<li><strong>状态</strong>：由一系列宏观性质（如压力 <img src="https://latex.codecogs.com/png.latex?p">、体积 <img src="https://latex.codecogs.com/png.latex?V">、温度 <img src="https://latex.codecogs.com/png.latex?T"> 等）综合表现的结果。</li>
+<li><strong>状态函数</strong>：描述系统性质的物理量。其特性是：<strong>状态一定，数值一定</strong>；状态变化时，其变化量只与<strong>始态和终态</strong>有关，而与变化途径无关。</li>
+</ul></li>
+<li><strong>广度性质与强度性质</strong>：
+<ul>
+<li><strong>广度性质</strong>：具有加和性，数值与物质的量有关（如质量、体积、内能、焓）。</li>
+<li><strong>强度性质</strong>：不具加和性，数值与物质的量无关（如温度、压力、密度）。</li>
+</ul></li>
+</ol>
+</section>
+<section id="热力学第一定律能量守恒" class="level1">
+<h1>热力学第一定律（能量守恒）</h1>
+<p>这是热化学的理论核心，描述了能量转化的定量关系。</p>
+<ol type="1">
+<li><strong>热力学能 (<img src="https://latex.codecogs.com/png.latex?U">)</strong>：又称<strong>内能</strong>，是系统内部运动能量的总和（包括分子平动、转动、振动及电子和核运动）。它是状态函数，目前尚无法测定绝对数值。,</li>
+<li><strong>热 (<img src="https://latex.codecogs.com/png.latex?q">) 与 功 (<img src="https://latex.codecogs.com/png.latex?w">)</strong>：
+<ul>
+<li><strong>热</strong>：因温度差而交换的能量。系统吸热 <img src="https://latex.codecogs.com/png.latex?q%20%3E%200">，放热 <img src="https://latex.codecogs.com/png.latex?q%20%3C%200">。</li>
+<li><strong>功</strong>：除热以外交换的能量（如体积功 <img src="https://latex.codecogs.com/png.latex?w%20=%20-p_%7Bex%7D%5CDelta%20V">）。系统得功 <img src="https://latex.codecogs.com/png.latex?w%20%3E%200">，对环境做功 <img src="https://latex.codecogs.com/png.latex?w%20%3C%200">。</li>
+</ul></li>
+<li><strong>第一定律数学表达式</strong>：<strong><img src="https://latex.codecogs.com/png.latex?%5CDelta%20U%20=%20q%20+%20w"></strong>。能量在转化过程中是守恒的。</li>
+</ol>
+</section>
+<section id="反应热与焓化学反应的能量效应" class="level1">
+<h1>反应热与焓（化学反应的能量效应）</h1>
+<ol type="1">
+<li><strong>等容反应热 (<img src="https://latex.codecogs.com/png.latex?Q_V">)</strong>：在定容且不做非体积功的过程中，系统吸收的热量等于内能的变化（<strong><img src="https://latex.codecogs.com/png.latex?Q_V%20=%20%5CDelta%20U"></strong>）。</li>
+<li><strong>等压反应热 (<img src="https://latex.codecogs.com/png.latex?Q_p">) 与 焓 (<img src="https://latex.codecogs.com/png.latex?H">)</strong>：
+<ul>
+<li><strong>焓</strong>是一个定义出来的状态函数：<img src="https://latex.codecogs.com/png.latex?H%20=%20U%20+%20pV">。</li>
+<li>在恒压且不做非体积功的过程中，系统吸收的热量等于焓变（<strong><img src="https://latex.codecogs.com/png.latex?Q_p%20=%20%5CDelta%20H"></strong>）。</li>
+</ul></li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20H_m"> 与 <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20U_m"> 的关系</strong>：
+<ul>
+<li>对于有气体参加的理想气体反应：<strong><img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20H_m%20=%20%5CDelta_r%20U_m%20+%20%5CDelta%20n(g)RT"></strong>（其中 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20n(g)"> 为生成物与反应物中气态物质摩尔数之差）。</li>
+</ul></li>
+<li><strong>反应进度 (<img src="https://latex.codecogs.com/png.latex?%5Cxi">)</strong>：描述反应进行的程度，单位为 mol。对于同一反应方程式，各组分计算出的反应进度相同。</li>
+</ol>
+</section>
+<section id="热化学定律与标准焓变计算工程计算的核心" class="level1">
+<h1>热化学定律与标准焓变计算（工程计算的核心）</h1>
+<ol type="1">
+<li><strong>标准状态</strong>：规定压力为 <img src="https://latex.codecogs.com/png.latex?100%5Ctext%7B%20kPa%7D"> 下的纯物质状态（气体为理想气体）。</li>
+<li><strong>标准摩尔生成焓 (<img src="https://latex.codecogs.com/png.latex?%5CDelta_f%20H_m%5E%5Ctheta">)</strong>：在标准态下，由<strong>最稳定单质</strong>生成 1mol 物质时的焓变。注意：最稳定单质的标准生成焓定为 0。</li>
+<li><strong>标准摩尔燃烧焓 (<img src="https://latex.codecogs.com/png.latex?%5CDelta_c%20H_m%5E%5Ctheta">)</strong>：1mol 物质在标准态下完全燃烧（产物为指定的稳定氧化物）时的焓变。</li>
+<li><strong>盖斯定律 (Hess’s Law)</strong>：化学反应的反应热只与始态和终态有关，与途径无关。利用此定律可将热化学方程式像代数式一样加减，从而计算难以实测的反应热。</li>
+<li><strong>标准摩尔反应焓变 (<img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20H_m%5E%5Ctheta">) 的计算</strong>：
+<ul>
+<li>公式：<strong><img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20H_m%5E%5Ctheta%20=%20%5Csum%20%5Cnu_B%20%5CDelta_f%20H_m%5E%5Ctheta(B,%20%5Ctext%7B%E7%94%9F%E6%88%90%E7%89%A9%7D)%20-%20%5Csum%20%5Cnu_B%20%5CDelta_f%20H_m%5E%5Ctheta(B,%20%5Ctext%7B%E5%8F%8D%E5%BA%94%E7%89%A9%7D)"></strong>。,</li>
+</ul></li>
+</ol>
+</section>
+<section id="熵" class="level1">
+<h1>熵</h1>
+<section id="自发过程及其特征" class="level2">
+<h2 class="anchored" data-anchor-id="自发过程及其特征">自发过程及其特征</h2>
+<ol type="1">
+<li><strong>定义</strong>：指在给定条件下，不需外界做功就能自动进行的过程。</li>
+<li><strong>特征</strong>：
+<ul>
+<li><strong>方向性</strong>：自发过程都有一定的方向，其逆过程是非自发的。</li>
+<li><strong>限度</strong>：自发过程会进行到某种平衡态。</li>
+<li><strong>有用功</strong>：自发过程可以被利用来做有用功（如原电池放电）。</li>
+</ul></li>
+</ol>
+</section>
+<section id="熵与热力学第二第三定律" class="level2">
+<h2 class="anchored" data-anchor-id="熵与热力学第二第三定律">熵与热力学第二、第三定律</h2>
+<p>这是判断反应方向的第一个维度——<strong>混乱度</strong>。</p>
+<ol type="1">
+<li><strong>熵 (<img src="https://latex.codecogs.com/png.latex?S">) 的定义</strong>：描述系统内部微观粒子混乱程度的状态函数。系统越混乱，微观状态数越多，熵值越大。</li>
+<li><strong>热力学第三定律</strong>：在 <img src="https://latex.codecogs.com/png.latex?0%5Ctext%7B%20K%7D">（绝对零度）时，任何纯物质完美晶体的熵值为零。
+<ul>
+<li><strong>意义</strong>：由此规定了物质的<strong>标准摩尔熵 (<img src="https://latex.codecogs.com/png.latex?S_m%5E%5Ctheta">)</strong>。因为 <img src="https://latex.codecogs.com/png.latex?0%5Ctext%7B%20K%7D"> 时为 <img src="https://latex.codecogs.com/png.latex?0">，所以常温下所有物质的熵值均为<strong>正值</strong>（注意：这与生成焓不同，单质的熵不为零）。</li>
+</ul></li>
+<li><strong>热力学第二定律（熵增原理）</strong>：在<strong>隔离系统</strong>中，自发过程总是朝着熵增加的方向进行，即 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20S_%7B%E9%9A%94%E7%A6%BB%7D%20%3E%200">。</li>
+<li><strong>反应熵变的计算</strong>：
+<ul>
+<li>推导公式：<img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20S_m%5E%5Ctheta%20=%20%5Csum%20%5Cnu_B%20S_m%5E%5Ctheta(%5Ctext%7B%E7%94%9F%E6%88%90%E7%89%A9%7D)%20-%20%5Csum%20%5Cnu_B%20S_m%5E%5Ctheta(%5Ctext%7B%E5%8F%8D%E5%BA%94%E7%89%A9%7D)">。</li>
+<li><strong>定性判断</strong>：通常气体分子数增加的反应（<img src="https://latex.codecogs.com/png.latex?%5CDelta%20n(g)%20%3E%200">），其熵变 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20S%20%3E%200">。</li>
+</ul></li>
+</ol>
+</section>
+<section id="吉布斯自由能-g反应方向的终极判据" class="level2">
+<h2 class="anchored" data-anchor-id="吉布斯自由能-g反应方向的终极判据">吉布斯自由能 (<img src="https://latex.codecogs.com/png.latex?G">)：反应方向的终极判据</h2>
+<p>由于大多数化学反应是在恒温、恒压下进行的，单纯用熵（需考虑整个宇宙或隔离系统）不方便，因此引入了<strong>吉布斯自由能</strong>。</p>
+<ol type="1">
+<li><strong>定义推导</strong>： 为了在系统内部找到判据，科学家定义了 <img src="https://latex.codecogs.com/png.latex?G%20=%20H%20-%20TS">。</li>
+<li><strong>吉布斯-亥姆霍兹方程（核心公式）</strong>： 在恒温条件下，系统状态改变时的自由能变为： <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7B%5CDelta%20G%20=%20%5CDelta%20H%20-%20T%5CDelta%20S%7D"></li>
+<li><strong>自发性判据（恒温恒压且不做非体积功）</strong>：
+<ul>
+<li><strong><img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20%3C%200"></strong>：反应正向自发进行。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20=%200"></strong>：反应达到平衡状态。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20%3E%200"></strong>：反应正向非自发，逆向自发。</li>
+</ul></li>
+<li><strong>物理意义</strong>：<img src="https://latex.codecogs.com/png.latex?%5CDelta%20G"> 等于系统在等温等压过程中所能做的<strong>最大有用功</strong>（即非体积功，<img src="https://latex.codecogs.com/png.latex?W'">）。</li>
+</ol>
+</section>
+<section id="标准摩尔反应自由能变的计算" class="level2">
+<h2 class="anchored" data-anchor-id="标准摩尔反应自由能变的计算">标准摩尔反应自由能变的计算</h2>
+<ol type="1">
+<li><strong>利用标准摩尔生成自由能 (<img src="https://latex.codecogs.com/png.latex?%5CDelta_f%20G_m%5E%5Ctheta">)</strong>：
+<ul>
+<li>定义：标准态下，由稳定单质生成 <img src="https://latex.codecogs.com/png.latex?1%5Ctext%7B%20mol%7D"> 物质时的自由能变。稳定单质的 <img src="https://latex.codecogs.com/png.latex?%5CDelta_f%20G_m%5E%5Ctheta%20=%200">。</li>
+<li>公式：<img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%5E%5Ctheta%20=%20%5Csum%20%5Cnu_B%20%5CDelta_f%20G_m%5E%5Ctheta(%5Ctext%7B%E7%94%9F%E6%88%90%E7%89%A9%7D)%20-%20%5Csum%20%5Cnu_B%20%5CDelta_f%20G_m%5E%5Ctheta(%5Ctext%7B%E5%8F%8D%E5%BA%94%E7%89%A9%7D)">。</li>
+</ul></li>
+<li><strong>利用 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20H"> 和 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20S"> 计算</strong>： 先查表求出 <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20H_m%5E%5Ctheta"> 和 <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20S_m%5E%5Ctheta">，再代入 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20=%20%5CDelta%20H%20-%20T%5CDelta%20S">。</li>
+</ol>
+</section>
+<section id="温度对反应方向的影响" class="level2">
+<h2 class="anchored" data-anchor-id="温度对反应方向的影响">温度对反应方向的影响</h2>
+<p>根据 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20=%20%5CDelta%20H%20-%20T%5CDelta%20S">，反应能否自发取决于 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20H"> 和 <img src="https://latex.codecogs.com/png.latex?-T%5CDelta%20S"> 的相互权衡：</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">类别</th>
+<th style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?%5CDelta%20H"></th>
+<th style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?%5CDelta%20S"></th>
+<th style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?%5CDelta%20G"> 特征</th>
+<th style="text-align: left;">反应自发性</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?-"> (放热)</td>
+<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?+"> (增熵)</td>
+<td style="text-align: left;">始终为 <img src="https://latex.codecogs.com/png.latex?-"></td>
+<td style="text-align: left;"><strong>任何温度下均自发</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?+"> (吸热)</td>
+<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?-"> (减熵)</td>
+<td style="text-align: left;">始终为 <img src="https://latex.codecogs.com/png.latex?+"></td>
+<td style="text-align: left;"><strong>任何温度下均不自发</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?+"> (吸热)</td>
+<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?+"> (增熵)</td>
+<td style="text-align: left;">高温为 <img src="https://latex.codecogs.com/png.latex?-">, 低温为 <img src="https://latex.codecogs.com/png.latex?+"></td>
+<td style="text-align: left;"><strong>高温自发</strong>（熵驱动型）</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?-"> (放热)</td>
+<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?-"> (减熵)</td>
+<td style="text-align: left;">低温为 <img src="https://latex.codecogs.com/png.latex?-">, 高温为 <img src="https://latex.codecogs.com/png.latex?+"></td>
+<td style="text-align: left;"><strong>低温自发</strong>（焓驱动型）</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>转折温度 (<img src="https://latex.codecogs.com/png.latex?T_%7B%E8%BD%AC%7D">) 的推导</strong>： 当反应由自发转变为非自发时，处于平衡态 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20=%200">。 由 <img src="https://latex.codecogs.com/png.latex?0%20=%20%5CDelta%20H%20-%20T_%7B%E8%BD%AC%7D%5CDelta%20S"> 得： <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BT_%7B%E8%BD%AC%7D%20=%20%5Cfrac%7B%5CDelta%20H%7D%7B%5CDelta%20S%7D%7D"> 这在工程上极具价值，例如可以用它计算碳酸钙分解所需的最低热处理温度。</li>
+</ul>
+
+
+<!-- -->
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>工程化学</category>
+  <guid>https://qmdthings.top/notes/工程化学/1. 热化学基础.html</guid>
+  <pubDate>Sun, 08 Mar 2026 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>化学平衡与化学反应速率</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/notes/工程化学/2. 化学平衡与化学反应速率.html</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+
+  hitokoto!
+
+</p>
+
+
+
+<script>
+
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+
+
+  fetch("https://v1.hitokoto.cn?c=k")
+
+    .then((response) => response.json())
+
+    .then((data) => {
+
+      const hitokoto = document.querySelector("#hitokoto_text");
+
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+
+      hitokoto.innerText = data.hitokoto;
+
+    })
+
+    .catch(console.error);
+
+
+
+  hitokotoElement.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+  });
+
+</script>
+
+
+
+
+
+
+<section id="一-化学平衡的定义与特征" class="level3">
+<h3 class="anchored" data-anchor-id="一-化学平衡的定义与特征">一、 化学平衡的定义与特征</h3>
+<ol type="1">
+<li><strong>定义</strong>：在一定条件下的可逆反应中，当正反应速率与逆反应速率相等时，系统中各物质的浓度（或分压）不再随时间改变，此时系统所处的状态称为化学平衡状态。</li>
+<li><strong>特征</strong>：
+<ul>
+<li><strong>动态平衡</strong>：反应并未停止，只是正逆速率相等。</li>
+<li><strong>定态</strong>：宏观性质（如压力、温度、组成）保持不变。</li>
+<li><strong>可逆性</strong>：平衡可以从正向或逆向两个方向达到。</li>
+</ul></li>
+</ol>
+</section>
+<section id="二-化学平衡常数-equilibrium-constant" class="level3">
+<h3 class="anchored" data-anchor-id="二-化学平衡常数-equilibrium-constant">二、 化学平衡常数 (Equilibrium Constant)</h3>
+<p>对于气相反应：<img src="https://latex.codecogs.com/png.latex?aA(g)%20+%20bB(g)%20%5Crightleftharpoons%20cC(g)%20+%20dD(g)"></p>
+<ol type="1">
+<li><strong>经验平衡常数</strong>：
+<ul>
+<li><strong><img src="https://latex.codecogs.com/png.latex?K_c">（浓度平衡常数）</strong>：<img src="https://latex.codecogs.com/png.latex?K_c%20=%20%5Cfrac%7B%5BC%5D%5Ec%20%5BD%5D%5Ed%7D%7B%5BA%5D%5Ea%20%5BB%5D%5Eb%7D">。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?K_p">（压力平衡常数）</strong>：<img src="https://latex.codecogs.com/png.latex?K_p%20=%20%5Cfrac%7Bp(C)%5Ec%20p(D)%5Ed%7D%7Bp(A)%5Ea%20p(B)%5Eb%7D">。</li>
+</ul></li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?K_p"> 与 <img src="https://latex.codecogs.com/png.latex?K_c"> 的关系推导</strong>：
+<ul>
+<li>根据理想气体状态方程 <img src="https://latex.codecogs.com/png.latex?p%20=%20cRT">，代入 <img src="https://latex.codecogs.com/png.latex?K_p"> 表达式中：</li>
+<li><img src="https://latex.codecogs.com/png.latex?K_p%20=%20%5Cfrac%7B(c_C%20RT)%5Ec%20(c_D%20RT)%5Ed%7D%7B(c_A%20RT)%5Ea%20(c_B%20RT)%5Eb%7D%20=%20%5Cfrac%7Bc_C%5Ec%20c_D%5Ed%7D%7Bc_A%5Ea%20c_B%5Eb%7D%20%5Ccdot%20(RT)%5E%7B(c+d)-(a+b)%7D"></li>
+<li>得出结论：<strong><img src="https://latex.codecogs.com/png.latex?K_p%20=%20K_c(RT)%5E%7B%5CDelta%20n%7D"></strong>（其中 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20n"> 为生成物与反应物气态物质的化学计量数之差）。</li>
+</ul></li>
+</ol>
+</section>
+<section id="三-平衡常数与吉布斯自由能的关系核心推导" class="level3">
+<h3 class="anchored" data-anchor-id="三-平衡常数与吉布斯自由能的关系核心推导">三、 平衡常数与吉布斯自由能的关系（核心推导）</h3>
+<p>这是连接热力学与化学平衡的桥梁。</p>
+<ol type="1">
+<li><strong>范特霍夫等温方程 (Van’t Hoff Isotherm)</strong>： 在非标准状态下，反应的自由能变 <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m(T)"> 与标准自由能变 <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%5E%5Ctheta(T)"> 的关系为： <strong><img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m(T)%20=%20%5CDelta_r%20G_m%5E%5Ctheta(T)%20+%20RT%20%5Cln%20Q"></strong>，其中 <img src="https://latex.codecogs.com/png.latex?Q"> 为反应商。</li>
+<li><strong>标准平衡常数 <img src="https://latex.codecogs.com/png.latex?K%5E%5Ctheta"> 的推导</strong>：
+<ul>
+<li>当反应达到平衡时，系统不具备做功本领，即 <strong><img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m(T)%20=%200"></strong>。</li>
+<li>此时的反应商 <img src="https://latex.codecogs.com/png.latex?Q"> 等于标准平衡常数 <img src="https://latex.codecogs.com/png.latex?K%5E%5Ctheta">。</li>
+<li>代入等温方程：<img src="https://latex.codecogs.com/png.latex?0%20=%20%5CDelta_r%20G_m%5E%5Ctheta(T)%20+%20RT%20%5Cln%20K%5E%5Ctheta">。</li>
+<li>得出核心公式：<strong><img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%5E%5Ctheta(T)%20=%20-RT%20%5Cln%20K%5E%5Ctheta"></strong>（或 <img src="https://latex.codecogs.com/png.latex?%5Clg%20K%5E%5Ctheta%20=%20-%5Cfrac%7B%5CDelta_r%20G_m%5E%5Ctheta%7D%7B2.303RT%7D">）。</li>
+</ul></li>
+</ol>
+</section>
+<section id="四-化学平衡移动的判定" class="level3">
+<h3 class="anchored" data-anchor-id="四-化学平衡移动的判定">四、 化学平衡移动的判定</h3>
+<p>利用反应商 <img src="https://latex.codecogs.com/png.latex?Q"> 与平衡常数 <img src="https://latex.codecogs.com/png.latex?K"> 的比较，可以判定反应进行的方向： * <strong><img src="https://latex.codecogs.com/png.latex?Q%20%3C%20K"></strong>：反应向正反应方向进行。 * <strong><img src="https://latex.codecogs.com/png.latex?Q%20=%20K"></strong>：反应处于平衡状态。 * <strong><img src="https://latex.codecogs.com/png.latex?Q%20%3E%20K"></strong>：反应向逆反应方向进行。</p>
+</section>
+<section id="五-影响化学平衡的因素吕查德里原理" class="level3">
+<h3 class="anchored" data-anchor-id="五-影响化学平衡的因素吕查德里原理">五、 影响化学平衡的因素（吕·查德里原理）</h3>
+<ol type="1">
+<li><strong>浓度/压力</strong>：增大反应物浓度或减小生成物浓度，平衡向正向移动。</li>
+<li><strong>温度对平衡常数的影响（范特霍夫方程推导）</strong>：
+<ul>
+<li>结合 <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%5E%5Ctheta%20=%20%5CDelta_r%20H_m%5E%5Ctheta%20-%20T%5CDelta_r%20S_m%5E%5Ctheta"> 和 <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%5E%5Ctheta%20=%20-RT%20%5Cln%20K%5E%5Ctheta">。</li>
+<li>得 <img src="https://latex.codecogs.com/png.latex?%5Cln%20K%5E%5Ctheta%20=%20-%5Cfrac%7B%5CDelta_r%20H_m%5E%5Ctheta%7D%7BRT%7D%20+%20%5Cfrac%7B%5CDelta_r%20S_m%5E%5Ctheta%7D%7BR%7D">。</li>
+<li>假设在一定温度范围内 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20H"> 和 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20S"> 为常数，对于两个不同温度 <img src="https://latex.codecogs.com/png.latex?T_1"> 和 <img src="https://latex.codecogs.com/png.latex?T_2">：</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?%5Clg%20%5Cfrac%7BK_2%5E%5Ctheta%7D%7BK_1%5E%5Ctheta%7D%20=%20%5Cfrac%7B%5CDelta_r%20H_m%5E%5Ctheta%7D%7B2.303R%7D%20%5Cleft(%20%5Cfrac%7B1%7D%7BT_1%7D%20-%20%5Cfrac%7B1%7D%7BT_2%7D%20%5Cright)"></strong>。</li>
+<li><strong>结论</strong>：吸热反应（<img src="https://latex.codecogs.com/png.latex?%5CDelta%20H%20%3E%200">）升温时 <img src="https://latex.codecogs.com/png.latex?K"> 增大，平衡正移；放热反应（<img src="https://latex.codecogs.com/png.latex?%5CDelta%20H%20%3C%200">）升温时 <img src="https://latex.codecogs.com/png.latex?K"> 减小，平衡逆移。</li>
+</ul></li>
+</ol>
+</section>
+<section id="六-多重平衡-multiple-equilibria" class="level3">
+<h3 class="anchored" data-anchor-id="六-多重平衡-multiple-equilibria">六、 多重平衡 (Multiple Equilibria)</h3>
+<p>若一个化学反应可以由另外几个反应相加减得到，则该反应的平衡常数等于相关反应平衡常数的积或商。 * 例如：反应 (3) = 反应 (1) + 反应 (2)，则 <strong><img src="https://latex.codecogs.com/png.latex?K_3%20=%20K_1%20%5Ccdot%20K_2"></strong>。</p>
+<p>掌握了这些知识点及其推导过程，你就能应对工程计算中关于平衡限度和环境条件（温压浓）改变对反应产率的影响分析了。</p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>工程化学</category>
+  <guid>https://qmdthings.top/notes/工程化学/2. 化学平衡与化学反应速率.html</guid>
+  <pubDate>Sun, 08 Mar 2026 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>溶液</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/notes/工程化学/3. 溶液.html</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+
+  hitokoto!
+
+</p>
+
+
+
+<script>
+
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+
+
+  fetch("https://v1.hitokoto.cn?c=k")
+
+    .then((response) => response.json())
+
+    .then((data) => {
+
+      const hitokoto = document.querySelector("#hitokoto_text");
+
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+
+      hitokoto.innerText = data.hitokoto;
+
+    })
+
+    .catch(console.error);
+
+
+
+  hitokotoElement.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+  });
+
+</script>
+
+
+
+
+
+
+<section id="一-化学平衡的定义与特征" class="level3">
+<h3 class="anchored" data-anchor-id="一-化学平衡的定义与特征">一、 化学平衡的定义与特征</h3>
+<ol type="1">
+<li><strong>定义</strong>：在一定条件下的可逆反应中，当正反应速率与逆反应速率相等时，系统中各物质的浓度（或分压）不再随时间改变，此时系统所处的状态称为化学平衡状态。</li>
+<li><strong>特征</strong>：
+<ul>
+<li><strong>动态平衡</strong>：反应并未停止，只是正逆速率相等。</li>
+<li><strong>定态</strong>：宏观性质（如压力、温度、组成）保持不变。</li>
+<li><strong>可逆性</strong>：平衡可以从正向或逆向两个方向达到。</li>
+</ul></li>
+</ol>
+</section>
+<section id="二-化学平衡常数-equilibrium-constant" class="level3">
+<h3 class="anchored" data-anchor-id="二-化学平衡常数-equilibrium-constant">二、 化学平衡常数 (Equilibrium Constant)</h3>
+<p>对于气相反应：<img src="https://latex.codecogs.com/png.latex?aA(g)%20+%20bB(g)%20%5Crightleftharpoons%20cC(g)%20+%20dD(g)"></p>
+<ol type="1">
+<li><strong>经验平衡常数</strong>：
+<ul>
+<li><strong><img src="https://latex.codecogs.com/png.latex?K_c">（浓度平衡常数）</strong>：<img src="https://latex.codecogs.com/png.latex?K_c%20=%20%5Cfrac%7B%5BC%5D%5Ec%20%5BD%5D%5Ed%7D%7B%5BA%5D%5Ea%20%5BB%5D%5Eb%7D">。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?K_p">（压力平衡常数）</strong>：<img src="https://latex.codecogs.com/png.latex?K_p%20=%20%5Cfrac%7Bp(C)%5Ec%20p(D)%5Ed%7D%7Bp(A)%5Ea%20p(B)%5Eb%7D">。</li>
+</ul></li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?K_p"> 与 <img src="https://latex.codecogs.com/png.latex?K_c"> 的关系推导</strong>：
+<ul>
+<li>根据理想气体状态方程 <img src="https://latex.codecogs.com/png.latex?p%20=%20cRT">，代入 <img src="https://latex.codecogs.com/png.latex?K_p"> 表达式中：</li>
+<li><img src="https://latex.codecogs.com/png.latex?K_p%20=%20%5Cfrac%7B(c_C%20RT)%5Ec%20(c_D%20RT)%5Ed%7D%7B(c_A%20RT)%5Ea%20(c_B%20RT)%5Eb%7D%20=%20%5Cfrac%7Bc_C%5Ec%20c_D%5Ed%7D%7Bc_A%5Ea%20c_B%5Eb%7D%20%5Ccdot%20(RT)%5E%7B(c+d)-(a+b)%7D"></li>
+<li>得出结论：<strong><img src="https://latex.codecogs.com/png.latex?K_p%20=%20K_c(RT)%5E%7B%5CDelta%20n%7D"></strong>（其中 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20n"> 为生成物与反应物气态物质的化学计量数之差）。</li>
+</ul></li>
+</ol>
+</section>
+<section id="三-平衡常数与吉布斯自由能的关系核心推导" class="level3">
+<h3 class="anchored" data-anchor-id="三-平衡常数与吉布斯自由能的关系核心推导">三、 平衡常数与吉布斯自由能的关系（核心推导）</h3>
+<p>这是连接热力学与化学平衡的桥梁。</p>
+<ol type="1">
+<li><strong>范特霍夫等温方程 (Van’t Hoff Isotherm)</strong>： 在非标准状态下，反应的自由能变 <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m(T)"> 与标准自由能变 <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%5E%5Ctheta(T)"> 的关系为： <strong><img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m(T)%20=%20%5CDelta_r%20G_m%5E%5Ctheta(T)%20+%20RT%20%5Cln%20Q"></strong>，其中 <img src="https://latex.codecogs.com/png.latex?Q"> 为反应商。</li>
+<li><strong>标准平衡常数 <img src="https://latex.codecogs.com/png.latex?K%5E%5Ctheta"> 的推导</strong>：
+<ul>
+<li>当反应达到平衡时，系统不具备做功本领，即 <strong><img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m(T)%20=%200"></strong>。</li>
+<li>此时的反应商 <img src="https://latex.codecogs.com/png.latex?Q"> 等于标准平衡常数 <img src="https://latex.codecogs.com/png.latex?K%5E%5Ctheta">。</li>
+<li>代入等温方程：<img src="https://latex.codecogs.com/png.latex?0%20=%20%5CDelta_r%20G_m%5E%5Ctheta(T)%20+%20RT%20%5Cln%20K%5E%5Ctheta">。</li>
+<li>得出核心公式：<strong><img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%5E%5Ctheta(T)%20=%20-RT%20%5Cln%20K%5E%5Ctheta"></strong>（或 <img src="https://latex.codecogs.com/png.latex?%5Clg%20K%5E%5Ctheta%20=%20-%5Cfrac%7B%5CDelta_r%20G_m%5E%5Ctheta%7D%7B2.303RT%7D">）。</li>
+</ul></li>
+</ol>
+</section>
+<section id="四-化学平衡移动的判定" class="level3">
+<h3 class="anchored" data-anchor-id="四-化学平衡移动的判定">四、 化学平衡移动的判定</h3>
+<p>利用反应商 <img src="https://latex.codecogs.com/png.latex?Q"> 与平衡常数 <img src="https://latex.codecogs.com/png.latex?K"> 的比较，可以判定反应进行的方向： * <strong><img src="https://latex.codecogs.com/png.latex?Q%20%3C%20K"></strong>：反应向正反应方向进行。 * <strong><img src="https://latex.codecogs.com/png.latex?Q%20=%20K"></strong>：反应处于平衡状态。 * <strong><img src="https://latex.codecogs.com/png.latex?Q%20%3E%20K"></strong>：反应向逆反应方向进行。</p>
+</section>
+<section id="五-影响化学平衡的因素吕查德里原理" class="level3">
+<h3 class="anchored" data-anchor-id="五-影响化学平衡的因素吕查德里原理">五、 影响化学平衡的因素（吕·查德里原理）</h3>
+<ol type="1">
+<li><strong>浓度/压力</strong>：增大反应物浓度或减小生成物浓度，平衡向正向移动。</li>
+<li><strong>温度对平衡常数的影响（范特霍夫方程推导）</strong>：
+<ul>
+<li>结合 <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%5E%5Ctheta%20=%20%5CDelta_r%20H_m%5E%5Ctheta%20-%20T%5CDelta_r%20S_m%5E%5Ctheta"> 和 <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%5E%5Ctheta%20=%20-RT%20%5Cln%20K%5E%5Ctheta">。</li>
+<li>得 <img src="https://latex.codecogs.com/png.latex?%5Cln%20K%5E%5Ctheta%20=%20-%5Cfrac%7B%5CDelta_r%20H_m%5E%5Ctheta%7D%7BRT%7D%20+%20%5Cfrac%7B%5CDelta_r%20S_m%5E%5Ctheta%7D%7BR%7D">。</li>
+<li>假设在一定温度范围内 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20H"> 和 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20S"> 为常数，对于两个不同温度 <img src="https://latex.codecogs.com/png.latex?T_1"> 和 <img src="https://latex.codecogs.com/png.latex?T_2">：</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?%5Clg%20%5Cfrac%7BK_2%5E%5Ctheta%7D%7BK_1%5E%5Ctheta%7D%20=%20%5Cfrac%7B%5CDelta_r%20H_m%5E%5Ctheta%7D%7B2.303R%7D%20%5Cleft(%20%5Cfrac%7B1%7D%7BT_1%7D%20-%20%5Cfrac%7B1%7D%7BT_2%7D%20%5Cright)"></strong>。</li>
+<li><strong>结论</strong>：吸热反应（<img src="https://latex.codecogs.com/png.latex?%5CDelta%20H%20%3E%200">）升温时 <img src="https://latex.codecogs.com/png.latex?K"> 增大，平衡正移；放热反应（<img src="https://latex.codecogs.com/png.latex?%5CDelta%20H%20%3C%200">）升温时 <img src="https://latex.codecogs.com/png.latex?K"> 减小，平衡逆移。</li>
+</ul></li>
+</ol>
+</section>
+<section id="六-多重平衡-multiple-equilibria" class="level3">
+<h3 class="anchored" data-anchor-id="六-多重平衡-multiple-equilibria">六、 多重平衡 (Multiple Equilibria)</h3>
+<p>若一个化学反应可以由另外几个反应相加减得到，则该反应的平衡常数等于相关反应平衡常数的积或商。 * 例如：反应 (3) = 反应 (1) + 反应 (2)，则 <strong><img src="https://latex.codecogs.com/png.latex?K_3%20=%20K_1%20%5Ccdot%20K_2"></strong>。</p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>工程化学</category>
+  <guid>https://qmdthings.top/notes/工程化学/3. 溶液.html</guid>
+  <pubDate>Sun, 08 Mar 2026 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>氧化还原反应与电化学</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/notes/工程化学/4. 氧化还原与电化学.html</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+
+  hitokoto!
+
+</p>
+
+
+
+<script>
+
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+
+
+  fetch("https://v1.hitokoto.cn?c=k")
+
+    .then((response) => response.json())
+
+    .then((data) => {
+
+      const hitokoto = document.querySelector("#hitokoto_text");
+
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+
+      hitokoto.innerText = data.hitokoto;
+
+    })
+
+    .catch(console.error);
+
+
+
+  hitokotoElement.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+  });
+
+</script>
+
+
+
+
+
+
+<section id="一-氧化还原反应基础" class="level3">
+<h3 class="anchored" data-anchor-id="一-氧化还原反应基础">一、 氧化还原反应基础</h3>
+<ol type="1">
+<li><strong>氧化还原电对</strong>：任何氧化还原反应都由两个半反应组成，每个半反应包含一种元素的两种不同氧化态（如 <img src="https://latex.codecogs.com/png.latex?Zn%5E%7B2+%7D/Zn">），称为氧化还原电对。</li>
+<li><strong>氧化数</strong>：用于电化学计算中确定转移电子数 <img src="https://latex.codecogs.com/png.latex?n"> 的关键参数。</li>
+</ol>
+</section>
+<section id="二-原电池-galvanic-cells" class="level3">
+<h3 class="anchored" data-anchor-id="二-原电池-galvanic-cells">二、 原电池 (Galvanic Cells)</h3>
+<ol type="1">
+<li><strong>构造</strong>：由两个电极（正极、负极）、电解质溶液和<strong>盐桥</strong>组成。</li>
+<li><strong>电池符号表示法</strong>：
+<ul>
+<li>负极在左，正极在右；</li>
+<li>单竖线“|”表示相界面，双竖线“||”表示盐桥。</li>
+<li>需注明物质状态和浓度。例如：<img src="https://latex.codecogs.com/png.latex?(-)%5C%20Zn(s)%20%7C%20Zn%5E%7B2+%7D(c_1)%20%7C%7C%20Cu%5E%7B2+%7D(c_2)%20%7C%20Cu(s)%5C%20(+)">。</li>
+</ul></li>
+</ol>
+</section>
+<section id="三-电极电势与电池电动势" class="level3">
+<h3 class="anchored" data-anchor-id="三-电极电势与电池电动势">三、 电极电势与电池电动势</h3>
+<ol type="1">
+<li><strong>标准氢电极 (SHE)</strong>：人为规定在任何温度下，标准态氢电极的电势为零（<img src="https://latex.codecogs.com/png.latex?E%5E%5Ctheta(H%5E+/H_2)%20=%200%5Ctext%7B%20V%7D">）。</li>
+<li><strong>标准电极电势 (<img src="https://latex.codecogs.com/png.latex?E%5E%5Ctheta">)</strong>：以标准氢电极作负极，目标电极作正极组成的电池在标准态下的电动势。</li>
+<li><strong>电池电动势 (<img src="https://latex.codecogs.com/png.latex?E">) 的计算</strong>： <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BE%20=%20E_%7B%E6%AD%A3%7D%20-%20E_%7B%E8%B4%9F%7D%7D"> （注意：计算电动势时，电势高的为正极，电势低的为负极）。</li>
+</ol>
+</section>
+<section id="四-能斯特方程-nernst-equation-核心推导" class="level3">
+<h3 class="anchored" data-anchor-id="四-能斯特方程-nernst-equation-核心推导">四、 能斯特方程 (Nernst Equation) —— 核心推导</h3>
+<p>这是描述浓度（或分压）和温度对电极电势影响的最重要公式。</p>
+<ul>
+<li><strong>热力学推导基础</strong>： 在第二、三章中，我们知道 <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%20=%20%5CDelta_r%20G_m%5E%5Ctheta%20+%20RT%20%5Cln%20Q">。 由于 <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m"> 是体系对外做的最大有用功（非体积功），在电化学中，这个功就是电功：<img src="https://latex.codecogs.com/png.latex?W'%20=%20-nFE">。 因此：<img src="https://latex.codecogs.com/png.latex?-nFE%20=%20-nFE%5E%5Ctheta%20+%20RT%20%5Cln%20Q">。</li>
+<li><strong>推导过程</strong>：
+<ol type="1">
+<li>两边同时除以 <img src="https://latex.codecogs.com/png.latex?-nF">：<img src="https://latex.codecogs.com/png.latex?E%20=%20E%5E%5Ctheta%20-%20%5Cfrac%7BRT%7D%7BnF%7D%20%5Cln%20Q">。</li>
+<li>在常温（<img src="https://latex.codecogs.com/png.latex?298.15%5Ctext%7B%20K%7D">）下，代入 <img src="https://latex.codecogs.com/png.latex?R">、<img src="https://latex.codecogs.com/png.latex?T">、<img src="https://latex.codecogs.com/png.latex?F"> 的常数，并将自然对数 <img src="https://latex.codecogs.com/png.latex?%5Cln"> 换为常用对数 <img src="https://latex.codecogs.com/png.latex?%5Clg">（乘以 <img src="https://latex.codecogs.com/png.latex?2.303">）： <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BE%20=%20E%5E%5Ctheta%20-%20%5Cfrac%7B0.0592%7D%7Bn%7D%20%5Clg%20Q%7D"></li>
+</ol></li>
+<li><strong>具体应用（以电极电势为例）</strong>： 对于电极反应：<img src="https://latex.codecogs.com/png.latex?Ox%20+%20ne%5E-%20%5Crightleftharpoons%20Red"> <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BE(Ox/Red)%20=%20E%5E%5Ctheta(Ox/Red)%20+%20%5Cfrac%7B0.0592%7D%7Bn%7D%20%5Clg%20%5Cfrac%7B%5BOx%5D%7D%7B%5BRed%5D%7D%7D"> （注意：纯固体、纯液体的浓度项不列入公式，气体用分压表示）。</li>
+</ul>
+</section>
+<section id="五-电化学与热力学的关系" class="level3">
+<h3 class="anchored" data-anchor-id="五-电化学与热力学的关系">五、 电化学与热力学的关系</h3>
+<ol type="1">
+<li><strong>与吉布斯自由能的关系</strong>： <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7B%5CDelta_r%20G_m%20=%20-nFE%7D"> <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7B%5CDelta_r%20G_m%5E%5Ctheta%20=%20-nFE%5E%5Ctheta%7D"> 这可以用来判断氧化还原反应的方向：如果 <strong><img src="https://latex.codecogs.com/png.latex?E%20%3E%200"></strong>（即 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20%3C%200">），反应正向自发进行。</li>
+<li><strong>与平衡常数 (<img src="https://latex.codecogs.com/png.latex?K%5E%5Ctheta">) 的关系</strong>： 当反应达到平衡时，<img src="https://latex.codecogs.com/png.latex?E%20=%200"> 且 <img src="https://latex.codecogs.com/png.latex?Q%20=%20K%5E%5Ctheta">。 代入能斯特方程：<img src="https://latex.codecogs.com/png.latex?0%20=%20E%5E%5Ctheta%20-%20%5Cfrac%7BRT%7D%7BnF%7D%20%5Cln%20K%5E%5Ctheta">。 得出推导结果： <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7B%5Clg%20K%5E%5Ctheta%20=%20%5Cfrac%7BnE%5E%5Ctheta%7D%7B0.0592%7D%7D"> 这意味着我们可以通过查表获得标准电极电势，从而计算出反应的平衡常数。</li>
+</ol>
+</section>
+<section id="六-金属腐蚀与防护-corrosion-and-protection" class="level3">
+<h3 class="anchored" data-anchor-id="六-金属腐蚀与防护-corrosion-and-protection">六、 金属腐蚀与防护 (Corrosion and Protection)</h3>
+<ol type="1">
+<li><strong>腐蚀分类</strong>：
+<ul>
+<li><strong>化学腐蚀</strong>：金属直接与干燥气体或非电解质发生反应。</li>
+<li><strong>电化学腐蚀</strong>：金属在电解质溶液中形成微电池，发生氧化反应（主要发生在阳极）,。</li>
+</ul></li>
+<li><strong>防护方法</strong>：
+<ul>
+<li><strong>改变金属组成</strong>（如不锈钢）。</li>
+<li><strong>覆盖保护层</strong>（涂漆、镀层）。</li>
+<li><strong>电化学保护法</strong>：
+<ul>
+<li><strong>牺牲阳极保护法</strong>：连接比保护金属更活泼的金属（如在铁船体上挂锌块）。</li>
+<li><strong>外加电流阴极保护法</strong>：将被保护金属接在电源负极上,。</li>
+</ul></li>
+</ul></li>
+</ol>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>工程化学</category>
+  <guid>https://qmdthings.top/notes/工程化学/4. 氧化还原与电化学.html</guid>
+  <pubDate>Sun, 08 Mar 2026 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>物质结构基础</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/notes/工程化学/5. 物质结构基础.html</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+
+  hitokoto!
+
+</p>
+
+
+
+<script>
+
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+
+
+  fetch("https://v1.hitokoto.cn?c=k")
+
+    .then((response) => response.json())
+
+    .then((data) => {
+
+      const hitokoto = document.querySelector("#hitokoto_text");
+
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+
+      hitokoto.innerText = data.hitokoto;
+
+    })
+
+    .catch(console.error);
+
+
+
+  hitokotoElement.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+  });
+
+</script>
+
+
+
+
+
+
+<p>根据您正在学习的刘立明主编《工程化学基础教程》及相关大纲资料，<strong>第五章的内容为“物质结构基础”</strong>。</p>
+<p>本章的逻辑是从微观粒子（电子、原子）的运动规律出发，解释原子如何通过化学键结合成分子，并最终决定物质的宏观性质。以下是本章所有核心知识点的详细讲解与逻辑推导：</p>
+<section id="一-核外电子的运动状态量子力学模型" class="level3">
+<h3 class="anchored" data-anchor-id="一-核外电子的运动状态量子力学模型">一、 核外电子的运动状态（量子力学模型）</h3>
+<p>与宏观机械运动不同，微观电子的运动具有<strong>波粒二象性</strong>。</p>
+<ol type="1">
+<li><strong>波函数与原子轨道</strong>：
+<ul>
+<li>电子的运动状态用<strong>波函数 <img src="https://latex.codecogs.com/png.latex?%5Cpsi"></strong>（又称原子轨道）来描述。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?%5Cpsi%5E2"> 的物理意义</strong>：代表电子在空间某处出现的<strong>概率密度</strong>，其形象化表示即为<strong>电子云</strong>。</li>
+</ul></li>
+<li><strong>四个量子数（电子的“住址”）</strong>：
+<ul>
+<li><strong>主量子数 (<img src="https://latex.codecogs.com/png.latex?n">)</strong>：决定电子层（能层）和轨道能量。取值为正整数 <img src="https://latex.codecogs.com/png.latex?1,%202,%203...">。</li>
+<li><strong>角量子数 (<img src="https://latex.codecogs.com/png.latex?l">)</strong>：决定能级（电子亚层）和轨道的形状（如 <img src="https://latex.codecogs.com/png.latex?s"> 为球形，<img src="https://latex.codecogs.com/png.latex?p"> 为哑铃形）。取值为 <img src="https://latex.codecogs.com/png.latex?0"> 到 <img src="https://latex.codecogs.com/png.latex?(n-1)">。</li>
+<li><strong>磁量子数 (<img src="https://latex.codecogs.com/png.latex?m">)</strong>：决定轨道在空间的伸展方向。取值为 <img src="https://latex.codecogs.com/png.latex?0,%20%5Cpm%201...%20%5Cpm%20l">。</li>
+<li><strong>自旋量子数 (<img src="https://latex.codecogs.com/png.latex?m_s">)</strong>：描述电子的自旋方向，取值为 <img src="https://latex.codecogs.com/png.latex?%5Cpm%201/2">。</li>
+</ul></li>
+</ol>
+</section>
+<section id="二-核外电子排布原则能量最低原理" class="level3">
+<h3 class="anchored" data-anchor-id="二-核外电子排布原则能量最低原理">二、 核外电子排布原则（能量最低原理）</h3>
+<p>电子在原子核外的排布必须遵循以下三大规律： 1. <strong>泡利不相容原理</strong>：一个原子轨道内最多只能容纳两个自旋方向相反的电子。即一个原子中不可能有两个电子的四个量子数完全相同。 2. <strong>能量最低原理</strong>：电子尽可能先占据能量最低的轨道。 3. <strong>洪特规则</strong>：在能量相同的轨道（等价轨道）上，电子尽可能分占不同的轨道且自旋方向相同，此时系统能量最低。</p>
+</section>
+<section id="三-元素周期律" class="level3">
+<h3 class="anchored" data-anchor-id="三-元素周期律">三、 元素周期律</h3>
+<ul>
+<li><strong>周期性本质</strong>：随着核电荷数递增，原子的<strong>核外电子排布呈现周期性变化</strong>。</li>
+<li><strong>性质递变</strong>：
+<ul>
+<li><strong>原子半径</strong>：同周期从左到右减小；同族从上到下增大。</li>
+<li><strong>电负性</strong>：衡量原子吸引电子能力的强弱。同周期从左到右增大。</li>
+</ul></li>
+</ul>
+</section>
+<section id="四-化学键理论物质的结合" class="level3">
+<h3 class="anchored" data-anchor-id="四-化学键理论物质的结合">四、 化学键理论（物质的结合）</h3>
+<p>化学键是原子间强烈的相互作用，分为离子键、共价键、金属键等。</p>
+<ol type="1">
+<li><strong>离子键</strong>：依靠正、负离子间的静电引力形成（如食盐 <img src="https://latex.codecogs.com/png.latex?NaCl">）。</li>
+<li><strong>共价键（价键理论, VB）</strong>：
+<ul>
+<li><strong>本质</strong>：原子间通过<strong>电子对重叠</strong>（形成共有电子对）而结合。</li>
+<li><strong>特征</strong>：具有<strong>方向性</strong>和<strong>饱和性</strong>。</li>
+<li><strong>分类</strong>：包括 <img src="https://latex.codecogs.com/png.latex?%5Csigma"> 键（头碰头，较稳固）和 <img src="https://latex.codecogs.com/png.latex?%5Cpi"> 键（肩并肩）。</li>
+</ul></li>
+</ol>
+</section>
+<section id="五-杂化轨道理论空间构型的推导" class="level3">
+<h3 class="anchored" data-anchor-id="五-杂化轨道理论空间构型的推导">五、 杂化轨道理论（空间构型的推导）</h3>
+<p>为了解释多原子分子（如甲烷 <img src="https://latex.codecogs.com/png.latex?CH_4">）的空间构型，化学家提出了<strong>杂化轨道理论</strong>。</p>
+<ul>
+<li><strong>推导逻辑</strong>：在形成分子时，中心原子能量相近的原子轨道（如一个 <img src="https://latex.codecogs.com/png.latex?s"> 和三个 <img src="https://latex.codecogs.com/png.latex?p">）会重新组合，形成一组能量相同的新轨道，称为<strong>杂化轨道</strong>。</li>
+<li><strong>常见类型与形状</strong>：
+<ul>
+<li><strong><img src="https://latex.codecogs.com/png.latex?sp"> 杂化</strong>：形成 2 个轨道，角度 <img src="https://latex.codecogs.com/png.latex?180%5E%5Ccirc">，分子呈<strong>直线型</strong>（如 <img src="https://latex.codecogs.com/png.latex?BeCl_2">）。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?sp%5E2"> 杂化</strong>：形成 3 个轨道，角度 <img src="https://latex.codecogs.com/png.latex?120%5E%5Ccirc">，分子呈<strong>平面正三角形</strong>（如 <img src="https://latex.codecogs.com/png.latex?BF_3">）。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?sp%5E3"> 杂化</strong>：形成 4 个轨道，角度 <img src="https://latex.codecogs.com/png.latex?109.5%5E%5Ccirc">，分子呈<strong>正四面体型</strong>（如 <img src="https://latex.codecogs.com/png.latex?CH_4">）。</li>
+</ul></li>
+</ul>
+</section>
+<section id="六-分子间作用力与氢键" class="level3">
+<h3 class="anchored" data-anchor-id="六-分子间作用力与氢键">六、 分子间作用力与氢键</h3>
+<p>这些力决定了物质的物理性质（如熔沸点、溶解性）。 * <strong>范德华力</strong>：普遍存在于分子间，较弱。 * <strong>氢键</strong>：强于范德华力但弱于化学键。它解释了为什么水（<img src="https://latex.codecogs.com/png.latex?H_2O">）的沸点异常高。</p>
+</section>
+<section id="总结" class="level3">
+<h3 class="anchored" data-anchor-id="总结">总结</h3>
+<p>第五章的知识脉络是：<strong>量子数决定电子分布 <img src="https://latex.codecogs.com/png.latex?%5Crightarrow"> 电子排布决定元素性质 <img src="https://latex.codecogs.com/png.latex?%5Crightarrow"> 化学键与杂化轨道决定分子构型 <img src="https://latex.codecogs.com/png.latex?%5Crightarrow"> 最终决定材料的性能（如金属的延展性、半导体的导电性等）</strong>。</p>
+<p>如果您需要针对某个特定的量子数计算或杂化轨道判断进行练习，我可以为您提供具体案例。</p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>工程化学</category>
+  <guid>https://qmdthings.top/notes/工程化学/5. 物质结构基础.html</guid>
+  <pubDate>Sun, 08 Mar 2026 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>无机物单质及化合物</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/notes/工程化学/6. 无机物单质及化合物.html</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+
+  hitokoto!
+
+</p>
+
+
+
+<script>
+
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+
+
+  fetch("https://v1.hitokoto.cn?c=k")
+
+    .then((response) => response.json())
+
+    .then((data) => {
+
+      const hitokoto = document.querySelector("#hitokoto_text");
+
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+
+      hitokoto.innerText = data.hitokoto;
+
+    })
+
+    .catch(console.error);
+
+
+
+  hitokotoElement.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+  });
+
+</script>
+
+
+
+
+
+
+<section id="一-无机化合物的物理性质规律" class="level3">
+<h3 class="anchored" data-anchor-id="一-无机化合物的物理性质规律">一、 无机化合物的物理性质规律</h3>
+<p>本部分利用第五章的物质结构理论，推导宏观性质的变化规律：</p>
+<ol type="1">
+<li><strong>熔沸点与硬度</strong>：
+<ul>
+<li><strong>推导逻辑</strong>：物质的熔沸点取决于质点间作用力的强弱。</li>
+<li><strong>规律</strong>：原子晶体（如金刚石）&gt; 离子晶体 &gt; 金属晶体 &gt; 分子晶体。</li>
+</ul></li>
+<li><strong>溶解性</strong>：
+<ul>
+<li><strong>推导逻辑</strong>：遵循“相似相溶”原理。极性溶质易溶于极性溶剂（如水），非极性溶质易溶于非极性溶剂（如苯）。</li>
+</ul></li>
+</ol>
+</section>
+<section id="二-无机化合物的化学性质递变" class="level3">
+<h3 class="anchored" data-anchor-id="二-无机化合物的化学性质递变">二、 无机化合物的化学性质递变</h3>
+<p>利用周期律推导同周期或同族元素化合物的性质变化：</p>
+<ol type="1">
+<li><strong>酸碱性</strong>：
+<ul>
+<li><strong>规律</strong>：同周期从左到右，最高价氧化物水化物的酸性增强，碱性减弱；同族从上到下，酸性减弱，碱性增强。</li>
+</ul></li>
+<li><strong>氧化还原性</strong>：
+<ul>
+<li><strong>推导逻辑</strong>：与其电负性及电极电势相关。高氧化态通常具有氧化性，低氧化态具有还原性。</li>
+</ul></li>
+</ol>
+</section>
+<section id="三-配位化合物配合物基础-本章理论核心" class="level3">
+<h3 class="anchored" data-anchor-id="三-配位化合物配合物基础-本章理论核心">三、 配位化合物（配合物）基础 —— 本章理论核心</h3>
+<p>配合物是由中心原子（或离子）与配体通过配位键结合而成的复杂离子或分子。</p>
+<ol type="1">
+<li><strong>组成结构</strong>：
+<ul>
+<li><strong>中心原子</strong>：通常是过渡金属离子。</li>
+<li><strong>配体</strong>：含有孤对电子的分子或离子（如 <img src="https://latex.codecogs.com/png.latex?NH_3,%20Cl%5E-,%20H_2O">）。</li>
+<li><strong>配位数</strong>：中心原子结合配体的数目。</li>
+</ul></li>
+<li><strong>螯合物 (Chelates)</strong>：
+<ul>
+<li><strong>定义</strong>：多齿配体与同一个中心原子形成具有环状结构的配合物。</li>
+<li><strong>特性</strong>：螯合物比一般的单齿配合物具有极高的稳定性（即<strong>螯合效应</strong>）。</li>
+</ul></li>
+<li><strong>配合物成键理论的推导（价键理论）</strong>：
+<ul>
+<li><strong>核心思想</strong>：中心原子提供<strong>空轨道</strong>，配体提供<strong>孤对电子</strong>，两者通过<strong>杂化</strong>形成配位键。</li>
+<li><strong>推导示例</strong>：例如 <img src="https://latex.codecogs.com/png.latex?%5BCu(NH_3)_4%5D%5E%7B2+%7D">，铜离子通过 <img src="https://latex.codecogs.com/png.latex?dsp%5E2"> 杂化，形成平面四方形结构。</li>
+</ul></li>
+</ol>
+</section>
+<section id="四-工程材料化学应用" class="level3">
+<h3 class="anchored" data-anchor-id="四-工程材料化学应用">四、 工程材料化学应用</h3>
+<p>作为机械专业的学生，这一部分将化学理论与实际材料性能挂钩：</p>
+<ol type="1">
+<li><strong>金属材料与合金</strong>：
+<ul>
+<li><strong>合金化原理</strong>：通过引入其他元素改变基体金属的结构，从而提高强度、硬度或耐腐蚀性。</li>
+</ul></li>
+<li><strong>无机非金属材料</strong>：
+<ul>
+<li><strong>传统材料</strong>：水泥、玻璃、陶瓷的化学组成与硬化原理（如水泥的水化反应）。</li>
+<li><strong>新型材料</strong>：如纳米材料、超导材料和半导体材料的特性。</li>
+</ul></li>
+</ol>
+</section>
+<section id="五-核心概念的逻辑关联" class="level3">
+<h3 class="anchored" data-anchor-id="五-核心概念的逻辑关联">五、 核心概念的逻辑关联</h3>
+<p>本章的知识点并非孤立，它们形成了一个完整的应用链条： * 通过<strong>结构理论</strong>（杂化、晶体类型）预测<strong>物理性质</strong>（硬度、熔点）； * 通过<strong>热力学和电极电势</strong>预测<strong>化学稳定性</strong>（氧化还原、酸碱）； * 利用<strong>配位化学</strong>解决金属的提取、提纯及化学转化膜处理（如发黑、磷化）。</p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>工程化学</category>
+  <guid>https://qmdthings.top/notes/工程化学/6. 无机物单质及化合物.html</guid>
+  <pubDate>Sun, 08 Mar 2026 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>金属材料与无机非金属材料</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/notes/工程化学/7. 金属材料与无机非金属材料.html</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+
+  hitokoto!
+
+</p>
+
+
+
+<script>
+
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+
+
+  fetch("https://v1.hitokoto.cn?c=k")
+
+    .then((response) => response.json())
+
+    .then((data) => {
+
+      const hitokoto = document.querySelector("#hitokoto_text");
+
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+
+      hitokoto.innerText = data.hitokoto;
+
+    })
+
+    .catch(console.error);
+
+
+
+  hitokotoElement.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+  });
+
+</script>
+
+
+
+
+
+
+<section id="一-化学反应速率的意义" class="level3">
+<h3 class="anchored" data-anchor-id="一-化学反应速率的意义">一、 化学反应速率的意义</h3>
+<ol type="1">
+<li><strong>瞬时速率的定义</strong>： 对于反应 <img src="https://latex.codecogs.com/png.latex?aA%20+%20bB%20%5Crightarrow%20cC%20+%20dD">，反应物 <img src="https://latex.codecogs.com/png.latex?A"> 在某一时刻 <img src="https://latex.codecogs.com/png.latex?t"> 的瞬时反应速率定义为： <img src="https://latex.codecogs.com/png.latex?v_A%20=%20-%5Cfrac%7Bd(A)%7D%7Bdt%7D"> 其中 <img src="https://latex.codecogs.com/png.latex?(A)"> 代表反应物 <img src="https://latex.codecogs.com/png.latex?A"> 的浓度。由于反应物随时间减少，为了使速率为正值，前面加负号。</li>
+<li><strong>统一反应速率 (<img src="https://latex.codecogs.com/png.latex?v">)</strong>： 为了消除不同物质计量系数的影响，定义统一速率： <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bv%20=%20-%5Cfrac%7B1%7D%7Ba%7D%5Cfrac%7Bd(A)%7D%7Bdt%7D%20=%20-%5Cfrac%7B1%7D%7Bb%7D%5Cfrac%7Bd(B)%7D%7Bdt%7D%20=%20%5Cfrac%7B1%7D%7Bc%7D%5Cfrac%7Bd(C)%7D%7Bdt%7D%20=%20%5Cfrac%7B1%7D%7Bd%7D%5Cfrac%7Bd(D)%7D%7Bdt%7D%7D"> 这样，同一个反应在同一时刻就只有一个唯一的速率数值。</li>
+</ol>
+</section>
+<section id="二-浓度对反应速率的影响质量作用定律" class="level3">
+<h3 class="anchored" data-anchor-id="二-浓度对反应速率的影响质量作用定律">二、 浓度对反应速率的影响（质量作用定律）</h3>
+<ol type="1">
+<li><strong>基元反应</strong>：指反应物分子在碰撞中一步直接转化为产物的反应。</li>
+<li><strong>质量作用定律</strong>：对于基元反应，反应速率与各反应物浓度的幂的乘积成正比。
+<ul>
+<li>推导：若 <img src="https://latex.codecogs.com/png.latex?aA%20+%20bB%20%5Crightarrow%20cC"> 为基元反应，则： <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bv%20=%20k(A)%5Ea(B)%5Eb%7D"> 其中 <img src="https://latex.codecogs.com/png.latex?k"> 为<strong>反应速率常数</strong>，主要受温度影响。</li>
+</ul></li>
+<li><strong>非基元反应</strong>：由多个基元步骤组成。其速率方程为 <img src="https://latex.codecogs.com/png.latex?v%20=%20k(A)%5Em(B)%5En">，其中 <img src="https://latex.codecogs.com/png.latex?m,%20n">（反应级数）必须由实验确定。</li>
+</ol>
+</section>
+<section id="三-反应级数与积分速率方程核心推导" class="level3">
+<h3 class="anchored" data-anchor-id="三-反应级数与积分速率方程核心推导">三、 反应级数与积分速率方程（核心推导）</h3>
+<p>资料重点推导了<strong>一级反应</strong>的规律：</p>
+<ol type="1">
+<li><strong>一级反应速率方程推导</strong>： 对于反应 <img src="https://latex.codecogs.com/png.latex?A%20%5Crightarrow%20P">，其速率方程为：<img src="https://latex.codecogs.com/png.latex?-%5Cfrac%7Bd(A)%7D%7Bdt%7D%20=%20k(A)">。
+<ul>
+<li><strong>分离变量</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Bd(A)%7D%7B(A)%7D%20=%20-k%20dt"></li>
+<li><strong>积分</strong>：从 <img src="https://latex.codecogs.com/png.latex?t=0"> 到 <img src="https://latex.codecogs.com/png.latex?t"> 进行定积分： <img src="https://latex.codecogs.com/png.latex?%5Cint_%7B(A)_0%7D%5E%7B(A)%7D%20%5Cfrac%7Bd(A)%7D%7B(A)%7D%20=%20-k%20%5Cint_%7B0%7D%5E%7Bt%7D%20dt%20%5CRightarrow%20%5Cln(A)%20-%20%5Cln(A)_0%20=%20-kt"></li>
+<li><strong>最终表达式</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7B%5Cln%20%5Cfrac%7B(A)_0%7D%7B(A)%7D%20=%20kt%7D"> 或 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Blg(A)%20=%20lg(A)_0%20-%20%5Cfrac%7Bk%7D%7B2.303%7Dt%7D">。</li>
+</ul></li>
+<li><strong>半衰期 (<img src="https://latex.codecogs.com/png.latex?t_%7B1/2%7D">) 的推导</strong>： 半衰期是指反应物消耗一半所需的时间，即当 <img src="https://latex.codecogs.com/png.latex?t%20=%20t_%7B1/2%7D"> 时，<img src="https://latex.codecogs.com/png.latex?(A)%20=%20%5Cfrac%7B1%7D%7B2%7D(A)_0">。
+<ul>
+<li>代入一级反应积分式：<img src="https://latex.codecogs.com/png.latex?%5Cln%20%5Cfrac%7B(A)_0%7D%7B%5Cfrac%7B1%7D%7B2%7D(A)_0%7D%20=%20kt_%7B1/2%7D"></li>
+<li>得：<img src="https://latex.codecogs.com/png.latex?%5Cln%202%20=%20kt_%7B1/2%7D"></li>
+<li>结论：<img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bt_%7B1/2%7D%20=%20%5Cfrac%7B%5Cln%202%7D%7Bk%7D%20%5Capprox%20%5Cfrac%7B0.693%7D%7Bk%7D%7D"></li>
+<li><strong>重要特性</strong>：一级反应的半衰期与初始浓度无关。</li>
+</ul></li>
+</ol>
+</section>
+<section id="四-温度对反应速率的影响阿仑尼乌斯-arrhenius-方程" class="level3">
+<h3 class="anchored" data-anchor-id="四-温度对反应速率的影响阿仑尼乌斯-arrhenius-方程">四、 温度对反应速率的影响：阿仑尼乌斯 (Arrhenius) 方程</h3>
+<ol type="1">
+<li><strong>经验公式</strong>： <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bk%20=%20Ae%5E%7B-E_a/RT%7D%7D"> 其中 <img src="https://latex.codecogs.com/png.latex?A"> 为指前因子，<img src="https://latex.codecogs.com/png.latex?E_a"> 为<strong>活化能</strong>。</li>
+<li><strong>计算式（两点法）推导</strong>： 在不同温度 <img src="https://latex.codecogs.com/png.latex?T_1,%20T_2"> 下，速率常数分别为 <img src="https://latex.codecogs.com/png.latex?k_1,%20k_2">。
+<ul>
+<li>取对数：<img src="https://latex.codecogs.com/png.latex?%5Cln%20k_1%20=%20%5Cln%20A%20-%20%5Cfrac%7BE_a%7D%7BRT_1%7D"> 和 <img src="https://latex.codecogs.com/png.latex?%5Cln%20k_2%20=%20%5Cln%20A%20-%20%5Cfrac%7BE_a%7D%7BRT_2%7D"></li>
+<li>相减消去 <img src="https://latex.codecogs.com/png.latex?A">：<img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7B%5Cln%20%5Cfrac%7Bk_2%7D%7Bk_1%7D%20=%20%5Cfrac%7BE_a%7D%7BR%7D%20%5Cleft(%20%5Cfrac%7B1%7D%7BT_1%7D%20-%20%5Cfrac%7B1%7D%7BT_2%7D%20%5Cright)%7D"> 这个公式常用于通过实验测定的速率常数来计算反应的活化能 <img src="https://latex.codecogs.com/png.latex?E_a">。</li>
+</ul></li>
+</ol>
+</section>
+<section id="五-反应速率理论微观解释" class="level3">
+<h3 class="anchored" data-anchor-id="五-反应速率理论微观解释">五、 反应速率理论（微观解释）</h3>
+<ol type="1">
+<li><strong>碰撞理论</strong>：
+<ul>
+<li>认为反应发生的先决条件是分子间的<strong>有效碰撞</strong>。</li>
+<li>公式形式：<img src="https://latex.codecogs.com/png.latex?k%20=%20Z_0%20P%20e%5E%7B-E_c/RT%7D">，其中 <img src="https://latex.codecogs.com/png.latex?Z_0"> 是碰撞频率，<img src="https://latex.codecogs.com/png.latex?P"> 是方位因子（考虑分子碰撞的角度）。</li>
+</ul></li>
+<li><strong>过渡态理论</strong>：
+<ul>
+<li>认为反应物在变为产物前，必须先经过一个高能量的<strong>活化络合物</strong>（过渡态）。</li>
+<li><strong>活化能 (<img src="https://latex.codecogs.com/png.latex?E_a">)</strong>：即反应物分子与活化络合物之间的能量差。活化能越小，反应速率越快。</li>
+</ul></li>
+</ol>
+</section>
+<section id="六-催化剂与催化作用" class="level3">
+<h3 class="anchored" data-anchor-id="六-催化剂与催化作用">六、 催化剂与催化作用</h3>
+<ol type="1">
+<li><strong>基本特征</strong>：催化剂能改变反应历程，但反应前后自身的质量和化学性质不变。</li>
+<li><strong>核心原理</strong>：催化剂通过<strong>降低反应的活化能 (<img src="https://latex.codecogs.com/png.latex?E_a">)</strong>，使更多的分子成为活化分子，从而显著加快反应速率。</li>
+<li><strong>局限性</strong>：催化剂不能改变热力学判据（即不能让 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20%3E%200"> 的反应发生），也不改变平衡状态（同时等比例加快正逆反应速率）。</li>
+</ol>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>工程化学</category>
+  <guid>https://qmdthings.top/notes/工程化学/7. 金属材料与无机非金属材料.html</guid>
+  <pubDate>Sun, 08 Mar 2026 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>有机化学与有机化合物</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/notes/工程化学/8. 有机化学和有机化合物.html</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+
+  hitokoto!
+
+</p>
+
+
+
+<script>
+
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+
+
+  fetch("https://v1.hitokoto.cn?c=k")
+
+    .then((response) => response.json())
+
+    .then((data) => {
+
+      const hitokoto = document.querySelector("#hitokoto_text");
+
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+
+      hitokoto.innerText = data.hitokoto;
+
+    })
+
+    .catch(console.error);
+
+
+
+  hitokotoElement.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+  });
+
+</script>
+
+
+
+
+
+
+<section id="酸碱质子理论-brønsted-lowry-theory" class="level3">
+<h3 class="anchored" data-anchor-id="酸碱质子理论-brønsted-lowry-theory">1. 酸碱质子理论 (Brønsted-Lowry Theory)</h3>
+<p>这是现代酸碱化学的基础。 * <strong>定义</strong>：凡是能给出质子（<img src="https://latex.codecogs.com/png.latex?H%5E+">）的分子或离子都是<strong>酸</strong>；凡是能接受质子的分子或离子都是<strong>碱</strong>。 * <strong>共轭酸碱对</strong>：酸给出质子后变成其<strong>共轭碱</strong>，碱接受质子后变成其<strong>共轭酸</strong>（例如 <img src="https://latex.codecogs.com/png.latex?NH_4%5E+%20/%20NH_3">）。 * <strong>酸碱反应的本质</strong>：是两对共轭酸碱对之间的<strong>质子传递</strong>反应。</p>
+</section>
+<section id="水的自耦电离与溶液的酸碱性" class="level3">
+<h3 class="anchored" data-anchor-id="水的自耦电离与溶液的酸碱性">2. 水的自耦电离与溶液的酸碱性</h3>
+<ul>
+<li><strong>自耦电离平衡</strong>：<img src="https://latex.codecogs.com/png.latex?H_2O%20+%20H_2O%20%5Crightleftharpoons%20H_3O%5E+%20+%20OH%5E-">。</li>
+<li><strong>水的离子积常数 (<img src="https://latex.codecogs.com/png.latex?K_w">)</strong>： <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BK_w%20=%20%5BH_3O%5E+%5D%5BOH%5E-%5D%7D"> 在 <img src="https://latex.codecogs.com/png.latex?298.15%20%5Ctext%7B%20K%7D"> 时，<img src="https://latex.codecogs.com/png.latex?K_w%20=%201.0%20%5Ctimes%2010%5E%7B-14%7D">。由于该反应是吸热的，温度越高，<img src="https://latex.codecogs.com/png.latex?K_w"> 越大。</li>
+<li><strong>pH 的定义</strong>：<img src="https://latex.codecogs.com/png.latex?pH%20=%20-%5Clg%5BH_3O%5E+%5D">。</li>
+</ul>
+</section>
+<section id="共轭酸碱对-k_a-与-k_b-的关系推导" class="level3">
+<h3 class="anchored" data-anchor-id="共轭酸碱对-k_a-与-k_b-的关系推导">3. 共轭酸碱对 <img src="https://latex.codecogs.com/png.latex?K_a"> 与 <img src="https://latex.codecogs.com/png.latex?K_b"> 的关系推导</h3>
+<p>这是酸碱平衡中最重要的定量关系之一。</p>
+<ul>
+<li><strong>推导过程</strong>：
+<ol type="1">
+<li>设弱酸 <img src="https://latex.codecogs.com/png.latex?HA"> 的电离：<img src="https://latex.codecogs.com/png.latex?HA%20+%20H_2O%20%5Crightleftharpoons%20H_3O%5E+%20+%20A%5E-">，<img src="https://latex.codecogs.com/png.latex?K_a%20=%20%5Cfrac%7B%5BH_3O%5E+%5D%5BA%5E-%5D%7D%7B%5BHA%5D%7D">。</li>
+<li>其共轭碱 <img src="https://latex.codecogs.com/png.latex?A%5E-"> 的水解（电离）：<img src="https://latex.codecogs.com/png.latex?A%5E-%20+%20H_2O%20%5Crightleftharpoons%20OH%5E-%20+%20HA">，<img src="https://latex.codecogs.com/png.latex?K_b%20=%20%5Cfrac%7B%5BOH%5E-%5D%5BHA%5D%7D%7B%5BA%5E-%5D%7D">。</li>
+<li>将 <img src="https://latex.codecogs.com/png.latex?K_a"> 与 <img src="https://latex.codecogs.com/png.latex?K_b"> 相乘： <img src="https://latex.codecogs.com/png.latex?K_a%20%5Ccdot%20K_b%20=%20%5Cleft(%20%5Cfrac%7B%5BH_3O%5E+%5D%5BA%5E-%5D%7D%7B%5BHA%5D%7D%20%5Cright)%20%5Ccdot%20%5Cleft(%20%5Cfrac%7B%5BOH%5E-%5D%5BHA%5D%7D%7B%5BA%5E-%5D%7D%20%5Cright)%20=%20%5BH_3O%5E+%5D%5BOH%5E-%5D"></li>
+<li><strong>结论</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BK_a%20%5Ccdot%20K_b%20=%20K_w%7D">（或 <img src="https://latex.codecogs.com/png.latex?pK_a%20+%20pK_b%20=%20pK_w">）。这说明酸的强度越大，其共轭碱的强度就越小。</li>
+</ol></li>
+</ul>
+</section>
+<section id="弱酸弱碱溶液-ph-的计算推导" class="level3">
+<h3 class="anchored" data-anchor-id="弱酸弱碱溶液-ph-的计算推导">4. 弱酸/弱碱溶液 pH 的计算推导</h3>
+<p>对于一元弱酸 <img src="https://latex.codecogs.com/png.latex?HA">（初始浓度为 <img src="https://latex.codecogs.com/png.latex?c">），其电离平衡为：<img src="https://latex.codecogs.com/png.latex?HA%20%5Crightleftharpoons%20H%5E+%20+%20A%5E-">。</p>
+<ul>
+<li><strong>推导过程</strong>：
+<ol type="1">
+<li>设平衡时 <img src="https://latex.codecogs.com/png.latex?%5BH%5E+%5D%20=%20%5BA%5E-%5D%20=%20x">，则平衡时 <img src="https://latex.codecogs.com/png.latex?%5BHA%5D%20=%20c%20-%20x">。</li>
+<li>代入平衡常数式：<img src="https://latex.codecogs.com/png.latex?K_a%20=%20%5Cfrac%7Bx%5E2%7D%7Bc-x%7D">。</li>
+<li><strong>近似处理</strong>：当 <img src="https://latex.codecogs.com/png.latex?c/K_a%20%5Cge%20400"> 时（即酸极弱且浓度不太稀），可以认为 <img src="https://latex.codecogs.com/png.latex?c-x%20%5Capprox%20c">。</li>
+<li>得出计算公式：<img src="https://latex.codecogs.com/png.latex?x%5E2%20=%20K_a%20%5Ccdot%20c%20%5CRightarrow%20%5Cmathbf%7B%5BH%5E+%5D%20=%20%5Csqrt%7BK_a%20c%7D%7D">。</li>
+<li>同理，弱碱溶液的 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7B%5BOH%5E-%5D%20=%20%5Csqrt%7BK_b%20c%7D%7D">。</li>
+</ol></li>
+</ul>
+</section>
+<section id="同离子效应与缓冲溶液" class="level3">
+<h3 class="anchored" data-anchor-id="同离子效应与缓冲溶液">5. 同离子效应与缓冲溶液</h3>
+<ul>
+<li><strong>同离子效应</strong>：在弱电解质溶液中加入含有相同离子的强电解质（如在 <img src="https://latex.codecogs.com/png.latex?HAc"> 中加 <img src="https://latex.codecogs.com/png.latex?NaAc">），平衡会逆向移动，从而降低弱电解质的电离度。</li>
+<li><strong>缓冲溶液 (Buffer Solutions)</strong>：由弱酸及其共轭碱（如 <img src="https://latex.codecogs.com/png.latex?HAc%20-%20NaAc">）组成的混合溶液，能抵抗少量强酸、强碱或稀释对 pH 的影响。</li>
+</ul>
+</section>
+<section id="缓冲公式的推导-henderson-hasselbalch-equation" class="level3">
+<h3 class="anchored" data-anchor-id="缓冲公式的推导-henderson-hasselbalch-equation">6. 缓冲公式的推导 (Henderson-Hasselbalch Equation)</h3>
+<p>这是计算缓冲溶液 pH 的核心公式。</p>
+<ul>
+<li><strong>推导过程</strong>：
+<ol type="1">
+<li>对于缓冲体系 <img src="https://latex.codecogs.com/png.latex?HA%20-%20A%5E-">，<img src="https://latex.codecogs.com/png.latex?K_a%20=%20%5Cfrac%7B%5BH%5E+%5D%5BA%5E-%5D%7D%7B%5BHA%5D%7D">。</li>
+<li>整理得：<img src="https://latex.codecogs.com/png.latex?%5BH%5E+%5D%20=%20K_a%20%5Ccdot%20%5Cfrac%7B%5BHA%5D%7D%7B%5BA%5E-%5D%7D">。</li>
+<li>两边取负对数：<img src="https://latex.codecogs.com/png.latex?-%5Clg%5BH%5E+%5D%20=%20-%5Clg%20K_a%20-%20%5Clg%20%5Cfrac%7B%5BHA%5D%7D%7B%5BA%5E-%5D%7D">。</li>
+<li><strong>最终表达式</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BpH%20=%20pK_a%20+%20%5Clg%20%5Cfrac%7B%5BA%5E-%5D%7D%7B%5BHA%5D%7D%7D">（或 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BpH%20=%20pK_a%20+%20%5Clg%20%5Cfrac%7Bc_%7B%5Ctext%7B%E7%A2%B1%7D%7D%7D%7Bc_%7B%5Ctext%7B%E9%85%B8%7D%7D%7D%7D">）。</li>
+</ol></li>
+<li><strong>缓冲范围</strong>：通常在 <img src="https://latex.codecogs.com/png.latex?pH%20=%20pK_a%20%5Cpm%201"> 之间。当 <img src="https://latex.codecogs.com/png.latex?c_%7B%5Ctext%7B%E7%A2%B1%7D%7D%20=%20c_%7B%5Ctext%7B%E9%85%B8%7D%7D"> 时，缓冲能力最强，此时 <img src="https://latex.codecogs.com/png.latex?pH%20=%20pK_a">。</li>
+</ul>
+</section>
+<section id="酸碱指示剂" class="level3">
+<h3 class="anchored" data-anchor-id="酸碱指示剂">7. 酸碱指示剂</h3>
+<p>指示剂本身是弱的有机酸或碱（用 <img src="https://latex.codecogs.com/png.latex?HIn"> 表示），其酸式和碱式具有不同颜色。当溶液的 <img src="https://latex.codecogs.com/png.latex?%5BH%5E+%5D"> 改变到使其酸碱型比例发生反转时，颜色随之改变（变色范围通常为 <img src="https://latex.codecogs.com/png.latex?pH%20=%20pK_%7BIn%7D%20%5Cpm%201">）。</p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>工程化学</category>
+  <guid>https://qmdthings.top/notes/工程化学/8. 有机化学和有机化合物.html</guid>
+  <pubDate>Sun, 08 Mar 2026 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>合成高分子材料</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/notes/工程化学/9. 合成高分子材料.html</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+
+  hitokoto!
+
+</p>
+
+
+
+<script>
+
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+
+
+  fetch("https://v1.hitokoto.cn?c=k")
+
+    .then((response) => response.json())
+
+    .then((data) => {
+
+      const hitokoto = document.querySelector("#hitokoto_text");
+
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+
+      hitokoto.innerText = data.hitokoto;
+
+    })
+
+    .catch(console.error);
+
+
+
+  hitokotoElement.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+  });
+
+</script>
+
+
+
+
+
+
+<section id="溶度积常数-k_sp-的定义" class="level3">
+<h3 class="anchored" data-anchor-id="溶度积常数-k_sp-的定义">1. 溶度积常数 (<img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D">) 的定义</h3>
+<p>对于难溶电解质 <img src="https://latex.codecogs.com/png.latex?A_m%20B_n"> 在水中的饱和溶液，存在如下动态平衡： <img src="https://latex.codecogs.com/png.latex?A_m%20B_n(s)%20%5Crightleftharpoons%20m%20A%5E%7Bn+%7D(aq)%20+%20n%20B%5E%7Bm-%7D(aq)"> * <strong>概念</strong>：在一定温度下，难溶电解质的饱和溶液中，各离子浓度幂的乘积是一个常数，称为<strong>溶度积常数 (<img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D">)</strong>。 * <strong>表达式</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BK_%7Bsp%7D%20=%20%5BA%5E%7Bn+%7D%5D%5Em%20%5Ccdot%20%5BB%5E%7Bm-%7D%5D%5En%7D">。 * <strong>物理意义</strong>：<img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D"> 反映了难溶电解质在水中的<strong>溶解能力</strong>。在相同类型（如均为 <img src="https://latex.codecogs.com/png.latex?AB"> 型）的电解质中，<img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D"> 越小，溶解度越小。</p>
+</section>
+<section id="溶解度-s-与-k_sp-的关系及推导" class="level3">
+<h3 class="anchored" data-anchor-id="溶解度-s-与-k_sp-的关系及推导">2. 溶解度 (<img src="https://latex.codecogs.com/png.latex?s">) 与 <img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D"> 的关系及推导</h3>
+<p>这是定量计算的核心。 * <strong>推导过程（以 <img src="https://latex.codecogs.com/png.latex?A_m%20B_n"> 为例）</strong>： 1. 设难溶电解质的溶解度为 <img src="https://latex.codecogs.com/png.latex?s"> (mol·dm⁻³)。 2. 平衡时：<img src="https://latex.codecogs.com/png.latex?%5BA%5E%7Bn+%7D%5D%20=%20ms">，<img src="https://latex.codecogs.com/png.latex?%5BB%5E%7Bm-%7D%5D%20=%20ns">。 3. 代入溶度积公式：<img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D%20=%20(ms)%5Em%20%5Ccdot%20(ns)%5En%20=%20m%5Em%20%5Ccdot%20n%5En%20%5Ccdot%20s%5E%7Bm+n%7D">。 * <strong>常见类型结论</strong>： * <strong><img src="https://latex.codecogs.com/png.latex?AB"> 型</strong>（如 <img src="https://latex.codecogs.com/png.latex?AgCl">）：<img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D%20=%20s%5E2%20%5CRightarrow%20%5Cmathbf%7Bs%20=%20%5Csqrt%7BK_%7Bsp%7D%7D%7D">。 * <strong><img src="https://latex.codecogs.com/png.latex?A_2%20B"> 或 <img src="https://latex.codecogs.com/png.latex?AB_2"> 型</strong>（如 <img src="https://latex.codecogs.com/png.latex?Ag_2%20CrO_4"> 或 <img src="https://latex.codecogs.com/png.latex?PbF_2">）：<img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D%20=%20(2s)%5E2%20%5Ccdot%20s%20=%204s%5E3%20%5CRightarrow%20%5Cmathbf%7Bs%20=%20%5Csqrt%7BK_%7Bsp%7D/4%7D%7D">。</p>
+</section>
+<section id="溶度积规则沉淀生成的判定" class="level3">
+<h3 class="anchored" data-anchor-id="溶度积规则沉淀生成的判定">3. 溶度积规则（沉淀生成的判定）</h3>
+<p>类似于化学平衡中的 <img src="https://latex.codecogs.com/png.latex?Q"> 与 <img src="https://latex.codecogs.com/png.latex?K"> 的比较： * <strong>离子积 (<img src="https://latex.codecogs.com/png.latex?Q">)</strong>：溶液中离子浓度幂的乘积（不一定是饱和状态）。 * <strong>判定标准</strong>： * <strong><img src="https://latex.codecogs.com/png.latex?Q%20%3E%20K_%7Bsp%7D"></strong>：溶液过饱和，<strong>有沉淀析出</strong>，直到 <img src="https://latex.codecogs.com/png.latex?Q%20=%20K_%7Bsp%7D">。 * <strong><img src="https://latex.codecogs.com/png.latex?Q%20=%20K_%7Bsp%7D"></strong>：溶液恰好饱和，处于<strong>沉淀溶解平衡状态</strong>。 * <strong><img src="https://latex.codecogs.com/png.latex?Q%20%3C%20K_%7Bsp%7D"></strong>：溶液未饱和，<strong>无沉淀析出</strong>；若有固体存在，则固体继续溶解。</p>
+</section>
+<section id="影响沉淀溶解平衡的因素" class="level3">
+<h3 class="anchored" data-anchor-id="影响沉淀溶解平衡的因素">4. 影响沉淀溶解平衡的因素</h3>
+<ul>
+<li><strong>同离子效应</strong>：在难溶电解质溶液中加入含有相同离子的强电解质，平衡会向生成沉淀的方向移动，从而使难溶物的<strong>溶解度显著降低</strong>。</li>
+<li><strong>盐效应</strong>：在难溶电解质溶液中加入不含相同离子的强电解质，会稍微增大溶解度（但在基础工程计算中通常忽略不计）。</li>
+<li><strong>酸效应（pH 影响）</strong>：如果沉淀的阴离子是弱酸根（如 <img src="https://latex.codecogs.com/png.latex?CO_3%5E%7B2-%7D,%20OH%5E-">），降低 pH（加酸）会使阴离子浓度下降，导致平衡右移，<strong>沉淀溶解</strong>。</li>
+<li><strong>配位效应</strong>：加入能与金属离子形成稳定配合物的试剂，会显著增大溶解度。</li>
+</ul>
+</section>
+<section id="分步沉淀-fractional-precipitation" class="level3">
+<h3 class="anchored" data-anchor-id="分步沉淀-fractional-precipitation">5. 分步沉淀 (Fractional Precipitation)</h3>
+<p>当溶液中存在多种离子都能与同一种试剂产生沉淀时，它们被沉淀出来的先后顺序。 * <strong>基本原理</strong>：哪种物质先达到其 <img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D"> 所要求的浓度积，哪种物质就<strong>先沉淀</strong>。 * <strong>应用</strong>：通过控制加入试剂的浓度或调节 pH 值，可以实现离子的分离。</p>
+</section>
+<section id="沉淀的转化-precipitation-transformation" class="level3">
+<h3 class="anchored" data-anchor-id="沉淀的转化-precipitation-transformation">6. 沉淀的转化 (Precipitation Transformation)</h3>
+<p>一种难溶电解质转化为另一种更难溶电解质的过程。 * <strong>规律</strong>：通常是 <strong><img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D"> 较大的转化为 <img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D"> 更小的</strong>（例如 <img src="https://latex.codecogs.com/png.latex?AgCl%20%5Crightarrow%20AgI">）。 * <strong>转化平衡常数 (<img src="https://latex.codecogs.com/png.latex?K">) 的推导</strong>： 对于反应 <img src="https://latex.codecogs.com/png.latex?AgCl(s)%20+%20I%5E-(aq)%20%5Crightleftharpoons%20AgI(s)%20+%20Cl%5E-(aq)">： <img src="https://latex.codecogs.com/png.latex?K%20=%20%5Cfrac%7B%5BCl%5E-%5D%7D%7B%5BI%5E-%5D%7D%20=%20%5Cfrac%7B%5BCl%5E-%5D%5BAg%5E+%5D%7D%7B%5BI%5E-%5D%5BAg%5E+%5D%7D%20=%20%5Cfrac%7BK_%7Bsp%7D(AgCl)%7D%7BK_%7Bsp%7D(AgI)%7D"> 若 <img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D(AgCl)%20%5Cgg%20K_%7Bsp%7D(AgI)">，则平衡常数 <img src="https://latex.codecogs.com/png.latex?K"> 非常大，转化非常彻底。</p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>工程化学</category>
+  <guid>https://qmdthings.top/notes/工程化学/9. 合成高分子材料.html</guid>
+  <pubDate>Sun, 08 Mar 2026 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Linux上面也有NFC</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/posts/生活/Linux上面也有NFC!.html</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+
+  hitokoto!
+
+</p>
+
+
+
+<script>
+
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+
+
+  fetch("https://v1.hitokoto.cn?c=k")
+
+    .then((response) => response.json())
+
+    .then((data) => {
+
+      const hitokoto = document.querySelector("#hitokoto_text");
+
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+
+      hitokoto.innerText = data.hitokoto;
+
+    })
+
+    .catch(console.error);
+
+
+
+  hitokotoElement.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+  });
+
+</script>
+
+
+
+
+
+
+<section id="nfcnear-field-communication" class="level2">
+<h2 class="anchored" data-anchor-id="nfcnear-field-communication">NFC(Near Field Communication)</h2>
+<p><strong>近场通信</strong>,本质上是一种<strong>电磁感应</strong>,与WIFI,蓝牙这种发射接受电磁波的不一样,这也铸就了NFC的一些特性: 距离短,速度快(无需配对),功耗低,安全性高(因为必须物理近距离qwq)</p>
+<p>NFC非常强大,它可以有三种用途(一个NFC,三次满足!)</p>
+<ul>
+<li><p><strong>卡模拟(Card Emulation)</strong>: 手机刷公交,门禁卡,NFC支付,卡包app,身份验证令牌</p></li>
+<li><p><strong>读卡器(Reader/Writer)</strong>: 用手机给公交卡充值,扫描NFC标签</p></li>
+<li><p><strong>点对点模式(P2P)</strong>: 华为纯血鸿蒙”碰一碰”的文件图片互传</p></li>
+</ul>
+<p>但是这也铸成了一些安全隐患:</p>
+<p>买一个NFC贴纸玩一玩,碰一碰就能自动执行任务</p>
+</section>
+<section id="linux上的nfc" class="level1">
+<h1>Linux上的NFC</h1>
+
+
+<!-- -->
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>Linux</category>
+  <category>Blog</category>
+  <guid>https://qmdthings.top/posts/生活/Linux上面也有NFC!.html</guid>
+  <pubDate>Sat, 28 Feb 2026 16:00:00 GMT</pubDate>
+</item>
 <item>
   <title>第一次blog</title>
   <dc:creator>QMD </dc:creator>
@@ -18,25 +1317,45 @@
   <description><![CDATA[ 
 
 <p id="hitokoto">
+
   hitokoto!
+
 </p>
 
+
+
 <script>
+
   const hitokotoElement = document.querySelector("#hitokoto_text");
 
+
+
   fetch("https://v1.hitokoto.cn?c=k")
+
     .then((response) => response.json())
+
     .then((data) => {
+
       const hitokoto = document.querySelector("#hitokoto_text");
+
       hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+
       hitokoto.innerText = data.hitokoto;
+
     })
+
     .catch(console.error);
 
+
+
   hitokotoElement.addEventListener("click", function (event) {
+
     event.preventDefault();
+
   });
+
 </script>
+
 
 
 
@@ -44,8 +1363,345 @@
 
 <p>第一次用quarto搭建网站来写blog与记录笔记，因为我手上有一个域名还没到期。qwq</p>
 <p>了解到quarto还是因为想要有一个好的笔记系统来代替obsidian，现在切换到quarto + nvim 不知道怎么样。</p>
-<p>有意思的是我的网名叫QMD，而quarto的文件后缀就是qmd，这下不得不用了qwq。</p>
+<div class="cell" data-layout-align="center">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ggplot2)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(metR)</span>
+<span id="cb1-3"></span>
+<span id="cb1-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># 1. 创建网格数据，模拟稳态势流场 (Laplacian Potential Field)</span></span>
+<span id="cb1-5"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># 模拟一个偶极子流场，它是拉普拉斯方程的一个经典解</span></span>
+<span id="cb1-6">grid <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">expand.grid</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">seq</span>(<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">length.out =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">40</span>), </span>
+<span id="cb1-7">                    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">seq</span>(<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">length.out =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">40</span>))</span>
+<span id="cb1-8"></span>
+<span id="cb1-9"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># 计算速度势 phi 和流函数 psi (基于算子性质)</span></span>
+<span id="cb1-10">grid<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>phi <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> grid<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>x <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> (grid<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>x<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> grid<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>y<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>) </span>
+<span id="cb1-11"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># 计算速度分量 (梯度算子作用的结果)</span></span>
+<span id="cb1-12">grid<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>u <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> ( (grid<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>y<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> grid<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>x<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> (grid<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>x<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> grid<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>y<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> )</span>
+<span id="cb1-13">grid<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>v <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> ( <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> grid<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>x <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> grid<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>y <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> (grid<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>x<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> grid<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>y<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> )</span>
+<span id="cb1-14"></span>
+<span id="cb1-15"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># 2. 绘图</span></span>
+<span id="cb1-16"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(grid, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> x, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> y)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb1-17">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># 绘制等势线 (Equipotential lines)</span></span>
+<span id="cb1-18">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_contour</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">z =</span> phi, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> ..level..), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">bins =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">20</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.3</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb1-19">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># 绘制流线 (Streamlines)</span></span>
+<span id="cb1-20">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_streamline</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">dx =</span> u, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">dy =</span> v), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#2c3e50"</span>, </span>
+<span id="cb1-21">                  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">arrow.length =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.4</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">alpha =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.6</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb1-22">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_color_viridis_c</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">option =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"mako"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">guide =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"none"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb1-23">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_minimal</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb1-24">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(</span>
+<span id="cb1-25">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">expression</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">paste</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Steady-State Potential Flow: "</span>, nabla<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, phi <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>)),</span>
+<span id="cb1-26">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">subtitle =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Visualizing the Laplace Operator in a Dipole Field"</span>,</span>
+<span id="cb1-27">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x-axis"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"y-axis"</span></span>
+<span id="cb1-28">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb1-29">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(</span>
+<span id="cb1-30">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">text =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">family =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Libertinus Serif"</span>),</span>
+<span id="cb1-31">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">panel.grid =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_blank</span>(),</span>
+<span id="cb1-32">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.title =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">hjust =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>)</span>
+<span id="cb1-33">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb1-34">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">coord_fixed</span>()</span></code></pre></div></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://qmdthings.top/posts/第一次blog/index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 
+
+<!-- -->
 
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
@@ -54,89 +1710,252 @@
   <pubDate>Sat, 28 Feb 2026 16:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>流体与流体力学</title>
-  <dc:creator>QMD </dc:creator>
-  <link>https://qmdthings.top/notes/流体与流体力学/</link>
+  <title>Random Stokes Wave</title>
+  <link>https://qmdthings.top/posts/生活/好玩的模拟.html</link>
   <description><![CDATA[ 
 
 <p id="hitokoto">
+
   hitokoto!
+
 </p>
 
+
+
 <script>
+
   const hitokotoElement = document.querySelector("#hitokoto_text");
 
+
+
   fetch("https://v1.hitokoto.cn?c=k")
+
     .then((response) => response.json())
+
     .then((data) => {
+
       const hitokoto = document.querySelector("#hitokoto_text");
+
       hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+
       hitokoto.innerText = data.hitokoto;
+
     })
+
     .catch(console.error);
 
+
+
   hitokotoElement.addEventListener("click", function (event) {
+
     event.preventDefault();
+
   });
+
 </script>
 
 
 
 
 
-<section id="流体与流体力学" class="level1">
-<h1>流体与流体力学</h1>
+
+<div id="wave-canvas" style="width:100%;height:50vh;">
+
+</div>
+<script type="module">
+
+import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160/build/three.module.js";
+
+const container = document.getElementById("wave-canvas")
+
+const scene = new THREE.Scene()
+
+const camera = new THREE.PerspectiveCamera(
+60,
+container.clientWidth/container.clientHeight,
+0.1,
+100
+)
+
+camera.position.z = 6
+
+const renderer = new THREE.WebGLRenderer({alpha:true})
+
+renderer.setSize(container.clientWidth, container.clientHeight)
+
+container.appendChild(renderer.domElement)
+
+renderer.autoClear = false
 
 
-</section>
+// -------------------
+// Stokes wave 参数
+// -------------------
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
-  <category>Notes</category>
-  <guid>https://qmdthings.top/notes/流体与流体力学/</guid>
-  <pubDate>Sat, 28 Feb 2026 16:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>R语言</title>
-  <dc:creator>QMD </dc:creator>
-  <link>https://qmdthings.top/notes/R语言/</link>
-  <description><![CDATA[ 
+const a = 0.35
+const k = 1.2
+const w = 1.4
 
-<p id="hitokoto">
-  hitokoto!
-</p>
+// 随机波参数
+const noiseAmp = 0.15
 
-<script>
-  const hitokotoElement = document.querySelector("#hitokoto_text");
 
-  fetch("https://v1.hitokoto.cn?c=k")
-    .then((response) => response.json())
-    .then((data) => {
-      const hitokoto = document.querySelector("#hitokoto_text");
-      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
-      hitokoto.innerText = data.hitokoto;
-    })
-    .catch(console.error);
+// -------------------
+// 速度场
+// -------------------
 
-  hitokotoElement.addEventListener("click", function (event) {
-    event.preventDefault();
-  });
+function velocity(x,y,t){
+
+const expTerm = Math.exp(k*y)
+
+const phase = k*x - w*t
+
+const noise = noiseAmp*Math.sin(3*x + 2*t)
+
+const u = a*w*expTerm*Math.cos(phase) + noise
+const v = a*w*expTerm*Math.sin(phase)
+
+return {u,v}
+
+}
+
+
+// -------------------
+// 粒子
+// -------------------
+
+const N = 4000
+
+const particles = []
+const positions = new Float32Array(N*3)
+
+for(let i=0;i<N;i++){
+
+const x = Math.random()*10-5
+const y = Math.random()*-1.8
+
+particles.push({x,y})
+
+positions[i*3] = x
+positions[i*3+1] = y
+positions[i*3+2] = 0
+
+}
+
+const geometry = new THREE.BufferGeometry()
+geometry.setAttribute("position", new THREE.BufferAttribute(positions,3))
+
+const material = new THREE.PointsMaterial({
+size:0.02,
+color:0x88ccff,
+transparent:true,
+opacity:0.9
+})
+
+const points = new THREE.Points(geometry,material)
+
+scene.add(points)
+
+
+// -------------------
+// 波面曲线
+// -------------------
+
+const surfacePoints = 200
+
+const surfaceGeo = new THREE.BufferGeometry()
+
+const surfacePos = new Float32Array(surfacePoints*3)
+
+surfaceGeo.setAttribute("position", new THREE.BufferAttribute(surfacePos,3))
+
+const surfaceMat = new THREE.LineBasicMaterial({color:0xffffff})
+
+const surface = new THREE.Line(surfaceGeo,surfaceMat)
+
+scene.add(surface)
+
+
+// -------------------
+// 动画
+// -------------------
+
+let time = 0
+
+function animate(){
+
+requestAnimationFrame(animate)
+
+time += 0.02
+
+
+// 更新粒子
+
+for(let i=0;i<N;i++){
+
+let p = particles[i]
+
+const v = velocity(p.x,p.y,time)
+
+p.x += v.u*0.02
+p.y += v.v*0.02
+
+if(p.y > 0 || p.y < -2 || p.x > 6 || p.x < -6){
+
+p.x = Math.random()*10-5
+p.y = Math.random()*-1.8
+
+}
+
+positions[i*3] = p.x
+positions[i*3+1] = p.y
+
+}
+
+geometry.attributes.position.needsUpdate = true
+
+
+// 更新波面
+
+for(let i=0;i<surfacePoints;i++){
+
+let x = -5 + 10*i/(surfacePoints-1)
+
+let eta =
+a*Math.cos(k*x - w*time)
++ noiseAmp*Math.sin(3*x + time)
+
+surfacePos[i*3] = x
+surfacePos[i*3+1] = eta
+surfacePos[i*3+2] = 0
+
+}
+
+surfaceGeo.attributes.position.needsUpdate = true
+
+
+renderer.render(scene,camera)
+
+}
+
+animate()
+
 </script>
+<section id="stokes-wave-with-random-surface" class="level1">
+<h1>Stokes Wave with Random Surface</h1>
+<p>动画展示了 **:contentReference<span data-index="4">oaicite:4</span> 的流体粒子轨道与随机海面。</p>
+<p>波面模型：</p>
+<p>[ (x,t)=a(kx-t)+(3x+t) ]</p>
+<p>第一项来自经典水波理论， 第二项表示海面随机扰动。</p>
 
 
-
-
-
-<section id="r语言" class="level1">
-<h1>R语言</h1>
-
+<!-- -->
 
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
-  <category>计算机语言</category>
-  <category>Notes</category>
-  <guid>https://qmdthings.top/notes/R语言/</guid>
-  <pubDate>Sat, 28 Feb 2026 16:00:00 GMT</pubDate>
+  <guid>https://qmdthings.top/posts/生活/好玩的模拟.html</guid>
+  <pubDate>Mon, 06 Apr 2026 16:41:49 GMT</pubDate>
 </item>
 </channel>
 </rss>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Stokes 流体海浪击打模拟</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+        }
+        #fluid-canvas {
+            width: 100%;
+            height: 100vh; /* 占据整个视口高度 */
+        }
+        .ui-hint {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: rgba(255, 255, 255, 0.5);
+            font-family: sans-serif;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="fluid-canvas"></canvas>
+    <div class="ui-hint">用鼠标滑动模拟人工浪潮，底部自动生成海浪击打。</div>
+
+    <script src="https://cdn.jsdelivr.net/gh/PavelDoGreat/WebGL-Fluid-Simulation@master/script.js"></script>
+
+    <script>
+        // 确保 WebGLFluid 加载后初始化
+        const canvas = document.getElementById('fluid-canvas');
+
+        window.WebGLFluid.config({
+            SIM_RESOLUTION: 128,    // 模拟分辨率（越高越细腻，但越吃性能）
+            DYE_RESOLUTION: 512,    // 渲染分辨率
+            DISSIPATION: 0.98,      // 颜色停留时间
+            VELOCITY_DISSIPATION: 0.99, // 速度保留时间
+            PRESSURE: 0.8,          // 流体压力
+            CURL: 25,               // 漩涡强度（模拟碎波）
+            SPLAT_RADIUS: 0.35,     // 击打范围
+            SPLAT_FORCE: 8000,      // 冲击力
+            SHADING: true,          // 立体阴影
+            COLOR_UPDATE_SPEED: 10,
+            BACK_COLOR: { r: 0, g: 0.05, b: 0.1 }, // 深海蓝背景
+            BLOOM: true,            // 光晕，模拟波光粼粼
+            TRANSPARENT: false,
+        });
+
+        window.WebGLFluid.start(canvas);
+
+        // --- 核心：海浪击打算法 ---
+        function simulateOceanWave() {
+            // 在屏幕底部边缘随机位置注入向上的能量
+            const x = Math.random();
+            const y = 1.0; // 底部
+            
+            // 模拟波浪的非规则性：给一个较大的向上垂直力 (dy) 和随机的水平偏转 (dx)
+            const dx = (Math.random() - 0.5) * 600;
+            const dy = -5000 - Math.random() * 2000;
+            
+            // 颜色策略：大部分是深蓝/浅蓝，偶发白色浪花
+            const rand = Math.random();
+            let color;
+            if (rand > 0.8) {
+                color = { r: 0.9, g: 0.95, b: 1.0 }; // 浪花白
+            } else if (rand > 0.4) {
+                color = { r: 0.1, g: 0.4, b: 0.9 }; // 海蓝色
+            } else {
+                color = { r: 0.05, g: 0.2, b: 0.5 }; // 深蓝色
+            }
+
+            // 调用 splat 函数在物理场中制造扰动
+            window.WebGLFluid.splat(x, y, dx, dy, color);
+        }
+
+        // 定时触发自动海浪
+        setInterval(simulateOceanWave, 350);
+
+        // 窗口大小缩放适配
+        window.addEventListener('resize', () => {
+            // 库会自动处理 canvas 缩放，通常不需要手动干预
+        });
+    </script>
+</body>
+</html>

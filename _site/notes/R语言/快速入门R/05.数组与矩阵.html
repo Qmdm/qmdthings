@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>quarto-inpute3f5cf1411554529 – QMD的杂物间</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../notes/R语言/快速入门R/06.列表与数据框.html" rel="next">
+<link href="../../../notes/R语言/快速入门R/04.有序与无序因子.html" rel="prev">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-f55d29c4390872bf51d53660ebd805b6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-37249a065ea5210c39a96087f88a5ab9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-f55d29c4390872bf51d53660ebd805b6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Navi</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-blogs" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Blogs</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-blogs">    
+        <li class="dropdown-header">Posts</li>
+        <li>
+    <a class="dropdown-item" href="../../../posts/第一次blog/index.html">
+ <span class="dropdown-text">第一次blog</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/生活/Linux上面也有NFC!.html">
+ <span class="dropdown-text">生活</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-notes" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Notes</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-notes">    
+        <li class="dropdown-header">Notes</li>
+        <li>
+    <a class="dropdown-item" href="../../../notes/工程化学/1. 热化学基础.html">
+ <span class="dropdown-text">工程化学</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fun" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Fun</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-fun">    
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../../index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Notes</li><li class="breadcrumb-item">R语言</li><li class="breadcrumb-item"><a href="../../../notes/R语言/快速入门R/00.R语言start!.html">快速入门R</a></li><li class="breadcrumb-item"><a href="../../../notes/R语言/快速入门R/05.数组与矩阵.html">数组</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Notes</li><li class="breadcrumb-item">R语言</li><li class="breadcrumb-item"><a href="../../../notes/R语言/快速入门R/00.R语言start!.html">快速入门R</a></li><li class="breadcrumb-item"><a href="../../../notes/R语言/快速入门R/05.数组与矩阵.html">数组</a></li></ol></nav></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">工程化学</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/工程化学/1. 热化学基础.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">热化学基础</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/工程化学/2. 化学平衡与化学反应速率.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">化学平衡与化学反应速率</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/工程化学/3. 溶液.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">溶液</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/工程化学/4. 氧化还原与电化学.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">氧化还原反应与电化学</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/工程化学/5. 物质结构基础.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">物质结构基础</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/工程化学/6. 无机物单质及化合物.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">无机物单质及化合物</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/工程化学/7. 金属材料与无机非金属材料.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">金属材料与无机非金属材料</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/工程化学/8. 有机化学和有机化合物.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">有机化学与有机化合物</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/工程化学/9. 合成高分子材料.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">合成高分子材料</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">R语言</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">快速入门R</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth3 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/R语言/快速入门R/00.R语言start!.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">给自己</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/R语言/快速入门R/01.R交互式环境.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">使用交互式环境R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/R语言/快速入门R/02.数字与向量.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">数字与向量</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/R语言/快速入门R/03.对象的模式与属性.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">内在属性：模式 (mode) 与长度 (length)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/R语言/快速入门R/04.有序与无序因子.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">有序与无序因子</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/R语言/快速入门R/05.数组与矩阵.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">数组</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/R语言/快速入门R/06.列表与数据框.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">列表与数据框</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/R语言/快速入门R/07.从文件读取数据.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">从文件读取数据</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/R语言/快速入门R/08.概率分布.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">概率分布</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/R语言/快速入门R/09.分组,循环,条件执行.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">分组,循环,条件执行</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/R语言/快速入门R/10.编写自己的函数.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">编写你自己的函数</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/R语言/快速入门R/11.R中的统计模型.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R中的11个统计模型</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/R语言/快速入门R/12.图形程序.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">图形程序</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/R语言/快速入门R/13.软件包.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">软件包</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/R语言/快速入门R/14.操作系统功能.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">操作系统功能</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">碎碎念</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/R语言/碎碎念/ggplot2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">准备</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/R语言/碎碎念/rcpp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rcpp</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/R语言/碎碎念/tidyverse.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tidyverse</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#数组" id="toc-数组" class="nav-link active" data-scroll-target="#数组">数组</a></li>
+  <li><a href="#数组索引" id="toc-数组索引" class="nav-link" data-scroll-target="#数组索引">数组索引</a></li>
+  <li><a href="#索引矩阵" id="toc-索引矩阵" class="nav-link" data-scroll-target="#索引矩阵">索引矩阵</a></li>
+  <li><a href="#array函数" id="toc-array函数" class="nav-link" data-scroll-target="#array函数">array()函数</a></li>
+  <li><a href="#混合向量与数组运算" id="toc-混合向量与数组运算" class="nav-link" data-scroll-target="#混合向量与数组运算">混合向量与数组运算</a></li>
+  <li><a href="#两个数组的外积" id="toc-两个数组的外积" class="nav-link" data-scroll-target="#两个数组的外积">两个数组的外积</a></li>
+  <li><a href="#数组的广义转置" id="toc-数组的广义转置" class="nav-link" data-scroll-target="#数组的广义转置">数组的广义转置</a></li>
+  <li><a href="#矩阵工具" id="toc-矩阵工具" class="nav-link" data-scroll-target="#矩阵工具">矩阵工具</a>
+  <ul class="collapse">
+  <li><a href="#矩阵乘法" id="toc-矩阵乘法" class="nav-link" data-scroll-target="#矩阵乘法">矩阵乘法</a></li>
+  </ul></li>
+  <li><a href="#线性方程组与反演" id="toc-线性方程组与反演" class="nav-link" data-scroll-target="#线性方程组与反演">线性方程组与反演</a></li>
+  <li><a href="#特征值与特征向量" id="toc-特征值与特征向量" class="nav-link" data-scroll-target="#特征值与特征向量">特征值与特征向量</a></li>
+  <li><a href="#奇异值分解与行列式" id="toc-奇异值分解与行列式" class="nav-link" data-scroll-target="#奇异值分解与行列式">奇异值分解与行列式</a></li>
+  <li><a href="#最小二乘拟合与qr分解" id="toc-最小二乘拟合与qr分解" class="nav-link" data-scroll-target="#最小二乘拟合与qr分解">最小二乘拟合与QR分解</a></li>
+  <li><a href="#形成分块矩阵-cbind-和-rbind" id="toc-形成分块矩阵-cbind-和-rbind" class="nav-link" data-scroll-target="#形成分块矩阵-cbind-和-rbind">形成分块矩阵 cbind() 和 rbind()</a></li>
+  <li><a href="#数组的连接函数-c" id="toc-数组的连接函数-c" class="nav-link" data-scroll-target="#数组的连接函数-c">数组的连接函数 c()</a></li>
+  <li><a href="#各因子的频率表" id="toc-各因子的频率表" class="nav-link" data-scroll-target="#各因子的频率表">各因子的频率表</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+<p id="hitokoto">
+
+  <a href="#" id="hitokoto_text" style="text-decoration: none">hitokoto!</a>
+
+</p>
+
+
+
+<script>
+
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+
+
+  fetch("https://v1.hitokoto.cn?c=k")
+
+    .then((response) => response.json())
+
+    .then((data) => {
+
+      const hitokoto = document.querySelector("#hitokoto_text");
+
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+
+      hitokoto.innerText = data.hitokoto;
+
+    })
+
+    .catch(console.error);
+
+
+
+  hitokotoElement.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+  });
+
+</script>
+
+
+
+
+
+<p>#数组与矩阵</p>
+<section id="数组" class="level2">
+<h2 class="anchored" data-anchor-id="数组">数组</h2>
+<p>数组可以看作是多个带下标的数据条目的集合，例如数值型数据。R 语言提供了创建和处理数组的简便方法，尤其擅长处理矩阵这种特殊情况。</p>
+<p>维度向量(数组索引向量)是指由非负整数组成的向量。如果它的长度为 k，则该数组为 k 维数组，例如，矩阵是二维数组。维度索引从 1 开始，一直到维度向量中给出的值。</p>
+<p>只有当向量的 dim 属性也为向量时，R 才能将其用作数组。例如，假设 z 是一个包含 1500 个元素的向量。</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> dim<span class="kw">(</span><span class="ex">z</span><span class="kw">)</span><span class="op">&lt;</span>-c<span class="kw">(</span><span class="ex">3,5,100</span><span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>赋予它 dim 属性，使其可以被视为 3×5×100 的数组。</p>
+<p>数据向量中的值按照 FORTRAN 中出现的顺序（即“列优先顺序”）在数组中给出，也就是最先移动第一个下标，最后移动最后一个下标。</p>
+<p>例如，如果数组 a 的维度向量为 <code>c(3,4,2)</code>，则 a 中有 3 × 4 × 2 = 24 个条目，数据向量按 <code>a[1,1,1]</code>、<code>a[2,1,1]</code>、…、<code>a[2,4,2]</code>、<code>a[3,4,2]</code> 的顺序保存它们。</p>
+<p>数组可以是一维的：这类数组通常与向量的处理方式相同（包括打印时），但例外情况可能会造成混淆。</p>
+</section>
+<section id="数组索引" class="level2">
+<h2 class="anchored" data-anchor-id="数组索引">数组索引</h2>
+<p><strong>可以通过给出数组名称，后跟用逗号分隔的方括号中的下标来引用数组中的各个元素。</strong></p>
+<p>更一般地，可以通过给出一系列索引向量来指定数组的子部分。代替下标；但是，如果任何索引位置被赋予一个空索引向量，则取该下标的整个范围。</p>
+<p>注意是<code>a[1,1,1]</code>,而不是<code>a[1][1][1]</code></p>
+<p>按此顺序。<code>a[,,]</code> 代表整个数组，这与完全省略下标并单独使用 a 的效果相同。</p>
+<p>对于任何数组，例如 Z，维度向量可以显式地引用为 dim(Z)（在赋值语句的两侧）。</p>
+<p>此外，如果数组名仅包含一个下标或索引向量，则仅使用数据向量的对应值；在这种情况下，维度向量将被忽略。</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>a<span class="op">&lt;</span>-c<span class="kw">(</span><span class="ex">1,2,3,4,5,6,7,8</span><span class="kw">)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>dim<span class="kw">(</span><span class="ex">a</span><span class="kw">)</span><span class="op">&lt;</span>-c<span class="kw">(</span><span class="ex">2,4</span><span class="kw">)</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>a</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>     <span class="ex">[,1]</span> <span class="pp">[</span><span class="ss">,2</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">,3</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">,4</span><span class="pp">]</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">[1,]</span>    1    3    5    7</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">[2,]</span>    2    4    6    8</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>a<span class="pp">[</span><span class="ss">5</span><span class="pp">]</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">5</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>a<span class="pp">[</span><span class="ss">1,</span><span class="pp">]</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ex">[1]</span> 1 3 5 7</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="索引矩阵" class="level2">
+<h2 class="anchored" data-anchor-id="索引矩阵">索引矩阵</h2>
+<p>除了可以在任何下标位置使用索引向量外，还可以使用单个索引矩阵来将数量向量分配给数组中不规则的元素集合，或者将不规则集合提取为向量。</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> z<span class="op">&lt;</span>-c<span class="kw">(</span><span class="ex">1:9</span><span class="kw">)</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> dim<span class="kw">(</span><span class="ex">z</span><span class="kw">)</span><span class="op">&lt;</span>-c<span class="kw">(</span><span class="ex">3,3</span><span class="kw">)</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> z</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>     <span class="ex">[,1]</span> <span class="pp">[</span><span class="ss">,2</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">,3</span><span class="pp">]</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">[1,]</span>    1    4    7</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ex">[2,]</span>    2    5    8</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ex">[3,]</span>    3    6    9</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> index<span class="op">&lt;</span>-c<span class="kw">(</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ex">+</span> 1,2,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="ex">+</span> 3,1,</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ex">+</span> 2,1</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="ex">+</span> <span class="kw">)</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> dim<span class="kw">(</span><span class="ex">index</span><span class="kw">)</span><span class="op">&lt;</span>-c<span class="kw">(</span><span class="ex">3,2</span><span class="kw">)</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> index</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>     <span class="ex">[,1]</span> <span class="pp">[</span><span class="ss">,2</span><span class="pp">]</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="ex">[1,]</span>    1    1</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="ex">[2,]</span>    2    2</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="ex">[3,]</span>    3    1</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>z<span class="pp">[</span><span class="ss">index</span><span class="pp">]</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="ex">[1]</span> 1 5 3</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>索引矩阵中不允许出现<strong>负索引</strong>。允许出现 NA值和零值：索引矩阵中包含零的行将被忽略，包含 NA 值的行将在结果中产生 NA 值。</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> x<span class="op">&lt;</span>-matrix<span class="kw">(</span><span class="ex">0,2,2</span><span class="kw">)</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> x</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>     <span class="ex">[,1]</span> <span class="pp">[</span><span class="ss">,2</span><span class="pp">]</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">[1,]</span>    0    0</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">[2,]</span>    0    0</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> index<span class="op">&lt;</span>-cbind<span class="kw">(</span><span class="ex">1:2,2:1</span><span class="kw">)</span> <span class="co">#Column Bind按列合并</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> index</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>     <span class="ex">[,1]</span> <span class="pp">[</span><span class="ss">,2</span><span class="pp">]</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="ex">[1,]</span>    1    2</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="ex">[2,]</span>    2    1</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> x<span class="pp">[</span><span class="ss">index</span><span class="pp">]</span><span class="op">&lt;</span>-1</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> x</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>     <span class="ex">[,1]</span> <span class="pp">[</span><span class="ss">,2</span><span class="pp">]</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="ex">[1,]</span>    0    1</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="ex">[2,]</span>    1    0</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> indexb<span class="op">&lt;</span>-cbind<span class="kw">(</span><span class="ex">c</span><span class="er">(</span><span class="ex">1,1</span><span class="kw">)</span><span class="ex">,c</span><span class="er">(</span><span class="ex">2,2</span><span class="kw">))</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> indexb</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>     <span class="ex">[,1]</span> <span class="pp">[</span><span class="ss">,2</span><span class="pp">]</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="ex">[1,]</span>    1    2</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="ex">[2,]</span>    1    2</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> N<span class="op">&lt;</span>-crossprod<span class="kw">(</span><span class="ex">index,indexb</span><span class="kw">)</span> <span class="co"># Cross Product 矩阵叉乘 A^TB</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> N</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>     <span class="ex">[,1]</span> <span class="pp">[</span><span class="ss">,2</span><span class="pp">]</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="ex">[1,]</span>    3    6</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="ex">[2,]</span>    3    6</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> K<span class="op">&lt;</span>- <span class="ex">table</span><span class="er">(</span><span class="ex">c</span><span class="er">(</span><span class="ex">1,2,3</span><span class="kw">)</span><span class="ex">,c</span><span class="er">(</span><span class="ex">4,5,6</span><span class="kw">))</span> <span class="co"># 以两个向量的index提取两个数作为结果的行数与列数计算频数</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> K</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>    <span class="ex">4</span> 5 6</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>  <span class="ex">1</span> 1 0 0</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>  <span class="ex">2</span> 0 1 0</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>  <span class="ex">3</span> 0 0 1</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="array函数" class="level2">
+<h2 class="anchored" data-anchor-id="array函数">array()函数</h2>
+<p>除了给向量结构添加 dim 属性之外，还可以使用<code>array()</code>函数从向量构造数组，其形式为：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> Z<span class="op">&lt;</span>-array<span class="kw">(</span><span class="ex">data_vector,dim_vector</span><span class="kw">)</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> Z<span class="op">&lt;</span>-array<span class="kw">(</span><span class="ex">h,dim=c</span><span class="er">(</span><span class="ex">3,4,2</span><span class="kw">))</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> Z<span class="op">&lt;</span>-h<span class="kw">;</span><span class="ex">dim</span><span class="er">(</span><span class="ex">Z</span><span class="kw">)</span><span class="op">&lt;</span>-c<span class="kw">(</span><span class="ex">3,4,2</span><span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>然而，如果 h 小于 24，则其值会从头开始重新循环，但 <code>dim(h) &lt;- c(3,4,2)</code> 会提示长度不匹配的错误。举个极端但常见的例子</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> z=c<span class="kw">(</span><span class="ex">1:5</span><span class="kw">)</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> dim<span class="kw">(</span><span class="ex">z</span><span class="kw">)</span><span class="ex">=c</span><span class="er">(</span><span class="ex">2,3</span><span class="kw">)</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Error</span> in dim<span class="er">(</span><span class="ex">z</span><span class="kw">)</span> <span class="ex">=</span> c<span class="er">(</span><span class="ex">2,</span> 3<span class="kw">)</span> <span class="bu">:</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="ex">dims</span> [product 6] do not match the length of object <span class="pp">[</span><span class="ss">5</span><span class="pp">]</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> z=array<span class="kw">(</span><span class="ex">c</span><span class="er">(</span><span class="ex">1:5</span><span class="kw">)</span><span class="ex">,c</span><span class="er">(</span><span class="ex">2,3</span><span class="kw">))</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> z</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>     <span class="ex">[,1]</span> <span class="pp">[</span><span class="ss">,2</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">,3</span><span class="pp">]</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="ex">[1,]</span>    1    3    5</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="ex">[2,]</span>    2    4    1</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>此时 <code>dim(Z)</code> 表示维度向量 <code>c(3,4,2)</code>，<code>Z[1:24]</code> 表示 h 中的数据向量，而下标为空的 Z[] 或没有下标的 Z 表示整个数组。</p>
+<p>数组可用于算术表达式，其结果是一个由对数据向量逐元素运算形成的数组。<strong>操作数的维度属性通常需要相同</strong>，这构成了结果的维度向量.</p>
+</section>
+<section id="混合向量与数组运算" class="level2">
+<h2 class="anchored" data-anchor-id="混合向量与数组运算">混合向量与数组运算</h2>
+<p>影响向量和数组混合计算的逐元素运算的具体规则比较特殊，很难在参考资料中找到。根据我们的经验，以下方法较为可靠。</p>
+<ul>
+<li>表达式计算从左向右</li>
+<li>如果两个向量长度不一，R 不会报错，而是把短的那个“头尾相接”重复使用，直到填满长的那个。</li>
+<li>如果你让两个数组（或矩阵）做加减乘除，它们的“形状”必须一模一样。</li>
+<li>向量可以和数组运算，但向量不能比数组的元素总数还多。</li>
+<li>如果存在数组结构，并且没有发生错误或强制转换为向量，则结果是一个数组结构，其数组操作数具有共同的 dim 属性。</li>
+</ul>
+<p>也就是说<strong>向量可以被自动循环填充,改变形状,但是数组不行.</strong></p>
+</section>
+<section id="两个数组的外积" class="level2">
+<h2 class="anchored" data-anchor-id="两个数组的外积">两个数组的外积</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>ab<span class="op">&lt;</span>-a <span class="ex">%o%</span> b</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>ab<span class="op">&lt;</span>-outer<span class="kw">(</span><span class="ex">a,b,</span><span class="st">"*"</span><span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>乘法函数可以替换为任意二元函数。例如，如果我们想在由 R 向量 x 和 y 分别定义的 x 和 y 坐标的规则网格上计算函数 <code>f(x,y) = cos(y)/(1 + x)</code>，我们可以按如下方式进行：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> f<span class="op">&lt;</span>-function<span class="kw">(</span><span class="ex">x,y</span><span class="kw">)</span> <span class="ex">cos</span><span class="er">(</span><span class="ex">y</span><span class="kw">)</span><span class="ex">/</span><span class="er">(</span><span class="ex">1+x^2</span><span class="kw">)</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> z<span class="op">&lt;</span>-outer<span class="kw">(</span><span class="ex">x,y,f</span><span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> d<span class="op">&lt;</span>-outer<span class="kw">(</span><span class="ex">0:9,0:9</span><span class="kw">)</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> d</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>      <span class="ex">[,1]</span> <span class="pp">[</span><span class="ss">,2</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">,3</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">,4</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">,5</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">,6</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">,7</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">,8</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">,9</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">,10</span><span class="pp">]</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a> <span class="ex">[1,]</span>    0    0    0    0    0    0    0    0    0     0</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a> <span class="ex">[2,]</span>    0    1    2    3    4    5    6    7    8     9</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a> <span class="ex">[3,]</span>    0    2    4    6    8   10   12   14   16    18</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a> <span class="ex">[4,]</span>    0    3    6    9   12   15   18   21   24    27</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a> <span class="ex">[5,]</span>    0    4    8   12   16   20   24   28   32    36</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a> <span class="ex">[6,]</span>    0    5   10   15   20   25   30   35   40    45</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a> <span class="ex">[7,]</span>    0    6   12   18   24   30   36   42   48    54</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a> <span class="ex">[8,]</span>    0    7   14   21   28   35   42   49   56    63</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a> <span class="ex">[9,]</span>    0    8   16   24   32   40   48   56   64    72</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="ex">[10,]</span>    0    9   18   27   36   45   54   63   72    81</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> fr<span class="op">&lt;</span>-table<span class="kw">(</span><span class="ex">outer</span><span class="er">(</span><span class="ex">d,d,</span><span class="st">"-"</span><span class="kw">))</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> plot<span class="kw">(</span><span class="ex">fr,xlab=</span><span class="st">"行列式"</span><span class="ex">,ylab=</span><span class="st">"频率"</span><span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="数组的广义转置" class="level2">
+<h2 class="anchored" data-anchor-id="数组的广义转置">数组的广义转置</h2>
+<p>对于二维数组,你可以使用<code>t()</code>进行转置</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>a<span class="op">&lt;</span>-matrix<span class="kw">(</span><span class="ex">1:9,c</span><span class="er">(</span><span class="ex">3,3</span><span class="kw">))</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>a</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>     <span class="ex">[,1]</span> <span class="pp">[</span><span class="ss">,2</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">,3</span><span class="pp">]</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="ex">[1,]</span>    1    4    7</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="ex">[2,]</span>    2    5    8</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="ex">[3,]</span>    3    6    9</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>t<span class="kw">(</span><span class="ex">a</span><span class="kw">)</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>     <span class="ex">[,1]</span> <span class="pp">[</span><span class="ss">,2</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">,3</span><span class="pp">]</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="ex">[1,]</span>    1    2    3</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="ex">[2,]</span>    4    5    6</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="ex">[3,]</span>    7    8    9</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>而对于高维数组则需使用<code>aperm()</code></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> a<span class="op">&lt;</span>-array<span class="kw">(</span><span class="ex">1:8,dim=c</span><span class="er">(</span><span class="ex">2,2,2</span><span class="kw">))</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> a</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ex">,</span> , 1</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>     <span class="ex">[,1]</span> <span class="pp">[</span><span class="ss">,2</span><span class="pp">]</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="ex">[1,]</span>    1    3</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="ex">[2,]</span>    2    4</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="ex">,</span> , 2</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>     <span class="ex">[,1]</span> <span class="pp">[</span><span class="ss">,2</span><span class="pp">]</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="ex">[1,]</span>    5    7</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="ex">[2,]</span>    6    8</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> aperm<span class="kw">(</span><span class="ex">a,prem=c</span><span class="er">(</span><span class="ex">3,2,1</span><span class="kw">))</span> <span class="co"># Array Permutation 重新排列多维数组的维度顺序。</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="ex">,</span> , 1</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>     <span class="ex">[,1]</span> <span class="pp">[</span><span class="ss">,2</span><span class="pp">]</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="ex">[1,]</span>    1    3</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="ex">[2,]</span>    5    7</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="ex">,</span> , 2</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>     <span class="ex">[,1]</span> <span class="pp">[</span><span class="ss">,2</span><span class="pp">]</span></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="ex">[1,]</span>    2    4</span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="ex">[2,]</span>    6    8</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>函数 aperm(a, perm) 可用于置换数组 a。参数 perm 必须是整数 {1, …, k} 的一个置换，其中 k 是数组 a 中下标的个数。函数的结果是一个与 a 大小相同的数组，但原数组的第 j 个维度变为新的第 j 个维度。最简单的理解方式是将此操作视为矩阵转置的推广.</p>
+</section>
+<section id="矩阵工具" class="level2">
+<h2 class="anchored" data-anchor-id="矩阵工具">矩阵工具</h2>
+<section id="矩阵乘法" class="level3">
+<h3 class="anchored" data-anchor-id="矩阵乘法">矩阵乘法</h3>
+<p>如上所述，<code>t(X)</code> 是矩阵转置函数。函数 <code>nrow(A)</code> 和 <code>ncol(A)</code> 分别返回矩阵 A 的行数和列数。</p>
+<p>运算符 <code>%*%</code> 用于矩阵乘法。<code>n×1</code> 或 <code>1×n</code> 矩阵当然也可以用作 <code>n</code> 维向量，如果上下文合适的话。反之，矩阵乘法表达式中出现的向量会自动提升为行向量或列向量，具体取决于乘法上的一致性</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> A <span class="ex">*</span> B <span class="co"># 逐元素乘法</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> A <span class="ex">%*%</span> B <span class="co"># 矩阵乘法</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> x <span class="ex">%*%</span> A %<span class="pp">*</span>% x <span class="co"># 二次型</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>函数 crossprod() 用于计算“交叉积”，也就是说，crossprod(X, y) 与 t(X) %*% y 等效，但前者效率更高。如果省略 crossprod() 的第二个参数，则其值与第一个参数相同。</p>
+<p>diag() 函数的含义取决于其参数。diag(v)，其中 v 是一个向量，返回一个对角矩阵，其对角线元素为该向量的元素。另一方面，diag(M)，其中 M 是一个矩阵，返回矩阵 M 的主对角线元素向量。这与 Matlab 中 diag() 函数的约定相同。此外，需要注意的是，如果 k 是一个数值，则 diag(k) 表示 k×k 的单位矩阵！</p>
+</section>
+</section>
+<section id="线性方程组与反演" class="level2">
+<h2 class="anchored" data-anchor-id="线性方程组与反演">线性方程组与反演</h2>
+<p>解线性方程组是矩阵乘法的逆运算。</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>b<span class="op">&lt;</span>-A <span class="ex">%*%</span> x</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>一个线性方程组<span class="math inline">\(Ax=b\)</span></p>
+<p>只给出了 A 和 b，向量 x 是该线性方程组的解。在 R 中，</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>b <span class="op">&lt;</span>-A <span class="ex">%*%</span> x</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>slove<span class="kw">(</span><span class="ex">A,b</span><span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>或者说求解A的逆矩阵</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>solve<span class="kw">(</span><span class="ex">A</span><span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>但很少需要这样做。从数值上看，计算 <code>x &lt;- solve(A) %*% b</code> 而不是 <code>solve(A,b)</code> 既效率低下，也可能不稳定。</p>
+<p>在多元计算中使用的二次型 <code>xAx`` 应该通过类似</code>x %*% solve(A,x)` 的方式计算，而不是计算 A 的逆。</p>
+<p>注意，<code>x %*% x</code> 的含义不明确，它可以表示 <code>xx</code> 或 <code>xx</code>，其中 <code>x</code> 是列向量。在这种情况下，较小的矩阵似乎被隐式地解释为最终结果，因此标量 <code>xx</code> 在此情况下即为结果。矩阵 <code>xx</code> 可以通过 <code>cbind(x) %*% x</code> 或 <code>x %*% rbind(x)</code> 计算，因为 <code>rbind()</code> 或 <code>cbind()</code> 的结果始终是一个矩阵。然而，计算 <code>xx</code> 或 <code>xx</code> 的最佳方法分别是使用 <code>crossprod(x)</code> 或 <code>x %o% x</code>。</p>
+<p>更好的方法是构造一个矩阵平方根 B，其中 A = BB，并找到 By = x的解的平方长度，或许可以使用 A 的 Cholesky 分解或特征值分解。</p>
+</section>
+<section id="特征值与特征向量" class="level2">
+<h2 class="anchored" data-anchor-id="特征值与特征向量">特征值与特征向量</h2>
+<p>函数 <code>eigen(Sm)</code> 计算对称矩阵 <code>Sm</code> 的<strong>特征值</strong>和<strong>特征向量</strong>。该函数的结果是一个包含两个分量的列表，分别名为 <code>values</code> 和 <code>vectors</code>。</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> a<span class="op">&lt;</span>-matrix<span class="kw">(</span><span class="ex">1:9,c</span><span class="er">(</span><span class="ex">3,3</span><span class="kw">))</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> a</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>     <span class="ex">[,1]</span> <span class="pp">[</span><span class="ss">,2</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">,3</span><span class="pp">]</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="ex">[1,]</span>    1    4    7</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="ex">[2,]</span>    2    5    8</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="ex">[3,]</span>    3    6    9</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> eigen<span class="kw">(</span><span class="ex">a</span><span class="kw">)</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="fu">eigen()</span> <span class="ex">decomposition</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="va">$values</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="ex">[1]</span>  1.611684e+01 <span class="at">-1.116844e+00</span> <span class="at">-5.700691e-16</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="va">$vectors</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>           <span class="ex">[,1]</span>       <span class="pp">[</span><span class="ss">,2</span><span class="pp">]</span>       <span class="pp">[</span><span class="ss">,3</span><span class="pp">]</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="ex">[1,]</span> <span class="at">-0.4645473</span> <span class="at">-0.8829060</span>  0.4082483</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="ex">[2,]</span> <span class="at">-0.5707955</span> <span class="at">-0.2395204</span> <span class="at">-0.8164966</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="ex">[3,]</span> <span class="at">-0.6770438</span>  0.4038651  0.4082483</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>从列表中取值用$符号</p>
+<p>对于大型矩阵，如果不需要计算特征向量，最好避免使用表达式来计算它们。</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>eigen<span class="kw">(</span><span class="ex">a,only.values</span> = TRUE<span class="kw">)</span><span class="va">$values</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="奇异值分解与行列式" class="level2">
+<h2 class="anchored" data-anchor-id="奇异值分解与行列式">奇异值分解与行列式</h2>
+<p>函数 <code>svd(M)</code> 接受一个任意矩阵参数 <code>M</code>，并计算 <code>M</code>的奇异值分解。该分解包含三个矩阵：一个列空间与 <code>M</code> 相同的正交列矩阵<code>U</code>，一个列空间与 <code>M</code> 相同的正交列矩阵<code>V</code>，以及一个对角元素均为正数的矩阵 <code>D</code>，其中 <code>M</code> 满足 <code>M = U %*% D %*% t(V)</code>。<code>D</code> 实际上以对角元素向量的形式返回。<code>svd(M)</code> 的结果实际上是一个包含三个元素的列表，分别命名为 <code>d</code>、<code>u</code> 和 <code>v</code>，其含义显而易见。</p>
+<p>R 语言内置函数 det 可以计算行列式（包括符号），还可以计算另一个行列式（给出符号和模，也可以选择对数刻度）。</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> a</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>     <span class="ex">[,1]</span> <span class="pp">[</span><span class="ss">,2</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">,3</span><span class="pp">]</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="ex">[1,]</span>    1    4    7</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="ex">[2,]</span>    2    5    8</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="ex">[3,]</span>    3    6    9</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> svd<span class="kw">(</span><span class="ex">a</span><span class="kw">)</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="va">$d</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="ex">[1]</span> 1.684810e+01 1.068370e+00 5.039188e-17</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="va">$u</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>           <span class="ex">[,1]</span>        <span class="pp">[</span><span class="ss">,2</span><span class="pp">]</span>       <span class="pp">[</span><span class="ss">,3</span><span class="pp">]</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="ex">[1,]</span> <span class="at">-0.4796712</span>  0.77669099  0.4082483</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="ex">[2,]</span> <span class="at">-0.5723678</span>  0.07568647 <span class="at">-0.8164966</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="ex">[3,]</span> <span class="at">-0.6650644</span> <span class="at">-0.62531805</span>  0.4082483</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="va">$v</span></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>           <span class="ex">[,1]</span>       <span class="pp">[</span><span class="ss">,2</span><span class="pp">]</span>       <span class="pp">[</span><span class="ss">,3</span><span class="pp">]</span></span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="ex">[1,]</span> <span class="at">-0.2148372</span> <span class="at">-0.8872307</span> <span class="at">-0.4082483</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="ex">[2,]</span> <span class="at">-0.5205874</span> <span class="at">-0.2496440</span>  0.8164966</span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a><span class="ex">[3,]</span> <span class="at">-0.8263375</span>  0.3879428 <span class="at">-0.4082483</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> absdetM <span class="op">&lt;</span>- <span class="ex">prod</span><span class="er">(</span><span class="ex">svd</span><span class="er">(</span><span class="ex">M</span><span class="kw">)</span><span class="va">$d</span><span class="kw">)</span> <span class="co"># Singular Value Decomposition</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> absdet <span class="op">&lt;</span>- <span class="kw">function(</span><span class="ex">M</span><span class="kw">)</span> <span class="ex">prod</span><span class="er">(</span><span class="ex">svd</span><span class="er">(</span><span class="ex">M</span><span class="kw">)</span><span class="va">$d</span><span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="最小二乘拟合与qr分解" class="level2">
+<h2 class="anchored" data-anchor-id="最小二乘拟合与qr分解">最小二乘拟合与QR分解</h2>
+<p>函数 lsfit() 返回一个列表，其中包含最小二乘拟合过程的结果。例如，以下赋值语句：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>ans<span class="op">&lt;</span>-lsfit<span class="kw">(</span><span class="ex">x,y</span><span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>该函数给出最小二乘拟合的结果，其中 y 是观测值向量，X 是设计矩阵。更多详情请参阅帮助文档，以及后续函数 ls.diag()，该函数可用于回归诊断等操作。请注意，总均值项会自动包含在内，无需显式地将其作为 X 的列添加。此外，对于回归建模，您几乎总是会优先选择使用 lm(.) 函数，而不是 lsfit() 函数。</p>
+<p>另一个密切相关的函数是 qr() 及其相关函数。请考虑以下赋值语句。</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> xplus <span class="op">&lt;</span>-qr<span class="kw">(</span><span class="ex">x</span><span class="kw">)</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> b <span class="op">&lt;</span>- <span class="ex">qr.coef</span><span class="er">(</span><span class="ex">Xplus,</span> y<span class="kw">)</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> fit <span class="op">&lt;</span>- <span class="ex">qr.fitted</span><span class="er">(</span><span class="ex">Xplus,</span> y<span class="kw">)</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> res <span class="op">&lt;</span>- <span class="ex">qr.resid</span><span class="er">(</span><span class="ex">Xplus,</span> y<span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>这些函数分别计算 y 在 fit 中的正交投影到 X 的范围内、在 res 中的正交补上的投影以及投影的系数向量，其中 b 本质上是 Matlab 的“反斜杠”运算符的结果。</p>
+<p>并不假定 X 具有满列秩。冗余数据将在发现后立即被移除。</p>
+<p>这种方法是执行最小二乘计算的较旧、底层方法。虽然在某些情况下仍然有用，但现在通常会被统计模型功能所取代.</p>
+</section>
+<section id="形成分块矩阵-cbind-和-rbind" class="level2">
+<h2 class="anchored" data-anchor-id="形成分块矩阵-cbind-和-rbind">形成分块矩阵 cbind() 和 rbind()</h2>
+<p>cbind() 通过水平（或按列）方式将矩阵绑定在一起来形成矩阵，而 rbind() 通过垂直（或按行）方式将矩阵绑定在一起来形成矩阵。</p>
+<p>rbind() 或 cbind() 的结果始终是矩阵形式。因此，cbind(x) 和 rbind(x) 可能是将向量 x 分别显式地视为列矩阵或行矩阵的最简单方法。</p>
+</section>
+<section id="数组的连接函数-c" class="level2">
+<h2 class="anchored" data-anchor-id="数组的连接函数-c">数组的连接函数 c()</h2>
+<p>需要注意的是，cbind() 和 rbind() 是会保留 dim 属性的连接函数，而基本的 c() 函数则不会，它会清除数值对象的所有 dim 和 dimnames 属性。这本身有时也很有用。</p>
+<p>将数组强制转换回简单向量对象的官方方法是使用 as.vector()。</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">vec</span> <span class="op">&lt;</span>- as.vector<span class="er">(</span><span class="ex">x</span><span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>然而，使用只带一个参数的 c() 函数也能达到类似的效果，其副作用就在于此：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>vec<span class="op">&lt;</span>- <span class="ex">c</span><span class="er">(</span><span class="ex">x</span><span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="各因子的频率表" class="level2">
+<h2 class="anchored" data-anchor-id="各因子的频率表">各因子的频率表</h2>
+<p>回想一下，一个因子定义了一个分组。类似地，一对因子定义了一个双向交叉分类，依此类推。<code>table()</code> 函数允许根据等长因子计算频数表。如果有 k 个因子参数，则结果是一个 k 维频数数组。 例如，假设 statef 是一个因子，它给出数据向量中每个条目的状态码。</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> statefr <span class="op">&lt;</span>- <span class="ex">table</span><span class="er">(</span><span class="ex">statef</span><span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>以 statefr 形式给出样本中每个状态的频率表。频率按因子的 levels 属性排序和标记。这个简单的例子等价于，但比以下情况更方便：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> statefr <span class="op">&lt;</span>- <span class="ex">tapply</span><span class="er">(</span><span class="ex">statef,</span> statef, length<span class="kw">)</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Tag + Apply 将每一组用标签分组然后对每一组应用一个函数</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>进一步假设 incomef 是一个因子，它为数据向量中的每个条目给出一个适当定义的“收入类别”，例如使用 cut() 函数：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> factor<span class="kw">(</span><span class="fu">cut</span><span class="er">(</span><span class="ex">incomes,</span> breaks = 35+10<span class="pp">*(</span>0:7<span class="pp">)</span><span class="kw">))</span> <span class="ex">-</span><span class="op">&gt;</span> incomef <span class="co"># Cut函数是离散变量与连续变量的桥梁</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> pressure <span class="op">&lt;</span>- <span class="ex">c</span><span class="er">(</span><span class="ex">5,12,18,25,29,8</span><span class="kw">)</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> p_categories <span class="op">&lt;</span>- <span class="fu">cut</span><span class="er">(</span><span class="ex">pressure,breaks=c</span><span class="er">(</span><span class="ex">0,10,20,30</span><span class="kw">))</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> p_categories</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="ex">[1]</span> <span class="er">(</span><span class="ex">0,10]</span>  <span class="er">(</span><span class="ex">10,20]</span> <span class="er">(</span><span class="ex">10,20]</span> <span class="er">(</span><span class="ex">20,30]</span> <span class="er">(</span><span class="ex">20,30]</span> <span class="er">(</span><span class="ex">0,10]</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Levels:</span> <span class="er">(</span><span class="ex">0,10]</span> <span class="er">(</span><span class="ex">10,20]</span> <span class="er">(</span><span class="ex">20,30]</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>cut<span class="kw">(</span><span class="ex">pressure,</span> breaks = c<span class="er">(</span><span class="ex">0,10,20,30</span><span class="kw">)</span><span class="ex">,</span> labels = c<span class="er">(</span><span class="st">"Low"</span><span class="ex">,</span> <span class="st">"Medium"</span>, <span class="st">"High"</span><span class="kw">))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/qmdthings\.top");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../notes/R语言/快速入门R/04.有序与无序因子.html" class="pagination-link" aria-label="有序与无序因子">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">有序与无序因子</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../notes/R语言/快速入门R/06.列表与数据框.html" class="pagination-link" aria-label="列表与数据框">
+        <span class="nav-page-text">列表与数据框</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>毎日マリーゴールドを1つ</p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://quarto.org/">
+<p>Powered by quarto.</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

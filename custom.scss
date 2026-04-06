@@ -1,0 +1,55 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Noto+Serif+SC:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/lxgwwenkaiscreen.css');
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: local("LXGW WenKai Screen"),
+       local("PingFang SC"),
+       local("Microsoft YaHei"),
+       local("Noto Sans CJK SC");
+  unicode-range: U+4E00-9FFF, U+3400-4DBF,
+                 U+3000-303F, U+FF00-FFEF;
+  font-display: swap;
+}
+
+$font-family-sans-serif:  "Source Serif 4", "Noto Serif SC", Georgia, serif;
+$font-family-monospace:   "JetBrains Mono", monospace;
+$font-size-root:          16px;
+$line-height-base:        1.8;
+
+/*-- scss:rules --*/
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+div.sourceCode pre,
+div.sourceCode code,
+div.sourceCode span,
+pre > code,
+code {
+  font-family: "JetBrains Mono", monospace !important;
+  font-weight: 500;
+  font-size: 1rem !important;
+  font-feature-settings: "liga" 1, "calt" 1; 
+}
+
+div.sourceCode {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-x: auto !important;
+  scrollbar-width: none !important;
+}
+
+div.sourceCode::-webkit-scrollbar {
+  display: none;
+}
+/* 注释斜体 */
+code span.co {
+  font-style: italic;
+  color: #8b949e;
+}

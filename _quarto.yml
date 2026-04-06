@@ -3,6 +3,10 @@ project:
   resources: [_includes, notes, posts, README.md, 404.qmd]
 execute:
   freeze: auto
+  # Code
+  message: false
+  warning: false
+
 
 website:
   title: "QMD的杂物间"
@@ -10,7 +14,6 @@ website:
   site-url: https://qmdthings.top
   # you must change this appropriately for RSS feeds to work properly
   site-path: /
-
   reader-mode: true
 
   # Search
@@ -55,8 +58,15 @@ website:
 format:
   html:
     respect-user-color-scheme: true
+    #Code
+    code-fold: true
+    code-line-numbers: true
+    code-tools:
+      toggle: false
+      caption: "Source Code"
+      
     theme:
-      light: flatly
-      dark: darkly
+      light: [flatly,custom.scss]
+      dark: [darkly,custom.scss]
     css: styles.css
     toc: true

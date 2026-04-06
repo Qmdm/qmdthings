@@ -4,6 +4,7 @@ author: "QMD"
 date: "2026/03/01"
 description: "使用quarto来写blog"
 categories: [ "Blogs" ]
+
 ---
 
 第一次用quarto搭建网站来写blog与记录笔记，因为我手上有一个域名还没到期。qwq
@@ -11,6 +12,45 @@ categories: [ "Blogs" ]
 
 了解到quarto还是因为想要有一个好的笔记系统来代替obsidian，现在切换到quarto + nvim 不知道怎么样。
 
+模拟一个偶极子流场，它是拉普拉斯方程的一个经典解
 
+
+```{R}
+#| fig-align: center
+library(ggplot2)
+library(metR)
+
+# 1. 创建网格数据，模拟稳态势流场 (Laplacian Potential Field)
+
+grid <- expand.grid(x = seq(-2, 2, length.out = 40), 
+                    y = seq(-2, 2, length.out = 40))
+
+# 计算速度势 phi 和流函数 psi (基于算子性质)
+grid$phi <- grid$x / (grid$x^2 + grid$y^2 + 0.5) 
+# 计算速度分量 (梯度算子作用的结果)
+grid$u <- ( (grid$y^2 + 0.5 - grid$x^2) / (grid$x^2 + grid$y^2 + 0.5)^2 )
+grid$v <- ( -2 * grid$x * grid$y / (grid$x^2 + grid$y^2 + 0.5)^2 )
+
+# 2. 绘图
+ggplot(grid, aes(x = x, y = y)) +
+  # 绘制等势线 (Equipotential lines)
+  geom_contour(aes(z = phi, color = ..level..), bins = 20, size = 0.3) +
+  # 绘制流线 (Streamlines)
+  geom_streamline(aes(dx = u, dy = v), color = "#2c3e50", 
+                  arrow.length = 0.4, alpha = 0.6) +
+  scale_color_viridis_c(option = "mako", guide = "none") +
+  theme_minimal() +
+  labs(
+    title = expression(paste("Steady-State Potential Flow: ", nabla^2, phi == 0)),
+    subtitle = "Visualizing the Laplace Operator in a Dipole Field",
+    x = "x-axis", y = "y-axis"
+  ) +
+  theme(
+    text = element_text(family = "Libertinus Serif"),
+    panel.grid = element_blank(),
+    plot.title = element_text(hjust = 0.5, size = 16)
+  ) +
+  coord_fixed()
+```
 
 
