@@ -10,7 +10,7 @@ about:
       href: https://github.com/Qmdm
     - icon: envelope
       text: Email
-      href: mailto:thekingqmd@163.com
+      href: mailto:qmd@ctgu.edu.cn
 ---
 
 **C**hina **T**hree **G**orges **U**niversity | Yichang, Hubei
