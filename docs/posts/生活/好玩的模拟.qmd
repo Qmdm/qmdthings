@@ -1,0 +1,199 @@
+---
+title: "Random Stokes Wave"
+format: html
+---
+
+<div id="wave-canvas" style="width:100%;height:50vh;"></div>
+
+<script type="module">
+
+import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160/build/three.module.js";
+
+const container = document.getElementById("wave-canvas")
+
+const scene = new THREE.Scene()
+
+const camera = new THREE.PerspectiveCamera(
+60,
+container.clientWidth/container.clientHeight,
+0.1,
+100
+)
+
+camera.position.z = 6
+
+const renderer = new THREE.WebGLRenderer({alpha:true})
+
+renderer.setSize(container.clientWidth, container.clientHeight)
+
+container.appendChild(renderer.domElement)
+
+renderer.autoClear = false
+
+
+// -------------------
+// Stokes wave 参数
+// -------------------
+
+const a = 0.35
+const k = 1.2
+const w = 1.4
+
+// 随机波参数
+const noiseAmp = 0.15
+
+
+// -------------------
+// 速度场
+// -------------------
+
+function velocity(x,y,t){
+
+const expTerm = Math.exp(k*y)
+
+const phase = k*x - w*t
+
+const noise = noiseAmp*Math.sin(3*x + 2*t)
+
+const u = a*w*expTerm*Math.cos(phase) + noise
+const v = a*w*expTerm*Math.sin(phase)
+
+return {u,v}
+
+}
+
+
+// -------------------
+// 粒子
+// -------------------
+
+const N = 4000
+
+const particles = []
+const positions = new Float32Array(N*3)
+
+for(let i=0;i<N;i++){
+
+const x = Math.random()*10-5
+const y = Math.random()*-1.8
+
+particles.push({x,y})
+
+positions[i*3] = x
+positions[i*3+1] = y
+positions[i*3+2] = 0
+
+}
+
+const geometry = new THREE.BufferGeometry()
+geometry.setAttribute("position", new THREE.BufferAttribute(positions,3))
+
+const material = new THREE.PointsMaterial({
+size:0.02,
+color:0x88ccff,
+transparent:true,
+opacity:0.9
+})
+
+const points = new THREE.Points(geometry,material)
+
+scene.add(points)
+
+
+// -------------------
+// 波面曲线
+// -------------------
+
+const surfacePoints = 200
+
+const surfaceGeo = new THREE.BufferGeometry()
+
+const surfacePos = new Float32Array(surfacePoints*3)
+
+surfaceGeo.setAttribute("position", new THREE.BufferAttribute(surfacePos,3))
+
+const surfaceMat = new THREE.LineBasicMaterial({color:0xffffff})
+
+const surface = new THREE.Line(surfaceGeo,surfaceMat)
+
+scene.add(surface)
+
+
+// -------------------
+// 动画
+// -------------------
+
+let time = 0
+
+function animate(){
+
+requestAnimationFrame(animate)
+
+time += 0.02
+
+
+// 更新粒子
+
+for(let i=0;i<N;i++){
+
+let p = particles[i]
+
+const v = velocity(p.x,p.y,time)
+
+p.x += v.u*0.02
+p.y += v.v*0.02
+
+if(p.y > 0 || p.y < -2 || p.x > 6 || p.x < -6){
+
+p.x = Math.random()*10-5
+p.y = Math.random()*-1.8
+
+}
+
+positions[i*3] = p.x
+positions[i*3+1] = p.y
+
+}
+
+geometry.attributes.position.needsUpdate = true
+
+
+// 更新波面
+
+for(let i=0;i<surfacePoints;i++){
+
+let x = -5 + 10*i/(surfacePoints-1)
+
+let eta =
+a*Math.cos(k*x - w*time)
++ noiseAmp*Math.sin(3*x + time)
+
+surfacePos[i*3] = x
+surfacePos[i*3+1] = eta
+surfacePos[i*3+2] = 0
+
+}
+
+surfaceGeo.attributes.position.needsUpdate = true
+
+
+renderer.render(scene,camera)
+
+}
+
+animate()
+
+</script>
+
+# Stokes Wave with Random Surface
+
+动画展示了 **:contentReference[oaicite:4]{index=4} 的流体粒子轨道与随机海面。
+
+波面模型：
+
+\[
+\eta(x,t)=a\cos(kx-\omega t)+\epsilon \sin(3x+t)
+\]
+
+第一项来自经典水波理论，
+第二项表示海面随机扰动。
