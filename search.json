@@ -84,11 +84,15 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "杂乱的Notes/Blogs",
+    "objectID": "posts/第一次blog/index.html",
+    "href": "posts/第一次blog/index.html",
+    "title": "第一次blog",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n\n\n\n\n\n\n\n\n\n\nRandom Stokes Wave\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n物质结构基础\n\n\n\n工程化学\n\n\n\n工程化学第五章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n无机物单质及化合物\n\n\n\n工程化学\n\n\n\n工程化学第六章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n有机化学与有机化合物\n\n\n\n工程化学\n\n\n\n工程化学第八章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n热化学基础\n\n\n\n工程化学\n\n\n\n工程化学的第一章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n合成高分子材料\n\n\n\n工程化学\n\n\n\n工程化学第九章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n金属材料与无机非金属材料\n\n\n\n工程化学\n\n\n\n工程化学第六章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n化学平衡与化学反应速率\n\n\n\n工程化学\n\n\n\n工程化学第二章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n溶液\n\n\n\n工程化学\n\n\n\n工程化学第三章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n氧化还原反应与电化学\n\n\n\n工程化学\n\n\n\n工程化学第四章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n第一次blog\n\n\n\nBlogs\n\n\n\n使用quarto来写blog\n\n\n\n\n\nMar 1, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\nLinux上面也有NFC\n\n\n\nLinux\n\nBlog\n\n\n\n介绍NFC相关知识,然后使用(玩一下)NFC进行一些操作\n\n\n\n\n\nMar 1, 2026\n\n\nQMD\n\n\n\n\n\nNo matching items"
+    "text": "hitokoto!\n\n\n\n\n\n\n\n\n第一次用quarto搭建网站来写blog与记录笔记，因为我手上有一个域名还没到期。qwq\n了解到quarto还是因为想要有一个好的笔记系统来代替obsidian，现在切换到quarto + nvim 不知道怎么样。\n模拟一个偶极子流场，它是拉普拉斯方程的一个经典解\n\n\nCode\nlibrary(ggplot2)\nlibrary(metR)\n\n# 1. 创建网格数据，模拟稳态势流场 (Laplacian Potential Field)\n\ngrid &lt;- expand.grid(x = seq(-2, 2, length.out = 40), \n                    y = seq(-2, 2, length.out = 40))\n\n# 计算速度势 phi 和流函数 psi (基于算子性质)\ngrid$phi &lt;- grid$x / (grid$x^2 + grid$y^2 + 0.5) \n# 计算速度分量 (梯度算子作用的结果)\ngrid$u &lt;- ( (grid$y^2 + 0.5 - grid$x^2) / (grid$x^2 + grid$y^2 + 0.5)^2 )\ngrid$v &lt;- ( -2 * grid$x * grid$y / (grid$x^2 + grid$y^2 + 0.5)^2 )\n\n# 2. 绘图\nggplot(grid, aes(x = x, y = y)) +\n  # 绘制等势线 (Equipotential lines)\n  geom_contour(aes(z = phi, color = ..level..), bins = 20, size = 0.3) +\n  # 绘制流线 (Streamlines)\n  geom_streamline(aes(dx = u, dy = v), color = \"#2c3e50\", \n                  arrow.length = 0.4, alpha = 0.6) +\n  scale_color_viridis_c(option = \"mako\", guide = \"none\") +\n  theme_minimal() +\n  labs(\n    title = expression(paste(\"Steady-State Potential Flow: \", nabla^2, phi == 0)),\n    subtitle = \"Visualizing the Laplace Operator in a Dipole Field\",\n    x = \"x-axis\", y = \"y-axis\"\n  ) +\n  theme(\n    text = element_text(family = \"Libertinus Serif\"),\n    panel.grid = element_blank(),\n    plot.title = element_text(hjust = 0.5, size = 16)\n  ) +\n  coord_fixed()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Posts",
+      "第一次blog"
+    ]
   },
   {
     "objectID": "about.html",
@@ -98,14 +102,22 @@
     "text": "China Three Gorges University | Yichang, Hubei\nA lazy college student majoring in mechanical engineering"
   },
   {
-    "objectID": "posts/第一次blog/index.html",
-    "href": "posts/第一次blog/index.html",
-    "title": "第一次blog",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "杂乱的Notes/Blogs",
     "section": "",
-    "text": "hitokoto!\n\n\n\n\n\n\n\n\n第一次用quarto搭建网站来写blog与记录笔记，因为我手上有一个域名还没到期。qwq\n了解到quarto还是因为想要有一个好的笔记系统来代替obsidian，现在切换到quarto + nvim 不知道怎么样。\n模拟一个偶极子流场，它是拉普拉斯方程的一个经典解\n\n\nCode\nlibrary(ggplot2)\nlibrary(metR)\n\n# 1. 创建网格数据，模拟稳态势流场 (Laplacian Potential Field)\n\ngrid &lt;- expand.grid(x = seq(-2, 2, length.out = 40), \n                    y = seq(-2, 2, length.out = 40))\n\n# 计算速度势 phi 和流函数 psi (基于算子性质)\ngrid$phi &lt;- grid$x / (grid$x^2 + grid$y^2 + 0.5) \n# 计算速度分量 (梯度算子作用的结果)\ngrid$u &lt;- ( (grid$y^2 + 0.5 - grid$x^2) / (grid$x^2 + grid$y^2 + 0.5)^2 )\ngrid$v &lt;- ( -2 * grid$x * grid$y / (grid$x^2 + grid$y^2 + 0.5)^2 )\n\n# 2. 绘图\nggplot(grid, aes(x = x, y = y)) +\n  # 绘制等势线 (Equipotential lines)\n  geom_contour(aes(z = phi, color = ..level..), bins = 20, size = 0.3) +\n  # 绘制流线 (Streamlines)\n  geom_streamline(aes(dx = u, dy = v), color = \"#2c3e50\", \n                  arrow.length = 0.4, alpha = 0.6) +\n  scale_color_viridis_c(option = \"mako\", guide = \"none\") +\n  theme_minimal() +\n  labs(\n    title = expression(paste(\"Steady-State Potential Flow: \", nabla^2, phi == 0)),\n    subtitle = \"Visualizing the Laplace Operator in a Dipole Field\",\n    x = \"x-axis\", y = \"y-axis\"\n  ) +\n  theme(\n    text = element_text(family = \"Libertinus Serif\"),\n    panel.grid = element_blank(),\n    plot.title = element_text(hjust = 0.5, size = 16)\n  ) +\n  coord_fixed()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReuseCC BY-NC-SA 4.0",
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n\n\n\n\n\n\n\n\n\n\nRandom Stokes Wave\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n物质结构基础\n\n\n\n工程化学\n\n\n\n工程化学第五章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n无机物单质及化合物\n\n\n\n工程化学\n\n\n\n工程化学第六章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n有机化学与有机化合物\n\n\n\n工程化学\n\n\n\n工程化学第八章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n热化学基础\n\n\n\n工程化学\n\n\n\n工程化学的第一章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n合成高分子材料\n\n\n\n工程化学\n\n\n\n工程化学第九章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n金属材料与无机非金属材料\n\n\n\n工程化学\n\n\n\n工程化学第六章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n化学平衡与化学反应速率\n\n\n\n工程化学\n\n\n\n工程化学第二章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n溶液\n\n\n\n工程化学\n\n\n\n工程化学第三章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n氧化还原反应与电化学\n\n\n\n工程化学\n\n\n\n工程化学第四章\n\n\n\n\n\nMar 9, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\n第一次blog\n\n\n\nBlogs\n\n\n\n使用quarto来写blog\n\n\n\n\n\nMar 1, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\nblog\n\n\n\nBlogs\n\n\n\n使用quarto来写blog\n\n\n\n\n\nMar 1, 2026\n\n\nQMD\n\n\n\n\n\n\n\n\n\n\n\n\nLinux上面也有NFC\n\n\n\nLinux\n\nBlog\n\n\n\n介绍NFC相关知识,然后使用(玩一下)NFC进行一些操作\n\n\n\n\n\nMar 1, 2026\n\n\nQMD\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/第一次blog/wonderful.html",
+    "href": "posts/第一次blog/wonderful.html",
+    "title": "blog",
+    "section": "",
+    "text": "hitokoto!\n\n\n\n\n\n\n\n\n\n\n\n\n\nReuseCC BY-NC-SA 4.0",
     "crumbs": [
       "Posts",
-      "第一次blog"
+      "第一次blog",
+      "blog"
     ]
   },
   {

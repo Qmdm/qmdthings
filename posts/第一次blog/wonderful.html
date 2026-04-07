@@ -2,13 +2,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="QMD">
+<meta name="dcterms.date" content="2026-03-01">
+<meta name="description" content="使用quarto来写blog">
 
-<title>r中的统计模型 – QMD的杂物间</title>
+<title>blog – QMD的杂物间</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -20,33 +26,67 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<link href="../../../notes/R语言/快速入门R/12.图形程序.html" rel="next">
-<link href="../../../notes/R语言/快速入门R/10.编写自己的函数.html" rel="prev">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-f55d29c4390872bf51d53660ebd805b6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-37249a065ea5210c39a96087f88a5ab9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-f55d29c4390872bf51d53660ebd805b6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../posts/生活/Linux上面也有NFC!.html" rel="next">
+<link href="../../posts/第一次blog/index.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-49c9dac6fae8e09f4ca8bec003b153f0.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d192a1900f7094c40a97df524aaaf925.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-49c9dac6fae8e09f4ca8bec003b153f0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-1f2670bbfde6ff63f9411676c457c64e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-bf97e602b62dac4a1eaa996e418efc47.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-1f2670bbfde6ff63f9411676c457c64e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -73,9 +113,25 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script defer="" src="../../_includes/hero.js"></script>
+<style>
+  .quarto-title-banner { position: relative; overflow: hidden; }
+  #wind {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  .quarto-title-banner > .quarto-title {
+    position: relative;     /* 让标题浮在 canvas 上面 */
+    z-index: 1;
+  }
+  .quarto-title-banner .title { color: #e8efff; }
+</style>
 
 
-<link rel="stylesheet" href="../../../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -256,7 +312,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Navi</span>
     </a>
   </div>
@@ -266,11 +322,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -280,11 +336,11 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-blogs">    
         <li class="dropdown-header">Posts</li>
         <li>
-    <a class="dropdown-item" href="../../../posts/第一次blog/index.html">
+    <a class="dropdown-item" href="../../posts/第一次blog/wonderful.html">
  <span class="dropdown-text">第一次blog</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../posts/生活/Linux上面也有NFC!.html">
+    <a class="dropdown-item" href="../../posts/生活/Linux上面也有NFC!.html">
  <span class="dropdown-text">生活</span></a>
   </li>  
     </ul>
@@ -296,7 +352,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-notes">    
         <li class="dropdown-header">Notes</li>
         <li>
-    <a class="dropdown-item" href="../../../notes/工程化学/1. 热化学基础.html">
+    <a class="dropdown-item" href="../../notes/工程化学/1. 热化学基础.html">
  <span class="dropdown-text">工程化学</span></a>
   </li>  
     </ul>
@@ -311,7 +367,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="../../../index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -337,7 +393,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Notes</li><li class="breadcrumb-item">R语言</li><li class="breadcrumb-item"><a href="../../../notes/R语言/快速入门R/00.R语言start!.html">快速入门R</a></li><li class="breadcrumb-item"><a href="../../../notes/R语言/快速入门R/11.R中的统计模型.html">R中的11个统计模型</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/第一次blog/index.html">Posts</a></li><li class="breadcrumb-item"><a href="../../posts/第一次blog/index.html">第一次blog</a></li><li class="breadcrumb-item"><a href="../../posts/第一次blog/wonderful.html">blog</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -347,7 +403,43 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Notes</li><li class="breadcrumb-item">R语言</li><li class="breadcrumb-item"><a href="../../../notes/R语言/快速入门R/00.R语言start!.html">快速入门R</a></li><li class="breadcrumb-item"><a href="../../../notes/R语言/快速入门R/11.R中的统计模型.html">R中的11个统计模型</a></li></ol></nav></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/第一次blog/index.html">Posts</a></li><li class="breadcrumb-item"><a href="../../posts/第一次blog/index.html">第一次blog</a></li><li class="breadcrumb-item"><a href="../../posts/第一次blog/wonderful.html">blog</a></li></ol></nav>
+      <div class="quarto-title-block"><div><h1 class="title">blog</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source Code</button></div></div>
+                  <div>
+        <div class="description">
+          使用quarto来写blog
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Blogs</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>QMD </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 1, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -360,7 +452,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Notes</span></a>
+ <span class="menu-text">Posts</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -368,208 +460,42 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">工程化学</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <a href="../../posts/第一次blog/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第一次blog</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../notes/工程化学/1. 热化学基础.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">热化学基础</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/工程化学/2. 化学平衡与化学反应速率.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">化学平衡与化学反应速率</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/工程化学/3. 溶液.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">溶液</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/工程化学/4. 氧化还原与电化学.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">氧化还原反应与电化学</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/工程化学/5. 物质结构基础.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">物质结构基础</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/工程化学/6. 无机物单质及化合物.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">无机物单质及化合物</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/工程化学/7. 金属材料与无机非金属材料.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">金属材料与无机非金属材料</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/工程化学/8. 有机化学和有机化合物.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">有机化学与有机化合物</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/工程化学/9. 合成高分子材料.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">合成高分子材料</span></a>
+  <a href="../../posts/第一次blog/wonderful.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">blog</span></a>
   </div>
 </li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">R语言</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">生活</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">快速入门R</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth3 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../notes/R语言/快速入门R/00.R语言start!.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">给自己</span></a>
+  <a href="../../posts/生活/Linux上面也有NFC!.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Linux上面也有NFC</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../notes/R语言/快速入门R/01.R交互式环境.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">使用交互式环境R</span></a>
+  <a href="../../posts/生活/好玩的模拟.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Random Stokes Wave</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/R语言/快速入门R/02.数字与向量.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">数字与向量</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/R语言/快速入门R/03.对象的模式与属性.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">内在属性：模式 (mode) 与长度 (length)</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/R语言/快速入门R/04.有序与无序因子.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">有序与无序因子</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/R语言/快速入门R/05.数组与矩阵.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">数组</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/R语言/快速入门R/06.列表与数据框.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">列表与数据框</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/R语言/快速入门R/07.从文件读取数据.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">从文件读取数据</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/R语言/快速入门R/08.概率分布.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">概率分布</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/R语言/快速入门R/09.分组,循环,条件执行.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">分组,循环,条件执行</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/R语言/快速入门R/10.编写自己的函数.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">编写你自己的函数</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/R语言/快速入门R/11.R中的统计模型.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">R中的11个统计模型</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/R语言/快速入门R/12.图形程序.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">图形程序</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/R语言/快速入门R/13.软件包.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">软件包</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/R语言/快速入门R/14.操作系统功能.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">操作系统功能</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
- <span class="menu-text">碎碎念</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth3 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/R语言/碎碎念/ggplot2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">准备</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/R语言/碎碎念/rcpp.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Rcpp</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/R语言/碎碎念/tidyverse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tidyverse</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
       </ul>
   </li>
       </ul>
@@ -579,167 +505,41 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#r中的11个统计模型" id="toc-r中的11个统计模型" class="nav-link active" data-scroll-target="#r中的11个统计模型">R中的11个统计模型</a>
-  <ul class="collapse">
-  <li><a href="#统计模型的定义与公式" id="toc-统计模型的定义与公式" class="nav-link" data-scroll-target="#统计模型的定义与公式">统计模型的定义与公式</a></li>
-  <li><a href="#对比" id="toc-对比" class="nav-link" data-scroll-target="#对比">对比</a></li>
-  <li><a href="#线性模型" id="toc-线性模型" class="nav-link" data-scroll-target="#线性模型">线性模型</a></li>
-  <li><a href="#用于提取模型信息的通用函数" id="toc-用于提取模型信息的通用函数" class="nav-link" data-scroll-target="#用于提取模型信息的通用函数">用于提取模型信息的通用函数</a></li>
-  <li><a href="#方差分析和模型比较" id="toc-方差分析和模型比较" class="nav-link" data-scroll-target="#方差分析和模型比较">方差分析和模型比较</a></li>
-  <li><a href="#更新拟合模型update" id="toc-更新拟合模型update" class="nav-link" data-scroll-target="#更新拟合模型update">更新拟合模型(update)</a></li>
-  <li><a href="#广义线性模型glm" id="toc-广义线性模型glm" class="nav-link" data-scroll-target="#广义线性模型glm">广义线性模型(glm)</a></li>
-  <li><a href="#glm" id="toc-glm" class="nav-link" data-scroll-target="#glm">glm()</a></li>
-  <li><a href="#二项式族" id="toc-二项式族" class="nav-link" data-scroll-target="#二项式族">二项式族</a></li>
-  <li><a href="#泊松模型" id="toc-泊松模型" class="nav-link" data-scroll-target="#泊松模型">泊松模型</a></li>
-  <li><a href="#准似然模型" id="toc-准似然模型" class="nav-link" data-scroll-target="#准似然模型">准似然模型</a></li>
-  <li><a href="#非线性最小二乘法和最大似然模型" id="toc-非线性最小二乘法和最大似然模型" class="nav-link" data-scroll-target="#非线性最小二乘法和最大似然模型">非线性最小二乘法和最大似然模型</a></li>
-  <li><a href="#最小二乘法" id="toc-最小二乘法" class="nav-link" data-scroll-target="#最小二乘法">最小二乘法</a></li>
-  <li><a href="#最大似然法" id="toc-最大似然法" class="nav-link" data-scroll-target="#最大似然法">最大似然法</a></li>
-  <li><a href="#一些非标准信号" id="toc-一些非标准信号" class="nav-link" data-scroll-target="#一些非标准信号">一些非标准信号</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
 <p id="hitokoto">
-
   <a href="#" id="hitokoto_text" style="text-decoration: none">hitokoto!</a>
-
 </p>
 
-
-
 <script>
-
   const hitokotoElement = document.querySelector("#hitokoto_text");
 
-
-
   fetch("https://v1.hitokoto.cn?c=k")
-
     .then((response) => response.json())
-
     .then((data) => {
-
       const hitokoto = document.querySelector("#hitokoto_text");
-
       hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
-
       hitokoto.innerText = data.hitokoto;
-
     })
-
     .catch(console.error);
 
-
-
   hitokotoElement.addEventListener("click", function (event) {
-
     event.preventDefault();
-
   });
-
 </script>
 
 
 
 
 
-<section id="r中的11个统计模型" class="level1">
-<h1>R中的11个统计模型</h1>
-<section id="统计模型的定义与公式" class="level2">
-<h2 class="anchored" data-anchor-id="统计模型的定义与公式">统计模型的定义与公式</h2>
-<p>R 采用一种统一的符号体系（公式）来描述统计模型，其模板通常是线性模型：y=Xβ+e。</p>
-<p>其中 y 为响应向量，X 为模型矩阵或设计矩阵，其列为 x₁, x₂, …, xₙ，代表决定变量。通常情况下，xₙ 列的元素均为 1，表示截距项。</p>
-<p><strong>公式操作符 ~</strong>：用于定义响应变量和预测变量之间的关系，例如 response ~ predictor_terms。</p>
-<p><strong>常用符号含义</strong>：</p>
-<ul>
-<li><code>+</code> 和 <code>-</code>：包含或排除某个项（1 代表截距项，默认包含）。</li>
-<li><code>:</code>：变量间的交互作用（张量积）。</li>
-<li><code>*</code>：代表全因子模型（如 A*B 等同于 A + B + A:B）。</li>
-<li><code>/</code>：代表嵌套关系（如 A/B 等同于 A + B %in% A）。</li>
-<li><code>^n</code>：包含所有直到 n 阶的交互作用。</li>
-<li><code>I()</code>：恒等函数，用于在公式中按算术含义使用运算符（如 I(x2) 代表 x 的平方）。</li>
-</ul>
-</section>
-<section id="对比" class="level2">
-<h2 class="anchored" data-anchor-id="对比">对比</h2>
-<p>对于分类变量（因子），R 需要将其转换为模型矩阵中的列。</p>
-<ul>
-<li><strong>无序因子</strong>：默认生成 k−1 列，将后续各水平与第一水平进行对比（Treatment contrasts）。</li>
-<li><strong>有序因子</strong>：默认生成 k−1 个正交多项式列。</li>
-<li><strong>全局设置</strong>：可以通过 options(contrasts = …) 修改默认的对比方式</li>
-</ul>
-</section>
-<section id="线性模型" class="level2">
-<h2 class="anchored" data-anchor-id="线性模型">线性模型</h2>
-<p>lm() 是拟合普通多元线性回归模型的核心函数。</p>
-<pre><code>调用格式：fitted.model &lt;- lm(formula, data = data.frame)。
-数据参数：data 参数非常重要，它指定了模型所需变量的首选来源地（通常是一个数据框）。</code></pre>
-</section>
-<section id="用于提取模型信息的通用函数" class="level2">
-<h2 class="anchored" data-anchor-id="用于提取模型信息的通用函数">用于提取模型信息的通用函数</h2>
-<p>R 拟合模型后生成的对象包含大量信息，通常使用特定的“提取函数”来获取细节，而不是直接打印对象：</p>
-<pre><code>summary()：打印详细的回归分析报告（包括系数、标准误、t 值、p 值和 R2）。
-anova()：通过方差分析表比较两个或多个模型。
-coef()：提取模型系数。
-residuals()：提取残差。
-predict()：对新数据进行预测。
-plot()：生成诊断图（如残差图、正态概率图等）</code></pre>
-</section>
-<section id="方差分析和模型比较" class="level2">
-<h2 class="anchored" data-anchor-id="方差分析和模型比较">方差分析和模型比较</h2>
-<p>aov() 用于方差分析，其用法与 lm() 类似，但特别支持多误差层级的模型（如分裂区试验）。</p>
-<pre><code>多层级误差：使用 Error(strata) 来指定误差项，例如 aov(yield ~ v + Error(farms/blocks))。</code></pre>
-<ol start="6" type="1">
-<li><p>更新拟合模型 (update) update() 允许你在已有模型的基础上增加或减少项，而无需重新编写完整的公式。</p>
-<pre><code>. 符号：代表原公式中对应的部分。如 update(fm05, . ~ . + x6) 表示在原模型中添加变量 x6。</code></pre></li>
-</ol>
-</section>
-<section id="更新拟合模型update" class="level2">
-<h2 class="anchored" data-anchor-id="更新拟合模型update">更新拟合模型(update)</h2>
-<p>update() 允许你在已有模型的基础上增加或减少项，而无需重新编写完整的公式。</p>
-<pre><code>. 符号：代表原公式中对应的部分。如 update(fm05, . ~ . + x6) 表示在原模型中添加变量 x6</code></pre>
-</section>
-<section id="广义线性模型glm" class="level2">
-<h2 class="anchored" data-anchor-id="广义线性模型glm">广义线性模型(glm)</h2>
-<p>家族 (family) 参数：必须指定分布族和连接函数，如 gaussian（高斯）、binomial（二项）、poisson（泊松）和 quasi（准似然）。 连接函数：常见的有 logit、probit、log 和 identity</p>
-</section>
-<section id="glm" class="level2">
-<h2 class="anchored" data-anchor-id="glm">glm()</h2>
-</section>
-<section id="二项式族" class="level2">
-<h2 class="anchored" data-anchor-id="二项式族">二项式族</h2>
-</section>
-<section id="泊松模型" class="level2">
-<h2 class="anchored" data-anchor-id="泊松模型">泊松模型</h2>
-</section>
-<section id="准似然模型" class="level2">
-<h2 class="anchored" data-anchor-id="准似然模型">准似然模型</h2>
-</section>
-<section id="非线性最小二乘法和最大似然模型" class="level2">
-<h2 class="anchored" data-anchor-id="非线性最小二乘法和最大似然模型">非线性最小二乘法和最大似然模型</h2>
-<p>非线性最小二乘法 (nls)：用于拟合非线性曲线模型，需要提供合理的初始参数估计值。 极大似然估计 (nlm / optim)：通过最小化负对数似然函数来进行更通用的非线性建模</p>
-</section>
-<section id="最小二乘法" class="level2">
-<h2 class="anchored" data-anchor-id="最小二乘法">最小二乘法</h2>
-</section>
-<section id="最大似然法" class="level2">
-<h2 class="anchored" data-anchor-id="最大似然法">最大似然法</h2>
-</section>
-<section id="一些非标准信号" class="level2">
-<h2 class="anchored" data-anchor-id="一些非标准信号">一些非标准信号</h2>
 
 
-</section>
-</section>
+<!-- -->
+
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -825,6 +625,57 @@ plot()：生成诊断图（如残差图、正态概率图等）</code></pre>
         container: window.document.getElementById('quarto-embedded-source-code-modal')
       });
       clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -1157,16 +1008,54 @@ plot()：生成诊断图（如残差图、正态概率图等）</code></pre>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../notes/R语言/快速入门R/10.编写自己的函数.html" class="pagination-link" aria-label="编写你自己的函数">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">编写你自己的函数</span>
+      <a href="../../posts/第一次blog/index.html" class="pagination-link" aria-label="第一次blog">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">第一次blog</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../notes/R语言/快速入门R/12.图形程序.html" class="pagination-link" aria-label="图形程序">
-        <span class="nav-page-text">图形程序</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../posts/生活/Linux上面也有NFC!.html" class="pagination-link" aria-label="Linux上面也有NFC">
+        <span class="nav-page-text">Linux上面也有NFC</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
-</nav>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> "blog"</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="an">author:</span><span class="co"> "QMD"</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="an">date:</span><span class="co"> "2026/03/01"</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="an">description:</span><span class="co"> "使用quarto来写blog"</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="an">categories:</span><span class="co"> [ "Blogs" ]</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="an">include-in-header:</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co">  - text: |</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="co">      &lt;style&gt;</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="co">        .quarto-title-banner { position: relative; overflow: hidden; }</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="co">        #wind {</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="co">          position: absolute;</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="co">          inset: 0;</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="co">          width: 100%;</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="co">          height: 100%;</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="co">          z-index: 0;</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="co">        }</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a><span class="co">        .quarto-title-banner &gt; .quarto-title {</span></span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="co">          position: relative;     /* 让标题浮在 canvas 上面 */</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a><span class="co">          z-index: 1;</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a><span class="co">        }</span></span>
+<span id="cb1-23"><a href="#cb1-23"></a><span class="co">        .quarto-title-banner .title { color: #e8efff; }</span></span>
+<span id="cb1-24"><a href="#cb1-24"></a><span class="co">      &lt;/style&gt;</span></span>
+<span id="cb1-25"><a href="#cb1-25"></a><span class="an">include-after-body:</span></span>
+<span id="cb1-26"><a href="#cb1-26"></a><span class="co">  - text: |</span></span>
+<span id="cb1-27"><a href="#cb1-27"></a><span class="co">      &lt;script&gt;</span></span>
+<span id="cb1-28"><a href="#cb1-28"></a><span class="co">        (function(){</span></span>
+<span id="cb1-29"><a href="#cb1-29"></a><span class="co">          const banner = document.querySelector('.quarto-title-banner');</span></span>
+<span id="cb1-30"><a href="#cb1-30"></a><span class="co">          if (!banner) return;</span></span>
+<span id="cb1-31"><a href="#cb1-31"></a><span class="co">          const c = document.createElement('canvas');</span></span>
+<span id="cb1-32"><a href="#cb1-32"></a><span class="co">          c.id = 'wind';</span></span>
+<span id="cb1-33"><a href="#cb1-33"></a><span class="co">          banner.prepend(c);   // 注意是 prepend，作为第一个子元素当背景</span></span>
+<span id="cb1-34"><a href="#cb1-34"></a><span class="co">        })();</span></span>
+<span id="cb1-35"><a href="#cb1-35"></a><span class="co">      &lt;/script&gt;</span></span>
+<span id="cb1-36"><a href="#cb1-36"></a><span class="co">      &lt;script src="/_includes/hero.js" defer&gt;&lt;/script&gt;</span></span>
+<span id="cb1-37"><a href="#cb1-37"></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1187,6 +1076,16 @@ plot()：生成诊断图（如残差图、正态概率图等）</code></pre>
     </div>
   </div>
 </footer>
+<script>
+  (function(){
+    const banner = document.querySelector('.quarto-title-banner');
+    if (!banner) return;
+    const c = document.createElement('canvas');
+    c.id = 'wind';
+    banner.prepend(c);   // 注意是 prepend，作为第一个子元素当背景
+  })();
+</script>
+<script src="../../_includes/hero.js" defer=""></script>
 
 
 

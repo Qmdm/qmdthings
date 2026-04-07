@@ -1,0 +1,89 @@
+<canvas id="wind" style="width:100%;height:60vh;display:block;"></canvas>
+<script>
+(() => {
+  const canvas = document.getElementById('wind');
+  const ctx = canvas.getContext('2d');
+  let W, H, particles;
+  const N = 2500;        // 粒子数，按性能调
+  const STEP = 1.2;      // 步长
+  const LIFE = 120;      // 粒子寿命（帧）
+
+  function resize() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = canvas.width  = canvas.clientWidth  * dpr;
+    H = canvas.height = canvas.clientHeight * dpr;
+    ctx.scale(1,1);
+    ctx.fillStyle = '#0b1020';
+    ctx.fillRect(0,0,W,H);
+  }
+  window.addEventListener('resize', resize);
+
+  // —— 简易 value noise（够用且无依赖）——
+  const perm = new Uint8Array(512);
+  for (let i=0;i<256;i++) perm[i]=i;
+  for (let i=255;i>0;i--){const j=(Math.random()*(i+1))|0;[perm[i],perm[j]]=[perm[j],perm[i]];}
+  for (let i=0;i<256;i++) perm[i+256]=perm[i];
+  const fade = t => t*t*t*(t*(t*6-15)+10);
+  const lerp = (a,b,t) => a+(b-a)*t;
+  function noise2(x,y){
+    const X=Math.floor(x)&255, Y=Math.floor(y)&255;
+    x-=Math.floor(x); y-=Math.floor(y);
+    const u=fade(x), v=fade(y);
+    const A=perm[X]+Y, B=perm[X+1]+Y;
+    const g = (h,x,y)=>{const u=h&1?x:-x, v=h&2?y:-y; return u+v;};
+    return lerp(
+      lerp(g(perm[A],x,y),     g(perm[B],x-1,y),   u),
+      lerp(g(perm[A+1],x,y-1), g(perm[B+1],x-1,y-1), u),
+      v);
+  }
+
+  // —— 流函数 ψ 用噪声，速度取其旋度 → 无散度场 ——
+  const SCALE = 0.0025;       // 噪声频率（决定涡的大小）
+  const EPS = 1.0;
+  let t0 = 0;
+  function velocity(x,y){
+    // 加一个常数项 → 整体向右"风"
+    const psi = (X,Y) => noise2(X*SCALE, Y*SCALE + t0) + Y*SCALE*0.3;
+    const dpsidy = (psi(x, y+EPS) - psi(x, y-EPS)) / (2*EPS);
+    const dpsidx = (psi(x+EPS, y) - psi(x-EPS, y)) / (2*EPS);
+    return [dpsidy, -dpsidx];
+  }
+
+  function spawn(p){
+    p.x = Math.random()*W;
+    p.y = Math.random()*H;
+    p.age = (Math.random()*LIFE)|0;
+  }
+  function init(){
+    particles = Array.from({length:N}, () => {
+      const p = {}; spawn(p); return p;
+    });
+  }
+
+  function frame(){
+    // 半透明覆盖 → 拖尾
+    ctx.fillStyle = 'rgba(11,16,32,0.06)';
+    ctx.fillRect(0,0,W,H);
+
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = 'rgba(180,210,255,0.55)';
+    ctx.beginPath();
+    for (const p of particles){
+      const [vx,vy] = velocity(p.x, p.y);
+      const speed = Math.hypot(vx,vy) + 1e-6;
+      const nx = p.x + (vx/speed) * STEP * 60; // 归一化后乘步长
+      const ny = p.y + (vy/speed) * STEP * 60;
+      ctx.moveTo(p.x, p.y);
+      ctx.lineTo(nx, ny);
+      p.x = nx; p.y = ny; p.age++;
+      if (p.age > LIFE || p.x<0||p.x>W||p.y<0||p.y>H) spawn(p);
+    }
+    ctx.stroke();
+
+    t0 += 0.0015; // 让涡缓慢演化；想完全静态就删掉这行
+    requestAnimationFrame(frame);
+  }
+
+  resize(); init(); frame();
+})();
+</script>

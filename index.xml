@@ -1448,6 +1448,47 @@ font-style: inherit;">coord_fixed</span>()</span></code></pre></div></div>
   <pubDate>Sun, 01 Mar 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
+  <title>blog</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/posts/第一次blog/wonderful.html</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+  hitokoto!
+</p>
+
+<script>
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+  fetch("https://v1.hitokoto.cn?c=k")
+    .then((response) => response.json())
+    .then((data) => {
+      const hitokoto = document.querySelector("#hitokoto_text");
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+      hitokoto.innerText = data.hitokoto;
+    })
+    .catch(console.error);
+
+  hitokotoElement.addEventListener("click", function (event) {
+    event.preventDefault();
+  });
+</script>
+
+
+
+
+
+
+
+<!-- -->
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>Blogs</category>
+  <guid>https://qmdthings.top/posts/第一次blog/wonderful.html</guid>
+  <pubDate>Sun, 01 Mar 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Linux上面也有NFC</title>
   <dc:creator>QMD </dc:creator>
   <link>https://qmdthings.top/posts/生活/Linux上面也有NFC!.html</link>
@@ -1730,7 +1771,7 @@ animate()
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
   <guid>https://qmdthings.top/posts/生活/好玩的模拟.html</guid>
-  <pubDate>Mon, 06 Apr 2026 17:22:23 GMT</pubDate>
+  <pubDate>Tue, 07 Apr 2026 10:46:33 GMT</pubDate>
 </item>
 </channel>
 </rss>
