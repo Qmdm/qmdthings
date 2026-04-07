@@ -265,6 +265,46 @@
   <link>https://qmdthings.top/notes/工程化学/2. 化学平衡与化学反应速率.html</link>
   <description><![CDATA[ 
 
+<p id="hitokoto">
+
+  hitokoto!
+
+</p>
+
+
+
+<script>
+
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+
+
+  fetch("https://v1.hitokoto.cn?c=k")
+
+    .then((response) => response.json())
+
+    .then((data) => {
+
+      const hitokoto = document.querySelector("#hitokoto_text");
+
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+
+      hitokoto.innerText = data.hitokoto;
+
+    })
+
+    .catch(console.error);
+
+
+
+  hitokotoElement.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+  });
+
+</script>
+
 
 
 
@@ -1593,7 +1633,7 @@ animate()
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
   <guid>https://qmdthings.top/posts/生活/好玩的模拟.html</guid>
-  <pubDate>Tue, 07 Apr 2026 16:32:51 GMT</pubDate>
+  <pubDate>Tue, 07 Apr 2026 16:42:34 GMT</pubDate>
 </item>
 </channel>
 </rss>

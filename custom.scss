@@ -116,10 +116,37 @@ mjx-container[jax="CHTML"][display="true"],
   padding: 0.2em 0;
 }
 
-// 行内公式不要出现滚动条
-mjx-container[jax="CHTML"]:not([display="true"]),
+mjx-container[jax="CHTML"][display="true"],
+.math.display,
+.MathJax_Display {
+  display: block !important;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar { display: none; }
+  padding: 0.2em 0.1em;
+}
+
 .math.inline {
-  overflow: visible !important;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  vertical-align: middle;
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+.katex-display {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar { display: none; }
+  padding: 0.2em 0;
 }
 
 // ============ Title Banner ============

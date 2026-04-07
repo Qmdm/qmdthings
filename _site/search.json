@@ -349,5 +349,17 @@
       "工程化学",
       "溶液"
     ]
+  },
+  {
+    "objectID": "notes/工程化学/2. 化学平衡与化学反应速率.html",
+    "href": "notes/工程化学/2. 化学平衡与化学反应速率.html",
+    "title": "化学平衡与化学反应速率",
+    "section": "",
+    "text": "hitokoto!\n\n\n\n\n\n\n\n\n\n\n\n\n\n一、 化学平衡的定义与特征\n\n定义：在一定条件下的可逆反应中，当正反应速率与逆反应速率相等时，系统中各物质的浓度（或分压）不再随时间改变，此时系统所处的状态称为化学平衡状态。\n特征：\n\n动态平衡：反应并未停止，只是正逆速率相等。\n定态：宏观性质（如压力、温度、组成）保持不变。\n可逆性：平衡可以从正向或逆向两个方向达到。\n\n\n\n\n二、 化学平衡常数 (Equilibrium Constant)\n对于气相反应：\\(aA(g) + bB(g) \\rightleftharpoons cC(g) + dD(g)\\)\n\n经验平衡常数：\n\n\\(K_c\\)（浓度平衡常数）：\\(K_c = \\frac{[C]^c [D]^d}{[A]^a [B]^b}\\)。\n\\(K_p\\)（压力平衡常数）：\\(K_p = \\frac{p(C)^c p(D)^d}{p(A)^a p(B)^b}\\)。\n\n\\(K_p\\) 与 \\(K_c\\) 的关系推导：\n\n根据理想气体状态方程 \\(p = cRT\\)，代入 \\(K_p\\) 表达式中：\n\\(K_p = \\frac{(c_C RT)^c (c_D RT)^d}{(c_A RT)^a (c_B RT)^b} = \\frac{c_C^c c_D^d}{c_A^a c_B^b} \\cdot (RT)^{(c+d)-(a+b)}\\)\n得出结论：\\(K_p = K_c(RT)^{\\Delta n}\\)（其中 \\(\\Delta n\\) 为生成物与反应物气态物质的化学计量数之差）。\n\n\n\n\n三、 平衡常数与吉布斯自由能的关系（核心推导）\n这是连接热力学与化学平衡的桥梁。\n\n范特霍夫等温方程 (Van’t Hoff Isotherm)： 在非标准状态下，反应的自由能变 \\(\\Delta_r G_m(T)\\) 与标准自由能变 \\(\\Delta_r G_m^\\theta(T)\\) 的关系为： \\(\\Delta_r G_m(T) = \\Delta_r G_m^\\theta(T) + RT \\ln Q\\)，其中 \\(Q\\) 为反应商。\n标准平衡常数 \\(K^\\theta\\) 的推导：\n\n当反应达到平衡时，系统不具备做功本领，即 \\(\\Delta_r G_m(T) = 0\\)。\n此时的反应商 \\(Q\\) 等于标准平衡常数 \\(K^\\theta\\)。\n代入等温方程：\\(0 = \\Delta_r G_m^\\theta(T) + RT \\ln K^\\theta\\)。\n得出核心公式：\\(\\Delta_r G_m^\\theta(T) = -RT \\ln K^\\theta\\)（或 \\(\\lg K^\\theta = -\\frac{\\Delta_r G_m^\\theta}{2.303RT}\\)）。\n\n\n\n\n四、 化学平衡移动的判定\n利用反应商 \\(Q\\) 与平衡常数 \\(K\\) 的比较，可以判定反应进行的方向： * \\(Q &lt; K\\)：反应向正反应方向进行。 * \\(Q = K\\)：反应处于平衡状态。 * \\(Q &gt; K\\)：反应向逆反应方向进行。\n\n\n五、 影响化学平衡的因素（吕·查德里原理）\n\n浓度/压力：增大反应物浓度或减小生成物浓度，平衡向正向移动。\n温度对平衡常数的影响（范特霍夫方程推导）：\n\n结合 \\(\\Delta_r G_m^\\theta = \\Delta_r H_m^\\theta - T\\Delta_r S_m^\\theta\\) 和 \\(\\Delta_r G_m^\\theta = -RT \\ln K^\\theta\\)。\n得 \\(\\ln K^\\theta = -\\frac{\\Delta_r H_m^\\theta}{RT} + \\frac{\\Delta_r S_m^\\theta}{R}\\)。\n假设在一定温度范围内 \\(\\Delta H\\) 和 \\(\\Delta S\\) 为常数，对于两个不同温度 \\(T_1\\) 和 \\(T_2\\)：\n\\(\\lg \\frac{K_2^\\theta}{K_1^\\theta} = \\frac{\\Delta_r H_m^\\theta}{2.303R} \\left( \\frac{1}{T_1} - \\frac{1}{T_2} \\right)\\)。\n结论：吸热反应（\\(\\Delta H &gt; 0\\)）升温时 \\(K\\) 增大，平衡正移；放热反应（\\(\\Delta H &lt; 0\\)）升温时 \\(K\\) 减小，平衡逆移。\n\n\n\n\n六、 多重平衡 (Multiple Equilibria)\n若一个化学反应可以由另外几个反应相加减得到，则该反应的平衡常数等于相关反应平衡常数的积或商。 * 例如：反应 (3) = 反应 (1) + 反应 (2)，则 \\(K_3 = K_1 \\cdot K_2\\)。\n掌握了这些知识点及其推导过程，你就能应对工程计算中关于平衡限度和环境条件（温压浓）改变对反应产率的影响分析了。\n\n\n\n\n\n\nReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Notes",
+      "工程化学",
+      "化学平衡与化学反应速率"
+    ]
   }
 ]
