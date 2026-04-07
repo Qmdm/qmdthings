@@ -3,43 +3,55 @@
   if (!mq.matches) return;
 
   function closeAll() {
-    // 1. 汉堡菜单
-    document.querySelectorAll('.navbar-collapse.show').forEach(el => {
-      const c = window.bootstrap?.Collapse?.getInstance(el);
-      c ? c.hide() : el.classList.remove('show');
-    });
+  // 1. 汉堡菜单
+  document.querySelectorAll('.navbar-collapse.show').forEach(el => {
+    const c = window.bootstrap?.Collapse?.getInstance(el);
+    c ? c.hide() : el.classList.remove('show');
+  });
 
-    // 2. Offcanvas 侧边栏
-    document.querySelectorAll('.offcanvas.show').forEach(el => {
-      const o = window.bootstrap?.Offcanvas?.getInstance(el);
-      if (o) { o.hide(); return; }
-      el.classList.remove('show');
-      el.setAttribute('aria-hidden', 'true');
-    });
+  // 2. Quarto sidebar collapse（移动端侧边栏）
+  document.querySelectorAll('.quarto-sidebar-collapse-item.show').forEach(el => {
+    const c = window.bootstrap?.Collapse?.getInstance(el)
+           || new window.bootstrap.Collapse(el, { toggle: false });
+    c.hide();
+  });
 
-    // 3. 蒙版兜底
-    document.querySelectorAll('.offcanvas-backdrop, .modal-backdrop').forEach(el => {
-      el.classList.remove('show');
-      setTimeout(() => el.remove(), 300);
-    });
+  // 3. Offcanvas（有些 Quarto 版本用这个，兜底）
+  document.querySelectorAll('.offcanvas.show').forEach(el => {
+    const o = window.bootstrap?.Offcanvas?.getInstance(el);
+    if (o) { o.hide(); return; }
+    el.classList.remove('show');
+    el.setAttribute('aria-hidden', 'true');
+  });
 
-    // 4. body 锁定样式兜底
-    document.body.classList.remove('offcanvas-open', 'modal-open');
-    document.body.style.overflow = '';
-    document.body.style.paddingRight = '';
-  }
+  // 4. 蒙版兜底
+  document.querySelectorAll('.offcanvas-backdrop, .modal-backdrop').forEach(el => {
+    el.classList.remove('show');
+    setTimeout(() => el.remove(), 300);
+  });
 
+  // 5. body 锁定样式兜底
+  document.body.classList.remove('offcanvas-open', 'modal-open');
+  document.body.style.overflow = '';
+  document.body.style.paddingRight = '';
+
+  // 6. 同步 aria-expanded（让触发按钮的箭头/图标状态对）
+  document.querySelectorAll('[data-bs-target=".quarto-sidebar-collapse-item"]')
+    .forEach(btn => btn.setAttribute('aria-expanded', 'false'));
+}
   // —— 真·用户滚动时关闭 ——
   let ticking = false;
   let suppressUntil = 0;
 
-  function onUserScroll() {
-    if (Date.now() < suppressUntil) return;
-    if (!ticking) {
-      requestAnimationFrame(() => { closeAll(); ticking = false; });
-      ticking = true;
-    }
+  function onUserScroll(e) {
+  if (Date.now() < suppressUntil) return;
+  // 如果用户在滚动 sidebar 本身，不要关
+  if (e?.target?.closest?.('.offcanvas, #quarto-sidebar, .sidebar')) return;
+  if (!ticking) {
+    requestAnimationFrame(() => { closeAll(); ticking = false; });
+    ticking = true;
   }
+}
   addEventListener('wheel',     onUserScroll, { passive: true });
   addEventListener('touchmove', onUserScroll, { passive: true });
 
