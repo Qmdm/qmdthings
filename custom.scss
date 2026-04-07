@@ -92,43 +92,32 @@ code span.co {
   color: #8b949e;
 }
 
-// ============ LaTeX 公式：隐藏滚动条 ============
-// MathJax 的 display 公式
-mjx-container[jax="CHTML"][display="true"],
-.math.display,
-.MathJax_Display {
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  &::-webkit-scrollbar { display: none; }
-  // 给左右一点 padding，避免公式贴边
-  padding: 0.2em 0.1em;
-}
+// ============ LaTeX 公式 ============
 
-
-.katex-display {
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  &::-webkit-scrollbar { display: none; }
-  padding: 0.2em 0;
-}
-
+// display 公式外层
 mjx-container[jax="CHTML"][display="true"],
 .math.display,
 .MathJax_Display {
   display: block !important;
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  padding: 0.3em 0;
   scrollbar-width: none;
   -ms-overflow-style: none;
   &::-webkit-scrollbar { display: none; }
-  padding: 0.2em 0.1em;
 }
 
+// 内层 mjx-math 不要被外层限制，让它自然宽 → 触发外层滚动
+mjx-container[display="true"] > mjx-math {
+  max-width: none !important;
+  white-space: nowrap;
+}
+
+// 行内公式
+mjx-container[jax="CHTML"]:not([display="true"]),
 .math.inline {
   max-width: 100%;
   overflow-x: auto;
@@ -138,16 +127,43 @@ mjx-container[jax="CHTML"][display="true"],
   &::-webkit-scrollbar { display: none; }
 }
 
+// KaTeX
 .katex-display {
-  display: block;
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  padding: 0.2em 0;
   scrollbar-width: none;
   -ms-overflow-style: none;
   &::-webkit-scrollbar { display: none; }
-  padding: 0.2em 0;
+
+  > .katex {
+    max-width: none !important;
+    white-space: nowrap;
+  }
 }
+
+// ============ 父链 min-width: 0，允许被子元素的 max-width 约束 ============
+main.content,
+#quarto-document-content,
+article,
+article.content,
+.cell-output-display,
+p {
+  min-width: 0;
+  max-width: 100%;
+}
+
+// 终极兜底：主列不允许横向溢出
+main.content,
+#quarto-document-content,
+article.content {
+  overflow-x: hidden;
+}
+
 
 // ============ Title Banner ============
 .quarto-title-banner .title {
@@ -156,3 +172,4 @@ mjx-container[jax="CHTML"][display="true"],
     line-height: 1.2;
   }
 }
+
