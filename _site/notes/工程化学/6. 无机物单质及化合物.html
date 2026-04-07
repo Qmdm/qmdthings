@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -42,14 +77,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-58e7cb164a30d0964bc3a4cf0cb5a652.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-c27fcf49d1f223a5e9e0478296a4f52c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-58e7cb164a30d0964bc3a4cf0cb5a652.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-f55d29c4390872bf51d53660ebd805b6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-37249a065ea5210c39a96087f88a5ab9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-f55d29c4390872bf51d53660ebd805b6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-fbf78ac79c7b05a80ff27b67fb5aa843.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-05cd0a6e024cadd40b6fd1a01d287e6f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-fbf78ac79c7b05a80ff27b67fb5aa843.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -76,6 +111,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script defer="" src="../../_includes/hero.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -312,12 +348,12 @@ window.Quarto = {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-blogs">    
         <li class="dropdown-header">Posts</li>
         <li>
-    <a class="dropdown-item" href="../../posts/第一次blog/index.html">
- <span class="dropdown-text">第一次blog</span></a>
+    <a class="dropdown-item" href="../../posts/生活/好玩的模拟.html">
+ <span class="dropdown-text">生活</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../posts/生活/Linux上面也有NFC!.html">
- <span class="dropdown-text">生活</span></a>
+    <a class="dropdown-item" href="../../posts/第一次blog/wonderful.html">
+ <span class="dropdown-text">第一次blog</span></a>
   </li>  
     </ul>
   </li>
@@ -382,7 +418,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Notes</li><li class="breadcrumb-item"><a href="../../notes/工程化学/1. 热化学基础.html">工程化学</a></li><li class="breadcrumb-item"><a href="../../notes/工程化学/6. 无机物单质及化合物.html">无机物单质及化合物</a></li></ol></nav>
-      <h1 class="title">无机物单质及化合物</h1>
+      <div class="quarto-title-block"><div><h1 class="title">无机物单质及化合物</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source Code</button></div></div>
                   <div>
         <div class="description">
           工程化学第六章
@@ -638,6 +674,8 @@ window.Quarto = {
 <p>本章的知识点并非孤立，它们形成了一个完整的应用链条： * 通过<strong>结构理论</strong>（杂化、晶体类型）预测<strong>物理性质</strong>（硬度、熔点）； * 通过<strong>热力学和电极电势</strong>预测<strong>化学稳定性</strong>（氧化还原、酸碱）； * 利用<strong>配位化学</strong>解决金属的提取、提纯及化学转化膜处理（如发黑、磷化）。</p>
 
 
+<!-- -->
+
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
@@ -724,6 +762,57 @@ window.Quarto = {
         container: window.document.getElementById('quarto-embedded-source-code-modal')
       });
       clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -1065,7 +1154,61 @@ window.Quarto = {
         <span class="nav-page-text">金属材料与无机非金属材料</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
-</nav>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> "无机物单质及化合物"</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="an">author:</span><span class="co"> "QMD"</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="an">date:</span><span class="co"> "2026/03/09"</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="an">description:</span><span class="co"> "工程化学第六章"</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="an">categories:</span><span class="co"> [ "工程化学" ]</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co">---</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="fu">### 一、 无机化合物的物理性质规律</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>本部分利用第五章的物质结构理论，推导宏观性质的变化规律：</span>
+<span id="cb1-11"><a href="#cb1-11"></a></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="ss">1.  </span>**熔沸点与硬度**：</span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="ss">    *   </span>**推导逻辑**：物质的熔沸点取决于质点间作用力的强弱。</span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="ss">    *   </span>**规律**：原子晶体（如金刚石）&gt; 离子晶体 &gt; 金属晶体 &gt; 分子晶体。</span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="ss">2.  </span>**溶解性**：</span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="ss">    *   </span>**推导逻辑**：遵循“相似相溶”原理。极性溶质易溶于极性溶剂（如水），非极性溶质易溶于非极性溶剂（如苯）。</span>
+<span id="cb1-17"><a href="#cb1-17"></a></span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="fu">### 二、 无机化合物的化学性质递变</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a>利用周期律推导同周期或同族元素化合物的性质变化：</span>
+<span id="cb1-20"><a href="#cb1-20"></a></span>
+<span id="cb1-21"><a href="#cb1-21"></a><span class="ss">1.  </span>**酸碱性**：</span>
+<span id="cb1-22"><a href="#cb1-22"></a><span class="ss">    *   </span>**规律**：同周期从左到右，最高价氧化物水化物的酸性增强，碱性减弱；同族从上到下，酸性减弱，碱性增强。</span>
+<span id="cb1-23"><a href="#cb1-23"></a><span class="ss">2.  </span>**氧化还原性**：</span>
+<span id="cb1-24"><a href="#cb1-24"></a><span class="ss">    *   </span>**推导逻辑**：与其电负性及电极电势相关。高氧化态通常具有氧化性，低氧化态具有还原性。</span>
+<span id="cb1-25"><a href="#cb1-25"></a></span>
+<span id="cb1-26"><a href="#cb1-26"></a><span class="fu">### 三、 配位化合物（配合物）基础 —— 本章理论核心</span></span>
+<span id="cb1-27"><a href="#cb1-27"></a>配合物是由中心原子（或离子）与配体通过配位键结合而成的复杂离子或分子。</span>
+<span id="cb1-28"><a href="#cb1-28"></a></span>
+<span id="cb1-29"><a href="#cb1-29"></a><span class="ss">1.  </span>**组成结构**：</span>
+<span id="cb1-30"><a href="#cb1-30"></a><span class="ss">    *   </span>**中心原子**：通常是过渡金属离子。</span>
+<span id="cb1-31"><a href="#cb1-31"></a><span class="ss">    *   </span>**配体**：含有孤对电子的分子或离子（如 $NH_3, Cl^-, H_2O$）。</span>
+<span id="cb1-32"><a href="#cb1-32"></a><span class="ss">    *   </span>**配位数**：中心原子结合配体的数目。</span>
+<span id="cb1-33"><a href="#cb1-33"></a><span class="ss">2.  </span>**螯合物 (Chelates)**：</span>
+<span id="cb1-34"><a href="#cb1-34"></a><span class="ss">    *   </span>**定义**：多齿配体与同一个中心原子形成具有环状结构的配合物。</span>
+<span id="cb1-35"><a href="#cb1-35"></a><span class="ss">    *   </span>**特性**：螯合物比一般的单齿配合物具有极高的稳定性（即**螯合效应**）。</span>
+<span id="cb1-36"><a href="#cb1-36"></a><span class="ss">3.  </span>**配合物成键理论的推导（价键理论）**：</span>
+<span id="cb1-37"><a href="#cb1-37"></a><span class="ss">    *   </span>**核心思想**：中心原子提供**空轨道**，配体提供**孤对电子**，两者通过**杂化**形成配位键。</span>
+<span id="cb1-38"><a href="#cb1-38"></a><span class="ss">    *   </span>**推导示例**：例如 $<span class="co">[</span><span class="ot">Cu(NH_3)_4</span><span class="co">]</span>^{2+}$，铜离子通过 $dsp^2$ 杂化，形成平面四方形结构。</span>
+<span id="cb1-39"><a href="#cb1-39"></a></span>
+<span id="cb1-40"><a href="#cb1-40"></a><span class="fu">### 四、 工程材料化学应用</span></span>
+<span id="cb1-41"><a href="#cb1-41"></a>作为机械专业的学生，这一部分将化学理论与实际材料性能挂钩：</span>
+<span id="cb1-42"><a href="#cb1-42"></a></span>
+<span id="cb1-43"><a href="#cb1-43"></a><span class="ss">1.  </span>**金属材料与合金**：</span>
+<span id="cb1-44"><a href="#cb1-44"></a><span class="ss">    *   </span>**合金化原理**：通过引入其他元素改变基体金属的结构，从而提高强度、硬度或耐腐蚀性。</span>
+<span id="cb1-45"><a href="#cb1-45"></a><span class="ss">2.  </span>**无机非金属材料**：</span>
+<span id="cb1-46"><a href="#cb1-46"></a><span class="ss">    *   </span>**传统材料**：水泥、玻璃、陶瓷的化学组成与硬化原理（如水泥的水化反应）。</span>
+<span id="cb1-47"><a href="#cb1-47"></a><span class="ss">    *   </span>**新型材料**：如纳米材料、超导材料和半导体材料的特性。</span>
+<span id="cb1-48"><a href="#cb1-48"></a></span>
+<span id="cb1-49"><a href="#cb1-49"></a><span class="fu">### 五、 核心概念的逻辑关联</span></span>
+<span id="cb1-50"><a href="#cb1-50"></a>本章的知识点并非孤立，它们形成了一个完整的应用链条：</span>
+<span id="cb1-51"><a href="#cb1-51"></a><span class="ss">*   </span>通过**结构理论**（杂化、晶体类型）预测**物理性质**（硬度、熔点）；</span>
+<span id="cb1-52"><a href="#cb1-52"></a><span class="ss">*   </span>通过**热力学和电极电势**预测**化学稳定性**（氧化还原、酸碱）；</span>
+<span id="cb1-53"><a href="#cb1-53"></a><span class="ss">*   </span>利用**配位化学**解决金属的提取、提纯及化学转化膜处理（如发黑、磷化）。</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

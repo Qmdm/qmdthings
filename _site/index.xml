@@ -377,6 +377,8 @@
 <p>掌握了这些知识点及其推导过程，你就能应对工程计算中关于平衡限度和环境条件（温压浓）改变对反应产率的影响分析了。</p>
 
 
+<!-- -->
+
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
@@ -500,6 +502,8 @@
 <h3 class="anchored" data-anchor-id="六-多重平衡-multiple-equilibria">六、 多重平衡 (Multiple Equilibria)</h3>
 <p>若一个化学反应可以由另外几个反应相加减得到，则该反应的平衡常数等于相关反应平衡常数的积或商。 * 例如：反应 (3) = 反应 (1) + 反应 (2)，则 <strong><img src="https://latex.codecogs.com/png.latex?K_3%20=%20K_1%20%5Ccdot%20K_2"></strong>。</p>
 
+
+<!-- -->
 
 </section>
 
@@ -626,6 +630,8 @@
 </ul></li>
 </ol>
 
+
+<!-- -->
 
 </section>
 
@@ -756,6 +762,8 @@
 <p>如果您需要针对某个特定的量子数计算或杂化轨道判断进行练习，我可以为您提供具体案例。</p>
 
 
+<!-- -->
+
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
@@ -884,6 +892,8 @@
 <h3 class="anchored" data-anchor-id="五-核心概念的逻辑关联">五、 核心概念的逻辑关联</h3>
 <p>本章的知识点并非孤立，它们形成了一个完整的应用链条： * 通过<strong>结构理论</strong>（杂化、晶体类型）预测<strong>物理性质</strong>（硬度、熔点）； * 通过<strong>热力学和电极电势</strong>预测<strong>化学稳定性</strong>（氧化还原、酸碱）； * 利用<strong>配位化学</strong>解决金属的提取、提纯及化学转化膜处理（如发黑、磷化）。</p>
 
+
+<!-- -->
 
 </section>
 
@@ -1015,6 +1025,8 @@
 </ol>
 
 
+<!-- -->
+
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
@@ -1138,6 +1150,8 @@
 <p>指示剂本身是弱的有机酸或碱（用 <img src="https://latex.codecogs.com/png.latex?HIn"> 表示），其酸式和碱式具有不同颜色。当溶液的 <img src="https://latex.codecogs.com/png.latex?%5BH%5E+%5D"> 改变到使其酸碱型比例发生反转时，颜色随之改变（变色范围通常为 <img src="https://latex.codecogs.com/png.latex?pH%20=%20pK_%7BIn%7D%20%5Cpm%201">）。</p>
 
 
+<!-- -->
+
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
@@ -1225,6 +1239,8 @@
 <h3 class="anchored" data-anchor-id="沉淀的转化-precipitation-transformation">6. 沉淀的转化 (Precipitation Transformation)</h3>
 <p>一种难溶电解质转化为另一种更难溶电解质的过程。 * <strong>规律</strong>：通常是 <strong><img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D"> 较大的转化为 <img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D"> 更小的</strong>（例如 <img src="https://latex.codecogs.com/png.latex?AgCl%20%5Crightarrow%20AgI">）。 * <strong>转化平衡常数 (<img src="https://latex.codecogs.com/png.latex?K">) 的推导</strong>： 对于反应 <img src="https://latex.codecogs.com/png.latex?AgCl(s)%20+%20I%5E-(aq)%20%5Crightleftharpoons%20AgI(s)%20+%20Cl%5E-(aq)">： <img src="https://latex.codecogs.com/png.latex?K%20=%20%5Cfrac%7B%5BCl%5E-%5D%7D%7B%5BI%5E-%5D%7D%20=%20%5Cfrac%7B%5BCl%5E-%5D%5BAg%5E+%5D%7D%7B%5BI%5E-%5D%5BAg%5E+%5D%7D%20=%20%5Cfrac%7BK_%7Bsp%7D(AgCl)%7D%7BK_%7Bsp%7D(AgI)%7D"> 若 <img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D(AgCl)%20%5Cgg%20K_%7Bsp%7D(AgI)">，则平衡常数 <img src="https://latex.codecogs.com/png.latex?K"> 非常大，转化非常彻底。</p>
 
+
+<!-- -->
 
 </section>
 
@@ -1709,6 +1725,67 @@ font-style: inherit;">coord_fixed</span>()</span></code></pre></div></div>
   <pubDate>Sat, 28 Feb 2026 16:00:00 GMT</pubDate>
 </item>
 <item>
+  <title>blog</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/posts/第一次blog/wonderful.html</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+
+  hitokoto!
+
+</p>
+
+
+
+<script>
+
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+
+
+  fetch("https://v1.hitokoto.cn?c=k")
+
+    .then((response) => response.json())
+
+    .then((data) => {
+
+      const hitokoto = document.querySelector("#hitokoto_text");
+
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+
+      hitokoto.innerText = data.hitokoto;
+
+    })
+
+    .catch(console.error);
+
+
+
+  hitokotoElement.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+  });
+
+</script>
+
+
+
+
+
+
+
+
+<!-- -->
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>Blogs</category>
+  <guid>https://qmdthings.top/posts/第一次blog/wonderful.html</guid>
+  <pubDate>Sat, 28 Feb 2026 16:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Random Stokes Wave</title>
   <link>https://qmdthings.top/posts/生活/好玩的模拟.html</link>
   <description><![CDATA[ 
@@ -1954,7 +2031,7 @@ animate()
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
   <guid>https://qmdthings.top/posts/生活/好玩的模拟.html</guid>
-  <pubDate>Mon, 06 Apr 2026 17:19:07 GMT</pubDate>
+  <pubDate>Tue, 07 Apr 2026 10:44:43 GMT</pubDate>
 </item>
 </channel>
 </rss>

@@ -58,13 +58,17 @@ website:
 format:
   html:
     respect-user-color-scheme: true
+    include-in-header:
+      - text: |
+          <script defer src="/_includes/hero.js"></script>
     #Code
     code-fold: true
     code-line-numbers: true
     code-tools:
       toggle: false
       caption: "Source Code"
-      
+    
+    
     theme:
       light: [flatly,custom.scss]
       dark: [darkly,custom.scss]
