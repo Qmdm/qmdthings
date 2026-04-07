@@ -3,32 +3,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Noto+Serif+SC:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap');
 @import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/lxgwwenkaiscreen.css');
 
+// —— 颜色变量集中管理 ——
+$brand-deep:   #2A5E70;
+$brand-main:   #4E9AB0;
+$brand-light:  #A8D4DE;
+$brand-fg:     #E6EDF0;
+$brand-border: #1F4654;
+
+// —— Bootstrap 变量覆盖 ——
+$navbar-bg: $brand-deep;
+$navbar-fg: $brand-fg;
+
+$font-family-sans-serif: "Source Serif 4", "Noto Serif SC", "LXGW WenKai Screen", Georgia, serif;
+$font-family-monospace:  "JetBrains Mono", "LXGW WenKai Screen", monospace;
+$font-size-root:         16px;
+$line-height-base:       1.8;
+
+$enable-responsive-font-sizes: true;
+
+/*-- scss:rules --*/
+
+// —— 中文字体回退（@font-face 放 rules 段，defaults 段里不解析）——
 @font-face {
   font-family: "JetBrains Mono";
   src: local("LXGW WenKai Screen"),
        local("PingFang SC"),
        local("Microsoft YaHei"),
        local("Noto Sans CJK SC");
-  unicode-range: U+4E00-9FFF, U+3400-4DBF,
-                 U+3000-303F, U+FF00-FFEF;
+  unicode-range: U+4E00-9FFF, U+3400-4DBF, U+3000-303F, U+FF00-FFEF;
   font-display: swap;
 }
-
-$font-family-sans-serif:  "Source Serif 4", "Noto Serif SC", Georgia, serif;
-$font-family-monospace:   "JetBrains Mono", monospace;
-$font-size-root:          16px;
-$line-height-base:        1.8;
-
-$enable-responsive-font-sizes: true;
-
-/*-- scss:rules --*/
 
 body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+// ============ Navbar ============
+.navbar {
+  background-color: $brand-deep !important;
+  border-bottom: 1px solid $brand-border;
 
+  .navbar-brand,
+  .nav-link {
+    color: $brand-fg !important;
+    transition: color 0.2s ease;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus {
+    color: $brand-light !important;
+  }
+
+  .nav-link.active {
+    color: #FFFFFF !important;
+    border-bottom: 2px solid $brand-light;
+  }
+
+  .aa-DetachedSearchButton,
+  .quarto-navbar-tools .nav-link {
+    color: $brand-fg !important;
+  }
+}
+
+// ============ 代码块 ============
 div.sourceCode pre,
 div.sourceCode code,
 div.sourceCode span,
@@ -36,64 +75,57 @@ pre > code,
 code {
   font-family: "JetBrains Mono", monospace !important;
   font-weight: 500;
-  font-size: 1rem !important;
-  font-feature-settings: "liga" 1, "calt" 1; 
+  font-size: 0.95rem !important;
+  font-feature-settings: "liga" 1, "calt" 1;
 }
 
 div.sourceCode {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  overflow-x: auto !important;
-  scrollbar-width: none !important;
+  overflow-x: auto;
+  scrollbar-width: none;          // Firefox
+  -ms-overflow-style: none;       // 老 IE/Edge
+  &::-webkit-scrollbar { display: none; }  // Chromium/Safari
 }
 
-div.sourceCode::-webkit-scrollbar {
-  display: none;
-}
-/* 注释斜体 */
+// 注释斜体
 code span.co {
   font-style: italic;
   color: #8b949e;
 }
 
+// ============ LaTeX 公式：隐藏滚动条 ============
+// MathJax 的 display 公式
+mjx-container[jax="CHTML"][display="true"],
+.math.display,
+.MathJax_Display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar { display: none; }
+  // 给左右一点 padding，避免公式贴边
+  padding: 0.2em 0.1em;
+}
 
-/* 官方移动端微调 */
+
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar { display: none; }
+  padding: 0.2em 0;
+}
+
+// 行内公式不要出现滚动条
+mjx-container[jax="CHTML"]:not([display="true"]),
+.math.inline {
+  overflow: visible !important;
+}
+
+// ============ Title Banner ============
 .quarto-title-banner .title {
   @include media-breakpoint-down(sm) {
-    font-size: 1.5rem !important; 
+    font-size: 1.5rem !important;
     line-height: 1.2;
   }
 }
-
-mjx-container {
-  display: inline-grid;
-  overflow-x: auto; /* 核心：允许水平滚动而非撑开 */
-  overflow-y: hidden;
-  max-width: 100%;
-  vertical-align: middle;
-}
-
-/* 针对展示型公式 ($$ ... $$) */
-mjx-container[display="true"] {
-  display: block;
-  width: 100%;
-  margin: 1em 0;
-  text-align: center; // 官方默认通常是居中，显式声明更稳
-  mjx-math {
-    white-space: nowrap; // 确保不强制折行，而是触发滚动
-  }
-}
-
-div.sourceCode pre,
-pre > code,
-code {
-  font-family: $font-family-monospace !important;
-  font-weight: 500;
-  // 建议改用相对单位或增加断点
-  font-size: 0.9rem !important; 
-  
-  @include media-breakpoint-down(sm) {
-    font-size: 0.8rem !important; // 手机端稍微缩小，提高代码阅读效率
-  }
-}
-

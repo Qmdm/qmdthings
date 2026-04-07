@@ -5,33 +5,5 @@ date: "2026/03/01"
 description: "使用quarto来写blog"
 categories: [ "Blogs" ]
 
-include-in-header:
-  - text: |
-      <style>
-        .quarto-title-banner { position: relative; overflow: hidden; }
-        #wind {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          z-index: 0;
-        }
-        .quarto-title-banner > .quarto-title {
-          position: relative;     /* 让标题浮在 canvas 上面 */
-          z-index: 1;
-        }
-        .quarto-title-banner .title { color: #e8efff; }
-      </style>
-include-after-body:
-  - text: |
-      <script>
-        (function(){
-          const banner = document.querySelector('.quarto-title-banner');
-          if (!banner) return;
-          const c = document.createElement('canvas');
-          c.id = 'wind';
-          banner.prepend(c);   // 注意是 prepend，作为第一个子元素当背景
-        })();
-      </script>
-      <script src="/_includes/hero.js" defer></script>
+
 ---

@@ -66,6 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
 <link href="../../posts/生活/Linux上面也有NFC!.html" rel="next">
+<link href="../../posts/第一次blog/wonderful.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -78,9 +79,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-58e7cb164a30d0964bc3a4cf0cb5a652.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-fbf78ac79c7b05a80ff27b67fb5aa843.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-05cd0a6e024cadd40b6fd1a01d287e6f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-fbf78ac79c7b05a80ff27b67fb5aa843.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-2ab12bd36d21dcfdfec75ef95dc8caa2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-03f7dd53513f69f7666d0a6bb9f098ad.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-2ab12bd36d21dcfdfec75ef95dc8caa2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -107,7 +108,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script defer="" src="../../_includes/hero.js"></script>
+<style>
+  .quarto-title-banner { position: relative; overflow: hidden; }
+  #wind {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  .quarto-title-banner > .quarto-title {
+    position: relative;
+    z-index: 1;
+  }
+  .quarto-title-banner .title { color: #e8efff; }
+</style>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -305,7 +320,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="../../about/qmd.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -315,12 +330,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="dropdown-menu" aria-labelledby="nav-menu-blogs">    
         <li class="dropdown-header">Posts</li>
         <li>
-    <a class="dropdown-item" href="../../posts/生活/好玩的模拟.html">
- <span class="dropdown-text">生活</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="../../posts/第一次blog/wonderful.html">
  <span class="dropdown-text">第一次blog</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../posts/生活/好玩的模拟.html">
+ <span class="dropdown-text">生活</span></a>
   </li>  
     </ul>
   </li>
@@ -334,13 +349,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="../../notes/工程化学/1. 热化学基础.html">
  <span class="dropdown-text">工程化学</span></a>
   </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fun" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Fun</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-fun">    
     </ul>
   </li>
 </ul>
@@ -419,13 +427,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">生活</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">第一次blog</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/第一次blog/wonderful.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">blog</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">生活</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../posts/生活/好玩的模拟.html" class="sidebar-item-text sidebar-link active">
@@ -436,23 +461,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../../posts/生活/Linux上面也有NFC!.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Linux上面也有NFC</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../posts/第一次blog/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">第一次blog</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../posts/第一次blog/wonderful.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">…</span></a>
   </div>
 </li>
       </ul>
@@ -1182,6 +1190,9 @@ animate()
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../../posts/第一次blog/wonderful.html" class="pagination-link" aria-label="blog">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">blog</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../posts/生活/Linux上面也有NFC!.html" class="pagination-link" aria-label="Linux上面也有NFC">
@@ -1409,6 +1420,16 @@ animate()
     </div>
   </div>
 </footer>
+<script>
+  (function(){
+    const banner = document.querySelector('.quarto-title-banner');
+    if (!banner) return;
+    const c = document.createElement('canvas');
+    c.id = 'wind';
+    banner.prepend(c);
+  })();
+</script>
+<script src="../_includes/hero.js" defer=""></script>
 
 
 

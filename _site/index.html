@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -74,14 +39,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-58e7cb164a30d0964bc3a4cf0cb5a652.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-c27fcf49d1f223a5e9e0478296a4f52c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-58e7cb164a30d0964bc3a4cf0cb5a652.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-4ef79d5a3369c68aa1b263bbd9e1a454.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-da59b3355fab369b8a380d6e61afa6d5.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-4ef79d5a3369c68aa1b263bbd9e1a454.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-fbf78ac79c7b05a80ff27b67fb5aa843.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-05cd0a6e024cadd40b6fd1a01d287e6f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-fbf78ac79c7b05a80ff27b67fb5aa843.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-feaeefe70f2f714a586377907dc912f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-da42b25469f370138c20ab327e9168bb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-feaeefe70f2f714a586377907dc912f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -137,7 +102,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
   })
   </script>
-<script defer="" src="./_includes/hero.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -364,7 +328,7 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="./about/qmd.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -374,12 +338,12 @@ window.Quarto = {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-blogs">    
         <li class="dropdown-header">Posts</li>
         <li>
-    <a class="dropdown-item" href="./posts/生活/好玩的模拟.html">
- <span class="dropdown-text">生活</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="./posts/第一次blog/wonderful.html">
  <span class="dropdown-text">第一次blog</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./posts/生活/好玩的模拟.html">
+ <span class="dropdown-text">生活</span></a>
   </li>  
     </ul>
   </li>
@@ -393,13 +357,6 @@ window.Quarto = {
     <a class="dropdown-item" href="./notes/工程化学/1. 热化学基础.html">
  <span class="dropdown-text">工程化学</span></a>
   </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fun" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Fun</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-fun">    
     </ul>
   </li>
 </ul>
@@ -431,7 +388,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page-left">
-      <div class="quarto-title-block"><div><h1 class="title">杂乱的Notes/Blogs</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source Code</button></div></div>
+      <h1 class="title">杂乱的Notes/Blogs</h1>
                       </div>
   </div>
     
@@ -449,7 +406,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(13)</span></div><div class="category" data-category="JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2">工程化学 <span class="quarto-category-count">(9)</span></div><div class="category" data-category="QmxvZw==">Blog <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QmxvZ3M=">Blogs <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TGludXg=">Linux <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(12)</span></div><div class="category" data-category="JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2">工程化学 <span class="quarto-category-count">(9)</span></div><div class="category" data-category="QmxvZw==">Blog <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QmxvZ3M=">Blogs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGludXg=">Linux <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -460,8 +417,6 @@ window.Quarto = {
 
 
 
-
-<!-- -->
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
@@ -487,7 +442,7 @@ window.Quarto = {
   </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1775493703054" data-listing-reading-time-sort="2" data-listing-word-count-sort="208">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1775576876733" data-listing-reading-time-sort="2" data-listing-word-count-sort="208">
 <div class="thumbnail"><a href="./posts/生活/好玩的模拟.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -510,7 +465,7 @@ window.Quarto = {
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2" data-listing-date-sort="1772985600000" data-listing-file-modified-sort="1775402905904" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="619">
+<div class="quarto-post image-right" data-index="1" data-categories="JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2" data-listing-date-sort="1772985600000" data-listing-file-modified-sort="1775578140630" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="619">
 <div class="thumbnail"><a href="./notes/工程化学/1. 热化学基础.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -570,7 +525,7 @@ QMD
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2" data-listing-date-sort="1772985600000" data-listing-file-modified-sort="1775405003089" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="330">
+<div class="quarto-post image-right" data-index="3" data-categories="JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2" data-listing-date-sort="1772985600000" data-listing-file-modified-sort="1775578259281" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="330">
 <div class="thumbnail"><a href="./notes/工程化学/3. 溶液.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -600,7 +555,7 @@ QMD
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2" data-listing-date-sort="1772985600000" data-listing-file-modified-sort="1775402905904" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="311">
+<div class="quarto-post image-right" data-index="4" data-categories="JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2" data-listing-date-sort="1772985600000" data-listing-file-modified-sort="1775577398051" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="311">
 <div class="thumbnail"><a href="./notes/工程化学/4. 氧化还原与电化学.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -750,7 +705,7 @@ QMD
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2" data-listing-date-sort="1772985600000" data-listing-file-modified-sort="1775402905905" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="242">
+<div class="quarto-post image-right" data-index="9" data-categories="JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2" data-listing-date-sort="1772985600000" data-listing-file-modified-sort="1775577764018" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="242">
 <div class="thumbnail"><a href="./notes/工程化学/9. 合成高分子材料.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -812,37 +767,7 @@ QMD
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="QmxvZ3M=" data-listing-date-sort="1772294400000" data-listing-file-modified-sort="1775556635965" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="236">
-<div class="thumbnail"><a href="./posts/第一次blog/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts\第一次blog\index_files\figure-html\unnamed-chunk-1-1.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/第一次blog/index.html" class="no-external">第一次blog</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('QmxvZ3M='); return false;">Blogs</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/第一次blog/index.html" class="no-external">
-<p>使用quarto来写blog</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/第一次blog/index.html" class="no-external">
-<div class="listing-date">
-Mar 1, 2026
-</div>
-<div class="listing-author">
-QMD
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="12" data-categories="QmxvZ3M=" data-listing-date-sort="1772294400000" data-listing-file-modified-sort="1775558679243" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="quarto-post image-right" data-index="11" data-categories="QmxvZ3M=" data-listing-date-sort="1772294400000" data-listing-file-modified-sort="1775576086253" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
 <div class="thumbnail"><a href="./posts/第一次blog/wonderful.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -958,57 +883,6 @@ QMD
         container: window.document.getElementById('quarto-embedded-source-code-modal')
       });
       clipboardModal.on('success', onCopySuccess);
-    }
-    const viewSource = window.document.getElementById('quarto-view-source') ||
-                       window.document.getElementById('quarto-code-tools-source');
-    if (viewSource) {
-      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-      viewSource.addEventListener("click", function(e) {
-        if (sourceUrl) {
-          // rstudio viewer pane
-          if (/\bcapabilities=\b/.test(window.location)) {
-            window.open(sourceUrl);
-          } else {
-            window.location.href = sourceUrl;
-          }
-        } else {
-          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-          modal.show();
-        }
-        return false;
-      });
-    }
-    function toggleCodeHandler(show) {
-      return function(e) {
-        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-        for (let i=0; i<detailsSrc.length; i++) {
-          const details = detailsSrc[i].parentElement;
-          if (show) {
-            details.open = true;
-          } else {
-            details.removeAttribute("open");
-          }
-        }
-        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
-        const fromCls = show ? "hidden" : "unhidden";
-        const toCls = show ? "unhidden" : "hidden";
-        for (let i=0; i<cellCodeDivs.length; i++) {
-          const codeDiv = cellCodeDivs[i];
-          if (codeDiv.classList.contains(fromCls)) {
-            codeDiv.classList.remove(fromCls);
-            codeDiv.classList.add(toCls);
-          } 
-        }
-        return false;
-      }
-    }
-    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-    if (hideAllCode) {
-      hideAllCode.addEventListener("click", toggleCodeHandler(false));
-    }
-    const showAllCode = window.document.getElementById("quarto-show-all-code");
-    if (showAllCode) {
-      showAllCode.addEventListener("click", toggleCodeHandler(true));
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -1338,23 +1212,7 @@ QMD
       }
     }
   });
-  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> "杂乱的Notes/Blogs"</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="an">listing:</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="co">  contents: </span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="co">    - posts</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="co">    - notes</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="co">  feed: true</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="co">  sort: "date desc"</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="co">  type: default</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a><span class="co">  categories: true</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a><span class="co">  sort-ui: true</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a><span class="co">  filter-ui: false</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="an">page-layout:</span><span class="co"> full</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a><span class="an">title-block-banner:</span><span class="co"> true</span></span>
-<span id="cb1-15"><a href="#cb1-15"></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
-</div></div></div></div></div>
+  </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
