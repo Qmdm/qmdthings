@@ -48,6 +48,18 @@ body {
       #{$brand-deep} 80px,
       var(--bs-body-bg, #FAFBFC) 80px
     ) no-repeat;
+  
+
+
+  @include media-breakpoint-down(lg) {
+    background:
+      linear-gradient(to bottom,
+        #{$brand-deep} 0,
+        #{$brand-deep} 140px,
+        var(--bs-body-bg, #FAFBFC) 140px
+      ) no-repeat;
+    
+  }
 }
 
 
