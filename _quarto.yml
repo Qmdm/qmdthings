@@ -60,7 +60,7 @@ format:
     respect-user-color-scheme: true
     include-after-body:
     - text: |
-        <script src="_includes/auto-collapse.js" defer></script>
+        <script src="../../_includes/auto-collapse.js" defer></script>
     # Code
     code-fold: true
     code-line-numbers: true
