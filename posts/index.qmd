@@ -1,0 +1,7 @@
+---
+title: "热化学基础"
+author: "QMD"
+date: "2026/03/09"
+description: "工程化学的第一章"
+categories: [ "工程化学" ]
+---

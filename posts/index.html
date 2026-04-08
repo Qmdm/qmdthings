@@ -2,16 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.36">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="QMD">
+<meta name="dcterms.date" content="2026-03-09">
+<meta name="description" content="工程化学的第一章">
 
-<title>杂乱的Notes/Blogs – QMD的杂物间</title>
+<title>热化学基础 – QMD的杂物间</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -23,32 +23,66 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-48ce32951128c622c7c0bd2481e33cf2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-cabbc756652408d113a0442e4f5e5e62.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-48ce32951128c622c7c0bd2481e33cf2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-22cc3003e9aeef30e93ff496d574c135.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-50d1ade18999d442ddde15d5822f6c5a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-22cc3003e9aeef30e93ff496d574c135.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4ef79d5a3369c68aa1b263bbd9e1a454.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-da59b3355fab369b8a380d6e61afa6d5.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4ef79d5a3369c68aa1b263bbd9e1a454.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-f5efc1e649ffaac56c6c3811a3a61442.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-935235d74c3e923a6588abdeb12d18c3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-f5efc1e649ffaac56c6c3811a3a61442.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -75,70 +109,27 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
+<style>
+  .quarto-title-banner { position: relative; overflow: hidden; }
+  #wind {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
   }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
+  .quarto-title-banner > .quarto-title {
+    position: relative;
+    z-index: 1;
+  }
+  .quarto-title-banner .title { color: #e8efff; }
+</style>
 
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="QMD的杂物间" href="index.xml" data-external="1"></head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -316,7 +307,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Navi</span>
     </a>
   </div>
@@ -326,11 +317,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about/qmd.html"> 
+    <a class="nav-link" href="../about/qmd.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -338,9 +329,8 @@ window.Quarto = {
  <span class="menu-text">Blogs</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-blogs">    
-        <li class="dropdown-header">Posts</li>
         <li>
-    <a class="dropdown-item" href="./posts/开始/index.html">
+    <a class="dropdown-item" href="../posts/index.html">
  <span class="dropdown-text">热化学基础</span></a>
   </li>  
     </ul>
@@ -352,7 +342,7 @@ window.Quarto = {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-notes">    
         <li class="dropdown-header">Notes</li>
         <li>
-    <a class="dropdown-item" href="./notes/工程化学/1. 热化学基础.html">
+    <a class="dropdown-item" href="../notes/工程化学/1. 热化学基础.html">
  <span class="dropdown-text">工程化学</span></a>
   </li>  
     </ul>
@@ -364,7 +354,7 @@ window.Quarto = {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-fun">    
         <li class="dropdown-header">Fun</li>
         <li>
-    <a class="dropdown-item" href="./fun/生活/helloblogs.html">
+    <a class="dropdown-item" href="../fun/生活/helloblogs.html">
  <span class="dropdown-text">生活</span></a>
   </li>  
     </ul>
@@ -372,7 +362,7 @@ window.Quarto = {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -393,368 +383,95 @@ window.Quarto = {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../posts/index.html">热化学基础</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">杂乱的Notes/Blogs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <div class="quarto-title-block"><div><h1 class="title">热化学基础</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source Code</button></div></div>
+                  <div>
+        <div class="description">
+          工程化学的第一章
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">工程化学</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>QMD </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 9, 2026</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(10)</span></div><div class="category" data-category="JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2">工程化学 <span class="quarto-category-count">(10)</span></div></div></div>
-<!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
-
-
-
-
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-author" data-direction="asc">
-        Author
-      </option>
-    </select>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../posts/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">热化学基础</span></a>
   </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2" data-listing-date-sort="1773014400000" data-listing-file-modified-sort="1775645160081" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<div class="thumbnail"><a href="./posts/开始/index.html" class="no-external">
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/开始/index.html" class="no-external">热化学基础</a>
-</h3>
-<div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2'); return false;">工程化学</div>
 
-</div>
-<div class="delink listing-description"><a href="./posts/开始/index.html" class="no-external">
-<p>工程化学的第一章</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/开始/index.html" class="no-external">
-<div class="listing-date">
-Mar 9, 2026
-</div>
-<div class="listing-author">
-QMD
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2" data-listing-date-sort="1773014400000" data-listing-file-modified-sort="1775645160080" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="195">
-<div class="thumbnail"><a href="./notes/工程化学/5. 物质结构基础.html" class="no-external">
 
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./notes/工程化学/5. 物质结构基础.html" class="no-external">物质结构基础</a>
-</h3>
-<div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2'); return false;">工程化学</div>
 
-</div>
-<div class="delink listing-description"><a href="./notes/工程化学/5. 物质结构基础.html" class="no-external">
-<p>工程化学第五章</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./notes/工程化学/5. 物质结构基础.html" class="no-external">
-<div class="listing-date">
-Mar 9, 2026
-</div>
-<div class="listing-author">
-QMD
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2" data-listing-date-sort="1773014400000" data-listing-file-modified-sort="1775645160080" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="155">
-<div class="thumbnail"><a href="./notes/工程化学/6. 无机物单质及化合物.html" class="no-external">
+<!-- -->
 
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./notes/工程化学/6. 无机物单质及化合物.html" class="no-external">无机物单质及化合物</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2'); return false;">工程化学</div>
-
-</div>
-<div class="delink listing-description"><a href="./notes/工程化学/6. 无机物单质及化合物.html" class="no-external">
-<p>工程化学第六章</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./notes/工程化学/6. 无机物单质及化合物.html" class="no-external">
-<div class="listing-date">
-Mar 9, 2026
-</div>
-<div class="listing-author">
-QMD
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2" data-listing-date-sort="1773014400000" data-listing-file-modified-sort="1775645160080" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="318">
-<div class="thumbnail"><a href="./notes/工程化学/8. 有机化学和有机化合物.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./notes/工程化学/8. 有机化学和有机化合物.html" class="no-external">有机化学与有机化合物</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2'); return false;">工程化学</div>
-
-</div>
-<div class="delink listing-description"><a href="./notes/工程化学/8. 有机化学和有机化合物.html" class="no-external">
-<p>工程化学第八章</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./notes/工程化学/8. 有机化学和有机化合物.html" class="no-external">
-<div class="listing-date">
-Mar 9, 2026
-</div>
-<div class="listing-author">
-QMD
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2" data-listing-date-sort="1773014400000" data-listing-file-modified-sort="1775645160080" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="619">
-<div class="thumbnail"><a href="./notes/工程化学/1. 热化学基础.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./notes/工程化学/1. 热化学基础.html" class="no-external">热化学基础</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2'); return false;">工程化学</div>
-
-</div>
-<div class="delink listing-description"><a href="./notes/工程化学/1. 热化学基础.html" class="no-external">
-<p>工程化学的第一章</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./notes/工程化学/1. 热化学基础.html" class="no-external">
-<div class="listing-date">
-Mar 9, 2026
-</div>
-<div class="listing-author">
-QMD
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2" data-listing-date-sort="1773014400000" data-listing-file-modified-sort="1775645160080" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="242">
-<div class="thumbnail"><a href="./notes/工程化学/9. 合成高分子材料.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./notes/工程化学/9. 合成高分子材料.html" class="no-external">合成高分子材料</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2'); return false;">工程化学</div>
-
-</div>
-<div class="delink listing-description"><a href="./notes/工程化学/9. 合成高分子材料.html" class="no-external">
-<p>工程化学第九章</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./notes/工程化学/9. 合成高分子材料.html" class="no-external">
-<div class="listing-date">
-Mar 9, 2026
-</div>
-<div class="listing-author">
-QMD
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2" data-listing-date-sort="1773014400000" data-listing-file-modified-sort="1775645160080" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="351">
-<div class="thumbnail"><a href="./notes/工程化学/7. 金属材料与无机非金属材料.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./notes/工程化学/7. 金属材料与无机非金属材料.html" class="no-external">金属材料与无机非金属材料</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2'); return false;">工程化学</div>
-
-</div>
-<div class="delink listing-description"><a href="./notes/工程化学/7. 金属材料与无机非金属材料.html" class="no-external">
-<p>工程化学第六章</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./notes/工程化学/7. 金属材料与无机非金属材料.html" class="no-external">
-<div class="listing-date">
-Mar 9, 2026
-</div>
-<div class="listing-author">
-QMD
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2" data-listing-date-sort="1773014400000" data-listing-file-modified-sort="1775645160080" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="330">
-<div class="thumbnail"><a href="./notes/工程化学/2. 化学平衡与化学反应速率.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./notes/工程化学/2. 化学平衡与化学反应速率.html" class="no-external">化学平衡与化学反应速率</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2'); return false;">工程化学</div>
-
-</div>
-<div class="delink listing-description"><a href="./notes/工程化学/2. 化学平衡与化学反应速率.html" class="no-external">
-<p>工程化学第二章</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./notes/工程化学/2. 化学平衡与化学反应速率.html" class="no-external">
-<div class="listing-date">
-Mar 9, 2026
-</div>
-<div class="listing-author">
-QMD
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2" data-listing-date-sort="1773014400000" data-listing-file-modified-sort="1775645160080" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="330">
-<div class="thumbnail"><a href="./notes/工程化学/3. 溶液.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./notes/工程化学/3. 溶液.html" class="no-external">溶液</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2'); return false;">工程化学</div>
-
-</div>
-<div class="delink listing-description"><a href="./notes/工程化学/3. 溶液.html" class="no-external">
-<p>工程化学第三章</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./notes/工程化学/3. 溶液.html" class="no-external">
-<div class="listing-date">
-Mar 9, 2026
-</div>
-<div class="listing-author">
-QMD
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-categories="JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2" data-listing-date-sort="1773014400000" data-listing-file-modified-sort="1775645160080" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="311">
-<div class="thumbnail"><a href="./notes/工程化学/4. 氧化还原与电化学.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./notes/工程化学/4. 氧化还原与电化学.html" class="no-external">氧化还原反应与电化学</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2'); return false;">工程化学</div>
-
-</div>
-<div class="delink listing-description"><a href="./notes/工程化学/4. 氧化还原与电化学.html" class="no-external">
-<p>工程化学第四章</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./notes/工程化学/4. 氧化还原与电化学.html" class="no-external">
-<div class="listing-date">
-Mar 9, 2026
-</div>
-<div class="listing-author">
-QMD
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -838,6 +555,57 @@ QMD
         container: window.document.getElementById('quarto-embedded-source-code-modal')
       });
       clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -1167,7 +935,15 @@ QMD
       }
     }
   });
-  </script>
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> "热化学基础"</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="an">author:</span><span class="co"> "QMD"</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="an">date:</span><span class="co"> "2026/03/09"</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="an">description:</span><span class="co"> "工程化学的第一章"</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="an">categories:</span><span class="co"> [ "工程化学" ]</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1188,6 +964,17 @@ QMD
     </div>
   </div>
 </footer>
+<script src="../../_includes/auto-collapse.js" defer=""></script>
+<script>
+  (function(){
+    const banner = document.querySelector('.quarto-title-banner');
+    if (!banner) return;
+    const c = document.createElement('canvas');
+    c.id = 'wind';
+    banner.prepend(c);
+  })();
+</script>
+<script src="../../_includes/hero.js" defer=""></script>
 <script src="../../_includes/auto-collapse.js" defer=""></script>
 
 

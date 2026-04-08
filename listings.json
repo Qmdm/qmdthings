@@ -2,7 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/生活/好玩的模拟.html",
+      "/posts/开始/index.html",
       "/notes/工程化学/5. 物质结构基础.html",
       "/notes/工程化学/6. 无机物单质及化合物.html",
       "/notes/工程化学/8. 有机化学和有机化合物.html",
@@ -11,9 +11,7 @@
       "/notes/工程化学/7. 金属材料与无机非金属材料.html",
       "/notes/工程化学/2. 化学平衡与化学反应速率.html",
       "/notes/工程化学/3. 溶液.html",
-      "/notes/工程化学/4. 氧化还原与电化学.html",
-      "/posts/第一次blog/wonderful.html",
-      "/posts/生活/Linux上面也有NFC!.html"
+      "/notes/工程化学/4. 氧化还原与电化学.html"
     ]
   }
 ]
