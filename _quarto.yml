@@ -1,6 +1,6 @@
 project:
   type: website
-  resources: [ _includes, posts, notes, error, README.md ]
+  resources: [ _includes, posts, notes, fun, error, README.md ]
 execute:
   freeze: auto
   # Code
@@ -38,6 +38,7 @@ website:
         href: about/qmd.qmd
       - sidebar:blogs
       - sidebar:notes
+      - sidebar:fun
     right:
       - icon: rss
         href: index.xml
@@ -54,6 +55,10 @@ website:
       title: "Notes"
       contents: 
         - auto: notes
+    - id: fun
+      title: "Fun"
+      contents: 
+        - auto: fun
     
 format:
   html:
