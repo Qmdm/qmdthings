@@ -1,6 +1,9 @@
 ---
-title: "Random Stokes Wave"
-format: html
+title: "Hello Blogs"
+author: "QMD"
+date: "2026/03/01"
+description: "使用quarto来写blog"
+categories: [ "Blogs" ]
 ---
 
 <div id="wave-canvas" style="width:100%;height:50vh;"></div>
