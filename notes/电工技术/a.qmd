@@ -10,7 +10,7 @@ format:
     fig-format: svg
 ---
 ```{tikz}
-\begin{circuitikz}[european]
+\begin{circuitikz}[european, line width=0.6pt]
   \draw (0,0) to[battery1, l=$V_s$] (0,3)
               to[R, l=$R$] (3,3)
               to[C, l=$C$] (3,0)
@@ -18,4 +18,3 @@ format:
   \draw (3,3) -- (4.5,3) node[right] {$V_{out}$};
 \end{circuitikz}
 ```
-

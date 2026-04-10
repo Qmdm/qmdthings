@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=latex 2026.4.10)  10 APR 2026 14:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=latex 2026.4.10)  10 APR 2026 16:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**tikz385682bc7be.tex
-(./tikz385682bc7be.tex
+**tikz2fae45b7f8e0.tex
+(./tikz2fae45b7f8e0.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
 (/home/qmd/.TinyTeX/texmf-dist/tex/latex/standalone/standalone.cls
@@ -329,8 +329,8 @@ File: l3backend-dvips.def 2026-02-18 L3 backend support: dvips
 \g__pdfannot_backend_link_int=\count321
 \g__pdfannot_backend_link_sf_int=\count322
 )
-No file tikz385682bc7be.aux.
-\openout1 = `tikz385682bc7be.aux'.
+No file tikz2fae45b7f8e0.aux.
+\openout1 = `tikz2fae45b7f8e0.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
@@ -346,21 +346,26 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
-! You can't use `macro parameter character #' in vertical mode.
-l.10 #
-      
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
+
+! LaTeX Error: Environment circuitikz undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 \begin{circuitikz}
+                       [european, line width=0.6pt]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
  
 Here is how much of TeX's memory you used:
- 12654 strings out of 469279
- 261507 string characters out of 5464934
- 666843 words of memory out of 5000000
+ 12655 strings out of 469279
+ 261654 string characters out of 5464934
+ 666846 words of memory out of 5000000
  41308 multiletter control sequences out of 15000+600000
  627721 words of font info for 40 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 117i,1n,121p,420b,89s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,1n,121p,421b,89s stack positions out of 10000i,1000n,20000p,200000b,200000s
 No pages of output.

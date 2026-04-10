@@ -68,6 +68,7 @@ format:
     include-after-body:
     - text: |
         <script src="../../_includes/auto-collapse.js" defer></script>
+        <script src="../../_includes/svg.js" defer></script>
     # Code
     code-fold: true
     code-line-numbers: true
@@ -84,10 +85,6 @@ knitr:
   opts_chunk:
     engine.opts:
       tikz:
-        extra.preamble: |
-            \usepackage{circuitikz}
-            \usepackage{siunitx}
-            \usepackage{amsmath}
-            \ctikzset{bipoles/thickness=1.5}
-            \tikzset{every path/.style={line width=1.2pt}}
+        extra.preamble:
+            "\\usepackage{circuitikz}"
         
