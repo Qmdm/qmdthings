@@ -1,0 +1,6 @@
+---
+title: "随便写写"
+listing:
+  contents: "**/*.qmd"
+  type: default
+---

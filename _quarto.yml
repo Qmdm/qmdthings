@@ -1,11 +1,12 @@
 project:
   type: website
   resources: [ _includes, posts, notes, fun, error, README.md ]
+  
 execute:
   freeze: auto
   # Code
-  message: false
-  warning: false
+  # message: false
+  # warning: false
 
 
 website:
@@ -63,6 +64,7 @@ website:
 format:
   html:
     respect-user-color-scheme: true
+    fig-format: svg
     include-after-body:
     - text: |
         <script src="../../_includes/auto-collapse.js" defer></script>
@@ -76,3 +78,16 @@ format:
       dark: [darkly,custom.scss]
     css: styles.css
     toc: true
+
+# kniter核
+knitr:
+  opts_chunk:
+    engine.opts:
+      tikz:
+        extra.preamble: |
+            \usepackage{circuitikz}
+            \usepackage{siunitx}
+            \usepackage{amsmath}
+            \ctikzset{bipoles/thickness=1.5}
+            \tikzset{every path/.style={line width=1.2pt}}
+        

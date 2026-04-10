@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,6 +12,9 @@
 
 <title>Linux上面也有NFC – QMD的杂物间</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -71,19 +74,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../fun/生活/helloblogs.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4ef79d5a3369c68aa1b263bbd9e1a454.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-da59b3355fab369b8a380d6e61afa6d5.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4ef79d5a3369c68aa1b263bbd9e1a454.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-48ce32951128c622c7c0bd2481e33cf2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-cabbc756652408d113a0442e4f5e5e62.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-48ce32951128c622c7c0bd2481e33cf2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-f5efc1e649ffaac56c6c3811a3a61442.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-935235d74c3e923a6588abdeb12d18c3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-f5efc1e649ffaac56c6c3811a3a61442.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-6ae62c7143198874f3ebcfe87447500c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-5ccfda529eba86a06c1f0944bf0d4f7d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-6ae62c7143198874f3ebcfe87447500c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -330,8 +332,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Blogs</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-blogs">    
+        <li class="dropdown-header">Posts</li>
         <li>
-    <a class="dropdown-item" href="../../posts/index.html">
+    <a class="dropdown-item" href="../../posts/开始/index.html">
  <span class="dropdown-text">热化学基础</span></a>
   </li>  
     </ul>
@@ -343,6 +346,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="dropdown-menu" aria-labelledby="nav-menu-notes">    
         <li class="dropdown-header">Notes</li>
         <li>
+    <a class="dropdown-item" href="../../notes/材料力学/1. 绪论.html">
+ <span class="dropdown-text">材料力学</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../notes/电工技术/电路的暂态分析.html">
+ <span class="dropdown-text">电工技术</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../notes/概率论与数理统计/概率论的基本概念.html">
+ <span class="dropdown-text">概率论与数理统计</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../../notes/工程化学/1. 热化学基础.html">
  <span class="dropdown-text">工程化学</span></a>
   </li>  
@@ -353,7 +368,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Fun</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-fun">    
-        <li class="dropdown-header">Fun</li>
+        <li class="dropdown-header">随便写写</li>
         <li>
     <a class="dropdown-item" href="../../fun/生活/helloblogs.html">
  <span class="dropdown-text">生活</span></a>
@@ -389,7 +404,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Fun</li><li class="breadcrumb-item"><a href="../../fun/生活/helloblogs.html">生活</a></li><li class="breadcrumb-item"><a href="../../fun/生活/Linux上面也有NFC!.html">Linux上面也有NFC</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../fun/index.html">随便写写</a></li><li class="breadcrumb-item"><a href="../../fun/生活/helloblogs.html">生活</a></li><li class="breadcrumb-item"><a href="../../fun/生活/Linux上面也有NFC!.html">Linux上面也有NFC</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -401,7 +416,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Fun</li><li class="breadcrumb-item"><a href="../../fun/生活/helloblogs.html">生活</a></li><li class="breadcrumb-item"><a href="../../fun/生活/Linux上面也有NFC!.html">Linux上面也有NFC</a></li></ol></nav>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../fun/index.html">随便写写</a></li><li class="breadcrumb-item"><a href="../../fun/生活/helloblogs.html">生活</a></li><li class="breadcrumb-item"><a href="../../fun/生活/Linux上面也有NFC!.html">Linux上面也有NFC</a></li></ol></nav>
       <div class="quarto-title-block"><div><h1 class="title">Linux上面也有NFC</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source Code</button></div></div>
                   <div>
         <div class="description">
@@ -448,8 +463,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Fun</span></a>
+            <a href="../../fun/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">随便写写</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -499,45 +514,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
 <p id="hitokoto">
-
   <a href="#" id="hitokoto_text" style="text-decoration: none">hitokoto!</a>
-
 </p>
 
-
-
 <script>
-
   const hitokotoElement = document.querySelector("#hitokoto_text");
 
-
-
   fetch("https://v1.hitokoto.cn?c=k")
-
     .then((response) => response.json())
-
     .then((data) => {
-
       const hitokoto = document.querySelector("#hitokoto_text");
-
       hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
-
       hitokoto.innerText = data.hitokoto;
-
     })
-
     .catch(console.error);
 
-
-
   hitokotoElement.addEventListener("click", function (event) {
-
     event.preventDefault();
-
   });
-
 </script>
-
 
 
 

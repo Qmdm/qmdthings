@@ -13,7 +13,7 @@ license: "CC BY-NC-SA"
 
 format:
   html:
-    include-before-body: ../../_includes/hitokoto.html
+    include-before-body: ../_includes/hitokoto.html
     include-in-header:
       - text: |
           <style>
