@@ -1,12 +1,12 @@
 project:
   type: website
-  resources: [ _includes, posts, notes, fun, error, README.md ]
+  resources: [ assets, posts, notes, fun, error, setup, README.md ]
   
 execute:
   freeze: auto
   # Code
-  # message: false
-  # warning: false
+  message: false
+  warning: false
 
 
 website:
@@ -67,8 +67,8 @@ format:
     fig-format: svg
     include-after-body:
     - text: |
-        <script src="../../_includes/auto-collapse.js" defer></script>
-        <script src="../../_includes/svg.js" defer></script>
+        <script src="../../assets/auto-collapse.js" defer></script>
+        <script src="../../assets/svg.js" defer></script>
     # Code
     code-fold: true
     code-line-numbers: true
@@ -79,12 +79,3 @@ format:
       dark: [darkly,custom.scss]
     css: styles.css
     toc: true
-
-# kniter核
-knitr:
-  opts_chunk:
-    engine.opts:
-      tikz:
-        extra.preamble:
-            "\\usepackage{circuitikz}"
-        

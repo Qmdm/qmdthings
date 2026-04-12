@@ -1,0 +1,19 @@
+```{R}
+#| include: false
+knitr::knit_engines$set(circuitikz = function(options) {
+  options$code <- c(
+    "\\tikzset{",
+    "  every node/.style={font=\\sffamily\\normalsize},",
+    "  every path/.style={line width=1.5pt}",
+    "}",
+    options$code
+  )
+  options$engine.opts <- list(
+    extra.preamble = c(
+      "\\usepackage{circuitikz}",
+      "\\usepackage{siunitx}"
+    )
+  )
+  knitr::knit_engines$get("tikz")(options)
+})
+```
