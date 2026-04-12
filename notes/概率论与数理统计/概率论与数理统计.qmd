@@ -1,0 +1,124 @@
+---
+title: 概率论与数理统计
+author: QMD
+date: 2026/04/10
+description: 一文快速掌握全书
+categories: 速通
+engine: knitr
+---
+
+{{< include /setup/集合.qmd >}}
+# 概率论基础
+
+## 随机试验
+
+::: {.callout-note title="定义：随机试验"}
+满足以下三个条件的试验称为**随机试验**，记为 $E$：
+
+1. 可在相同条件下重复进行；
+2. 试验的所有可能结果已知，且不止一个；
+3. 每次试验前无法确定具体出现哪个结果。
+:::
+
+每进行一次试验，必然出现且只能出现其中一个基本结果；任何事件都由若干基本结果组成。
+
+## 样本空间与随机事件
+
+::: {.callout-note title="定义：样本空间"}
+随机试验 $E$ 的所有可能结果组成的集合称为**样本空间**，记为 $\Omega$。$\Omega$ 中的每个元素称为**样本点**，记为 $\omega$。
+:::
+
+::: {.callout-note title="定义：随机事件"}
+样本空间 $\Omega$ 的子集称为**随机事件**，简称**事件**，常用大写字母 $A, B, C$ 等表示。
+:::
+
+事件按特殊性分为三类：
+
+- **基本事件**：由单个样本点组成的单点集 $\{\omega\}$。
+- **必然事件**：样本空间 $\Omega$ 本身，每次试验必然发生。
+- **不可能事件**：空集 $\emptyset$，每次试验都不发生。
+
+## 事件的关系与运算
+
+| 关系／运算 | 记号 | 含义 |
+|-----------|------|------|
+| 包含 | $A \subset B$ | $A$ 发生 $\Rightarrow$ $B$ 发生 |
+| 相等 | $A = B$ | $A \subset B$ 且 $B \subset A$ |
+| 并 | $A \cup B$ | $A$、$B$ 至少一个发生 |
+| 交 | $A \cap B$ | $A$、$B$ 同时发生 |
+| 差 | $A \setminus B$ | $A$ 发生且 $B$ 不发生 |
+| 互斥 | $A \cap B = \emptyset$ | $A$、$B$ 不能同时发生 |
+| 对立 | $\bar{A} = \Omega \setminus A$ | $A \cup \bar{A}=\Omega$，$A \cap \bar{A}=\emptyset$ |
+
+
+
+
+
+
+:::: {.columns}
+
+
+::: {.column width="33%"}
+```{venn}
+#| fig-cap: "包含关系 $A \\subset B$"
+\begin{tikzpicture}
+  \draw (0,0) rectangle (6,4);
+  \node[above right] at (0,4) {$\Omega$};
+  \draw[fill=red!20] (3,2) circle (1.8cm);
+  \node[above=1.6cm] at (3,2) {$B$};
+  \draw[fill=blue!20] (3,2) circle (0.9cm);
+  \node at (3,2) {$A$};
+\end{tikzpicture}
+```
+:::
+
+
+::: {.column width="33%"}
+```{venn}
+#| fig-cap: "互斥 $A \\cap B = \\emptyset$"
+\begin{tikzpicture}
+  \draw (0,0) rectangle (6,4);
+  \node[above right] at (0,4) {$\Omega$};
+  \draw[fill=blue!20] (2,2) circle (1.2cm);
+  \node at (2,2) {$A$};
+  \draw[fill=red!20] (4,2) circle (1.2cm);
+  \node at (4,2) {$B$};
+\end{tikzpicture}
+```
+:::
+
+
+::: {.column width="33%"}
+```{venn}
+#| fig-cap: "对立事件 $\\bar{A} = \\Omega \\setminus A$"
+\begin{tikzpicture}
+  \draw[fill=red!20] (0,0) rectangle (6,4);
+  \node[above right] at (0,4) {$\Omega$};
+  \draw[fill=blue!20] (3,2) circle (1.5cm);
+  \node at (3,2) {$A$};
+  \node at (5,3.2) {$\bar{A}$};
+\end{tikzpicture}
+```
+:::
+
+::::
+
+## 运算性质
+
+事件的运算满足以下基本定律：
+
+| 定律  | 公式                                               |
+| --- | ------------------------------------------------ |
+| 交换律 | $A \cup B = B \cup A$，$A \cap B = B \cap A$      |
+| 结合律 | $(A \cup B) \cup C = A \cup (B \cup C)$          |
+| 分配律 | $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$ |
+| 差化积 | $A \setminus B = A\bar{B} = A \setminus AB$      |
+
+::: {.callout-tip title="定理：德摩根律（对偶律）"}
+对有限个或可列无穷多个事件 $\{A_i\}$，恒有：
+$$
+\overline{\bigcup_{i=1}^{n} A_i} = \bigcap_{i=1}^{n} \bar{A}_i,
+\qquad
+\overline{\bigcap_{i=1}^{n} A_i} = \bigcup_{i=1}^{n} \bar{A}_i
+$$
+:::

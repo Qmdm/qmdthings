@@ -8,8 +8,9 @@
 
 <meta name="author" content="QMD">
 <meta name="dcterms.date" content="2026-04-10">
+<meta name="description" content="一文快速掌握全书">
 
-<title>概率论的基本概念 – QMD的杂物间</title>
+<title>概率论与数理统计 – QMD的杂物间</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -128,6 +129,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   .quarto-title-banner .title { color: #e8efff; }
 </style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -354,7 +384,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="dropdown-text">材料力学</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../notes/概率论与数理统计/概率论的基本概念.html">
+    <a class="dropdown-item" href="../../notes/概率论与数理统计/概率论与数理统计.html">
  <span class="dropdown-text">概率论与数理统计</span></a>
   </li>  
         <li>
@@ -404,7 +434,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Notes</li><li class="breadcrumb-item"><a href="../../notes/概率论与数理统计/概率论的基本概念.html">概率论与数理统计</a></li><li class="breadcrumb-item"><a href="../../notes/概率论与数理统计/概率论的基本概念.html">概率论的基本概念</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Notes</li><li class="breadcrumb-item"><a href="../../notes/概率论与数理统计/概率论与数理统计.html">概率论与数理统计</a></li><li class="breadcrumb-item"><a href="../../notes/概率论与数理统计/概率论与数理统计.html">概率论与数理统计</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -416,9 +446,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Notes</li><li class="breadcrumb-item"><a href="../../notes/概率论与数理统计/概率论的基本概念.html">概率论与数理统计</a></li><li class="breadcrumb-item"><a href="../../notes/概率论与数理统计/概率论的基本概念.html">概率论的基本概念</a></li></ol></nav>
-      <div class="quarto-title-block"><div><h1 class="title">概率论的基本概念</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source Code</button></div></div>
-                      </div>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Notes</li><li class="breadcrumb-item"><a href="../../notes/概率论与数理统计/概率论与数理统计.html">概率论与数理统计</a></li><li class="breadcrumb-item"><a href="../../notes/概率论与数理统计/概率论与数理统计.html">概率论与数理统计</a></li></ol></nav>
+      <div class="quarto-title-block"><div><h1 class="title">概率论与数理统计</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source Code</button></div></div>
+                  <div>
+        <div class="description">
+          一文快速掌握全书
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">速通</div>
+              </div>
+                  </div>
   </div>
     
   
@@ -554,8 +592,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/概率论与数理统计/概率论的基本概念.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">概率论的基本概念</span></a>
+  <a href="../../notes/概率论与数理统计/概率论与数理统计.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">概率论与数理统计</span></a>
   </div>
 </li>
       </ul>
@@ -584,8 +622,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#概率论基础" id="toc-概率论基础" class="nav-link active" data-scroll-target="#概率论基础">概率论基础</a>
+  <ul class="collapse">
+  <li><a href="#随机试验" id="toc-随机试验" class="nav-link" data-scroll-target="#随机试验">随机试验</a></li>
+  <li><a href="#样本空间与随机事件" id="toc-样本空间与随机事件" class="nav-link" data-scroll-target="#样本空间与随机事件">样本空间与随机事件</a></li>
+  <li><a href="#事件的关系与运算" id="toc-事件的关系与运算" class="nav-link" data-scroll-target="#事件的关系与运算">事件的关系与运算</a></li>
+  <li><a href="#运算性质" id="toc-运算性质" class="nav-link" data-scroll-target="#运算性质">运算性质</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -615,10 +665,251 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
+<section id="概率论基础" class="level1">
+<h1>概率论基础</h1>
+<section id="随机试验" class="level2">
+<h2 class="anchored" data-anchor-id="随机试验">随机试验</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="定义：随机试验">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>定义：随机试验
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>满足以下三个条件的试验称为<strong>随机试验</strong>，记为 <span class="math inline">\(E\)</span>：</p>
+<ol type="1">
+<li>可在相同条件下重复进行；</li>
+<li>试验的所有可能结果已知，且不止一个；</li>
+<li>每次试验前无法确定具体出现哪个结果。</li>
+</ol>
+</div>
+</div>
+<p>每进行一次试验，必然出现且只能出现其中一个基本结果；任何事件都由若干基本结果组成。</p>
+</section>
+<section id="样本空间与随机事件" class="level2">
+<h2 class="anchored" data-anchor-id="样本空间与随机事件">样本空间与随机事件</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="定义：样本空间">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>定义：样本空间
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>随机试验 <span class="math inline">\(E\)</span> 的所有可能结果组成的集合称为<strong>样本空间</strong>，记为 <span class="math inline">\(\Omega\)</span>。<span class="math inline">\(\Omega\)</span> 中的每个元素称为<strong>样本点</strong>，记为 <span class="math inline">\(\omega\)</span>。</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="定义：随机事件">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>定义：随机事件
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>样本空间 <span class="math inline">\(\Omega\)</span> 的子集称为<strong>随机事件</strong>，简称<strong>事件</strong>，常用大写字母 <span class="math inline">\(A, B, C\)</span> 等表示。</p>
+</div>
+</div>
+<p>事件按特殊性分为三类：</p>
+<ul>
+<li><strong>基本事件</strong>：由单个样本点组成的单点集 <span class="math inline">\(\{\omega\}\)</span>。</li>
+<li><strong>必然事件</strong>：样本空间 <span class="math inline">\(\Omega\)</span> 本身，每次试验必然发生。</li>
+<li><strong>不可能事件</strong>：空集 <span class="math inline">\(\emptyset\)</span>，每次试验都不发生。</li>
+</ul>
+</section>
+<section id="事件的关系与运算" class="level2">
+<h2 class="anchored" data-anchor-id="事件的关系与运算">事件的关系与运算</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 47%">
+<col style="width: 26%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>关系／运算</th>
+<th>记号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>包含</td>
+<td><span class="math inline">\(A \subset B\)</span></td>
+<td><span class="math inline">\(A\)</span> 发生 <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(B\)</span> 发生</td>
+</tr>
+<tr class="even">
+<td>相等</td>
+<td><span class="math inline">\(A = B\)</span></td>
+<td><span class="math inline">\(A \subset B\)</span> 且 <span class="math inline">\(B \subset A\)</span></td>
+</tr>
+<tr class="odd">
+<td>并</td>
+<td><span class="math inline">\(A \cup B\)</span></td>
+<td><span class="math inline">\(A\)</span>、<span class="math inline">\(B\)</span> 至少一个发生</td>
+</tr>
+<tr class="even">
+<td>交</td>
+<td><span class="math inline">\(A \cap B\)</span></td>
+<td><span class="math inline">\(A\)</span>、<span class="math inline">\(B\)</span> 同时发生</td>
+</tr>
+<tr class="odd">
+<td>差</td>
+<td><span class="math inline">\(A \setminus B\)</span></td>
+<td><span class="math inline">\(A\)</span> 发生且 <span class="math inline">\(B\)</span> 不发生</td>
+</tr>
+<tr class="even">
+<td>互斥</td>
+<td><span class="math inline">\(A \cap B = \emptyset\)</span></td>
+<td><span class="math inline">\(A\)</span>、<span class="math inline">\(B\)</span> 不能同时发生</td>
+</tr>
+<tr class="odd">
+<td>对立</td>
+<td><span class="math inline">\(\bar{A} = \Omega \setminus A\)</span></td>
+<td><span class="math inline">\(A \cup \bar{A}=\Omega\)</span>，<span class="math inline">\(A \cap \bar{A}=\emptyset\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="columns">
+<div class="column" style="width:33%;">
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource venn number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>\tikzset{</span>
+<span id="cb1-2"><a href="#cb1-2"></a>  every node/.style={font=\sffamily\normalsize},</span>
+<span id="cb1-3"><a href="#cb1-3"></a>  every path/.style={line width=1.5pt}</span>
+<span id="cb1-4"><a href="#cb1-4"></a>}</span>
+<span id="cb1-5"><a href="#cb1-5"></a>\begin{tikzpicture}</span>
+<span id="cb1-6"><a href="#cb1-6"></a>  \draw (0,0) rectangle (6,4);</span>
+<span id="cb1-7"><a href="#cb1-7"></a>  \node[above right] at (0,4) {$\Omega$};</span>
+<span id="cb1-8"><a href="#cb1-8"></a>  \draw[fill=red!20] (3,2) circle (1.8cm);</span>
+<span id="cb1-9"><a href="#cb1-9"></a>  \node[above=1.6cm] at (3,2) {$B$};</span>
+<span id="cb1-10"><a href="#cb1-10"></a>  \draw[fill=blue!20] (3,2) circle (0.9cm);</span>
+<span id="cb1-11"><a href="#cb1-11"></a>  \node at (3,2) {$A$};</span>
+<span id="cb1-12"><a href="#cb1-12"></a>\end{tikzpicture}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="概率论与数理统计_files/figure-html/unnamed-chunk-2-1.svg" class="img-fluid figure-img"></p>
+<figcaption>包含关系 <span class="math inline">\(A \subset B\)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource venn number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href="#cb2-1"></a>\tikzset{</span>
+<span id="cb2-2"><a href="#cb2-2"></a>  every node/.style={font=\sffamily\normalsize},</span>
+<span id="cb2-3"><a href="#cb2-3"></a>  every path/.style={line width=1.5pt}</span>
+<span id="cb2-4"><a href="#cb2-4"></a>}</span>
+<span id="cb2-5"><a href="#cb2-5"></a>\begin{tikzpicture}</span>
+<span id="cb2-6"><a href="#cb2-6"></a>  \draw (0,0) rectangle (6,4);</span>
+<span id="cb2-7"><a href="#cb2-7"></a>  \node[above right] at (0,4) {$\Omega$};</span>
+<span id="cb2-8"><a href="#cb2-8"></a>  \draw[fill=blue!20] (2,2) circle (1.2cm);</span>
+<span id="cb2-9"><a href="#cb2-9"></a>  \node at (2,2) {$A$};</span>
+<span id="cb2-10"><a href="#cb2-10"></a>  \draw[fill=red!20] (4,2) circle (1.2cm);</span>
+<span id="cb2-11"><a href="#cb2-11"></a>  \node at (4,2) {$B$};</span>
+<span id="cb2-12"><a href="#cb2-12"></a>\end{tikzpicture}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="概率论与数理统计_files/figure-html/unnamed-chunk-3-1.svg" class="img-fluid figure-img"></p>
+<figcaption>互斥 <span class="math inline">\(A \cap B = \emptyset\)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource venn number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href="#cb3-1"></a>\tikzset{</span>
+<span id="cb3-2"><a href="#cb3-2"></a>  every node/.style={font=\sffamily\normalsize},</span>
+<span id="cb3-3"><a href="#cb3-3"></a>  every path/.style={line width=1.5pt}</span>
+<span id="cb3-4"><a href="#cb3-4"></a>}</span>
+<span id="cb3-5"><a href="#cb3-5"></a>\begin{tikzpicture}</span>
+<span id="cb3-6"><a href="#cb3-6"></a>  \draw[fill=red!20] (0,0) rectangle (6,4);</span>
+<span id="cb3-7"><a href="#cb3-7"></a>  \node[above right] at (0,4) {$\Omega$};</span>
+<span id="cb3-8"><a href="#cb3-8"></a>  \draw[fill=blue!20] (3,2) circle (1.5cm);</span>
+<span id="cb3-9"><a href="#cb3-9"></a>  \node at (3,2) {$A$};</span>
+<span id="cb3-10"><a href="#cb3-10"></a>  \node at (5,3.2) {$\bar{A}$};</span>
+<span id="cb3-11"><a href="#cb3-11"></a>\end{tikzpicture}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="概率论与数理统计_files/figure-html/unnamed-chunk-4-1.svg" class="img-fluid figure-img"></p>
+<figcaption>对立事件 <span class="math inline">\(\bar{A} = \Omega \setminus A\)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="运算性质" class="level2">
+<h2 class="anchored" data-anchor-id="运算性质">运算性质</h2>
+<p>事件的运算满足以下基本定律：</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>定律</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>交换律</td>
+<td><span class="math inline">\(A \cup B = B \cup A\)</span>，<span class="math inline">\(A \cap B = B \cap A\)</span></td>
+</tr>
+<tr class="even">
+<td>结合律</td>
+<td><span class="math inline">\((A \cup B) \cup C = A \cup (B \cup C)\)</span></td>
+</tr>
+<tr class="odd">
+<td>分配律</td>
+<td><span class="math inline">\(A \cap (B \cup C) = (A \cap B) \cup (A \cap C)\)</span></td>
+</tr>
+<tr class="even">
+<td>差化积</td>
+<td><span class="math inline">\(A \setminus B = A\bar{B} = A \setminus AB\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled" title="定理：德摩根律（对偶律）">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>定理：德摩根律（对偶律）
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>对有限个或可列无穷多个事件 <span class="math inline">\(\{A_i\}\)</span>，恒有： <span class="math display">\[
+\overline{\bigcup_{i=1}^{n} A_i} = \bigcap_{i=1}^{n} \bar{A}_i,
+\qquad
+\overline{\bigcap_{i=1}^{n} A_i} = \bigcup_{i=1}^{n} \bar{A}_i
+\]</span></p>
+</div>
+</div>
 
 
 <!-- -->
 
+</section>
+</section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1097,11 +1388,131 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> 概率论的基本概念</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="an">author:</span><span class="co"> QMD</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="an">date:</span><span class="co"> 2026/04/10</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a><span class="co">---</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="an">title:</span><span class="co"> 概率论与数理统计</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="an">author:</span><span class="co"> QMD</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="an">date:</span><span class="co"> 2026/04/10</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="an">description:</span><span class="co"> 一文快速掌握全书</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="an">categories:</span><span class="co"> 速通</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="an">engine:</span><span class="co"> knitr</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="co">---</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a></span>
+<span id="cb4-10"><a href="#cb4-10"></a>{{&lt; include /setup/cf5733e5-0370-4aae-8689-61bad1dd9ec0<span class="dv">&amp;#x96c6;</span>cf5733e5-0370-4aae-8689-61bad1dd9ec0<span class="dv">&amp;#x5408;</span>.qmd &gt;}}</span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="fu"># 概率论基础</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a></span>
+<span id="cb4-13"><a href="#cb4-13"></a><span class="fu">## 随机试验</span></span>
+<span id="cb4-14"><a href="#cb4-14"></a></span>
+<span id="cb4-15"><a href="#cb4-15"></a>::: {.callout-note title="定义：随机试验"}</span>
+<span id="cb4-16"><a href="#cb4-16"></a>满足以下三个条件的试验称为**随机试验**，记为 $E$：</span>
+<span id="cb4-17"><a href="#cb4-17"></a></span>
+<span id="cb4-18"><a href="#cb4-18"></a><span class="ss">1. </span>可在相同条件下重复进行；</span>
+<span id="cb4-19"><a href="#cb4-19"></a><span class="ss">2. </span>试验的所有可能结果已知，且不止一个；</span>
+<span id="cb4-20"><a href="#cb4-20"></a><span class="ss">3. </span>每次试验前无法确定具体出现哪个结果。</span>
+<span id="cb4-21"><a href="#cb4-21"></a>:::</span>
+<span id="cb4-22"><a href="#cb4-22"></a></span>
+<span id="cb4-23"><a href="#cb4-23"></a>每进行一次试验，必然出现且只能出现其中一个基本结果；任何事件都由若干基本结果组成。</span>
+<span id="cb4-24"><a href="#cb4-24"></a></span>
+<span id="cb4-25"><a href="#cb4-25"></a><span class="fu">## 样本空间与随机事件</span></span>
+<span id="cb4-26"><a href="#cb4-26"></a></span>
+<span id="cb4-27"><a href="#cb4-27"></a>::: {.callout-note title="定义：样本空间"}</span>
+<span id="cb4-28"><a href="#cb4-28"></a>随机试验 $E$ 的所有可能结果组成的集合称为**样本空间**，记为 $\Omega$。$\Omega$ 中的每个元素称为**样本点**，记为 $\omega$。</span>
+<span id="cb4-29"><a href="#cb4-29"></a>:::</span>
+<span id="cb4-30"><a href="#cb4-30"></a></span>
+<span id="cb4-31"><a href="#cb4-31"></a>::: {.callout-note title="定义：随机事件"}</span>
+<span id="cb4-32"><a href="#cb4-32"></a>样本空间 $\Omega$ 的子集称为**随机事件**，简称**事件**，常用大写字母 $A, B, C$ 等表示。</span>
+<span id="cb4-33"><a href="#cb4-33"></a>:::</span>
+<span id="cb4-34"><a href="#cb4-34"></a></span>
+<span id="cb4-35"><a href="#cb4-35"></a>事件按特殊性分为三类：</span>
+<span id="cb4-36"><a href="#cb4-36"></a></span>
+<span id="cb4-37"><a href="#cb4-37"></a><span class="ss">- </span>**基本事件**：由单个样本点组成的单点集 $<span class="sc">\{</span>\omega<span class="sc">\}</span>$。</span>
+<span id="cb4-38"><a href="#cb4-38"></a><span class="ss">- </span>**必然事件**：样本空间 $\Omega$ 本身，每次试验必然发生。</span>
+<span id="cb4-39"><a href="#cb4-39"></a><span class="ss">- </span>**不可能事件**：空集 $\emptyset$，每次试验都不发生。</span>
+<span id="cb4-40"><a href="#cb4-40"></a></span>
+<span id="cb4-41"><a href="#cb4-41"></a><span class="fu">## 事件的关系与运算</span></span>
+<span id="cb4-42"><a href="#cb4-42"></a></span>
+<span id="cb4-43"><a href="#cb4-43"></a><span class="pp">|</span> 关系／运算 <span class="pp">|</span> 记号 <span class="pp">|</span> 含义 <span class="pp">|</span></span>
+<span id="cb4-44"><a href="#cb4-44"></a><span class="pp">|-----------|------|------|</span></span>
+<span id="cb4-45"><a href="#cb4-45"></a><span class="pp">|</span> 包含 <span class="pp">|</span> $A \subset B$ <span class="pp">|</span> $A$ 发生 $\Rightarrow$ $B$ 发生 <span class="pp">|</span></span>
+<span id="cb4-46"><a href="#cb4-46"></a><span class="pp">|</span> 相等 <span class="pp">|</span> $A = B$ <span class="pp">|</span> $A \subset B$ 且 $B \subset A$ <span class="pp">|</span></span>
+<span id="cb4-47"><a href="#cb4-47"></a><span class="pp">|</span> 并 <span class="pp">|</span> $A \cup B$ <span class="pp">|</span> $A$、$B$ 至少一个发生 <span class="pp">|</span></span>
+<span id="cb4-48"><a href="#cb4-48"></a><span class="pp">|</span> 交 <span class="pp">|</span> $A \cap B$ <span class="pp">|</span> $A$、$B$ 同时发生 <span class="pp">|</span></span>
+<span id="cb4-49"><a href="#cb4-49"></a><span class="pp">|</span> 差 <span class="pp">|</span> $A \setminus B$ <span class="pp">|</span> $A$ 发生且 $B$ 不发生 <span class="pp">|</span></span>
+<span id="cb4-50"><a href="#cb4-50"></a><span class="pp">|</span> 互斥 <span class="pp">|</span> $A \cap B = \emptyset$ <span class="pp">|</span> $A$、$B$ 不能同时发生 <span class="pp">|</span></span>
+<span id="cb4-51"><a href="#cb4-51"></a><span class="pp">|</span> 对立 <span class="pp">|</span> $\bar{A} = \Omega \setminus A$ <span class="pp">|</span> $A \cup \bar{A}=\Omega$，$A \cap \bar{A}=\emptyset$ <span class="pp">|</span></span>
+<span id="cb4-52"><a href="#cb4-52"></a></span>
+<span id="cb4-53"><a href="#cb4-53"></a></span>
+<span id="cb4-54"><a href="#cb4-54"></a></span>
+<span id="cb4-55"><a href="#cb4-55"></a></span>
+<span id="cb4-56"><a href="#cb4-56"></a></span>
+<span id="cb4-57"><a href="#cb4-57"></a></span>
+<span id="cb4-58"><a href="#cb4-58"></a>:::: {.columns}</span>
+<span id="cb4-59"><a href="#cb4-59"></a></span>
+<span id="cb4-60"><a href="#cb4-60"></a></span>
+<span id="cb4-61"><a href="#cb4-61"></a>::: {.column width="33%"}</span>
+<span id="cb4-64"><a href="#cb4-64"></a><span class="in">```{venn}</span></span>
+<span id="cb4-65"><a href="#cb4-65"></a><span class="in">#| fig-cap: "包含关系 $A \\subset B$"</span></span>
+<span id="cb4-66"><a href="#cb4-66"></a><span class="in">\begin{tikzpicture}</span></span>
+<span id="cb4-67"><a href="#cb4-67"></a><span class="in">  \draw (0,0) rectangle (6,4);</span></span>
+<span id="cb4-68"><a href="#cb4-68"></a><span class="in">  \node[above right] at (0,4) {$\Omega$};</span></span>
+<span id="cb4-69"><a href="#cb4-69"></a><span class="in">  \draw[fill=red!20] (3,2) circle (1.8cm);</span></span>
+<span id="cb4-70"><a href="#cb4-70"></a><span class="in">  \node[above=1.6cm] at (3,2) {$B$};</span></span>
+<span id="cb4-71"><a href="#cb4-71"></a><span class="in">  \draw[fill=blue!20] (3,2) circle (0.9cm);</span></span>
+<span id="cb4-72"><a href="#cb4-72"></a><span class="in">  \node at (3,2) {$A$};</span></span>
+<span id="cb4-73"><a href="#cb4-73"></a><span class="in">\end{tikzpicture}</span></span>
+<span id="cb4-74"><a href="#cb4-74"></a><span class="in">```</span></span>
+<span id="cb4-75"><a href="#cb4-75"></a>:::</span>
+<span id="cb4-76"><a href="#cb4-76"></a></span>
+<span id="cb4-77"><a href="#cb4-77"></a></span>
+<span id="cb4-78"><a href="#cb4-78"></a>::: {.column width="33%"}</span>
+<span id="cb4-81"><a href="#cb4-81"></a><span class="in">```{venn}</span></span>
+<span id="cb4-82"><a href="#cb4-82"></a><span class="in">#| fig-cap: "互斥 $A \\cap B = \\emptyset$"</span></span>
+<span id="cb4-83"><a href="#cb4-83"></a><span class="in">\begin{tikzpicture}</span></span>
+<span id="cb4-84"><a href="#cb4-84"></a><span class="in">  \draw (0,0) rectangle (6,4);</span></span>
+<span id="cb4-85"><a href="#cb4-85"></a><span class="in">  \node[above right] at (0,4) {$\Omega$};</span></span>
+<span id="cb4-86"><a href="#cb4-86"></a><span class="in">  \draw[fill=blue!20] (2,2) circle (1.2cm);</span></span>
+<span id="cb4-87"><a href="#cb4-87"></a><span class="in">  \node at (2,2) {$A$};</span></span>
+<span id="cb4-88"><a href="#cb4-88"></a><span class="in">  \draw[fill=red!20] (4,2) circle (1.2cm);</span></span>
+<span id="cb4-89"><a href="#cb4-89"></a><span class="in">  \node at (4,2) {$B$};</span></span>
+<span id="cb4-90"><a href="#cb4-90"></a><span class="in">\end{tikzpicture}</span></span>
+<span id="cb4-91"><a href="#cb4-91"></a><span class="in">```</span></span>
+<span id="cb4-92"><a href="#cb4-92"></a>:::</span>
+<span id="cb4-93"><a href="#cb4-93"></a></span>
+<span id="cb4-94"><a href="#cb4-94"></a></span>
+<span id="cb4-95"><a href="#cb4-95"></a>::: {.column width="33%"}</span>
+<span id="cb4-98"><a href="#cb4-98"></a><span class="in">```{venn}</span></span>
+<span id="cb4-99"><a href="#cb4-99"></a><span class="in">#| fig-cap: "对立事件 $\\bar{A} = \\Omega \\setminus A$"</span></span>
+<span id="cb4-100"><a href="#cb4-100"></a><span class="in">\begin{tikzpicture}</span></span>
+<span id="cb4-101"><a href="#cb4-101"></a><span class="in">  \draw[fill=red!20] (0,0) rectangle (6,4);</span></span>
+<span id="cb4-102"><a href="#cb4-102"></a><span class="in">  \node[above right] at (0,4) {$\Omega$};</span></span>
+<span id="cb4-103"><a href="#cb4-103"></a><span class="in">  \draw[fill=blue!20] (3,2) circle (1.5cm);</span></span>
+<span id="cb4-104"><a href="#cb4-104"></a><span class="in">  \node at (3,2) {$A$};</span></span>
+<span id="cb4-105"><a href="#cb4-105"></a><span class="in">  \node at (5,3.2) {$\bar{A}$};</span></span>
+<span id="cb4-106"><a href="#cb4-106"></a><span class="in">\end{tikzpicture}</span></span>
+<span id="cb4-107"><a href="#cb4-107"></a><span class="in">```</span></span>
+<span id="cb4-108"><a href="#cb4-108"></a>:::</span>
+<span id="cb4-109"><a href="#cb4-109"></a></span>
+<span id="cb4-110"><a href="#cb4-110"></a>::::</span>
+<span id="cb4-111"><a href="#cb4-111"></a></span>
+<span id="cb4-112"><a href="#cb4-112"></a><span class="fu">## 运算性质</span></span>
+<span id="cb4-113"><a href="#cb4-113"></a></span>
+<span id="cb4-114"><a href="#cb4-114"></a>事件的运算满足以下基本定律：</span>
+<span id="cb4-115"><a href="#cb4-115"></a></span>
+<span id="cb4-116"><a href="#cb4-116"></a><span class="pp">|</span> 定律  <span class="pp">|</span> 公式                                               <span class="pp">|</span></span>
+<span id="cb4-117"><a href="#cb4-117"></a><span class="pp">| ---</span> <span class="pp">| ------------------------------------------------</span> <span class="pp">|</span></span>
+<span id="cb4-118"><a href="#cb4-118"></a><span class="pp">|</span> 交换律 <span class="pp">|</span> $A \cup B = B \cup A$，$A \cap B = B \cap A$      <span class="pp">|</span></span>
+<span id="cb4-119"><a href="#cb4-119"></a><span class="pp">|</span> 结合律 <span class="pp">|</span> $(A \cup B) \cup C = A \cup (B \cup C)$          <span class="pp">|</span></span>
+<span id="cb4-120"><a href="#cb4-120"></a><span class="pp">|</span> 分配律 <span class="pp">|</span> $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$ <span class="pp">|</span></span>
+<span id="cb4-121"><a href="#cb4-121"></a><span class="pp">|</span> 差化积 <span class="pp">|</span> $A \setminus B = A\bar{B} = A \setminus AB$      <span class="pp">|</span></span>
+<span id="cb4-122"><a href="#cb4-122"></a></span>
+<span id="cb4-123"><a href="#cb4-123"></a>::: {.callout-tip title="定理：德摩根律（对偶律）"}</span>
+<span id="cb4-124"><a href="#cb4-124"></a>对有限个或可列无穷多个事件 $<span class="sc">\{</span>A_i<span class="sc">\}</span>$，恒有：</span>
+<span id="cb4-125"><a href="#cb4-125"></a>$$</span>
+<span id="cb4-126"><a href="#cb4-126"></a>\overline{\bigcup_{i=1}^{n} A_i} = \bigcap_{i=1}^{n} \bar{A}_i,</span>
+<span id="cb4-127"><a href="#cb4-127"></a>\qquad</span>
+<span id="cb4-128"><a href="#cb4-128"></a>\overline{\bigcap_{i=1}^{n} A_i} = \bigcup_{i=1}^{n} \bar{A}_i</span>
+<span id="cb4-129"><a href="#cb4-129"></a>$$</span>
+<span id="cb4-130"><a href="#cb4-130"></a>:::</span>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
@@ -1123,7 +1534,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </div>
   </div>
 </footer>
-<script src="../../_includes/auto-collapse.js" defer=""></script>
+<script src="../../assets/auto-collapse.js" defer=""></script>
+<script src="../../assets/svg.js" defer=""></script>
 <script>
   (function(){
     const banner = document.querySelector('.quarto-title-banner');
@@ -1133,8 +1545,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     banner.prepend(c);
   })();
 </script>
-<script src="../../_includes/hero.js" defer=""></script>
-<script src="../../_includes/auto-collapse.js" defer=""></script>
+<script src="../../assets/hero.js" defer=""></script>
+<script src="../../assets/auto-collapse.js" defer=""></script>
 
 
 

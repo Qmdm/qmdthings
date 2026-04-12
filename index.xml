@@ -43,10 +43,42 @@
 
 
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource circuitikz number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1">\tikzset{</span>
+<span id="cb1-2">  every node/.style={font=\sffamily\normalsize},</span>
+<span id="cb1-3">  every path/.style={line width=1.5pt}</span>
+<span id="cb1-4">}</span>
+<span id="cb1-5">%| echo: false</span>
+<span id="cb1-6">%| fig-align: center</span>
+<span id="cb1-7">\begin{circuitikz}[</span>
+<span id="cb1-8">  european,</span>
+<span id="cb1-9">  line width=1pt,</span>
+<span id="cb1-10">  every node/.style={font=\normalsize}</span>
+<span id="cb1-11">]</span>
+<span id="cb1-12"></span>
+<span id="cb1-13">% 主回路</span>
+<span id="cb1-14">\draw</span>
+<span id="cb1-15">  (0,0) to[V, l=$V_s$] (0,3)</span>
+<span id="cb1-16">        to[R, l=$R$] (3,3)</span>
+<span id="cb1-17">        to[C, l=$C$] (3,0)</span>
+<span id="cb1-18">        -- (0,0);</span>
+<span id="cb1-19"></span>
+<span id="cb1-20">% 输出端</span>
+<span id="cb1-21">\draw (3,3) to[short, -o] (4.5,3) node[right] {$+$};</span>
+<span id="cb1-22">\draw (3,0) to[short, -o] (4.5,0) node[right] {$-$};</span>
+<span id="cb1-23">\draw[|&lt;-&gt;|] (4.2,0.15) -- (4.2,2.85)</span>
+<span id="cb1-24">  node[midway, right=2pt] {$u_C$};</span>
+<span id="cb1-25"></span>
+<span id="cb1-26">% 节点圆点</span>
+<span id="cb1-27">\foreach \x/\y in {0/0, 0/3, 3/0, 3/3}</span>
+<span id="cb1-28">  \fill (\x,\y) circle (2pt);</span>
+<span id="cb1-29">\end{circuitikz}</span></code></pre></div></div>
+</details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://qmdthings.top/notes/电工技术/电路的暂态分析_files/figure-html/unnamed-chunk-1-1.svg" class="img-fluid figure-img"></p>
+<p><img src="https://qmdthings.top/notes/电工技术/电路的暂态分析_files/figure-html/unnamed-chunk-2-1.svg" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -62,9 +94,9 @@
   <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>概率论的基本概念</title>
+  <title>概率论与数理统计</title>
   <dc:creator>QMD </dc:creator>
-  <link>https://qmdthings.top/notes/概率论与数理统计/概率论的基本概念.html</link>
+  <link>https://qmdthings.top/notes/概率论与数理统计/概率论与数理统计.html</link>
   <description><![CDATA[ 
 
 <p id="hitokoto">
@@ -92,13 +124,251 @@
 
 
 
+<section id="概率论基础" class="level1">
+<h1>概率论基础</h1>
+<section id="随机试验" class="level2">
+<h2 class="anchored" data-anchor-id="随机试验">随机试验</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="定义：随机试验">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>定义：随机试验
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>满足以下三个条件的试验称为<strong>随机试验</strong>，记为 <img src="https://latex.codecogs.com/png.latex?E">：</p>
+<ol type="1">
+<li>可在相同条件下重复进行；</li>
+<li>试验的所有可能结果已知，且不止一个；</li>
+<li>每次试验前无法确定具体出现哪个结果。</li>
+</ol>
+</div>
+</div>
+<p>每进行一次试验，必然出现且只能出现其中一个基本结果；任何事件都由若干基本结果组成。</p>
+</section>
+<section id="样本空间与随机事件" class="level2">
+<h2 class="anchored" data-anchor-id="样本空间与随机事件">样本空间与随机事件</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="定义：样本空间">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>定义：样本空间
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>随机试验 <img src="https://latex.codecogs.com/png.latex?E"> 的所有可能结果组成的集合称为<strong>样本空间</strong>，记为 <img src="https://latex.codecogs.com/png.latex?%5COmega">。<img src="https://latex.codecogs.com/png.latex?%5COmega"> 中的每个元素称为<strong>样本点</strong>，记为 <img src="https://latex.codecogs.com/png.latex?%5Comega">。</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="定义：随机事件">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>定义：随机事件
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>样本空间 <img src="https://latex.codecogs.com/png.latex?%5COmega"> 的子集称为<strong>随机事件</strong>，简称<strong>事件</strong>，常用大写字母 <img src="https://latex.codecogs.com/png.latex?A,%20B,%20C"> 等表示。</p>
+</div>
+</div>
+<p>事件按特殊性分为三类：</p>
+<ul>
+<li><strong>基本事件</strong>：由单个样本点组成的单点集 <img src="https://latex.codecogs.com/png.latex?%5C%7B%5Comega%5C%7D">。</li>
+<li><strong>必然事件</strong>：样本空间 <img src="https://latex.codecogs.com/png.latex?%5COmega"> 本身，每次试验必然发生。</li>
+<li><strong>不可能事件</strong>：空集 <img src="https://latex.codecogs.com/png.latex?%5Cemptyset">，每次试验都不发生。</li>
+</ul>
+</section>
+<section id="事件的关系与运算" class="level2">
+<h2 class="anchored" data-anchor-id="事件的关系与运算">事件的关系与运算</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 47%">
+<col style="width: 26%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>关系／运算</th>
+<th>记号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>包含</td>
+<td><img src="https://latex.codecogs.com/png.latex?A%20%5Csubset%20B"></td>
+<td><img src="https://latex.codecogs.com/png.latex?A"> 发生 <img src="https://latex.codecogs.com/png.latex?%5CRightarrow"> <img src="https://latex.codecogs.com/png.latex?B"> 发生</td>
+</tr>
+<tr class="even">
+<td>相等</td>
+<td><img src="https://latex.codecogs.com/png.latex?A%20=%20B"></td>
+<td><img src="https://latex.codecogs.com/png.latex?A%20%5Csubset%20B"> 且 <img src="https://latex.codecogs.com/png.latex?B%20%5Csubset%20A"></td>
+</tr>
+<tr class="odd">
+<td>并</td>
+<td><img src="https://latex.codecogs.com/png.latex?A%20%5Ccup%20B"></td>
+<td><img src="https://latex.codecogs.com/png.latex?A">、<img src="https://latex.codecogs.com/png.latex?B"> 至少一个发生</td>
+</tr>
+<tr class="even">
+<td>交</td>
+<td><img src="https://latex.codecogs.com/png.latex?A%20%5Ccap%20B"></td>
+<td><img src="https://latex.codecogs.com/png.latex?A">、<img src="https://latex.codecogs.com/png.latex?B"> 同时发生</td>
+</tr>
+<tr class="odd">
+<td>差</td>
+<td><img src="https://latex.codecogs.com/png.latex?A%20%5Csetminus%20B"></td>
+<td><img src="https://latex.codecogs.com/png.latex?A"> 发生且 <img src="https://latex.codecogs.com/png.latex?B"> 不发生</td>
+</tr>
+<tr class="even">
+<td>互斥</td>
+<td><img src="https://latex.codecogs.com/png.latex?A%20%5Ccap%20B%20=%20%5Cemptyset"></td>
+<td><img src="https://latex.codecogs.com/png.latex?A">、<img src="https://latex.codecogs.com/png.latex?B"> 不能同时发生</td>
+</tr>
+<tr class="odd">
+<td>对立</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5Cbar%7BA%7D%20=%20%5COmega%20%5Csetminus%20A"></td>
+<td><img src="https://latex.codecogs.com/png.latex?A%20%5Ccup%20%5Cbar%7BA%7D=%5COmega">，<img src="https://latex.codecogs.com/png.latex?A%20%5Ccap%20%5Cbar%7BA%7D=%5Cemptyset"></td>
+</tr>
+</tbody>
+</table>
+<div class="columns">
+<div class="column" style="width:33%;">
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource venn number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1">\tikzset{</span>
+<span id="cb1-2">  every node/.style={font=\sffamily\normalsize},</span>
+<span id="cb1-3">  every path/.style={line width=1.5pt}</span>
+<span id="cb1-4">}</span>
+<span id="cb1-5">\begin{tikzpicture}</span>
+<span id="cb1-6">  \draw (0,0) rectangle (6,4);</span>
+<span id="cb1-7">  \node[above right] at (0,4) {$\Omega$};</span>
+<span id="cb1-8">  \draw[fill=red!20] (3,2) circle (1.8cm);</span>
+<span id="cb1-9">  \node[above=1.6cm] at (3,2) {$B$};</span>
+<span id="cb1-10">  \draw[fill=blue!20] (3,2) circle (0.9cm);</span>
+<span id="cb1-11">  \node at (3,2) {$A$};</span>
+<span id="cb1-12">\end{tikzpicture}</span></code></pre></div></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://qmdthings.top/notes/概率论与数理统计/概率论与数理统计_files/figure-html/unnamed-chunk-2-1.svg" class="img-fluid figure-img"></p>
+<figcaption>包含关系 <img src="https://latex.codecogs.com/png.latex?A%20%5Csubset%20B"></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource venn number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1">\tikzset{</span>
+<span id="cb2-2">  every node/.style={font=\sffamily\normalsize},</span>
+<span id="cb2-3">  every path/.style={line width=1.5pt}</span>
+<span id="cb2-4">}</span>
+<span id="cb2-5">\begin{tikzpicture}</span>
+<span id="cb2-6">  \draw (0,0) rectangle (6,4);</span>
+<span id="cb2-7">  \node[above right] at (0,4) {$\Omega$};</span>
+<span id="cb2-8">  \draw[fill=blue!20] (2,2) circle (1.2cm);</span>
+<span id="cb2-9">  \node at (2,2) {$A$};</span>
+<span id="cb2-10">  \draw[fill=red!20] (4,2) circle (1.2cm);</span>
+<span id="cb2-11">  \node at (4,2) {$B$};</span>
+<span id="cb2-12">\end{tikzpicture}</span></code></pre></div></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://qmdthings.top/notes/概率论与数理统计/概率论与数理统计_files/figure-html/unnamed-chunk-3-1.svg" class="img-fluid figure-img"></p>
+<figcaption>互斥 <img src="https://latex.codecogs.com/png.latex?A%20%5Ccap%20B%20=%20%5Cemptyset"></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource venn number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1">\tikzset{</span>
+<span id="cb3-2">  every node/.style={font=\sffamily\normalsize},</span>
+<span id="cb3-3">  every path/.style={line width=1.5pt}</span>
+<span id="cb3-4">}</span>
+<span id="cb3-5">\begin{tikzpicture}</span>
+<span id="cb3-6">  \draw[fill=red!20] (0,0) rectangle (6,4);</span>
+<span id="cb3-7">  \node[above right] at (0,4) {$\Omega$};</span>
+<span id="cb3-8">  \draw[fill=blue!20] (3,2) circle (1.5cm);</span>
+<span id="cb3-9">  \node at (3,2) {$A$};</span>
+<span id="cb3-10">  \node at (5,3.2) {$\bar{A}$};</span>
+<span id="cb3-11">\end{tikzpicture}</span></code></pre></div></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://qmdthings.top/notes/概率论与数理统计/概率论与数理统计_files/figure-html/unnamed-chunk-4-1.svg" class="img-fluid figure-img"></p>
+<figcaption>对立事件 <img src="https://latex.codecogs.com/png.latex?%5Cbar%7BA%7D%20=%20%5COmega%20%5Csetminus%20A"></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="运算性质" class="level2">
+<h2 class="anchored" data-anchor-id="运算性质">运算性质</h2>
+<p>事件的运算满足以下基本定律：</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>定律</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>交换律</td>
+<td><img src="https://latex.codecogs.com/png.latex?A%20%5Ccup%20B%20=%20B%20%5Ccup%20A">，<img src="https://latex.codecogs.com/png.latex?A%20%5Ccap%20B%20=%20B%20%5Ccap%20A"></td>
+</tr>
+<tr class="even">
+<td>结合律</td>
+<td><img src="https://latex.codecogs.com/png.latex?(A%20%5Ccup%20B)%20%5Ccup%20C%20=%20A%20%5Ccup%20(B%20%5Ccup%20C)"></td>
+</tr>
+<tr class="odd">
+<td>分配律</td>
+<td><img src="https://latex.codecogs.com/png.latex?A%20%5Ccap%20(B%20%5Ccup%20C)%20=%20(A%20%5Ccap%20B)%20%5Ccup%20(A%20%5Ccap%20C)"></td>
+</tr>
+<tr class="even">
+<td>差化积</td>
+<td><img src="https://latex.codecogs.com/png.latex?A%20%5Csetminus%20B%20=%20A%5Cbar%7BB%7D%20=%20A%20%5Csetminus%20AB"></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled" title="定理：德摩根律（对偶律）">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>定理：德摩根律（对偶律）
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>对有限个或可列无穷多个事件 <img src="https://latex.codecogs.com/png.latex?%5C%7BA_i%5C%7D">，恒有： <img src="https://latex.codecogs.com/png.latex?%0A%5Coverline%7B%5Cbigcup_%7Bi=1%7D%5E%7Bn%7D%20A_i%7D%20=%20%5Cbigcap_%7Bi=1%7D%5E%7Bn%7D%20%5Cbar%7BA%7D_i,%0A%5Cqquad%0A%5Coverline%7B%5Cbigcap_%7Bi=1%7D%5E%7Bn%7D%20A_i%7D%20=%20%5Cbigcup_%7Bi=1%7D%5E%7Bn%7D%20%5Cbar%7BA%7D_i%0A"></p>
+</div>
+</div>
 
 
 <!-- -->
 
+</section>
+</section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
-  <guid>https://qmdthings.top/notes/概率论与数理统计/概率论的基本概念.html</guid>
+  <category>速通</category>
+  <guid>https://qmdthings.top/notes/概率论与数理统计/概率论与数理统计.html</guid>
   <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
 </item>
 <item>

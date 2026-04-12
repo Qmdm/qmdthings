@@ -13,7 +13,7 @@ license: "CC BY-NC-SA"
 
 format:
   html:
-    include-before-body: ../_includes/hitokoto.html
+    include-before-body: ../assets/hitokoto.html
     include-in-header:
       - text: |
           <style>
@@ -42,8 +42,8 @@ format:
               banner.prepend(c);
             })();
           </script>
-          <script src="../../_includes/hero.js" defer></script>
-          <script src="../../_includes/auto-collapse.js" defer></script>
+          <script src="../../assets/hero.js" defer></script>
+          <script src="../../assets/auto-collapse.js" defer></script>
     code-tools:
       toggle: false
       caption: "Source Code"
