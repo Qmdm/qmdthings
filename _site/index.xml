@@ -12,6 +12,1140 @@
 <generator>quarto-1.9.36</generator>
 <lastBuildDate>Fri, 10 Apr 2026 00:00:00 GMT</lastBuildDate>
 <item>
+  <title>工程热力学</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/notes/工程热力学/工程热力学.html</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+  hitokoto!
+</p>
+
+<script>
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+  fetch("https://v1.hitokoto.cn?c=k")
+    .then((response) => response.json())
+    .then((data) => {
+      const hitokoto = document.querySelector("#hitokoto_text");
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+      hitokoto.innerText = data.hitokoto;
+    })
+    .catch(console.error);
+
+  hitokotoElement.addEventListener("click", function (event) {
+    event.preventDefault();
+  });
+</script>
+
+
+
+
+
+<section id="绪论" class="level1">
+<h1>绪论</h1>
+<section id="绪论-0-1-0-3" class="level3">
+<h3 class="anchored" data-anchor-id="绪论-0-1-0-3">绪论 (0-1 ~ 0-3)</h3>
+<p>这一部分是全书的灵魂，确立了热力学研究的宏观背景。</p>
+<section id="热能及其利用" class="level4">
+<h4 class="anchored" data-anchor-id="热能及其利用">0-1 热能及其利用</h4>
+<ul>
+<li><strong>能源 (Energy Source)</strong>：提供有效能量的物质资源（煤、石油、天然气、核能、太阳能等）[1]。</li>
+<li><strong>热能利用的两种形式</strong>：
+<ol type="1">
+<li><strong>热利用</strong>：直接利用热能进行加热（如冶金、化工）[1]。</li>
+<li><strong>动力利用</strong>：将热能转换为机械能或电能（热力学的重点研究方向）[1]。</li>
+</ol></li>
+<li><strong>核心结论</strong>：世界上 85%~90% 以上的能量是通过热能形式被利用的 [1]。</li>
+</ul>
+</section>
+<section id="热力学发展简史" class="level4">
+<h4 class="anchored" data-anchor-id="热力学发展简史">0-2 热力学发展简史</h4>
+<ul>
+<li><strong>瓦特 (James Watt)</strong>：蒸汽机的改良者，开启了热能大规模转机械能的时代 [2]。</li>
+<li><strong>卡诺 (Sadi Carnot)</strong>：1824年提出卡诺循环与卡诺定理，指明了提高热机效率的方向 [2]。</li>
+<li><strong>热力学第一定律奠基人</strong>：迈耶、焦耳、亥姆霍兹。焦耳通过实验确定了热功当量 [2]。</li>
+<li><strong>热力学第二定律奠基人</strong>：克劳修斯、开尔文（汤姆逊）[2]。</li>
+</ul>
+</section>
+<section id="工程热力学的内容及研究方法" class="level4">
+<h4 class="anchored" data-anchor-id="工程热力学的内容及研究方法">0-3 工程热力学的内容及研究方法</h4>
+<ul>
+<li><strong>工程热力学定义</strong>：研究热能与机械能相互转换规律及提高转换效率的科学 [3, 4]。</li>
+<li><strong>研究方法</strong>：
+<ol type="1">
+<li><strong>宏观研究法（经典热力学）</strong>：将物质视为连续体，不考虑微观粒子，以实验定律为基础进行逻辑推理。<strong>这是本教材的主要方法</strong> [4]。</li>
+<li><strong>微观研究法（统计热力学）</strong>：基于分子运动论和统计规律研究物质性质 [5]。</li>
+</ol></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="第一章基本概念及定义" class="level3">
+<h3 class="anchored" data-anchor-id="第一章基本概念及定义">第一章：基本概念及定义</h3>
+<p>从这里开始，你将接触到计算所需的参数和公式。</p>
+<section id="热能和机械能相互转换的过程" class="level4">
+<h4 class="anchored" data-anchor-id="热能和机械能相互转换的过程">1-1 热能和机械能相互转换的过程</h4>
+<ul>
+<li><strong>热能动力装置（热机）</strong>：实现热能与机械能转换的整套设备 [6]。</li>
+<li><strong>必备组件</strong>：工质（传递能量的媒介）、热源（放热给工质）、冷源（吸收工质余热）[7]。</li>
+</ul>
+</section>
+<section id="热力系统-thermodynamic-system" class="level4">
+<h4 class="anchored" data-anchor-id="热力系统-thermodynamic-system">1-2 热力系统 (Thermodynamic System)</h4>
+<ul>
+<li><strong>定义</strong>：为了进行分析而划分出的有限物质或空间 [7]。</li>
+<li><strong>分类</strong> [8, 9]：
+<ul>
+<li><strong>闭口系统（控制质量）</strong>：与外界无质量交换，只有能量交换。</li>
+<li><strong>开口系统（控制容积）</strong>：与外界既有质量交换，又有能量交换。</li>
+<li><strong>绝热系统</strong>：与外界无热量交换。</li>
+<li><strong>孤立系统</strong>：与外界既无物质交换，也无能量交换。</li>
+</ul></li>
+</ul>
+</section>
+<section id="工质的热力学状态及其基本状态参数" class="level4">
+<h4 class="anchored" data-anchor-id="工质的热力学状态及其基本状态参数">1-3 工质的热力学状态及其基本状态参数</h4>
+<p>工质的状态由<strong>状态参数</strong>描述，其变化量只与初终态有关，与路径无关 [10]。</p>
+<p><strong>1. 温度 (<img src="https://latex.codecogs.com/png.latex?T,%20t">)</strong> * <strong>概念</strong>：系统宏观平衡的标志，微观粒子杂乱热运动剧烈程度的度量 [10]。 * <strong>公式</strong>：<img src="https://latex.codecogs.com/png.latex?T%20=%20t%20+%20273.15"> * <img src="https://latex.codecogs.com/png.latex?T">：热力学温度，单位：开尔文 (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BK%7D">) [11]。 * <img src="https://latex.codecogs.com/png.latex?t">：摄氏温度，单位：摄氏度 (<img src="https://latex.codecogs.com/png.latex?%5E%5Ccirc%5Ctext%7BC%7D">) [11]。</p>
+<p><strong>2. 压力 (<img src="https://latex.codecogs.com/png.latex?p">)</strong> * <strong>概念</strong>：垂直作用于单位面积上的力（即压强）[12]。 * <strong>绝对压力 (<img src="https://latex.codecogs.com/png.latex?p">)</strong>：热力学状态参数必须使用绝对压力 [13]。 * <strong>计算公式</strong> [12]： * 高于大气压时：<img src="https://latex.codecogs.com/png.latex?p%20=%20p_b%20+%20p_e"> * 低于大气压时：<img src="https://latex.codecogs.com/png.latex?p%20=%20p_b%20-%20p_v"> * <strong>变量含义</strong>： * <img src="https://latex.codecogs.com/png.latex?p">：绝对压力 (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPa%7D">)。 * <img src="https://latex.codecogs.com/png.latex?p_b">：环境大气压力 (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPa%7D">)。 * <img src="https://latex.codecogs.com/png.latex?p_e">：表压力 (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPa%7D">)。 * <img src="https://latex.codecogs.com/png.latex?p_v">：真空度 (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPa%7D">)。</p>
+<p><strong>3. 比体积 (<img src="https://latex.codecogs.com/png.latex?v">) 与密度 (<img src="https://latex.codecogs.com/png.latex?%5Crho">)</strong> * <strong>比体积</strong>：单位质量物质占有的体积 [14]。 * <img src="https://latex.codecogs.com/png.latex?v%20=%20%5Cfrac%7BV%7D%7Bm%7D"> * <img src="https://latex.codecogs.com/png.latex?V">：总体积 (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7Bm%7D%5E3">)；<img src="https://latex.codecogs.com/png.latex?m">：质量 (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7Bkg%7D">)。 * <strong>密度</strong>：单位体积物质拥有的质量 [14]。 * <img src="https://latex.codecogs.com/png.latex?%5Crho%20=%20%5Cfrac%7Bm%7D%7BV%7D"> * <strong>关系</strong>：<img src="https://latex.codecogs.com/png.latex?v%20%5Crho%20=%201"> [14]。</p>
+</section>
+<section id="平衡状态与状态方程" class="level4">
+<h4 class="anchored" data-anchor-id="平衡状态与状态方程">1-4 平衡状态与状态方程</h4>
+<ul>
+<li><strong>平衡状态</strong>：不受外界影响下，系统状态参数始终保持不变的状态 [14]。</li>
+<li><strong>理想气体状态方程</strong> [15, 16]：
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?pv%20=%20R_gT"> 或 <img src="https://latex.codecogs.com/png.latex?pV%20=%20mR_gT"></li>
+<li><strong>变量含义</strong>：
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?R_g">：气体常数，单位为 <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BJ%7D/(%5Ctext%7Bkg%7D%20%5Ccdot%20%5Ctext%7BK%7D)">。注意不同气体的 <img src="https://latex.codecogs.com/png.latex?R_g"> 不同。</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="过程功与热量" class="level4">
+<h4 class="anchored" data-anchor-id="过程功与热量">1-5~1-6 过程、功与热量</h4>
+<ul>
+<li><strong>准平衡过程</strong>：过程无限接近平衡态，在坐标图上可用连续曲线表示 [16, 17]。</li>
+<li><strong>可逆过程</strong>：系统与外界均能完全回复原状且无耗散损失的过程 [17, 18]。</li>
+<li><strong>体积功 (Expansion Work)</strong> [19, 20]：
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cdelta%20W%20=%20p%20%5Ctext%7Bd%7DV"> 或 <img src="https://latex.codecogs.com/png.latex?w%20=%20%5Cint_%7B1%7D%5E%7B2%7D%20p%20%5Ctext%7Bd%7Dv"></li>
+<li><strong>含义</strong>：工质体积变化而通过边界传递的功。</li>
+</ul></li>
+<li><strong>过程热量 (<img src="https://latex.codecogs.com/png.latex?Q">)</strong> [21]：
+<ul>
+<li>可逆过程：<img src="https://latex.codecogs.com/png.latex?%5Cdelta%20Q%20=%20T%20%5Ctext%7Bd%7DS"></li>
+<li><strong>约定</strong>：吸热为“+”，放热为“-”；系统对外作功为“+”，外界对系统作功为“-”。</li>
+</ul></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="基本概念与定义" class="level1">
+<h1>基本概念与定义</h1>
+</section>
+<section id="热力学第一定律" class="level1">
+<h1>热力学第一定律</h1>
+</section>
+<section id="气体和蒸汽的性质" class="level1">
+<h1>气体和蒸汽的性质</h1>
+</section>
+<section id="理想气体混合物及湿空气" class="level1">
+<h1>理想气体混合物及湿空气</h1>
+</section>
+<section id="气体和蒸汽的基本热力学过程" class="level1">
+<h1>气体和蒸汽的基本热力学过程</h1>
+</section>
+<section id="热力学第一定律-1" class="level1">
+<h1>热力学第一定律</h1>
+</section>
+<section id="气体与蒸汽的流动" class="level1">
+<h1>气体与蒸汽的流动</h1>
+</section>
+<section id="压气机的热力过程" class="level1">
+<h1>压气机的热力过程</h1>
+</section>
+<section id="气体动力循环" class="level1">
+<h1>气体动力循环</h1>
+</section>
+<section id="蒸汽动力装置循环" class="level1">
+<h1>蒸汽动力装置循环</h1>
+</section>
+<section id="制冷循环" class="level1">
+<h1>制冷循环</h1>
+</section>
+<section id="实际气体的性质及热力学的一般关系式" class="level1">
+<h1>实际气体的性质及热力学的一般关系式</h1>
+</section>
+<section id="化学热力学基础" class="level1">
+<h1>化学热力学基础</h1>
+
+
+<!-- -->
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>速通</category>
+  <guid>https://qmdthings.top/notes/工程热力学/工程热力学.html</guid>
+  <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>材料力学</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/notes/材料力学/材料力学.html</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+  hitokoto!
+</p>
+
+<script>
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+  fetch("https://v1.hitokoto.cn?c=k")
+    .then((response) => response.json())
+    .then((data) => {
+      const hitokoto = document.querySelector("#hitokoto_text");
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+      hitokoto.innerText = data.hitokoto;
+    })
+    .catch(console.error);
+
+  hitokotoElement.addEventListener("click", function (event) {
+    event.preventDefault();
+  });
+</script>
+
+
+
+
+
+<section id="绪论" class="level1">
+<h1>绪论</h1>
+<ul>
+<li><strong>材料力学的任务</strong>：在满足
+<ul>
+<li><p><strong>强度</strong>（抵抗破坏的能力）</p></li>
+<li><p><strong>刚度</strong>（抵抗变形的能力）</p></li>
+<li><p><strong>稳定性</strong>（保持原有平衡形态的能力）</p></li>
+</ul></li>
+</ul>
+<p>的要求下，为设计安全且经济的构件提供理论基础和计算方法。</p>
+<ul>
+<li><p><strong>可变形固体的基本假设</strong>：</p>
+<ul>
+<li><p><strong>连续性假设</strong>：认为物体内部物质不留空隙地充满其体积。</p></li>
+<li><p><strong>均匀性假设</strong>：认为物体内各处的力学性能相同。</p></li>
+<li><p><strong>各向同性假设</strong>：认为物体在各个方向上的力学性能相同（性能随方向变化的称为各向异性，如木材）。</p></li>
+</ul></li>
+<li><p><strong>外力及其分类</strong>：</p>
+<ul>
+<li><p>按作用方式：</p>
+<ul>
+<li><p><strong>表面力</strong>（分布力、集中力）：作用于表面的力</p></li>
+<li><p><strong>体力</strong>（如重力、惯性力）：连续分布于物体个点的力</p></li>
+</ul></li>
+<li><p>按时间性质：</p>
+<ul>
+<li><p><strong>静载荷</strong>（缓慢加载且不显著变化）</p></li>
+<li><p><strong>动载荷</strong>（如交变载荷、冲击载荷）</p></li>
+</ul></li>
+</ul></li>
+<li><p><strong>内力的概念与求解</strong>：内力是由于外力作用引起的物体内部各部分之间相互作用力的改变量。求解基本方法是<strong>截面法</strong>。</p>
+<ol type="1">
+<li><p>欲求某一截面上面的内力，先沿着该截面假想的把构件分成两部分，然后任意地取出一部分作为研究对象，并丢弃掉一部分。</p></li>
+<li><p>用作用于截面上面的内力代替掉去除部分的作用。</p></li>
+<li><p>建立取出部分的平衡方程，确定未知内力。</p></li>
+</ol></li>
+<li><p><strong>应力的概念</strong>：应力是内力在截面上某一点的分布集度，分为垂直于截面的<strong>正应力 (<img src="https://latex.codecogs.com/png.latex?%5Csigma">)</strong> 和相切于截面的<strong>切应力 (<img src="https://latex.codecogs.com/png.latex?%5Ctau">)</strong>。</p>
+<p><img src="https://latex.codecogs.com/png.latex?p%20=%20%5Clim_%7B%5CDelta%20A%20%5Cto%200%7D%20%5Cfrac%7B%5CDelta%20F%7D%7B%5CDelta%20A%7D"></p>
+<p>其单位通常为 <strong>Pa</strong> (<img src="https://latex.codecogs.com/png.latex?1%5Ctext%7BN/m%7D%5E2">) 或 <strong>MPa</strong> (<img src="https://latex.codecogs.com/png.latex?10%5E6%5Ctext%7BPa%7D">)。</p></li>
+<li><p><strong>变形与应变</strong>：变形是构件尺寸和形状的改变。应变用于度量一点处的变形程度，分为<strong>线应变 (<img src="https://latex.codecogs.com/png.latex?%5Cepsilon">)</strong> 和<strong>切应变 (<img src="https://latex.codecogs.com/png.latex?%5Cgamma">)</strong>。</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cepsilon_m%20=%20%5Cfrac%7B%5CDelta%20s%7D%7B%5CDelta%20x%7D=%5Cfrac%7BM'N'%20-%20MN%7D%7B%5CDelta%20x%7D"></p>
+<ul>
+<li><p>一点处的线应变（正应变） <img src="https://latex.codecogs.com/png.latex?%5Cepsilon%20=%20%5Clim_%7B%5CDelta%20x%20%5Cto%200%7D%20%5Cfrac%7B%5CDelta%20s%7D%7B%5CDelta%20x%7D"></p>
+<ul>
+<li><strong><img src="https://latex.codecogs.com/png.latex?%5Cepsilon"></strong>：该点在特定方向上的线应变，是一个无量纲的量。</li>
+</ul></li>
+<li><p>切应变（角应变） <img src="https://latex.codecogs.com/png.latex?%5Cgamma%20=%20%5Clim_%7B%5Csubstack%7BMN%20%5Cto%200%20%5C%5C%20ML%20%5Cto%200%7D%7D%20%5Cleft(%20%5Cfrac%7B%5Cpi%7D%7B2%7D%20-%20%5Cangle%20L'M'N'%20%5Cright)"></p>
+<ul>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?%5Cgamma"></strong>：切应变，代表两相互垂直线段间夹角的变化量。有时会用<img src="https://latex.codecogs.com/png.latex?%5Ctan">近似。</p></li>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?%5Cangle%20L'M'N'"></strong>：变形后两条原本相互垂直的线段之间的夹角。</p></li>
+</ul></li>
+</ul></li>
+<li><p><strong>小变形假设</strong>：认为构件的变形远小于其原始几何尺寸，在建立平衡方程时可按变形前的尺寸计算。</p></li>
+<li><p><strong>杆件变形的基本形式</strong>：轴向拉伸或压缩、剪切、扭转、弯曲，以及它们的组合变形。</p></li>
+</ul>
+</section>
+<section id="轴向拉伸压缩-剪切与挤压" class="level1">
+<h1>轴向拉伸压缩 剪切与挤压</h1>
+<section id="轴向内力与应力" class="level2">
+<h2 class="anchored" data-anchor-id="轴向内力与应力">轴向内力与应力</h2>
+<p>作用于杆件上的外力合力作用线与杆轴线重合，表现为杆件长度的伸长或缩短。</p>
+<ul>
+<li><p><strong>轴力 (<img src="https://latex.codecogs.com/png.latex?F_N">)</strong>：通过<strong>截面法</strong>求得的横截面上的内力合力。是应力在横截面上的积分</p>
+<p><img src="https://latex.codecogs.com/png.latex?F_N=%5Cint_A%20%5Csigma%20dA"></p></li>
+<li><p><strong>轴力图</strong>：反映轴力沿杆轴线变化的图形，习惯上拉力为正，压力为负。</p></li>
+<li><p><strong>横截面上的正应力</strong>： <img src="https://latex.codecogs.com/png.latex?%5Csigma%20=%20%5Cfrac%7BF_N%7D%7BA%7D"></p>
+<ul>
+<li><strong><img src="https://latex.codecogs.com/png.latex?%5Csigma"></strong>：正应力（单位：Pa或MPa）。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?F_N"></strong>：该截面上的轴力。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?A"></strong>：杆件横截面积。</li>
+</ul></li>
+<li><p><strong>斜截面上的应力</strong>（设斜截面法线与轴线夹角为 <img src="https://latex.codecogs.com/png.latex?%5Calpha">）：</p>
+<ul>
+<li>正应力：<img src="https://latex.codecogs.com/png.latex?%5Csigma_%5Calpha%20=%20%5Csigma%20%5Ccos%5E2%20%5Calpha"></li>
+<li>切应力：<img src="https://latex.codecogs.com/png.latex?%5Ctau_%5Calpha%20=%20%5Cfrac%7B%5Csigma%7D%7B2%7D%20%5Csin%202%5Calpha"></li>
+</ul>
+<p>整理得： <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20%20%20(%5Csigma_%7B%5Calpha%7D-%5Cfrac%7B%5Csigma%7D%7B2%7D)%5E2+%5Ctau_%7B%5Calpha%7D%5E2=(%5Cfrac%7B%5Csigma%7D%7B2%7D)%5E2%0A%20%20%20%20%20%20"> 这正是一个单向应力状态下的应力莫尔圆。</p>
+<ul>
+<li><strong>最大值</strong>：当 <img src="https://latex.codecogs.com/png.latex?%5Calpha=0%5E%5Ccirc"> 时，<img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bmax%7D%20=%20%5Csigma">；当 <img src="https://latex.codecogs.com/png.latex?%5Calpha=45%5E%5Ccirc"> 时，<img src="https://latex.codecogs.com/png.latex?%5Ctau_%7Bmax%7D%20=%20%5Csigma/2">。</li>
+</ul></li>
+<li><p><strong>戴维南定理</strong> 如果将作用在构件局部区域上的力系，用一个与其静力等效的力系（即合力和合力偶相同）来代替，那么这种代替仅在原力系作用区域的附近对应力分布有显著影响。</p></li>
+</ul>
+</section>
+<section id="变形与胡克定律" class="level2">
+<h2 class="anchored" data-anchor-id="变形与胡克定律">变形与胡克定律</h2>
+<ul>
+<li><p><strong>胡克定律（弹性范围内）</strong>： <img src="https://latex.codecogs.com/png.latex?%5Csigma%20=%20E%20%5Cepsilon%20%5Cquad%20%5Ctext%7B%E6%88%96%7D%20%5Cquad%20%5CDelta%20l%20=%20%5Cfrac%7BF_N%20l%7D%7BEA%7D"></p>
+<ul>
+<li><strong><img src="https://latex.codecogs.com/png.latex?%5CDelta%20l"></strong>：杆件的总伸长或缩短量。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?E"></strong>：材料的弹性模量（拉压刚度为 <img src="https://latex.codecogs.com/png.latex?EA">）。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?l"></strong>：杆件原长。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?%5Cepsilon"></strong>：线应变（<img src="https://latex.codecogs.com/png.latex?%5Cepsilon%20=%20%5CDelta%20l%20/%20l">）。</li>
+</ul></li>
+<li><p><strong>横向变形与泊松比</strong>： <img src="https://latex.codecogs.com/png.latex?%5Cmu%20=%20-%5Cfrac%7B%5Cepsilon'%7D%7B%5Cepsilon%7D"></p>
+<ul>
+<li><strong><img src="https://latex.codecogs.com/png.latex?%5Cmu"></strong>：泊松比（横向变形系数）。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?%5Cepsilon'"></strong>：横向线应变。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?%5Cepsilon"></strong>：轴向线应变。</li>
+</ul>
+<p>由于工程实际中绝大多数材料在轴向伸长时横向会缩小（或轴向缩短时横向增大），<img src="https://latex.codecogs.com/png.latex?%5Cepsilon'"> 与 <img src="https://latex.codecogs.com/png.latex?%5Cepsilon"> 符号相反，引入负号是为了使泊松比 <img src="https://latex.codecogs.com/png.latex?%5Cmu"> 在计算中表现为正值。 对于各向同性材料，泊松比的理论范围是 <img src="https://latex.codecogs.com/png.latex?-1%20%5Cle%20%5Cmu%20%5Cle%201/2">。</p>
+<p><strong>常见材料</strong>：通常在 <img src="https://latex.codecogs.com/png.latex?0%20%3C%20%5Cmu%20%3C%201/2"> 之间（如钢材约为 0.25~0.33）。</p>
+<p><strong>不可压缩材料</strong>：当 <img src="https://latex.codecogs.com/png.latex?%5Cmu%20=%201/2"> 时，材料在变形过程中体积保持不变。</p>
+<p><strong>负泊松比</strong>：极少数材料（如某些多孔结构或 <img src="https://latex.codecogs.com/png.latex?%5Calpha">-方英石）具有负泊松比效应，即拉伸时横向也会增大。</p></li>
+</ul>
+</section>
+<section id="材料的力学性能受载形式温度与时间影响" class="level2">
+<h2 class="anchored" data-anchor-id="材料的力学性能受载形式温度与时间影响">材料的力学性能（受载形式、温度与时间影响）</h2>
+<section id="材料在拉伸时的力学性能" class="level3">
+<h3 class="anchored" data-anchor-id="材料在拉伸时的力学性能">材料在拉伸时的力学性能</h3>
+<ul>
+<li><p><strong>塑性材料（以低碳钢为例）的四个阶段</strong>：</p>
+<ul>
+<li><p><strong>弹性阶段</strong>：应力与应变成正比，比例极限为 <img src="https://latex.codecogs.com/png.latex?%5Csigma_p">，此阶段完全遵循胡克定律。</p></li>
+<li><p><strong>屈服阶段</strong>：应力在微小范围内波动，材料产生显著塑性变形。此时的应力称为屈服极限 <img src="https://latex.codecogs.com/png.latex?%5Csigma_s">（或上下屈服强度 <img src="https://latex.codecogs.com/png.latex?ReH/ReL">）。</p></li>
+<li><p><strong>强化阶段</strong>：材料恢复抗变形能力，需继续增加载荷才能继续变形，直到应力达到抗拉强度 <img src="https://latex.codecogs.com/png.latex?%5Csigma_b">（或 <img src="https://latex.codecogs.com/png.latex?Rm">）。</p></li>
+<li><p><strong>局部变形阶段（颈缩断裂）</strong>：试样局部截面急剧缩小，载荷下降，最终在颈缩处断裂。</p></li>
+</ul></li>
+<li><p><strong>脆性材料（以铸铁为例）</strong>：拉伸时变形极小即断裂，无明显的屈服现象，抗拉强度 <img src="https://latex.codecogs.com/png.latex?%5Csigma_b"> 远低于塑性材料，是衡量其强度的唯一指标。</p></li>
+</ul>
+</section>
+<section id="材料在压缩时的力学性能" class="level3">
+<h3 class="anchored" data-anchor-id="材料在压缩时的力学性能">材料在压缩时的力学性能</h3>
+<ul>
+<li><p><strong>低碳钢（塑性）</strong>：屈服极限与拉伸时大致相同。屈服后试样被压扁而不产生断裂，因此没有明确的抗压强度极限。</p></li>
+<li><p><strong>铸铁（脆性）</strong>：<strong>抗压能力远大于抗拉能力</strong>（通常为 3~5 倍）。破坏时产生约 <img src="https://latex.codecogs.com/png.latex?45%5E%5Ccirc%20%5Csim%2055%5E%5Ccirc"> 的斜断口，表现为剪切破坏特征。</p></li>
+</ul>
+</section>
+<section id="塑性性能指标" class="level3">
+<h3 class="anchored" data-anchor-id="塑性性能指标">塑性性能指标</h3>
+<p>用于衡量材料在断裂前产生永久变形的能力：</p>
+<ul>
+<li><p><strong>断后伸长率 (<img src="https://latex.codecogs.com/png.latex?%5Cdelta">)</strong>：试样拉断后标距的残余伸长与原标距之比。</p></li>
+<li><p><strong>断面收缩率 (<img src="https://latex.codecogs.com/png.latex?%5Cpsi">)</strong>：试样断口处缩颈截面积的减少量与原截面积之比。 <em>注：工程上通常将 <img src="https://latex.codecogs.com/png.latex?%5Cdelta%20%3E%205%5C%25"> 的材料定为塑性材料（如钢、铝），<img src="https://latex.codecogs.com/png.latex?%5Cdelta%20%3C%205%5C%25"> 的定为脆性材料（如铸铁、石料）。</em></p></li>
+</ul>
+</section>
+<section id="温度与时间因子的影响" class="level3">
+<h3 class="anchored" data-anchor-id="温度与时间因子的影响">温度与时间因子的影响</h3>
+<ul>
+<li><p><strong>温度的影响</strong>：</p>
+<ul>
+<li><p><strong>高温</strong>：随温度升高，材料的弹性模量 <img src="https://latex.codecogs.com/png.latex?E">、屈服极限 <img src="https://latex.codecogs.com/png.latex?%5Csigma_s"> 和强度极限 <img src="https://latex.codecogs.com/png.latex?%5Csigma_b"> 通常会降低，而塑性指标（<img src="https://latex.codecogs.com/png.latex?%5Cdelta,%20%5Cpsi">）可能上升。</p></li>
+<li><p><strong>低温</strong>：钢材在低温下倾向于变脆，强度极限可能有所提高但塑性急剧下降。</p></li>
+</ul></li>
+<li><p><strong>时间因子的影响（蠕变与松弛）</strong>：</p>
+<ul>
+<li><p><strong>蠕变 (Creep)</strong>：在高温环境下，即使应力保持恒定，材料的塑性变形也会随时间增加而缓慢增大，最终可能导致断裂。</p></li>
+<li><p><strong>松弛 (Relaxation)</strong>：在高温下，若构件的变形保持不变，其内部应力会随时间增加而逐渐降低。</p></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="强度条件与失效" class="level2">
+<h2 class="anchored" data-anchor-id="强度条件与失效">强度条件与失效</h2>
+<p><strong>失效</strong>是指材料或构件由于力学行为使其丧失正常功能的现象。对于轴向拉压杆件，主要的失效形式包括：</p>
+<ul>
+<li><p><strong>强度失效</strong>：表现为塑性材料在载荷下产生显著的<strong>屈服（流动）</strong>，或者脆性材料在变形极小时突然发生<strong>断裂</strong>。</p></li>
+<li><p><strong>屈曲失效</strong>：细长压杆在压力下失去原有的直线平衡形态而突然变弯（失稳）。</p></li>
+<li><p><strong>刚度失效</strong>：构件产生过量的弹性位移，导致机器无法正常工作。</p></li>
+</ul>
+<p><strong>极限应力</strong>是材料在失效前所能达到的最高应力值，其取值取决于材料的力学性质：</p>
+<ul>
+<li><p><strong>塑性材料</strong>（如低碳钢）：通常以<strong>屈服极限 (<img src="https://latex.codecogs.com/png.latex?%5Csigma_s">)</strong> 作为极限应力，因为一旦进入屈服阶段，产生的显著塑性变形通常会导致构件无法正常工作。</p></li>
+<li><p><strong>脆性材料</strong>（如铸铁）：由于没有明显的屈服现象，以<strong>强度极限 (<img src="https://latex.codecogs.com/png.latex?%5Csigma_b">)</strong>（抗拉强度）作为极限应力。</p></li>
+</ul>
+<p><strong>强度条件</strong>：</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Csigma%20=%20%5Cfrac%7BF_N%7D%7BA%7D%20%5Cle%20%5B%5Csigma%5D"></p>
+<ul>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?%5B%5Csigma%5D"></strong>：许用应力，<img src="https://latex.codecogs.com/png.latex?%5B%5Csigma%5D%20=%20%5Csigma_%7Blimit%7D%20/%20n">。</p></li>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Blimit%7D"></strong>：极限应力</p>
+<ul>
+<li>（塑性材料取 <img src="https://latex.codecogs.com/png.latex?%5Csigma_s">，脆性材料取 <img src="https://latex.codecogs.com/png.latex?%5Csigma_b">）。</li>
+</ul></li>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?n"></strong>：安全系数<img src="https://latex.codecogs.com/png.latex?(n%3E1)"></p>
+<ul>
+<li><p><strong>塑性材料</strong>：通常取 <img src="https://latex.codecogs.com/png.latex?n_s%20=%201.2%20%5Csim%202.5"> 。</p></li>
+<li><p><strong>脆性材料</strong>：由于材料均匀性较差且断裂具有突发危险性，安全系数取值较高，通常为 <img src="https://latex.codecogs.com/png.latex?n_b%20=%202.0%20%5Csim%203.5">，有时甚至高达 <img src="https://latex.codecogs.com/png.latex?9"> 。</p></li>
+</ul></li>
+</ul>
+<p>根据上述强度条件，可以解决工程设计中的三类基本计算问题 ：</p>
+<ol type="1">
+<li><p><strong>强度校核</strong>：在已知载荷、截面及材料的情况下，核算工作应力是否满足 <img src="https://latex.codecogs.com/png.latex?%5Csigma%20%5Cle%20%5B%5Csigma%5D"> 。</p></li>
+<li><p><strong>截面设计</strong>：在已知载荷和材料的情况下，确定所需截面积 <img src="https://latex.codecogs.com/png.latex?A%20%5Cge%20%5Cfrac%7BF_N%7D%7B%5B%5Csigma%5D%7D">。</p></li>
+<li><p><strong>确定许可载荷</strong>：在已知截面和材料的情况下，计算构件所能承受的最大轴力 <img src="https://latex.codecogs.com/png.latex?%5BF_N%5D%20%5Cle%20A%20%5Ccdot%20%5B%5Csigma%5D">。</p></li>
+</ol>
+</section>
+<section id="拉压应变能" class="level2">
+<h2 class="anchored" data-anchor-id="拉压应变能">拉压应变能</h2>
+<ul>
+<li><p><strong>应变能 (<img src="https://latex.codecogs.com/png.latex?V_%5Cepsilon"> 或 <img src="https://latex.codecogs.com/png.latex?U">)</strong>： <img src="https://latex.codecogs.com/png.latex?V_%5Cepsilon%20=%20W%20=%5Cint_0%5E%7B%5CDelta%20l_1%7DFd(%5CDelta%20l)=%20%5Cfrac%7B1%7D%7B2%7DF%5CDelta%20l%20=%20%5Cfrac%7BF_N%5E2%20l%7D%7B2EA%7D"></p></li>
+<li><p><strong>应变能密度 (<img src="https://latex.codecogs.com/png.latex?v_%5Cepsilon">)</strong>： <img src="https://latex.codecogs.com/png.latex?v_%5Cepsilon%20=%5Cfrac%7BdV_%5Cepsilon%7D%7BdV%7D%20=%20%5Cint_0%5E%7B%5Cepsilon_1%7D%5Csigma%20d%5Cepsilon=%20%5Cfrac%7B1%7D%7B2%7D%20%5Csigma%20%5Cepsilon=%20%5Cfrac%7BE%5Cepsilon%5E2%7D%7B2%7D=%20%5Cfrac%7B%5Csigma%5E2%7D%7B2E%7D"></p></li>
+</ul>
+</section>
+<section id="简单超静定问题" class="level2">
+<h2 class="anchored" data-anchor-id="简单超静定问题">简单超静定问题</h2>
+<ul>
+<li><p><strong>特征</strong>：仅靠平衡方程无法求出所有未知力。</p></li>
+<li><p><strong>求解三部曲</strong>：</p>
+<ol type="1">
+<li><p><strong>列平衡方程（静力方面）</strong>：根据构件的受力情况，利用静力学平衡条件列出方程。由于未知力多于方程，此时无法直接求解。</p></li>
+<li><p><strong>建立变形协调方程（几何方面）</strong>：分析由于构件受力（或温度变化等）产生的变形，根据结构连接处的位移相容性，找出各部分变形量之间的几何关系。</p></li>
+<li><p><strong>建立物理方程（物理方面）</strong>：利用<strong>胡克定律</strong>（如 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20l%20=%20%5Cfrac%7BF_N%20l%7D%7BEA%7D">）将上述几何变形量表示为轴力的函数。</p></li>
+</ol></li>
+<li><p><strong>温度应力（热应力）</strong>： 在静定结构中，温度均匀变化时构件可以自由膨胀或收缩，不会产生内力。但在超静定结构中，由于多余约束限制了这种自由变形，从而在构件内部激起轴力。例如两端固定的杆件，其温度正应力为 <img src="https://latex.codecogs.com/png.latex?%5Csigma_T%20=%20E%20%5Calpha_l%20%5CDelta%20T">，其中 <img src="https://latex.codecogs.com/png.latex?%5Calpha_l"> 为线膨胀系数。</p></li>
+<li><p><strong>装配应力</strong>： 由于制造误差，构件的实际尺寸（如长度）可能与名义尺寸不符（误差为 <img src="https://latex.codecogs.com/png.latex?%5Cdelta">)。在强制将这些带有偏差的构件安装进超静定结构时，构件会发生相互挤压或拉伸，从而产生初始的内力和应力。这种在未受载荷前就存在的应力有时会严重削弱构件的承载能力，但也常被用于工程中的预应力设计。</p></li>
+</ul>
+</section>
+<section id="应力集中" class="level2">
+<h2 class="anchored" data-anchor-id="应力集中">应力集中</h2>
+<p>等截面的直杆在受轴向拉伸或压缩时，横截面上的应力通常被认为是均匀分布的。然而，当构件上存在<strong>圆孔、切口、沟槽、螺纹或轴肩</strong>等几何形状突变的部位时，这些部位截面上的应力分布将不再均匀。在孔径或切口附近的局部区域内，应力会剧烈增加，而在离开这些部位稍远的地方，应力又迅速降低并趋于均匀。</p>
+<p>为了度量应力集中的程度，引入了<strong>理论应力集中因数</strong>，用 <img src="https://latex.codecogs.com/png.latex?K_t"> 表示：</p>
+<p><img src="https://latex.codecogs.com/png.latex?K_t%20=%20%5Cfrac%7B%5Csigma_%7Bmax%7D%7D%7B%5Csigma%7D"></p>
+<ul>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bmax%7D"></strong>：应力集中处的最大工作应力。</p></li>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?%5Csigma"></strong>：同一截面上的平均应力（按净截面面积计算)。</p></li>
+<li><p><strong>特性</strong>：<img src="https://latex.codecogs.com/png.latex?K_t"> 是一个大于 1 的系数。截面尺寸改变越急剧、角越尖、孔越小，应力集中的程度就越严重。</p></li>
+</ul>
+<section id="材料对应力集中的敏感性" class="level3">
+<h3 class="anchored" data-anchor-id="材料对应力集中的敏感性">材料对应力集中的敏感性</h3>
+<p>不同力学性质的材料对应力集中的反应截然不同：</p>
+<ul>
+<li><p><strong>塑性材料（如低碳钢）</strong>：</p>
+<ul>
+<li><p>在<strong>静载荷</strong>作用下，应力集中处的高应力达到屈服极限时，材料会产生局部塑性变形。随着载荷增加，塑性区扩展，使应力分布趋于平均，从而降低了应力不均匀的程度。</p></li>
+<li><p>因此，对于塑性材料制成的零件，在静载荷下通常可以<strong>不考虑</strong>应力集中的影响。</p></li>
+</ul></li>
+<li><p><strong>脆性材料（如铸铁）</strong>：</p>
+<ul>
+<li><p>由于缺乏屈服阶段，应力集中处的峰值应力会一直领先达到强度极限，导致构件产生微裂纹并迅速断裂。</p></li>
+<li><p>因此，脆性材料对极其敏感，即使在静载荷下，应力集中也会严重削弱构件的承载能力。</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="疲劳与动载荷下的危害与工程减缓措施" class="level3">
+<h3 class="anchored" data-anchor-id="疲劳与动载荷下的危害与工程减缓措施">疲劳与动载荷下的危害与工程减缓措施</h3>
+<p>无论材料是塑性还是脆性，在承受<strong>交变应力（疲劳载荷）</strong> 或 <strong>冲击载荷</strong> 时，应力集中都是极其危险的。它是产生疲劳裂纹的根源，裂纹在应力集中处萌生并不断扩展，最终导致构件在远低于强度极限的应力水平下发生突然断裂。</p>
+<p>为了降低应力集中的危害，在设计构件时应采取以下措施：</p>
+<ul>
+<li><p>尽可能避免带有尖角的孔和槽。</p></li>
+<li><p>在阶梯轴的轴肩处采用圆弧过渡。</p></li>
+<li><p>尽量增大圆弧的半径，使截面改变更加平缓。</p></li>
+</ul>
+</section>
+</section>
+<section id="剪切计算" class="level2">
+<h2 class="anchored" data-anchor-id="剪切计算">剪切计算</h2>
+<ul>
+<li><p><strong>名义切应力 (<img src="https://latex.codecogs.com/png.latex?%5Ctau">)</strong>： <img src="https://latex.codecogs.com/png.latex?%5Ctau%20=%20%5Cfrac%7BF_s%7D%7BA%7D%20%5Cle%20%5B%5Ctau%5D"></p>
+<ul>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?F_s"></strong>：剪切面上的剪力。</p></li>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?A"></strong>：剪切面的面积。</p></li>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?%5B%5Ctau%5D"></strong>：许用切应力。</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="挤压计算" class="level2">
+<h2 class="anchored" data-anchor-id="挤压计算">挤压计算</h2>
+<ul>
+<li><strong>挤压应力 (<img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bbs%7D">)</strong>： <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bbs%7D%20=%20%5Cfrac%7BF%7D%7BA_%7Bbs%7D%7D%20%5Cle%20%5B%5Csigma_%7Bbs%7D%5D">
+<ul>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?F"></strong>：传递的挤压力。</p></li>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?A_%7Bbs%7D"></strong>：计算挤压面积。 平面接触：取实际面积。 圆柱面接触（如销钉）：取投影面积 <img src="https://latex.codecogs.com/png.latex?A_%7Bbs%7D%20=%20d%20%5Ccdot%20%5Cdelta">（<img src="https://latex.codecogs.com/png.latex?d"> 为直径，<img src="https://latex.codecogs.com/png.latex?%5Cdelta"> 为板厚）。</p></li>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?%5B%5Csigma_%7Bbs%7D%5D"></strong>：许用挤压应力。</p></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="扭转" class="level1">
+<h1>扭转</h1>
+<p>杆件受到一对大小相等、方向相反、作用面垂直于杆轴线的力偶作用，使杆的任意两个横截面绕轴线发生相对转动，这就是扭转变形。如汽车转向轴、机床主轴、传动轴等。</p>
+<section id="外力偶矩的计算-扭矩和扭矩图" class="level2">
+<h2 class="anchored" data-anchor-id="外力偶矩的计算-扭矩和扭矩图">外力偶矩的计算 扭矩和扭矩图</h2>
+<ul>
+<li><strong>外力偶矩的换算</strong>：在工程中，通常根据轴传递的功率和转速来计算作用在轴上的外力偶矩。</li>
+<li><strong>扭矩 (<img src="https://latex.codecogs.com/png.latex?T">)</strong>：应用截面法，由截开后一侧的外力偶矩平衡得到截面上的内力偶矩。</li>
+<li><strong>扭矩符号规定</strong>：按右手螺旋法则，扭矩矢量方向背离截面时为正，指向截面时为负。</li>
+<li><strong>扭矩图</strong>：反映扭矩沿杆轴线变化的图形。</li>
+</ul>
+<ol type="1">
+<li><strong>外力偶矩计算公式</strong>： <img src="https://latex.codecogs.com/png.latex?%0A%7B2%5Cpi%5Ctimes%5Cfrac%7B%5C%7Bn%5C%7D_%7Br/min%7D%7D%7B60%7D%7D%5Ctimes%5C%7BM_e%5C%7D_%7BN%5Ccdot%20m%7D=%5C%7BP%5C%7D_%7BkW%7D%5Ctimes1000%0A"> <img src="https://latex.codecogs.com/png.latex?%5C%7BM_e%5C%7D_%7BN%5Ccdot%20m%7D%20=%209550%20%5Cfrac%7B%5C%7BP%5C%7D_%7BkW%7D%7D%7B%5C%7Bn%5C%7D_%7Br/min%7D%7D">
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?M_e">：外力偶矩 (N·m)。</li>
+<li><img src="https://latex.codecogs.com/png.latex?P">：传递的功率 (kW)。</li>
+<li><img src="https://latex.codecogs.com/png.latex?n">：转速 (r/min)。</li>
+</ul></li>
+<li><strong>内力平衡方程</strong>：<img src="https://latex.codecogs.com/png.latex?%5Csum%20M_x%20=%200%20%5CRightarrow%20T%20=%20M_e">
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?T">：截面扭矩。</li>
+</ul></li>
+</ol>
+</section>
+<section id="纯剪切" class="level2">
+<h2 class="anchored" data-anchor-id="纯剪切">纯剪切</h2>
+<ul>
+<li><p><strong>纯剪切状态</strong>：薄壁圆筒受扭时，其单元体各面仅受剪力作用而无正应力。</p></li>
+<li><p><strong>切应力互等定理</strong>：在相互垂直的两个平面上，切应力必然成对存在，且数值相等、方向共同指向或背离两平面的交线。</p>
+<ul>
+<li><p><strong>切应变 (<img src="https://latex.codecogs.com/png.latex?%5Cgamma">)</strong>：直角改变量，用于度量剪切变形。</p></li>
+<li><p><strong>剪切胡克定律</strong>：在材料的剪切比例极限内，切应力与切应变成正比。</p></li>
+</ul>
+<ol type="1">
+<li><strong>切应力互等定理</strong>：<img src="https://latex.codecogs.com/png.latex?%5Ctau%20=%20%5Ctau'"></li>
+<li><strong>剪切胡克定律</strong>：<img src="https://latex.codecogs.com/png.latex?%5Ctau%20=%20G%20%5Cgamma">
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?%5Ctau">：切应力 (MPa)。</li>
+<li><img src="https://latex.codecogs.com/png.latex?G">：切变模量（材料弹性常数，钢材约为 80 GPa）。</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cgamma">：切应变 (rad)。</li>
+</ul></li>
+<li><strong>三个弹性常数的关系</strong>：<img src="https://latex.codecogs.com/png.latex?G%20=%20%5Cfrac%7BE%7D%7B2(1+%5Cmu)%7D">
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?E">：弹性模量。</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cmu">：泊松比。</li>
+</ul></li>
+<li><strong>剪切比能（应变能密度）</strong>：<img src="https://latex.codecogs.com/png.latex?v_%5Cepsilon%20=%20%5Cfrac%7B%5Ctau%5E2%7D%7B2G%7D"></li>
+</ol></li>
+</ul>
+</section>
+<section id="圆轴扭转时的应力" class="level2">
+<h2 class="anchored" data-anchor-id="圆轴扭转时的应力">圆轴扭转时的应力</h2>
+<ul>
+<li><strong>知识点</strong>：
+<ul>
+<li><strong>平面假设</strong>：圆轴受扭后，其横截面仍保持为平面，形状和大小不变，半径仍保持为直线。</li>
+<li><strong>应力分布</strong>：横截面上任一点的切轴力 <img src="https://latex.codecogs.com/png.latex?%5Ctau_%5Crho"> 与该点到圆心的距离 <img src="https://latex.codecogs.com/png.latex?%5Crho"> 成正比，方向垂直于半径。</li>
+</ul></li>
+<li><strong>核心公式</strong>：
+<ol type="1">
+<li><strong>圆轴扭转切应力公式</strong>：<img src="https://latex.codecogs.com/png.latex?%5Ctau_%5Crho%20=%20%5Cfrac%7BT%20%5Crho%7D%7BI_p%7D">
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?%5Crho">：该点到圆心的距离。</li>
+<li><img src="https://latex.codecogs.com/png.latex?I_p">：极惯性矩（截面二次极矩）。</li>
+</ul></li>
+<li><strong>最大切应力</strong>：<img src="https://latex.codecogs.com/png.latex?%5Ctau_%7Bmax%7D%20=%20%5Cfrac%7BT%7D%7BW_p%7D">
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?W_p">：抗扭截面系数 (<img src="https://latex.codecogs.com/png.latex?W_p%20=%20I_p%20/%20R">)。</li>
+</ul></li>
+<li><strong>几何性质（实心轴）</strong>：<img src="https://latex.codecogs.com/png.latex?I_p%20=%20%5Cfrac%7B%5Cpi%20d%5E4%7D%7B32%7D,%20%5Cquad%20W_p%20=%20%5Cfrac%7B%5Cpi%20d%5E3%7D%7B16%7D">
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?d">：轴直径。</li>
+</ul></li>
+<li><strong>几何性质（空心轴）</strong>：<img src="https://latex.codecogs.com/png.latex?I_p%20=%20%5Cfrac%7B%5Cpi%20D%5E4%7D%7B32%7D(1-%5Calpha%5E4),%20%5Cquad%20W_p%20=%20%5Cfrac%7B%5Cpi%20D%5E3%7D%7B16%7D(1-%5Calpha%5E4)">
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?D,%20d">：外、内径；<img src="https://latex.codecogs.com/png.latex?%5Calpha%20=%20d/D">。</li>
+</ul></li>
+<li><strong>强度条件</strong>：<img src="https://latex.codecogs.com/png.latex?%5Ctau_%7Bmax%7D%20%5Cle%20%5B%5Ctau%5D">
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?%5B%5Ctau%5D">：许用切应力。</li>
+</ul></li>
+</ol></li>
+</ul>
+<section id="圆轴扭转时的变形" class="level3">
+<h3 class="anchored" data-anchor-id="圆轴扭转时的变形">§3.5 圆轴扭转时的变形</h3>
+<ul>
+<li><strong>知识点</strong>：
+<ul>
+<li><strong>扭转角 (<img src="https://latex.codecogs.com/png.latex?%5Cphi">)</strong>：两个横截面绕轴线产生的相对转动角[10]。</li>
+<li><strong>单位长度扭转角 (<img src="https://latex.codecogs.com/png.latex?%5Cphi'">)</strong>：度量扭转变形程度[11]。</li>
+<li><strong>抗扭刚度 (<img src="https://latex.codecogs.com/png.latex?G%20I_p">)</strong>：反映杆件抵抗扭转变形的能力[11]。</li>
+</ul></li>
+<li><strong>核心公式</strong>：
+<ol type="1">
+<li><strong>圆轴扭转角计算</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cphi%20=%20%5Cfrac%7BTl%7D%7BG%20I_p%7D"> [11]
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?l">：轴段长度。</li>
+</ul></li>
+<li><strong>刚度条件</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cphi'_%7Bmax%7D%20=%20%5Cfrac%7BT_%7Bmax%7D%7D%7BG%20I_p%7D%20%5Ccdot%20%5Cfrac%7B180%5E%5Ccirc%7D%7B%5Cpi%7D%20%5Cle%20%5B%5Cphi'%5D"> [11]
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?%5B%5Cphi'%5D">：许用单位长度扭转角 (通常为 <img src="https://latex.codecogs.com/png.latex?%5E%5Ccirc/m">)。</li>
+</ul></li>
+</ol></li>
+</ul>
+</section>
+<section id="圆柱螺旋弹簧的应力和变形" class="level3">
+<h3 class="anchored" data-anchor-id="圆柱螺旋弹簧的应力和变形">§3.6 圆柱螺旋弹簧的应力和变形</h3>
+<ul>
+<li><strong>知识点</strong>：
+<ul>
+<li><strong>受力分析</strong>：弹簧丝横截面上受扭矩 <img src="https://latex.codecogs.com/png.latex?T%20=%20FD/2"> 和剪力 <img src="https://latex.codecogs.com/png.latex?F_s%20=%20F"> 的共同作用[12]。</li>
+<li><strong>应力修正</strong>：考虑弹簧丝曲率的影响，引入修正系数 <img src="https://latex.codecogs.com/png.latex?k">[13]。</li>
+</ul></li>
+<li><strong>核心公式</strong>：
+<ol type="1">
+<li><strong>最大切应力</strong>：<img src="https://latex.codecogs.com/png.latex?%5Ctau_%7Bmax%7D%20=%20k%20%5Cfrac%7B8FD%7D%7B%5Cpi%20d%5E3%7D"> [13]
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?F">：轴向载荷。</li>
+<li><img src="https://latex.codecogs.com/png.latex?D">：弹簧平均直径。</li>
+<li><img src="https://latex.codecogs.com/png.latex?d">：弹簧丝直径。</li>
+<li><img src="https://latex.codecogs.com/png.latex?k">：曲度系数（查表或计算）[13]。</li>
+</ul></li>
+<li><strong>弹簧变形（轴向位移）</strong>：<img src="https://latex.codecogs.com/png.latex?%5Clambda%20=%20%5Cfrac%7B8FD%5E3%20n%7D%7BG%20d%5E4%7D"> [14]
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?n">：弹簧有效圈数。</li>
+</ul></li>
+</ol></li>
+</ul>
+</section>
+<section id="非圆形截面杆件扭转的概念" class="level3">
+<h3 class="anchored" data-anchor-id="非圆形截面杆件扭转的概念">§3.7 非圆形截面杆件扭转的概念</h3>
+<ul>
+<li><strong>知识点</strong>：
+<ul>
+<li><strong>翘曲现象</strong>：非圆截面受扭后不再保持为平面[15]。</li>
+<li><strong>矩形截面</strong>：最大切应力发生在<strong>长边中点</strong>，四个角点处切应力为零[16]。</li>
+</ul></li>
+<li><strong>核心公式</strong>：
+<ol type="1">
+<li><strong>最大切应力</strong>：<img src="https://latex.codecogs.com/png.latex?%5Ctau_%7Bmax%7D%20=%20%5Cfrac%7BT%7D%7B%5Calpha%20h%20b%5E2%7D"> [16]</li>
+<li><strong>扭转角</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cphi%20=%20%5Cfrac%7BTl%7D%7BG%20%5Cbeta%20h%20b%5E3%7D"> [17]
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?h,%20b">：矩形的长边和短边。</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Calpha,%20%5Cbeta">：与 <img src="https://latex.codecogs.com/png.latex?h/b"> 比值有关的系数[17]。</li>
+</ul></li>
+</ol></li>
+</ul>
+</section>
+<section id="薄壁杆件的自由扭转" class="level3">
+<h3 class="anchored" data-anchor-id="薄壁杆件的自由扭转">§3.8 薄壁杆件的自由扭转</h3>
+<ul>
+<li><strong>知识点</strong>：
+<ul>
+<li><strong>开口薄壁杆件</strong>：抗扭能力极差，切应力沿厚度呈线性分布[18, 19]。</li>
+<li><strong>闭口薄壁杆件</strong>：抗扭能力较强，剪力流 (<img src="https://latex.codecogs.com/png.latex?f%20=%20%5Ctau%20%5Cdelta">) 沿中线为常数[20, 21]。</li>
+</ul></li>
+<li><strong>核心公式</strong>：
+<ol type="1">
+<li><strong>闭口截面切应力 (Bredt 公式)</strong>：<img src="https://latex.codecogs.com/png.latex?%5Ctau%20=%20%5Cfrac%7BT%7D%7B2%5Comega%20%5Cdelta%7D"> [21]
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?%5Comega">：截面中线所包围的面积。</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cdelta">：壁厚。</li>
+</ul></li>
+<li><strong>开口截面抗扭刚度</strong>：<img src="https://latex.codecogs.com/png.latex?G%20I_t%20=%20G%20%5Csum%20%5Cfrac%7B1%7D%7B3%7D%20h_i%20%5Cdelta_i%5E3"></li>
+</ol></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="弯曲内力" class="level1">
+<h1>弯曲内力</h1>
+<section id="弯曲的概念和实例" class="level3">
+<h3 class="anchored" data-anchor-id="弯曲的概念和实例">§4.1 弯曲的概念和实例</h3>
+<ul>
+<li><strong>概念</strong>：当杆件受到垂直于轴线的横向力或在包含轴线的纵向平面内的力偶作用时，杆轴线将由直线变为<strong>曲线</strong>，这种变形称为<strong>弯曲</strong> [1]。</li>
+<li><strong>梁 (Beam)</strong>：以弯曲变形为主的杆件 [1]。</li>
+<li><strong>平面弯曲 (Plane Bending)</strong>：若梁具有纵向对称面，且所有外力（力、力偶）均作用在该对称面内，则变形后的轴线仍在该平面内，称为对称弯曲或平面弯曲 [2]。</li>
+</ul>
+</section>
+<section id="受弯杆件的简化" class="level3">
+<h3 class="anchored" data-anchor-id="受弯杆件的简化">§4.2 受弯杆件的简化</h3>
+<p>为了进行力学计算，需对实际工程中的支座和载荷进行简化 [2]： 1. <strong>支座的简化形式</strong>： * <strong>固定铰支座</strong>：限制水平和竖直位移，允许转动 [2]。 * <strong>可动铰支座（滚轴支座）</strong>：只限制垂直于支承面的位移，允许水平移动和转动 [2]。 * <strong>固定端支座</strong>：限制所有方向的位移和转动 [3]。 2. <strong>载荷的简化</strong>： * <strong>集中力 (<img src="https://latex.codecogs.com/png.latex?F">)</strong>：作用在极小面积上的力 [3]。 * <strong>集中力偶 (<img src="https://latex.codecogs.com/png.latex?M_c">)</strong>：作用在极小长度范围内的力偶 [3]。 * <strong>分布载荷 (<img src="https://latex.codecogs.com/png.latex?q">)</strong>：连续作用在轴线上的力。<img src="https://latex.codecogs.com/png.latex?q"> 为载荷集度（单位长度上的力） [3]。 3. <strong>静定梁的基本形式</strong> [4]： * <strong>简支梁</strong>：一端为固定铰，另一端为可动铰。 * <strong>外伸梁</strong>：简支梁的一端或两端伸出支座外。 * <strong>悬臂梁</strong>：一端固定，另一端自由。</p>
+</section>
+<section id="剪力和弯矩" class="level3">
+<h3 class="anchored" data-anchor-id="剪力和弯矩">§4.3 剪力和弯矩</h3>
+<p>通过<strong>截面法</strong>求得横截面上的两个内力分量 [5]： * <strong>剪力 (<img src="https://latex.codecogs.com/png.latex?F_s">)</strong>：横截面上平行于截面的内力合力。 * <strong>计算定义</strong>：等于截面左侧（或右侧）所有外力在垂直于杆轴线方向投影的代数和 [5]。 * <strong>弯矩 (<img src="https://latex.codecogs.com/png.latex?M">)</strong>：横截面上垂直于截面的内力合力偶矩。 * <strong>计算定义</strong>：等于截面左侧（或右侧）所有外力对截面形心之矩的代数和 [5]。 * <strong>内力符号规定</strong> [6]： * <strong>剪力 (<img src="https://latex.codecogs.com/png.latex?F_s">)</strong>：若截面上的剪力使所研究的梁段拟产生<strong>顺时针</strong>方向转动，则为正。 * <strong>弯矩 (<img src="https://latex.codecogs.com/png.latex?M">)</strong>：若截面上的弯矩使梁向下凸（产生“笑脸”变形，即<strong>下部纤维受拉</strong>），则为正。</p>
+</section>
+<section id="剪力方程和弯矩方程-剪力图和弯矩图" class="level3">
+<h3 class="anchored" data-anchor-id="剪力方程和弯矩方程-剪力图和弯矩图">§4.4 剪力方程和弯矩方程 剪力图和弯矩图</h3>
+<ul>
+<li><strong>内力方程</strong>：将剪力和弯矩表示为截面位置坐标 <img src="https://latex.codecogs.com/png.latex?x"> 的函数，即 <img src="https://latex.codecogs.com/png.latex?F_s%20=%20F_s(x)"> 和 <img src="https://latex.codecogs.com/png.latex?M%20=%20M(x)"> [7]。</li>
+<li><strong>内力图</strong>：反映剪力或弯矩沿梁轴线变化情况的图形。在绘制时，习惯上将正的剪力画在 <img src="https://latex.codecogs.com/png.latex?x"> 轴上方；而对于弯矩图，虽然不同教材规定略有差异，但本教材建议将<strong>正弯矩画在 <img src="https://latex.codecogs.com/png.latex?x"> 轴上方</strong>，或约定画在受拉纤维一侧 [7, 8]。</li>
+</ul>
+</section>
+<section id="载荷集度剪力和弯矩间的关系" class="level3">
+<h3 class="anchored" data-anchor-id="载荷集度剪力和弯矩间的关系">§4.5 载荷集度、剪力和弯矩间的关系</h3>
+<p>这部分通过微元平衡导出了三者之间的微积分关系，是快速作图的关键 [9]： 1. <strong>微分关系式</strong>： <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7BdF_s(x)%7D%7Bdx%7D%20=%20q(x)"> <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7BdM(x)%7D%7Bdx%7D%20=%20F_s(x)"> 从而得出：<img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Bd%5E2M(x)%7D%7Bdx%5E2%7D%20=%20q(x)"> 2. <strong>变量含义</strong>： * <strong><img src="https://latex.codecogs.com/png.latex?x"></strong>：沿梁轴线的截面坐标。 * <strong><img src="https://latex.codecogs.com/png.latex?q(x)"></strong>：载荷集度（向上为正，向下为负）。 * <strong><img src="https://latex.codecogs.com/png.latex?F_s(x)"></strong>：横截面剪力。 * <strong><img src="https://latex.codecogs.com/png.latex?M(x)"></strong>：横截面弯矩。 3. <strong>图形特征总结</strong> [10]： * 若 <img src="https://latex.codecogs.com/png.latex?q%20=%200">（无分布载荷）：<img src="https://latex.codecogs.com/png.latex?F_s"> 图为水平直线；<img src="https://latex.codecogs.com/png.latex?M"> 图为斜直线。 * 若 <img src="https://latex.codecogs.com/png.latex?q%20=%20%5Ctext%7B%E5%B8%B8%E6%95%B0%7D">（均布载荷）：<img src="https://latex.codecogs.com/png.latex?F_s"> 图为斜直线；<img src="https://latex.codecogs.com/png.latex?M"> 图为二次抛物线。 * 在<strong>集中力</strong>作用处：<img src="https://latex.codecogs.com/png.latex?F_s"> 图发生突变，突变值等于该力的大小；<img src="https://latex.codecogs.com/png.latex?M"> 图发生折角。 * 在<strong>集中力偶</strong>作用处：<img src="https://latex.codecogs.com/png.latex?F_s"> 图无变化；<img src="https://latex.codecogs.com/png.latex?M"> 图发生突变，突变值等于该力偶矩的大小。</p>
+</section>
+<section id="平面刚架和曲杆的弯曲内力" class="level3">
+<h3 class="anchored" data-anchor-id="平面刚架和曲杆的弯曲内力">§4.6 平面刚架和曲杆的弯曲内力</h3>
+<ul>
+<li><strong>平面刚架</strong>：由若干直杆在连接处通过<strong>刚节点</strong>（各杆在连接处不能相对转动）构成的结构 [8, 11]。</li>
+<li><strong>计算方法</strong>：依然使用截面法，通常需要先求出支座反力，再逐杆分析其轴力 <img src="https://latex.codecogs.com/png.latex?F_N">、剪力 <img src="https://latex.codecogs.com/png.latex?F_s"> 和弯矩 <img src="https://latex.codecogs.com/png.latex?M"> [8]。</li>
+<li><strong>曲杆</strong>：轴线为曲线的杆件。计算内力时，通常将外力投影到截面的切线和法线方向来确定内力分量 [12]。</li>
+</ul>
+</section>
+</section>
+<section id="弯曲应力" class="level1">
+<h1>弯曲应力</h1>
+<section id="概述" class="level3">
+<h3 class="anchored" data-anchor-id="概述">§5.1 概述</h3>
+<ul>
+<li><strong>纯弯曲 (Pure Bending)</strong>：梁的某一段内，若各横截面上的<strong>剪力为零</strong>，而<strong>弯矩为常数</strong>，则该段的变形称为纯弯曲。例如，火车轮轴在两个车轮之间的部分就属于纯弯曲 [1]。</li>
+<li><strong>横力弯曲 (Transverse Bending)</strong>：梁的横截面既有弯矩又有剪力的弯曲形式 [2, 3]。</li>
+<li><strong>中性层 (Neutral Surface)</strong>：在梁弯曲时，凹进一侧的纤维缩短，凸出一侧的纤维伸长，中间必有一层纤维既不伸长也不缩短，称为中性层 [1]。</li>
+<li><strong>中性轴 (Neutral Axis)</strong>：中性层与横截面的交线 [1]。对于具有纵向对称面的梁，中性轴垂直于对称轴且通过截面形心 [4]。</li>
+</ul>
+</section>
+<section id="纯弯曲时的正应力" class="level3">
+<h3 class="anchored" data-anchor-id="纯弯曲时的正应力">§5.2 纯弯曲时的正应力</h3>
+<ul>
+<li><strong>基本假设</strong>：
+<ol type="1">
+<li><strong>平截面假设</strong>：原为平面的横截面，变形后仍保持为平面且垂直于变形后的轴线 [5, 6]。</li>
+<li><strong>纵向纤维间无正应力</strong>：认为梁是由许多纵向纤维组成的，纤维之间互不挤压 [5]。</li>
+</ol></li>
+<li><strong>正应力公式</strong>： <img src="https://latex.codecogs.com/png.latex?%5Csigma%20=%20%5Cfrac%7BMy%7D%7BI_z%7D"> [2]
+<ul>
+<li><strong><img src="https://latex.codecogs.com/png.latex?%5Csigma"></strong>：横截面上距中性轴为 <img src="https://latex.codecogs.com/png.latex?y"> 处的正应力。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?M"></strong>：横截面上的弯矩。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?y"></strong>：研究点到中性轴的垂直距离，在中性层以下为正（受拉），以上为负（受压） [6]。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?I_z"></strong>：横截面对中性轴的惯性矩（单位：<img src="https://latex.codecogs.com/png.latex?%5Ctext%7Bm%7D%5E4"> 或 <img src="https://latex.codecogs.com/png.latex?%5Ctext%7Bmm%7D%5E4">） [2]。</li>
+</ul></li>
+<li><strong>正应力分布特征</strong>：应力沿截面高度呈线性分布；中性轴上应力为零；离中性轴最远的上下边缘处应力最大 [4, 7]。</li>
+<li><strong>曲率公式</strong>： <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7B%5Crho%7D%20=%20%5Cfrac%7BM%7D%7BEI_z%7D"> [2]
+<ul>
+<li><strong><img src="https://latex.codecogs.com/png.latex?EI_z"></strong>：梁的抗弯刚度（Bending Rigidity），反映梁抵抗弯曲变形的能力 [2]。</li>
+</ul></li>
+</ul>
+</section>
+<section id="横力弯曲时的正应力" class="level3">
+<h3 class="anchored" data-anchor-id="横力弯曲时的正应力">§5.3 横力弯曲时的正应力</h3>
+<ul>
+<li><strong>核心结论</strong>：虽然横力弯曲时存在剪力，导致平截面假设不再严格成立，但对于工程中常见的跨度远大于截面高度的梁，使用纯弯曲的正应力公式计算所得结果具有足够的精度 [2, 3]。</li>
+<li><strong>最大正应力公式</strong>： <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bmax%7D%20=%20%5Cfrac%7BM_%7Bmax%7D%7D%7BW_z%7D"> [7]</li>
+<li><strong>抗弯截面系数 (<img src="https://latex.codecogs.com/png.latex?W_z">)</strong>：
+<ul>
+<li>定义：<img src="https://latex.codecogs.com/png.latex?W_z%20=%20I_z%20/%20y_%7Bmax%7D"> [7]。</li>
+<li><strong>矩形截面</strong>：<img src="https://latex.codecogs.com/png.latex?W_z%20=%20%5Cfrac%7Bbh%5E2%7D%7B6%7D"> [7]。</li>
+<li><strong>圆形截面</strong>：<img src="https://latex.codecogs.com/png.latex?W_z%20=%20%5Cfrac%7B%5Cpi%20d%5E3%7D%7B32%7D"> [7]。</li>
+</ul></li>
+<li><strong>强度条件</strong>： <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bmax%7D%20=%20%5Cfrac%7BM_%7Bmax%7D%7D%7BW_z%7D%20%5Cle%20%5B%5Csigma%5D"> [7]
+<ul>
+<li><strong><img src="https://latex.codecogs.com/png.latex?%5B%5Csigma%5D"></strong>：材料的许用弯曲正应力 [7]。</li>
+</ul></li>
+</ul>
+</section>
+<section id="弯曲切应力" class="level3">
+<h3 class="anchored" data-anchor-id="弯曲切应力">§5.4 弯曲切应力</h3>
+<ul>
+<li><strong>矩形截面梁切应力公式</strong>： <img src="https://latex.codecogs.com/png.latex?%5Ctau%20=%20%5Cfrac%7BF_s%20S_z%5E*%7D%7BI_z%20b%7D"> [8]
+<ul>
+<li><strong><img src="https://latex.codecogs.com/png.latex?%5Ctau"></strong>：距中性轴为 <img src="https://latex.codecogs.com/png.latex?y"> 的横线上各点处的切应力。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?F_s"></strong>：横截面上的剪力。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?S_z%5E*"></strong>：距中性轴为 <img src="https://latex.codecogs.com/png.latex?y"> 的横线以外的部分面积对中性轴的静矩 [8, 9]。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?b"></strong>：截面在该高度处的宽度。</li>
+</ul></li>
+<li><strong>典型截面的最大切应力</strong>（通常发生在中性轴处）：
+<ol type="1">
+<li><strong>矩形截面</strong>：<img src="https://latex.codecogs.com/png.latex?%5Ctau_%7Bmax%7D%20=%20%5Cfrac%7B3%20F_s%7D%7B2%20A%7D%20=%201.5%20%5Ctau_%7Bavg%7D"> [10]。</li>
+<li><strong>实心圆截面</strong>：<img src="https://latex.codecogs.com/png.latex?%5Ctau_%7Bmax%7D%20=%20%5Cfrac%7B4%20F_s%7D%7B3%20A%7D%20%5Capprox%201.33%20%5Ctau_%7Bavg%7D"> [11]。</li>
+<li><strong>工字形截面</strong>：切应力主要由腹板承担，且在腹板上分布较均匀 [12, 13]。</li>
+</ol></li>
+<li><strong>切应力强度条件</strong>： <img src="https://latex.codecogs.com/png.latex?%5Ctau_%7Bmax%7D%20%5Cle%20%5B%5Ctau%5D"> [14]
+<ul>
+<li><strong><img src="https://latex.codecogs.com/png.latex?%5B%5Ctau%5D"></strong>：材料的许用切应力 [14]。</li>
+</ul></li>
+</ul>
+</section>
+<section id="关于弯曲理论的基本假设" class="level3">
+<h3 class="anchored" data-anchor-id="关于弯曲理论的基本假设">§5.5 关于弯曲理论的基本假设</h3>
+<ul>
+<li>本节详细讨论了横力弯曲时由于剪力引起的横截面<strong>翘曲</strong>现象 [15]。</li>
+<li><strong>结论</strong>：在细长梁中，翘曲对正应力分布的影响非常微小，通常可以忽略，这证明了平截面假设在工程应用中的广泛适用性 [16, 17]。</li>
+</ul>
+</section>
+<section id="提高弯曲强度的措施" class="level3">
+<h3 class="anchored" data-anchor-id="提高弯曲强度的措施">§5.6 提高弯曲强度的措施</h3>
+<p>为了使梁的设计更加经济安全，可以从以下三方面优化： 1. <strong>合理安排受力情况</strong>：改变支座位置或分布载荷，以降低最大弯矩 <img src="https://latex.codecogs.com/png.latex?M_%7Bmax%7D"> [18, 19]。 2. <strong>选择合理的截面形状</strong>：在截面积相同的情况下，尽量使材料分布在远离中性轴的地方（即增大 <img src="https://latex.codecogs.com/png.latex?W_z">），如使用工字钢、箱形截面等 [19, 20]。 * <strong>效率指标</strong>：可用 <img src="https://latex.codecogs.com/png.latex?W_z/A"> 来衡量截面的经济性 [20]。 3. <strong>采用等强度梁 (Beam of Constant Strength)</strong>：改变截面尺寸使梁各横截面上的最大正应力都达到许用应力，以充分利用材料 [21, 22]。</p>
+</section>
+</section>
+<section id="弯曲变形" class="level1">
+<h1>弯曲变形</h1>
+<section id="工程中的弯曲变形问题" class="level3">
+<h3 class="anchored" data-anchor-id="工程中的弯曲变形问题">§6.1 工程中的弯曲变形问题</h3>
+<ul>
+<li><strong>刚度要求</strong>：构件在载荷作用下产生的弹性位移不得超过允许的限度。例如，机床主轴变形过大会影响零件加工精度；起重机大梁变形过大会导致小车行驶困难[1]。</li>
+<li><strong>功能性应用</strong>：有时需要利用较大的弯曲变形来实现特定功能，如车辆上的钢板弹簧用以缓冲震动[1]。</li>
+<li><strong>计算目的</strong>：通过计算挠度和转角，进行刚度校核、解超静定问题以及分析动力荷载[1, 2]。</li>
+</ul>
+</section>
+<section id="挠曲线的微分方程" class="level3">
+<h3 class="anchored" data-anchor-id="挠曲线的微分方程">§6.2 挠曲线的微分方程</h3>
+<ul>
+<li><strong>挠度 (Deflection, <img src="https://latex.codecogs.com/png.latex?w">)</strong>：梁变形后，横截面形心沿垂直于轴线方向的位移。方程为 <img src="https://latex.codecogs.com/png.latex?w%20=%20f(x)"> [2]。</li>
+<li><strong>转角 (Slope/Rotation, <img src="https://latex.codecogs.com/png.latex?%5Ctheta">)</strong>：变形后横截面绕中性轴转过的角度，也等于挠曲线在对应点处的斜率 [2]。</li>
+<li><strong>挠曲线近似微分方程</strong>：在小变形和线弹性条件下，挠度与弯矩的关系为： <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Bd%5E2w%7D%7Bdx%5E2%7D%20%5Capprox%20%5Cfrac%7BM(x)%7D%7BEI_z%7D"> [2, 3]
+<ul>
+<li><strong>变量含义</strong>：
+<ul>
+<li><strong><img src="https://latex.codecogs.com/png.latex?w"></strong>：挠度。在规定的坐标系中，向上为正 [2]。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?x"></strong>：沿梁轴线的坐标。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?M(x)"></strong>：截面处的弯矩。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?E"></strong>：材料的弹性模量。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?I_z"></strong>：截面对中性轴的惯性矩。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?EI_z"></strong>：梁的<strong>抗弯刚度</strong>，反映梁抵抗弯曲变形的能力 [2]。</li>
+</ul></li>
+</ul></li>
+<li><strong>符号规定</strong>：在图 6.4 所示坐标系中，向上的挠度和逆时针转动的转角为正 [2]。</li>
+</ul>
+</section>
+<section id="用积分法求弯曲变形" class="level3">
+<h3 class="anchored" data-anchor-id="用积分法求弯曲变形">§6.3 用积分法求弯曲变形</h3>
+<ul>
+<li><strong>计算过程</strong>：对挠曲线微分方程进行两次积分，得到转角方程和挠度方程 [3]。
+<ol type="1">
+<li><strong>一阶积分（转角方程）</strong>：<img src="https://latex.codecogs.com/png.latex?%5Ctheta(x)%20=%20%5Cfrac%7Bdw%7D%7Bdx%7D%20=%20%5Cint%20%5Cfrac%7BM(x)%7D%7BEI_z%7D%20dx%20+%20C"></li>
+<li><strong>二阶积分（挠度方程）</strong>：<img src="https://latex.codecogs.com/png.latex?w(x)%20=%20%5Ciint%20%5Cfrac%7BM(x)%7D%7BEI_z%7D%20dx%20dx%20+%20Cx%20+%20D"></li>
+</ol></li>
+<li><strong>积分常数的确定</strong>：
+<ul>
+<li><strong>边界条件 (Boundary Conditions)</strong>：根据支座处的位移约束确定。
+<ul>
+<li>固定端：<img src="https://latex.codecogs.com/png.latex?w%20=%200,%20%5Ctheta%20=%200"> [3]。</li>
+<li>简支座/铰支座：<img src="https://latex.codecogs.com/png.latex?w%20=%200"> [3]。</li>
+</ul></li>
+<li><strong>连续条件 (Continuity Conditions)</strong>：在弯矩方程分段处，左、右两段在连接点处的挠度和转角必须相等（即 <img src="https://latex.codecogs.com/png.latex?w_%7B%E5%B7%A6%7D=w_%7B%E5%8F%B3%7D,%20%5Ctheta_%7B%E5%B7%A6%7D=%5Ctheta_%7Bright%7D">），确保挠曲线是连续光滑的曲线 [3, 4]。</li>
+</ul></li>
+</ul>
+</section>
+<section id="用叠加法求弯曲变形" class="level3">
+<h3 class="anchored" data-anchor-id="用叠加法求弯曲变形">§6.4 用叠加法求弯曲变形</h3>
+<ul>
+<li><strong>基本原理</strong>：对于线弹性小变形梁，由几种载荷共同作用产生的变形（挠度或转角），等于每种载荷单独作用下产生的变形的代数和 [5]。</li>
+<li><strong>应用</strong>：通过查标准载荷下的变形表，结合比例变换和位置平移，快速求解复杂载荷下的变形，避免繁琐的积分运算 [6]。</li>
+</ul>
+</section>
+<section id="简单超静定梁" class="level3">
+<h3 class="anchored" data-anchor-id="简单超静定梁">§6.5 简单超静定梁</h3>
+<ul>
+<li><strong>特征</strong>：支座反力数量多于独立的静力平衡方程数，仅靠平衡方程无法求出所有未知力 [7, 8]。</li>
+<li><strong>求解核心</strong>：利用<strong>变形协调条件</strong>（即支座处的位移边界条件）建立补充方程。例如，对于一端固定、另一端铰支的梁，利用铰支端挠度 <img src="https://latex.codecogs.com/png.latex?w=0"> 的条件来解除多余约束 [8, 9]。</li>
+</ul>
+</section>
+<section id="提高弯曲刚度的一些措施" class="level3">
+<h3 class="anchored" data-anchor-id="提高弯曲刚度的一些措施">§6.6 提高弯曲刚度的一些措施</h3>
+<ul>
+<li><strong>选择合理的截面形状</strong>：增大 <img src="https://latex.codecogs.com/png.latex?I_z">（如使用工字钢、槽钢等高度较大的截面） [5]。</li>
+<li><strong>改善受力情况</strong>：合理布置载荷和支座位置（如缩短跨度、增加支座或将简支梁改为超静定梁） [5]。</li>
+<li><strong>选用高模量材料</strong>：在极少数受刚度限制的情况下考虑选用 <img src="https://latex.codecogs.com/png.latex?E"> 值较大的材料，但在工程中，改变截面尺寸往往比更换材料更有效 [5]。</li>
+</ul>
+</section>
+<section id="弯曲变形的应变能" class="level3">
+<h3 class="anchored" data-anchor-id="弯曲变形的应变能">§6.7 弯曲变形的应变能</h3>
+<ul>
+<li><strong>概念</strong>：梁在弯曲变形过程中，外力做功转化为储存在梁内部的能量 [10]。</li>
+<li><strong>计算公式</strong>：<img src="https://latex.codecogs.com/png.latex?V_%5Cepsilon%20=%20%5Cint_0%5El%20%5Cfrac%7BM%5E2(x)%7D%7B2EI_z%7D%20dx">
+<ul>
+<li>此公式常用于后续章节中的能量法（如卡氏定理）来求解复杂结构的位移 [11]。</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="应力与应变分析-强度理论" class="level1">
+<h1>应力与应变分析 强度理论</h1>
+<section id="应力状态概述" class="level3">
+<h3 class="anchored" data-anchor-id="应力状态概述">§7.1 应力状态概述</h3>
+<ul>
+<li><strong>一点处的应力状态</strong>：指通过受力构件内某一点的所有不同方向截面上应力的集合[1, 2]。</li>
+<li><strong>单元体 (Element)</strong>：包围该点的、各面均相互垂直的微小正六面体，用于表示该点的应力状态[2]。</li>
+<li><strong>主平面与主应力</strong>：
+<ul>
+<li><strong>主平面</strong>：切应力等于零的平面[2]。</li>
+<li><strong>主应力 (<img src="https://latex.codecogs.com/png.latex?%5Csigma_1,%20%5Csigma_2,%20%5Csigma_3">)</strong>：主平面上的正应力。按代数值大小排列：<img src="https://latex.codecogs.com/png.latex?%5Csigma_1%20%5Cge%20%5Csigma_2%20%5Cge%20%5Csigma_3">[2]。</li>
+</ul></li>
+<li><strong>应力状态分类</strong>：单向（线）、二向（平面）和三向（空间）应力状态[2]。</li>
+</ul>
+</section>
+<section id="二向应力状态分析解析法" class="level3">
+<h3 class="anchored" data-anchor-id="二向应力状态分析解析法">§7.3 二向应力状态分析——解析法</h3>
+<p>研究平面内任意斜截面上的应力分布规律。 * <strong>斜截面应力公式</strong>（设 <img src="https://latex.codecogs.com/png.latex?x"> 轴与斜截面外法线夹角为 <img src="https://latex.codecogs.com/png.latex?%5Calpha">）[2]： * <strong>正应力</strong>：<img src="https://latex.codecogs.com/png.latex?%5Csigma_%5Calpha%20=%20%5Cfrac%7B%5Csigma_x%20+%20%5Csigma_y%7D%7B2%7D%20+%20%5Cfrac%7B%5Csigma_x%20-%20%5Csigma_y%7D%7B2%7D%5Ccos%202%5Calpha%20-%20%5Ctau_%7Bxy%7D%5Csin%202%5Calpha"> * <strong>切应力</strong>：<img src="https://latex.codecogs.com/png.latex?%5Ctau_%5Calpha%20=%20%5Cfrac%7B%5Csigma_x%20-%20%5Csigma_y%7D%7B2%7D%5Csin%202%5Calpha%20+%20%5Ctau_%7Bxy%7D%5Ccos%202%5Calpha"> * <strong>变量含义</strong>：<img src="https://latex.codecogs.com/png.latex?%5Csigma_x,%20%5Csigma_y"> 为已知 <img src="https://latex.codecogs.com/png.latex?x,%20y"> 面上的正应力；<img src="https://latex.codecogs.com/png.latex?%5Ctau_%7Bxy%7D"> 为 <img src="https://latex.codecogs.com/png.latex?x"> 面上指向 <img src="https://latex.codecogs.com/png.latex?y"> 轴正向的切应力。 * <strong>主应力计算公式</strong>： <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7B1,2%7D%20=%20%5Cfrac%7B%5Csigma_x%20+%20%5Csigma_y%7D%7B2%7D%20%5Cpm%20%5Csqrt%7B%5Cleft(%5Cfrac%7B%5Csigma_x%20-%20%5Csigma_y%7D%7B2%7D%5Cright)%5E2%20+%20%5Ctau_%7Bxy%7D%5E2%7D"> 其中 <img src="https://latex.codecogs.com/png.latex?%5Csigma_1"> 取“+”，<img src="https://latex.codecogs.com/png.latex?%5Csigma_2"> 取“−”[2]。 * <strong>主方向（主平面方位）</strong>： <img src="https://latex.codecogs.com/png.latex?%5Ctan%202%5Calpha_0%20=%20%5Cfrac%7B-2%5Ctau_%7Bxy%7D%7D%7B%5Csigma_x%20-%20%5Csigma_y%7D"> * <strong>最大切应力</strong>： <img src="https://latex.codecogs.com/png.latex?%5Ctau_%7Bmax%7D%20=%20%5Cfrac%7B%5Csigma_1%20-%20%5Csigma_3%7D%7B2%7D"></p>
+</section>
+<section id="二向应力状态分析应力圆" class="level3">
+<h3 class="anchored" data-anchor-id="二向应力状态分析应力圆">§7.4 二向应力状态分析——应力圆</h3>
+<ul>
+<li><strong>应力圆（莫尔圆）</strong>：在 <img src="https://latex.codecogs.com/png.latex?%5Csigma-%5Ctau"> 坐标系中，一点处各截面上应力的轨迹是一个圆[2, 3]。</li>
+<li><strong>几何要素</strong>：
+<ul>
+<li>圆心坐标：<img src="https://latex.codecogs.com/png.latex?(%5Cfrac%7B%5Csigma_x%20+%20%5Csigma_y%7D%7B2%7D,%200)">。</li>
+<li>半径：<img src="https://latex.codecogs.com/png.latex?R%20=%20%5Csqrt%7B(%5Cfrac%7B%5Csigma_x%20-%20%5Csigma_y%7D%7B2%7D)%5E2%20+%20%5Ctau_%7Bxy%7D%5E2%7D">。</li>
+</ul></li>
+<li><strong>应用</strong>：圆上点的坐标对应单元体某截面上的 <img src="https://latex.codecogs.com/png.latex?%5Csigma"> 和 <img src="https://latex.codecogs.com/png.latex?%5Ctau">，圆半径与横轴夹角为 <img src="https://latex.codecogs.com/png.latex?2%5Calpha">。</li>
+</ul>
+</section>
+<section id="广义胡克定律" class="level3">
+<h3 class="anchored" data-anchor-id="广义胡克定律">§7.8 广义胡克定律</h3>
+<p>描述各向同性材料在复杂应力状态下应力与应变的关系[4]。 * <strong>主轴方向应变公式</strong>： <img src="https://latex.codecogs.com/png.latex?%5Cepsilon_1%20=%20%5Cfrac%7B1%7D%7BE%7D%5B%5Csigma_1%20-%20%5Cmu(%5Csigma_2%20+%20%5Csigma_3)%5D"> <img src="https://latex.codecogs.com/png.latex?%5Cepsilon_2%20=%20%5Cfrac%7B1%7D%7BE%7D%5B%5Csigma_2%20-%20%5Cmu(%5Csigma_3%20+%20%5Csigma_1)%5D"> <img src="https://latex.codecogs.com/png.latex?%5Cepsilon_3%20=%20%5Cfrac%7B1%7D%7BE%7D%5B%5Csigma_3%20-%20%5Cmu(%5Csigma_1%20+%20%5Csigma_2)%5D"> * <strong>变量含义</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cepsilon_i"> 为主应变；<img src="https://latex.codecogs.com/png.latex?E"> 为弹性模量；<img src="https://latex.codecogs.com/png.latex?%5Cmu"> 为泊松比[4, 5]。 * <strong>体积应变 (<img src="https://latex.codecogs.com/png.latex?%5Ctheta">)</strong>：单位体积的改变。 <img src="https://latex.codecogs.com/png.latex?%5Ctheta%20=%20%5Cepsilon_1%20+%20%5Cepsilon_2%20+%20%5Cepsilon_3%20=%20%5Cfrac%7B1-2%5Cmu%7D%7BE%7D(%5Csigma_1%20+%20%5Csigma_2%20+%20%5Csigma_3)"></p>
+</section>
+<section id="复杂应力状态的应变能密度" class="level3">
+<h3 class="anchored" data-anchor-id="复杂应力状态的应变能密度">§7.9 复杂应力状态的应变能密度</h3>
+<ul>
+<li><strong>总应变能密度 (<img src="https://latex.codecogs.com/png.latex?u">)</strong>： <img src="https://latex.codecogs.com/png.latex?u%20=%20%5Cfrac%7B1%7D%7B2E%7D%5B%5Csigma_1%5E2%20+%20%5Csigma_2%5E2%20+%20%5Csigma_3%5E2%20-%202%5Cmu(%5Csigma_1%5Csigma_2%20+%20%5Csigma_2%5Csigma_3%20+%20%5Csigma_3%5Csigma_1)%5D"></li>
+<li><strong>畸变能密度 (<img src="https://latex.codecogs.com/png.latex?u_d">)</strong>：引起形状改变的能量。 <img src="https://latex.codecogs.com/png.latex?u_d%20=%20%5Cfrac%7B1+%5Cmu%7D%7B6E%7D%5B(%5Csigma_1-%5Csigma_2)%5E2%20+%20(%5Csigma_2-%5Csigma_3)%5E2%20+%20(%5Csigma_3-%5Csigma_1)%5E2%5D"></li>
+</ul>
+</section>
+<section id="四种常用强度理论" class="level3">
+<h3 class="anchored" data-anchor-id="四种常用强度理论">§7.11 四种常用强度理论</h3>
+<p>用于判断材料是否失效（屈服或断裂）。 1. <strong>第一强度理论（最大拉应力理论）</strong>： * <strong>准则</strong>：<img src="https://latex.codecogs.com/png.latex?%5Csigma_1%20%5Cle%20%5B%5Csigma%5D">[6]。 * <strong>适用</strong>：石料、铸铁等脆性材料的断裂失效[6]。 2. <strong>第二强度理论（最大拉应变理论）</strong>： * <strong>准则</strong>：<img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Br2%7D%20=%20%5Csigma_1%20-%20%5Cmu(%5Csigma_2%20+%20%5Csigma_3)%20%5Cle%20%5B%5Csigma%5D">[6]。 * <strong>适用</strong>：少数特定脆性材料。 3. <strong>第三强度理论（最大切应力理论 / Tresca准则）</strong>： * <strong>准则</strong>：<img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Br3%7D%20=%20%5Csigma_1%20-%20%5Csigma_3%20%5Cle%20%5B%5Csigma%5D">[6]。 * <strong>适用</strong>：低碳钢等塑性材料的屈服失效。结果偏保守[6]。 4. <strong>第四强度理论（畸变能密度理论 / von Mises准则）</strong>： * <strong>准则</strong>：<img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Br4%7D%20=%20%5Csqrt%7B%5Cfrac%7B1%7D%7B2%7D%5B(%5Csigma_1-%5Csigma_2)%5E2%20+%20(%5Csigma_2-%5Csigma_3)%5E2%20+%20(%5Csigma_3-%5Csigma_1)%5E2%5D%7D%20%5Cle%20%5B%5Csigma%5D">[6]。 * <strong>适用</strong>：钢等塑性材料，实验符合度最高[6]。</p>
+</section>
+<section id="莫尔强度理论" class="level3">
+<h3 class="anchored" data-anchor-id="莫尔强度理论">§7.12 莫尔强度理论</h3>
+<ul>
+<li><strong>概念</strong>：考虑到材料抗压能力通常大于抗拉能力（如铸铁），将材料的极限状态视为一系列应力圆的包络线[1]。</li>
+<li><strong>公式</strong>：<img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Br%7D%20=%20%5Csigma_1%20-%20%5Cfrac%7B%5B%5Csigma_t%5D%7D%7B%5B%5Csigma_c%5D%7D%5Csigma_3%20%5Cle%20%5B%5Csigma_t%5D">。
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?%5B%5Csigma_t%5D,%20%5B%5Csigma_c%5D"> 分别为许用拉应力和许用压应力。</li>
+</ul></li>
+</ul>
+</section>
+<section id="构件含裂纹时的断裂准则" class="level3">
+<h3 class="anchored" data-anchor-id="构件含裂纹时的断裂准则">§7.13 构件含裂纹时的断裂准则</h3>
+<ul>
+<li><strong>应力强度因子 (<img src="https://latex.codecogs.com/png.latex?K_I">)</strong>：描述裂纹尖端应力场强度的物理量。</li>
+<li><strong>断裂判据</strong>：<img src="https://latex.codecogs.com/png.latex?K_I%20%5Cle%20K_%7BIC%7D">。
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?K_%7BIC%7D"> 为材料的<strong>断裂韧性</strong>，是材料固有的力学性能指标。</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="组合变形" class="level1">
+<h1>组合变形</h1>
+<section id="组合变形和叠加原理" class="level2">
+<h2 class="anchored" data-anchor-id="组合变形和叠加原理">### §8.1 组合变形和叠加原理</h2>
+<p><strong>组合变形</strong>：构件在外部载荷作用下，同时发生两种或两种以上基本变形（轴向拉压、扭转、平面弯曲）的情况。</p>
+<ul>
+<li><p><strong>叠加原理</strong>：在材料处于<strong>线弹性范围内</strong>且满足<strong>小变形假设</strong>的前提下，多种载荷共同作用产生的应力、应变或位移，等于各载荷单独作用时产生结果的代数和。</p>
+<ol type="1">
+<li><p><strong>载荷分解</strong>：将外力简化并分解为对应基本变形的各分量。</p></li>
+<li><p><strong>内力分析</strong>：分别计算各基本变形下的内力分量（<img src="https://latex.codecogs.com/png.latex?F_N,%20T,%20M"> 等）。</p></li>
+<li><p><strong>应力计算与叠加</strong>：计算各基本变形在截面上产生的应力，按代数和或应力状态分析法进行叠加。</p></li>
+</ol></li>
+</ul>
+<hr>
+<section id="拉伸或压缩与弯曲的组合" class="level3">
+<h3 class="anchored" data-anchor-id="拉伸或压缩与弯曲的组合">§8.2 拉伸或压缩与弯曲的组合</h3>
+<p>杆件同时受轴向力（拉/压）和横向力（弯曲）的情况。</p>
+<ul>
+<li><p><strong>1. 斜弯曲 (Oblique Bending)</strong>：</p>
+<ul>
+<li><strong>概念</strong>：梁受到的外力矩不作用在截面的主惯性平面内，而是分解在两个主轴平面内引起弯曲 [4]。</li>
+<li><strong>公式</strong>： <img src="https://latex.codecogs.com/png.latex?%5Csigma%20=%20%5Cpm%20%5Cfrac%7BM_z%20y%7D%7BI_z%7D%20%5Cpm%20%5Cfrac%7BM_y%20z%7D%7BI_y%7D"></li>
+<li><strong>变量含义</strong>：
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?M_z,%20M_y">：截面绕 <img src="https://latex.codecogs.com/png.latex?z"> 轴和 <img src="https://latex.codecogs.com/png.latex?y"> 轴的弯矩分量。</li>
+<li><img src="https://latex.codecogs.com/png.latex?I_z,%20I_y">：截面对两个主形心轴的惯性矩。</li>
+<li><img src="https://latex.codecogs.com/png.latex?y,%20z">：计算点到对应轴的坐标距离。</li>
+</ul></li>
+</ul></li>
+<li><p><strong>2. 拉压与弯曲组合的法向应力</strong>：</p>
+<pre><code>$$\sigma = \frac{F_N}{A} \pm \frac{M_z y}{I_z} \pm \frac{M_y z}{I_y}$$</code></pre>
+<ul>
+<li><strong>变量含义</strong>：
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?F_N">：横截面上的轴力（拉为正，压为负）。</li>
+<li><img src="https://latex.codecogs.com/png.latex?A">：横截面面积。</li>
+</ul></li>
+<li><strong>强度条件</strong>：截面上绝对值最大的应力应满足 <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bmax%7D%20%5Cle%20%5B%5Csigma%5D">。</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="偏心压缩和截面核心" class="level3">
+<h3 class="anchored" data-anchor-id="偏心压缩和截面核心">§8.3 偏心压缩和截面核心</h3>
+<ul>
+<li><strong>知识点与概念</strong>：
+<ul>
+<li><strong>偏心压缩</strong>：压力 <img src="https://latex.codecogs.com/png.latex?F"> 作用线与杆轴线平行，但不重合，作用点（偏心点）距形心有一定距离 <img src="https://latex.codecogs.com/png.latex?e_y,%20e_z"> [1]。</li>
+<li><strong>中性轴</strong>：偏心压缩时，截面上正应力为零的直线。它通常不通过截面形心。</li>
+</ul></li>
+<li><strong>正应力公式</strong>： <img src="https://latex.codecogs.com/png.latex?%5Csigma%20=%20%5Cfrac%7BF%7D%7BA%7D%20%5Cleft(%201%20+%20%5Cfrac%7Be_y%20y%7D%7Bi_z%5E2%7D%20+%20%5Cfrac%7Be_z%20z%7D%7Bi_y%5E2%7D%20%5Cright)">
+<ul>
+<li><strong>变量含义</strong>：
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?e_y,%20e_z">：压力作用点（偏心点）在坐标轴上的偏心距。</li>
+<li><img src="https://latex.codecogs.com/png.latex?i_z,%20i_y">：截面的回转半径（截面二次轴距），其中 <img src="https://latex.codecogs.com/png.latex?i%5E2%20=%20I/A"> [5]。</li>
+</ul></li>
+</ul></li>
+<li><strong>截面核心 (Section Core)</strong>：
+<ul>
+<li><strong>概念</strong>：在截面形心周围存在一个封闭区域，只要压力 <img src="https://latex.codecogs.com/png.latex?F"> 作用在该区域内，截面上各点产生的应力符号就完全相同（即全压或全拉，不产生反向应力） [1]。</li>
+<li><strong>工程意义</strong>：对于不能受拉的材料（如砖石、混凝土、铸铁），设计时必须保证压力作用在截面核心内，以防构件开裂 [4, 6]。</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="扭转与弯曲的组合" class="level3">
+<h3 class="anchored" data-anchor-id="扭转与弯曲的组合">§8.4 扭转与弯曲的组合</h3>
+<p>这是工程中最常见的组合变形形式，如传动轴的设计。</p>
+<ul>
+<li><strong>知识点与概念</strong>：
+<ul>
+<li><strong>应力状态</strong>：表面危险点通常处于二向应力状态，既有弯曲产生的正应力 <img src="https://latex.codecogs.com/png.latex?%5Csigma">，又有扭转产生的切应力 <img src="https://latex.codecogs.com/png.latex?%5Ctau"> [7]。</li>
+<li><strong>弯矩和扭矩的合成</strong>：需要应用<strong>强度理论</strong>（通常是第三或第四强度理论）进行校核 [4]。</li>
+</ul></li>
+<li><strong>核心公式（圆轴专用）</strong>：
+<ul>
+<li><strong>相当弯矩 (<img src="https://latex.codecogs.com/png.latex?M_e">)</strong>：
+<ul>
+<li><strong>第三强度理论 (Tresca)</strong>：<img src="https://latex.codecogs.com/png.latex?M_%7Be3%7D%20=%20%5Csqrt%7BM%5E2%20+%20T%5E2%7D"></li>
+<li><strong>第四强度理论 (von Mises)</strong>：<img src="https://latex.codecogs.com/png.latex?M_%7Be4%7D%20=%20%5Csqrt%7BM%5E2%20+%200.75T%5E2%7D"></li>
+</ul></li>
+<li><strong>强度校核公式</strong>： <img src="https://latex.codecogs.com/png.latex?%5Csigma_r%20=%20%5Cfrac%7BM_e%7D%7BW%7D%20%5Cle%20%5B%5Csigma%5D"></li>
+<li><strong>变量含义</strong>：
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?M">：合成弯矩，若有双向弯曲则 <img src="https://latex.codecogs.com/png.latex?M%20=%20%5Csqrt%7BM_y%5E2%20+%20M_z%5E2%7D">。</li>
+<li><img src="https://latex.codecogs.com/png.latex?T">：截面扭矩。</li>
+<li><img src="https://latex.codecogs.com/png.latex?W">：抗弯截面系数（对圆轴 <img src="https://latex.codecogs.com/png.latex?W%20=%20%5Cpi%20d%5E3%20/%2032">）。</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Csigma_r">：相当应力。</li>
+</ul></li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="组合变形的普遍情况" class="level3">
+<h3 class="anchored" data-anchor-id="组合变形的普遍情况">§8.5 组合变形的普遍情况</h3>
+<ul>
+<li><strong>知识点</strong>：
+<ul>
+<li>处理同时存在 <img src="https://latex.codecogs.com/png.latex?F_N,%20F_%7Bsy%7D,%20F_%7Bsz%7D,%20T,%20M_y,%20M_z"> 六个内力分量的情况 [1]。</li>
+<li><strong>危险截面与危险点</strong>：首先通过内力图确定内力最大的“危险截面”，再分析该截面上应力叠加最严重的“危险点” [4]。</li>
+<li><strong>校核逻辑</strong>：对于塑性材料，通常采用第三或第四强度理论计算相当应力；对于脆性材料，则侧重于最大拉应力（第一强度理论） [4]。</li>
+</ul></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="压杆稳定" class="level1">
+<h1>压杆稳定</h1>
+<section id="压杆稳定的概念" class="level3">
+<h3 class="anchored" data-anchor-id="压杆稳定的概念">§9.1 压杆稳定的概念</h3>
+<ul>
+<li><p><strong>压杆 (Compression Member)</strong>：工程中受轴向压力的直杆。</p></li>
+<li><p><strong>失稳 (Instability/Buckling)</strong>：细长压杆在压力作用下，不能维持原有直线平衡状态而突然发生显著侧向弯曲导致破坏的现象。</p></li>
+<li><p><strong>平衡状态分类</strong>：</p>
+<ol type="1">
+<li><p><strong>稳定平衡状态</strong>：压力较小时，撤去微小干扰力后，杆件能恢复原有直线平衡。</p></li>
+<li><p><strong>不稳定平衡状态</strong>：压力超过某一限度后，微小干扰会导致变形无限增加甚至破坏。</p></li>
+</ol></li>
+<li><p><strong>临界力 (<img src="https://latex.codecogs.com/png.latex?F_%7Bcr%7D">)</strong>：压杆由稳定平衡向不稳定平衡过渡的临界荷载值。</p></li>
+</ul>
+</section>
+<section id="细长压杆的临界力欧拉公式" class="level3">
+<h3 class="anchored" data-anchor-id="细长压杆的临界力欧拉公式">§9.2 细长压杆的临界力——欧拉公式</h3>
+<p>研究在弹性范围内（线弹性稳定）压杆发生微弯平衡所需的最小压力。</p>
+<ul>
+<li><p><strong>欧拉公式 (Euler’s Formula)</strong>：</p>
+<p><img src="https://latex.codecogs.com/png.latex?F_%7Bcr%7D%20=%20%5Cfrac%7B%5Cpi%5E2%20EI%7D%7Bl_0%5E2%7D"></p></li>
+<li><p><strong>变量含义</strong>：</p>
+<ul>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?F_%7Bcr%7D"></strong>：<strong>临界荷载</strong>（单位：N）。</p></li>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?E"></strong>：材料的<strong>弹性模量</strong>。</p></li>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?I"></strong>：截面的<strong>最小形心主惯性矩</strong>（压杆总是在刚度最小的平面内失稳）。</p></li>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?l_0"></strong>：压杆的<strong>计算长度</strong>（有效长度）。</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="支座条件对临界力的影响" class="level3">
+<h3 class="anchored" data-anchor-id="支座条件对临界力的影响">§9.3 支座条件对临界力的影响</h3>
+<p>压杆两端的约束情况不同，其抵抗失稳的能力也不同，通过<strong>长度系数 (<img src="https://latex.codecogs.com/png.latex?%5Cmu">)</strong> 来修正。</p>
+<ul>
+<li><p><strong>计算长度公式</strong>： <img src="https://latex.codecogs.com/png.latex?l_0%20=%20%5Cmu%20l"></p></li>
+<li><p><strong>常见约束下的 <img src="https://latex.codecogs.com/png.latex?%5Cmu"> 值</strong>：</p>
+<ol type="1">
+<li><strong>两端铰支</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cmu%20=%201">。</li>
+<li><strong>一端固定，一端自由</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cmu%20=%202">。</li>
+<li><strong>两端固定</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cmu%20=%200.5">。</li>
+<li><strong>一端固定，一端铰支</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cmu%20=%200.7">。</li>
+</ol></li>
+</ul>
+</section>
+<section id="欧拉公式的适用范围与经验公式" class="level3">
+<h3 class="anchored" data-anchor-id="欧拉公式的适用范围与经验公式">§9.4 欧拉公式的适用范围与经验公式</h3>
+<p>并不是所有压杆都适用欧拉公式，其前提是材料处于<strong>线弹性阶段</strong>。</p>
+<ul>
+<li><p><strong>压杆的柔度 (Slenderness Ratio, <img src="https://latex.codecogs.com/png.latex?%5Clambda">)</strong>：反映压杆几何特征的综合参数。 <img src="https://latex.codecogs.com/png.latex?%5Clambda%20=%20%5Cfrac%7Bl_0%7D%7Bi%7D%20=%20%5Cfrac%7B%5Cmu%20l%7D%7Bi%7D"></p>
+<ul>
+<li><strong><img src="https://latex.codecogs.com/png.latex?i"></strong>：<strong>惯性半径</strong>，公式为 <img src="https://latex.codecogs.com/png.latex?i%20=%20%5Csqrt%7BI/A%7D">。</li>
+</ul></li>
+<li><p><strong>临界应力 (<img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bcr%7D">)</strong>：临界力在横截面上的平均应力。 <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bcr%7D%20=%20%5Cfrac%7BF_%7Bcr%7D%7D%7BA%7D%20=%20%5Cfrac%7B%5Cpi%5E2%20E%7D%7B%5Clambda%5E2%7D"></p></li>
+<li><p><strong>压杆的三种分类及判别标准</strong>：</p>
+<ol type="1">
+<li><p><strong>大柔度杆 (细长杆)</strong>：当 <img src="https://latex.codecogs.com/png.latex?%5Clambda%20%5Cge%20%5Clambda_p"> 时，适用<strong>欧拉公式</strong>。</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?%5Clambda_p%20=%20%5Cpi%20%5Csqrt%7BE/%5Csigma_p%7D">（<img src="https://latex.codecogs.com/png.latex?%5Csigma_p"> 为比例极限）。</li>
+</ul></li>
+<li><p><strong>中柔度杆 (中长杆)</strong>：当 <img src="https://latex.codecogs.com/png.latex?%5Clambda_s%20%3C%20%5Clambda%20%3C%20%5Clambda_p"> 时，适用<strong>经验公式</strong>。</p>
+<ul>
+<li><strong>直线型经验公式</strong>：<img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bcr%7D%20=%20a%20-%20b%5Clambda">（<img src="https://latex.codecogs.com/png.latex?a,%20b"> 为材料常数）。</li>
+</ul></li>
+<li><p><strong>小柔度杆 (短粗杆)</strong>：当 <img src="https://latex.codecogs.com/png.latex?%5Clambda%20%5Cle%20%5Clambda_s"> 时，压杆发生强度失效而非失稳。</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bcr%7D%20=%20%5Csigma_s">（<img src="https://latex.codecogs.com/png.latex?%5Csigma_s"> 为屈服极限）。</li>
+</ul></li>
+</ol></li>
+</ul>
+</section>
+<section id="压杆的稳定性校核" class="level3">
+<h3 class="anchored" data-anchor-id="压杆的稳定性校核">§9.5 压杆的稳定性校核</h3>
+<p>为了保证安全，工作压力 <img src="https://latex.codecogs.com/png.latex?F"> 必须小于临界力。</p>
+<ul>
+<li><p><strong>稳定条件 (安全系数法)</strong>： <img src="https://latex.codecogs.com/png.latex?n_w%20=%20%5Cfrac%7BF_%7Bcr%7D%7D%7BF%7D%20%5Cge%20%5Bn_w%5D"></p>
+<ul>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?n_w"></strong>：压杆实际的稳定安全系数。</p></li>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?%5Bn_w%5D"></strong>：规定的稳定安全系数，通常大于强度安全系数。</p></li>
+</ul></li>
+<li><p><strong>稳定条件 (折减系数法/<img src="https://latex.codecogs.com/png.latex?%5Cphi">法)</strong>：工程中常用。 <img src="https://latex.codecogs.com/png.latex?%5Csigma%20=%20%5Cfrac%7BF%7D%7BA%7D%20%5Cle%20%5Cphi%20%5B%5Csigma%5D"></p>
+<ul>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?%5Cphi"></strong>：<strong>折减系数</strong>，由 <img src="https://latex.codecogs.com/png.latex?%5Clambda"> 和材料查表确定（<img src="https://latex.codecogs.com/png.latex?0%20%3C%20%5Cphi%20%3C%201">）。</p></li>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?%5B%5Csigma%5D"></strong>：材料的许用应力。</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="提高压杆稳定性的措施" class="level3">
+<h3 class="anchored" data-anchor-id="提高压杆稳定性的措施">§9.6 提高压杆稳定性的措施</h3>
+<p>根据临界力公式 <img src="https://latex.codecogs.com/png.latex?F_%7Bcr%7D%20=%20%5Cfrac%7B%5Cpi%5E2%20EI%7D%7B(%5Cmu%20l)%5E2%7D">，可从以下方面优化设计：</p>
+<ol type="1">
+<li><p><strong>减小计算长度 (<img src="https://latex.codecogs.com/png.latex?l_0">)</strong>：增加中间支撑或强化端部约束（减小 <img src="https://latex.codecogs.com/png.latex?%5Cmu">）。</p></li>
+<li><p><strong>选择合理截面</strong>：在截面积 <img src="https://latex.codecogs.com/png.latex?A"> 相同的情况下，增大惯性矩 <img src="https://latex.codecogs.com/png.latex?I">，尽量使材料分布在远离形心的地方，如采用<strong>空心圆管、工字钢、槽钢</strong>。</p></li>
+<li><p><strong>改善受力平面</strong>：使压杆在各个方向上的柔度 <img src="https://latex.codecogs.com/png.latex?%5Clambda"> 趋于相等。</p></li>
+<li><p><strong>材料选择</strong>：对于<strong>细长杆</strong>，由于 <img src="https://latex.codecogs.com/png.latex?F_%7Bcr%7D"> 仅与 <img src="https://latex.codecogs.com/png.latex?E"> 有关，改用高强度合金钢并不能显著提高稳定性；但对于<strong>中、小柔度杆</strong>，选用高强度材料是有效的。</p></li>
+</ol>
+
+
+<!-- -->
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>速通</category>
+  <guid>https://qmdthings.top/notes/材料力学/材料力学.html</guid>
+  <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
   <title>电路的暂态分析</title>
   <dc:creator>QMD </dc:creator>
   <link>https://qmdthings.top/notes/电工技术/电路的暂态分析.html</link>
@@ -94,6 +1228,59 @@
   <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
+  <title>生产管理</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/notes/生产管理/生产管理速通.html</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+  hitokoto!
+</p>
+
+<script>
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+  fetch("https://v1.hitokoto.cn?c=k")
+    .then((response) => response.json())
+    .then((data) => {
+      const hitokoto = document.querySelector("#hitokoto_text");
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+      hitokoto.innerText = data.hitokoto;
+    })
+    .catch(console.error);
+
+  hitokotoElement.addEventListener("click", function (event) {
+    event.preventDefault();
+  });
+</script>
+
+
+
+
+
+<section id="绪论" class="level1">
+<h1>绪论</h1>
+</section>
+<section id="生产运作系统的设计" class="level1">
+<h1>生产运作系统的设计</h1>
+</section>
+<section id="生产运作管理系统的运行" class="level1">
+<h1>生产运作管理系统的运行</h1>
+</section>
+<section id="生产运作系统的维护与改进" class="level1">
+<h1>生产运作系统的维护与改进</h1>
+
+
+<!-- -->
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>速通</category>
+  <guid>https://qmdthings.top/notes/生产管理/生产管理速通.html</guid>
+  <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
   <title>概率论与数理统计</title>
   <dc:creator>QMD </dc:creator>
   <link>https://qmdthings.top/notes/概率论与数理统计/概率论与数理统计.html</link>
@@ -124,8 +1311,8 @@
 
 
 
-<section id="概率论基础" class="level1">
-<h1>概率论基础</h1>
+<section id="概率论基本概念" class="level1">
+<h1>1. 概率论基本概念</h1>
 <section id="随机试验" class="level2">
 <h2 class="anchored" data-anchor-id="随机试验">随机试验</h2>
 <div class="callout callout-style-default callout-note callout-titled" title="定义：随机试验">
@@ -187,9 +1374,9 @@
 <h2 class="anchored" data-anchor-id="事件的关系与运算">事件的关系与运算</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 47%">
-<col style="width: 26%">
-<col style="width: 26%">
+<col style="width: 5%">
+<col style="width: 35%">
+<col style="width: 58%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -359,6 +1546,484 @@
 <p>对有限个或可列无穷多个事件 <img src="https://latex.codecogs.com/png.latex?%5C%7BA_i%5C%7D">，恒有： <img src="https://latex.codecogs.com/png.latex?%0A%5Coverline%7B%5Cbigcup_%7Bi=1%7D%5E%7Bn%7D%20A_i%7D%20=%20%5Cbigcap_%7Bi=1%7D%5E%7Bn%7D%20%5Cbar%7BA%7D_i,%0A%5Cqquad%0A%5Coverline%7B%5Cbigcap_%7Bi=1%7D%5E%7Bn%7D%20A_i%7D%20=%20%5Cbigcup_%7Bi=1%7D%5E%7Bn%7D%20%5Cbar%7BA%7D_i%0A"></p>
 </div>
 </div>
+</section>
+</section>
+<section id="随机变量" class="level1">
+<h1>2. 随机变量</h1>
+<section id="随机变量-random-variable" class="level2">
+<h2 class="anchored" data-anchor-id="随机变量-random-variable">随机变量 (Random Variable)</h2>
+<p>设随机试验的样本空间为 <img src="https://latex.codecogs.com/png.latex?S=%5C%7Be%5C%7D">，<img src="https://latex.codecogs.com/png.latex?X=X(e)"> 是定义在 <img src="https://latex.codecogs.com/png.latex?S"> 上的实值单值函数，称其为<strong>随机变量</strong>。</p>
+<p>将复杂的试验结果映射为数字，方便数学处理。</p>
+</section>
+<section id="随机变量的分布函数-distribution-function" class="level2">
+<h2 class="anchored" data-anchor-id="随机变量的分布函数-distribution-function">随机变量的分布函数 (Distribution Function)</h2>
+<p><img src="https://latex.codecogs.com/png.latex?X"> 是随机变量，<img src="https://latex.codecogs.com/png.latex?x">是任意实数</p>
+<p><img src="https://latex.codecogs.com/png.latex?F(x)%20=%20P%5C%7BX%20%5Cle%20x%5C%7D"></p>
+<p>表示随机变量落入 <img src="https://latex.codecogs.com/png.latex?(-%5Cinfty,%20x%5D"> 区间的概率，称为<img src="https://latex.codecogs.com/png.latex?X">的<strong>分布函数(CDF累积分布)</strong>。</p>
+<ol type="1">
+<li><p><strong>单调性</strong>：是一个不减函数</p></li>
+<li><p><strong>规范性</strong>：<img src="https://latex.codecogs.com/png.latex?F(-%5Cinfty)%20=%200">，<img src="https://latex.codecogs.com/png.latex?F(+%5Cinfty)%20=%201"></p></li>
+<li><p><strong>右连续性</strong>：<img src="https://latex.codecogs.com/png.latex?F(x+0)%20=%20F(x)"></p></li>
+<li><p><strong>区间概率计算</strong>： <img src="https://latex.codecogs.com/png.latex?P%5C%7Bx_1%3CX%5Cle%20x_2%5C%7D=P%5C%7BX%5Cle%20x_2%5C%7D-P%5C%7BX%5Cle%20x_1%5C%7D=F(x_2)-F(x_1)"></p></li>
+</ol>
+<p>就比如著名Logistic distribution</p>
+</section>
+<section id="离散型随机变量及其分布律" class="level2">
+<h2 class="anchored" data-anchor-id="离散型随机变量及其分布律">离散型随机变量及其分布律</h2>
+<p>所有可能取的值为有限个或可列无穷多个的随机变量。</p>
+<p><strong>分布律/概率分布 (Probability Mass Function)</strong>： <img src="https://latex.codecogs.com/png.latex?P%5C%7BX%20=%20x_k%5C%7D%20=%20p_k"></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><img src="https://latex.codecogs.com/png.latex?X_1"></th>
+<th><img src="https://latex.codecogs.com/png.latex?x_1"></th>
+<th><img src="https://latex.codecogs.com/png.latex?x_2"></th>
+<th><img src="https://latex.codecogs.com/png.latex?%5Ccdots"></th>
+<th><img src="https://latex.codecogs.com/png.latex?x_k"></th>
+<th><img src="https://latex.codecogs.com/png.latex?%5Ccdots"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="https://latex.codecogs.com/png.latex?p_k"></td>
+<td><img src="https://latex.codecogs.com/png.latex?p_1"></td>
+<td><img src="https://latex.codecogs.com/png.latex?p_2"></td>
+<td><img src="https://latex.codecogs.com/png.latex?%5Ccdots"></td>
+<td><img src="https://latex.codecogs.com/png.latex?p_k"></td>
+<td><img src="https://latex.codecogs.com/png.latex?%5Ccdots"></td>
+</tr>
+</tbody>
+</table>
+<p>需满足</p>
+<ol type="1">
+<li><p>非负性：<img src="https://latex.codecogs.com/png.latex?p_k%20%5Cge%200"></p></li>
+<li><p>规范性：<img src="https://latex.codecogs.com/png.latex?%5Csum%20p_k%20=%201"></p></li>
+</ol>
+<ul>
+<li><strong>常见分布</strong>：
+<ul>
+<li><strong>0-1 分布（两点分布）</strong>：用于描述只有两种结果的试验（如抛硬币） [8, 9]。</li>
+<li><strong>二项分布 <img src="https://latex.codecogs.com/png.latex?b(n,p)"></strong>：<img src="https://latex.codecogs.com/png.latex?n"> 重伯努利试验中成功的次数，公式为 <img src="https://latex.codecogs.com/png.latex?P%5C%7BX=k%5C%7D%20=%20%5Cbinom%7Bn%7D%7Bk%7Dp%5Ek(1-p)%5E%7Bn-k%7D"> [9, 10]。</li>
+<li><strong>泊松分布 <img src="https://latex.codecogs.com/png.latex?P(%5Clambda)"></strong>：常用于描述稀有事件发生的次数 [11-13]。</li>
+</ul></li>
+</ul>
+<section id="连续型随机变量及其概率密度" class="level4">
+<h4 class="anchored" data-anchor-id="连续型随机变量及其概率密度">4. 连续型随机变量及其概率密度</h4>
+<ul>
+<li><strong>定义</strong>：其分布函数可表示为某非负函数 <img src="https://latex.codecogs.com/png.latex?f(x)">（<strong>概率密度函数</strong>）的积分形式：<img src="https://latex.codecogs.com/png.latex?F(x)%20=%20%5Cint_%7B-%5Cinfty%7D%5E%7Bx%7D%20f(t)%20dt"> [14, 15]。</li>
+<li><strong>概率密度 <img src="https://latex.codecogs.com/png.latex?f(x)"> 的性质</strong>：<img src="https://latex.codecogs.com/png.latex?f(x)%20%5Cge%200"> 且 <img src="https://latex.codecogs.com/png.latex?%5Cint_%7B-%5Cinfty%7D%5E%7B%5Cinfty%7D%20f(x)%20dx%20=%201"> [14, 16]。</li>
+<li><strong>常见分布</strong>：
+<ul>
+<li><strong>均匀分布 <img src="https://latex.codecogs.com/png.latex?U(a,b)"></strong>：概率均匀地分布在某区间上 [17, 18]。</li>
+<li><strong>指数分布 <img src="https://latex.codecogs.com/png.latex?E(%5Ctheta)"></strong>：具有重要的<strong>无记忆性</strong>，常用于可靠性和排队论 [17, 19, 20]。</li>
+<li><strong>正态分布 <img src="https://latex.codecogs.com/png.latex?N(%5Cmu,%20%5Csigma%5E2)"></strong>：最重要的分布，曲线呈钟形且关于 <img src="https://latex.codecogs.com/png.latex?x=%5Cmu"> 对称 [19, 21, 22]。</li>
+</ul></li>
+</ul>
+</section>
+<section id="随机变量函数的分布" class="level4">
+<h4 class="anchored" data-anchor-id="随机变量函数的分布">5. 随机变量函数的分布</h4>
+<ul>
+<li>研究当 <img src="https://latex.codecogs.com/png.latex?X"> 服从某种分布时，<img src="https://latex.codecogs.com/png.latex?Y%20=%20g(X)"> 的分布规律 [23, 24]。</li>
+<li><strong>方法</strong>：通常先利用定义求分布函数 <img src="https://latex.codecogs.com/png.latex?F_Y(y)%20=%20P%5C%7Bg(X)%20%5Cle%20y%5C%7D">，如果是连续型再通过求导得到密度函数 <img src="https://latex.codecogs.com/png.latex?f_Y(y)"> [24-26]。</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="多维随机变量" class="level1">
+<h1>3. 多维随机变量</h1>
+<section id="二维随机变量" class="level2">
+<h2 class="anchored" data-anchor-id="二维随机变量">二维随机变量</h2>
+<p>设E是一个随机实验,它的样本空间为<img src="https://latex.codecogs.com/png.latex?%5COmega=%5C%7Be%5C%7D">,若<img src="https://latex.codecogs.com/png.latex?X(e)">,<img src="https://latex.codecogs.com/png.latex?Y(e)">是定义在同一个空间中的 研究多个随机变量构成的向量（如 <img src="https://latex.codecogs.com/png.latex?(X,%20Y)">），称为<strong>二维随机变量</strong>或<strong>二维随机向量</strong>。 * <strong>联合分布函数</strong>：定义为 <img src="https://latex.codecogs.com/png.latex?F(x,%20y)%20=%20P%5C%7BX%20%5Cle%20x,%20Y%20%5Cle%20y%5C%7D"> 。它具有单调性、规范性（范围在 <img src="https://latex.codecogs.com/png.latex?%5B3%5D">）、右连续性。 * <strong>落入矩形区域的概率</strong>：<img src="https://latex.codecogs.com/png.latex?P%5C%7Bx_1%20%3C%20X%20%5Cle%20x_2,%20y_1%20%3C%20Y%20%5Cle%20y_2%5C%7D%20=%20F(x_2,%20y_2)%20-%20F(x_1,%20y_2)%20-%20F(x_2,%20y_1)%20+%20F(x_1,%20y_1)"></p>
+<section id="离散型与连续型联合分布" class="level3">
+<h3 class="anchored" data-anchor-id="离散型与连续型联合分布">离散型与连续型联合分布</h3>
+<ul>
+<li><strong>二维离散型</strong>：主要掌握<strong>联合分布律</strong> <img src="https://latex.codecogs.com/png.latex?P%5C%7BX=x_i,%20Y=y_j%5C%7D%20=%20p_%7Bij%7D">，且所有 <img src="https://latex.codecogs.com/png.latex?p_%7Bij%7D"> 之和为 1 。</li>
+<li><strong>二维连续型</strong>：存在非负函数 <img src="https://latex.codecogs.com/png.latex?f(x,%20y)">（<strong>联合概率密度</strong>），使得分布函数可以通过二重积分表示 。</li>
+<li><strong>性质</strong>：<img src="https://latex.codecogs.com/png.latex?f(x,%20y)%20%5Cge%200"> 且在全平面上的积分等于 1 。</li>
+</ul>
+</section>
+</section>
+<section id="边缘分布-marginal-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="边缘分布-marginal-distribution">边缘分布 (Marginal Distribution)</h2>
+<ul>
+<li><strong>定义</strong>：从联合分布中分离出单个随机变量的分布 。</li>
+<li><strong>离散型边缘分布</strong>：通过对另一变量求和得到（行和或列和）。</li>
+<li><strong>连续型边缘密度</strong>：<img src="https://latex.codecogs.com/png.latex?f_X(x)%20=%20%5Cint_%7B-%5Cinfty%7D%5E%7B%5Cinfty%7D%20f(x,%20y)%20dy"> 以及 <img src="https://latex.codecogs.com/png.latex?f_Y(y)%20=%20%5Cint_%7B-%5Cinfty%7D%5E%7B%5Cinfty%7D%20f(x,%20y)%20dx"> 。</li>
+</ul>
+</section>
+<section id="条件分布-conditional-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="条件分布-conditional-distribution">条件分布 (Conditional Distribution)</h2>
+<ul>
+<li><strong>离散型</strong>：在已知 <img src="https://latex.codecogs.com/png.latex?Y=y_j"> 的条件下 <img src="https://latex.codecogs.com/png.latex?X"> 的分布 <img src="https://latex.codecogs.com/png.latex?P%5C%7BX=x_i%20%7C%20Y=y_j%5C%7D%20=%20%5Cfrac%7Bp_%7Bij%7D%7D%7Bp_%7B%5Ccdot%20j%7D%7D"> 。</li>
+<li><strong>连续型</strong>：<strong>条件概率密度</strong> <img src="https://latex.codecogs.com/png.latex?f_%7BX%7CY%7D(x%7Cy)%20=%20%5Cfrac%7Bf(x,%20y)%7D%7Bf_Y(y)%7D"> 。</li>
+</ul>
+</section>
+<section id="随机变量的独立性" class="level2">
+<h2 class="anchored" data-anchor-id="随机变量的独立性">随机变量的独立性</h2>
+<ul>
+<li><strong>判定标准</strong>：若对所有 <img src="https://latex.codecogs.com/png.latex?x,%20y">，都有 <img src="https://latex.codecogs.com/png.latex?F(x,%20y)%20=%20F_X(x)F_Y(y)">，则称 <img src="https://latex.codecogs.com/png.latex?X"> 与 <img src="https://latex.codecogs.com/png.latex?Y"> 相互独立 。</li>
+<li><strong>连续型简便判定</strong>：<img src="https://latex.codecogs.com/png.latex?f(x,%20y)%20=%20f_X(x)f_Y(y)"> 。</li>
+</ul>
+</section>
+<section id="两个随机变量函数的分布" class="level2">
+<h2 class="anchored" data-anchor-id="两个随机变量函数的分布">两个随机变量函数的分布</h2>
+<ul>
+<li><strong>和的分布 (Z = X + Y)</strong>：使用<strong>卷积公式</strong>（Convolution Formula）计算 。
+<ul>
+<li><em>重要结论</em>：两个独立的<strong>正态分布</strong>之和仍服从正态分布 。</li>
+</ul></li>
+<li><strong>最大值与最小值分布</strong>：
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?M%20=%20%5Cmax(X,%20Y)"> 的分布函数为 <img src="https://latex.codecogs.com/png.latex?F_X(z)F_Y(z)">（当独立时）。</li>
+<li><img src="https://latex.codecogs.com/png.latex?N%20=%20%5Cmin(X,%20Y)"> 的分布函数为 <img src="https://latex.codecogs.com/png.latex?1%20-%20%5B1-F_X(z)%5D%5B1-F_Y(z)%5D">（当独立时）。</li>
+</ul></li>
+<li><strong>商与积的分布</strong>：如 <img src="https://latex.codecogs.com/png.latex?Z%20=%20Y/X"> 或 <img src="https://latex.codecogs.com/png.latex?Z%20=%20XY"> 的分布计算 。</li>
+</ul>
+</section>
+</section>
+<section id="随机变量的数字特征" class="level1">
+<h1>随机变量的数字特征</h1>
+</section>
+<section id="大数定律与中心极限定理" class="level1">
+<h1>大数定律与中心极限定理</h1>
+</section>
+<section id="数理统计的基本概念" class="level1">
+<h1>数理统计的基本概念</h1>
+</section>
+<section id="参数估计" class="level1">
+<h1>参数估计</h1>
+</section>
+<section id="假设检验" class="level1">
+<h1>假设检验</h1>
+</section>
+<section id="方差分析" class="level1">
+<h1>方差分析</h1>
+</section>
+<section id="回归分析" class="level1">
+<h1>回归分析</h1>
+
+
+<!-- -->
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>速通</category>
+  <guid>https://qmdthings.top/notes/概率论与数理统计/概率论与数理统计.html</guid>
+  <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>机械原理</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/notes/机械原理/机械原理.html</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+  hitokoto!
+</p>
+
+<script>
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+  fetch("https://v1.hitokoto.cn?c=k")
+    .then((response) => response.json())
+    .then((data) => {
+      const hitokoto = document.querySelector("#hitokoto_text");
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+      hitokoto.innerText = data.hitokoto;
+    })
+    .catch(console.error);
+
+  hitokotoElement.addEventListener("click", function (event) {
+    event.preventDefault();
+  });
+</script>
+
+
+
+
+
+<section id="绪论" class="level1">
+<h1>绪论</h1>
+<section id="机构与机器" class="level2">
+<h2 class="anchored" data-anchor-id="机构与机器">机构与机器</h2>
+<ul>
+<li><p><strong>机械 (Machinery)</strong>：是<strong>机构</strong>与<strong>机器</strong>的总称。</p>
+<ul>
+<li><p><strong>机构 (Mechanism)</strong>：一种用来<strong>传递与变换运动和动力</strong>的可动装置。</p></li>
+<li><p><strong>机器 (Machine)</strong>：根据某种使用要求而设计的用来<strong>变换或传递能量、物料和信息</strong>的机构组合。</p></li>
+</ul></li>
+</ul>
+<p>机械已从传统的纯机械系统演变为<strong>机电一体化系统</strong>，并进一步向融入传感器、控制器、执行器及软件的<strong>智能机械系统</strong>发展。</p>
+<ul>
+<li><p>机械向高速、重载、巨型、高效率、高精度、低噪声发展。</p></li>
+<li><p>向微型化、灵巧、智能、自适应方向发展。</p></li>
+<li><p>广泛应用计算机辅助设计（CAD）、拓扑优化设计及数字化建模。</p></li>
+<li><p><strong>原动机 (Power machine)</strong>：将其他形式能量变换为机械能的机器，是驱动机械系统的动力源。</p></li>
+<li><p><strong>工作机 (Working machine)</strong>：用来完成预定的机械加工、物料搬运或信息变换等任务的机器。</p></li>
+<li><p><strong>机械设计 (Mechanical design)</strong>：机械工程设计的简称，指设计机械装置、产品、系统或工艺过程的过程。</p></li>
+</ul>
+<p>机械设计通常遵循以下四个逻辑阶段：</p>
+<ol type="1">
+<li><p><strong>产品规划</strong>：确定产品目标、需求分析及性能技术条件。</p></li>
+<li><p><strong>方案设计 (核心阶段)</strong>：包括功能原理确定、工艺动作设计、机构选型及运动学初步设计。</p></li>
+<li><p><strong>详细设计</strong>：进行结构设计、强度/刚度计算、3D建模及仿真分析。</p></li>
+<li><p><strong>试制试验</strong>：通过物理模型或原型进行功能和性能检测。</p></li>
+</ol>
+<ul>
+<li><p><strong>正动力学问题 (Forward dynamics problem)</strong>：已知作用在机械系统上的所有力，求机械的真实运动规律（位移、速度、加速度）。</p></li>
+<li><p><strong>逆动力学问题 (Inverse dynamics problem)</strong>：已知机械系统的运动规律，求解为达到该运动必须提供的力或力矩。</p></li>
+</ul>
+</section>
+<section id="机械原理学科的研究内容" class="level2">
+<h2 class="anchored" data-anchor-id="机械原理学科的研究内容">机械原理学科的研究内容</h2>
+<p>本学科主要研究机械的基本理论问题</p>
+<ul>
+<li><p><strong>机构结构分析</strong>：研究机构组成、分类、运动简图绘制及自由度计算。</p></li>
+<li><p><strong>机构运动分析</strong>：研究位移、速度及加速度分析。</p></li>
+<li><p><strong>机械动力学</strong>：研究机构受力、摩擦、效率、平衡以及速度波动调节。</p></li>
+<li><p><strong>常用机构设计</strong>：如连杆机构、凸轮机构、齿轮机构等的设计理论。</p></li>
+<li><p><strong>机械系统方案设计</strong>：涉及执行构件的运动规划、原动机选择及系统评价。</p></li>
+</ul>
+</section>
+</section>
+<section id="机构分析基础" class="level1">
+<h1>机构分析基础</h1>
+<section id="机构的结构运动与静力分析" class="level2">
+<h2 class="anchored" data-anchor-id="机构的结构运动与静力分析">机构的结构，运动，与静力分析</h2>
+<ul>
+<li><p><strong>零件 (Component)</strong>：机器中的一个独立制造单元体</p></li>
+<li><p><strong>构件 (Link)</strong>：机器中每一个独立的<strong>运动单元体</strong>。构件可以是单一的零件，也可以是由若干零件刚性连接而成的组合体。</p></li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+A["零件"]--&gt;B["构件"]--&gt;C["机构"]--&gt;D["机器"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<ul>
+<li><p><strong>运动副 (Kinematic pair)</strong>：两构件直接接触并能产生相对运动的<strong>可动连接</strong>。</p>
+<ul>
+<li><p><strong>运动副元素</strong>：两构件上参加接触而构成运动副的表面。</p></li>
+<li><p><strong>低副 (Lower pair)</strong>：通过<strong>面接触</strong>构成的运动副，如转动副和移动副。</p></li>
+<li><p><strong>高副 (Higher pair)</strong>：通过<strong>点或线接触</strong>构成的运动副，如凸轮副和齿轮副。</p></li>
+</ul></li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+
+A["运动副分类"] --&gt; B["按副元素接触形式"]
+B --&gt; B1["低副: 通过面接触构成"]
+B --&gt; B2["高副: 通过点或线接触构成"]
+
+A --&gt; C["按相对运动形式"]
+
+subgraph K ["复合平面运动副"]
+C1["平面运动副"]
+C2["空间运动副"]
+end
+
+C --&gt; C1
+C --&gt; C2
+
+
+subgraph L ["基本运动副"]
+C1a["转动副/回转副R"]
+C1b["移动副P"]
+end
+
+C1 --&gt; C1a["转动副/回转副R"]
+C1 --&gt; C1b["移动副P"]
+C1 --&gt; C1b["平面副F"]
+
+C2 --&gt; C2a["螺旋副H"]
+C2 --&gt; C2b["球面副S"]
+C2 --&gt; C2c["槽销副RP/球销副/圆柱副C等"]
+
+A --&gt; D["按封闭方式"]
+D --&gt; D1["几何封闭: 靠副元素几何形状封闭"]
+D --&gt; D2["力封闭: 靠重力、弹簧力等封闭"]
+
+A --&gt; E["按引入约束的数目"]
+E --&gt; E1["I 级副: 引入 1 个约束"]
+E --&gt; E2["II 级副: 引入 2 个约束"]
+E --&gt; E3["..."]
+E --&gt; E4["V 级副: 引入 5 个约束"]
+
+A--&gt; F["运动副的链接情况"]
+F--&gt; F1["单副构件"]
+F--&gt; F1["两副构件"]
+F--&gt; F1["四副构件"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><strong>这里应该有常用运动副的符号及其代号的图片</strong> 由于图床没有搭建好,过几天会补</p>
+<ul>
+<li><p><strong>自由度 (Degree of freedom)</strong>：构件具有的<strong>独立运动的数目</strong>。 机构有多少个自由度，就需要多少个原动件（电机、发动机等）来驱动，它才能有确定的运动。 自由度数 &gt; 原动件数：机构运动不确定，会产生乱动或随意运动，无法完成预定工作。 自由度数 &lt; 原动件数：机构会卡死（干涉），导致构件损坏或无法启动。</p>
+<ul>
+<li><p>自由度分析：</p>
+<ul>
+<li><p><strong>复合铰链</strong>：两个以上构件在同一处形成的转动副。若 <img src="https://latex.codecogs.com/png.latex?m"> 个构件相连，则有 <img src="https://latex.codecogs.com/png.latex?(m-1)"> 个转动副。</p></li>
+<li><p><strong>局部自由度</strong>：机构中某些构件所具有的、不影响其他构件运动的自由度。计算时应将其从总自由度中减去。</p></li>
+<li><p><strong>虚约束</strong>：机构中对运动不起独立限制作用的重复约束。计算时应将其除去。</p>
+<ul>
+<li><strong>重复部分带入的虚约束数</strong>： <img src="https://latex.codecogs.com/png.latex?p'%20=%202p'_l%20+%20p'_h%20-%203n'"> 其中 <img src="https://latex.codecogs.com/png.latex?n'">、<img src="https://latex.codecogs.com/png.latex?p'_l">、<img src="https://latex.codecogs.com/png.latex?p'_h"> 分别为重复部分的构件数、低副数和高副数。</li>
+</ul></li>
+</ul></li>
+<li><p>自由度计算：</p>
+<ul>
+<li><p><strong>空间构件</strong>：<img src="https://latex.codecogs.com/png.latex?f%20=%206%20-%20s"> （<img src="https://latex.codecogs.com/png.latex?s"> 为约束数）。</p></li>
+<li><p><strong>平面构件</strong>：<img src="https://latex.codecogs.com/png.latex?f%20=%203%20-%20s"> 。</p></li>
+<li><p><strong>平面机构自由度 (Kutzbach 判据)</strong>： <img src="https://latex.codecogs.com/png.latex?F%20=%203n%20-%20(2p_l%20+%20p_h)"> 其中：<img src="https://latex.codecogs.com/png.latex?n"> 为活动构件数，<img src="https://latex.codecogs.com/png.latex?p_l"> 为低副数，<img src="https://latex.codecogs.com/png.latex?p_h"> 为高副数。</p></li>
+<li><p><strong>考虑特殊约束的平面公式</strong>： <img src="https://latex.codecogs.com/png.latex?F%20=%203n%20-%20(2p_l%20+%20p_h%20-%20p')%20-%20F'"> 其中：<img src="https://latex.codecogs.com/png.latex?p'"> 为虚约束数，<img src="https://latex.codecogs.com/png.latex?F'"> 为局部自由度数。</p></li>
+<li><p><strong>空间机构自由度</strong>： <img src="https://latex.codecogs.com/png.latex?F%20=%206n%20-%20(5p_5%20+%204p_4%20+%203p_3%20+%202p_2%20+%20p_1)"> 其中 <img src="https://latex.codecogs.com/png.latex?p_i"> 代表具有 <img src="https://latex.codecogs.com/png.latex?i"> 级约束的运动副数目。</p></li>
+</ul></li>
+</ul></li>
+<li><p><strong>约束 (Constraint)</strong>：构件间构成运动副后，其独立运动受到的限制。</p></li>
+<li><p><strong>运动链 (Kinematic chain)</strong>：构件通过运动副连接而形成的系统。分为<strong>闭链</strong>（首末封闭）和<strong>开链</strong>（首末不封闭）。也有平面运动链与空间运动副之分</p></li>
+<li><p><strong>机构 (Mechanism)</strong>：在运动链中将其中一个构件加以固定（成为<strong>机架</strong>）后，当其中的原动件(主动件)按给定运动规律运动时，其余从动件具有确定运动的系统。机构 = 机架 + 原动件 + 基本杆组 按照<strong>机构的工作原理</strong>及组成构件情况的不同，机构可以分为<strong>连杆机构</strong>，<strong>凸轮机构</strong>，<strong>齿轮机构</strong>，<strong>棘轮机构</strong>，<strong>槽轮机构</strong> ，<strong>螺旋机构</strong> ，<strong>摩擦传动机构</strong> 根据组成机构的<strong>构件性质</strong>，机构可分为：<strong>刚性机构</strong>，<strong>柔性机构 / 顺应机构</strong>：利用构件的弹性变形来传递运动和动力，<strong>挠性传动机构</strong>，<strong>气动机构</strong>，<strong>液压机构</strong></p></li>
+<li><p><strong>机构运动简图 (Kinematic diagram of mechanism)</strong>：用简单的图形符号和线段按比例表示机构各构件间相对运动关系的图形。</p></li>
+</ul>
+<p>只有按照比例绘制的图才能称为“机构运动简图”；若仅为了表明结构状况而不按比例绘制，则称为<strong>机构示意图</strong>。</p>
+<ol type="1">
+<li><p>认清机械的结构组成及运动情况： 首先要分析机械的实际构造，确定其由多少个<strong>构件</strong>组成，并弄清楚各个构件之间形成了何种<strong>运动副</strong>（如转动副、移动副等）需要明确运动的传递路线，分清哪些是原动件，哪些是执行构件及中间传动构件。</p></li>
+<li><p>选择适当的投影平面： 选择<strong>各构件的运动平面</strong>作为视读平面。对于复杂的机械，如果一部分运动在另一平面内，可以单独绘制局部简图。</p></li>
+<li><p>选择适当的长度比例尺 (<img src="https://latex.codecogs.com/png.latex?%5Cmu_l">)： 根据机械的运动尺寸（如转动副中心的距离、移动副导路的方位等），确定一个合适的<strong>长度比例尺</strong>。<img src="https://latex.codecogs.com/png.latex?%5Cmu_l%20=%20%5Cfrac%7B%5Ctext%7B%E5%AE%9E%E9%99%85%E9%95%BF%E5%BA%A6%20(m)%7D%7D%7B%5Ctext%7B%E5%9B%BE%E4%B8%8A%E7%9A%84%E9%95%BF%E5%BA%A6%20(mm)%7D%7D">。</p>
+<ol start="4" type="1">
+<li>绘制简图并标注符号
+<ul>
+<li><p><strong>定位</strong>：先选定原动件的某一位置，按比例尺定出各运动副的相对位置。</p></li>
+<li><p><strong>绘图</strong>：利用国家标准规定的符号画出运动副，并用线段或简单几何图形连接起来表示构件。</p></li>
+<li><p><strong>标注</strong>：通常用数字 1、2、3… 标注构件，用英文字母 A、B、C… 标注运动副。</p></li>
+<li><p><strong>原动件标识</strong>：在原动件上画出代表运动方向的箭头。</p></li>
+</ul></li>
+</ol></li>
+</ol>
+<p>通过以上步骤，便可以将复杂的工程实际机械抽象为便于理论分析和性能研究的运动简图。</p>
+<ul>
+<li><strong>基本杆组 (Assur group)</strong>：又称苏尔杆组，是<strong>自由度为零</strong>且不能再拆分的最小构件组。</li>
+</ul>
+<p>基本杆组（苏尔杆组）的组成条件 * 对于全低副平面基本杆组： <img src="https://latex.codecogs.com/png.latex?3n%20-%202p_l%20=%200"> 常见的有 <strong>II 级组</strong>（<img src="https://latex.codecogs.com/png.latex?n=2,%20p_l=3">）和 <strong>III 级组</strong>（<img src="https://latex.codecogs.com/png.latex?n=4,%20p_l=6">）。</p>
+<ul>
+<li><p><strong>机架变换（机构倒置）</strong>：通过取不同的构件为机架来获得不同的机构。</p></li>
+<li><p><strong>高副低代</strong>：在进行运动分析或动力分析时，常将机构中的高副根据一定条件虚拟地以低副加以代替，化为全低副机构。</p></li>
+<li><p><strong>运动副元素尺寸扩大</strong>：如将转动副改为偏心轮，不改变机构运动性质，但可提高强度。</p></li>
+<li><p><strong>速度瞬心 (Instantaneous centre of velocity)</strong>：互作平面相对运动的两构件上瞬时速度相等的重合点。</p>
+<ul>
+<li><p><strong>绝对瞬心</strong>：瞬心处的绝对速度为零（其中一个构件为机架）。</p></li>
+<li><p><strong>相对瞬心</strong>：瞬心处的绝对速度不为零，但两构件在该点的速度相等。</p></li>
+</ul></li>
+<li><p><strong>三心定理 (Kennedy-Aronhold Theorem)</strong>：三个彼此作平面平行运动的构件共有三个瞬心，且这三个瞬心必位于<strong>同一直线上</strong>。</p></li>
+<li><p><strong>速度影像与加速度影像 (Velocity and acceleration image)</strong>：在同一构件上，由各点相对速度（或相对加速度）矢量末端构成的图形与原构件几何图形相似，且字母顺序一致。</p></li>
+<li><p><strong>哥氏加速度 (Coriolis acceleration, <img src="https://latex.codecogs.com/png.latex?a%5Ek">)</strong>：当一构件在另一转动构件上移动时，由于相对运动与牵连转动而产生的附加加速度。</p></li>
+</ul>
+<ol start="6" type="1">
+<li><strong>机构传动比 (<img src="https://latex.codecogs.com/png.latex?i">)</strong>：机构中两构件角速度的比值。</li>
+</ol>
+<section id="二-核心知识点-knowledge-points" class="level3">
+<h3 class="anchored" data-anchor-id="二-核心知识点-knowledge-points">二、 核心知识点 (Knowledge Points)</h3>
+<section id="运动分析的方法" class="level4">
+<h4 class="anchored" data-anchor-id="运动分析的方法">1. 运动分析的方法</h4>
+<ul>
+<li><strong>图解法</strong>：直观、简单，适用于对机构在特定位置的运动分析，主要包括<strong>矢量方程图解法</strong>和<strong>瞬心法</strong> [1, 6]。</li>
+<li><strong>解析法</strong>：精度高，适用于整个运动循环的连续分析，便于利用计算机进行机构优化设计 [1]。</li>
+</ul>
+</section>
+<section id="瞬心法分析步骤" class="level4">
+<h4 class="anchored" data-anchor-id="瞬心法分析步骤">2. 瞬心法分析步骤</h4>
+<ul>
+<li>确定瞬心总数。</li>
+<li>利用直接观察（运动副处）和三心定理找齐所有瞬心。</li>
+<li>利用瞬心点速度相等的特性求解角速度或线速度。</li>
+</ul>
+</section>
+<section id="矢量方程图解法-相对运动解法-6-8" class="level4">
+<h4 class="anchored" data-anchor-id="矢量方程图解法-相对运动解法-6-8">3. 矢量方程图解法 (相对运动解法) [6, 8]</h4>
+<ul>
+<li>依据理论力学的运动合成原理：<img src="https://latex.codecogs.com/png.latex?%5Ctext%7B%E7%BB%9D%E5%AF%B9%E8%BF%90%E5%8A%A8%7D%20=%20%5Ctext%7B%E7%89%B5%E8%BF%9E%E8%BF%90%E5%8A%A8%7D%20+%20%5Ctext%7B%E7%9B%B8%E5%AF%B9%E8%BF%90%E5%8A%A8%7D">。</li>
+<li>需要选取合适的速度比例尺 <img src="https://latex.codecogs.com/png.latex?%5Cmu_v"> 和加速度比例尺 <img src="https://latex.codecogs.com/png.latex?%5Cmu_a">。</li>
+</ul>
+</section>
+<section id="解析法常用工具-9-10" class="level4">
+<h4 class="anchored" data-anchor-id="解析法常用工具-9-10">4. 解析法常用工具 [9, 10]</h4>
+<ul>
+<li><strong>复数矢量法</strong>：利用欧拉公式将矢量方程转化为代数方程。</li>
+<li><strong>矩阵法</strong>：建立位置矩阵方程，通过求导得到速度和加速度矩阵方程。</li>
+</ul>
+</section>
+</section>
+<section id="三-核心公式-formulas" class="level3">
+<h3 class="anchored" data-anchor-id="三-核心公式-formulas">三、 核心公式 (Formulas)</h3>
+<section id="比例尺计算-1-8" class="level4">
+<h4 class="anchored" data-anchor-id="比例尺计算-1-8">1. 比例尺计算 [1, 8]</h4>
+<ul>
+<li>长度比例尺：<img src="https://latex.codecogs.com/png.latex?%5Cmu_l%20=%20%5Cfrac%7B%E5%AE%9E%E9%99%85%E9%95%BF%E5%BA%A6(m)%7D%7B%E5%9B%BE%E4%B8%8A%E9%95%BF%E5%BA%A6(mm)%7D"></li>
+<li>速度比例尺：<img src="https://latex.codecogs.com/png.latex?%5Cmu_v%20=%20%5Cfrac%7B%E5%AE%9E%E9%99%85%E9%80%9F%E5%BA%A6(m/s)%7D%7B%E5%9B%BE%E4%B8%8A%E9%80%9F%E5%BA%A6(mm)%7D"></li>
+</ul>
+</section>
+<section id="瞬心数量公式" class="level4">
+<h4 class="anchored" data-anchor-id="瞬心数量公式">2. 瞬心数量公式</h4>
+<p><img src="https://latex.codecogs.com/png.latex?K%20=%20%5Cfrac%7BN(N-1)%7D%7B2%7D"> （其中 <img src="https://latex.codecogs.com/png.latex?N"> 为构件总数，含机架）</p>
+</section>
+<section id="矢量位移方程封闭矢量环-11" class="level4">
+<h4 class="anchored" data-anchor-id="矢量位移方程封闭矢量环-11">3. 矢量位移方程（封闭矢量环） [11]</h4>
+<p><img src="https://latex.codecogs.com/png.latex?%5Csum%20%5Cvec%7Bl%7D_i%20=%200"></p>
+</section>
+<section id="速度矢量方程同一构件两点间-8" class="level4">
+<h4 class="anchored" data-anchor-id="速度矢量方程同一构件两点间-8">4. 速度矢量方程（同一构件两点间） [8]</h4>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cvec%7Bv%7D_C%20=%20%5Cvec%7Bv%7D_B%20+%20%5Cvec%7Bv%7D_%7BCB%7D"> 其中：<img src="https://latex.codecogs.com/png.latex?v_%7BCB%7D%20=%20%5Comega%20%5Ccdot%20l_%7BBC%7D">，方向垂直于 <img src="https://latex.codecogs.com/png.latex?BC">。</p>
+</section>
+<section id="加速度矢量方程同一构件两点间-8" class="level4">
+<h4 class="anchored" data-anchor-id="加速度矢量方程同一构件两点间-8">5. 加速度矢量方程（同一构件两点间） [8]</h4>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cvec%7Ba%7D_C%20=%20%5Cvec%7Ba%7D_B%20+%20%5Cvec%7Ba%7D_%7BCB%7D%5En%20+%20%5Cvec%7Ba%7D_%7BCB%7D%5Et"> * <strong>法向加速度</strong>：<img src="https://latex.codecogs.com/png.latex?a_%7BCB%7D%5En%20=%20%5Comega%5E2%20%5Ccdot%20l_%7BBC%7D">，方向由 <img src="https://latex.codecogs.com/png.latex?C"> 指向 <img src="https://latex.codecogs.com/png.latex?B">。 * <strong>切向加速度</strong>：<img src="https://latex.codecogs.com/png.latex?a_%7BCB%7D%5Et%20=%20%5Calpha%20%5Ccdot%20l_%7BBC%7D">，方向垂直于 <img src="https://latex.codecogs.com/png.latex?BC">。</p>
+</section>
+<section id="哥氏加速度计算公式-4" class="level4">
+<h4 class="anchored" data-anchor-id="哥氏加速度计算公式-4">6. 哥氏加速度计算公式 [4]</h4>
+<p><img src="https://latex.codecogs.com/png.latex?a%5Ek%20=%202%5Comega%20%5Ccdot%20v_r"> （其中 <img src="https://latex.codecogs.com/png.latex?%5Comega"> 为牵连角速度，<img src="https://latex.codecogs.com/png.latex?v_r"> 为相对速度。方向：将 <img src="https://latex.codecogs.com/png.latex?v_r"> 顺着 <img src="https://latex.codecogs.com/png.latex?%5Comega"> 的转向转过 <img src="https://latex.codecogs.com/png.latex?90%5E%5Ccirc">）</p>
+</section>
+<section id="矩阵分析通用形式-12" class="level4">
+<h4 class="anchored" data-anchor-id="矩阵分析通用形式-12">7. 矩阵分析通用形式 [12]</h4>
+<ul>
+<li>速度分析：<img src="https://latex.codecogs.com/png.latex?A%5Comega%20=%20%5Comega_1%20B"></li>
+<li>加速度分析：<img src="https://latex.codecogs.com/png.latex?A%5Calpha%20=%20-%5Cdot%7BA%7D%5Comega%20+%20%5Comega_1%20%5Cdot%7BB%7D"></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="机械的动力平衡运转以及速度波动调节" class="level2">
+<h2 class="anchored" data-anchor-id="机械的动力平衡运转以及速度波动调节">机械的动力，平衡，运转，以及速度波动调节</h2>
+</section>
+</section>
+<section id="常用机构设计" class="level1">
+<h1>常用机构设计</h1>
+<section id="连杆凸轮齿轮机构及其设计" class="level2">
+<h2 class="anchored" data-anchor-id="连杆凸轮齿轮机构及其设计">连杆，凸轮，齿轮机构及其设计</h2>
+</section>
+<section id="其他常用机构" class="level2">
+<h2 class="anchored" data-anchor-id="其他常用机构">其他常用机构</h2>
+</section>
+</section>
+<section id="机械方案设计" class="level1">
+<h1>机械方案设计</h1>
+<section id="机械系统方案的设计" class="level2">
+<h2 class="anchored" data-anchor-id="机械系统方案的设计">机械系统方案的设计</h2>
+</section>
+<section id="机器人机构及其设计" class="level2">
+<h2 class="anchored" data-anchor-id="机器人机构及其设计">机器人机构及其设计</h2>
 
 
 <!-- -->
@@ -368,7 +2033,7 @@
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
   <category>速通</category>
-  <guid>https://qmdthings.top/notes/概率论与数理统计/概率论与数理统计.html</guid>
+  <guid>https://qmdthings.top/notes/机械原理/机械原理.html</guid>
   <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
@@ -1467,6 +3132,111 @@
   <category>工程化学</category>
   <guid>https://qmdthings.top/notes/工程化学/9. 合成高分子材料.html</guid>
   <pubDate>Mon, 09 Mar 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title></title>
+  <link>https://qmdthings.top/notes/电工技术/电工技术上.html</link>
+  <description><![CDATA[ <div class="quarto-title-block"><div class="quarto-title-tools-only"><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source Code</button></div></div>
+
+<p id="hitokoto">
+  hitokoto!
+</p>
+
+<script>
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+  fetch("https://v1.hitokoto.cn?c=k")
+    .then((response) => response.json())
+    .then((data) => {
+      const hitokoto = document.querySelector("#hitokoto_text");
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+      hitokoto.innerText = data.hitokoto;
+    })
+    .catch(console.error);
+
+  hitokotoElement.addEventListener("click", function (event) {
+    event.preventDefault();
+  });
+</script>
+
+
+
+
+<section id="正弦交流电" class="level1">
+<h1>正弦交流电</h1>
+<p>线性电路中,当激励(电压源或者是电流源按某一正弦规律变化,响应也为相同频率的正弦量时)电路中的这种状态称为正弦稳态,此时的电路称为正弦稳态电路或者是正弦交流电路</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ai=I_m%20cos(%5Comega%20t%20+%5Cphi_i)%0A"></p>
+<ul>
+<li><p><img src="https://latex.codecogs.com/png.latex?I_m">：<strong>幅值</strong>/振幅（最大值）。</p></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?%5Cphi_i">：<strong>初相位</strong>（初相），<img src="https://latex.codecogs.com/png.latex?%5Comega%20t+%5Cphi_i">称为相位（相角）。<img src="https://latex.codecogs.com/png.latex?(%5Comega%20t+%5Cphi_i)%5Crvert_%7Bt=0%7D=%5Cphi_i,%20%5Clvert%20%5Cphi_i%20%5Crvert%20%5Cle%20%5Cpi"></p></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?%5CDelta%20%5Cphi">：两个<strong>同频率</strong>正弦量的初相位之差。例如 <img src="https://latex.codecogs.com/png.latex?%5Cphi%20=%20%5Cpsi_u%20-%20%5Cpsi_i">。若 <img src="https://latex.codecogs.com/png.latex?%5Cphi%20%3E%200">，称电压超前电流；若 <img src="https://latex.codecogs.com/png.latex?%5Cphi%20%3C%200">，称电压滞后电流。</p></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?%5Comega">：正弦量的<strong>角频率</strong>，<img src="https://latex.codecogs.com/png.latex?%5Comega=%5Cfrac%7Bd%20%5Comega%20t+%5Cphi_i%7D%7Bdt%7D"></p></li>
+</ul>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Comega%20=%5Cfrac%7B2%5Cpi%7D%7BT%7D%5C;f=%5Cfrac%7B1%7D%7BT%7D%0A"></p>
+<p>也就是</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Comega%20=2%5Cpi%20f%20(HZ)%0A"></p>
+<p>有效值 (Effective Value) 基于热效应等效原则。如果在相同时间内，交流电通过电阻产生的热量与直流电产生的热量相等，则该直流电的数值即为该交流电的有效值。 <img src="https://latex.codecogs.com/png.latex?%0AI%5E2RT=%5Cint%5ET_0%20i%5E2%20Rdt%0A"></p>
+<pre><code>$$I = \frac{I_m}{\sqrt{2}} \approx 0.707 I_m \; U = \frac{U_m}{\sqrt{2}} \approx 0.707 U_m$$</code></pre>
+<p>正弦量的相量表示法 (Phasor Representation) 利用复数来表示正弦量。相量的模对应正弦量的有效值（或最大值），相量的幅角对应正弦量的初相位。 <img src="https://latex.codecogs.com/png.latex?%5Clvert%20F%20%5Crvert=%5Csqrt%7Ba%5E2+b%5E2%7D,%5Ctheta%20=arctan(%5Cfrac%7Bb%7D%7Ba%7D)=%5Comega%20t+%5Cpsi_i"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AF=a+jb=%5Clvert%20F%20%5Crvert%20e%5E%7Bj%20%5Ctheta%7D=%5Clvert%20F%20%5Crvert%20%5Cangle%20%5Ctheta%0A"></p>
+<p>将时域中的三角函数运算简化为频域中的<strong>代数运算</strong>，极大地简化了交流电路的分析和计算。</p>
+<p>相量：在字母上方加点表示，如 <img src="https://latex.codecogs.com/png.latex?%5Cdot%7BI%7D%20=%20Ie%5E%7Bj%5Cpsi_i%7D=I%5Cangle%5Cpsi_i">。</p>
+<ul>
+<li><p>有效值相量：按正弦量的有效值定义的向量</p></li>
+<li><p>最大值相量：按正弦量的幅值定义的向量</p></li>
+</ul>
+<p>拓扑约束与元件约束的相量形式 在正弦电流电路中，当所有激励源具有相同频率时，流入（或流出）任一节点的电流<strong>相量</strong>的代数和恒等于零。 <img src="https://latex.codecogs.com/png.latex?%5Csum%20i%20=%200%5C;%5Csum%20%5Cdot%7BI%7D%20=%200%5C;%5Csum%20%5Cdot%7BI%7D_m%20=%200"></p>
+<p>在正弦电流电路中，当所有激励源具有相同频率时，沿任一闭合回路绕行一周，回路中各段支路电压<strong>相量</strong>的代数和恒等于零。 <img src="https://latex.codecogs.com/png.latex?%5Csum%20u%20=%200%5C;%5Csum%20%5Cdot%7BU%7D%20=%200%5C;%5Csum%20Z%5Cdot%7BI%7D%20=%20%5Csum%20%5Cdot%7BE%7D"></p>
+<ul>
+<li><p><strong>电阻元件 (<img src="https://latex.codecogs.com/png.latex?R">)</strong>：电压与电流<strong>同相</strong> (<img src="https://latex.codecogs.com/png.latex?%5Cphi%20=%200">)。满足欧姆定律：<img src="https://latex.codecogs.com/png.latex?%5Cdot%20U%20=%20R%5Cdot%20I">。</p></li>
+<li><p><strong>电感元件 (<img src="https://latex.codecogs.com/png.latex?L">)</strong>：<img src="https://latex.codecogs.com/png.latex?u=L%5Cfrac%7Bdi_L%7D%7Bdt%7D">，电压<strong>超前</strong>电流 <img src="https://latex.codecogs.com/png.latex?90%5E%5Ccirc"> (<img src="https://latex.codecogs.com/png.latex?%5Cphi%20=%2090%5E%5Ccirc">)。</p>
+<ul>
+<li><strong>感抗/电抗 (<img src="https://latex.codecogs.com/png.latex?X_L">)(<img src="https://latex.codecogs.com/png.latex?%5COmega">)</strong>：表示电感对交流电流的阻碍作用，<img src="https://latex.codecogs.com/png.latex?X_L%20=%20%5Comega%20L=2%5Cpi%20fL">。感纳为感抗的倒数<img src="https://latex.codecogs.com/png.latex?B_L=%5Cfrac%7B1%7D%7BX_L%7D(S)%E8%A5%BF%E9%97%A8%E5%AD%90"></li>
+<li><strong>复数形式</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cdot%7BU%7D%20=%20jX_L%5Cdot%7BI%7D%20=%20j%5Comega%20L%5Cdot%7BI%7D">。</li>
+</ul></li>
+<li><p><strong>电容元件 (<img src="https://latex.codecogs.com/png.latex?C">)</strong>：电压<strong>滞后</strong>电流 <img src="https://latex.codecogs.com/png.latex?90%5E%5Ccirc"> (<img src="https://latex.codecogs.com/png.latex?%5Cphi%20=%20-90%5E%5Ccirc">)。</p>
+<ul>
+<li><strong>容抗 (<img src="https://latex.codecogs.com/png.latex?X_C">)</strong>：表示电容对交流电流的阻碍作用，<img src="https://latex.codecogs.com/png.latex?X_C%20=%201/(%5Comega%20C)">。</li>
+<li><strong>复数形式</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cdot%7BU%7D%20=%20-jX_C%5Cdot%7BI%7D%20=%20%5Cfrac%7B1%7D%7Bj%5Comega%20C%7D%5Cdot%7BI%7D">。</li>
+</ul></li>
+</ul>
+<section id="rlc-串联电路与复阻抗" class="level3">
+<h3 class="anchored" data-anchor-id="rlc-串联电路与复阻抗">6. RLC 串联电路与复阻抗</h3>
+<ul>
+<li><strong>复阻抗 (<img src="https://latex.codecogs.com/png.latex?Z">)</strong>：<img src="https://latex.codecogs.com/png.latex?Z%20=%20R%20+%20j(X_L%20-%20X_C)%20=%20R%20+%20jX">。
+<ul>
+<li><strong>阻抗模</strong>：<img src="https://latex.codecogs.com/png.latex?%7CZ%7C%20=%20%5Csqrt%7BR%5E2%20+%20(X_L%20-%20X_C)%5E2%7D">。</li>
+<li><strong>阻抗角</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cphi%20=%20%5Carctan%5Cfrac%7BX_L%20-%20X_C%7D%7BR%7D"> [20], [21]。</li>
+</ul></li>
+<li><strong>交流电路的欧姆定律</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cdot%7BU%7D%20=%20Z%5Cdot%7BI%7D"> [21]。</li>
+</ul>
+</section>
+<section id="正弦交流电路的功率" class="level3">
+<h3 class="anchored" data-anchor-id="正弦交流电路的功率">7. 正弦交流电路的功率</h3>
+<ul>
+<li><strong>有功功率 (<img src="https://latex.codecogs.com/png.latex?P">)</strong>：电阻消耗的功率，单位为瓦 (W)。<img src="https://latex.codecogs.com/png.latex?P%20=%20UI%20%5Ccos%5Cphi"> [22], [23]。</li>
+<li><strong>无功功率 (<img src="https://latex.codecogs.com/png.latex?Q">)</strong>：电感和电容与电源之间进行能量交换的规模，单位为乏 (VAR)。<img src="https://latex.codecogs.com/png.latex?Q%20=%20UI%20%5Csin%5Cphi%20=%20Q_L%20-%20Q_C"> [24], [25]。</li>
+<li><strong>视在功率 (<img src="https://latex.codecogs.com/png.latex?S">)</strong>：电路总的电压与电流有效值的乘积，单位为伏安 (VA)。<img src="https://latex.codecogs.com/png.latex?S%20=%20UI%20=%20%5Csqrt%7BP%5E2%20+%20Q%5E2%7D"> [26], [25]。</li>
+<li><strong>功率因数 (<img src="https://latex.codecogs.com/png.latex?%5Ccos%5Cphi">)</strong>：有功功率与视在功率的比值 <img src="https://latex.codecogs.com/png.latex?%5Ccos%5Cphi%20=%20P/S"> [27], [28]。</li>
+</ul>
+</section>
+<section id="谐振-resonance" class="level3">
+<h3 class="anchored" data-anchor-id="谐振-resonance">8. 谐振 (Resonance)</h3>
+<ul>
+<li><strong>串联谐振条件</strong>：当 <img src="https://latex.codecogs.com/png.latex?X_L%20=%20X_C"> 时，电路的电抗为零，电压与电流同相 [29], [30]。</li>
+<li><strong>谐振频率</strong>：<img src="https://latex.codecogs.com/png.latex?f_0%20=%20%5Cfrac%7B1%7D%7B2%5Cpi%5Csqrt%7BLC%7D%7D"> [29], [30]。</li>
+<li><strong>特点</strong>：电路阻抗模最小，电流达到最大值；电感和电容两端可能出现极高的过电压 [29], [31]。</li>
+</ul>
+
+
+<!-- -->
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <guid>https://qmdthings.top/notes/电工技术/电工技术上.html</guid>
+  <pubDate>Tue, 21 Apr 2026 13:09:55 GMT</pubDate>
 </item>
 </channel>
 </rss>

@@ -1,0 +1,16 @@
+---
+title: 生产管理
+author: QMD
+date: 2026/04/10
+description: 一文快速掌握全书
+categories: 速通
+engine: knitr
+---
+
+# 绪论
+
+# 生产运作系统的设计
+
+# 生产运作管理系统的运行
+
+# 生产运作系统的维护与改进

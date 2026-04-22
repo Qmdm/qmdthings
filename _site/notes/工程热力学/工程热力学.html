@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="QMD">
+<meta name="dcterms.date" content="2026-04-10">
+<meta name="description" content="一文快速掌握全书">
 
-<title>quarto-input3f29f43f09aae2ab – QMD的杂物间</title>
+<title>工程热力学 – QMD的杂物间</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -68,7 +71,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../notes/电工技术/电路的暂态分析.html" rel="next">
+<link href="../../notes/机械原理/机械原理.html" rel="next">
+<link href="../../notes/工程化学/9. 合成高分子材料.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -125,6 +129,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   .quarto-title-banner .title { color: #e8efff; }
 </style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -343,11 +376,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="dropdown-menu" aria-labelledby="nav-menu-notes">    
         <li class="dropdown-header">Notes</li>
         <li>
-    <a class="dropdown-item" href="../../notes/材料力学/1. 绪论.html">
+    <a class="dropdown-item" href="../../notes/材料力学/材料力学.html">
  <span class="dropdown-text">材料力学</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../notes/电工技术/电路的暂态分析.html">
+    <a class="dropdown-item" href="../../notes/电工技术/电工技术上.html">
  <span class="dropdown-text">电工技术</span></a>
   </li>  
         <li>
@@ -358,6 +391,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="../../notes/工程化学/1. 热化学基础.html">
  <span class="dropdown-text">工程化学</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../../notes/工程热力学/工程热力学.html">
+ <span class="dropdown-text">工程热力学</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../notes/机械原理/机械原理.html">
+ <span class="dropdown-text">机械原理</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../notes/生产管理/生产管理速通.html">
+ <span class="dropdown-text">生产管理</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -365,7 +410,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Fun</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-fun">    
-        <li class="dropdown-header">随便写写</li>
+        <li class="dropdown-header">Fun</li>
         <li>
     <a class="dropdown-item" href="../../fun/生活/helloblogs.html">
  <span class="dropdown-text">生活</span></a>
@@ -401,7 +446,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Notes</li><li class="breadcrumb-item"><a href="../../notes/材料力学/1. 绪论.html">材料力学</a></li><li class="breadcrumb-item"><a href="../../notes/材料力学/1. 绪论.html">1. 绪论</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Notes</li><li class="breadcrumb-item"><a href="../../notes/工程热力学/工程热力学.html">工程热力学</a></li><li class="breadcrumb-item"><a href="../../notes/工程热力学/工程热力学.html">工程热力学</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -411,7 +456,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Notes</li><li class="breadcrumb-item"><a href="../../notes/材料力学/1. 绪论.html">材料力学</a></li><li class="breadcrumb-item"><a href="../../notes/材料力学/1. 绪论.html">1. 绪论</a></li></ol></nav><h1 class="title display-7"></h1></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Notes</li><li class="breadcrumb-item"><a href="../../notes/工程热力学/工程热力学.html">工程热力学</a></li><li class="breadcrumb-item"><a href="../../notes/工程热力学/工程热力学.html">工程热力学</a></li></ol></nav>
+      <div class="quarto-title-block"><div><h1 class="title">工程热力学</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source Code</button></div></div>
+                  <div>
+        <div class="description">
+          一文快速掌握全书
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">速通</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>QMD </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 10, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -432,17 +513,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">材料力学</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/材料力学/1. 绪论.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">1. 绪论</span></a>
+  <a href="../../notes/材料力学/材料力学.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">材料力学</span></a>
   </div>
 </li>
       </ul>
@@ -456,6 +537,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/电工技术/电工技术上.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">正弦交流电</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/电工技术/电工技术下.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">电工技术下</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/电工技术/电路.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">电路</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notes/电工技术/电路的暂态分析.html" class="sidebar-item-text sidebar-link">
@@ -546,6 +645,57 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">工程热力学</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/工程热力学/工程热力学.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">工程热力学</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">机械原理</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/机械原理/机械原理.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">机械原理</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">生产管理</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/生产管理/生产管理速通.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">生产管理</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
       </ul>
   </li>
     </ul>
@@ -553,11 +703,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#绪论" id="toc-绪论" class="nav-link active" data-scroll-target="#绪论">绪论</a>
+  <ul class="collapse">
+  <li><a href="#绪论-0-1-0-3" id="toc-绪论-0-1-0-3" class="nav-link" data-scroll-target="#绪论-0-1-0-3">绪论 (0-1 ~ 0-3)</a></li>
+  <li><a href="#第一章基本概念及定义" id="toc-第一章基本概念及定义" class="nav-link" data-scroll-target="#第一章基本概念及定义">第一章：基本概念及定义</a></li>
+  </ul></li>
+  <li><a href="#基本概念与定义" id="toc-基本概念与定义" class="nav-link" data-scroll-target="#基本概念与定义">基本概念与定义</a></li>
+  <li><a href="#热力学第一定律" id="toc-热力学第一定律" class="nav-link" data-scroll-target="#热力学第一定律">热力学第一定律</a></li>
+  <li><a href="#气体和蒸汽的性质" id="toc-气体和蒸汽的性质" class="nav-link" data-scroll-target="#气体和蒸汽的性质">气体和蒸汽的性质</a></li>
+  <li><a href="#理想气体混合物及湿空气" id="toc-理想气体混合物及湿空气" class="nav-link" data-scroll-target="#理想气体混合物及湿空气">理想气体混合物及湿空气</a></li>
+  <li><a href="#气体和蒸汽的基本热力学过程" id="toc-气体和蒸汽的基本热力学过程" class="nav-link" data-scroll-target="#气体和蒸汽的基本热力学过程">气体和蒸汽的基本热力学过程</a></li>
+  <li><a href="#热力学第一定律-1" id="toc-热力学第一定律-1" class="nav-link" data-scroll-target="#热力学第一定律-1">热力学第一定律</a></li>
+  <li><a href="#气体与蒸汽的流动" id="toc-气体与蒸汽的流动" class="nav-link" data-scroll-target="#气体与蒸汽的流动">气体与蒸汽的流动</a></li>
+  <li><a href="#压气机的热力过程" id="toc-压气机的热力过程" class="nav-link" data-scroll-target="#压气机的热力过程">压气机的热力过程</a></li>
+  <li><a href="#气体动力循环" id="toc-气体动力循环" class="nav-link" data-scroll-target="#气体动力循环">气体动力循环</a></li>
+  <li><a href="#蒸汽动力装置循环" id="toc-蒸汽动力装置循环" class="nav-link" data-scroll-target="#蒸汽动力装置循环">蒸汽动力装置循环</a></li>
+  <li><a href="#制冷循环" id="toc-制冷循环" class="nav-link" data-scroll-target="#制冷循环">制冷循环</a></li>
+  <li><a href="#实际气体的性质及热力学的一般关系式" id="toc-实际气体的性质及热力学的一般关系式" class="nav-link" data-scroll-target="#实际气体的性质及热力学的一般关系式">实际气体的性质及热力学的一般关系式</a></li>
+  <li><a href="#化学热力学基础" id="toc-化学热力学基础" class="nav-link" data-scroll-target="#化学热力学基础">化学热力学基础</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content"><div class="quarto-title-block"><div class="quarto-title-tools-only"><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source Code</button></div></div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 <p id="hitokoto">
   <a href="#" id="hitokoto_text" style="text-decoration: none">hitokoto!</a>
@@ -584,9 +757,151 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
+<section id="绪论" class="level1">
+<h1>绪论</h1>
+<section id="绪论-0-1-0-3" class="level3">
+<h3 class="anchored" data-anchor-id="绪论-0-1-0-3">绪论 (0-1 ~ 0-3)</h3>
+<p>这一部分是全书的灵魂，确立了热力学研究的宏观背景。</p>
+<section id="热能及其利用" class="level4">
+<h4 class="anchored" data-anchor-id="热能及其利用">0-1 热能及其利用</h4>
+<ul>
+<li><strong>能源 (Energy Source)</strong>：提供有效能量的物质资源（煤、石油、天然气、核能、太阳能等）[1]。</li>
+<li><strong>热能利用的两种形式</strong>：
+<ol type="1">
+<li><strong>热利用</strong>：直接利用热能进行加热（如冶金、化工）[1]。</li>
+<li><strong>动力利用</strong>：将热能转换为机械能或电能（热力学的重点研究方向）[1]。</li>
+</ol></li>
+<li><strong>核心结论</strong>：世界上 85%~90% 以上的能量是通过热能形式被利用的 [1]。</li>
+</ul>
+</section>
+<section id="热力学发展简史" class="level4">
+<h4 class="anchored" data-anchor-id="热力学发展简史">0-2 热力学发展简史</h4>
+<ul>
+<li><strong>瓦特 (James Watt)</strong>：蒸汽机的改良者，开启了热能大规模转机械能的时代 [2]。</li>
+<li><strong>卡诺 (Sadi Carnot)</strong>：1824年提出卡诺循环与卡诺定理，指明了提高热机效率的方向 [2]。</li>
+<li><strong>热力学第一定律奠基人</strong>：迈耶、焦耳、亥姆霍兹。焦耳通过实验确定了热功当量 [2]。</li>
+<li><strong>热力学第二定律奠基人</strong>：克劳修斯、开尔文（汤姆逊）[2]。</li>
+</ul>
+</section>
+<section id="工程热力学的内容及研究方法" class="level4">
+<h4 class="anchored" data-anchor-id="工程热力学的内容及研究方法">0-3 工程热力学的内容及研究方法</h4>
+<ul>
+<li><strong>工程热力学定义</strong>：研究热能与机械能相互转换规律及提高转换效率的科学 [3, 4]。</li>
+<li><strong>研究方法</strong>：
+<ol type="1">
+<li><strong>宏观研究法（经典热力学）</strong>：将物质视为连续体，不考虑微观粒子，以实验定律为基础进行逻辑推理。<strong>这是本教材的主要方法</strong> [4]。</li>
+<li><strong>微观研究法（统计热力学）</strong>：基于分子运动论和统计规律研究物质性质 [5]。</li>
+</ol></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="第一章基本概念及定义" class="level3">
+<h3 class="anchored" data-anchor-id="第一章基本概念及定义">第一章：基本概念及定义</h3>
+<p>从这里开始，你将接触到计算所需的参数和公式。</p>
+<section id="热能和机械能相互转换的过程" class="level4">
+<h4 class="anchored" data-anchor-id="热能和机械能相互转换的过程">1-1 热能和机械能相互转换的过程</h4>
+<ul>
+<li><strong>热能动力装置（热机）</strong>：实现热能与机械能转换的整套设备 [6]。</li>
+<li><strong>必备组件</strong>：工质（传递能量的媒介）、热源（放热给工质）、冷源（吸收工质余热）[7]。</li>
+</ul>
+</section>
+<section id="热力系统-thermodynamic-system" class="level4">
+<h4 class="anchored" data-anchor-id="热力系统-thermodynamic-system">1-2 热力系统 (Thermodynamic System)</h4>
+<ul>
+<li><strong>定义</strong>：为了进行分析而划分出的有限物质或空间 [7]。</li>
+<li><strong>分类</strong> [8, 9]：
+<ul>
+<li><strong>闭口系统（控制质量）</strong>：与外界无质量交换，只有能量交换。</li>
+<li><strong>开口系统（控制容积）</strong>：与外界既有质量交换，又有能量交换。</li>
+<li><strong>绝热系统</strong>：与外界无热量交换。</li>
+<li><strong>孤立系统</strong>：与外界既无物质交换，也无能量交换。</li>
+</ul></li>
+</ul>
+</section>
+<section id="工质的热力学状态及其基本状态参数" class="level4">
+<h4 class="anchored" data-anchor-id="工质的热力学状态及其基本状态参数">1-3 工质的热力学状态及其基本状态参数</h4>
+<p>工质的状态由<strong>状态参数</strong>描述，其变化量只与初终态有关，与路径无关 [10]。</p>
+<p><strong>1. 温度 (<span class="math inline">\(T, t\)</span>)</strong> * <strong>概念</strong>：系统宏观平衡的标志，微观粒子杂乱热运动剧烈程度的度量 [10]。 * <strong>公式</strong>：<span class="math display">\[T = t + 273.15\]</span> * <span class="math inline">\(T\)</span>：热力学温度，单位：开尔文 (<span class="math inline">\(\text{K}\)</span>) [11]。 * <span class="math inline">\(t\)</span>：摄氏温度，单位：摄氏度 (<span class="math inline">\(^\circ\text{C}\)</span>) [11]。</p>
+<p><strong>2. 压力 (<span class="math inline">\(p\)</span>)</strong> * <strong>概念</strong>：垂直作用于单位面积上的力（即压强）[12]。 * <strong>绝对压力 (<span class="math inline">\(p\)</span>)</strong>：热力学状态参数必须使用绝对压力 [13]。 * <strong>计算公式</strong> [12]： * 高于大气压时：<span class="math display">\[p = p_b + p_e\]</span> * 低于大气压时：<span class="math display">\[p = p_b - p_v\]</span> * <strong>变量含义</strong>： * <span class="math inline">\(p\)</span>：绝对压力 (<span class="math inline">\(\text{Pa}\)</span>)。 * <span class="math inline">\(p_b\)</span>：环境大气压力 (<span class="math inline">\(\text{Pa}\)</span>)。 * <span class="math inline">\(p_e\)</span>：表压力 (<span class="math inline">\(\text{Pa}\)</span>)。 * <span class="math inline">\(p_v\)</span>：真空度 (<span class="math inline">\(\text{Pa}\)</span>)。</p>
+<p><strong>3. 比体积 (<span class="math inline">\(v\)</span>) 与密度 (<span class="math inline">\(\rho\)</span>)</strong> * <strong>比体积</strong>：单位质量物质占有的体积 [14]。 * <span class="math display">\[v = \frac{V}{m}\]</span> * <span class="math inline">\(V\)</span>：总体积 (<span class="math inline">\(\text{m}^3\)</span>)；<span class="math inline">\(m\)</span>：质量 (<span class="math inline">\(\text{kg}\)</span>)。 * <strong>密度</strong>：单位体积物质拥有的质量 [14]。 * <span class="math display">\[\rho = \frac{m}{V}\]</span> * <strong>关系</strong>：<span class="math inline">\(v \rho = 1\)</span> [14]。</p>
+</section>
+<section id="平衡状态与状态方程" class="level4">
+<h4 class="anchored" data-anchor-id="平衡状态与状态方程">1-4 平衡状态与状态方程</h4>
+<ul>
+<li><strong>平衡状态</strong>：不受外界影响下，系统状态参数始终保持不变的状态 [14]。</li>
+<li><strong>理想气体状态方程</strong> [15, 16]：
+<ul>
+<li><span class="math display">\[pv = R_gT\]</span> 或 <span class="math display">\[pV = mR_gT\]</span></li>
+<li><strong>变量含义</strong>：
+<ul>
+<li><span class="math inline">\(R_g\)</span>：气体常数，单位为 <span class="math inline">\(\text{J}/(\text{kg} \cdot \text{K})\)</span>。注意不同气体的 <span class="math inline">\(R_g\)</span> 不同。</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="过程功与热量" class="level4">
+<h4 class="anchored" data-anchor-id="过程功与热量">1-5~1-6 过程、功与热量</h4>
+<ul>
+<li><strong>准平衡过程</strong>：过程无限接近平衡态，在坐标图上可用连续曲线表示 [16, 17]。</li>
+<li><strong>可逆过程</strong>：系统与外界均能完全回复原状且无耗散损失的过程 [17, 18]。</li>
+<li><strong>体积功 (Expansion Work)</strong> [19, 20]：
+<ul>
+<li><span class="math display">\[\delta W = p \text{d}V\]</span> 或 <span class="math display">\[w = \int_{1}^{2} p \text{d}v\]</span></li>
+<li><strong>含义</strong>：工质体积变化而通过边界传递的功。</li>
+</ul></li>
+<li><strong>过程热量 (<span class="math inline">\(Q\)</span>)</strong> [21]：
+<ul>
+<li>可逆过程：<span class="math display">\[\delta Q = T \text{d}S\]</span></li>
+<li><strong>约定</strong>：吸热为“+”，放热为“-”；系统对外作功为“+”，外界对系统作功为“-”。</li>
+</ul></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="基本概念与定义" class="level1">
+<h1>基本概念与定义</h1>
+</section>
+<section id="热力学第一定律" class="level1">
+<h1>热力学第一定律</h1>
+</section>
+<section id="气体和蒸汽的性质" class="level1">
+<h1>气体和蒸汽的性质</h1>
+</section>
+<section id="理想气体混合物及湿空气" class="level1">
+<h1>理想气体混合物及湿空气</h1>
+</section>
+<section id="气体和蒸汽的基本热力学过程" class="level1">
+<h1>气体和蒸汽的基本热力学过程</h1>
+</section>
+<section id="热力学第一定律-1" class="level1">
+<h1>热力学第一定律</h1>
+</section>
+<section id="气体与蒸汽的流动" class="level1">
+<h1>气体与蒸汽的流动</h1>
+</section>
+<section id="压气机的热力过程" class="level1">
+<h1>压气机的热力过程</h1>
+</section>
+<section id="气体动力循环" class="level1">
+<h1>气体动力循环</h1>
+</section>
+<section id="蒸汽动力装置循环" class="level1">
+<h1>蒸汽动力装置循环</h1>
+</section>
+<section id="制冷循环" class="level1">
+<h1>制冷循环</h1>
+</section>
+<section id="实际气体的性质及热力学的一般关系式" class="level1">
+<h1>实际气体的性质及热力学的一般关系式</h1>
+</section>
+<section id="化学热力学基础" class="level1">
+<h1>化学热力学基础</h1>
+
 
 <!-- -->
 
+</section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1055,14 +1370,140 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../../notes/工程化学/9. 合成高分子材料.html" class="pagination-link" aria-label="合成高分子材料">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">合成高分子材料</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../notes/电工技术/电路的暂态分析.html" class="pagination-link" aria-label="电路的暂态分析">
-        <span class="nav-page-text">电路的暂态分析</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../notes/机械原理/机械原理.html" class="pagination-link" aria-label="机械原理">
+        <span class="nav-page-text">机械原理</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> 工程热力学</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="an">author:</span><span class="co"> QMD</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="an">date:</span><span class="co"> 2026/04/10</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="an">description:</span><span class="co"> 一文快速掌握全书</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="an">categories:</span><span class="co"> 速通</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="an">engine:</span><span class="co"> knitr</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co">---</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="fu"># 绪论</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="fu">### 绪论 (0-1 ~ 0-3)</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>这一部分是全书的灵魂，确立了热力学研究的宏观背景。</span>
+<span id="cb1-14"><a href="#cb1-14"></a></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="fu">#### 0-1 热能及其利用</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="ss">*   </span>**能源 (Energy Source)**：提供有效能量的物质资源（煤、石油、天然气、核能、太阳能等）<span class="co">[</span><span class="ot">1</span><span class="co">]</span>。</span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="ss">*   </span>**热能利用的两种形式**：</span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="ss">    1.  </span>**热利用**：直接利用热能进行加热（如冶金、化工）<span class="co">[</span><span class="ot">1</span><span class="co">]</span>。</span>
+<span id="cb1-19"><a href="#cb1-19"></a><span class="ss">    2.  </span>**动力利用**：将热能转换为机械能或电能（热力学的重点研究方向）<span class="co">[</span><span class="ot">1</span><span class="co">]</span>。</span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="ss">*   </span>**核心结论**：世界上 85%~90% 以上的能量是通过热能形式被利用的 <span class="co">[</span><span class="ot">1</span><span class="co">]</span>。</span>
+<span id="cb1-21"><a href="#cb1-21"></a></span>
+<span id="cb1-22"><a href="#cb1-22"></a><span class="fu">#### 0-2 热力学发展简史</span></span>
+<span id="cb1-23"><a href="#cb1-23"></a><span class="ss">*   </span>**瓦特 (James Watt)**：蒸汽机的改良者，开启了热能大规模转机械能的时代 <span class="co">[</span><span class="ot">2</span><span class="co">]</span>。</span>
+<span id="cb1-24"><a href="#cb1-24"></a><span class="ss">*   </span>**卡诺 (Sadi Carnot)**：1824年提出卡诺循环与卡诺定理，指明了提高热机效率的方向 <span class="co">[</span><span class="ot">2</span><span class="co">]</span>。</span>
+<span id="cb1-25"><a href="#cb1-25"></a><span class="ss">*   </span>**热力学第一定律奠基人**：迈耶、焦耳、亥姆霍兹。焦耳通过实验确定了热功当量 <span class="co">[</span><span class="ot">2</span><span class="co">]</span>。</span>
+<span id="cb1-26"><a href="#cb1-26"></a><span class="ss">*   </span>**热力学第二定律奠基人**：克劳修斯、开尔文（汤姆逊）<span class="co">[</span><span class="ot">2</span><span class="co">]</span>。</span>
+<span id="cb1-27"><a href="#cb1-27"></a></span>
+<span id="cb1-28"><a href="#cb1-28"></a><span class="fu">#### 0-3 工程热力学的内容及研究方法</span></span>
+<span id="cb1-29"><a href="#cb1-29"></a><span class="ss">*   </span>**工程热力学定义**：研究热能与机械能相互转换规律及提高转换效率的科学 <span class="co">[</span><span class="ot">3, 4</span><span class="co">]</span>。</span>
+<span id="cb1-30"><a href="#cb1-30"></a><span class="ss">*   </span>**研究方法**：</span>
+<span id="cb1-31"><a href="#cb1-31"></a><span class="ss">    1.  </span>**宏观研究法（经典热力学）**：将物质视为连续体，不考虑微观粒子，以实验定律为基础进行逻辑推理。**这是本教材的主要方法** <span class="co">[</span><span class="ot">4</span><span class="co">]</span>。</span>
+<span id="cb1-32"><a href="#cb1-32"></a><span class="ss">    2.  </span>**微观研究法（统计热力学）**：基于分子运动论和统计规律研究物质性质 <span class="co">[</span><span class="ot">5</span><span class="co">]</span>。</span>
+<span id="cb1-33"><a href="#cb1-33"></a></span>
+<span id="cb1-34"><a href="#cb1-34"></a>---</span>
+<span id="cb1-35"><a href="#cb1-35"></a></span>
+<span id="cb1-36"><a href="#cb1-36"></a><span class="fu">### 第一章：基本概念及定义</span></span>
+<span id="cb1-37"><a href="#cb1-37"></a>从这里开始，你将接触到计算所需的参数和公式。</span>
+<span id="cb1-38"><a href="#cb1-38"></a></span>
+<span id="cb1-39"><a href="#cb1-39"></a><span class="fu">#### 1-1 热能和机械能相互转换的过程</span></span>
+<span id="cb1-40"><a href="#cb1-40"></a><span class="ss">*   </span>**热能动力装置（热机）**：实现热能与机械能转换的整套设备 <span class="co">[</span><span class="ot">6</span><span class="co">]</span>。</span>
+<span id="cb1-41"><a href="#cb1-41"></a><span class="ss">*   </span>**必备组件**：工质（传递能量的媒介）、热源（放热给工质）、冷源（吸收工质余热）<span class="co">[</span><span class="ot">7</span><span class="co">]</span>。</span>
+<span id="cb1-42"><a href="#cb1-42"></a></span>
+<span id="cb1-43"><a href="#cb1-43"></a><span class="fu">#### 1-2 热力系统 (Thermodynamic System)</span></span>
+<span id="cb1-44"><a href="#cb1-44"></a><span class="ss">*   </span>**定义**：为了进行分析而划分出的有限物质或空间 <span class="co">[</span><span class="ot">7</span><span class="co">]</span>。</span>
+<span id="cb1-45"><a href="#cb1-45"></a><span class="ss">*   </span>**分类** <span class="co">[</span><span class="ot">8, 9</span><span class="co">]</span>：</span>
+<span id="cb1-46"><a href="#cb1-46"></a><span class="ss">    *   </span>**闭口系统（控制质量）**：与外界无质量交换，只有能量交换。</span>
+<span id="cb1-47"><a href="#cb1-47"></a><span class="ss">    *   </span>**开口系统（控制容积）**：与外界既有质量交换，又有能量交换。</span>
+<span id="cb1-48"><a href="#cb1-48"></a><span class="ss">    *   </span>**绝热系统**：与外界无热量交换。</span>
+<span id="cb1-49"><a href="#cb1-49"></a><span class="ss">    *   </span>**孤立系统**：与外界既无物质交换，也无能量交换。</span>
+<span id="cb1-50"><a href="#cb1-50"></a></span>
+<span id="cb1-51"><a href="#cb1-51"></a><span class="fu">#### 1-3 工质的热力学状态及其基本状态参数</span></span>
+<span id="cb1-52"><a href="#cb1-52"></a>工质的状态由**状态参数**描述，其变化量只与初终态有关，与路径无关 <span class="co">[</span><span class="ot">10</span><span class="co">]</span>。</span>
+<span id="cb1-53"><a href="#cb1-53"></a></span>
+<span id="cb1-54"><a href="#cb1-54"></a>**1. 温度 ($T, t$)**</span>
+<span id="cb1-55"><a href="#cb1-55"></a><span class="ss">*   </span>**概念**：系统宏观平衡的标志，微观粒子杂乱热运动剧烈程度的度量 <span class="co">[</span><span class="ot">10</span><span class="co">]</span>。</span>
+<span id="cb1-56"><a href="#cb1-56"></a><span class="ss">*   </span>**公式**：$$T = t + 273.15$$</span>
+<span id="cb1-57"><a href="#cb1-57"></a><span class="ss">    *   </span>$T$：热力学温度，单位：开尔文 ($\text{K}$) <span class="co">[</span><span class="ot">11</span><span class="co">]</span>。</span>
+<span id="cb1-58"><a href="#cb1-58"></a><span class="ss">    *   </span>$t$：摄氏温度，单位：摄氏度 ($^\circ\text{C}$) <span class="co">[</span><span class="ot">11</span><span class="co">]</span>。</span>
+<span id="cb1-59"><a href="#cb1-59"></a></span>
+<span id="cb1-60"><a href="#cb1-60"></a>**2. 压力 ($p$)**</span>
+<span id="cb1-61"><a href="#cb1-61"></a><span class="ss">*   </span>**概念**：垂直作用于单位面积上的力（即压强）<span class="co">[</span><span class="ot">12</span><span class="co">]</span>。</span>
+<span id="cb1-62"><a href="#cb1-62"></a><span class="ss">*   </span>**绝对压力 ($p$)**：热力学状态参数必须使用绝对压力 <span class="co">[</span><span class="ot">13</span><span class="co">]</span>。</span>
+<span id="cb1-63"><a href="#cb1-63"></a><span class="ss">*   </span>**计算公式** <span class="co">[</span><span class="ot">12</span><span class="co">]</span>：</span>
+<span id="cb1-64"><a href="#cb1-64"></a><span class="ss">    *   </span>高于大气压时：$$p = p_b + p_e$$</span>
+<span id="cb1-65"><a href="#cb1-65"></a><span class="ss">    *   </span>低于大气压时：$$p = p_b - p_v$$</span>
+<span id="cb1-66"><a href="#cb1-66"></a><span class="ss">    *   </span>**变量含义**：</span>
+<span id="cb1-67"><a href="#cb1-67"></a><span class="ss">        *   </span>$p$：绝对压力 ($\text{Pa}$)。</span>
+<span id="cb1-68"><a href="#cb1-68"></a><span class="ss">        *   </span>$p_b$：环境大气压力 ($\text{Pa}$)。</span>
+<span id="cb1-69"><a href="#cb1-69"></a><span class="ss">        *   </span>$p_e$：表压力 ($\text{Pa}$)。</span>
+<span id="cb1-70"><a href="#cb1-70"></a><span class="ss">        *   </span>$p_v$：真空度 ($\text{Pa}$)。</span>
+<span id="cb1-71"><a href="#cb1-71"></a></span>
+<span id="cb1-72"><a href="#cb1-72"></a>**3. 比体积 ($v$) 与密度 ($\rho$)**</span>
+<span id="cb1-73"><a href="#cb1-73"></a><span class="ss">*   </span>**比体积**：单位质量物质占有的体积 <span class="co">[</span><span class="ot">14</span><span class="co">]</span>。</span>
+<span id="cb1-74"><a href="#cb1-74"></a><span class="ss">    *   </span>$$v = \frac{V}{m}$$</span>
+<span id="cb1-75"><a href="#cb1-75"></a><span class="ss">    *   </span>$V$：总体积 ($\text{m}^3$)；$m$：质量 ($\text{kg}$)。</span>
+<span id="cb1-76"><a href="#cb1-76"></a><span class="ss">*   </span>**密度**：单位体积物质拥有的质量 <span class="co">[</span><span class="ot">14</span><span class="co">]</span>。</span>
+<span id="cb1-77"><a href="#cb1-77"></a><span class="ss">    *   </span>$$\rho = \frac{m}{V}$$</span>
+<span id="cb1-78"><a href="#cb1-78"></a><span class="ss">*   </span>**关系**：$v \rho = 1$ <span class="co">[</span><span class="ot">14</span><span class="co">]</span>。</span>
+<span id="cb1-79"><a href="#cb1-79"></a></span>
+<span id="cb1-80"><a href="#cb1-80"></a><span class="fu">#### 1-4 平衡状态与状态方程</span></span>
+<span id="cb1-81"><a href="#cb1-81"></a><span class="ss">*   </span>**平衡状态**：不受外界影响下，系统状态参数始终保持不变的状态 <span class="co">[</span><span class="ot">14</span><span class="co">]</span>。</span>
+<span id="cb1-82"><a href="#cb1-82"></a><span class="ss">*   </span>**理想气体状态方程** <span class="co">[</span><span class="ot">15, 16</span><span class="co">]</span>：</span>
+<span id="cb1-83"><a href="#cb1-83"></a><span class="ss">    *   </span>$$pv = R_gT$$ 或 $$pV = mR_gT$$</span>
+<span id="cb1-84"><a href="#cb1-84"></a><span class="ss">    *   </span>**变量含义**：</span>
+<span id="cb1-85"><a href="#cb1-85"></a><span class="ss">        *   </span>$R_g$：气体常数，单位为 $\text{J}/(\text{kg} \cdot \text{K})$。注意不同气体的 $R_g$ 不同。</span>
+<span id="cb1-86"><a href="#cb1-86"></a></span>
+<span id="cb1-87"><a href="#cb1-87"></a><span class="fu">#### 1-5~1-6 过程、功与热量</span></span>
+<span id="cb1-88"><a href="#cb1-88"></a><span class="ss">*   </span>**准平衡过程**：过程无限接近平衡态，在坐标图上可用连续曲线表示 <span class="co">[</span><span class="ot">16, 17</span><span class="co">]</span>。</span>
+<span id="cb1-89"><a href="#cb1-89"></a><span class="ss">*   </span>**可逆过程**：系统与外界均能完全回复原状且无耗散损失的过程 <span class="co">[</span><span class="ot">17, 18</span><span class="co">]</span>。</span>
+<span id="cb1-90"><a href="#cb1-90"></a><span class="ss">*   </span>**体积功 (Expansion Work)** <span class="co">[</span><span class="ot">19, 20</span><span class="co">]</span>：</span>
+<span id="cb1-91"><a href="#cb1-91"></a><span class="ss">    *   </span>$$\delta W = p \text{d}V$$ 或 $$w = \int_{1}^{2} p \text{d}v$$</span>
+<span id="cb1-92"><a href="#cb1-92"></a><span class="ss">    *   </span>**含义**：工质体积变化而通过边界传递的功。</span>
+<span id="cb1-93"><a href="#cb1-93"></a><span class="ss">*   </span>**过程热量 ($Q$)** <span class="co">[</span><span class="ot">21</span><span class="co">]</span>：</span>
+<span id="cb1-94"><a href="#cb1-94"></a><span class="ss">    *   </span>可逆过程：$$\delta Q = T \text{d}S$$</span>
+<span id="cb1-95"><a href="#cb1-95"></a><span class="ss">    *   </span>**约定**：吸热为“+”，放热为“-”；系统对外作功为“+”，外界对系统作功为“-”。</span>
+<span id="cb1-96"><a href="#cb1-96"></a></span>
+<span id="cb1-97"><a href="#cb1-97"></a></span>
+<span id="cb1-98"><a href="#cb1-98"></a><span class="fu"># 基本概念与定义</span></span>
+<span id="cb1-99"><a href="#cb1-99"></a></span>
+<span id="cb1-100"><a href="#cb1-100"></a></span>
+<span id="cb1-101"><a href="#cb1-101"></a></span>
+<span id="cb1-102"><a href="#cb1-102"></a><span class="fu"># 热力学第一定律</span></span>
+<span id="cb1-103"><a href="#cb1-103"></a></span>
+<span id="cb1-104"><a href="#cb1-104"></a><span class="fu"># 气体和蒸汽的性质</span></span>
+<span id="cb1-105"><a href="#cb1-105"></a></span>
+<span id="cb1-106"><a href="#cb1-106"></a><span class="fu"># 理想气体混合物及湿空气</span></span>
+<span id="cb1-107"><a href="#cb1-107"></a></span>
+<span id="cb1-108"><a href="#cb1-108"></a><span class="fu"># 气体和蒸汽的基本热力学过程</span></span>
+<span id="cb1-109"><a href="#cb1-109"></a></span>
+<span id="cb1-110"><a href="#cb1-110"></a><span class="fu"># 热力学第一定律</span></span>
+<span id="cb1-111"><a href="#cb1-111"></a></span>
+<span id="cb1-112"><a href="#cb1-112"></a><span class="fu"># 气体与蒸汽的流动</span></span>
+<span id="cb1-113"><a href="#cb1-113"></a></span>
+<span id="cb1-114"><a href="#cb1-114"></a><span class="fu"># 压气机的热力过程</span></span>
+<span id="cb1-115"><a href="#cb1-115"></a></span>
+<span id="cb1-116"><a href="#cb1-116"></a><span class="fu"># 气体动力循环</span></span>
+<span id="cb1-117"><a href="#cb1-117"></a></span>
+<span id="cb1-118"><a href="#cb1-118"></a><span class="fu"># 蒸汽动力装置循环</span></span>
+<span id="cb1-119"><a href="#cb1-119"></a></span>
+<span id="cb1-120"><a href="#cb1-120"></a><span class="fu"># 制冷循环</span></span>
+<span id="cb1-121"><a href="#cb1-121"></a></span>
+<span id="cb1-122"><a href="#cb1-122"></a><span class="fu"># 实际气体的性质及热力学的一般关系式</span></span>
+<span id="cb1-123"><a href="#cb1-123"></a></span>
+<span id="cb1-124"><a href="#cb1-124"></a><span class="fu"># 化学热力学基础</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
