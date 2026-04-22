@@ -1,18 +1,26 @@
 project:
   type: website
-  resources: [ assets, posts, notes, fun, error, setup, README.md ]
-  
+  resources: [assets, posts, notes, fun, error, setup, README.md]
+
 execute:
   freeze: auto
   # Code
   message: false
   warning: false
 
-
 website:
   title: "QMD的杂物间"
   description: "琐事随笔"
   site-url: https://qmdthings.top
+
+  # ShareCard
+  open-graph:
+    image: "../../about/a.jpg"
+    image-width: 1200
+    image-height: 630
+    locale: zh_CN
+
+
   # you must change this appropriately for RSS feeds to work properly
   site-path: /
   reader-mode: true
@@ -50,32 +58,31 @@ website:
   sidebar:
     - id: blogs
       title: "Blogs"
-      contents: 
+      contents:
         - auto: posts
     - id: notes
       title: "Notes"
-      contents: 
+      contents:
         - auto: notes
     - id: fun
       title: "Fun"
-      contents: 
+      contents:
         - auto: fun
-    
+
 format:
   html:
     respect-user-color-scheme: true
     fig-format: svg
     include-after-body:
-    - text: |
-        <script src="../../assets/auto-collapse.js" defer></script>
-        <script src="../../assets/svg.js" defer></script>
+      - text: |
+          <script src="../../assets/auto-collapse.js" defer></script>
+          <script src="../../assets/svg.js" defer></script>
     # Code
     code-fold: true
     code-line-numbers: true
-    
-    
+
     theme:
-      light: [flatly,custom.scss]
-      dark: [darkly,custom.scss]
+      light: [flatly, custom.scss]
+      dark: [darkly, custom.scss]
     css: styles.css
     toc: true
