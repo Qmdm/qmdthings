@@ -111,11 +111,16 @@ engine: knitr
 
 ## 变形与胡克定律
 - **胡克定律（弹性范围内）**：
+
     $$\sigma = E \epsilon \quad \text{或} \quad \Delta l = \frac{F_N l}{EA}$$
+    
     - **$\Delta l$**：杆件的总伸长或缩短量。
+    
     - **$E$**：材料的弹性模量（拉压刚度为 $EA$）。
+    
     - **$l$**：杆件原长。
     - **$\epsilon$**：线应变（$\epsilon = \Delta l / l$）。
+    
 - **横向变形与泊松比**：
     $$\mu = -\frac{\epsilon'}{\epsilon}$$
     - **$\mu$**：泊松比（横向变形系数）。

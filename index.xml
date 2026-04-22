@@ -129,12 +129,13 @@
 <section id="变形与胡克定律" class="level2">
 <h2 class="anchored" data-anchor-id="变形与胡克定律">变形与胡克定律</h2>
 <ul>
-<li><p><strong>胡克定律（弹性范围内）</strong>： <img src="https://latex.codecogs.com/png.latex?%5Csigma%20=%20E%20%5Cepsilon%20%5Cquad%20%5Ctext%7B%E6%88%96%7D%20%5Cquad%20%5CDelta%20l%20=%20%5Cfrac%7BF_N%20l%7D%7BEA%7D"></p>
+<li><p><strong>胡克定律（弹性范围内）</strong>：</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Csigma%20=%20E%20%5Cepsilon%20%5Cquad%20%5Ctext%7B%E6%88%96%7D%20%5Cquad%20%5CDelta%20l%20=%20%5Cfrac%7BF_N%20l%7D%7BEA%7D"></p>
 <ul>
-<li><strong><img src="https://latex.codecogs.com/png.latex?%5CDelta%20l"></strong>：杆件的总伸长或缩短量。</li>
-<li><strong><img src="https://latex.codecogs.com/png.latex?E"></strong>：材料的弹性模量（拉压刚度为 <img src="https://latex.codecogs.com/png.latex?EA">）。</li>
-<li><strong><img src="https://latex.codecogs.com/png.latex?l"></strong>：杆件原长。</li>
-<li><strong><img src="https://latex.codecogs.com/png.latex?%5Cepsilon"></strong>：线应变（<img src="https://latex.codecogs.com/png.latex?%5Cepsilon%20=%20%5CDelta%20l%20/%20l">）。</li>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?%5CDelta%20l"></strong>：杆件的总伸长或缩短量。</p></li>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?E"></strong>：材料的弹性模量（拉压刚度为 <img src="https://latex.codecogs.com/png.latex?EA">）。</p></li>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?l"></strong>：杆件原长。</p></li>
+<li><p><strong><img src="https://latex.codecogs.com/png.latex?%5Cepsilon"></strong>：线应变（<img src="https://latex.codecogs.com/png.latex?%5Cepsilon%20=%20%5CDelta%20l%20/%20l">）。</p></li>
 </ul></li>
 <li><p><strong>横向变形与泊松比</strong>： <img src="https://latex.codecogs.com/png.latex?%5Cmu%20=%20-%5Cfrac%7B%5Cepsilon'%7D%7B%5Cepsilon%7D"></p>
 <ul>
@@ -3236,7 +3237,7 @@ F--&gt; F1["四副构件"]
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
   <guid>https://qmdthings.top/notes/电工技术/电工技术上.html</guid>
-  <pubDate>Wed, 22 Apr 2026 08:13:15 GMT</pubDate>
+  <pubDate>Wed, 22 Apr 2026 08:45:55 GMT</pubDate>
 </item>
 </channel>
 </rss>
