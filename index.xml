@@ -2937,7 +2937,7 @@ F--&gt; F1["四副构件"]
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
   <guid>https://qmdthings.top/notes/mgmt/</guid>
-  <pubDate>Wed, 22 Apr 2026 12:34:20 GMT</pubDate>
+  <pubDate>Wed, 22 Apr 2026 12:42:20 GMT</pubDate>
 </item>
 <item>
   <title></title>
@@ -3042,7 +3042,7 @@ F--&gt; F1["四副构件"]
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
   <guid>https://qmdthings.top/notes/elec/electrical-technology-1.html</guid>
-  <pubDate>Wed, 22 Apr 2026 12:34:20 GMT</pubDate>
+  <pubDate>Wed, 22 Apr 2026 12:42:20 GMT</pubDate>
 </item>
 <item>
   <title>电路</title>
@@ -3081,7 +3081,7 @@ F--&gt; F1["四副构件"]
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
   <guid>https://qmdthings.top/notes/elec/</guid>
-  <pubDate>Wed, 22 Apr 2026 12:34:20 GMT</pubDate>
+  <pubDate>Wed, 22 Apr 2026 12:42:20 GMT</pubDate>
 </item>
 <item>
   <title>化学</title>
@@ -3120,7 +3120,7 @@ F--&gt; F1["四副构件"]
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
   <guid>https://qmdthings.top/notes/chem/</guid>
-  <pubDate>Wed, 22 Apr 2026 12:34:20 GMT</pubDate>
+  <pubDate>Wed, 22 Apr 2026 12:42:20 GMT</pubDate>
 </item>
 <item>
   <title>机械力学</title>
@@ -3152,72 +3152,7 @@ F--&gt; F1["四副构件"]
 
 
 
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">meta</span><span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;"> itemprop</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"name"</span><span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;"> content</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"机械力学"</span><span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;"> </span><span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">/&gt;</span></span>
-<span id="cb1-2"><span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">meta</span><span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;"> itemprop</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"description"</span><span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;"> content</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"理论力学、材料力学、机械原理"</span><span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;"> </span><span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">/&gt;</span></span>
-<span id="cb1-3"><span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">meta</span><span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;"> itemprop</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"image"</span><span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;"> content</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"https://qmdthings.top/assets/share-cards/default.jpg"</span><span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;"> </span><span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">/&gt;</span></span></code></pre></div></div>
+<p>wonderful</p>
 
 
 <!-- -->
@@ -3225,7 +3160,7 @@ font-style: inherit;">/&gt;</span></span></code></pre></div></div>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
   <guid>https://qmdthings.top/notes/mech/</guid>
-  <pubDate>Wed, 22 Apr 2026 12:34:20 GMT</pubDate>
+  <pubDate>Wed, 22 Apr 2026 12:42:20 GMT</pubDate>
   <media:content url="https://qmdthings.top/assets/share-cards/default.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -3265,7 +3200,7 @@ font-style: inherit;">/&gt;</span></span></code></pre></div></div>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
   <guid>https://qmdthings.top/notes/stats/</guid>
-  <pubDate>Wed, 22 Apr 2026 12:34:20 GMT</pubDate>
+  <pubDate>Wed, 22 Apr 2026 12:42:20 GMT</pubDate>
 </item>
 </channel>
 </rss>
