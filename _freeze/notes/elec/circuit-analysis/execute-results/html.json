@@ -1,0 +1,17 @@
+{
+  "hash": "3a6604ba4d90de280541833f4378ecd0",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: 电路的暂态分析\nauthor: QMD\ndate: 2026/04/10\ndescription: 电工技术第三章\ncategories: 电工技术\nengine: knitr\n---\n\n\n\n\n\n::: {.cell}\n\n```{.circuitikz .cell-code}\n\\tikzset{\n  every node/.style={font=\\sffamily\\normalsize},\n  every path/.style={line width=1.5pt}\n}\n%| echo: false\n%| fig-align: center\n\\begin{circuitikz}[\n  european,\n  line width=1pt,\n  every node/.style={font=\\normalsize}\n]\n\n% 主回路\n\\draw\n  (0,0) to[V, l=$V_s$] (0,3)\n        to[R, l=$R$] (3,3)\n        to[C, l=$C$] (3,0)\n        -- (0,0);\n\n% 输出端\n\\draw (3,3) to[short, -o] (4.5,3) node[right] {$+$};\n\\draw (3,0) to[short, -o] (4.5,0) node[right] {$-$};\n\\draw[|<->|] (4.2,0.15) -- (4.2,2.85)\n  node[midway, right=2pt] {$u_C$};\n\n% 节点圆点\n\\foreach \\x/\\y in {0/0, 0/3, 3/0, 3/3}\n  \\fill (\\x,\\y) circle (2pt);\n\\end{circuitikz}\n```\n\n\n::: {.cell-output-display}\n![](circuit-analysis_files/figure-html/unnamed-chunk-2-1.svg)\n:::\n:::\n",
+    "supporting": [
+      "circuit-analysis_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

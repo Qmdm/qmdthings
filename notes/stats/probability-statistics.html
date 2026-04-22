@@ -1,0 +1,1882 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="QMD">
+<meta name="dcterms.date" content="2026-04-10">
+<meta name="description" content="一文快速掌握全书">
+
+<title>概率论与数理统计 – QMD的杂物间</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../notes/mech/mechanical-principles.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-97ddc2f64b3eb64c87b3f3988fe26c52.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-78caa50454599efaa552ffce86488d1f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-97ddc2f64b3eb64c87b3f3988fe26c52.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-dafeffac8def0da2a01b09affad7fa01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-f25588385acd988dfaecfc7d6ba4fc23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-dafeffac8def0da2a01b09affad7fa01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>
+  .quarto-title-banner { position: relative; overflow: hidden; }
+  #wind {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  .quarto-title-banner > .quarto-title {
+    position: relative;
+    z-index: 1;
+  }
+  .quarto-title-banner .title { color: #e8efff; }
+</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="概率论与数理统计 – QMD的杂物间">
+<meta property="og:description" content="一文快速掌握全书">
+<meta property="og:image" content="https://qmdthings.top/assets/share-cards/default.jpg">
+<meta property="og:site_name" content="QMD的杂物间">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:title" content="概率论与数理统计 – QMD的杂物间">
+<meta name="twitter:description" content="一文快速掌握全书">
+<meta name="twitter:image" content="https://qmdthings.top/assets/share-cards/default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Navi</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about/qmd.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-blogs" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Blogs</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-blogs">    
+        <li class="dropdown-header">Posts</li>
+        <li>
+    <a class="dropdown-item" href="../../posts/开始/index.html">
+ <span class="dropdown-text">热化学基础</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-notes" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Notes</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-notes">    
+        <li class="dropdown-header">Notes</li>
+        <li>
+    <a class="dropdown-item" href="../../notes/mgmt/index.html">
+ <span class="dropdown-text">生产管理</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../notes/elec/circuit-analysis.html">
+ <span class="dropdown-text">电路</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../notes/chem/equilibrium-kinetics.html">
+ <span class="dropdown-text">化学</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../notes/mech/materials-mechanics.html">
+ <span class="dropdown-text">机械力学</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../notes/stats/probability-statistics.html">
+ <span class="dropdown-text">概率统计</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fun" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Fun</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-fun">    
+        <li class="dropdown-header">Fun</li>
+        <li>
+    <a class="dropdown-item" href="../../fun/生活/helloblogs.html">
+ <span class="dropdown-text">生活</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/mgmt/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/stats/probability-statistics.html">概率统计</a></li><li class="breadcrumb-item"><a href="../../notes/stats/probability-statistics.html">概率论与数理统计</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/mgmt/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/stats/probability-statistics.html">概率统计</a></li><li class="breadcrumb-item"><a href="../../notes/stats/probability-statistics.html">概率论与数理统计</a></li></ol></nav>
+      <div class="quarto-title-block"><div><h1 class="title">概率论与数理统计</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source Code</button></div></div>
+                  <div>
+        <div class="description">
+          一文快速掌握全书
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">速通</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>QMD </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 10, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/mgmt/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">生产管理</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">电路</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/elec/circuit-analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">电路的暂态分析</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/elec/circuits.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Circuits</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/elec/electrical-technology-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">正弦交流电</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/elec/electrical-technology-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Electrical Technology 2</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">化学</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/chem/equilibrium-kinetics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">化学平衡与化学反应速率</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/chem/inorganic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">无机物单质及化合物</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/chem/materials.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">金属材料与无机非金属材料</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/chem/organic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">有机化学与有机化合物</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/chem/polymers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">合成高分子材料</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/chem/redox.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">氧化还原反应与电化学</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/chem/solutions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">溶液</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/chem/structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">物质结构基础</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/chem/thermochemistry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">热化学基础</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">机械力学</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/mech/materials-mechanics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">材料力学</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/mech/mechanical-principles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">机械原理</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">概率统计</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/stats/probability-statistics.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">概率论与数理统计</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#概率论基本概念" id="toc-概率论基本概念" class="nav-link active" data-scroll-target="#概率论基本概念">1. 概率论基本概念</a>
+  <ul class="collapse">
+  <li><a href="#随机试验" id="toc-随机试验" class="nav-link" data-scroll-target="#随机试验">随机试验</a></li>
+  <li><a href="#样本空间与随机事件" id="toc-样本空间与随机事件" class="nav-link" data-scroll-target="#样本空间与随机事件">样本空间与随机事件</a></li>
+  <li><a href="#事件的关系与运算" id="toc-事件的关系与运算" class="nav-link" data-scroll-target="#事件的关系与运算">事件的关系与运算</a></li>
+  <li><a href="#运算性质" id="toc-运算性质" class="nav-link" data-scroll-target="#运算性质">运算性质</a></li>
+  </ul></li>
+  <li><a href="#随机变量" id="toc-随机变量" class="nav-link" data-scroll-target="#随机变量">2. 随机变量</a>
+  <ul class="collapse">
+  <li><a href="#随机变量-random-variable" id="toc-随机变量-random-variable" class="nav-link" data-scroll-target="#随机变量-random-variable">随机变量 (Random Variable)</a></li>
+  <li><a href="#随机变量的分布函数-distribution-function" id="toc-随机变量的分布函数-distribution-function" class="nav-link" data-scroll-target="#随机变量的分布函数-distribution-function">随机变量的分布函数 (Distribution Function)</a></li>
+  <li><a href="#离散型随机变量及其分布律" id="toc-离散型随机变量及其分布律" class="nav-link" data-scroll-target="#离散型随机变量及其分布律">离散型随机变量及其分布律</a></li>
+  </ul></li>
+  <li><a href="#多维随机变量" id="toc-多维随机变量" class="nav-link" data-scroll-target="#多维随机变量">3. 多维随机变量</a>
+  <ul class="collapse">
+  <li><a href="#二维随机变量" id="toc-二维随机变量" class="nav-link" data-scroll-target="#二维随机变量">二维随机变量</a>
+  <ul class="collapse">
+  <li><a href="#离散型与连续型联合分布" id="toc-离散型与连续型联合分布" class="nav-link" data-scroll-target="#离散型与连续型联合分布">离散型与连续型联合分布</a></li>
+  </ul></li>
+  <li><a href="#边缘分布-marginal-distribution" id="toc-边缘分布-marginal-distribution" class="nav-link" data-scroll-target="#边缘分布-marginal-distribution">边缘分布 (Marginal Distribution)</a></li>
+  <li><a href="#条件分布-conditional-distribution" id="toc-条件分布-conditional-distribution" class="nav-link" data-scroll-target="#条件分布-conditional-distribution">条件分布 (Conditional Distribution)</a></li>
+  <li><a href="#随机变量的独立性" id="toc-随机变量的独立性" class="nav-link" data-scroll-target="#随机变量的独立性">随机变量的独立性</a></li>
+  <li><a href="#两个随机变量函数的分布" id="toc-两个随机变量函数的分布" class="nav-link" data-scroll-target="#两个随机变量函数的分布">两个随机变量函数的分布</a></li>
+  </ul></li>
+  <li><a href="#随机变量的数字特征" id="toc-随机变量的数字特征" class="nav-link" data-scroll-target="#随机变量的数字特征">随机变量的数字特征</a></li>
+  <li><a href="#大数定律与中心极限定理" id="toc-大数定律与中心极限定理" class="nav-link" data-scroll-target="#大数定律与中心极限定理">大数定律与中心极限定理</a></li>
+  <li><a href="#数理统计的基本概念" id="toc-数理统计的基本概念" class="nav-link" data-scroll-target="#数理统计的基本概念">数理统计的基本概念</a></li>
+  <li><a href="#参数估计" id="toc-参数估计" class="nav-link" data-scroll-target="#参数估计">参数估计</a></li>
+  <li><a href="#假设检验" id="toc-假设检验" class="nav-link" data-scroll-target="#假设检验">假设检验</a></li>
+  <li><a href="#方差分析" id="toc-方差分析" class="nav-link" data-scroll-target="#方差分析">方差分析</a></li>
+  <li><a href="#回归分析" id="toc-回归分析" class="nav-link" data-scroll-target="#回归分析">回归分析</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+<p id="hitokoto">
+  <a href="#" id="hitokoto_text" style="text-decoration: none">hitokoto!</a>
+</p>
+
+<script>
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+  fetch("https://v1.hitokoto.cn?c=k")
+    .then((response) => response.json())
+    .then((data) => {
+      const hitokoto = document.querySelector("#hitokoto_text");
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+      hitokoto.innerText = data.hitokoto;
+    })
+    .catch(console.error);
+
+  hitokotoElement.addEventListener("click", function (event) {
+    event.preventDefault();
+  });
+</script>
+
+
+
+
+
+<section id="概率论基本概念" class="level1">
+<h1>1. 概率论基本概念</h1>
+<section id="随机试验" class="level2">
+<h2 class="anchored" data-anchor-id="随机试验">随机试验</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="定义：随机试验">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>定义：随机试验
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>满足以下三个条件的试验称为<strong>随机试验</strong>，记为 <span class="math inline">\(E\)</span>：</p>
+<ol type="1">
+<li>可在相同条件下重复进行；</li>
+<li>试验的所有可能结果已知，且不止一个；</li>
+<li>每次试验前无法确定具体出现哪个结果。</li>
+</ol>
+</div>
+</div>
+<p>每进行一次试验，必然出现且只能出现其中一个基本结果；任何事件都由若干基本结果组成。</p>
+</section>
+<section id="样本空间与随机事件" class="level2">
+<h2 class="anchored" data-anchor-id="样本空间与随机事件">样本空间与随机事件</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="定义：样本空间">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>定义：样本空间
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>随机试验 <span class="math inline">\(E\)</span> 的所有可能结果组成的集合称为<strong>样本空间</strong>，记为 <span class="math inline">\(\Omega\)</span>。<span class="math inline">\(\Omega\)</span> 中的每个元素称为<strong>样本点</strong>，记为 <span class="math inline">\(\omega\)</span>。</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="定义：随机事件">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>定义：随机事件
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>样本空间 <span class="math inline">\(\Omega\)</span> 的子集称为<strong>随机事件</strong>，简称<strong>事件</strong>，常用大写字母 <span class="math inline">\(A, B, C\)</span> 等表示。</p>
+</div>
+</div>
+<p>事件按特殊性分为三类：</p>
+<ul>
+<li><strong>基本事件</strong>：由单个样本点组成的单点集 <span class="math inline">\(\{\omega\}\)</span>。</li>
+<li><strong>必然事件</strong>：样本空间 <span class="math inline">\(\Omega\)</span> 本身，每次试验必然发生。</li>
+<li><strong>不可能事件</strong>：空集 <span class="math inline">\(\emptyset\)</span>，每次试验都不发生。</li>
+</ul>
+</section>
+<section id="事件的关系与运算" class="level2">
+<h2 class="anchored" data-anchor-id="事件的关系与运算">事件的关系与运算</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 35%">
+<col style="width: 58%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>关系／运算</th>
+<th>记号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>包含</td>
+<td><span class="math inline">\(A \subset B\)</span></td>
+<td><span class="math inline">\(A\)</span> 发生 <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(B\)</span> 发生</td>
+</tr>
+<tr class="even">
+<td>相等</td>
+<td><span class="math inline">\(A = B\)</span></td>
+<td><span class="math inline">\(A \subset B\)</span> 且 <span class="math inline">\(B \subset A\)</span></td>
+</tr>
+<tr class="odd">
+<td>并</td>
+<td><span class="math inline">\(A \cup B\)</span></td>
+<td><span class="math inline">\(A\)</span>、<span class="math inline">\(B\)</span> 至少一个发生</td>
+</tr>
+<tr class="even">
+<td>交</td>
+<td><span class="math inline">\(A \cap B\)</span></td>
+<td><span class="math inline">\(A\)</span>、<span class="math inline">\(B\)</span> 同时发生</td>
+</tr>
+<tr class="odd">
+<td>差</td>
+<td><span class="math inline">\(A \setminus B\)</span></td>
+<td><span class="math inline">\(A\)</span> 发生且 <span class="math inline">\(B\)</span> 不发生</td>
+</tr>
+<tr class="even">
+<td>互斥</td>
+<td><span class="math inline">\(A \cap B = \emptyset\)</span></td>
+<td><span class="math inline">\(A\)</span>、<span class="math inline">\(B\)</span> 不能同时发生</td>
+</tr>
+<tr class="odd">
+<td>对立</td>
+<td><span class="math inline">\(\bar{A} = \Omega \setminus A\)</span></td>
+<td><span class="math inline">\(A \cup \bar{A}=\Omega\)</span>，<span class="math inline">\(A \cap \bar{A}=\emptyset\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="columns">
+<div class="column" style="width:33%;">
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource venn number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>\tikzset{</span>
+<span id="cb1-2"><a href="#cb1-2"></a>  every node/.style={font=\sffamily\normalsize},</span>
+<span id="cb1-3"><a href="#cb1-3"></a>  every path/.style={line width=1.5pt}</span>
+<span id="cb1-4"><a href="#cb1-4"></a>}</span>
+<span id="cb1-5"><a href="#cb1-5"></a>\begin{tikzpicture}</span>
+<span id="cb1-6"><a href="#cb1-6"></a>  \draw (0,0) rectangle (6,4);</span>
+<span id="cb1-7"><a href="#cb1-7"></a>  \node[above right] at (0,4) {$\Omega$};</span>
+<span id="cb1-8"><a href="#cb1-8"></a>  \draw[fill=red!20] (3,2) circle (1.8cm);</span>
+<span id="cb1-9"><a href="#cb1-9"></a>  \node[above=1.6cm] at (3,2) {$B$};</span>
+<span id="cb1-10"><a href="#cb1-10"></a>  \draw[fill=blue!20] (3,2) circle (0.9cm);</span>
+<span id="cb1-11"><a href="#cb1-11"></a>  \node at (3,2) {$A$};</span>
+<span id="cb1-12"><a href="#cb1-12"></a>\end{tikzpicture}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="probability-statistics_files/figure-html/unnamed-chunk-2-1.svg" class="img-fluid figure-img"></p>
+<figcaption>包含关系 <span class="math inline">\(A \subset B\)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource venn number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href="#cb2-1"></a>\tikzset{</span>
+<span id="cb2-2"><a href="#cb2-2"></a>  every node/.style={font=\sffamily\normalsize},</span>
+<span id="cb2-3"><a href="#cb2-3"></a>  every path/.style={line width=1.5pt}</span>
+<span id="cb2-4"><a href="#cb2-4"></a>}</span>
+<span id="cb2-5"><a href="#cb2-5"></a>\begin{tikzpicture}</span>
+<span id="cb2-6"><a href="#cb2-6"></a>  \draw (0,0) rectangle (6,4);</span>
+<span id="cb2-7"><a href="#cb2-7"></a>  \node[above right] at (0,4) {$\Omega$};</span>
+<span id="cb2-8"><a href="#cb2-8"></a>  \draw[fill=blue!20] (2,2) circle (1.2cm);</span>
+<span id="cb2-9"><a href="#cb2-9"></a>  \node at (2,2) {$A$};</span>
+<span id="cb2-10"><a href="#cb2-10"></a>  \draw[fill=red!20] (4,2) circle (1.2cm);</span>
+<span id="cb2-11"><a href="#cb2-11"></a>  \node at (4,2) {$B$};</span>
+<span id="cb2-12"><a href="#cb2-12"></a>\end{tikzpicture}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="probability-statistics_files/figure-html/unnamed-chunk-3-1.svg" class="img-fluid figure-img"></p>
+<figcaption>互斥 <span class="math inline">\(A \cap B = \emptyset\)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource venn number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href="#cb3-1"></a>\tikzset{</span>
+<span id="cb3-2"><a href="#cb3-2"></a>  every node/.style={font=\sffamily\normalsize},</span>
+<span id="cb3-3"><a href="#cb3-3"></a>  every path/.style={line width=1.5pt}</span>
+<span id="cb3-4"><a href="#cb3-4"></a>}</span>
+<span id="cb3-5"><a href="#cb3-5"></a>\begin{tikzpicture}</span>
+<span id="cb3-6"><a href="#cb3-6"></a>  \draw[fill=red!20] (0,0) rectangle (6,4);</span>
+<span id="cb3-7"><a href="#cb3-7"></a>  \node[above right] at (0,4) {$\Omega$};</span>
+<span id="cb3-8"><a href="#cb3-8"></a>  \draw[fill=blue!20] (3,2) circle (1.5cm);</span>
+<span id="cb3-9"><a href="#cb3-9"></a>  \node at (3,2) {$A$};</span>
+<span id="cb3-10"><a href="#cb3-10"></a>  \node at (5,3.2) {$\bar{A}$};</span>
+<span id="cb3-11"><a href="#cb3-11"></a>\end{tikzpicture}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="probability-statistics_files/figure-html/unnamed-chunk-4-1.svg" class="img-fluid figure-img"></p>
+<figcaption>对立事件 <span class="math inline">\(\bar{A} = \Omega \setminus A\)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="运算性质" class="level2">
+<h2 class="anchored" data-anchor-id="运算性质">运算性质</h2>
+<p>事件的运算满足以下基本定律：</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>定律</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>交换律</td>
+<td><span class="math inline">\(A \cup B = B \cup A\)</span>，<span class="math inline">\(A \cap B = B \cap A\)</span></td>
+</tr>
+<tr class="even">
+<td>结合律</td>
+<td><span class="math inline">\((A \cup B) \cup C = A \cup (B \cup C)\)</span></td>
+</tr>
+<tr class="odd">
+<td>分配律</td>
+<td><span class="math inline">\(A \cap (B \cup C) = (A \cap B) \cup (A \cap C)\)</span></td>
+</tr>
+<tr class="even">
+<td>差化积</td>
+<td><span class="math inline">\(A \setminus B = A\bar{B} = A \setminus AB\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled" title="定理：德摩根律（对偶律）">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>定理：德摩根律（对偶律）
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>对有限个或可列无穷多个事件 <span class="math inline">\(\{A_i\}\)</span>，恒有： <span class="math display">\[
+\overline{\bigcup_{i=1}^{n} A_i} = \bigcap_{i=1}^{n} \bar{A}_i,
+\qquad
+\overline{\bigcap_{i=1}^{n} A_i} = \bigcup_{i=1}^{n} \bar{A}_i
+\]</span></p>
+</div>
+</div>
+</section>
+</section>
+<section id="随机变量" class="level1">
+<h1>2. 随机变量</h1>
+<section id="随机变量-random-variable" class="level2">
+<h2 class="anchored" data-anchor-id="随机变量-random-variable">随机变量 (Random Variable)</h2>
+<p>设随机试验的样本空间为 <span class="math inline">\(S=\{e\}\)</span>，<span class="math inline">\(X=X(e)\)</span> 是定义在 <span class="math inline">\(S\)</span> 上的实值单值函数，称其为<strong>随机变量</strong>。</p>
+<p>将复杂的试验结果映射为数字，方便数学处理。</p>
+</section>
+<section id="随机变量的分布函数-distribution-function" class="level2">
+<h2 class="anchored" data-anchor-id="随机变量的分布函数-distribution-function">随机变量的分布函数 (Distribution Function)</h2>
+<p><span class="math inline">\(X\)</span> 是随机变量，<span class="math inline">\(x\)</span>是任意实数</p>
+<p><span class="math display">\[F(x) = P\{X \le x\}\]</span></p>
+<p>表示随机变量落入 <span class="math inline">\((-\infty, x]\)</span> 区间的概率，称为<span class="math inline">\(X\)</span>的<strong>分布函数(CDF累积分布)</strong>。</p>
+<ol type="1">
+<li><p><strong>单调性</strong>：是一个不减函数</p></li>
+<li><p><strong>规范性</strong>：<span class="math inline">\(F(-\infty) = 0\)</span>，<span class="math inline">\(F(+\infty) = 1\)</span></p></li>
+<li><p><strong>右连续性</strong>：<span class="math inline">\(F(x+0) = F(x)\)</span></p></li>
+<li><p><strong>区间概率计算</strong>： <span class="math display">\[P\{x_1&lt;X\le x_2\}=P\{X\le x_2\}-P\{X\le x_1\}=F(x_2)-F(x_1)\]</span></p></li>
+</ol>
+<p>就比如著名Logistic distribution</p>
+</section>
+<section id="离散型随机变量及其分布律" class="level2">
+<h2 class="anchored" data-anchor-id="离散型随机变量及其分布律">离散型随机变量及其分布律</h2>
+<p>所有可能取的值为有限个或可列无穷多个的随机变量。</p>
+<p><strong>分布律/概率分布 (Probability Mass Function)</strong>： <span class="math display">\[P\{X = x_k\} = p_k\]</span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><span class="math inline">\(X_1\)</span></th>
+<th><span class="math inline">\(x_1\)</span></th>
+<th><span class="math inline">\(x_2\)</span></th>
+<th><span class="math inline">\(\cdots\)</span></th>
+<th><span class="math inline">\(x_k\)</span></th>
+<th><span class="math inline">\(\cdots\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(p_k\)</span></td>
+<td><span class="math inline">\(p_1\)</span></td>
+<td><span class="math inline">\(p_2\)</span></td>
+<td><span class="math inline">\(\cdots\)</span></td>
+<td><span class="math inline">\(p_k\)</span></td>
+<td><span class="math inline">\(\cdots\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>需满足</p>
+<ol type="1">
+<li><p>非负性：<span class="math inline">\(p_k \ge 0\)</span></p></li>
+<li><p>规范性：<span class="math inline">\(\sum p_k = 1\)</span></p></li>
+</ol>
+<ul>
+<li><strong>常见分布</strong>：
+<ul>
+<li><strong>0-1 分布（两点分布）</strong>：用于描述只有两种结果的试验（如抛硬币） [8, 9]。</li>
+<li><strong>二项分布 <span class="math inline">\(b(n,p)\)</span></strong>：<span class="math inline">\(n\)</span> 重伯努利试验中成功的次数，公式为 <span class="math inline">\(P\{X=k\} = \binom{n}{k}p^k(1-p)^{n-k}\)</span> [9, 10]。</li>
+<li><strong>泊松分布 <span class="math inline">\(P(\lambda)\)</span></strong>：常用于描述稀有事件发生的次数 [11-13]。</li>
+</ul></li>
+</ul>
+<section id="连续型随机变量及其概率密度" class="level4">
+<h4 class="anchored" data-anchor-id="连续型随机变量及其概率密度">4. 连续型随机变量及其概率密度</h4>
+<ul>
+<li><strong>定义</strong>：其分布函数可表示为某非负函数 <span class="math inline">\(f(x)\)</span>（<strong>概率密度函数</strong>）的积分形式：<span class="math inline">\(F(x) = \int_{-\infty}^{x} f(t) dt\)</span> [14, 15]。</li>
+<li><strong>概率密度 <span class="math inline">\(f(x)\)</span> 的性质</strong>：<span class="math inline">\(f(x) \ge 0\)</span> 且 <span class="math inline">\(\int_{-\infty}^{\infty} f(x) dx = 1\)</span> [14, 16]。</li>
+<li><strong>常见分布</strong>：
+<ul>
+<li><strong>均匀分布 <span class="math inline">\(U(a,b)\)</span></strong>：概率均匀地分布在某区间上 [17, 18]。</li>
+<li><strong>指数分布 <span class="math inline">\(E(\theta)\)</span></strong>：具有重要的<strong>无记忆性</strong>，常用于可靠性和排队论 [17, 19, 20]。</li>
+<li><strong>正态分布 <span class="math inline">\(N(\mu, \sigma^2)\)</span></strong>：最重要的分布，曲线呈钟形且关于 <span class="math inline">\(x=\mu\)</span> 对称 [19, 21, 22]。</li>
+</ul></li>
+</ul>
+</section>
+<section id="随机变量函数的分布" class="level4">
+<h4 class="anchored" data-anchor-id="随机变量函数的分布">5. 随机变量函数的分布</h4>
+<ul>
+<li>研究当 <span class="math inline">\(X\)</span> 服从某种分布时，<span class="math inline">\(Y = g(X)\)</span> 的分布规律 [23, 24]。</li>
+<li><strong>方法</strong>：通常先利用定义求分布函数 <span class="math inline">\(F_Y(y) = P\{g(X) \le y\}\)</span>，如果是连续型再通过求导得到密度函数 <span class="math inline">\(f_Y(y)\)</span> [24-26]。</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="多维随机变量" class="level1">
+<h1>3. 多维随机变量</h1>
+<section id="二维随机变量" class="level2">
+<h2 class="anchored" data-anchor-id="二维随机变量">二维随机变量</h2>
+<p>设E是一个随机实验,它的样本空间为<span class="math inline">\(\Omega=\{e\}\)</span>,若<span class="math inline">\(X(e)\)</span>,<span class="math inline">\(Y(e)\)</span>是定义在同一个空间中的 研究多个随机变量构成的向量（如 <span class="math inline">\((X, Y)\)</span>），称为<strong>二维随机变量</strong>或<strong>二维随机向量</strong>。 * <strong>联合分布函数</strong>：定义为 <span class="math inline">\(F(x, y) = P\{X \le x, Y \le y\}\)</span> 。它具有单调性、规范性（范围在 <span class="math inline">\([3]\)</span>）、右连续性。 * <strong>落入矩形区域的概率</strong>：<span class="math inline">\(P\{x_1 &lt; X \le x_2, y_1 &lt; Y \le y_2\} = F(x_2, y_2) - F(x_1, y_2) - F(x_2, y_1) + F(x_1, y_1)\)</span></p>
+<section id="离散型与连续型联合分布" class="level3">
+<h3 class="anchored" data-anchor-id="离散型与连续型联合分布">离散型与连续型联合分布</h3>
+<ul>
+<li><strong>二维离散型</strong>：主要掌握<strong>联合分布律</strong> <span class="math inline">\(P\{X=x_i, Y=y_j\} = p_{ij}\)</span>，且所有 <span class="math inline">\(p_{ij}\)</span> 之和为 1 。</li>
+<li><strong>二维连续型</strong>：存在非负函数 <span class="math inline">\(f(x, y)\)</span>（<strong>联合概率密度</strong>），使得分布函数可以通过二重积分表示 。</li>
+<li><strong>性质</strong>：<span class="math inline">\(f(x, y) \ge 0\)</span> 且在全平面上的积分等于 1 。</li>
+</ul>
+</section>
+</section>
+<section id="边缘分布-marginal-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="边缘分布-marginal-distribution">边缘分布 (Marginal Distribution)</h2>
+<ul>
+<li><strong>定义</strong>：从联合分布中分离出单个随机变量的分布 。</li>
+<li><strong>离散型边缘分布</strong>：通过对另一变量求和得到（行和或列和）。</li>
+<li><strong>连续型边缘密度</strong>：<span class="math inline">\(f_X(x) = \int_{-\infty}^{\infty} f(x, y) dy\)</span> 以及 <span class="math inline">\(f_Y(y) = \int_{-\infty}^{\infty} f(x, y) dx\)</span> 。</li>
+</ul>
+</section>
+<section id="条件分布-conditional-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="条件分布-conditional-distribution">条件分布 (Conditional Distribution)</h2>
+<ul>
+<li><strong>离散型</strong>：在已知 <span class="math inline">\(Y=y_j\)</span> 的条件下 <span class="math inline">\(X\)</span> 的分布 <span class="math inline">\(P\{X=x_i | Y=y_j\} = \frac{p_{ij}}{p_{\cdot j}}\)</span> 。</li>
+<li><strong>连续型</strong>：<strong>条件概率密度</strong> <span class="math inline">\(f_{X|Y}(x|y) = \frac{f(x, y)}{f_Y(y)}\)</span> 。</li>
+</ul>
+</section>
+<section id="随机变量的独立性" class="level2">
+<h2 class="anchored" data-anchor-id="随机变量的独立性">随机变量的独立性</h2>
+<ul>
+<li><strong>判定标准</strong>：若对所有 <span class="math inline">\(x, y\)</span>，都有 <span class="math inline">\(F(x, y) = F_X(x)F_Y(y)\)</span>，则称 <span class="math inline">\(X\)</span> 与 <span class="math inline">\(Y\)</span> 相互独立 。</li>
+<li><strong>连续型简便判定</strong>：<span class="math inline">\(f(x, y) = f_X(x)f_Y(y)\)</span> 。</li>
+</ul>
+</section>
+<section id="两个随机变量函数的分布" class="level2">
+<h2 class="anchored" data-anchor-id="两个随机变量函数的分布">两个随机变量函数的分布</h2>
+<ul>
+<li><strong>和的分布 (Z = X + Y)</strong>：使用<strong>卷积公式</strong>（Convolution Formula）计算 。
+<ul>
+<li><em>重要结论</em>：两个独立的<strong>正态分布</strong>之和仍服从正态分布 。</li>
+</ul></li>
+<li><strong>最大值与最小值分布</strong>：
+<ul>
+<li><span class="math inline">\(M = \max(X, Y)\)</span> 的分布函数为 <span class="math inline">\(F_X(z)F_Y(z)\)</span>（当独立时）。</li>
+<li><span class="math inline">\(N = \min(X, Y)\)</span> 的分布函数为 <span class="math inline">\(1 - [1-F_X(z)][1-F_Y(z)]\)</span>（当独立时）。</li>
+</ul></li>
+<li><strong>商与积的分布</strong>：如 <span class="math inline">\(Z = Y/X\)</span> 或 <span class="math inline">\(Z = XY\)</span> 的分布计算 。</li>
+</ul>
+</section>
+</section>
+<section id="随机变量的数字特征" class="level1">
+<h1>随机变量的数字特征</h1>
+</section>
+<section id="大数定律与中心极限定理" class="level1">
+<h1>大数定律与中心极限定理</h1>
+</section>
+<section id="数理统计的基本概念" class="level1">
+<h1>数理统计的基本概念</h1>
+</section>
+<section id="参数估计" class="level1">
+<h1>参数估计</h1>
+</section>
+<section id="假设检验" class="level1">
+<h1>假设检验</h1>
+</section>
+<section id="方差分析" class="level1">
+<h1>方差分析</h1>
+</section>
+<section id="回归分析" class="level1">
+<h1>回归分析</h1>
+
+
+<!-- -->
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/qmdthings\.top");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../notes/mech/mechanical-principles.html" class="pagination-link" aria-label="机械原理">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">机械原理</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a><span class="co">---</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="an">title:</span><span class="co"> 概率论与数理统计</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="an">author:</span><span class="co"> QMD</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="an">date:</span><span class="co"> 2026/04/10</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="an">description:</span><span class="co"> 一文快速掌握全书</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="an">categories:</span><span class="co"> 速通</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="an">engine:</span><span class="co"> knitr</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="co">---</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a></span>
+<span id="cb4-10"><a href="#cb4-10"></a>{{&lt; include /setup/cf5733e5-0370-4aae-8689-61bad1dd9ec0<span class="dv">&amp;#x96c6;</span>cf5733e5-0370-4aae-8689-61bad1dd9ec0<span class="dv">&amp;#x5408;</span>.qmd &gt;}}</span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="fu"># 1. 概率论基本概念</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a></span>
+<span id="cb4-13"><a href="#cb4-13"></a><span class="fu">## 随机试验</span></span>
+<span id="cb4-14"><a href="#cb4-14"></a></span>
+<span id="cb4-15"><a href="#cb4-15"></a>::: {.callout-note title="定义：随机试验"}</span>
+<span id="cb4-16"><a href="#cb4-16"></a>满足以下三个条件的试验称为**随机试验**，记为 $E$：</span>
+<span id="cb4-17"><a href="#cb4-17"></a></span>
+<span id="cb4-18"><a href="#cb4-18"></a><span class="ss">1. </span>可在相同条件下重复进行；</span>
+<span id="cb4-19"><a href="#cb4-19"></a><span class="ss">2. </span>试验的所有可能结果已知，且不止一个；</span>
+<span id="cb4-20"><a href="#cb4-20"></a><span class="ss">3. </span>每次试验前无法确定具体出现哪个结果。</span>
+<span id="cb4-21"><a href="#cb4-21"></a>:::</span>
+<span id="cb4-22"><a href="#cb4-22"></a></span>
+<span id="cb4-23"><a href="#cb4-23"></a>每进行一次试验，必然出现且只能出现其中一个基本结果；任何事件都由若干基本结果组成。</span>
+<span id="cb4-24"><a href="#cb4-24"></a></span>
+<span id="cb4-25"><a href="#cb4-25"></a><span class="fu">## 样本空间与随机事件</span></span>
+<span id="cb4-26"><a href="#cb4-26"></a></span>
+<span id="cb4-27"><a href="#cb4-27"></a>::: {.callout-note title="定义：样本空间"}</span>
+<span id="cb4-28"><a href="#cb4-28"></a>随机试验 $E$ 的所有可能结果组成的集合称为**样本空间**，记为 $\Omega$。$\Omega$ 中的每个元素称为**样本点**，记为 $\omega$。</span>
+<span id="cb4-29"><a href="#cb4-29"></a>:::</span>
+<span id="cb4-30"><a href="#cb4-30"></a></span>
+<span id="cb4-31"><a href="#cb4-31"></a>::: {.callout-note title="定义：随机事件"}</span>
+<span id="cb4-32"><a href="#cb4-32"></a>样本空间 $\Omega$ 的子集称为**随机事件**，简称**事件**，常用大写字母 $A, B, C$ 等表示。</span>
+<span id="cb4-33"><a href="#cb4-33"></a>:::</span>
+<span id="cb4-34"><a href="#cb4-34"></a></span>
+<span id="cb4-35"><a href="#cb4-35"></a>事件按特殊性分为三类：</span>
+<span id="cb4-36"><a href="#cb4-36"></a></span>
+<span id="cb4-37"><a href="#cb4-37"></a><span class="ss">- </span>**基本事件**：由单个样本点组成的单点集 $<span class="sc">\{</span>\omega<span class="sc">\}</span>$。</span>
+<span id="cb4-38"><a href="#cb4-38"></a><span class="ss">- </span>**必然事件**：样本空间 $\Omega$ 本身，每次试验必然发生。</span>
+<span id="cb4-39"><a href="#cb4-39"></a><span class="ss">- </span>**不可能事件**：空集 $\emptyset$，每次试验都不发生。</span>
+<span id="cb4-40"><a href="#cb4-40"></a></span>
+<span id="cb4-41"><a href="#cb4-41"></a><span class="fu">## 事件的关系与运算</span></span>
+<span id="cb4-42"><a href="#cb4-42"></a></span>
+<span id="cb4-43"><a href="#cb4-43"></a><span class="pp">|</span> 关系／运算 <span class="pp">|</span> 记号                             <span class="pp">|</span> 含义                                                 <span class="pp">|</span></span>
+<span id="cb4-44"><a href="#cb4-44"></a><span class="pp">| -----</span> <span class="pp">| ------------------------------</span> <span class="pp">| --------------------------------------------------</span> <span class="pp">|</span></span>
+<span id="cb4-45"><a href="#cb4-45"></a><span class="pp">|</span> 包含    <span class="pp">|</span> $A \subset B$                  <span class="pp">|</span> $A$ 发生 $\Rightarrow$ $B$ 发生                        <span class="pp">|</span></span>
+<span id="cb4-46"><a href="#cb4-46"></a><span class="pp">|</span> 相等    <span class="pp">|</span> $A = B$                        <span class="pp">|</span> $A \subset B$ 且 $B \subset A$                      <span class="pp">|</span></span>
+<span id="cb4-47"><a href="#cb4-47"></a><span class="pp">|</span> 并     <span class="pp">|</span> $A \cup B$                     <span class="pp">|</span> $A$、$B$ 至少一个发生                                     <span class="pp">|</span></span>
+<span id="cb4-48"><a href="#cb4-48"></a><span class="pp">|</span> 交     <span class="pp">|</span> $A \cap B$                     <span class="pp">|</span> $A$、$B$ 同时发生                                       <span class="pp">|</span></span>
+<span id="cb4-49"><a href="#cb4-49"></a><span class="pp">|</span> 差     <span class="pp">|</span> $A \setminus B$                <span class="pp">|</span> $A$ 发生且 $B$ 不发生                                    <span class="pp">|</span></span>
+<span id="cb4-50"><a href="#cb4-50"></a><span class="pp">|</span> 互斥    <span class="pp">|</span> $A \cap B = \emptyset$         <span class="pp">|</span> $A$、$B$ 不能同时发生                                     <span class="pp">|</span></span>
+<span id="cb4-51"><a href="#cb4-51"></a><span class="pp">|</span> 对立    <span class="pp">|</span> $\bar{A} = \Omega \setminus A$ <span class="pp">|</span> $A \cup \bar{A}=\Omega$，$A \cap \bar{A}=\emptyset$ <span class="pp">|</span></span>
+<span id="cb4-52"><a href="#cb4-52"></a></span>
+<span id="cb4-53"><a href="#cb4-53"></a></span>
+<span id="cb4-54"><a href="#cb4-54"></a></span>
+<span id="cb4-55"><a href="#cb4-55"></a></span>
+<span id="cb4-56"><a href="#cb4-56"></a></span>
+<span id="cb4-57"><a href="#cb4-57"></a></span>
+<span id="cb4-58"><a href="#cb4-58"></a>:::: {.columns}</span>
+<span id="cb4-59"><a href="#cb4-59"></a></span>
+<span id="cb4-60"><a href="#cb4-60"></a></span>
+<span id="cb4-61"><a href="#cb4-61"></a>::: {.column width="33%"}</span>
+<span id="cb4-64"><a href="#cb4-64"></a><span class="in">```{venn}</span></span>
+<span id="cb4-65"><a href="#cb4-65"></a><span class="in">#| fig-cap: "包含关系 $A \\subset B$"</span></span>
+<span id="cb4-66"><a href="#cb4-66"></a><span class="in">\begin{tikzpicture}</span></span>
+<span id="cb4-67"><a href="#cb4-67"></a><span class="in">  \draw (0,0) rectangle (6,4);</span></span>
+<span id="cb4-68"><a href="#cb4-68"></a><span class="in">  \node[above right] at (0,4) {$\Omega$};</span></span>
+<span id="cb4-69"><a href="#cb4-69"></a><span class="in">  \draw[fill=red!20] (3,2) circle (1.8cm);</span></span>
+<span id="cb4-70"><a href="#cb4-70"></a><span class="in">  \node[above=1.6cm] at (3,2) {$B$};</span></span>
+<span id="cb4-71"><a href="#cb4-71"></a><span class="in">  \draw[fill=blue!20] (3,2) circle (0.9cm);</span></span>
+<span id="cb4-72"><a href="#cb4-72"></a><span class="in">  \node at (3,2) {$A$};</span></span>
+<span id="cb4-73"><a href="#cb4-73"></a><span class="in">\end{tikzpicture}</span></span>
+<span id="cb4-74"><a href="#cb4-74"></a><span class="in">```</span></span>
+<span id="cb4-75"><a href="#cb4-75"></a>:::</span>
+<span id="cb4-76"><a href="#cb4-76"></a></span>
+<span id="cb4-77"><a href="#cb4-77"></a></span>
+<span id="cb4-78"><a href="#cb4-78"></a>::: {.column width="33%"}</span>
+<span id="cb4-81"><a href="#cb4-81"></a><span class="in">```{venn}</span></span>
+<span id="cb4-82"><a href="#cb4-82"></a><span class="in">#| fig-cap: "互斥 $A \\cap B = \\emptyset$"</span></span>
+<span id="cb4-83"><a href="#cb4-83"></a><span class="in">\begin{tikzpicture}</span></span>
+<span id="cb4-84"><a href="#cb4-84"></a><span class="in">  \draw (0,0) rectangle (6,4);</span></span>
+<span id="cb4-85"><a href="#cb4-85"></a><span class="in">  \node[above right] at (0,4) {$\Omega$};</span></span>
+<span id="cb4-86"><a href="#cb4-86"></a><span class="in">  \draw[fill=blue!20] (2,2) circle (1.2cm);</span></span>
+<span id="cb4-87"><a href="#cb4-87"></a><span class="in">  \node at (2,2) {$A$};</span></span>
+<span id="cb4-88"><a href="#cb4-88"></a><span class="in">  \draw[fill=red!20] (4,2) circle (1.2cm);</span></span>
+<span id="cb4-89"><a href="#cb4-89"></a><span class="in">  \node at (4,2) {$B$};</span></span>
+<span id="cb4-90"><a href="#cb4-90"></a><span class="in">\end{tikzpicture}</span></span>
+<span id="cb4-91"><a href="#cb4-91"></a><span class="in">```</span></span>
+<span id="cb4-92"><a href="#cb4-92"></a>:::</span>
+<span id="cb4-93"><a href="#cb4-93"></a></span>
+<span id="cb4-94"><a href="#cb4-94"></a></span>
+<span id="cb4-95"><a href="#cb4-95"></a>::: {.column width="33%"}</span>
+<span id="cb4-98"><a href="#cb4-98"></a><span class="in">```{venn}</span></span>
+<span id="cb4-99"><a href="#cb4-99"></a><span class="in">#| fig-cap: "对立事件 $\\bar{A} = \\Omega \\setminus A$"</span></span>
+<span id="cb4-100"><a href="#cb4-100"></a><span class="in">\begin{tikzpicture}</span></span>
+<span id="cb4-101"><a href="#cb4-101"></a><span class="in">  \draw[fill=red!20] (0,0) rectangle (6,4);</span></span>
+<span id="cb4-102"><a href="#cb4-102"></a><span class="in">  \node[above right] at (0,4) {$\Omega$};</span></span>
+<span id="cb4-103"><a href="#cb4-103"></a><span class="in">  \draw[fill=blue!20] (3,2) circle (1.5cm);</span></span>
+<span id="cb4-104"><a href="#cb4-104"></a><span class="in">  \node at (3,2) {$A$};</span></span>
+<span id="cb4-105"><a href="#cb4-105"></a><span class="in">  \node at (5,3.2) {$\bar{A}$};</span></span>
+<span id="cb4-106"><a href="#cb4-106"></a><span class="in">\end{tikzpicture}</span></span>
+<span id="cb4-107"><a href="#cb4-107"></a><span class="in">```</span></span>
+<span id="cb4-108"><a href="#cb4-108"></a>:::</span>
+<span id="cb4-109"><a href="#cb4-109"></a></span>
+<span id="cb4-110"><a href="#cb4-110"></a>::::</span>
+<span id="cb4-111"><a href="#cb4-111"></a></span>
+<span id="cb4-112"><a href="#cb4-112"></a><span class="fu">## 运算性质</span></span>
+<span id="cb4-113"><a href="#cb4-113"></a></span>
+<span id="cb4-114"><a href="#cb4-114"></a>事件的运算满足以下基本定律：</span>
+<span id="cb4-115"><a href="#cb4-115"></a></span>
+<span id="cb4-116"><a href="#cb4-116"></a><span class="pp">|</span> 定律  <span class="pp">|</span> 公式                                               <span class="pp">|</span></span>
+<span id="cb4-117"><a href="#cb4-117"></a><span class="pp">| ---</span> <span class="pp">| ------------------------------------------------</span> <span class="pp">|</span></span>
+<span id="cb4-118"><a href="#cb4-118"></a><span class="pp">|</span> 交换律 <span class="pp">|</span> $A \cup B = B \cup A$，$A \cap B = B \cap A$      <span class="pp">|</span></span>
+<span id="cb4-119"><a href="#cb4-119"></a><span class="pp">|</span> 结合律 <span class="pp">|</span> $(A \cup B) \cup C = A \cup (B \cup C)$          <span class="pp">|</span></span>
+<span id="cb4-120"><a href="#cb4-120"></a><span class="pp">|</span> 分配律 <span class="pp">|</span> $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$ <span class="pp">|</span></span>
+<span id="cb4-121"><a href="#cb4-121"></a><span class="pp">|</span> 差化积 <span class="pp">|</span> $A \setminus B = A\bar{B} = A \setminus AB$      <span class="pp">|</span></span>
+<span id="cb4-122"><a href="#cb4-122"></a></span>
+<span id="cb4-123"><a href="#cb4-123"></a>::: {.callout-tip title="定理：德摩根律（对偶律）"}</span>
+<span id="cb4-124"><a href="#cb4-124"></a>对有限个或可列无穷多个事件 $<span class="sc">\{</span>A_i<span class="sc">\}</span>$，恒有：</span>
+<span id="cb4-125"><a href="#cb4-125"></a>$$</span>
+<span id="cb4-126"><a href="#cb4-126"></a>\overline{\bigcup_{i=1}^{n} A_i} = \bigcap_{i=1}^{n} \bar{A}_i,</span>
+<span id="cb4-127"><a href="#cb4-127"></a>\qquad</span>
+<span id="cb4-128"><a href="#cb4-128"></a>\overline{\bigcap_{i=1}^{n} A_i} = \bigcup_{i=1}^{n} \bar{A}_i</span>
+<span id="cb4-129"><a href="#cb4-129"></a>$$</span>
+<span id="cb4-130"><a href="#cb4-130"></a>:::</span>
+<span id="cb4-131"><a href="#cb4-131"></a></span>
+<span id="cb4-132"><a href="#cb4-132"></a></span>
+<span id="cb4-133"><a href="#cb4-133"></a></span>
+<span id="cb4-134"><a href="#cb4-134"></a><span class="fu"># 2. 随机变量</span></span>
+<span id="cb4-135"><a href="#cb4-135"></a></span>
+<span id="cb4-136"><a href="#cb4-136"></a><span class="fu">## 随机变量 (Random Variable)</span></span>
+<span id="cb4-137"><a href="#cb4-137"></a>设随机试验的样本空间为 $S=<span class="sc">\{</span>e<span class="sc">\}</span>$，$X=X(e)$ 是定义在 $S$ 上的实值单值函数，称其为**随机变量**。</span>
+<span id="cb4-138"><a href="#cb4-138"></a></span>
+<span id="cb4-139"><a href="#cb4-139"></a>将复杂的试验结果映射为数字，方便数学处理。</span>
+<span id="cb4-140"><a href="#cb4-140"></a></span>
+<span id="cb4-141"><a href="#cb4-141"></a><span class="fu">## 随机变量的分布函数 (Distribution Function)</span></span>
+<span id="cb4-142"><a href="#cb4-142"></a>$X$ 是随机变量，$x$是任意实数</span>
+<span id="cb4-143"><a href="#cb4-143"></a></span>
+<span id="cb4-144"><a href="#cb4-144"></a>$$F(x) = P<span class="sc">\{</span>X \le x<span class="sc">\}</span>$$</span>
+<span id="cb4-145"><a href="#cb4-145"></a></span>
+<span id="cb4-146"><a href="#cb4-146"></a>表示随机变量落入 $(-\infty, x]$ 区间的概率，称为$X$的**分布函数(CDF累积分布)**。</span>
+<span id="cb4-147"><a href="#cb4-147"></a></span>
+<span id="cb4-148"><a href="#cb4-148"></a><span class="ss">1.  </span>**单调性**：是一个不减函数</span>
+<span id="cb4-149"><a href="#cb4-149"></a></span>
+<span id="cb4-150"><a href="#cb4-150"></a><span class="ss">2.  </span>**规范性**：$F(-\infty) = 0$，$F(+\infty) = 1$</span>
+<span id="cb4-151"><a href="#cb4-151"></a></span>
+<span id="cb4-152"><a href="#cb4-152"></a><span class="ss">3.  </span>**右连续性**：$F(x+0) = F(x)$</span>
+<span id="cb4-153"><a href="#cb4-153"></a></span>
+<span id="cb4-154"><a href="#cb4-154"></a><span class="ss">4.   </span>**区间概率计算**：</span>
+<span id="cb4-155"><a href="#cb4-155"></a>    $$P<span class="sc">\{</span>x_1&lt;X\le x_2<span class="sc">\}</span>=P<span class="sc">\{</span>X\le x_2<span class="sc">\}</span>-P<span class="sc">\{</span>X\le x_1<span class="sc">\}</span>=F(x_2)-F(x_1)$$</span>
+<span id="cb4-156"><a href="#cb4-156"></a></span>
+<span id="cb4-157"><a href="#cb4-157"></a>就比如著名Logistic distribution</span>
+<span id="cb4-158"><a href="#cb4-158"></a></span>
+<span id="cb4-159"><a href="#cb4-159"></a><span class="fu">## 离散型随机变量及其分布律</span></span>
+<span id="cb4-160"><a href="#cb4-160"></a>所有可能取的值为有限个或可列无穷多个的随机变量。</span>
+<span id="cb4-161"><a href="#cb4-161"></a></span>
+<span id="cb4-162"><a href="#cb4-162"></a>**分布律/概率分布 (Probability Mass Function)**：</span>
+<span id="cb4-163"><a href="#cb4-163"></a>$$P<span class="sc">\{</span>X = x_k<span class="sc">\}</span> = p_k$$</span>
+<span id="cb4-164"><a href="#cb4-164"></a></span>
+<span id="cb4-165"><a href="#cb4-165"></a><span class="pp">|</span> $X_1$ <span class="pp">|</span> $x_1$ <span class="pp">|</span> $x_2$ <span class="pp">|</span> $\cdots$ <span class="pp">|</span> $x_k$ <span class="pp">|</span> $\cdots$ <span class="pp">|</span></span>
+<span id="cb4-166"><a href="#cb4-166"></a><span class="pp">| -----</span> <span class="pp">| -----</span> <span class="pp">| -----</span> <span class="pp">| --------</span> <span class="pp">| -----</span> <span class="pp">| --------</span> <span class="pp">|</span></span>
+<span id="cb4-167"><a href="#cb4-167"></a><span class="pp">|</span> $p_k$ <span class="pp">|</span> $p_1$ <span class="pp">|</span> $p_2$ <span class="pp">|</span> $\cdots$ <span class="pp">|</span> $p_k$ <span class="pp">|</span> $\cdots$ <span class="pp">|</span></span>
+<span id="cb4-168"><a href="#cb4-168"></a></span>
+<span id="cb4-169"><a href="#cb4-169"></a></span>
+<span id="cb4-170"><a href="#cb4-170"></a>需满足 </span>
+<span id="cb4-171"><a href="#cb4-171"></a></span>
+<span id="cb4-172"><a href="#cb4-172"></a><span class="ss">1. </span>非负性：$p_k \ge 0$ </span>
+<span id="cb4-173"><a href="#cb4-173"></a></span>
+<span id="cb4-174"><a href="#cb4-174"></a><span class="ss">2. </span>规范性：$\sum p_k = 1$</span>
+<span id="cb4-175"><a href="#cb4-175"></a></span>
+<span id="cb4-176"><a href="#cb4-176"></a><span class="ss">*   </span>**常见分布**：</span>
+<span id="cb4-177"><a href="#cb4-177"></a><span class="ss">    *   </span>**0-1 分布（两点分布）**：用于描述只有两种结果的试验（如抛硬币） <span class="co">[</span><span class="ot">8, 9</span><span class="co">]</span>。</span>
+<span id="cb4-178"><a href="#cb4-178"></a><span class="ss">    *   </span>**二项分布 $b(n,p)$**：$n$ 重伯努利试验中成功的次数，公式为 $P<span class="sc">\{</span>X=k<span class="sc">\}</span> = \binom{n}{k}p^k(1-p)^{n-k}$ <span class="co">[</span><span class="ot">9, 10</span><span class="co">]</span>。</span>
+<span id="cb4-179"><a href="#cb4-179"></a><span class="ss">    *   </span>**泊松分布 $P(\lambda)$**：常用于描述稀有事件发生的次数 <span class="co">[</span><span class="ot">11-13</span><span class="co">]</span>。</span>
+<span id="cb4-180"><a href="#cb4-180"></a></span>
+<span id="cb4-181"><a href="#cb4-181"></a><span class="fu">#### 4. 连续型随机变量及其概率密度</span></span>
+<span id="cb4-182"><a href="#cb4-182"></a><span class="ss">*   </span>**定义**：其分布函数可表示为某非负函数 $f(x)$（**概率密度函数**）的积分形式：$F(x) = \int_{-\infty}^{x} f(t) dt$ <span class="co">[</span><span class="ot">14, 15</span><span class="co">]</span>。</span>
+<span id="cb4-183"><a href="#cb4-183"></a><span class="ss">*   </span>**概率密度 $f(x)$ 的性质**：$f(x) \ge 0$ 且 $\int_{-\infty}^{\infty} f(x) dx = 1$ <span class="co">[</span><span class="ot">14, 16</span><span class="co">]</span>。</span>
+<span id="cb4-184"><a href="#cb4-184"></a><span class="ss">*   </span>**常见分布**：</span>
+<span id="cb4-185"><a href="#cb4-185"></a><span class="ss">    *   </span>**均匀分布 $U(a,b)$**：概率均匀地分布在某区间上 <span class="co">[</span><span class="ot">17, 18</span><span class="co">]</span>。</span>
+<span id="cb4-186"><a href="#cb4-186"></a><span class="ss">    *   </span>**指数分布 $E(\theta)$**：具有重要的**无记忆性**，常用于可靠性和排队论 <span class="co">[</span><span class="ot">17, 19, 20</span><span class="co">]</span>。</span>
+<span id="cb4-187"><a href="#cb4-187"></a><span class="ss">    *   </span>**正态分布 $N(\mu, \sigma^2)$**：最重要的分布，曲线呈钟形且关于 $x=\mu$ 对称 <span class="co">[</span><span class="ot">19, 21, 22</span><span class="co">]</span>。</span>
+<span id="cb4-188"><a href="#cb4-188"></a></span>
+<span id="cb4-189"><a href="#cb4-189"></a><span class="fu">#### 5. 随机变量函数的分布</span></span>
+<span id="cb4-190"><a href="#cb4-190"></a><span class="ss">*   </span>研究当 $X$ 服从某种分布时，$Y = g(X)$ 的分布规律 <span class="co">[</span><span class="ot">23, 24</span><span class="co">]</span>。</span>
+<span id="cb4-191"><a href="#cb4-191"></a><span class="ss">*   </span>**方法**：通常先利用定义求分布函数 $F_Y(y) = P<span class="sc">\{</span>g(X) \le y<span class="sc">\}</span>$，如果是连续型再通过求导得到密度函数 $f_Y(y)$ <span class="co">[</span><span class="ot">24-26</span><span class="co">]</span>。</span>
+<span id="cb4-192"><a href="#cb4-192"></a></span>
+<span id="cb4-193"><a href="#cb4-193"></a></span>
+<span id="cb4-194"><a href="#cb4-194"></a><span class="fu"># 3. 多维随机变量</span></span>
+<span id="cb4-195"><a href="#cb4-195"></a></span>
+<span id="cb4-196"><a href="#cb4-196"></a><span class="fu">## 二维随机变量</span></span>
+<span id="cb4-197"><a href="#cb4-197"></a></span>
+<span id="cb4-198"><a href="#cb4-198"></a>设E是一个随机实验,它的样本空间为$\Omega=<span class="sc">\{</span>e<span class="sc">\}</span>$,若$X(e)$,$Y(e)$是定义在同一个空间中的</span>
+<span id="cb4-199"><a href="#cb4-199"></a>研究多个随机变量构成的向量（如 $(X, Y)$），称为**二维随机变量**或**二维随机向量**。</span>
+<span id="cb4-200"><a href="#cb4-200"></a><span class="ss">*   </span>**联合分布函数**：定义为 $F(x, y) = P<span class="sc">\{</span>X \le x, Y \le y<span class="sc">\}</span>$ 。它具有单调性、规范性（范围在 $<span class="co">[</span><span class="ot">3</span><span class="co">]</span>$）、右连续性。</span>
+<span id="cb4-201"><a href="#cb4-201"></a><span class="ss">*   </span>**落入矩形区域的概率**：$P<span class="sc">\{</span>x_1 &lt; X \le x_2, y_1 &lt; Y \le y_2<span class="sc">\}</span> = F(x_2, y_2) - F(x_1, y_2) - F(x_2, y_1) + F(x_1, y_1)$</span>
+<span id="cb4-202"><a href="#cb4-202"></a></span>
+<span id="cb4-203"><a href="#cb4-203"></a><span class="fu">### 离散型与连续型联合分布</span></span>
+<span id="cb4-204"><a href="#cb4-204"></a><span class="ss">*   </span>**二维离散型**：主要掌握**联合分布律** $P<span class="sc">\{</span>X=x_i, Y=y_j\} = p_{ij}$，且所有 $p_{ij}$ 之和为 1 。</span>
+<span id="cb4-205"><a href="#cb4-205"></a><span class="ss">*   </span>**二维连续型**：存在非负函数 $f(x, y)$（**联合概率密度**），使得分布函数可以通过二重积分表示 。</span>
+<span id="cb4-206"><a href="#cb4-206"></a><span class="ss">*   </span>**性质**：$f(x, y) \ge 0$ 且在全平面上的积分等于 1 。</span>
+<span id="cb4-207"><a href="#cb4-207"></a></span>
+<span id="cb4-208"><a href="#cb4-208"></a><span class="fu">## 边缘分布 (Marginal Distribution)</span></span>
+<span id="cb4-209"><a href="#cb4-209"></a><span class="ss">*   </span>**定义**：从联合分布中分离出单个随机变量的分布 。</span>
+<span id="cb4-210"><a href="#cb4-210"></a><span class="ss">*   </span>**离散型边缘分布**：通过对另一变量求和得到（行和或列和）。</span>
+<span id="cb4-211"><a href="#cb4-211"></a><span class="ss">*   </span>**连续型边缘密度**：$f_X(x) = \int_{-\infty}^{\infty} f(x, y) dy$ 以及 $f_Y(y) = \int_{-\infty}^{\infty} f(x, y) dx$ 。</span>
+<span id="cb4-212"><a href="#cb4-212"></a></span>
+<span id="cb4-213"><a href="#cb4-213"></a><span class="fu">## 条件分布 (Conditional Distribution)</span></span>
+<span id="cb4-214"><a href="#cb4-214"></a><span class="ss">*   </span>**离散型**：在已知 $Y=y_j$ 的条件下 $X$ 的分布 $P\{X=x_i | Y=y_j\} = \frac{p_{ij}}{p_{\cdot j}}$ 。</span>
+<span id="cb4-215"><a href="#cb4-215"></a><span class="ss">*   </span>**连续型**：**条件概率密度** $f_{X|Y}(x|y) = \frac{f(x, y)}{f_Y(y)}$ 。</span>
+<span id="cb4-216"><a href="#cb4-216"></a></span>
+<span id="cb4-217"><a href="#cb4-217"></a><span class="fu">## 随机变量的独立性</span></span>
+<span id="cb4-218"><a href="#cb4-218"></a><span class="ss">*   </span>**判定标准**：若对所有 $x, y$，都有 $F(x, y) = F_X(x)F_Y(y)$，则称 $X$ 与 $Y$ 相互独立 。</span>
+<span id="cb4-219"><a href="#cb4-219"></a><span class="ss">*   </span>**连续型简便判定**：$f(x, y) = f_X(x)f_Y(y)$ 。</span>
+<span id="cb4-220"><a href="#cb4-220"></a></span>
+<span id="cb4-221"><a href="#cb4-221"></a><span class="fu">## 两个随机变量函数的分布</span></span>
+<span id="cb4-222"><a href="#cb4-222"></a><span class="ss">*   </span>**和的分布 (Z = X + Y)**：使用**卷积公式**（Convolution Formula）计算 。</span>
+<span id="cb4-223"><a href="#cb4-223"></a><span class="ss">    *   </span>*重要结论*：两个独立的**正态分布**之和仍服从正态分布 。</span>
+<span id="cb4-224"><a href="#cb4-224"></a><span class="ss">*   </span>**最大值与最小值分布**：</span>
+<span id="cb4-225"><a href="#cb4-225"></a><span class="ss">    *   </span>$M = \max(X, Y)$ 的分布函数为 $F_X(z)F_Y(z)$（当独立时）。</span>
+<span id="cb4-226"><a href="#cb4-226"></a><span class="ss">    *   </span>$N = \min(X, Y)$ 的分布函数为 $1 - <span class="co">[</span><span class="ot">1-F_X(z)</span><span class="co">][1-F_Y(z)]</span>$（当独立时）。</span>
+<span id="cb4-227"><a href="#cb4-227"></a><span class="ss">*   </span>**商与积的分布**：如 $Z = Y/X$ 或 $Z = XY$ 的分布计算 。</span>
+<span id="cb4-228"><a href="#cb4-228"></a></span>
+<span id="cb4-229"><a href="#cb4-229"></a><span class="fu"># 随机变量的数字特征</span></span>
+<span id="cb4-230"><a href="#cb4-230"></a></span>
+<span id="cb4-231"><a href="#cb4-231"></a><span class="fu"># 大数定律与中心极限定理</span></span>
+<span id="cb4-232"><a href="#cb4-232"></a></span>
+<span id="cb4-233"><a href="#cb4-233"></a><span class="fu"># 数理统计的基本概念</span></span>
+<span id="cb4-234"><a href="#cb4-234"></a></span>
+<span id="cb4-235"><a href="#cb4-235"></a><span class="fu"># 参数估计</span></span>
+<span id="cb4-236"><a href="#cb4-236"></a></span>
+<span id="cb4-237"><a href="#cb4-237"></a><span class="fu"># 假设检验</span></span>
+<span id="cb4-238"><a href="#cb4-238"></a></span>
+<span id="cb4-239"><a href="#cb4-239"></a><span class="fu"># 方差分析</span></span>
+<span id="cb4-240"><a href="#cb4-240"></a></span>
+<span id="cb4-241"><a href="#cb4-241"></a><span class="fu"># 回归分析</span></span>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>毎日マリーゴールドを1つ</p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://quarto.org/">
+<p>Powered by quarto.</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<script src="../../assets/auto-collapse.js" defer=""></script>
+<script src="../../assets/svg.js" defer=""></script>
+<script>
+  (function(){
+    const banner = document.querySelector('.quarto-title-banner');
+    if (!banner) return;
+    const c = document.createElement('canvas');
+    c.id = 'wind';
+    banner.prepend(c);
+  })();
+</script>
+<script src="../../assets/hero.js" defer=""></script>
+<script src="../../assets/auto-collapse.js" defer=""></script>
+
+
+
+
+</body></html>
