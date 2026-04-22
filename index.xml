@@ -965,6 +965,188 @@
   <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
+  <title>工程热力学</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/notes/工程热力学/工程热力学.html</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+  hitokoto!
+</p>
+
+<script>
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+  fetch("https://v1.hitokoto.cn?c=k")
+    .then((response) => response.json())
+    .then((data) => {
+      const hitokoto = document.querySelector("#hitokoto_text");
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+      hitokoto.innerText = data.hitokoto;
+    })
+    .catch(console.error);
+
+  hitokotoElement.addEventListener("click", function (event) {
+    event.preventDefault();
+  });
+</script>
+
+
+
+
+
+<section id="绪论" class="level1">
+<h1>绪论</h1>
+<section id="绪论-0-1-0-3" class="level3">
+<h3 class="anchored" data-anchor-id="绪论-0-1-0-3">绪论 (0-1 ~ 0-3)</h3>
+<p>这一部分是全书的灵魂，确立了热力学研究的宏观背景。</p>
+<section id="热能及其利用" class="level4">
+<h4 class="anchored" data-anchor-id="热能及其利用">0-1 热能及其利用</h4>
+<ul>
+<li><strong>能源 (Energy Source)</strong>：提供有效能量的物质资源（煤、石油、天然气、核能、太阳能等）[1]。</li>
+<li><strong>热能利用的两种形式</strong>：
+<ol type="1">
+<li><strong>热利用</strong>：直接利用热能进行加热（如冶金、化工）[1]。</li>
+<li><strong>动力利用</strong>：将热能转换为机械能或电能（热力学的重点研究方向）[1]。</li>
+</ol></li>
+<li><strong>核心结论</strong>：世界上 85%~90% 以上的能量是通过热能形式被利用的 [1]。</li>
+</ul>
+</section>
+<section id="热力学发展简史" class="level4">
+<h4 class="anchored" data-anchor-id="热力学发展简史">0-2 热力学发展简史</h4>
+<ul>
+<li><strong>瓦特 (James Watt)</strong>：蒸汽机的改良者，开启了热能大规模转机械能的时代 [2]。</li>
+<li><strong>卡诺 (Sadi Carnot)</strong>：1824年提出卡诺循环与卡诺定理，指明了提高热机效率的方向 [2]。</li>
+<li><strong>热力学第一定律奠基人</strong>：迈耶、焦耳、亥姆霍兹。焦耳通过实验确定了热功当量 [2]。</li>
+<li><strong>热力学第二定律奠基人</strong>：克劳修斯、开尔文（汤姆逊）[2]。</li>
+</ul>
+</section>
+<section id="工程热力学的内容及研究方法" class="level4">
+<h4 class="anchored" data-anchor-id="工程热力学的内容及研究方法">0-3 工程热力学的内容及研究方法</h4>
+<ul>
+<li><strong>工程热力学定义</strong>：研究热能与机械能相互转换规律及提高转换效率的科学 [3, 4]。</li>
+<li><strong>研究方法</strong>：
+<ol type="1">
+<li><strong>宏观研究法（经典热力学）</strong>：将物质视为连续体，不考虑微观粒子，以实验定律为基础进行逻辑推理。<strong>这是本教材的主要方法</strong> [4]。</li>
+<li><strong>微观研究法（统计热力学）</strong>：基于分子运动论和统计规律研究物质性质 [5]。</li>
+</ol></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="第一章基本概念及定义" class="level3">
+<h3 class="anchored" data-anchor-id="第一章基本概念及定义">第一章：基本概念及定义</h3>
+<p>从这里开始，你将接触到计算所需的参数和公式。</p>
+<section id="热能和机械能相互转换的过程" class="level4">
+<h4 class="anchored" data-anchor-id="热能和机械能相互转换的过程">1-1 热能和机械能相互转换的过程</h4>
+<ul>
+<li><strong>热能动力装置（热机）</strong>：实现热能与机械能转换的整套设备 [6]。</li>
+<li><strong>必备组件</strong>：工质（传递能量的媒介）、热源（放热给工质）、冷源（吸收工质余热）[7]。</li>
+</ul>
+</section>
+<section id="热力系统-thermodynamic-system" class="level4">
+<h4 class="anchored" data-anchor-id="热力系统-thermodynamic-system">1-2 热力系统 (Thermodynamic System)</h4>
+<ul>
+<li><strong>定义</strong>：为了进行分析而划分出的有限物质或空间 [7]。</li>
+<li><strong>分类</strong> [8, 9]：
+<ul>
+<li><strong>闭口系统（控制质量）</strong>：与外界无质量交换，只有能量交换。</li>
+<li><strong>开口系统（控制容积）</strong>：与外界既有质量交换，又有能量交换。</li>
+<li><strong>绝热系统</strong>：与外界无热量交换。</li>
+<li><strong>孤立系统</strong>：与外界既无物质交换，也无能量交换。</li>
+</ul></li>
+</ul>
+</section>
+<section id="工质的热力学状态及其基本状态参数" class="level4">
+<h4 class="anchored" data-anchor-id="工质的热力学状态及其基本状态参数">1-3 工质的热力学状态及其基本状态参数</h4>
+<p>工质的状态由<strong>状态参数</strong>描述，其变化量只与初终态有关，与路径无关 [10]。</p>
+<p><strong>1. 温度 (<img src="https://latex.codecogs.com/png.latex?T,%20t">)</strong> * <strong>概念</strong>：系统宏观平衡的标志，微观粒子杂乱热运动剧烈程度的度量 [10]。 * <strong>公式</strong>：<img src="https://latex.codecogs.com/png.latex?T%20=%20t%20+%20273.15"> * <img src="https://latex.codecogs.com/png.latex?T">：热力学温度，单位：开尔文 (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BK%7D">) [11]。 * <img src="https://latex.codecogs.com/png.latex?t">：摄氏温度，单位：摄氏度 (<img src="https://latex.codecogs.com/png.latex?%5E%5Ccirc%5Ctext%7BC%7D">) [11]。</p>
+<p><strong>2. 压力 (<img src="https://latex.codecogs.com/png.latex?p">)</strong> * <strong>概念</strong>：垂直作用于单位面积上的力（即压强）[12]。 * <strong>绝对压力 (<img src="https://latex.codecogs.com/png.latex?p">)</strong>：热力学状态参数必须使用绝对压力 [13]。 * <strong>计算公式</strong> [12]： * 高于大气压时：<img src="https://latex.codecogs.com/png.latex?p%20=%20p_b%20+%20p_e"> * 低于大气压时：<img src="https://latex.codecogs.com/png.latex?p%20=%20p_b%20-%20p_v"> * <strong>变量含义</strong>： * <img src="https://latex.codecogs.com/png.latex?p">：绝对压力 (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPa%7D">)。 * <img src="https://latex.codecogs.com/png.latex?p_b">：环境大气压力 (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPa%7D">)。 * <img src="https://latex.codecogs.com/png.latex?p_e">：表压力 (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPa%7D">)。 * <img src="https://latex.codecogs.com/png.latex?p_v">：真空度 (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPa%7D">)。</p>
+<p><strong>3. 比体积 (<img src="https://latex.codecogs.com/png.latex?v">) 与密度 (<img src="https://latex.codecogs.com/png.latex?%5Crho">)</strong> * <strong>比体积</strong>：单位质量物质占有的体积 [14]。 * <img src="https://latex.codecogs.com/png.latex?v%20=%20%5Cfrac%7BV%7D%7Bm%7D"> * <img src="https://latex.codecogs.com/png.latex?V">：总体积 (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7Bm%7D%5E3">)；<img src="https://latex.codecogs.com/png.latex?m">：质量 (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7Bkg%7D">)。 * <strong>密度</strong>：单位体积物质拥有的质量 [14]。 * <img src="https://latex.codecogs.com/png.latex?%5Crho%20=%20%5Cfrac%7Bm%7D%7BV%7D"> * <strong>关系</strong>：<img src="https://latex.codecogs.com/png.latex?v%20%5Crho%20=%201"> [14]。</p>
+</section>
+<section id="平衡状态与状态方程" class="level4">
+<h4 class="anchored" data-anchor-id="平衡状态与状态方程">1-4 平衡状态与状态方程</h4>
+<ul>
+<li><strong>平衡状态</strong>：不受外界影响下，系统状态参数始终保持不变的状态 [14]。</li>
+<li><strong>理想气体状态方程</strong> [15, 16]：
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?pv%20=%20R_gT"> 或 <img src="https://latex.codecogs.com/png.latex?pV%20=%20mR_gT"></li>
+<li><strong>变量含义</strong>：
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?R_g">：气体常数，单位为 <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BJ%7D/(%5Ctext%7Bkg%7D%20%5Ccdot%20%5Ctext%7BK%7D)">。注意不同气体的 <img src="https://latex.codecogs.com/png.latex?R_g"> 不同。</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="过程功与热量" class="level4">
+<h4 class="anchored" data-anchor-id="过程功与热量">1-5~1-6 过程、功与热量</h4>
+<ul>
+<li><strong>准平衡过程</strong>：过程无限接近平衡态，在坐标图上可用连续曲线表示 [16, 17]。</li>
+<li><strong>可逆过程</strong>：系统与外界均能完全回复原状且无耗散损失的过程 [17, 18]。</li>
+<li><strong>体积功 (Expansion Work)</strong> [19, 20]：
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cdelta%20W%20=%20p%20%5Ctext%7Bd%7DV"> 或 <img src="https://latex.codecogs.com/png.latex?w%20=%20%5Cint_%7B1%7D%5E%7B2%7D%20p%20%5Ctext%7Bd%7Dv"></li>
+<li><strong>含义</strong>：工质体积变化而通过边界传递的功。</li>
+</ul></li>
+<li><strong>过程热量 (<img src="https://latex.codecogs.com/png.latex?Q">)</strong> [21]：
+<ul>
+<li>可逆过程：<img src="https://latex.codecogs.com/png.latex?%5Cdelta%20Q%20=%20T%20%5Ctext%7Bd%7DS"></li>
+<li><strong>约定</strong>：吸热为“+”，放热为“-”；系统对外作功为“+”，外界对系统作功为“-”。</li>
+</ul></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="基本概念与定义" class="level1">
+<h1>基本概念与定义</h1>
+</section>
+<section id="热力学第一定律" class="level1">
+<h1>热力学第一定律</h1>
+</section>
+<section id="气体和蒸汽的性质" class="level1">
+<h1>气体和蒸汽的性质</h1>
+</section>
+<section id="理想气体混合物及湿空气" class="level1">
+<h1>理想气体混合物及湿空气</h1>
+</section>
+<section id="气体和蒸汽的基本热力学过程" class="level1">
+<h1>气体和蒸汽的基本热力学过程</h1>
+</section>
+<section id="热力学第一定律-1" class="level1">
+<h1>热力学第一定律</h1>
+</section>
+<section id="气体与蒸汽的流动" class="level1">
+<h1>气体与蒸汽的流动</h1>
+</section>
+<section id="压气机的热力过程" class="level1">
+<h1>压气机的热力过程</h1>
+</section>
+<section id="气体动力循环" class="level1">
+<h1>气体动力循环</h1>
+</section>
+<section id="蒸汽动力装置循环" class="level1">
+<h1>蒸汽动力装置循环</h1>
+</section>
+<section id="制冷循环" class="level1">
+<h1>制冷循环</h1>
+</section>
+<section id="实际气体的性质及热力学的一般关系式" class="level1">
+<h1>实际气体的性质及热力学的一般关系式</h1>
+</section>
+<section id="化学热力学基础" class="level1">
+<h1>化学热力学基础</h1>
+
+
+<!-- -->
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>速通</category>
+  <guid>https://qmdthings.top/notes/工程热力学/工程热力学.html</guid>
+  <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
   <title>电路的暂态分析</title>
   <dc:creator>QMD </dc:creator>
   <link>https://qmdthings.top/notes/电工技术/电路的暂态分析.html</link>
@@ -1044,6 +1226,383 @@
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
   <category>电工技术</category>
   <guid>https://qmdthings.top/notes/电工技术/电路的暂态分析.html</guid>
+  <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>机械原理</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/notes/机械原理/机械原理.html</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+  hitokoto!
+</p>
+
+<script>
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+  fetch("https://v1.hitokoto.cn?c=k")
+    .then((response) => response.json())
+    .then((data) => {
+      const hitokoto = document.querySelector("#hitokoto_text");
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+      hitokoto.innerText = data.hitokoto;
+    })
+    .catch(console.error);
+
+  hitokotoElement.addEventListener("click", function (event) {
+    event.preventDefault();
+  });
+</script>
+
+
+
+
+
+<section id="绪论" class="level1">
+<h1>绪论</h1>
+<section id="机构与机器" class="level2">
+<h2 class="anchored" data-anchor-id="机构与机器">机构与机器</h2>
+<ul>
+<li><p><strong>机械 (Machinery)</strong>：是<strong>机构</strong>与<strong>机器</strong>的总称。</p>
+<ul>
+<li><p><strong>机构 (Mechanism)</strong>：一种用来<strong>传递与变换运动和动力</strong>的可动装置。</p></li>
+<li><p><strong>机器 (Machine)</strong>：根据某种使用要求而设计的用来<strong>变换或传递能量、物料和信息</strong>的机构组合。</p></li>
+</ul></li>
+</ul>
+<p>机械已从传统的纯机械系统演变为<strong>机电一体化系统</strong>，并进一步向融入传感器、控制器、执行器及软件的<strong>智能机械系统</strong>发展。</p>
+<ul>
+<li><p>机械向高速、重载、巨型、高效率、高精度、低噪声发展。</p></li>
+<li><p>向微型化、灵巧、智能、自适应方向发展。</p></li>
+<li><p>广泛应用计算机辅助设计（CAD）、拓扑优化设计及数字化建模。</p></li>
+<li><p><strong>原动机 (Power machine)</strong>：将其他形式能量变换为机械能的机器，是驱动机械系统的动力源。</p></li>
+<li><p><strong>工作机 (Working machine)</strong>：用来完成预定的机械加工、物料搬运或信息变换等任务的机器。</p></li>
+<li><p><strong>机械设计 (Mechanical design)</strong>：机械工程设计的简称，指设计机械装置、产品、系统或工艺过程的过程。</p></li>
+</ul>
+<p>机械设计通常遵循以下四个逻辑阶段：</p>
+<ol type="1">
+<li><p><strong>产品规划</strong>：确定产品目标、需求分析及性能技术条件。</p></li>
+<li><p><strong>方案设计 (核心阶段)</strong>：包括功能原理确定、工艺动作设计、机构选型及运动学初步设计。</p></li>
+<li><p><strong>详细设计</strong>：进行结构设计、强度/刚度计算、3D建模及仿真分析。</p></li>
+<li><p><strong>试制试验</strong>：通过物理模型或原型进行功能和性能检测。</p></li>
+</ol>
+<ul>
+<li><p><strong>正动力学问题 (Forward dynamics problem)</strong>：已知作用在机械系统上的所有力，求机械的真实运动规律（位移、速度、加速度）。</p></li>
+<li><p><strong>逆动力学问题 (Inverse dynamics problem)</strong>：已知机械系统的运动规律，求解为达到该运动必须提供的力或力矩。</p></li>
+</ul>
+</section>
+<section id="机械原理学科的研究内容" class="level2">
+<h2 class="anchored" data-anchor-id="机械原理学科的研究内容">机械原理学科的研究内容</h2>
+<p>本学科主要研究机械的基本理论问题</p>
+<ul>
+<li><p><strong>机构结构分析</strong>：研究机构组成、分类、运动简图绘制及自由度计算。</p></li>
+<li><p><strong>机构运动分析</strong>：研究位移、速度及加速度分析。</p></li>
+<li><p><strong>机械动力学</strong>：研究机构受力、摩擦、效率、平衡以及速度波动调节。</p></li>
+<li><p><strong>常用机构设计</strong>：如连杆机构、凸轮机构、齿轮机构等的设计理论。</p></li>
+<li><p><strong>机械系统方案设计</strong>：涉及执行构件的运动规划、原动机选择及系统评价。</p></li>
+</ul>
+</section>
+</section>
+<section id="机构分析基础" class="level1">
+<h1>机构分析基础</h1>
+<section id="机构的结构运动与静力分析" class="level2">
+<h2 class="anchored" data-anchor-id="机构的结构运动与静力分析">机构的结构，运动，与静力分析</h2>
+<ul>
+<li><p><strong>零件 (Component)</strong>：机器中的一个独立制造单元体</p></li>
+<li><p><strong>构件 (Link)</strong>：机器中每一个独立的<strong>运动单元体</strong>。构件可以是单一的零件，也可以是由若干零件刚性连接而成的组合体。</p></li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+A["零件"]--&gt;B["构件"]--&gt;C["机构"]--&gt;D["机器"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<ul>
+<li><p><strong>运动副 (Kinematic pair)</strong>：两构件直接接触并能产生相对运动的<strong>可动连接</strong>。</p>
+<ul>
+<li><p><strong>运动副元素</strong>：两构件上参加接触而构成运动副的表面。</p></li>
+<li><p><strong>低副 (Lower pair)</strong>：通过<strong>面接触</strong>构成的运动副，如转动副和移动副。</p></li>
+<li><p><strong>高副 (Higher pair)</strong>：通过<strong>点或线接触</strong>构成的运动副，如凸轮副和齿轮副。</p></li>
+</ul></li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+
+A["运动副分类"] --&gt; B["按副元素接触形式"]
+B --&gt; B1["低副: 通过面接触构成"]
+B --&gt; B2["高副: 通过点或线接触构成"]
+
+A --&gt; C["按相对运动形式"]
+
+subgraph K ["复合平面运动副"]
+C1["平面运动副"]
+C2["空间运动副"]
+end
+
+C --&gt; C1
+C --&gt; C2
+
+
+subgraph L ["基本运动副"]
+C1a["转动副/回转副R"]
+C1b["移动副P"]
+end
+
+C1 --&gt; C1a["转动副/回转副R"]
+C1 --&gt; C1b["移动副P"]
+C1 --&gt; C1b["平面副F"]
+
+C2 --&gt; C2a["螺旋副H"]
+C2 --&gt; C2b["球面副S"]
+C2 --&gt; C2c["槽销副RP/球销副/圆柱副C等"]
+
+A --&gt; D["按封闭方式"]
+D --&gt; D1["几何封闭: 靠副元素几何形状封闭"]
+D --&gt; D2["力封闭: 靠重力、弹簧力等封闭"]
+
+A --&gt; E["按引入约束的数目"]
+E --&gt; E1["I 级副: 引入 1 个约束"]
+E --&gt; E2["II 级副: 引入 2 个约束"]
+E --&gt; E3["..."]
+E --&gt; E4["V 级副: 引入 5 个约束"]
+
+A--&gt; F["运动副的链接情况"]
+F--&gt; F1["单副构件"]
+F--&gt; F1["两副构件"]
+F--&gt; F1["四副构件"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><strong>这里应该有常用运动副的符号及其代号的图片</strong> 由于图床没有搭建好,过几天会补</p>
+<ul>
+<li><p><strong>自由度 (Degree of freedom)</strong>：构件具有的<strong>独立运动的数目</strong>。 机构有多少个自由度，就需要多少个原动件（电机、发动机等）来驱动，它才能有确定的运动。 自由度数 &gt; 原动件数：机构运动不确定，会产生乱动或随意运动，无法完成预定工作。 自由度数 &lt; 原动件数：机构会卡死（干涉），导致构件损坏或无法启动。</p>
+<ul>
+<li><p>自由度分析：</p>
+<ul>
+<li><p><strong>复合铰链</strong>：两个以上构件在同一处形成的转动副。若 <img src="https://latex.codecogs.com/png.latex?m"> 个构件相连，则有 <img src="https://latex.codecogs.com/png.latex?(m-1)"> 个转动副。</p></li>
+<li><p><strong>局部自由度</strong>：机构中某些构件所具有的、不影响其他构件运动的自由度。计算时应将其从总自由度中减去。</p></li>
+<li><p><strong>虚约束</strong>：机构中对运动不起独立限制作用的重复约束。计算时应将其除去。</p>
+<ul>
+<li><strong>重复部分带入的虚约束数</strong>： <img src="https://latex.codecogs.com/png.latex?p'%20=%202p'_l%20+%20p'_h%20-%203n'"> 其中 <img src="https://latex.codecogs.com/png.latex?n'">、<img src="https://latex.codecogs.com/png.latex?p'_l">、<img src="https://latex.codecogs.com/png.latex?p'_h"> 分别为重复部分的构件数、低副数和高副数。</li>
+</ul></li>
+</ul></li>
+<li><p>自由度计算：</p>
+<ul>
+<li><p><strong>空间构件</strong>：<img src="https://latex.codecogs.com/png.latex?f%20=%206%20-%20s"> （<img src="https://latex.codecogs.com/png.latex?s"> 为约束数）。</p></li>
+<li><p><strong>平面构件</strong>：<img src="https://latex.codecogs.com/png.latex?f%20=%203%20-%20s"> 。</p></li>
+<li><p><strong>平面机构自由度 (Kutzbach 判据)</strong>： <img src="https://latex.codecogs.com/png.latex?F%20=%203n%20-%20(2p_l%20+%20p_h)"> 其中：<img src="https://latex.codecogs.com/png.latex?n"> 为活动构件数，<img src="https://latex.codecogs.com/png.latex?p_l"> 为低副数，<img src="https://latex.codecogs.com/png.latex?p_h"> 为高副数。</p></li>
+<li><p><strong>考虑特殊约束的平面公式</strong>： <img src="https://latex.codecogs.com/png.latex?F%20=%203n%20-%20(2p_l%20+%20p_h%20-%20p')%20-%20F'"> 其中：<img src="https://latex.codecogs.com/png.latex?p'"> 为虚约束数，<img src="https://latex.codecogs.com/png.latex?F'"> 为局部自由度数。</p></li>
+<li><p><strong>空间机构自由度</strong>： <img src="https://latex.codecogs.com/png.latex?F%20=%206n%20-%20(5p_5%20+%204p_4%20+%203p_3%20+%202p_2%20+%20p_1)"> 其中 <img src="https://latex.codecogs.com/png.latex?p_i"> 代表具有 <img src="https://latex.codecogs.com/png.latex?i"> 级约束的运动副数目。</p></li>
+</ul></li>
+</ul></li>
+<li><p><strong>约束 (Constraint)</strong>：构件间构成运动副后，其独立运动受到的限制。</p></li>
+<li><p><strong>运动链 (Kinematic chain)</strong>：构件通过运动副连接而形成的系统。分为<strong>闭链</strong>（首末封闭）和<strong>开链</strong>（首末不封闭）。也有平面运动链与空间运动副之分</p></li>
+<li><p><strong>机构 (Mechanism)</strong>：在运动链中将其中一个构件加以固定（成为<strong>机架</strong>）后，当其中的原动件(主动件)按给定运动规律运动时，其余从动件具有确定运动的系统。机构 = 机架 + 原动件 + 基本杆组 按照<strong>机构的工作原理</strong>及组成构件情况的不同，机构可以分为<strong>连杆机构</strong>，<strong>凸轮机构</strong>，<strong>齿轮机构</strong>，<strong>棘轮机构</strong>，<strong>槽轮机构</strong> ，<strong>螺旋机构</strong> ，<strong>摩擦传动机构</strong> 根据组成机构的<strong>构件性质</strong>，机构可分为：<strong>刚性机构</strong>，<strong>柔性机构 / 顺应机构</strong>：利用构件的弹性变形来传递运动和动力，<strong>挠性传动机构</strong>，<strong>气动机构</strong>，<strong>液压机构</strong></p></li>
+<li><p><strong>机构运动简图 (Kinematic diagram of mechanism)</strong>：用简单的图形符号和线段按比例表示机构各构件间相对运动关系的图形。</p></li>
+</ul>
+<p>只有按照比例绘制的图才能称为“机构运动简图”；若仅为了表明结构状况而不按比例绘制，则称为<strong>机构示意图</strong>。</p>
+<ol type="1">
+<li><p>认清机械的结构组成及运动情况： 首先要分析机械的实际构造，确定其由多少个<strong>构件</strong>组成，并弄清楚各个构件之间形成了何种<strong>运动副</strong>（如转动副、移动副等）需要明确运动的传递路线，分清哪些是原动件，哪些是执行构件及中间传动构件。</p></li>
+<li><p>选择适当的投影平面： 选择<strong>各构件的运动平面</strong>作为视读平面。对于复杂的机械，如果一部分运动在另一平面内，可以单独绘制局部简图。</p></li>
+<li><p>选择适当的长度比例尺 (<img src="https://latex.codecogs.com/png.latex?%5Cmu_l">)： 根据机械的运动尺寸（如转动副中心的距离、移动副导路的方位等），确定一个合适的<strong>长度比例尺</strong>。<img src="https://latex.codecogs.com/png.latex?%5Cmu_l%20=%20%5Cfrac%7B%5Ctext%7B%E5%AE%9E%E9%99%85%E9%95%BF%E5%BA%A6%20(m)%7D%7D%7B%5Ctext%7B%E5%9B%BE%E4%B8%8A%E7%9A%84%E9%95%BF%E5%BA%A6%20(mm)%7D%7D">。</p>
+<ol start="4" type="1">
+<li>绘制简图并标注符号
+<ul>
+<li><p><strong>定位</strong>：先选定原动件的某一位置，按比例尺定出各运动副的相对位置。</p></li>
+<li><p><strong>绘图</strong>：利用国家标准规定的符号画出运动副，并用线段或简单几何图形连接起来表示构件。</p></li>
+<li><p><strong>标注</strong>：通常用数字 1、2、3… 标注构件，用英文字母 A、B、C… 标注运动副。</p></li>
+<li><p><strong>原动件标识</strong>：在原动件上画出代表运动方向的箭头。</p></li>
+</ul></li>
+</ol></li>
+</ol>
+<p>通过以上步骤，便可以将复杂的工程实际机械抽象为便于理论分析和性能研究的运动简图。</p>
+<ul>
+<li><strong>基本杆组 (Assur group)</strong>：又称苏尔杆组，是<strong>自由度为零</strong>且不能再拆分的最小构件组。</li>
+</ul>
+<p>基本杆组（苏尔杆组）的组成条件 * 对于全低副平面基本杆组： <img src="https://latex.codecogs.com/png.latex?3n%20-%202p_l%20=%200"> 常见的有 <strong>II 级组</strong>（<img src="https://latex.codecogs.com/png.latex?n=2,%20p_l=3">）和 <strong>III 级组</strong>（<img src="https://latex.codecogs.com/png.latex?n=4,%20p_l=6">）。</p>
+<ul>
+<li><p><strong>机架变换（机构倒置）</strong>：通过取不同的构件为机架来获得不同的机构。</p></li>
+<li><p><strong>高副低代</strong>：在进行运动分析或动力分析时，常将机构中的高副根据一定条件虚拟地以低副加以代替，化为全低副机构。</p></li>
+<li><p><strong>运动副元素尺寸扩大</strong>：如将转动副改为偏心轮，不改变机构运动性质，但可提高强度。</p></li>
+<li><p><strong>速度瞬心 (Instantaneous centre of velocity)</strong>：互作平面相对运动的两构件上瞬时速度相等的重合点。</p>
+<ul>
+<li><p><strong>绝对瞬心</strong>：瞬心处的绝对速度为零（其中一个构件为机架）。</p></li>
+<li><p><strong>相对瞬心</strong>：瞬心处的绝对速度不为零，但两构件在该点的速度相等。</p></li>
+</ul></li>
+<li><p><strong>三心定理 (Kennedy-Aronhold Theorem)</strong>：三个彼此作平面平行运动的构件共有三个瞬心，且这三个瞬心必位于<strong>同一直线上</strong>。</p></li>
+<li><p><strong>速度影像与加速度影像 (Velocity and acceleration image)</strong>：在同一构件上，由各点相对速度（或相对加速度）矢量末端构成的图形与原构件几何图形相似，且字母顺序一致。</p></li>
+<li><p><strong>哥氏加速度 (Coriolis acceleration, <img src="https://latex.codecogs.com/png.latex?a%5Ek">)</strong>：当一构件在另一转动构件上移动时，由于相对运动与牵连转动而产生的附加加速度。</p></li>
+</ul>
+<ol start="6" type="1">
+<li><strong>机构传动比 (<img src="https://latex.codecogs.com/png.latex?i">)</strong>：机构中两构件角速度的比值。</li>
+</ol>
+<section id="二-核心知识点-knowledge-points" class="level3">
+<h3 class="anchored" data-anchor-id="二-核心知识点-knowledge-points">二、 核心知识点 (Knowledge Points)</h3>
+<section id="运动分析的方法" class="level4">
+<h4 class="anchored" data-anchor-id="运动分析的方法">1. 运动分析的方法</h4>
+<ul>
+<li><strong>图解法</strong>：直观、简单，适用于对机构在特定位置的运动分析，主要包括<strong>矢量方程图解法</strong>和<strong>瞬心法</strong> [1, 6]。</li>
+<li><strong>解析法</strong>：精度高，适用于整个运动循环的连续分析，便于利用计算机进行机构优化设计 [1]。</li>
+</ul>
+</section>
+<section id="瞬心法分析步骤" class="level4">
+<h4 class="anchored" data-anchor-id="瞬心法分析步骤">2. 瞬心法分析步骤</h4>
+<ul>
+<li>确定瞬心总数。</li>
+<li>利用直接观察（运动副处）和三心定理找齐所有瞬心。</li>
+<li>利用瞬心点速度相等的特性求解角速度或线速度。</li>
+</ul>
+</section>
+<section id="矢量方程图解法-相对运动解法-6-8" class="level4">
+<h4 class="anchored" data-anchor-id="矢量方程图解法-相对运动解法-6-8">3. 矢量方程图解法 (相对运动解法) [6, 8]</h4>
+<ul>
+<li>依据理论力学的运动合成原理：<img src="https://latex.codecogs.com/png.latex?%5Ctext%7B%E7%BB%9D%E5%AF%B9%E8%BF%90%E5%8A%A8%7D%20=%20%5Ctext%7B%E7%89%B5%E8%BF%9E%E8%BF%90%E5%8A%A8%7D%20+%20%5Ctext%7B%E7%9B%B8%E5%AF%B9%E8%BF%90%E5%8A%A8%7D">。</li>
+<li>需要选取合适的速度比例尺 <img src="https://latex.codecogs.com/png.latex?%5Cmu_v"> 和加速度比例尺 <img src="https://latex.codecogs.com/png.latex?%5Cmu_a">。</li>
+</ul>
+</section>
+<section id="解析法常用工具-9-10" class="level4">
+<h4 class="anchored" data-anchor-id="解析法常用工具-9-10">4. 解析法常用工具 [9, 10]</h4>
+<ul>
+<li><strong>复数矢量法</strong>：利用欧拉公式将矢量方程转化为代数方程。</li>
+<li><strong>矩阵法</strong>：建立位置矩阵方程，通过求导得到速度和加速度矩阵方程。</li>
+</ul>
+</section>
+</section>
+<section id="三-核心公式-formulas" class="level3">
+<h3 class="anchored" data-anchor-id="三-核心公式-formulas">三、 核心公式 (Formulas)</h3>
+<section id="比例尺计算-1-8" class="level4">
+<h4 class="anchored" data-anchor-id="比例尺计算-1-8">1. 比例尺计算 [1, 8]</h4>
+<ul>
+<li>长度比例尺：<img src="https://latex.codecogs.com/png.latex?%5Cmu_l%20=%20%5Cfrac%7B%E5%AE%9E%E9%99%85%E9%95%BF%E5%BA%A6(m)%7D%7B%E5%9B%BE%E4%B8%8A%E9%95%BF%E5%BA%A6(mm)%7D"></li>
+<li>速度比例尺：<img src="https://latex.codecogs.com/png.latex?%5Cmu_v%20=%20%5Cfrac%7B%E5%AE%9E%E9%99%85%E9%80%9F%E5%BA%A6(m/s)%7D%7B%E5%9B%BE%E4%B8%8A%E9%80%9F%E5%BA%A6(mm)%7D"></li>
+</ul>
+</section>
+<section id="瞬心数量公式" class="level4">
+<h4 class="anchored" data-anchor-id="瞬心数量公式">2. 瞬心数量公式</h4>
+<p><img src="https://latex.codecogs.com/png.latex?K%20=%20%5Cfrac%7BN(N-1)%7D%7B2%7D"> （其中 <img src="https://latex.codecogs.com/png.latex?N"> 为构件总数，含机架）</p>
+</section>
+<section id="矢量位移方程封闭矢量环-11" class="level4">
+<h4 class="anchored" data-anchor-id="矢量位移方程封闭矢量环-11">3. 矢量位移方程（封闭矢量环） [11]</h4>
+<p><img src="https://latex.codecogs.com/png.latex?%5Csum%20%5Cvec%7Bl%7D_i%20=%200"></p>
+</section>
+<section id="速度矢量方程同一构件两点间-8" class="level4">
+<h4 class="anchored" data-anchor-id="速度矢量方程同一构件两点间-8">4. 速度矢量方程（同一构件两点间） [8]</h4>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cvec%7Bv%7D_C%20=%20%5Cvec%7Bv%7D_B%20+%20%5Cvec%7Bv%7D_%7BCB%7D"> 其中：<img src="https://latex.codecogs.com/png.latex?v_%7BCB%7D%20=%20%5Comega%20%5Ccdot%20l_%7BBC%7D">，方向垂直于 <img src="https://latex.codecogs.com/png.latex?BC">。</p>
+</section>
+<section id="加速度矢量方程同一构件两点间-8" class="level4">
+<h4 class="anchored" data-anchor-id="加速度矢量方程同一构件两点间-8">5. 加速度矢量方程（同一构件两点间） [8]</h4>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cvec%7Ba%7D_C%20=%20%5Cvec%7Ba%7D_B%20+%20%5Cvec%7Ba%7D_%7BCB%7D%5En%20+%20%5Cvec%7Ba%7D_%7BCB%7D%5Et"> * <strong>法向加速度</strong>：<img src="https://latex.codecogs.com/png.latex?a_%7BCB%7D%5En%20=%20%5Comega%5E2%20%5Ccdot%20l_%7BBC%7D">，方向由 <img src="https://latex.codecogs.com/png.latex?C"> 指向 <img src="https://latex.codecogs.com/png.latex?B">。 * <strong>切向加速度</strong>：<img src="https://latex.codecogs.com/png.latex?a_%7BCB%7D%5Et%20=%20%5Calpha%20%5Ccdot%20l_%7BBC%7D">，方向垂直于 <img src="https://latex.codecogs.com/png.latex?BC">。</p>
+</section>
+<section id="哥氏加速度计算公式-4" class="level4">
+<h4 class="anchored" data-anchor-id="哥氏加速度计算公式-4">6. 哥氏加速度计算公式 [4]</h4>
+<p><img src="https://latex.codecogs.com/png.latex?a%5Ek%20=%202%5Comega%20%5Ccdot%20v_r"> （其中 <img src="https://latex.codecogs.com/png.latex?%5Comega"> 为牵连角速度，<img src="https://latex.codecogs.com/png.latex?v_r"> 为相对速度。方向：将 <img src="https://latex.codecogs.com/png.latex?v_r"> 顺着 <img src="https://latex.codecogs.com/png.latex?%5Comega"> 的转向转过 <img src="https://latex.codecogs.com/png.latex?90%5E%5Ccirc">）</p>
+</section>
+<section id="矩阵分析通用形式-12" class="level4">
+<h4 class="anchored" data-anchor-id="矩阵分析通用形式-12">7. 矩阵分析通用形式 [12]</h4>
+<ul>
+<li>速度分析：<img src="https://latex.codecogs.com/png.latex?A%5Comega%20=%20%5Comega_1%20B"></li>
+<li>加速度分析：<img src="https://latex.codecogs.com/png.latex?A%5Calpha%20=%20-%5Cdot%7BA%7D%5Comega%20+%20%5Comega_1%20%5Cdot%7BB%7D"></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="机械的动力平衡运转以及速度波动调节" class="level2">
+<h2 class="anchored" data-anchor-id="机械的动力平衡运转以及速度波动调节">机械的动力，平衡，运转，以及速度波动调节</h2>
+</section>
+</section>
+<section id="常用机构设计" class="level1">
+<h1>常用机构设计</h1>
+<section id="连杆凸轮齿轮机构及其设计" class="level2">
+<h2 class="anchored" data-anchor-id="连杆凸轮齿轮机构及其设计">连杆，凸轮，齿轮机构及其设计</h2>
+</section>
+<section id="其他常用机构" class="level2">
+<h2 class="anchored" data-anchor-id="其他常用机构">其他常用机构</h2>
+</section>
+</section>
+<section id="机械方案设计" class="level1">
+<h1>机械方案设计</h1>
+<section id="机械系统方案的设计" class="level2">
+<h2 class="anchored" data-anchor-id="机械系统方案的设计">机械系统方案的设计</h2>
+</section>
+<section id="机器人机构及其设计" class="level2">
+<h2 class="anchored" data-anchor-id="机器人机构及其设计">机器人机构及其设计</h2>
+
+
+<!-- -->
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>速通</category>
+  <guid>https://qmdthings.top/notes/机械原理/机械原理.html</guid>
+  <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>生产管理</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/notes/生产管理/生产管理速通.html</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+  hitokoto!
+</p>
+
+<script>
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+  fetch("https://v1.hitokoto.cn?c=k")
+    .then((response) => response.json())
+    .then((data) => {
+      const hitokoto = document.querySelector("#hitokoto_text");
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+      hitokoto.innerText = data.hitokoto;
+    })
+    .catch(console.error);
+
+  hitokotoElement.addEventListener("click", function (event) {
+    event.preventDefault();
+  });
+</script>
+
+
+
+
+
+<section id="绪论" class="level1">
+<h1>绪论</h1>
+</section>
+<section id="生产运作系统的设计" class="level1">
+<h1>生产运作系统的设计</h1>
+</section>
+<section id="生产运作管理系统的运行" class="level1">
+<h1>生产运作管理系统的运行</h1>
+</section>
+<section id="生产运作系统的维护与改进" class="level1">
+<h1>生产运作系统的维护与改进</h1>
+
+
+<!-- -->
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>速通</category>
+  <guid>https://qmdthings.top/notes/生产管理/生产管理速通.html</guid>
   <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
@@ -1479,565 +2038,6 @@
   <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>工程热力学</title>
-  <dc:creator>QMD </dc:creator>
-  <link>https://qmdthings.top/notes/工程热力学/工程热力学.html</link>
-  <description><![CDATA[ 
-
-<p id="hitokoto">
-  hitokoto!
-</p>
-
-<script>
-  const hitokotoElement = document.querySelector("#hitokoto_text");
-
-  fetch("https://v1.hitokoto.cn?c=k")
-    .then((response) => response.json())
-    .then((data) => {
-      const hitokoto = document.querySelector("#hitokoto_text");
-      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
-      hitokoto.innerText = data.hitokoto;
-    })
-    .catch(console.error);
-
-  hitokotoElement.addEventListener("click", function (event) {
-    event.preventDefault();
-  });
-</script>
-
-
-
-
-
-<section id="绪论" class="level1">
-<h1>绪论</h1>
-<section id="绪论-0-1-0-3" class="level3">
-<h3 class="anchored" data-anchor-id="绪论-0-1-0-3">绪论 (0-1 ~ 0-3)</h3>
-<p>这一部分是全书的灵魂，确立了热力学研究的宏观背景。</p>
-<section id="热能及其利用" class="level4">
-<h4 class="anchored" data-anchor-id="热能及其利用">0-1 热能及其利用</h4>
-<ul>
-<li><strong>能源 (Energy Source)</strong>：提供有效能量的物质资源（煤、石油、天然气、核能、太阳能等）[1]。</li>
-<li><strong>热能利用的两种形式</strong>：
-<ol type="1">
-<li><strong>热利用</strong>：直接利用热能进行加热（如冶金、化工）[1]。</li>
-<li><strong>动力利用</strong>：将热能转换为机械能或电能（热力学的重点研究方向）[1]。</li>
-</ol></li>
-<li><strong>核心结论</strong>：世界上 85%~90% 以上的能量是通过热能形式被利用的 [1]。</li>
-</ul>
-</section>
-<section id="热力学发展简史" class="level4">
-<h4 class="anchored" data-anchor-id="热力学发展简史">0-2 热力学发展简史</h4>
-<ul>
-<li><strong>瓦特 (James Watt)</strong>：蒸汽机的改良者，开启了热能大规模转机械能的时代 [2]。</li>
-<li><strong>卡诺 (Sadi Carnot)</strong>：1824年提出卡诺循环与卡诺定理，指明了提高热机效率的方向 [2]。</li>
-<li><strong>热力学第一定律奠基人</strong>：迈耶、焦耳、亥姆霍兹。焦耳通过实验确定了热功当量 [2]。</li>
-<li><strong>热力学第二定律奠基人</strong>：克劳修斯、开尔文（汤姆逊）[2]。</li>
-</ul>
-</section>
-<section id="工程热力学的内容及研究方法" class="level4">
-<h4 class="anchored" data-anchor-id="工程热力学的内容及研究方法">0-3 工程热力学的内容及研究方法</h4>
-<ul>
-<li><strong>工程热力学定义</strong>：研究热能与机械能相互转换规律及提高转换效率的科学 [3, 4]。</li>
-<li><strong>研究方法</strong>：
-<ol type="1">
-<li><strong>宏观研究法（经典热力学）</strong>：将物质视为连续体，不考虑微观粒子，以实验定律为基础进行逻辑推理。<strong>这是本教材的主要方法</strong> [4]。</li>
-<li><strong>微观研究法（统计热力学）</strong>：基于分子运动论和统计规律研究物质性质 [5]。</li>
-</ol></li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="第一章基本概念及定义" class="level3">
-<h3 class="anchored" data-anchor-id="第一章基本概念及定义">第一章：基本概念及定义</h3>
-<p>从这里开始，你将接触到计算所需的参数和公式。</p>
-<section id="热能和机械能相互转换的过程" class="level4">
-<h4 class="anchored" data-anchor-id="热能和机械能相互转换的过程">1-1 热能和机械能相互转换的过程</h4>
-<ul>
-<li><strong>热能动力装置（热机）</strong>：实现热能与机械能转换的整套设备 [6]。</li>
-<li><strong>必备组件</strong>：工质（传递能量的媒介）、热源（放热给工质）、冷源（吸收工质余热）[7]。</li>
-</ul>
-</section>
-<section id="热力系统-thermodynamic-system" class="level4">
-<h4 class="anchored" data-anchor-id="热力系统-thermodynamic-system">1-2 热力系统 (Thermodynamic System)</h4>
-<ul>
-<li><strong>定义</strong>：为了进行分析而划分出的有限物质或空间 [7]。</li>
-<li><strong>分类</strong> [8, 9]：
-<ul>
-<li><strong>闭口系统（控制质量）</strong>：与外界无质量交换，只有能量交换。</li>
-<li><strong>开口系统（控制容积）</strong>：与外界既有质量交换，又有能量交换。</li>
-<li><strong>绝热系统</strong>：与外界无热量交换。</li>
-<li><strong>孤立系统</strong>：与外界既无物质交换，也无能量交换。</li>
-</ul></li>
-</ul>
-</section>
-<section id="工质的热力学状态及其基本状态参数" class="level4">
-<h4 class="anchored" data-anchor-id="工质的热力学状态及其基本状态参数">1-3 工质的热力学状态及其基本状态参数</h4>
-<p>工质的状态由<strong>状态参数</strong>描述，其变化量只与初终态有关，与路径无关 [10]。</p>
-<p><strong>1. 温度 (<img src="https://latex.codecogs.com/png.latex?T,%20t">)</strong> * <strong>概念</strong>：系统宏观平衡的标志，微观粒子杂乱热运动剧烈程度的度量 [10]。 * <strong>公式</strong>：<img src="https://latex.codecogs.com/png.latex?T%20=%20t%20+%20273.15"> * <img src="https://latex.codecogs.com/png.latex?T">：热力学温度，单位：开尔文 (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BK%7D">) [11]。 * <img src="https://latex.codecogs.com/png.latex?t">：摄氏温度，单位：摄氏度 (<img src="https://latex.codecogs.com/png.latex?%5E%5Ccirc%5Ctext%7BC%7D">) [11]。</p>
-<p><strong>2. 压力 (<img src="https://latex.codecogs.com/png.latex?p">)</strong> * <strong>概念</strong>：垂直作用于单位面积上的力（即压强）[12]。 * <strong>绝对压力 (<img src="https://latex.codecogs.com/png.latex?p">)</strong>：热力学状态参数必须使用绝对压力 [13]。 * <strong>计算公式</strong> [12]： * 高于大气压时：<img src="https://latex.codecogs.com/png.latex?p%20=%20p_b%20+%20p_e"> * 低于大气压时：<img src="https://latex.codecogs.com/png.latex?p%20=%20p_b%20-%20p_v"> * <strong>变量含义</strong>： * <img src="https://latex.codecogs.com/png.latex?p">：绝对压力 (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPa%7D">)。 * <img src="https://latex.codecogs.com/png.latex?p_b">：环境大气压力 (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPa%7D">)。 * <img src="https://latex.codecogs.com/png.latex?p_e">：表压力 (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPa%7D">)。 * <img src="https://latex.codecogs.com/png.latex?p_v">：真空度 (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPa%7D">)。</p>
-<p><strong>3. 比体积 (<img src="https://latex.codecogs.com/png.latex?v">) 与密度 (<img src="https://latex.codecogs.com/png.latex?%5Crho">)</strong> * <strong>比体积</strong>：单位质量物质占有的体积 [14]。 * <img src="https://latex.codecogs.com/png.latex?v%20=%20%5Cfrac%7BV%7D%7Bm%7D"> * <img src="https://latex.codecogs.com/png.latex?V">：总体积 (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7Bm%7D%5E3">)；<img src="https://latex.codecogs.com/png.latex?m">：质量 (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7Bkg%7D">)。 * <strong>密度</strong>：单位体积物质拥有的质量 [14]。 * <img src="https://latex.codecogs.com/png.latex?%5Crho%20=%20%5Cfrac%7Bm%7D%7BV%7D"> * <strong>关系</strong>：<img src="https://latex.codecogs.com/png.latex?v%20%5Crho%20=%201"> [14]。</p>
-</section>
-<section id="平衡状态与状态方程" class="level4">
-<h4 class="anchored" data-anchor-id="平衡状态与状态方程">1-4 平衡状态与状态方程</h4>
-<ul>
-<li><strong>平衡状态</strong>：不受外界影响下，系统状态参数始终保持不变的状态 [14]。</li>
-<li><strong>理想气体状态方程</strong> [15, 16]：
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?pv%20=%20R_gT"> 或 <img src="https://latex.codecogs.com/png.latex?pV%20=%20mR_gT"></li>
-<li><strong>变量含义</strong>：
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?R_g">：气体常数，单位为 <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BJ%7D/(%5Ctext%7Bkg%7D%20%5Ccdot%20%5Ctext%7BK%7D)">。注意不同气体的 <img src="https://latex.codecogs.com/png.latex?R_g"> 不同。</li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
-<section id="过程功与热量" class="level4">
-<h4 class="anchored" data-anchor-id="过程功与热量">1-5~1-6 过程、功与热量</h4>
-<ul>
-<li><strong>准平衡过程</strong>：过程无限接近平衡态，在坐标图上可用连续曲线表示 [16, 17]。</li>
-<li><strong>可逆过程</strong>：系统与外界均能完全回复原状且无耗散损失的过程 [17, 18]。</li>
-<li><strong>体积功 (Expansion Work)</strong> [19, 20]：
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cdelta%20W%20=%20p%20%5Ctext%7Bd%7DV"> 或 <img src="https://latex.codecogs.com/png.latex?w%20=%20%5Cint_%7B1%7D%5E%7B2%7D%20p%20%5Ctext%7Bd%7Dv"></li>
-<li><strong>含义</strong>：工质体积变化而通过边界传递的功。</li>
-</ul></li>
-<li><strong>过程热量 (<img src="https://latex.codecogs.com/png.latex?Q">)</strong> [21]：
-<ul>
-<li>可逆过程：<img src="https://latex.codecogs.com/png.latex?%5Cdelta%20Q%20=%20T%20%5Ctext%7Bd%7DS"></li>
-<li><strong>约定</strong>：吸热为“+”，放热为“-”；系统对外作功为“+”，外界对系统作功为“-”。</li>
-</ul></li>
-</ul>
-</section>
-</section>
-</section>
-<section id="基本概念与定义" class="level1">
-<h1>基本概念与定义</h1>
-</section>
-<section id="热力学第一定律" class="level1">
-<h1>热力学第一定律</h1>
-</section>
-<section id="气体和蒸汽的性质" class="level1">
-<h1>气体和蒸汽的性质</h1>
-</section>
-<section id="理想气体混合物及湿空气" class="level1">
-<h1>理想气体混合物及湿空气</h1>
-</section>
-<section id="气体和蒸汽的基本热力学过程" class="level1">
-<h1>气体和蒸汽的基本热力学过程</h1>
-</section>
-<section id="热力学第一定律-1" class="level1">
-<h1>热力学第一定律</h1>
-</section>
-<section id="气体与蒸汽的流动" class="level1">
-<h1>气体与蒸汽的流动</h1>
-</section>
-<section id="压气机的热力过程" class="level1">
-<h1>压气机的热力过程</h1>
-</section>
-<section id="气体动力循环" class="level1">
-<h1>气体动力循环</h1>
-</section>
-<section id="蒸汽动力装置循环" class="level1">
-<h1>蒸汽动力装置循环</h1>
-</section>
-<section id="制冷循环" class="level1">
-<h1>制冷循环</h1>
-</section>
-<section id="实际气体的性质及热力学的一般关系式" class="level1">
-<h1>实际气体的性质及热力学的一般关系式</h1>
-</section>
-<section id="化学热力学基础" class="level1">
-<h1>化学热力学基础</h1>
-
-
-<!-- -->
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
-  <category>速通</category>
-  <guid>https://qmdthings.top/notes/工程热力学/工程热力学.html</guid>
-  <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>生产管理</title>
-  <dc:creator>QMD </dc:creator>
-  <link>https://qmdthings.top/notes/生产管理/生产管理速通.html</link>
-  <description><![CDATA[ 
-
-<p id="hitokoto">
-  hitokoto!
-</p>
-
-<script>
-  const hitokotoElement = document.querySelector("#hitokoto_text");
-
-  fetch("https://v1.hitokoto.cn?c=k")
-    .then((response) => response.json())
-    .then((data) => {
-      const hitokoto = document.querySelector("#hitokoto_text");
-      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
-      hitokoto.innerText = data.hitokoto;
-    })
-    .catch(console.error);
-
-  hitokotoElement.addEventListener("click", function (event) {
-    event.preventDefault();
-  });
-</script>
-
-
-
-
-
-<section id="绪论" class="level1">
-<h1>绪论</h1>
-</section>
-<section id="生产运作系统的设计" class="level1">
-<h1>生产运作系统的设计</h1>
-</section>
-<section id="生产运作管理系统的运行" class="level1">
-<h1>生产运作管理系统的运行</h1>
-</section>
-<section id="生产运作系统的维护与改进" class="level1">
-<h1>生产运作系统的维护与改进</h1>
-
-
-<!-- -->
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
-  <category>速通</category>
-  <guid>https://qmdthings.top/notes/生产管理/生产管理速通.html</guid>
-  <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>机械原理</title>
-  <dc:creator>QMD </dc:creator>
-  <link>https://qmdthings.top/notes/机械原理/机械原理.html</link>
-  <description><![CDATA[ 
-
-<p id="hitokoto">
-  hitokoto!
-</p>
-
-<script>
-  const hitokotoElement = document.querySelector("#hitokoto_text");
-
-  fetch("https://v1.hitokoto.cn?c=k")
-    .then((response) => response.json())
-    .then((data) => {
-      const hitokoto = document.querySelector("#hitokoto_text");
-      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
-      hitokoto.innerText = data.hitokoto;
-    })
-    .catch(console.error);
-
-  hitokotoElement.addEventListener("click", function (event) {
-    event.preventDefault();
-  });
-</script>
-
-
-
-
-
-<section id="绪论" class="level1">
-<h1>绪论</h1>
-<section id="机构与机器" class="level2">
-<h2 class="anchored" data-anchor-id="机构与机器">机构与机器</h2>
-<ul>
-<li><p><strong>机械 (Machinery)</strong>：是<strong>机构</strong>与<strong>机器</strong>的总称。</p>
-<ul>
-<li><p><strong>机构 (Mechanism)</strong>：一种用来<strong>传递与变换运动和动力</strong>的可动装置。</p></li>
-<li><p><strong>机器 (Machine)</strong>：根据某种使用要求而设计的用来<strong>变换或传递能量、物料和信息</strong>的机构组合。</p></li>
-</ul></li>
-</ul>
-<p>机械已从传统的纯机械系统演变为<strong>机电一体化系统</strong>，并进一步向融入传感器、控制器、执行器及软件的<strong>智能机械系统</strong>发展。</p>
-<ul>
-<li><p>机械向高速、重载、巨型、高效率、高精度、低噪声发展。</p></li>
-<li><p>向微型化、灵巧、智能、自适应方向发展。</p></li>
-<li><p>广泛应用计算机辅助设计（CAD）、拓扑优化设计及数字化建模。</p></li>
-<li><p><strong>原动机 (Power machine)</strong>：将其他形式能量变换为机械能的机器，是驱动机械系统的动力源。</p></li>
-<li><p><strong>工作机 (Working machine)</strong>：用来完成预定的机械加工、物料搬运或信息变换等任务的机器。</p></li>
-<li><p><strong>机械设计 (Mechanical design)</strong>：机械工程设计的简称，指设计机械装置、产品、系统或工艺过程的过程。</p></li>
-</ul>
-<p>机械设计通常遵循以下四个逻辑阶段：</p>
-<ol type="1">
-<li><p><strong>产品规划</strong>：确定产品目标、需求分析及性能技术条件。</p></li>
-<li><p><strong>方案设计 (核心阶段)</strong>：包括功能原理确定、工艺动作设计、机构选型及运动学初步设计。</p></li>
-<li><p><strong>详细设计</strong>：进行结构设计、强度/刚度计算、3D建模及仿真分析。</p></li>
-<li><p><strong>试制试验</strong>：通过物理模型或原型进行功能和性能检测。</p></li>
-</ol>
-<ul>
-<li><p><strong>正动力学问题 (Forward dynamics problem)</strong>：已知作用在机械系统上的所有力，求机械的真实运动规律（位移、速度、加速度）。</p></li>
-<li><p><strong>逆动力学问题 (Inverse dynamics problem)</strong>：已知机械系统的运动规律，求解为达到该运动必须提供的力或力矩。</p></li>
-</ul>
-</section>
-<section id="机械原理学科的研究内容" class="level2">
-<h2 class="anchored" data-anchor-id="机械原理学科的研究内容">机械原理学科的研究内容</h2>
-<p>本学科主要研究机械的基本理论问题</p>
-<ul>
-<li><p><strong>机构结构分析</strong>：研究机构组成、分类、运动简图绘制及自由度计算。</p></li>
-<li><p><strong>机构运动分析</strong>：研究位移、速度及加速度分析。</p></li>
-<li><p><strong>机械动力学</strong>：研究机构受力、摩擦、效率、平衡以及速度波动调节。</p></li>
-<li><p><strong>常用机构设计</strong>：如连杆机构、凸轮机构、齿轮机构等的设计理论。</p></li>
-<li><p><strong>机械系统方案设计</strong>：涉及执行构件的运动规划、原动机选择及系统评价。</p></li>
-</ul>
-</section>
-</section>
-<section id="机构分析基础" class="level1">
-<h1>机构分析基础</h1>
-<section id="机构的结构运动与静力分析" class="level2">
-<h2 class="anchored" data-anchor-id="机构的结构运动与静力分析">机构的结构，运动，与静力分析</h2>
-<ul>
-<li><p><strong>零件 (Component)</strong>：机器中的一个独立制造单元体</p></li>
-<li><p><strong>构件 (Link)</strong>：机器中每一个独立的<strong>运动单元体</strong>。构件可以是单一的零件，也可以是由若干零件刚性连接而成的组合体。</p></li>
-</ul>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">graph LR
-A["零件"]--&gt;B["构件"]--&gt;C["机构"]--&gt;D["机器"]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<ul>
-<li><p><strong>运动副 (Kinematic pair)</strong>：两构件直接接触并能产生相对运动的<strong>可动连接</strong>。</p>
-<ul>
-<li><p><strong>运动副元素</strong>：两构件上参加接触而构成运动副的表面。</p></li>
-<li><p><strong>低副 (Lower pair)</strong>：通过<strong>面接触</strong>构成的运动副，如转动副和移动副。</p></li>
-<li><p><strong>高副 (Higher pair)</strong>：通过<strong>点或线接触</strong>构成的运动副，如凸轮副和齿轮副。</p></li>
-</ul></li>
-</ul>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">graph LR
-
-A["运动副分类"] --&gt; B["按副元素接触形式"]
-B --&gt; B1["低副: 通过面接触构成"]
-B --&gt; B2["高副: 通过点或线接触构成"]
-
-A --&gt; C["按相对运动形式"]
-
-subgraph K ["复合平面运动副"]
-C1["平面运动副"]
-C2["空间运动副"]
-end
-
-C --&gt; C1
-C --&gt; C2
-
-
-subgraph L ["基本运动副"]
-C1a["转动副/回转副R"]
-C1b["移动副P"]
-end
-
-C1 --&gt; C1a["转动副/回转副R"]
-C1 --&gt; C1b["移动副P"]
-C1 --&gt; C1b["平面副F"]
-
-C2 --&gt; C2a["螺旋副H"]
-C2 --&gt; C2b["球面副S"]
-C2 --&gt; C2c["槽销副RP/球销副/圆柱副C等"]
-
-A --&gt; D["按封闭方式"]
-D --&gt; D1["几何封闭: 靠副元素几何形状封闭"]
-D --&gt; D2["力封闭: 靠重力、弹簧力等封闭"]
-
-A --&gt; E["按引入约束的数目"]
-E --&gt; E1["I 级副: 引入 1 个约束"]
-E --&gt; E2["II 级副: 引入 2 个约束"]
-E --&gt; E3["..."]
-E --&gt; E4["V 级副: 引入 5 个约束"]
-
-A--&gt; F["运动副的链接情况"]
-F--&gt; F1["单副构件"]
-F--&gt; F1["两副构件"]
-F--&gt; F1["四副构件"]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<p><strong>这里应该有常用运动副的符号及其代号的图片</strong> 由于图床没有搭建好,过几天会补</p>
-<ul>
-<li><p><strong>自由度 (Degree of freedom)</strong>：构件具有的<strong>独立运动的数目</strong>。 机构有多少个自由度，就需要多少个原动件（电机、发动机等）来驱动，它才能有确定的运动。 自由度数 &gt; 原动件数：机构运动不确定，会产生乱动或随意运动，无法完成预定工作。 自由度数 &lt; 原动件数：机构会卡死（干涉），导致构件损坏或无法启动。</p>
-<ul>
-<li><p>自由度分析：</p>
-<ul>
-<li><p><strong>复合铰链</strong>：两个以上构件在同一处形成的转动副。若 <img src="https://latex.codecogs.com/png.latex?m"> 个构件相连，则有 <img src="https://latex.codecogs.com/png.latex?(m-1)"> 个转动副。</p></li>
-<li><p><strong>局部自由度</strong>：机构中某些构件所具有的、不影响其他构件运动的自由度。计算时应将其从总自由度中减去。</p></li>
-<li><p><strong>虚约束</strong>：机构中对运动不起独立限制作用的重复约束。计算时应将其除去。</p>
-<ul>
-<li><strong>重复部分带入的虚约束数</strong>： <img src="https://latex.codecogs.com/png.latex?p'%20=%202p'_l%20+%20p'_h%20-%203n'"> 其中 <img src="https://latex.codecogs.com/png.latex?n'">、<img src="https://latex.codecogs.com/png.latex?p'_l">、<img src="https://latex.codecogs.com/png.latex?p'_h"> 分别为重复部分的构件数、低副数和高副数。</li>
-</ul></li>
-</ul></li>
-<li><p>自由度计算：</p>
-<ul>
-<li><p><strong>空间构件</strong>：<img src="https://latex.codecogs.com/png.latex?f%20=%206%20-%20s"> （<img src="https://latex.codecogs.com/png.latex?s"> 为约束数）。</p></li>
-<li><p><strong>平面构件</strong>：<img src="https://latex.codecogs.com/png.latex?f%20=%203%20-%20s"> 。</p></li>
-<li><p><strong>平面机构自由度 (Kutzbach 判据)</strong>： <img src="https://latex.codecogs.com/png.latex?F%20=%203n%20-%20(2p_l%20+%20p_h)"> 其中：<img src="https://latex.codecogs.com/png.latex?n"> 为活动构件数，<img src="https://latex.codecogs.com/png.latex?p_l"> 为低副数，<img src="https://latex.codecogs.com/png.latex?p_h"> 为高副数。</p></li>
-<li><p><strong>考虑特殊约束的平面公式</strong>： <img src="https://latex.codecogs.com/png.latex?F%20=%203n%20-%20(2p_l%20+%20p_h%20-%20p')%20-%20F'"> 其中：<img src="https://latex.codecogs.com/png.latex?p'"> 为虚约束数，<img src="https://latex.codecogs.com/png.latex?F'"> 为局部自由度数。</p></li>
-<li><p><strong>空间机构自由度</strong>： <img src="https://latex.codecogs.com/png.latex?F%20=%206n%20-%20(5p_5%20+%204p_4%20+%203p_3%20+%202p_2%20+%20p_1)"> 其中 <img src="https://latex.codecogs.com/png.latex?p_i"> 代表具有 <img src="https://latex.codecogs.com/png.latex?i"> 级约束的运动副数目。</p></li>
-</ul></li>
-</ul></li>
-<li><p><strong>约束 (Constraint)</strong>：构件间构成运动副后，其独立运动受到的限制。</p></li>
-<li><p><strong>运动链 (Kinematic chain)</strong>：构件通过运动副连接而形成的系统。分为<strong>闭链</strong>（首末封闭）和<strong>开链</strong>（首末不封闭）。也有平面运动链与空间运动副之分</p></li>
-<li><p><strong>机构 (Mechanism)</strong>：在运动链中将其中一个构件加以固定（成为<strong>机架</strong>）后，当其中的原动件(主动件)按给定运动规律运动时，其余从动件具有确定运动的系统。机构 = 机架 + 原动件 + 基本杆组 按照<strong>机构的工作原理</strong>及组成构件情况的不同，机构可以分为<strong>连杆机构</strong>，<strong>凸轮机构</strong>，<strong>齿轮机构</strong>，<strong>棘轮机构</strong>，<strong>槽轮机构</strong> ，<strong>螺旋机构</strong> ，<strong>摩擦传动机构</strong> 根据组成机构的<strong>构件性质</strong>，机构可分为：<strong>刚性机构</strong>，<strong>柔性机构 / 顺应机构</strong>：利用构件的弹性变形来传递运动和动力，<strong>挠性传动机构</strong>，<strong>气动机构</strong>，<strong>液压机构</strong></p></li>
-<li><p><strong>机构运动简图 (Kinematic diagram of mechanism)</strong>：用简单的图形符号和线段按比例表示机构各构件间相对运动关系的图形。</p></li>
-</ul>
-<p>只有按照比例绘制的图才能称为“机构运动简图”；若仅为了表明结构状况而不按比例绘制，则称为<strong>机构示意图</strong>。</p>
-<ol type="1">
-<li><p>认清机械的结构组成及运动情况： 首先要分析机械的实际构造，确定其由多少个<strong>构件</strong>组成，并弄清楚各个构件之间形成了何种<strong>运动副</strong>（如转动副、移动副等）需要明确运动的传递路线，分清哪些是原动件，哪些是执行构件及中间传动构件。</p></li>
-<li><p>选择适当的投影平面： 选择<strong>各构件的运动平面</strong>作为视读平面。对于复杂的机械，如果一部分运动在另一平面内，可以单独绘制局部简图。</p></li>
-<li><p>选择适当的长度比例尺 (<img src="https://latex.codecogs.com/png.latex?%5Cmu_l">)： 根据机械的运动尺寸（如转动副中心的距离、移动副导路的方位等），确定一个合适的<strong>长度比例尺</strong>。<img src="https://latex.codecogs.com/png.latex?%5Cmu_l%20=%20%5Cfrac%7B%5Ctext%7B%E5%AE%9E%E9%99%85%E9%95%BF%E5%BA%A6%20(m)%7D%7D%7B%5Ctext%7B%E5%9B%BE%E4%B8%8A%E7%9A%84%E9%95%BF%E5%BA%A6%20(mm)%7D%7D">。</p>
-<ol start="4" type="1">
-<li>绘制简图并标注符号
-<ul>
-<li><p><strong>定位</strong>：先选定原动件的某一位置，按比例尺定出各运动副的相对位置。</p></li>
-<li><p><strong>绘图</strong>：利用国家标准规定的符号画出运动副，并用线段或简单几何图形连接起来表示构件。</p></li>
-<li><p><strong>标注</strong>：通常用数字 1、2、3… 标注构件，用英文字母 A、B、C… 标注运动副。</p></li>
-<li><p><strong>原动件标识</strong>：在原动件上画出代表运动方向的箭头。</p></li>
-</ul></li>
-</ol></li>
-</ol>
-<p>通过以上步骤，便可以将复杂的工程实际机械抽象为便于理论分析和性能研究的运动简图。</p>
-<ul>
-<li><strong>基本杆组 (Assur group)</strong>：又称苏尔杆组，是<strong>自由度为零</strong>且不能再拆分的最小构件组。</li>
-</ul>
-<p>基本杆组（苏尔杆组）的组成条件 * 对于全低副平面基本杆组： <img src="https://latex.codecogs.com/png.latex?3n%20-%202p_l%20=%200"> 常见的有 <strong>II 级组</strong>（<img src="https://latex.codecogs.com/png.latex?n=2,%20p_l=3">）和 <strong>III 级组</strong>（<img src="https://latex.codecogs.com/png.latex?n=4,%20p_l=6">）。</p>
-<ul>
-<li><p><strong>机架变换（机构倒置）</strong>：通过取不同的构件为机架来获得不同的机构。</p></li>
-<li><p><strong>高副低代</strong>：在进行运动分析或动力分析时，常将机构中的高副根据一定条件虚拟地以低副加以代替，化为全低副机构。</p></li>
-<li><p><strong>运动副元素尺寸扩大</strong>：如将转动副改为偏心轮，不改变机构运动性质，但可提高强度。</p></li>
-<li><p><strong>速度瞬心 (Instantaneous centre of velocity)</strong>：互作平面相对运动的两构件上瞬时速度相等的重合点。</p>
-<ul>
-<li><p><strong>绝对瞬心</strong>：瞬心处的绝对速度为零（其中一个构件为机架）。</p></li>
-<li><p><strong>相对瞬心</strong>：瞬心处的绝对速度不为零，但两构件在该点的速度相等。</p></li>
-</ul></li>
-<li><p><strong>三心定理 (Kennedy-Aronhold Theorem)</strong>：三个彼此作平面平行运动的构件共有三个瞬心，且这三个瞬心必位于<strong>同一直线上</strong>。</p></li>
-<li><p><strong>速度影像与加速度影像 (Velocity and acceleration image)</strong>：在同一构件上，由各点相对速度（或相对加速度）矢量末端构成的图形与原构件几何图形相似，且字母顺序一致。</p></li>
-<li><p><strong>哥氏加速度 (Coriolis acceleration, <img src="https://latex.codecogs.com/png.latex?a%5Ek">)</strong>：当一构件在另一转动构件上移动时，由于相对运动与牵连转动而产生的附加加速度。</p></li>
-</ul>
-<ol start="6" type="1">
-<li><strong>机构传动比 (<img src="https://latex.codecogs.com/png.latex?i">)</strong>：机构中两构件角速度的比值。</li>
-</ol>
-<section id="二-核心知识点-knowledge-points" class="level3">
-<h3 class="anchored" data-anchor-id="二-核心知识点-knowledge-points">二、 核心知识点 (Knowledge Points)</h3>
-<section id="运动分析的方法" class="level4">
-<h4 class="anchored" data-anchor-id="运动分析的方法">1. 运动分析的方法</h4>
-<ul>
-<li><strong>图解法</strong>：直观、简单，适用于对机构在特定位置的运动分析，主要包括<strong>矢量方程图解法</strong>和<strong>瞬心法</strong> [1, 6]。</li>
-<li><strong>解析法</strong>：精度高，适用于整个运动循环的连续分析，便于利用计算机进行机构优化设计 [1]。</li>
-</ul>
-</section>
-<section id="瞬心法分析步骤" class="level4">
-<h4 class="anchored" data-anchor-id="瞬心法分析步骤">2. 瞬心法分析步骤</h4>
-<ul>
-<li>确定瞬心总数。</li>
-<li>利用直接观察（运动副处）和三心定理找齐所有瞬心。</li>
-<li>利用瞬心点速度相等的特性求解角速度或线速度。</li>
-</ul>
-</section>
-<section id="矢量方程图解法-相对运动解法-6-8" class="level4">
-<h4 class="anchored" data-anchor-id="矢量方程图解法-相对运动解法-6-8">3. 矢量方程图解法 (相对运动解法) [6, 8]</h4>
-<ul>
-<li>依据理论力学的运动合成原理：<img src="https://latex.codecogs.com/png.latex?%5Ctext%7B%E7%BB%9D%E5%AF%B9%E8%BF%90%E5%8A%A8%7D%20=%20%5Ctext%7B%E7%89%B5%E8%BF%9E%E8%BF%90%E5%8A%A8%7D%20+%20%5Ctext%7B%E7%9B%B8%E5%AF%B9%E8%BF%90%E5%8A%A8%7D">。</li>
-<li>需要选取合适的速度比例尺 <img src="https://latex.codecogs.com/png.latex?%5Cmu_v"> 和加速度比例尺 <img src="https://latex.codecogs.com/png.latex?%5Cmu_a">。</li>
-</ul>
-</section>
-<section id="解析法常用工具-9-10" class="level4">
-<h4 class="anchored" data-anchor-id="解析法常用工具-9-10">4. 解析法常用工具 [9, 10]</h4>
-<ul>
-<li><strong>复数矢量法</strong>：利用欧拉公式将矢量方程转化为代数方程。</li>
-<li><strong>矩阵法</strong>：建立位置矩阵方程，通过求导得到速度和加速度矩阵方程。</li>
-</ul>
-</section>
-</section>
-<section id="三-核心公式-formulas" class="level3">
-<h3 class="anchored" data-anchor-id="三-核心公式-formulas">三、 核心公式 (Formulas)</h3>
-<section id="比例尺计算-1-8" class="level4">
-<h4 class="anchored" data-anchor-id="比例尺计算-1-8">1. 比例尺计算 [1, 8]</h4>
-<ul>
-<li>长度比例尺：<img src="https://latex.codecogs.com/png.latex?%5Cmu_l%20=%20%5Cfrac%7B%E5%AE%9E%E9%99%85%E9%95%BF%E5%BA%A6(m)%7D%7B%E5%9B%BE%E4%B8%8A%E9%95%BF%E5%BA%A6(mm)%7D"></li>
-<li>速度比例尺：<img src="https://latex.codecogs.com/png.latex?%5Cmu_v%20=%20%5Cfrac%7B%E5%AE%9E%E9%99%85%E9%80%9F%E5%BA%A6(m/s)%7D%7B%E5%9B%BE%E4%B8%8A%E9%80%9F%E5%BA%A6(mm)%7D"></li>
-</ul>
-</section>
-<section id="瞬心数量公式" class="level4">
-<h4 class="anchored" data-anchor-id="瞬心数量公式">2. 瞬心数量公式</h4>
-<p><img src="https://latex.codecogs.com/png.latex?K%20=%20%5Cfrac%7BN(N-1)%7D%7B2%7D"> （其中 <img src="https://latex.codecogs.com/png.latex?N"> 为构件总数，含机架）</p>
-</section>
-<section id="矢量位移方程封闭矢量环-11" class="level4">
-<h4 class="anchored" data-anchor-id="矢量位移方程封闭矢量环-11">3. 矢量位移方程（封闭矢量环） [11]</h4>
-<p><img src="https://latex.codecogs.com/png.latex?%5Csum%20%5Cvec%7Bl%7D_i%20=%200"></p>
-</section>
-<section id="速度矢量方程同一构件两点间-8" class="level4">
-<h4 class="anchored" data-anchor-id="速度矢量方程同一构件两点间-8">4. 速度矢量方程（同一构件两点间） [8]</h4>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cvec%7Bv%7D_C%20=%20%5Cvec%7Bv%7D_B%20+%20%5Cvec%7Bv%7D_%7BCB%7D"> 其中：<img src="https://latex.codecogs.com/png.latex?v_%7BCB%7D%20=%20%5Comega%20%5Ccdot%20l_%7BBC%7D">，方向垂直于 <img src="https://latex.codecogs.com/png.latex?BC">。</p>
-</section>
-<section id="加速度矢量方程同一构件两点间-8" class="level4">
-<h4 class="anchored" data-anchor-id="加速度矢量方程同一构件两点间-8">5. 加速度矢量方程（同一构件两点间） [8]</h4>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cvec%7Ba%7D_C%20=%20%5Cvec%7Ba%7D_B%20+%20%5Cvec%7Ba%7D_%7BCB%7D%5En%20+%20%5Cvec%7Ba%7D_%7BCB%7D%5Et"> * <strong>法向加速度</strong>：<img src="https://latex.codecogs.com/png.latex?a_%7BCB%7D%5En%20=%20%5Comega%5E2%20%5Ccdot%20l_%7BBC%7D">，方向由 <img src="https://latex.codecogs.com/png.latex?C"> 指向 <img src="https://latex.codecogs.com/png.latex?B">。 * <strong>切向加速度</strong>：<img src="https://latex.codecogs.com/png.latex?a_%7BCB%7D%5Et%20=%20%5Calpha%20%5Ccdot%20l_%7BBC%7D">，方向垂直于 <img src="https://latex.codecogs.com/png.latex?BC">。</p>
-</section>
-<section id="哥氏加速度计算公式-4" class="level4">
-<h4 class="anchored" data-anchor-id="哥氏加速度计算公式-4">6. 哥氏加速度计算公式 [4]</h4>
-<p><img src="https://latex.codecogs.com/png.latex?a%5Ek%20=%202%5Comega%20%5Ccdot%20v_r"> （其中 <img src="https://latex.codecogs.com/png.latex?%5Comega"> 为牵连角速度，<img src="https://latex.codecogs.com/png.latex?v_r"> 为相对速度。方向：将 <img src="https://latex.codecogs.com/png.latex?v_r"> 顺着 <img src="https://latex.codecogs.com/png.latex?%5Comega"> 的转向转过 <img src="https://latex.codecogs.com/png.latex?90%5E%5Ccirc">）</p>
-</section>
-<section id="矩阵分析通用形式-12" class="level4">
-<h4 class="anchored" data-anchor-id="矩阵分析通用形式-12">7. 矩阵分析通用形式 [12]</h4>
-<ul>
-<li>速度分析：<img src="https://latex.codecogs.com/png.latex?A%5Comega%20=%20%5Comega_1%20B"></li>
-<li>加速度分析：<img src="https://latex.codecogs.com/png.latex?A%5Calpha%20=%20-%5Cdot%7BA%7D%5Comega%20+%20%5Comega_1%20%5Cdot%7BB%7D"></li>
-</ul>
-</section>
-</section>
-</section>
-<section id="机械的动力平衡运转以及速度波动调节" class="level2">
-<h2 class="anchored" data-anchor-id="机械的动力平衡运转以及速度波动调节">机械的动力，平衡，运转，以及速度波动调节</h2>
-</section>
-</section>
-<section id="常用机构设计" class="level1">
-<h1>常用机构设计</h1>
-<section id="连杆凸轮齿轮机构及其设计" class="level2">
-<h2 class="anchored" data-anchor-id="连杆凸轮齿轮机构及其设计">连杆，凸轮，齿轮机构及其设计</h2>
-</section>
-<section id="其他常用机构" class="level2">
-<h2 class="anchored" data-anchor-id="其他常用机构">其他常用机构</h2>
-</section>
-</section>
-<section id="机械方案设计" class="level1">
-<h1>机械方案设计</h1>
-<section id="机械系统方案的设计" class="level2">
-<h2 class="anchored" data-anchor-id="机械系统方案的设计">机械系统方案的设计</h2>
-</section>
-<section id="机器人机构及其设计" class="level2">
-<h2 class="anchored" data-anchor-id="机器人机构及其设计">机器人机构及其设计</h2>
-
-
-<!-- -->
-
-</section>
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
-  <category>速通</category>
-  <guid>https://qmdthings.top/notes/机械原理/机械原理.html</guid>
-  <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
   <title>热化学基础</title>
   <dc:creator>QMD </dc:creator>
   <link>https://qmdthings.top/posts/开始/</link>
@@ -2079,9 +2079,9 @@ F--&gt; F1["四副构件"]
   <pubDate>Mon, 09 Mar 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>有机化学与有机化合物</title>
+  <title>无机物单质及化合物</title>
   <dc:creator>QMD </dc:creator>
-  <link>https://qmdthings.top/notes/工程化学/8. 有机化学和有机化合物.html</link>
+  <link>https://qmdthings.top/notes/工程化学/6. 无机物单质及化合物.html</link>
   <description><![CDATA[ 
 
 <p id="hitokoto">
@@ -2109,69 +2109,75 @@ F--&gt; F1["四副构件"]
 
 
 
-<section id="酸碱质子理论-brønsted-lowry-theory" class="level3">
-<h3 class="anchored" data-anchor-id="酸碱质子理论-brønsted-lowry-theory">1. 酸碱质子理论 (Brønsted-Lowry Theory)</h3>
-<p>这是现代酸碱化学的基础。 * <strong>定义</strong>：凡是能给出质子（<img src="https://latex.codecogs.com/png.latex?H%5E+">）的分子或离子都是<strong>酸</strong>；凡是能接受质子的分子或离子都是<strong>碱</strong>。 * <strong>共轭酸碱对</strong>：酸给出质子后变成其<strong>共轭碱</strong>，碱接受质子后变成其<strong>共轭酸</strong>（例如 <img src="https://latex.codecogs.com/png.latex?NH_4%5E+%20/%20NH_3">）。 * <strong>酸碱反应的本质</strong>：是两对共轭酸碱对之间的<strong>质子传递</strong>反应。</p>
-</section>
-<section id="水的自耦电离与溶液的酸碱性" class="level3">
-<h3 class="anchored" data-anchor-id="水的自耦电离与溶液的酸碱性">2. 水的自耦电离与溶液的酸碱性</h3>
-<ul>
-<li><strong>自耦电离平衡</strong>：<img src="https://latex.codecogs.com/png.latex?H_2O%20+%20H_2O%20%5Crightleftharpoons%20H_3O%5E+%20+%20OH%5E-">。</li>
-<li><strong>水的离子积常数 (<img src="https://latex.codecogs.com/png.latex?K_w">)</strong>： <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BK_w%20=%20%5BH_3O%5E+%5D%5BOH%5E-%5D%7D"> 在 <img src="https://latex.codecogs.com/png.latex?298.15%20%5Ctext%7B%20K%7D"> 时，<img src="https://latex.codecogs.com/png.latex?K_w%20=%201.0%20%5Ctimes%2010%5E%7B-14%7D">。由于该反应是吸热的，温度越高，<img src="https://latex.codecogs.com/png.latex?K_w"> 越大。</li>
-<li><strong>pH 的定义</strong>：<img src="https://latex.codecogs.com/png.latex?pH%20=%20-%5Clg%5BH_3O%5E+%5D">。</li>
-</ul>
-</section>
-<section id="共轭酸碱对-k_a-与-k_b-的关系推导" class="level3">
-<h3 class="anchored" data-anchor-id="共轭酸碱对-k_a-与-k_b-的关系推导">3. 共轭酸碱对 <img src="https://latex.codecogs.com/png.latex?K_a"> 与 <img src="https://latex.codecogs.com/png.latex?K_b"> 的关系推导</h3>
-<p>这是酸碱平衡中最重要的定量关系之一。</p>
-<ul>
-<li><strong>推导过程</strong>：
+<section id="一-无机化合物的物理性质规律" class="level3">
+<h3 class="anchored" data-anchor-id="一-无机化合物的物理性质规律">一、 无机化合物的物理性质规律</h3>
+<p>本部分利用第五章的物质结构理论，推导宏观性质的变化规律：</p>
 <ol type="1">
-<li>设弱酸 <img src="https://latex.codecogs.com/png.latex?HA"> 的电离：<img src="https://latex.codecogs.com/png.latex?HA%20+%20H_2O%20%5Crightleftharpoons%20H_3O%5E+%20+%20A%5E-">，<img src="https://latex.codecogs.com/png.latex?K_a%20=%20%5Cfrac%7B%5BH_3O%5E+%5D%5BA%5E-%5D%7D%7B%5BHA%5D%7D">。</li>
-<li>其共轭碱 <img src="https://latex.codecogs.com/png.latex?A%5E-"> 的水解（电离）：<img src="https://latex.codecogs.com/png.latex?A%5E-%20+%20H_2O%20%5Crightleftharpoons%20OH%5E-%20+%20HA">，<img src="https://latex.codecogs.com/png.latex?K_b%20=%20%5Cfrac%7B%5BOH%5E-%5D%5BHA%5D%7D%7B%5BA%5E-%5D%7D">。</li>
-<li>将 <img src="https://latex.codecogs.com/png.latex?K_a"> 与 <img src="https://latex.codecogs.com/png.latex?K_b"> 相乘： <img src="https://latex.codecogs.com/png.latex?K_a%20%5Ccdot%20K_b%20=%20%5Cleft(%20%5Cfrac%7B%5BH_3O%5E+%5D%5BA%5E-%5D%7D%7B%5BHA%5D%7D%20%5Cright)%20%5Ccdot%20%5Cleft(%20%5Cfrac%7B%5BOH%5E-%5D%5BHA%5D%7D%7B%5BA%5E-%5D%7D%20%5Cright)%20=%20%5BH_3O%5E+%5D%5BOH%5E-%5D"></li>
-<li><strong>结论</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BK_a%20%5Ccdot%20K_b%20=%20K_w%7D">（或 <img src="https://latex.codecogs.com/png.latex?pK_a%20+%20pK_b%20=%20pK_w">）。这说明酸的强度越大，其共轭碱的强度就越小。</li>
-</ol></li>
-</ul>
-</section>
-<section id="弱酸弱碱溶液-ph-的计算推导" class="level3">
-<h3 class="anchored" data-anchor-id="弱酸弱碱溶液-ph-的计算推导">4. 弱酸/弱碱溶液 pH 的计算推导</h3>
-<p>对于一元弱酸 <img src="https://latex.codecogs.com/png.latex?HA">（初始浓度为 <img src="https://latex.codecogs.com/png.latex?c">），其电离平衡为：<img src="https://latex.codecogs.com/png.latex?HA%20%5Crightleftharpoons%20H%5E+%20+%20A%5E-">。</p>
+<li><strong>熔沸点与硬度</strong>：
 <ul>
-<li><strong>推导过程</strong>：
+<li><strong>推导逻辑</strong>：物质的熔沸点取决于质点间作用力的强弱。</li>
+<li><strong>规律</strong>：原子晶体（如金刚石）&gt; 离子晶体 &gt; 金属晶体 &gt; 分子晶体。</li>
+</ul></li>
+<li><strong>溶解性</strong>：
+<ul>
+<li><strong>推导逻辑</strong>：遵循“相似相溶”原理。极性溶质易溶于极性溶剂（如水），非极性溶质易溶于非极性溶剂（如苯）。</li>
+</ul></li>
+</ol>
+</section>
+<section id="二-无机化合物的化学性质递变" class="level3">
+<h3 class="anchored" data-anchor-id="二-无机化合物的化学性质递变">二、 无机化合物的化学性质递变</h3>
+<p>利用周期律推导同周期或同族元素化合物的性质变化：</p>
 <ol type="1">
-<li>设平衡时 <img src="https://latex.codecogs.com/png.latex?%5BH%5E+%5D%20=%20%5BA%5E-%5D%20=%20x">，则平衡时 <img src="https://latex.codecogs.com/png.latex?%5BHA%5D%20=%20c%20-%20x">。</li>
-<li>代入平衡常数式：<img src="https://latex.codecogs.com/png.latex?K_a%20=%20%5Cfrac%7Bx%5E2%7D%7Bc-x%7D">。</li>
-<li><strong>近似处理</strong>：当 <img src="https://latex.codecogs.com/png.latex?c/K_a%20%5Cge%20400"> 时（即酸极弱且浓度不太稀），可以认为 <img src="https://latex.codecogs.com/png.latex?c-x%20%5Capprox%20c">。</li>
-<li>得出计算公式：<img src="https://latex.codecogs.com/png.latex?x%5E2%20=%20K_a%20%5Ccdot%20c%20%5CRightarrow%20%5Cmathbf%7B%5BH%5E+%5D%20=%20%5Csqrt%7BK_a%20c%7D%7D">。</li>
-<li>同理，弱碱溶液的 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7B%5BOH%5E-%5D%20=%20%5Csqrt%7BK_b%20c%7D%7D">。</li>
-</ol></li>
-</ul>
-</section>
-<section id="同离子效应与缓冲溶液" class="level3">
-<h3 class="anchored" data-anchor-id="同离子效应与缓冲溶液">5. 同离子效应与缓冲溶液</h3>
+<li><strong>酸碱性</strong>：
 <ul>
-<li><strong>同离子效应</strong>：在弱电解质溶液中加入含有相同离子的强电解质（如在 <img src="https://latex.codecogs.com/png.latex?HAc"> 中加 <img src="https://latex.codecogs.com/png.latex?NaAc">），平衡会逆向移动，从而降低弱电解质的电离度。</li>
-<li><strong>缓冲溶液 (Buffer Solutions)</strong>：由弱酸及其共轭碱（如 <img src="https://latex.codecogs.com/png.latex?HAc%20-%20NaAc">）组成的混合溶液，能抵抗少量强酸、强碱或稀释对 pH 的影响。</li>
-</ul>
-</section>
-<section id="缓冲公式的推导-henderson-hasselbalch-equation" class="level3">
-<h3 class="anchored" data-anchor-id="缓冲公式的推导-henderson-hasselbalch-equation">6. 缓冲公式的推导 (Henderson-Hasselbalch Equation)</h3>
-<p>这是计算缓冲溶液 pH 的核心公式。</p>
+<li><strong>规律</strong>：同周期从左到右，最高价氧化物水化物的酸性增强，碱性减弱；同族从上到下，酸性减弱，碱性增强。</li>
+</ul></li>
+<li><strong>氧化还原性</strong>：
 <ul>
-<li><strong>推导过程</strong>：
+<li><strong>推导逻辑</strong>：与其电负性及电极电势相关。高氧化态通常具有氧化性，低氧化态具有还原性。</li>
+</ul></li>
+</ol>
+</section>
+<section id="三-配位化合物配合物基础-本章理论核心" class="level3">
+<h3 class="anchored" data-anchor-id="三-配位化合物配合物基础-本章理论核心">三、 配位化合物（配合物）基础 —— 本章理论核心</h3>
+<p>配合物是由中心原子（或离子）与配体通过配位键结合而成的复杂离子或分子。</p>
 <ol type="1">
-<li>对于缓冲体系 <img src="https://latex.codecogs.com/png.latex?HA%20-%20A%5E-">，<img src="https://latex.codecogs.com/png.latex?K_a%20=%20%5Cfrac%7B%5BH%5E+%5D%5BA%5E-%5D%7D%7B%5BHA%5D%7D">。</li>
-<li>整理得：<img src="https://latex.codecogs.com/png.latex?%5BH%5E+%5D%20=%20K_a%20%5Ccdot%20%5Cfrac%7B%5BHA%5D%7D%7B%5BA%5E-%5D%7D">。</li>
-<li>两边取负对数：<img src="https://latex.codecogs.com/png.latex?-%5Clg%5BH%5E+%5D%20=%20-%5Clg%20K_a%20-%20%5Clg%20%5Cfrac%7B%5BHA%5D%7D%7B%5BA%5E-%5D%7D">。</li>
-<li><strong>最终表达式</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BpH%20=%20pK_a%20+%20%5Clg%20%5Cfrac%7B%5BA%5E-%5D%7D%7B%5BHA%5D%7D%7D">（或 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BpH%20=%20pK_a%20+%20%5Clg%20%5Cfrac%7Bc_%7B%5Ctext%7B%E7%A2%B1%7D%7D%7D%7Bc_%7B%5Ctext%7B%E9%85%B8%7D%7D%7D%7D">）。</li>
-</ol></li>
-<li><strong>缓冲范围</strong>：通常在 <img src="https://latex.codecogs.com/png.latex?pH%20=%20pK_a%20%5Cpm%201"> 之间。当 <img src="https://latex.codecogs.com/png.latex?c_%7B%5Ctext%7B%E7%A2%B1%7D%7D%20=%20c_%7B%5Ctext%7B%E9%85%B8%7D%7D"> 时，缓冲能力最强，此时 <img src="https://latex.codecogs.com/png.latex?pH%20=%20pK_a">。</li>
-</ul>
+<li><strong>组成结构</strong>：
+<ul>
+<li><strong>中心原子</strong>：通常是过渡金属离子。</li>
+<li><strong>配体</strong>：含有孤对电子的分子或离子（如 <img src="https://latex.codecogs.com/png.latex?NH_3,%20Cl%5E-,%20H_2O">）。</li>
+<li><strong>配位数</strong>：中心原子结合配体的数目。</li>
+</ul></li>
+<li><strong>螯合物 (Chelates)</strong>：
+<ul>
+<li><strong>定义</strong>：多齿配体与同一个中心原子形成具有环状结构的配合物。</li>
+<li><strong>特性</strong>：螯合物比一般的单齿配合物具有极高的稳定性（即<strong>螯合效应</strong>）。</li>
+</ul></li>
+<li><strong>配合物成键理论的推导（价键理论）</strong>：
+<ul>
+<li><strong>核心思想</strong>：中心原子提供<strong>空轨道</strong>，配体提供<strong>孤对电子</strong>，两者通过<strong>杂化</strong>形成配位键。</li>
+<li><strong>推导示例</strong>：例如 <img src="https://latex.codecogs.com/png.latex?%5BCu(NH_3)_4%5D%5E%7B2+%7D">，铜离子通过 <img src="https://latex.codecogs.com/png.latex?dsp%5E2"> 杂化，形成平面四方形结构。</li>
+</ul></li>
+</ol>
 </section>
-<section id="酸碱指示剂" class="level3">
-<h3 class="anchored" data-anchor-id="酸碱指示剂">7. 酸碱指示剂</h3>
-<p>指示剂本身是弱的有机酸或碱（用 <img src="https://latex.codecogs.com/png.latex?HIn"> 表示），其酸式和碱式具有不同颜色。当溶液的 <img src="https://latex.codecogs.com/png.latex?%5BH%5E+%5D"> 改变到使其酸碱型比例发生反转时，颜色随之改变（变色范围通常为 <img src="https://latex.codecogs.com/png.latex?pH%20=%20pK_%7BIn%7D%20%5Cpm%201">）。</p>
+<section id="四-工程材料化学应用" class="level3">
+<h3 class="anchored" data-anchor-id="四-工程材料化学应用">四、 工程材料化学应用</h3>
+<p>作为机械专业的学生，这一部分将化学理论与实际材料性能挂钩：</p>
+<ol type="1">
+<li><strong>金属材料与合金</strong>：
+<ul>
+<li><strong>合金化原理</strong>：通过引入其他元素改变基体金属的结构，从而提高强度、硬度或耐腐蚀性。</li>
+</ul></li>
+<li><strong>无机非金属材料</strong>：
+<ul>
+<li><strong>传统材料</strong>：水泥、玻璃、陶瓷的化学组成与硬化原理（如水泥的水化反应）。</li>
+<li><strong>新型材料</strong>：如纳米材料、超导材料和半导体材料的特性。</li>
+</ul></li>
+</ol>
+</section>
+<section id="五-核心概念的逻辑关联" class="level3">
+<h3 class="anchored" data-anchor-id="五-核心概念的逻辑关联">五、 核心概念的逻辑关联</h3>
+<p>本章的知识点并非孤立，它们形成了一个完整的应用链条： * 通过<strong>结构理论</strong>（杂化、晶体类型）预测<strong>物理性质</strong>（硬度、熔点）； * 通过<strong>热力学和电极电势</strong>预测<strong>化学稳定性</strong>（氧化还原、酸碱）； * 利用<strong>配位化学</strong>解决金属的提取、提纯及化学转化膜处理（如发黑、磷化）。</p>
 
 
 <!-- -->
@@ -2180,7 +2186,116 @@ F--&gt; F1["四副构件"]
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
   <category>工程化学</category>
-  <guid>https://qmdthings.top/notes/工程化学/8. 有机化学和有机化合物.html</guid>
+  <guid>https://qmdthings.top/notes/工程化学/6. 无机物单质及化合物.html</guid>
+  <pubDate>Mon, 09 Mar 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>物质结构基础</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/notes/工程化学/5. 物质结构基础.html</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+  hitokoto!
+</p>
+
+<script>
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+  fetch("https://v1.hitokoto.cn?c=k")
+    .then((response) => response.json())
+    .then((data) => {
+      const hitokoto = document.querySelector("#hitokoto_text");
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+      hitokoto.innerText = data.hitokoto;
+    })
+    .catch(console.error);
+
+  hitokotoElement.addEventListener("click", function (event) {
+    event.preventDefault();
+  });
+</script>
+
+
+
+
+
+<section id="一-核外电子的运动状态量子力学模型" class="level3">
+<h3 class="anchored" data-anchor-id="一-核外电子的运动状态量子力学模型">一、 核外电子的运动状态（量子力学模型）</h3>
+<p>与宏观机械运动不同，微观电子的运动具有<strong>波粒二象性</strong>。</p>
+<ol type="1">
+<li><strong>波函数与原子轨道</strong>：
+<ul>
+<li>电子的运动状态用<strong>波函数 <img src="https://latex.codecogs.com/png.latex?%5Cpsi"></strong>（又称原子轨道）来描述。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?%5Cpsi%5E2"> 的物理意义</strong>：代表电子在空间某处出现的<strong>概率密度</strong>，其形象化表示即为<strong>电子云</strong>。</li>
+</ul></li>
+<li><strong>四个量子数（电子的“住址”）</strong>：
+<ul>
+<li><strong>主量子数 (<img src="https://latex.codecogs.com/png.latex?n">)</strong>：决定电子层（能层）和轨道能量。取值为正整数 <img src="https://latex.codecogs.com/png.latex?1,%202,%203...">。</li>
+<li><strong>角量子数 (<img src="https://latex.codecogs.com/png.latex?l">)</strong>：决定能级（电子亚层）和轨道的形状（如 <img src="https://latex.codecogs.com/png.latex?s"> 为球形，<img src="https://latex.codecogs.com/png.latex?p"> 为哑铃形）。取值为 <img src="https://latex.codecogs.com/png.latex?0"> 到 <img src="https://latex.codecogs.com/png.latex?(n-1)">。</li>
+<li><strong>磁量子数 (<img src="https://latex.codecogs.com/png.latex?m">)</strong>：决定轨道在空间的伸展方向。取值为 <img src="https://latex.codecogs.com/png.latex?0,%20%5Cpm%201...%20%5Cpm%20l">。</li>
+<li><strong>自旋量子数 (<img src="https://latex.codecogs.com/png.latex?m_s">)</strong>：描述电子的自旋方向，取值为 <img src="https://latex.codecogs.com/png.latex?%5Cpm%201/2">。</li>
+</ul></li>
+</ol>
+</section>
+<section id="二-核外电子排布原则能量最低原理" class="level3">
+<h3 class="anchored" data-anchor-id="二-核外电子排布原则能量最低原理">二、 核外电子排布原则（能量最低原理）</h3>
+<p>电子在原子核外的排布必须遵循以下三大规律： 1. <strong>泡利不相容原理</strong>：一个原子轨道内最多只能容纳两个自旋方向相反的电子。即一个原子中不可能有两个电子的四个量子数完全相同。 2. <strong>能量最低原理</strong>：电子尽可能先占据能量最低的轨道。 3. <strong>洪特规则</strong>：在能量相同的轨道（等价轨道）上，电子尽可能分占不同的轨道且自旋方向相同，此时系统能量最低。</p>
+</section>
+<section id="三-元素周期律" class="level3">
+<h3 class="anchored" data-anchor-id="三-元素周期律">三、 元素周期律</h3>
+<ul>
+<li><strong>周期性本质</strong>：随着核电荷数递增，原子的<strong>核外电子排布呈现周期性变化</strong>。</li>
+<li><strong>性质递变</strong>：
+<ul>
+<li><strong>原子半径</strong>：同周期从左到右减小；同族从上到下增大。</li>
+<li><strong>电负性</strong>：衡量原子吸引电子能力的强弱。同周期从左到右增大。</li>
+</ul></li>
+</ul>
+</section>
+<section id="四-化学键理论物质的结合" class="level3">
+<h3 class="anchored" data-anchor-id="四-化学键理论物质的结合">四、 化学键理论（物质的结合）</h3>
+<p>化学键是原子间强烈的相互作用，分为离子键、共价键、金属键等。</p>
+<ol type="1">
+<li><strong>离子键</strong>：依靠正、负离子间的静电引力形成（如食盐 <img src="https://latex.codecogs.com/png.latex?NaCl">）。</li>
+<li><strong>共价键（价键理论, VB）</strong>：
+<ul>
+<li><strong>本质</strong>：原子间通过<strong>电子对重叠</strong>（形成共有电子对）而结合。</li>
+<li><strong>特征</strong>：具有<strong>方向性</strong>和<strong>饱和性</strong>。</li>
+<li><strong>分类</strong>：包括 <img src="https://latex.codecogs.com/png.latex?%5Csigma"> 键（头碰头，较稳固）和 <img src="https://latex.codecogs.com/png.latex?%5Cpi"> 键（肩并肩）。</li>
+</ul></li>
+</ol>
+</section>
+<section id="五-杂化轨道理论空间构型的推导" class="level3">
+<h3 class="anchored" data-anchor-id="五-杂化轨道理论空间构型的推导">五、 杂化轨道理论（空间构型的推导）</h3>
+<p>为了解释多原子分子（如甲烷 <img src="https://latex.codecogs.com/png.latex?CH_4">）的空间构型，化学家提出了<strong>杂化轨道理论</strong>。</p>
+<ul>
+<li><strong>推导逻辑</strong>：在形成分子时，中心原子能量相近的原子轨道（如一个 <img src="https://latex.codecogs.com/png.latex?s"> 和三个 <img src="https://latex.codecogs.com/png.latex?p">）会重新组合，形成一组能量相同的新轨道，称为<strong>杂化轨道</strong>。</li>
+<li><strong>常见类型与形状</strong>：
+<ul>
+<li><strong><img src="https://latex.codecogs.com/png.latex?sp"> 杂化</strong>：形成 2 个轨道，角度 <img src="https://latex.codecogs.com/png.latex?180%5E%5Ccirc">，分子呈<strong>直线型</strong>（如 <img src="https://latex.codecogs.com/png.latex?BeCl_2">）。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?sp%5E2"> 杂化</strong>：形成 3 个轨道，角度 <img src="https://latex.codecogs.com/png.latex?120%5E%5Ccirc">，分子呈<strong>平面正三角形</strong>（如 <img src="https://latex.codecogs.com/png.latex?BF_3">）。</li>
+<li><strong><img src="https://latex.codecogs.com/png.latex?sp%5E3"> 杂化</strong>：形成 4 个轨道，角度 <img src="https://latex.codecogs.com/png.latex?109.5%5E%5Ccirc">，分子呈<strong>正四面体型</strong>（如 <img src="https://latex.codecogs.com/png.latex?CH_4">）。</li>
+</ul></li>
+</ul>
+</section>
+<section id="六-分子间作用力与氢键" class="level3">
+<h3 class="anchored" data-anchor-id="六-分子间作用力与氢键">六、 分子间作用力与氢键</h3>
+<p>这些力决定了物质的物理性质（如熔沸点、溶解性）。 * <strong>范德华力</strong>：普遍存在于分子间，较弱。 * <strong>氢键</strong>：强于范德华力但弱于化学键。它解释了为什么水（<img src="https://latex.codecogs.com/png.latex?H_2O">）的沸点异常高。</p>
+</section>
+<section id="总结" class="level3">
+<h3 class="anchored" data-anchor-id="总结">总结</h3>
+<p>第五章的知识脉络是：<strong>量子数决定电子分布 <img src="https://latex.codecogs.com/png.latex?%5Crightarrow"> 电子排布决定元素性质 <img src="https://latex.codecogs.com/png.latex?%5Crightarrow"> 化学键与杂化轨道决定分子构型 <img src="https://latex.codecogs.com/png.latex?%5Crightarrow"> 最终决定材料的性能（如金属的延展性、半导体的导电性等）</strong>。</p>
+<p>如果您需要针对某个特定的量子数计算或杂化轨道判断进行练习，我可以为您提供具体案例。</p>
+
+
+<!-- -->
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>工程化学</category>
+  <guid>https://qmdthings.top/notes/工程化学/5. 物质结构基础.html</guid>
   <pubDate>Mon, 09 Mar 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
@@ -2412,117 +2527,6 @@ F--&gt; F1["四副构件"]
   <pubDate>Mon, 09 Mar 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>无机物单质及化合物</title>
-  <dc:creator>QMD </dc:creator>
-  <link>https://qmdthings.top/notes/工程化学/6. 无机物单质及化合物.html</link>
-  <description><![CDATA[ 
-
-<p id="hitokoto">
-  hitokoto!
-</p>
-
-<script>
-  const hitokotoElement = document.querySelector("#hitokoto_text");
-
-  fetch("https://v1.hitokoto.cn?c=k")
-    .then((response) => response.json())
-    .then((data) => {
-      const hitokoto = document.querySelector("#hitokoto_text");
-      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
-      hitokoto.innerText = data.hitokoto;
-    })
-    .catch(console.error);
-
-  hitokotoElement.addEventListener("click", function (event) {
-    event.preventDefault();
-  });
-</script>
-
-
-
-
-
-<section id="一-无机化合物的物理性质规律" class="level3">
-<h3 class="anchored" data-anchor-id="一-无机化合物的物理性质规律">一、 无机化合物的物理性质规律</h3>
-<p>本部分利用第五章的物质结构理论，推导宏观性质的变化规律：</p>
-<ol type="1">
-<li><strong>熔沸点与硬度</strong>：
-<ul>
-<li><strong>推导逻辑</strong>：物质的熔沸点取决于质点间作用力的强弱。</li>
-<li><strong>规律</strong>：原子晶体（如金刚石）&gt; 离子晶体 &gt; 金属晶体 &gt; 分子晶体。</li>
-</ul></li>
-<li><strong>溶解性</strong>：
-<ul>
-<li><strong>推导逻辑</strong>：遵循“相似相溶”原理。极性溶质易溶于极性溶剂（如水），非极性溶质易溶于非极性溶剂（如苯）。</li>
-</ul></li>
-</ol>
-</section>
-<section id="二-无机化合物的化学性质递变" class="level3">
-<h3 class="anchored" data-anchor-id="二-无机化合物的化学性质递变">二、 无机化合物的化学性质递变</h3>
-<p>利用周期律推导同周期或同族元素化合物的性质变化：</p>
-<ol type="1">
-<li><strong>酸碱性</strong>：
-<ul>
-<li><strong>规律</strong>：同周期从左到右，最高价氧化物水化物的酸性增强，碱性减弱；同族从上到下，酸性减弱，碱性增强。</li>
-</ul></li>
-<li><strong>氧化还原性</strong>：
-<ul>
-<li><strong>推导逻辑</strong>：与其电负性及电极电势相关。高氧化态通常具有氧化性，低氧化态具有还原性。</li>
-</ul></li>
-</ol>
-</section>
-<section id="三-配位化合物配合物基础-本章理论核心" class="level3">
-<h3 class="anchored" data-anchor-id="三-配位化合物配合物基础-本章理论核心">三、 配位化合物（配合物）基础 —— 本章理论核心</h3>
-<p>配合物是由中心原子（或离子）与配体通过配位键结合而成的复杂离子或分子。</p>
-<ol type="1">
-<li><strong>组成结构</strong>：
-<ul>
-<li><strong>中心原子</strong>：通常是过渡金属离子。</li>
-<li><strong>配体</strong>：含有孤对电子的分子或离子（如 <img src="https://latex.codecogs.com/png.latex?NH_3,%20Cl%5E-,%20H_2O">）。</li>
-<li><strong>配位数</strong>：中心原子结合配体的数目。</li>
-</ul></li>
-<li><strong>螯合物 (Chelates)</strong>：
-<ul>
-<li><strong>定义</strong>：多齿配体与同一个中心原子形成具有环状结构的配合物。</li>
-<li><strong>特性</strong>：螯合物比一般的单齿配合物具有极高的稳定性（即<strong>螯合效应</strong>）。</li>
-</ul></li>
-<li><strong>配合物成键理论的推导（价键理论）</strong>：
-<ul>
-<li><strong>核心思想</strong>：中心原子提供<strong>空轨道</strong>，配体提供<strong>孤对电子</strong>，两者通过<strong>杂化</strong>形成配位键。</li>
-<li><strong>推导示例</strong>：例如 <img src="https://latex.codecogs.com/png.latex?%5BCu(NH_3)_4%5D%5E%7B2+%7D">，铜离子通过 <img src="https://latex.codecogs.com/png.latex?dsp%5E2"> 杂化，形成平面四方形结构。</li>
-</ul></li>
-</ol>
-</section>
-<section id="四-工程材料化学应用" class="level3">
-<h3 class="anchored" data-anchor-id="四-工程材料化学应用">四、 工程材料化学应用</h3>
-<p>作为机械专业的学生，这一部分将化学理论与实际材料性能挂钩：</p>
-<ol type="1">
-<li><strong>金属材料与合金</strong>：
-<ul>
-<li><strong>合金化原理</strong>：通过引入其他元素改变基体金属的结构，从而提高强度、硬度或耐腐蚀性。</li>
-</ul></li>
-<li><strong>无机非金属材料</strong>：
-<ul>
-<li><strong>传统材料</strong>：水泥、玻璃、陶瓷的化学组成与硬化原理（如水泥的水化反应）。</li>
-<li><strong>新型材料</strong>：如纳米材料、超导材料和半导体材料的特性。</li>
-</ul></li>
-</ol>
-</section>
-<section id="五-核心概念的逻辑关联" class="level3">
-<h3 class="anchored" data-anchor-id="五-核心概念的逻辑关联">五、 核心概念的逻辑关联</h3>
-<p>本章的知识点并非孤立，它们形成了一个完整的应用链条： * 通过<strong>结构理论</strong>（杂化、晶体类型）预测<strong>物理性质</strong>（硬度、熔点）； * 通过<strong>热力学和电极电势</strong>预测<strong>化学稳定性</strong>（氧化还原、酸碱）； * 利用<strong>配位化学</strong>解决金属的提取、提纯及化学转化膜处理（如发黑、磷化）。</p>
-
-
-<!-- -->
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
-  <category>工程化学</category>
-  <guid>https://qmdthings.top/notes/工程化学/6. 无机物单质及化合物.html</guid>
-  <pubDate>Mon, 09 Mar 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
   <title>溶液</title>
   <dc:creator>QMD </dc:creator>
   <link>https://qmdthings.top/notes/工程化学/3. 溶液.html</link>
@@ -2626,6 +2630,293 @@ F--&gt; F1["四副构件"]
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
   <category>工程化学</category>
   <guid>https://qmdthings.top/notes/工程化学/3. 溶液.html</guid>
+  <pubDate>Mon, 09 Mar 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>合成高分子材料</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/notes/工程化学/9. 合成高分子材料.html</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+  hitokoto!
+</p>
+
+<script>
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+  fetch("https://v1.hitokoto.cn?c=k")
+    .then((response) => response.json())
+    .then((data) => {
+      const hitokoto = document.querySelector("#hitokoto_text");
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+      hitokoto.innerText = data.hitokoto;
+    })
+    .catch(console.error);
+
+  hitokotoElement.addEventListener("click", function (event) {
+    event.preventDefault();
+  });
+</script>
+
+
+
+
+
+<section id="溶度积常数-k_sp-的定义" class="level3">
+<h3 class="anchored" data-anchor-id="溶度积常数-k_sp-的定义">1. 溶度积常数 (<img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D">) 的定义</h3>
+<p>对于难溶电解质 <img src="https://latex.codecogs.com/png.latex?A_m%20B_n"> 在水中的饱和溶液，存在如下动态平衡： <img src="https://latex.codecogs.com/png.latex?A_m%20B_n(s)%20%5Crightleftharpoons%20m%20A%5E%7Bn+%7D(aq)%20+%20n%20B%5E%7Bm-%7D(aq)"> * <strong>概念</strong>：在一定温度下，难溶电解质的饱和溶液中，各离子浓度幂的乘积是一个常数，称为<strong>溶度积常数 (<img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D">)</strong>。 * <strong>表达式</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BK_%7Bsp%7D%20=%20%5BA%5E%7Bn+%7D%5D%5Em%20%5Ccdot%20%5BB%5E%7Bm-%7D%5D%5En%7D">。 * <strong>物理意义</strong>：<img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D"> 反映了难溶电解质在水中的<strong>溶解能力</strong>。在相同类型（如均为 <img src="https://latex.codecogs.com/png.latex?AB"> 型）的电解质中，<img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D"> 越小，溶解度越小。</p>
+</section>
+<section id="溶解度-s-与-k_sp-的关系及推导" class="level3">
+<h3 class="anchored" data-anchor-id="溶解度-s-与-k_sp-的关系及推导">2. 溶解度 (<img src="https://latex.codecogs.com/png.latex?s">) 与 <img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D"> 的关系及推导</h3>
+<p>这是定量计算的核心。 * <strong>推导过程（以 <img src="https://latex.codecogs.com/png.latex?A_m%20B_n"> 为例）</strong>： 1. 设难溶电解质的溶解度为 <img src="https://latex.codecogs.com/png.latex?s"> (mol·dm⁻³)。 2. 平衡时：<img src="https://latex.codecogs.com/png.latex?%5BA%5E%7Bn+%7D%5D%20=%20ms">，<img src="https://latex.codecogs.com/png.latex?%5BB%5E%7Bm-%7D%5D%20=%20ns">。 3. 代入溶度积公式：<img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D%20=%20(ms)%5Em%20%5Ccdot%20(ns)%5En%20=%20m%5Em%20%5Ccdot%20n%5En%20%5Ccdot%20s%5E%7Bm+n%7D">。 * <strong>常见类型结论</strong>： * <strong><img src="https://latex.codecogs.com/png.latex?AB"> 型</strong>（如 <img src="https://latex.codecogs.com/png.latex?AgCl">）：<img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D%20=%20s%5E2%20%5CRightarrow%20%5Cmathbf%7Bs%20=%20%5Csqrt%7BK_%7Bsp%7D%7D%7D">。 * <strong><img src="https://latex.codecogs.com/png.latex?A_2%20B"> 或 <img src="https://latex.codecogs.com/png.latex?AB_2"> 型</strong>（如 <img src="https://latex.codecogs.com/png.latex?Ag_2%20CrO_4"> 或 <img src="https://latex.codecogs.com/png.latex?PbF_2">）：<img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D%20=%20(2s)%5E2%20%5Ccdot%20s%20=%204s%5E3%20%5CRightarrow%20%5Cmathbf%7Bs%20=%20%5Csqrt%7BK_%7Bsp%7D/4%7D%7D">。</p>
+</section>
+<section id="溶度积规则沉淀生成的判定" class="level3">
+<h3 class="anchored" data-anchor-id="溶度积规则沉淀生成的判定">3. 溶度积规则（沉淀生成的判定）</h3>
+<p>类似于化学平衡中的 <img src="https://latex.codecogs.com/png.latex?Q"> 与 <img src="https://latex.codecogs.com/png.latex?K"> 的比较： * <strong>离子积 (<img src="https://latex.codecogs.com/png.latex?Q">)</strong>：溶液中离子浓度幂的乘积（不一定是饱和状态）。 * <strong>判定标准</strong>： * <strong><img src="https://latex.codecogs.com/png.latex?Q%20%3E%20K_%7Bsp%7D"></strong>：溶液过饱和，<strong>有沉淀析出</strong>，直到 <img src="https://latex.codecogs.com/png.latex?Q%20=%20K_%7Bsp%7D">。 * <strong><img src="https://latex.codecogs.com/png.latex?Q%20=%20K_%7Bsp%7D"></strong>：溶液恰好饱和，处于<strong>沉淀溶解平衡状态</strong>。 * <strong><img src="https://latex.codecogs.com/png.latex?Q%20%3C%20K_%7Bsp%7D"></strong>：溶液未饱和，<strong>无沉淀析出</strong>；若有固体存在，则固体继续溶解。</p>
+</section>
+<section id="影响沉淀溶解平衡的因素" class="level3">
+<h3 class="anchored" data-anchor-id="影响沉淀溶解平衡的因素">4. 影响沉淀溶解平衡的因素</h3>
+<ul>
+<li><strong>同离子效应</strong>：在难溶电解质溶液中加入含有相同离子的强电解质，平衡会向生成沉淀的方向移动，从而使难溶物的<strong>溶解度显著降低</strong>。</li>
+<li><strong>盐效应</strong>：在难溶电解质溶液中加入不含相同离子的强电解质，会稍微增大溶解度（但在基础工程计算中通常忽略不计）。</li>
+<li><strong>酸效应（pH 影响）</strong>：如果沉淀的阴离子是弱酸根（如 <img src="https://latex.codecogs.com/png.latex?CO_3%5E%7B2-%7D,%20OH%5E-">），降低 pH（加酸）会使阴离子浓度下降，导致平衡右移，<strong>沉淀溶解</strong>。</li>
+<li><strong>配位效应</strong>：加入能与金属离子形成稳定配合物的试剂，会显著增大溶解度。</li>
+</ul>
+</section>
+<section id="分步沉淀-fractional-precipitation" class="level3">
+<h3 class="anchored" data-anchor-id="分步沉淀-fractional-precipitation">5. 分步沉淀 (Fractional Precipitation)</h3>
+<p>当溶液中存在多种离子都能与同一种试剂产生沉淀时，它们被沉淀出来的先后顺序。 * <strong>基本原理</strong>：哪种物质先达到其 <img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D"> 所要求的浓度积，哪种物质就<strong>先沉淀</strong>。 * <strong>应用</strong>：通过控制加入试剂的浓度或调节 pH 值，可以实现离子的分离。</p>
+</section>
+<section id="沉淀的转化-precipitation-transformation" class="level3">
+<h3 class="anchored" data-anchor-id="沉淀的转化-precipitation-transformation">6. 沉淀的转化 (Precipitation Transformation)</h3>
+<p>一种难溶电解质转化为另一种更难溶电解质的过程。 * <strong>规律</strong>：通常是 <strong><img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D"> 较大的转化为 <img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D"> 更小的</strong>（例如 <img src="https://latex.codecogs.com/png.latex?AgCl%20%5Crightarrow%20AgI">）。 * <strong>转化平衡常数 (<img src="https://latex.codecogs.com/png.latex?K">) 的推导</strong>： 对于反应 <img src="https://latex.codecogs.com/png.latex?AgCl(s)%20+%20I%5E-(aq)%20%5Crightleftharpoons%20AgI(s)%20+%20Cl%5E-(aq)">： <img src="https://latex.codecogs.com/png.latex?K%20=%20%5Cfrac%7B%5BCl%5E-%5D%7D%7B%5BI%5E-%5D%7D%20=%20%5Cfrac%7B%5BCl%5E-%5D%5BAg%5E+%5D%7D%7B%5BI%5E-%5D%5BAg%5E+%5D%7D%20=%20%5Cfrac%7BK_%7Bsp%7D(AgCl)%7D%7BK_%7Bsp%7D(AgI)%7D"> 若 <img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D(AgCl)%20%5Cgg%20K_%7Bsp%7D(AgI)">，则平衡常数 <img src="https://latex.codecogs.com/png.latex?K"> 非常大，转化非常彻底。</p>
+
+
+<!-- -->
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>工程化学</category>
+  <guid>https://qmdthings.top/notes/工程化学/9. 合成高分子材料.html</guid>
+  <pubDate>Mon, 09 Mar 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>有机化学与有机化合物</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/notes/工程化学/8. 有机化学和有机化合物.html</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+  hitokoto!
+</p>
+
+<script>
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+  fetch("https://v1.hitokoto.cn?c=k")
+    .then((response) => response.json())
+    .then((data) => {
+      const hitokoto = document.querySelector("#hitokoto_text");
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+      hitokoto.innerText = data.hitokoto;
+    })
+    .catch(console.error);
+
+  hitokotoElement.addEventListener("click", function (event) {
+    event.preventDefault();
+  });
+</script>
+
+
+
+
+
+<section id="酸碱质子理论-brønsted-lowry-theory" class="level3">
+<h3 class="anchored" data-anchor-id="酸碱质子理论-brønsted-lowry-theory">1. 酸碱质子理论 (Brønsted-Lowry Theory)</h3>
+<p>这是现代酸碱化学的基础。 * <strong>定义</strong>：凡是能给出质子（<img src="https://latex.codecogs.com/png.latex?H%5E+">）的分子或离子都是<strong>酸</strong>；凡是能接受质子的分子或离子都是<strong>碱</strong>。 * <strong>共轭酸碱对</strong>：酸给出质子后变成其<strong>共轭碱</strong>，碱接受质子后变成其<strong>共轭酸</strong>（例如 <img src="https://latex.codecogs.com/png.latex?NH_4%5E+%20/%20NH_3">）。 * <strong>酸碱反应的本质</strong>：是两对共轭酸碱对之间的<strong>质子传递</strong>反应。</p>
+</section>
+<section id="水的自耦电离与溶液的酸碱性" class="level3">
+<h3 class="anchored" data-anchor-id="水的自耦电离与溶液的酸碱性">2. 水的自耦电离与溶液的酸碱性</h3>
+<ul>
+<li><strong>自耦电离平衡</strong>：<img src="https://latex.codecogs.com/png.latex?H_2O%20+%20H_2O%20%5Crightleftharpoons%20H_3O%5E+%20+%20OH%5E-">。</li>
+<li><strong>水的离子积常数 (<img src="https://latex.codecogs.com/png.latex?K_w">)</strong>： <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BK_w%20=%20%5BH_3O%5E+%5D%5BOH%5E-%5D%7D"> 在 <img src="https://latex.codecogs.com/png.latex?298.15%20%5Ctext%7B%20K%7D"> 时，<img src="https://latex.codecogs.com/png.latex?K_w%20=%201.0%20%5Ctimes%2010%5E%7B-14%7D">。由于该反应是吸热的，温度越高，<img src="https://latex.codecogs.com/png.latex?K_w"> 越大。</li>
+<li><strong>pH 的定义</strong>：<img src="https://latex.codecogs.com/png.latex?pH%20=%20-%5Clg%5BH_3O%5E+%5D">。</li>
+</ul>
+</section>
+<section id="共轭酸碱对-k_a-与-k_b-的关系推导" class="level3">
+<h3 class="anchored" data-anchor-id="共轭酸碱对-k_a-与-k_b-的关系推导">3. 共轭酸碱对 <img src="https://latex.codecogs.com/png.latex?K_a"> 与 <img src="https://latex.codecogs.com/png.latex?K_b"> 的关系推导</h3>
+<p>这是酸碱平衡中最重要的定量关系之一。</p>
+<ul>
+<li><strong>推导过程</strong>：
+<ol type="1">
+<li>设弱酸 <img src="https://latex.codecogs.com/png.latex?HA"> 的电离：<img src="https://latex.codecogs.com/png.latex?HA%20+%20H_2O%20%5Crightleftharpoons%20H_3O%5E+%20+%20A%5E-">，<img src="https://latex.codecogs.com/png.latex?K_a%20=%20%5Cfrac%7B%5BH_3O%5E+%5D%5BA%5E-%5D%7D%7B%5BHA%5D%7D">。</li>
+<li>其共轭碱 <img src="https://latex.codecogs.com/png.latex?A%5E-"> 的水解（电离）：<img src="https://latex.codecogs.com/png.latex?A%5E-%20+%20H_2O%20%5Crightleftharpoons%20OH%5E-%20+%20HA">，<img src="https://latex.codecogs.com/png.latex?K_b%20=%20%5Cfrac%7B%5BOH%5E-%5D%5BHA%5D%7D%7B%5BA%5E-%5D%7D">。</li>
+<li>将 <img src="https://latex.codecogs.com/png.latex?K_a"> 与 <img src="https://latex.codecogs.com/png.latex?K_b"> 相乘： <img src="https://latex.codecogs.com/png.latex?K_a%20%5Ccdot%20K_b%20=%20%5Cleft(%20%5Cfrac%7B%5BH_3O%5E+%5D%5BA%5E-%5D%7D%7B%5BHA%5D%7D%20%5Cright)%20%5Ccdot%20%5Cleft(%20%5Cfrac%7B%5BOH%5E-%5D%5BHA%5D%7D%7B%5BA%5E-%5D%7D%20%5Cright)%20=%20%5BH_3O%5E+%5D%5BOH%5E-%5D"></li>
+<li><strong>结论</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BK_a%20%5Ccdot%20K_b%20=%20K_w%7D">（或 <img src="https://latex.codecogs.com/png.latex?pK_a%20+%20pK_b%20=%20pK_w">）。这说明酸的强度越大，其共轭碱的强度就越小。</li>
+</ol></li>
+</ul>
+</section>
+<section id="弱酸弱碱溶液-ph-的计算推导" class="level3">
+<h3 class="anchored" data-anchor-id="弱酸弱碱溶液-ph-的计算推导">4. 弱酸/弱碱溶液 pH 的计算推导</h3>
+<p>对于一元弱酸 <img src="https://latex.codecogs.com/png.latex?HA">（初始浓度为 <img src="https://latex.codecogs.com/png.latex?c">），其电离平衡为：<img src="https://latex.codecogs.com/png.latex?HA%20%5Crightleftharpoons%20H%5E+%20+%20A%5E-">。</p>
+<ul>
+<li><strong>推导过程</strong>：
+<ol type="1">
+<li>设平衡时 <img src="https://latex.codecogs.com/png.latex?%5BH%5E+%5D%20=%20%5BA%5E-%5D%20=%20x">，则平衡时 <img src="https://latex.codecogs.com/png.latex?%5BHA%5D%20=%20c%20-%20x">。</li>
+<li>代入平衡常数式：<img src="https://latex.codecogs.com/png.latex?K_a%20=%20%5Cfrac%7Bx%5E2%7D%7Bc-x%7D">。</li>
+<li><strong>近似处理</strong>：当 <img src="https://latex.codecogs.com/png.latex?c/K_a%20%5Cge%20400"> 时（即酸极弱且浓度不太稀），可以认为 <img src="https://latex.codecogs.com/png.latex?c-x%20%5Capprox%20c">。</li>
+<li>得出计算公式：<img src="https://latex.codecogs.com/png.latex?x%5E2%20=%20K_a%20%5Ccdot%20c%20%5CRightarrow%20%5Cmathbf%7B%5BH%5E+%5D%20=%20%5Csqrt%7BK_a%20c%7D%7D">。</li>
+<li>同理，弱碱溶液的 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7B%5BOH%5E-%5D%20=%20%5Csqrt%7BK_b%20c%7D%7D">。</li>
+</ol></li>
+</ul>
+</section>
+<section id="同离子效应与缓冲溶液" class="level3">
+<h3 class="anchored" data-anchor-id="同离子效应与缓冲溶液">5. 同离子效应与缓冲溶液</h3>
+<ul>
+<li><strong>同离子效应</strong>：在弱电解质溶液中加入含有相同离子的强电解质（如在 <img src="https://latex.codecogs.com/png.latex?HAc"> 中加 <img src="https://latex.codecogs.com/png.latex?NaAc">），平衡会逆向移动，从而降低弱电解质的电离度。</li>
+<li><strong>缓冲溶液 (Buffer Solutions)</strong>：由弱酸及其共轭碱（如 <img src="https://latex.codecogs.com/png.latex?HAc%20-%20NaAc">）组成的混合溶液，能抵抗少量强酸、强碱或稀释对 pH 的影响。</li>
+</ul>
+</section>
+<section id="缓冲公式的推导-henderson-hasselbalch-equation" class="level3">
+<h3 class="anchored" data-anchor-id="缓冲公式的推导-henderson-hasselbalch-equation">6. 缓冲公式的推导 (Henderson-Hasselbalch Equation)</h3>
+<p>这是计算缓冲溶液 pH 的核心公式。</p>
+<ul>
+<li><strong>推导过程</strong>：
+<ol type="1">
+<li>对于缓冲体系 <img src="https://latex.codecogs.com/png.latex?HA%20-%20A%5E-">，<img src="https://latex.codecogs.com/png.latex?K_a%20=%20%5Cfrac%7B%5BH%5E+%5D%5BA%5E-%5D%7D%7B%5BHA%5D%7D">。</li>
+<li>整理得：<img src="https://latex.codecogs.com/png.latex?%5BH%5E+%5D%20=%20K_a%20%5Ccdot%20%5Cfrac%7B%5BHA%5D%7D%7B%5BA%5E-%5D%7D">。</li>
+<li>两边取负对数：<img src="https://latex.codecogs.com/png.latex?-%5Clg%5BH%5E+%5D%20=%20-%5Clg%20K_a%20-%20%5Clg%20%5Cfrac%7B%5BHA%5D%7D%7B%5BA%5E-%5D%7D">。</li>
+<li><strong>最终表达式</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BpH%20=%20pK_a%20+%20%5Clg%20%5Cfrac%7B%5BA%5E-%5D%7D%7B%5BHA%5D%7D%7D">（或 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BpH%20=%20pK_a%20+%20%5Clg%20%5Cfrac%7Bc_%7B%5Ctext%7B%E7%A2%B1%7D%7D%7D%7Bc_%7B%5Ctext%7B%E9%85%B8%7D%7D%7D%7D">）。</li>
+</ol></li>
+<li><strong>缓冲范围</strong>：通常在 <img src="https://latex.codecogs.com/png.latex?pH%20=%20pK_a%20%5Cpm%201"> 之间。当 <img src="https://latex.codecogs.com/png.latex?c_%7B%5Ctext%7B%E7%A2%B1%7D%7D%20=%20c_%7B%5Ctext%7B%E9%85%B8%7D%7D"> 时，缓冲能力最强，此时 <img src="https://latex.codecogs.com/png.latex?pH%20=%20pK_a">。</li>
+</ul>
+</section>
+<section id="酸碱指示剂" class="level3">
+<h3 class="anchored" data-anchor-id="酸碱指示剂">7. 酸碱指示剂</h3>
+<p>指示剂本身是弱的有机酸或碱（用 <img src="https://latex.codecogs.com/png.latex?HIn"> 表示），其酸式和碱式具有不同颜色。当溶液的 <img src="https://latex.codecogs.com/png.latex?%5BH%5E+%5D"> 改变到使其酸碱型比例发生反转时，颜色随之改变（变色范围通常为 <img src="https://latex.codecogs.com/png.latex?pH%20=%20pK_%7BIn%7D%20%5Cpm%201">）。</p>
+
+
+<!-- -->
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>工程化学</category>
+  <guid>https://qmdthings.top/notes/工程化学/8. 有机化学和有机化合物.html</guid>
+  <pubDate>Mon, 09 Mar 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>金属材料与无机非金属材料</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/notes/工程化学/7. 金属材料与无机非金属材料.html</link>
+  <description><![CDATA[ 
+
+<p id="hitokoto">
+  hitokoto!
+</p>
+
+<script>
+  const hitokotoElement = document.querySelector("#hitokoto_text");
+
+  fetch("https://v1.hitokoto.cn?c=k")
+    .then((response) => response.json())
+    .then((data) => {
+      const hitokoto = document.querySelector("#hitokoto_text");
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
+      hitokoto.innerText = data.hitokoto;
+    })
+    .catch(console.error);
+
+  hitokotoElement.addEventListener("click", function (event) {
+    event.preventDefault();
+  });
+</script>
+
+
+
+
+
+<section id="一-化学反应速率的意义" class="level3">
+<h3 class="anchored" data-anchor-id="一-化学反应速率的意义">一、 化学反应速率的意义</h3>
+<ol type="1">
+<li><strong>瞬时速率的定义</strong>： 对于反应 <img src="https://latex.codecogs.com/png.latex?aA%20+%20bB%20%5Crightarrow%20cC%20+%20dD">，反应物 <img src="https://latex.codecogs.com/png.latex?A"> 在某一时刻 <img src="https://latex.codecogs.com/png.latex?t"> 的瞬时反应速率定义为： <img src="https://latex.codecogs.com/png.latex?v_A%20=%20-%5Cfrac%7Bd(A)%7D%7Bdt%7D"> 其中 <img src="https://latex.codecogs.com/png.latex?(A)"> 代表反应物 <img src="https://latex.codecogs.com/png.latex?A"> 的浓度。由于反应物随时间减少，为了使速率为正值，前面加负号。</li>
+<li><strong>统一反应速率 (<img src="https://latex.codecogs.com/png.latex?v">)</strong>： 为了消除不同物质计量系数的影响，定义统一速率： <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bv%20=%20-%5Cfrac%7B1%7D%7Ba%7D%5Cfrac%7Bd(A)%7D%7Bdt%7D%20=%20-%5Cfrac%7B1%7D%7Bb%7D%5Cfrac%7Bd(B)%7D%7Bdt%7D%20=%20%5Cfrac%7B1%7D%7Bc%7D%5Cfrac%7Bd(C)%7D%7Bdt%7D%20=%20%5Cfrac%7B1%7D%7Bd%7D%5Cfrac%7Bd(D)%7D%7Bdt%7D%7D"> 这样，同一个反应在同一时刻就只有一个唯一的速率数值。</li>
+</ol>
+</section>
+<section id="二-浓度对反应速率的影响质量作用定律" class="level3">
+<h3 class="anchored" data-anchor-id="二-浓度对反应速率的影响质量作用定律">二、 浓度对反应速率的影响（质量作用定律）</h3>
+<ol type="1">
+<li><strong>基元反应</strong>：指反应物分子在碰撞中一步直接转化为产物的反应。</li>
+<li><strong>质量作用定律</strong>：对于基元反应，反应速率与各反应物浓度的幂的乘积成正比。
+<ul>
+<li>推导：若 <img src="https://latex.codecogs.com/png.latex?aA%20+%20bB%20%5Crightarrow%20cC"> 为基元反应，则： <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bv%20=%20k(A)%5Ea(B)%5Eb%7D"> 其中 <img src="https://latex.codecogs.com/png.latex?k"> 为<strong>反应速率常数</strong>，主要受温度影响。</li>
+</ul></li>
+<li><strong>非基元反应</strong>：由多个基元步骤组成。其速率方程为 <img src="https://latex.codecogs.com/png.latex?v%20=%20k(A)%5Em(B)%5En">，其中 <img src="https://latex.codecogs.com/png.latex?m,%20n">（反应级数）必须由实验确定。</li>
+</ol>
+</section>
+<section id="三-反应级数与积分速率方程核心推导" class="level3">
+<h3 class="anchored" data-anchor-id="三-反应级数与积分速率方程核心推导">三、 反应级数与积分速率方程（核心推导）</h3>
+<p>资料重点推导了<strong>一级反应</strong>的规律：</p>
+<ol type="1">
+<li><strong>一级反应速率方程推导</strong>： 对于反应 <img src="https://latex.codecogs.com/png.latex?A%20%5Crightarrow%20P">，其速率方程为：<img src="https://latex.codecogs.com/png.latex?-%5Cfrac%7Bd(A)%7D%7Bdt%7D%20=%20k(A)">。
+<ul>
+<li><strong>分离变量</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Bd(A)%7D%7B(A)%7D%20=%20-k%20dt"></li>
+<li><strong>积分</strong>：从 <img src="https://latex.codecogs.com/png.latex?t=0"> 到 <img src="https://latex.codecogs.com/png.latex?t"> 进行定积分： <img src="https://latex.codecogs.com/png.latex?%5Cint_%7B(A)_0%7D%5E%7B(A)%7D%20%5Cfrac%7Bd(A)%7D%7B(A)%7D%20=%20-k%20%5Cint_%7B0%7D%5E%7Bt%7D%20dt%20%5CRightarrow%20%5Cln(A)%20-%20%5Cln(A)_0%20=%20-kt"></li>
+<li><strong>最终表达式</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7B%5Cln%20%5Cfrac%7B(A)_0%7D%7B(A)%7D%20=%20kt%7D"> 或 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Blg(A)%20=%20lg(A)_0%20-%20%5Cfrac%7Bk%7D%7B2.303%7Dt%7D">。</li>
+</ul></li>
+<li><strong>半衰期 (<img src="https://latex.codecogs.com/png.latex?t_%7B1/2%7D">) 的推导</strong>： 半衰期是指反应物消耗一半所需的时间，即当 <img src="https://latex.codecogs.com/png.latex?t%20=%20t_%7B1/2%7D"> 时，<img src="https://latex.codecogs.com/png.latex?(A)%20=%20%5Cfrac%7B1%7D%7B2%7D(A)_0">。
+<ul>
+<li>代入一级反应积分式：<img src="https://latex.codecogs.com/png.latex?%5Cln%20%5Cfrac%7B(A)_0%7D%7B%5Cfrac%7B1%7D%7B2%7D(A)_0%7D%20=%20kt_%7B1/2%7D"></li>
+<li>得：<img src="https://latex.codecogs.com/png.latex?%5Cln%202%20=%20kt_%7B1/2%7D"></li>
+<li>结论：<img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bt_%7B1/2%7D%20=%20%5Cfrac%7B%5Cln%202%7D%7Bk%7D%20%5Capprox%20%5Cfrac%7B0.693%7D%7Bk%7D%7D"></li>
+<li><strong>重要特性</strong>：一级反应的半衰期与初始浓度无关。</li>
+</ul></li>
+</ol>
+</section>
+<section id="四-温度对反应速率的影响阿仑尼乌斯-arrhenius-方程" class="level3">
+<h3 class="anchored" data-anchor-id="四-温度对反应速率的影响阿仑尼乌斯-arrhenius-方程">四、 温度对反应速率的影响：阿仑尼乌斯 (Arrhenius) 方程</h3>
+<ol type="1">
+<li><strong>经验公式</strong>： <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bk%20=%20Ae%5E%7B-E_a/RT%7D%7D"> 其中 <img src="https://latex.codecogs.com/png.latex?A"> 为指前因子，<img src="https://latex.codecogs.com/png.latex?E_a"> 为<strong>活化能</strong>。</li>
+<li><strong>计算式（两点法）推导</strong>： 在不同温度 <img src="https://latex.codecogs.com/png.latex?T_1,%20T_2"> 下，速率常数分别为 <img src="https://latex.codecogs.com/png.latex?k_1,%20k_2">。
+<ul>
+<li>取对数：<img src="https://latex.codecogs.com/png.latex?%5Cln%20k_1%20=%20%5Cln%20A%20-%20%5Cfrac%7BE_a%7D%7BRT_1%7D"> 和 <img src="https://latex.codecogs.com/png.latex?%5Cln%20k_2%20=%20%5Cln%20A%20-%20%5Cfrac%7BE_a%7D%7BRT_2%7D"></li>
+<li>相减消去 <img src="https://latex.codecogs.com/png.latex?A">：<img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7B%5Cln%20%5Cfrac%7Bk_2%7D%7Bk_1%7D%20=%20%5Cfrac%7BE_a%7D%7BR%7D%20%5Cleft(%20%5Cfrac%7B1%7D%7BT_1%7D%20-%20%5Cfrac%7B1%7D%7BT_2%7D%20%5Cright)%7D"> 这个公式常用于通过实验测定的速率常数来计算反应的活化能 <img src="https://latex.codecogs.com/png.latex?E_a">。</li>
+</ul></li>
+</ol>
+</section>
+<section id="五-反应速率理论微观解释" class="level3">
+<h3 class="anchored" data-anchor-id="五-反应速率理论微观解释">五、 反应速率理论（微观解释）</h3>
+<ol type="1">
+<li><strong>碰撞理论</strong>：
+<ul>
+<li>认为反应发生的先决条件是分子间的<strong>有效碰撞</strong>。</li>
+<li>公式形式：<img src="https://latex.codecogs.com/png.latex?k%20=%20Z_0%20P%20e%5E%7B-E_c/RT%7D">，其中 <img src="https://latex.codecogs.com/png.latex?Z_0"> 是碰撞频率，<img src="https://latex.codecogs.com/png.latex?P"> 是方位因子（考虑分子碰撞的角度）。</li>
+</ul></li>
+<li><strong>过渡态理论</strong>：
+<ul>
+<li>认为反应物在变为产物前，必须先经过一个高能量的<strong>活化络合物</strong>（过渡态）。</li>
+<li><strong>活化能 (<img src="https://latex.codecogs.com/png.latex?E_a">)</strong>：即反应物分子与活化络合物之间的能量差。活化能越小，反应速率越快。</li>
+</ul></li>
+</ol>
+</section>
+<section id="六-催化剂与催化作用" class="level3">
+<h3 class="anchored" data-anchor-id="六-催化剂与催化作用">六、 催化剂与催化作用</h3>
+<ol type="1">
+<li><strong>基本特征</strong>：催化剂能改变反应历程，但反应前后自身的质量和化学性质不变。</li>
+<li><strong>核心原理</strong>：催化剂通过<strong>降低反应的活化能 (<img src="https://latex.codecogs.com/png.latex?E_a">)</strong>，使更多的分子成为活化分子，从而显著加快反应速率。</li>
+<li><strong>局限性</strong>：催化剂不能改变热力学判据（即不能让 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20%3E%200"> 的反应发生），也不改变平衡状态（同时等比例加快正逆反应速率）。</li>
+</ol>
+
+
+<!-- -->
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
+  <category>工程化学</category>
+  <guid>https://qmdthings.top/notes/工程化学/7. 金属材料与无机非金属材料.html</guid>
   <pubDate>Mon, 09 Mar 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
@@ -2844,297 +3135,6 @@ F--&gt; F1["四副构件"]
   <pubDate>Mon, 09 Mar 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>物质结构基础</title>
-  <dc:creator>QMD </dc:creator>
-  <link>https://qmdthings.top/notes/工程化学/5. 物质结构基础.html</link>
-  <description><![CDATA[ 
-
-<p id="hitokoto">
-  hitokoto!
-</p>
-
-<script>
-  const hitokotoElement = document.querySelector("#hitokoto_text");
-
-  fetch("https://v1.hitokoto.cn?c=k")
-    .then((response) => response.json())
-    .then((data) => {
-      const hitokoto = document.querySelector("#hitokoto_text");
-      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
-      hitokoto.innerText = data.hitokoto;
-    })
-    .catch(console.error);
-
-  hitokotoElement.addEventListener("click", function (event) {
-    event.preventDefault();
-  });
-</script>
-
-
-
-
-
-<section id="一-核外电子的运动状态量子力学模型" class="level3">
-<h3 class="anchored" data-anchor-id="一-核外电子的运动状态量子力学模型">一、 核外电子的运动状态（量子力学模型）</h3>
-<p>与宏观机械运动不同，微观电子的运动具有<strong>波粒二象性</strong>。</p>
-<ol type="1">
-<li><strong>波函数与原子轨道</strong>：
-<ul>
-<li>电子的运动状态用<strong>波函数 <img src="https://latex.codecogs.com/png.latex?%5Cpsi"></strong>（又称原子轨道）来描述。</li>
-<li><strong><img src="https://latex.codecogs.com/png.latex?%5Cpsi%5E2"> 的物理意义</strong>：代表电子在空间某处出现的<strong>概率密度</strong>，其形象化表示即为<strong>电子云</strong>。</li>
-</ul></li>
-<li><strong>四个量子数（电子的“住址”）</strong>：
-<ul>
-<li><strong>主量子数 (<img src="https://latex.codecogs.com/png.latex?n">)</strong>：决定电子层（能层）和轨道能量。取值为正整数 <img src="https://latex.codecogs.com/png.latex?1,%202,%203...">。</li>
-<li><strong>角量子数 (<img src="https://latex.codecogs.com/png.latex?l">)</strong>：决定能级（电子亚层）和轨道的形状（如 <img src="https://latex.codecogs.com/png.latex?s"> 为球形，<img src="https://latex.codecogs.com/png.latex?p"> 为哑铃形）。取值为 <img src="https://latex.codecogs.com/png.latex?0"> 到 <img src="https://latex.codecogs.com/png.latex?(n-1)">。</li>
-<li><strong>磁量子数 (<img src="https://latex.codecogs.com/png.latex?m">)</strong>：决定轨道在空间的伸展方向。取值为 <img src="https://latex.codecogs.com/png.latex?0,%20%5Cpm%201...%20%5Cpm%20l">。</li>
-<li><strong>自旋量子数 (<img src="https://latex.codecogs.com/png.latex?m_s">)</strong>：描述电子的自旋方向，取值为 <img src="https://latex.codecogs.com/png.latex?%5Cpm%201/2">。</li>
-</ul></li>
-</ol>
-</section>
-<section id="二-核外电子排布原则能量最低原理" class="level3">
-<h3 class="anchored" data-anchor-id="二-核外电子排布原则能量最低原理">二、 核外电子排布原则（能量最低原理）</h3>
-<p>电子在原子核外的排布必须遵循以下三大规律： 1. <strong>泡利不相容原理</strong>：一个原子轨道内最多只能容纳两个自旋方向相反的电子。即一个原子中不可能有两个电子的四个量子数完全相同。 2. <strong>能量最低原理</strong>：电子尽可能先占据能量最低的轨道。 3. <strong>洪特规则</strong>：在能量相同的轨道（等价轨道）上，电子尽可能分占不同的轨道且自旋方向相同，此时系统能量最低。</p>
-</section>
-<section id="三-元素周期律" class="level3">
-<h3 class="anchored" data-anchor-id="三-元素周期律">三、 元素周期律</h3>
-<ul>
-<li><strong>周期性本质</strong>：随着核电荷数递增，原子的<strong>核外电子排布呈现周期性变化</strong>。</li>
-<li><strong>性质递变</strong>：
-<ul>
-<li><strong>原子半径</strong>：同周期从左到右减小；同族从上到下增大。</li>
-<li><strong>电负性</strong>：衡量原子吸引电子能力的强弱。同周期从左到右增大。</li>
-</ul></li>
-</ul>
-</section>
-<section id="四-化学键理论物质的结合" class="level3">
-<h3 class="anchored" data-anchor-id="四-化学键理论物质的结合">四、 化学键理论（物质的结合）</h3>
-<p>化学键是原子间强烈的相互作用，分为离子键、共价键、金属键等。</p>
-<ol type="1">
-<li><strong>离子键</strong>：依靠正、负离子间的静电引力形成（如食盐 <img src="https://latex.codecogs.com/png.latex?NaCl">）。</li>
-<li><strong>共价键（价键理论, VB）</strong>：
-<ul>
-<li><strong>本质</strong>：原子间通过<strong>电子对重叠</strong>（形成共有电子对）而结合。</li>
-<li><strong>特征</strong>：具有<strong>方向性</strong>和<strong>饱和性</strong>。</li>
-<li><strong>分类</strong>：包括 <img src="https://latex.codecogs.com/png.latex?%5Csigma"> 键（头碰头，较稳固）和 <img src="https://latex.codecogs.com/png.latex?%5Cpi"> 键（肩并肩）。</li>
-</ul></li>
-</ol>
-</section>
-<section id="五-杂化轨道理论空间构型的推导" class="level3">
-<h3 class="anchored" data-anchor-id="五-杂化轨道理论空间构型的推导">五、 杂化轨道理论（空间构型的推导）</h3>
-<p>为了解释多原子分子（如甲烷 <img src="https://latex.codecogs.com/png.latex?CH_4">）的空间构型，化学家提出了<strong>杂化轨道理论</strong>。</p>
-<ul>
-<li><strong>推导逻辑</strong>：在形成分子时，中心原子能量相近的原子轨道（如一个 <img src="https://latex.codecogs.com/png.latex?s"> 和三个 <img src="https://latex.codecogs.com/png.latex?p">）会重新组合，形成一组能量相同的新轨道，称为<strong>杂化轨道</strong>。</li>
-<li><strong>常见类型与形状</strong>：
-<ul>
-<li><strong><img src="https://latex.codecogs.com/png.latex?sp"> 杂化</strong>：形成 2 个轨道，角度 <img src="https://latex.codecogs.com/png.latex?180%5E%5Ccirc">，分子呈<strong>直线型</strong>（如 <img src="https://latex.codecogs.com/png.latex?BeCl_2">）。</li>
-<li><strong><img src="https://latex.codecogs.com/png.latex?sp%5E2"> 杂化</strong>：形成 3 个轨道，角度 <img src="https://latex.codecogs.com/png.latex?120%5E%5Ccirc">，分子呈<strong>平面正三角形</strong>（如 <img src="https://latex.codecogs.com/png.latex?BF_3">）。</li>
-<li><strong><img src="https://latex.codecogs.com/png.latex?sp%5E3"> 杂化</strong>：形成 4 个轨道，角度 <img src="https://latex.codecogs.com/png.latex?109.5%5E%5Ccirc">，分子呈<strong>正四面体型</strong>（如 <img src="https://latex.codecogs.com/png.latex?CH_4">）。</li>
-</ul></li>
-</ul>
-</section>
-<section id="六-分子间作用力与氢键" class="level3">
-<h3 class="anchored" data-anchor-id="六-分子间作用力与氢键">六、 分子间作用力与氢键</h3>
-<p>这些力决定了物质的物理性质（如熔沸点、溶解性）。 * <strong>范德华力</strong>：普遍存在于分子间，较弱。 * <strong>氢键</strong>：强于范德华力但弱于化学键。它解释了为什么水（<img src="https://latex.codecogs.com/png.latex?H_2O">）的沸点异常高。</p>
-</section>
-<section id="总结" class="level3">
-<h3 class="anchored" data-anchor-id="总结">总结</h3>
-<p>第五章的知识脉络是：<strong>量子数决定电子分布 <img src="https://latex.codecogs.com/png.latex?%5Crightarrow"> 电子排布决定元素性质 <img src="https://latex.codecogs.com/png.latex?%5Crightarrow"> 化学键与杂化轨道决定分子构型 <img src="https://latex.codecogs.com/png.latex?%5Crightarrow"> 最终决定材料的性能（如金属的延展性、半导体的导电性等）</strong>。</p>
-<p>如果您需要针对某个特定的量子数计算或杂化轨道判断进行练习，我可以为您提供具体案例。</p>
-
-
-<!-- -->
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
-  <category>工程化学</category>
-  <guid>https://qmdthings.top/notes/工程化学/5. 物质结构基础.html</guid>
-  <pubDate>Mon, 09 Mar 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>合成高分子材料</title>
-  <dc:creator>QMD </dc:creator>
-  <link>https://qmdthings.top/notes/工程化学/9. 合成高分子材料.html</link>
-  <description><![CDATA[ 
-
-<p id="hitokoto">
-  hitokoto!
-</p>
-
-<script>
-  const hitokotoElement = document.querySelector("#hitokoto_text");
-
-  fetch("https://v1.hitokoto.cn?c=k")
-    .then((response) => response.json())
-    .then((data) => {
-      const hitokoto = document.querySelector("#hitokoto_text");
-      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
-      hitokoto.innerText = data.hitokoto;
-    })
-    .catch(console.error);
-
-  hitokotoElement.addEventListener("click", function (event) {
-    event.preventDefault();
-  });
-</script>
-
-
-
-
-
-<section id="溶度积常数-k_sp-的定义" class="level3">
-<h3 class="anchored" data-anchor-id="溶度积常数-k_sp-的定义">1. 溶度积常数 (<img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D">) 的定义</h3>
-<p>对于难溶电解质 <img src="https://latex.codecogs.com/png.latex?A_m%20B_n"> 在水中的饱和溶液，存在如下动态平衡： <img src="https://latex.codecogs.com/png.latex?A_m%20B_n(s)%20%5Crightleftharpoons%20m%20A%5E%7Bn+%7D(aq)%20+%20n%20B%5E%7Bm-%7D(aq)"> * <strong>概念</strong>：在一定温度下，难溶电解质的饱和溶液中，各离子浓度幂的乘积是一个常数，称为<strong>溶度积常数 (<img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D">)</strong>。 * <strong>表达式</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BK_%7Bsp%7D%20=%20%5BA%5E%7Bn+%7D%5D%5Em%20%5Ccdot%20%5BB%5E%7Bm-%7D%5D%5En%7D">。 * <strong>物理意义</strong>：<img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D"> 反映了难溶电解质在水中的<strong>溶解能力</strong>。在相同类型（如均为 <img src="https://latex.codecogs.com/png.latex?AB"> 型）的电解质中，<img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D"> 越小，溶解度越小。</p>
-</section>
-<section id="溶解度-s-与-k_sp-的关系及推导" class="level3">
-<h3 class="anchored" data-anchor-id="溶解度-s-与-k_sp-的关系及推导">2. 溶解度 (<img src="https://latex.codecogs.com/png.latex?s">) 与 <img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D"> 的关系及推导</h3>
-<p>这是定量计算的核心。 * <strong>推导过程（以 <img src="https://latex.codecogs.com/png.latex?A_m%20B_n"> 为例）</strong>： 1. 设难溶电解质的溶解度为 <img src="https://latex.codecogs.com/png.latex?s"> (mol·dm⁻³)。 2. 平衡时：<img src="https://latex.codecogs.com/png.latex?%5BA%5E%7Bn+%7D%5D%20=%20ms">，<img src="https://latex.codecogs.com/png.latex?%5BB%5E%7Bm-%7D%5D%20=%20ns">。 3. 代入溶度积公式：<img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D%20=%20(ms)%5Em%20%5Ccdot%20(ns)%5En%20=%20m%5Em%20%5Ccdot%20n%5En%20%5Ccdot%20s%5E%7Bm+n%7D">。 * <strong>常见类型结论</strong>： * <strong><img src="https://latex.codecogs.com/png.latex?AB"> 型</strong>（如 <img src="https://latex.codecogs.com/png.latex?AgCl">）：<img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D%20=%20s%5E2%20%5CRightarrow%20%5Cmathbf%7Bs%20=%20%5Csqrt%7BK_%7Bsp%7D%7D%7D">。 * <strong><img src="https://latex.codecogs.com/png.latex?A_2%20B"> 或 <img src="https://latex.codecogs.com/png.latex?AB_2"> 型</strong>（如 <img src="https://latex.codecogs.com/png.latex?Ag_2%20CrO_4"> 或 <img src="https://latex.codecogs.com/png.latex?PbF_2">）：<img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D%20=%20(2s)%5E2%20%5Ccdot%20s%20=%204s%5E3%20%5CRightarrow%20%5Cmathbf%7Bs%20=%20%5Csqrt%7BK_%7Bsp%7D/4%7D%7D">。</p>
-</section>
-<section id="溶度积规则沉淀生成的判定" class="level3">
-<h3 class="anchored" data-anchor-id="溶度积规则沉淀生成的判定">3. 溶度积规则（沉淀生成的判定）</h3>
-<p>类似于化学平衡中的 <img src="https://latex.codecogs.com/png.latex?Q"> 与 <img src="https://latex.codecogs.com/png.latex?K"> 的比较： * <strong>离子积 (<img src="https://latex.codecogs.com/png.latex?Q">)</strong>：溶液中离子浓度幂的乘积（不一定是饱和状态）。 * <strong>判定标准</strong>： * <strong><img src="https://latex.codecogs.com/png.latex?Q%20%3E%20K_%7Bsp%7D"></strong>：溶液过饱和，<strong>有沉淀析出</strong>，直到 <img src="https://latex.codecogs.com/png.latex?Q%20=%20K_%7Bsp%7D">。 * <strong><img src="https://latex.codecogs.com/png.latex?Q%20=%20K_%7Bsp%7D"></strong>：溶液恰好饱和，处于<strong>沉淀溶解平衡状态</strong>。 * <strong><img src="https://latex.codecogs.com/png.latex?Q%20%3C%20K_%7Bsp%7D"></strong>：溶液未饱和，<strong>无沉淀析出</strong>；若有固体存在，则固体继续溶解。</p>
-</section>
-<section id="影响沉淀溶解平衡的因素" class="level3">
-<h3 class="anchored" data-anchor-id="影响沉淀溶解平衡的因素">4. 影响沉淀溶解平衡的因素</h3>
-<ul>
-<li><strong>同离子效应</strong>：在难溶电解质溶液中加入含有相同离子的强电解质，平衡会向生成沉淀的方向移动，从而使难溶物的<strong>溶解度显著降低</strong>。</li>
-<li><strong>盐效应</strong>：在难溶电解质溶液中加入不含相同离子的强电解质，会稍微增大溶解度（但在基础工程计算中通常忽略不计）。</li>
-<li><strong>酸效应（pH 影响）</strong>：如果沉淀的阴离子是弱酸根（如 <img src="https://latex.codecogs.com/png.latex?CO_3%5E%7B2-%7D,%20OH%5E-">），降低 pH（加酸）会使阴离子浓度下降，导致平衡右移，<strong>沉淀溶解</strong>。</li>
-<li><strong>配位效应</strong>：加入能与金属离子形成稳定配合物的试剂，会显著增大溶解度。</li>
-</ul>
-</section>
-<section id="分步沉淀-fractional-precipitation" class="level3">
-<h3 class="anchored" data-anchor-id="分步沉淀-fractional-precipitation">5. 分步沉淀 (Fractional Precipitation)</h3>
-<p>当溶液中存在多种离子都能与同一种试剂产生沉淀时，它们被沉淀出来的先后顺序。 * <strong>基本原理</strong>：哪种物质先达到其 <img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D"> 所要求的浓度积，哪种物质就<strong>先沉淀</strong>。 * <strong>应用</strong>：通过控制加入试剂的浓度或调节 pH 值，可以实现离子的分离。</p>
-</section>
-<section id="沉淀的转化-precipitation-transformation" class="level3">
-<h3 class="anchored" data-anchor-id="沉淀的转化-precipitation-transformation">6. 沉淀的转化 (Precipitation Transformation)</h3>
-<p>一种难溶电解质转化为另一种更难溶电解质的过程。 * <strong>规律</strong>：通常是 <strong><img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D"> 较大的转化为 <img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D"> 更小的</strong>（例如 <img src="https://latex.codecogs.com/png.latex?AgCl%20%5Crightarrow%20AgI">）。 * <strong>转化平衡常数 (<img src="https://latex.codecogs.com/png.latex?K">) 的推导</strong>： 对于反应 <img src="https://latex.codecogs.com/png.latex?AgCl(s)%20+%20I%5E-(aq)%20%5Crightleftharpoons%20AgI(s)%20+%20Cl%5E-(aq)">： <img src="https://latex.codecogs.com/png.latex?K%20=%20%5Cfrac%7B%5BCl%5E-%5D%7D%7B%5BI%5E-%5D%7D%20=%20%5Cfrac%7B%5BCl%5E-%5D%5BAg%5E+%5D%7D%7B%5BI%5E-%5D%5BAg%5E+%5D%7D%20=%20%5Cfrac%7BK_%7Bsp%7D(AgCl)%7D%7BK_%7Bsp%7D(AgI)%7D"> 若 <img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D(AgCl)%20%5Cgg%20K_%7Bsp%7D(AgI)">，则平衡常数 <img src="https://latex.codecogs.com/png.latex?K"> 非常大，转化非常彻底。</p>
-
-
-<!-- -->
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
-  <category>工程化学</category>
-  <guid>https://qmdthings.top/notes/工程化学/9. 合成高分子材料.html</guid>
-  <pubDate>Mon, 09 Mar 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>金属材料与无机非金属材料</title>
-  <dc:creator>QMD </dc:creator>
-  <link>https://qmdthings.top/notes/工程化学/7. 金属材料与无机非金属材料.html</link>
-  <description><![CDATA[ 
-
-<p id="hitokoto">
-  hitokoto!
-</p>
-
-<script>
-  const hitokotoElement = document.querySelector("#hitokoto_text");
-
-  fetch("https://v1.hitokoto.cn?c=k")
-    .then((response) => response.json())
-    .then((data) => {
-      const hitokoto = document.querySelector("#hitokoto_text");
-      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
-      hitokoto.innerText = data.hitokoto;
-    })
-    .catch(console.error);
-
-  hitokotoElement.addEventListener("click", function (event) {
-    event.preventDefault();
-  });
-</script>
-
-
-
-
-
-<section id="一-化学反应速率的意义" class="level3">
-<h3 class="anchored" data-anchor-id="一-化学反应速率的意义">一、 化学反应速率的意义</h3>
-<ol type="1">
-<li><strong>瞬时速率的定义</strong>： 对于反应 <img src="https://latex.codecogs.com/png.latex?aA%20+%20bB%20%5Crightarrow%20cC%20+%20dD">，反应物 <img src="https://latex.codecogs.com/png.latex?A"> 在某一时刻 <img src="https://latex.codecogs.com/png.latex?t"> 的瞬时反应速率定义为： <img src="https://latex.codecogs.com/png.latex?v_A%20=%20-%5Cfrac%7Bd(A)%7D%7Bdt%7D"> 其中 <img src="https://latex.codecogs.com/png.latex?(A)"> 代表反应物 <img src="https://latex.codecogs.com/png.latex?A"> 的浓度。由于反应物随时间减少，为了使速率为正值，前面加负号。</li>
-<li><strong>统一反应速率 (<img src="https://latex.codecogs.com/png.latex?v">)</strong>： 为了消除不同物质计量系数的影响，定义统一速率： <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bv%20=%20-%5Cfrac%7B1%7D%7Ba%7D%5Cfrac%7Bd(A)%7D%7Bdt%7D%20=%20-%5Cfrac%7B1%7D%7Bb%7D%5Cfrac%7Bd(B)%7D%7Bdt%7D%20=%20%5Cfrac%7B1%7D%7Bc%7D%5Cfrac%7Bd(C)%7D%7Bdt%7D%20=%20%5Cfrac%7B1%7D%7Bd%7D%5Cfrac%7Bd(D)%7D%7Bdt%7D%7D"> 这样，同一个反应在同一时刻就只有一个唯一的速率数值。</li>
-</ol>
-</section>
-<section id="二-浓度对反应速率的影响质量作用定律" class="level3">
-<h3 class="anchored" data-anchor-id="二-浓度对反应速率的影响质量作用定律">二、 浓度对反应速率的影响（质量作用定律）</h3>
-<ol type="1">
-<li><strong>基元反应</strong>：指反应物分子在碰撞中一步直接转化为产物的反应。</li>
-<li><strong>质量作用定律</strong>：对于基元反应，反应速率与各反应物浓度的幂的乘积成正比。
-<ul>
-<li>推导：若 <img src="https://latex.codecogs.com/png.latex?aA%20+%20bB%20%5Crightarrow%20cC"> 为基元反应，则： <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bv%20=%20k(A)%5Ea(B)%5Eb%7D"> 其中 <img src="https://latex.codecogs.com/png.latex?k"> 为<strong>反应速率常数</strong>，主要受温度影响。</li>
-</ul></li>
-<li><strong>非基元反应</strong>：由多个基元步骤组成。其速率方程为 <img src="https://latex.codecogs.com/png.latex?v%20=%20k(A)%5Em(B)%5En">，其中 <img src="https://latex.codecogs.com/png.latex?m,%20n">（反应级数）必须由实验确定。</li>
-</ol>
-</section>
-<section id="三-反应级数与积分速率方程核心推导" class="level3">
-<h3 class="anchored" data-anchor-id="三-反应级数与积分速率方程核心推导">三、 反应级数与积分速率方程（核心推导）</h3>
-<p>资料重点推导了<strong>一级反应</strong>的规律：</p>
-<ol type="1">
-<li><strong>一级反应速率方程推导</strong>： 对于反应 <img src="https://latex.codecogs.com/png.latex?A%20%5Crightarrow%20P">，其速率方程为：<img src="https://latex.codecogs.com/png.latex?-%5Cfrac%7Bd(A)%7D%7Bdt%7D%20=%20k(A)">。
-<ul>
-<li><strong>分离变量</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Bd(A)%7D%7B(A)%7D%20=%20-k%20dt"></li>
-<li><strong>积分</strong>：从 <img src="https://latex.codecogs.com/png.latex?t=0"> 到 <img src="https://latex.codecogs.com/png.latex?t"> 进行定积分： <img src="https://latex.codecogs.com/png.latex?%5Cint_%7B(A)_0%7D%5E%7B(A)%7D%20%5Cfrac%7Bd(A)%7D%7B(A)%7D%20=%20-k%20%5Cint_%7B0%7D%5E%7Bt%7D%20dt%20%5CRightarrow%20%5Cln(A)%20-%20%5Cln(A)_0%20=%20-kt"></li>
-<li><strong>最终表达式</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7B%5Cln%20%5Cfrac%7B(A)_0%7D%7B(A)%7D%20=%20kt%7D"> 或 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Blg(A)%20=%20lg(A)_0%20-%20%5Cfrac%7Bk%7D%7B2.303%7Dt%7D">。</li>
-</ul></li>
-<li><strong>半衰期 (<img src="https://latex.codecogs.com/png.latex?t_%7B1/2%7D">) 的推导</strong>： 半衰期是指反应物消耗一半所需的时间，即当 <img src="https://latex.codecogs.com/png.latex?t%20=%20t_%7B1/2%7D"> 时，<img src="https://latex.codecogs.com/png.latex?(A)%20=%20%5Cfrac%7B1%7D%7B2%7D(A)_0">。
-<ul>
-<li>代入一级反应积分式：<img src="https://latex.codecogs.com/png.latex?%5Cln%20%5Cfrac%7B(A)_0%7D%7B%5Cfrac%7B1%7D%7B2%7D(A)_0%7D%20=%20kt_%7B1/2%7D"></li>
-<li>得：<img src="https://latex.codecogs.com/png.latex?%5Cln%202%20=%20kt_%7B1/2%7D"></li>
-<li>结论：<img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bt_%7B1/2%7D%20=%20%5Cfrac%7B%5Cln%202%7D%7Bk%7D%20%5Capprox%20%5Cfrac%7B0.693%7D%7Bk%7D%7D"></li>
-<li><strong>重要特性</strong>：一级反应的半衰期与初始浓度无关。</li>
-</ul></li>
-</ol>
-</section>
-<section id="四-温度对反应速率的影响阿仑尼乌斯-arrhenius-方程" class="level3">
-<h3 class="anchored" data-anchor-id="四-温度对反应速率的影响阿仑尼乌斯-arrhenius-方程">四、 温度对反应速率的影响：阿仑尼乌斯 (Arrhenius) 方程</h3>
-<ol type="1">
-<li><strong>经验公式</strong>： <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bk%20=%20Ae%5E%7B-E_a/RT%7D%7D"> 其中 <img src="https://latex.codecogs.com/png.latex?A"> 为指前因子，<img src="https://latex.codecogs.com/png.latex?E_a"> 为<strong>活化能</strong>。</li>
-<li><strong>计算式（两点法）推导</strong>： 在不同温度 <img src="https://latex.codecogs.com/png.latex?T_1,%20T_2"> 下，速率常数分别为 <img src="https://latex.codecogs.com/png.latex?k_1,%20k_2">。
-<ul>
-<li>取对数：<img src="https://latex.codecogs.com/png.latex?%5Cln%20k_1%20=%20%5Cln%20A%20-%20%5Cfrac%7BE_a%7D%7BRT_1%7D"> 和 <img src="https://latex.codecogs.com/png.latex?%5Cln%20k_2%20=%20%5Cln%20A%20-%20%5Cfrac%7BE_a%7D%7BRT_2%7D"></li>
-<li>相减消去 <img src="https://latex.codecogs.com/png.latex?A">：<img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7B%5Cln%20%5Cfrac%7Bk_2%7D%7Bk_1%7D%20=%20%5Cfrac%7BE_a%7D%7BR%7D%20%5Cleft(%20%5Cfrac%7B1%7D%7BT_1%7D%20-%20%5Cfrac%7B1%7D%7BT_2%7D%20%5Cright)%7D"> 这个公式常用于通过实验测定的速率常数来计算反应的活化能 <img src="https://latex.codecogs.com/png.latex?E_a">。</li>
-</ul></li>
-</ol>
-</section>
-<section id="五-反应速率理论微观解释" class="level3">
-<h3 class="anchored" data-anchor-id="五-反应速率理论微观解释">五、 反应速率理论（微观解释）</h3>
-<ol type="1">
-<li><strong>碰撞理论</strong>：
-<ul>
-<li>认为反应发生的先决条件是分子间的<strong>有效碰撞</strong>。</li>
-<li>公式形式：<img src="https://latex.codecogs.com/png.latex?k%20=%20Z_0%20P%20e%5E%7B-E_c/RT%7D">，其中 <img src="https://latex.codecogs.com/png.latex?Z_0"> 是碰撞频率，<img src="https://latex.codecogs.com/png.latex?P"> 是方位因子（考虑分子碰撞的角度）。</li>
-</ul></li>
-<li><strong>过渡态理论</strong>：
-<ul>
-<li>认为反应物在变为产物前，必须先经过一个高能量的<strong>活化络合物</strong>（过渡态）。</li>
-<li><strong>活化能 (<img src="https://latex.codecogs.com/png.latex?E_a">)</strong>：即反应物分子与活化络合物之间的能量差。活化能越小，反应速率越快。</li>
-</ul></li>
-</ol>
-</section>
-<section id="六-催化剂与催化作用" class="level3">
-<h3 class="anchored" data-anchor-id="六-催化剂与催化作用">六、 催化剂与催化作用</h3>
-<ol type="1">
-<li><strong>基本特征</strong>：催化剂能改变反应历程，但反应前后自身的质量和化学性质不变。</li>
-<li><strong>核心原理</strong>：催化剂通过<strong>降低反应的活化能 (<img src="https://latex.codecogs.com/png.latex?E_a">)</strong>，使更多的分子成为活化分子，从而显著加快反应速率。</li>
-<li><strong>局限性</strong>：催化剂不能改变热力学判据（即不能让 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20%3E%200"> 的反应发生），也不改变平衡状态（同时等比例加快正逆反应速率）。</li>
-</ol>
-
-
-<!-- -->
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
-  <category>工程化学</category>
-  <guid>https://qmdthings.top/notes/工程化学/7. 金属材料与无机非金属材料.html</guid>
-  <pubDate>Mon, 09 Mar 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
   <title></title>
   <link>https://qmdthings.top/notes/电工技术/电工技术上.html</link>
   <description><![CDATA[ <div class="quarto-title-block"><div class="quarto-title-tools-only"><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source Code</button></div></div>
@@ -3237,7 +3237,7 @@ F--&gt; F1["四副构件"]
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
   <guid>https://qmdthings.top/notes/电工技术/电工技术上.html</guid>
-  <pubDate>Wed, 22 Apr 2026 09:14:20 GMT</pubDate>
+  <pubDate>Wed, 22 Apr 2026 09:24:37 GMT</pubDate>
 </item>
 </channel>
 </rss>
