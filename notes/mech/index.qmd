@@ -9,5 +9,8 @@ include-in-header:
       <meta name="description" content="理论力学、材料力学、机械原理" />
 ---
 
+::: {style="text-align: center; margin-bottom: 2rem;"}
+![分享卡片](https://qmdthings.top/assets/share-cards/default.jpg)
+:::
 
 wonderful
