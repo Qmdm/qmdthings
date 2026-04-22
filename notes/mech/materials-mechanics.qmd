@@ -5,6 +5,7 @@ date: 2026/04/10
 description: 一文快速掌握全书
 categories: 速通
 engine: knitr
+image: "../../assets/share-cards/default.jpg"
 ---
 
 # 绪论
