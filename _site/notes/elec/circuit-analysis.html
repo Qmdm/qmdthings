@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="QMD">
-<meta name="dcterms.date" content="2026-03-09">
-<meta name="description" content="工程化学的第一章">
+<meta name="dcterms.date" content="2026-04-10">
+<meta name="description" content="电工技术第三章">
 
-<title>热化学基础 – QMD的杂物间</title>
+<title>电路的暂态分析 – QMD的杂物间</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -71,6 +71,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../notes/elec/circuits.html" rel="next">
+<link href="../../notes/mgmt/index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -129,13 +131,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="热化学基础 – QMD的杂物间">
-<meta property="og:description" content="工程化学的第一章">
+<meta property="og:title" content="电路的暂态分析 – QMD的杂物间">
+<meta property="og:description" content="电工技术第三章">
 <meta property="og:image" content="https://qmdthings.top/assets/share-cards/default.jpg">
 <meta property="og:site_name" content="QMD的杂物间">
 <meta property="og:locale" content="zh_CN">
-<meta name="twitter:title" content="热化学基础 – QMD的杂物间">
-<meta name="twitter:description" content="工程化学的第一章">
+<meta name="twitter:title" content="电路的暂态分析 – QMD的杂物间">
+<meta name="twitter:description" content="电工技术第三章">
 <meta name="twitter:image" content="https://qmdthings.top/assets/share-cards/default.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -416,7 +418,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/开始/index.html">Posts</a></li><li class="breadcrumb-item"><a href="../../posts/开始/index.html">热化学基础</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/mgmt/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/elec/circuit-analysis.html">电路</a></li><li class="breadcrumb-item"><a href="../../notes/elec/circuit-analysis.html">电路的暂态分析</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -428,15 +430,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/开始/index.html">Posts</a></li><li class="breadcrumb-item"><a href="../../posts/开始/index.html">热化学基础</a></li></ol></nav>
-      <div class="quarto-title-block"><div><h1 class="title">热化学基础</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source Code</button></div></div>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/mgmt/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/elec/circuit-analysis.html">电路</a></li><li class="breadcrumb-item"><a href="../../notes/elec/circuit-analysis.html">电路的暂态分析</a></li></ol></nav>
+      <div class="quarto-title-block"><div><h1 class="title">电路的暂态分析</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source Code</button></div></div>
                   <div>
         <div class="description">
-          工程化学的第一章
+          电工技术第三章
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">工程化学</div>
+                <div class="quarto-category">电工技术</div>
               </div>
                   </div>
   </div>
@@ -454,7 +456,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 9, 2026</p>
+        <p class="date">April 10, 2026</p>
       </div>
     </div>
     
@@ -475,7 +477,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Posts</span></a>
+ <span class="menu-text">Notes</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -483,10 +485,150 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/开始/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../notes/mgmt/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">生产管理</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">电路</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/elec/circuit-analysis.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">电路的暂态分析</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/elec/circuits.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Circuits</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/elec/electrical-technology-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">正弦交流电</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/elec/electrical-technology-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Electrical Technology 2</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">概率统计</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/stats/probability-statistics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">概率论与数理统计</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">化学</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/chem/equilibrium-kinetics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">化学平衡与化学反应速率</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/chem/inorganic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">无机物单质及化合物</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/chem/materials.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">金属材料与无机非金属材料</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/chem/organic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">有机化学与有机化合物</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/chem/polymers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">合成高分子材料</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/chem/redox.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">氧化还原反应与电化学</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/chem/solutions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">溶液</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/chem/structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">物质结构基础</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/chem/thermochemistry.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">热化学基础</span></a>
   </div>
 </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">机械力学</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/mech/materials-mechanics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">材料力学</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/mech/mechanical-principles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">机械原理</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
       </ul>
   </li>
     </ul>
@@ -525,6 +667,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource circuitikz number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>\tikzset{</span>
+<span id="cb1-2"><a href="#cb1-2"></a>  every node/.style={font=\sffamily\normalsize},</span>
+<span id="cb1-3"><a href="#cb1-3"></a>  every path/.style={line width=1.5pt}</span>
+<span id="cb1-4"><a href="#cb1-4"></a>}</span>
+<span id="cb1-5"><a href="#cb1-5"></a>%| echo: false</span>
+<span id="cb1-6"><a href="#cb1-6"></a>%| fig-align: center</span>
+<span id="cb1-7"><a href="#cb1-7"></a>\begin{circuitikz}[</span>
+<span id="cb1-8"><a href="#cb1-8"></a>  european,</span>
+<span id="cb1-9"><a href="#cb1-9"></a>  line width=1pt,</span>
+<span id="cb1-10"><a href="#cb1-10"></a>  every node/.style={font=\normalsize}</span>
+<span id="cb1-11"><a href="#cb1-11"></a>]</span>
+<span id="cb1-12"><a href="#cb1-12"></a></span>
+<span id="cb1-13"><a href="#cb1-13"></a>% 主回路</span>
+<span id="cb1-14"><a href="#cb1-14"></a>\draw</span>
+<span id="cb1-15"><a href="#cb1-15"></a>  (0,0) to[V, l=$V_s$] (0,3)</span>
+<span id="cb1-16"><a href="#cb1-16"></a>        to[R, l=$R$] (3,3)</span>
+<span id="cb1-17"><a href="#cb1-17"></a>        to[C, l=$C$] (3,0)</span>
+<span id="cb1-18"><a href="#cb1-18"></a>        -- (0,0);</span>
+<span id="cb1-19"><a href="#cb1-19"></a></span>
+<span id="cb1-20"><a href="#cb1-20"></a>% 输出端</span>
+<span id="cb1-21"><a href="#cb1-21"></a>\draw (3,3) to[short, -o] (4.5,3) node[right] {$+$};</span>
+<span id="cb1-22"><a href="#cb1-22"></a>\draw (3,0) to[short, -o] (4.5,0) node[right] {$-$};</span>
+<span id="cb1-23"><a href="#cb1-23"></a>\draw[|&lt;-&gt;|] (4.2,0.15) -- (4.2,2.85)</span>
+<span id="cb1-24"><a href="#cb1-24"></a>  node[midway, right=2pt] {$u_C$};</span>
+<span id="cb1-25"><a href="#cb1-25"></a></span>
+<span id="cb1-26"><a href="#cb1-26"></a>% 节点圆点</span>
+<span id="cb1-27"><a href="#cb1-27"></a>\foreach \x/\y in {0/0, 0/3, 3/0, 3/3}</span>
+<span id="cb1-28"><a href="#cb1-28"></a>  \fill (\x,\y) circle (2pt);</span>
+<span id="cb1-29"><a href="#cb1-29"></a>\end{circuitikz}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="circuit-analysis_files/figure-html/unnamed-chunk-2-1.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 <!-- -->
@@ -994,14 +1177,58 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       }
     }
   });
-  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> "热化学基础"</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="an">author:</span><span class="co"> "QMD"</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="an">date:</span><span class="co"> "2026/03/09"</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="an">description:</span><span class="co"> "工程化学的第一章"</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="an">categories:</span><span class="co"> [ "工程化学" ]</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../notes/mgmt/index.html" class="pagination-link" aria-label="生产管理">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">生产管理</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../notes/elec/circuits.html" class="pagination-link" aria-label="Circuits">
+        <span class="nav-page-text">Circuits</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="an">title:</span><span class="co"> 电路的暂态分析</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="an">author:</span><span class="co"> QMD</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="an">date:</span><span class="co"> 2026/04/10</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="an">description:</span><span class="co"> 电工技术第三章</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="an">categories:</span><span class="co"> 电工技术</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="an">engine:</span><span class="co"> knitr</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="co">---</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a></span>
+<span id="cb2-10"><a href="#cb2-10"></a>{{&lt; include /setup/cf5733e5-0370-4aae-8689-61bad1dd9ec0<span class="dv">&amp;#x7535;</span>cf5733e5-0370-4aae-8689-61bad1dd9ec0<span class="dv">&amp;#x5b50;</span>cf5733e5-0370-4aae-8689-61bad1dd9ec0<span class="dv">&amp;#x7535;</span>cf5733e5-0370-4aae-8689-61bad1dd9ec0<span class="dv">&amp;#x8def;</span>.qmd &gt;}}</span>
+<span id="cb2-11"><a href="#cb2-11"></a></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="in">```{circuitikz}</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a><span class="op">%|</span> echo<span class="op">:</span> <span class="kw">false</span></span>
+<span id="cb2-16"><a href="#cb2-16"></a><span class="op">%|</span> fig<span class="op">-</span>align<span class="op">:</span> center</span>
+<span id="cb2-17"><a href="#cb2-17"></a>\begin<span class="op">{</span>circuitikz<span class="op">}[</span></span>
+<span id="cb2-18"><a href="#cb2-18"></a>  european<span class="op">,</span></span>
+<span id="cb2-19"><a href="#cb2-19"></a>  line width<span class="op">=</span><span class="dv">1</span><span class="er">pt</span><span class="op">,</span></span>
+<span id="cb2-20"><a href="#cb2-20"></a>  every node<span class="op">/.</span>style<span class="op">={</span>font<span class="op">=</span>\normalsize<span class="op">}</span></span>
+<span id="cb2-21"><a href="#cb2-21"></a><span class="op">]</span></span>
+<span id="cb2-22"><a href="#cb2-22"></a></span>
+<span id="cb2-23"><a href="#cb2-23"></a><span class="op">%</span> 主回路</span>
+<span id="cb2-24"><a href="#cb2-24"></a>\draw</span>
+<span id="cb2-25"><a href="#cb2-25"></a>  <span class="op">(</span><span class="dv">0</span><span class="op">,</span><span class="dv">0</span><span class="op">)</span> to<span class="op">[</span>V<span class="op">,</span> l<span class="op">=</span>$V_s$<span class="op">]</span> <span class="op">(</span><span class="dv">0</span><span class="op">,</span><span class="dv">3</span><span class="op">)</span></span>
+<span id="cb2-26"><a href="#cb2-26"></a>        to<span class="op">[</span>R<span class="op">,</span> l<span class="op">=</span>$R$<span class="op">]</span> <span class="op">(</span><span class="dv">3</span><span class="op">,</span><span class="dv">3</span><span class="op">)</span></span>
+<span id="cb2-27"><a href="#cb2-27"></a>        to<span class="op">[</span>C<span class="op">,</span> l<span class="op">=</span>$C$<span class="op">]</span> <span class="op">(</span><span class="dv">3</span><span class="op">,</span><span class="dv">0</span><span class="op">)</span></span>
+<span id="cb2-28"><a href="#cb2-28"></a>        <span class="op">--</span> <span class="op">(</span><span class="dv">0</span><span class="op">,</span><span class="dv">0</span><span class="op">);</span></span>
+<span id="cb2-29"><a href="#cb2-29"></a></span>
+<span id="cb2-30"><a href="#cb2-30"></a><span class="op">%</span> 输出端</span>
+<span id="cb2-31"><a href="#cb2-31"></a>\draw <span class="op">(</span><span class="dv">3</span><span class="op">,</span><span class="dv">3</span><span class="op">)</span> to<span class="op">[</span><span class="dt">short</span><span class="op">,</span> <span class="op">-</span>o<span class="op">]</span> <span class="op">(</span><span class="fl">4.5</span><span class="op">,</span><span class="dv">3</span><span class="op">)</span> node<span class="op">[</span>right<span class="op">]</span> <span class="op">{</span>$<span class="op">+</span>$<span class="op">};</span></span>
+<span id="cb2-32"><a href="#cb2-32"></a>\draw <span class="op">(</span><span class="dv">3</span><span class="op">,</span><span class="dv">0</span><span class="op">)</span> to<span class="op">[</span><span class="dt">short</span><span class="op">,</span> <span class="op">-</span>o<span class="op">]</span> <span class="op">(</span><span class="fl">4.5</span><span class="op">,</span><span class="dv">0</span><span class="op">)</span> node<span class="op">[</span>right<span class="op">]</span> <span class="op">{</span>$<span class="op">-</span>$<span class="op">};</span></span>
+<span id="cb2-33"><a href="#cb2-33"></a>\draw<span class="op">[|&lt;-&gt;|]</span> <span class="op">(</span><span class="fl">4.2</span><span class="op">,</span><span class="fl">0.15</span><span class="op">)</span> <span class="op">--</span> <span class="op">(</span><span class="fl">4.2</span><span class="op">,</span><span class="fl">2.85</span><span class="op">)</span></span>
+<span id="cb2-34"><a href="#cb2-34"></a>  node<span class="op">[</span>midway<span class="op">,</span> right<span class="op">=</span><span class="dv">2</span><span class="er">pt</span><span class="op">]</span> <span class="op">{</span>$u_C$<span class="op">};</span></span>
+<span id="cb2-35"><a href="#cb2-35"></a></span>
+<span id="cb2-36"><a href="#cb2-36"></a><span class="op">%</span> 节点圆点</span>
+<span id="cb2-37"><a href="#cb2-37"></a>\foreach \x<span class="op">/</span>\y in <span class="op">{</span><span class="dv">0</span><span class="op">/</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">/</span><span class="dv">3</span><span class="op">,</span> <span class="dv">3</span><span class="op">/</span><span class="dv">0</span><span class="op">,</span> <span class="dv">3</span><span class="op">/</span><span class="dv">3</span><span class="op">}</span></span>
+<span id="cb2-38"><a href="#cb2-38"></a>  \fill <span class="op">(</span>\x<span class="op">,</span>\y<span class="op">)</span> circle <span class="op">(</span><span class="dv">2</span><span class="er">pt</span><span class="op">);</span></span>
+<span id="cb2-39"><a href="#cb2-39"></a>\end<span class="op">{</span>circuitikz<span class="op">}</span></span>
+<span id="cb2-40"><a href="#cb2-40"></a><span class="in">```</span></span>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
