@@ -15,10 +15,13 @@ website:
 
   # ShareCard
   open-graph:
-    image: "../../about/a.jpg"
+    image: "../../assets/share-cards/default.png"
     image-width: 1200
     image-height: 630
     locale: zh_CN
+    
+  twitter-card:
+    image: "../../assets/share-cards/default.png"
 
 
   # you must change this appropriately for RSS feeds to work properly
