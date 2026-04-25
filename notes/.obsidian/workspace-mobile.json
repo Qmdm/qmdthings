@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "材料力学/材料力学.qmd",
+                "file": "chem/engineering-chemistry.qmd",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "材料力学"
+              "title": "engineering-chemistry"
             }
           }
         ]
@@ -169,6 +169,10 @@
   },
   "active": "48fc17f2cef46c69",
   "lastOpenFiles": [
+    "mgmt/POM.qmd",
+    "mgmt/index.qmd",
+    "chem/engineering-chemistry.qmd",
+    "stats/probability-statistics.qmd",
     "材料力学/材料力学.html",
     "材料力学/材料力学_files",
     "材料力学/材料力学.knit.md",
@@ -177,10 +181,7 @@
     "概率论与数理统计/概率论与数理统计.qmd",
     "概率论与数理统计/概率论与数理统计.html",
     "概率论与数理统计/概率论与数理统计_files/mediabag",
-    "概率论与数理统计/概率论与数理统计_files/execute-results/html.json",
-    "概率论与数理统计/概率论与数理统计_files/execute-results",
     "概率论与数理统计/概率论与数理统计.knit.md",
-    "概率论与数理统计/tikz3c6c6c9a2d64.dvi",
     "电工技术/电路的暂态分析.knit.md",
     "材料力学/1. 绪论.md",
     "电工技术/电路的暂态分析.md",

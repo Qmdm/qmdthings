@@ -2,28 +2,18 @@
   {
     "listing": "/index.html",
     "items": [
-      "/notes/mgmt/index.html",
+      "/notes/mgmt/POM.html",
       "/notes/elec/electrical-technology-2.html",
       "/notes/elec/electrical-technology-1.html",
       "/notes/elec/index.html",
       "/notes/elec/circuits.html",
-      "/notes/chem/index.html",
-      "/notes/mech/index.html",
       "/notes/stats/index.html",
       "/notes/elec/circuit-analysis.html",
       "/notes/mech/mechanical-principles.html",
       "/notes/mech/materials-mechanics.html",
       "/notes/stats/probability-statistics.html",
       "/posts/开始/index.html",
-      "/notes/chem/polymers.html",
-      "/notes/chem/structure.html",
-      "/notes/chem/thermochemistry.html",
-      "/notes/chem/materials.html",
-      "/notes/chem/redox.html",
-      "/notes/chem/inorganic.html",
-      "/notes/chem/equilibrium-kinetics.html",
-      "/notes/chem/organic.html",
-      "/notes/chem/solutions.html"
+      "/notes/chem/engineering-chemistry.html"
     ]
   }
 ]
