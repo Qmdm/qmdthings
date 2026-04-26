@@ -1369,7 +1369,7 @@ F--&gt; F1["四副构件"]
   <category>速通</category>
   <guid>https://qmdthings.top/notes/mech/materials-mechanics.html</guid>
   <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://qmdthings.top/notes/mech" medium="image"/>
+  <media:content url="http://img.qmdthings.top/1777096502342.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>概率论与数理统计</title>
@@ -2043,7 +2043,10 @@ F--&gt; F1["四副构件"]
 </ul></li>
 <li><strong>与吉布斯自由能的关系</strong>： <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%5E%5Cominus%20=%20-RT%20%5Cln%20K%5E%5Cominus">
 <ul>
-<li><strong>变量含义</strong>：<img src="https://latex.codecogs.com/png.latex?R"> 为摩尔气体常数；<img src="https://latex.codecogs.com/png.latex?T"> 为热力学温度。</li>
+<li><p><strong>变量含义</strong>：<img src="https://latex.codecogs.com/png.latex?R"> 为摩尔气体常数；<img src="https://latex.codecogs.com/png.latex?T"> 为热力学温度。</p></li>
+<li><p>化学势</p></li>
+<li></li>
+<li><p>化学势<img src="https://latex.codecogs.com/png.latex?%5Cmu_i">是系统中某组分 i 的“逃逸趋势”或“扩散驱动力”的定量描述。</p></li>
 </ul></li>
 <li><strong>多重平衡规则</strong>：若一个反应可以看作是若干个分步反应之和（或差），则总反应的 <img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus"> 等于各分步反应平衡常数的乘积（或商）。</li>
 </ul>
@@ -3279,7 +3282,7 @@ F--&gt; F1["四副构件"]
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
-  <category>工程化学</category>
+  <category>化学</category>
   <guid>https://qmdthings.top/notes/chem/engineering-chemistry.html</guid>
   <pubDate>Mon, 09 Mar 2026 00:00:00 GMT</pubDate>
   <media:content url="http://img.qmdthings.top/1777096502335.png" medium="image" type="image/png"/>
@@ -3375,7 +3378,7 @@ F--&gt; F1["四副构件"]
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
   <guid>https://qmdthings.top/notes/mgmt/POM.html</guid>
-  <pubDate>Sat, 25 Apr 2026 05:59:51 GMT</pubDate>
+  <pubDate>Sun, 26 Apr 2026 09:00:57 GMT</pubDate>
 </item>
 <item>
   <title></title>
@@ -3480,85 +3483,7 @@ F--&gt; F1["四副构件"]
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
   <guid>https://qmdthings.top/notes/elec/electrical-technology-1.html</guid>
-  <pubDate>Sat, 25 Apr 2026 05:59:51 GMT</pubDate>
-</item>
-<item>
-  <title>电路</title>
-  <link>https://qmdthings.top/notes/elec/</link>
-  <description><![CDATA[ 
-
-<p id="hitokoto">
-  hitokoto!
-</p>
-
-<script>
-  const hitokotoElement = document.querySelector("#hitokoto_text");
-
-  fetch("https://v1.hitokoto.cn?c=k")
-    .then((response) => response.json())
-    .then((data) => {
-      const hitokoto = document.querySelector("#hitokoto_text");
-      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
-      hitokoto.innerText = data.hitokoto;
-    })
-    .catch(console.error);
-
-  hitokotoElement.addEventListener("click", function (event) {
-    event.preventDefault();
-  });
-</script>
-
-
-
-
-
-
-
-<!-- -->
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
-  <guid>https://qmdthings.top/notes/elec/</guid>
-  <pubDate>Sat, 25 Apr 2026 05:59:51 GMT</pubDate>
-</item>
-<item>
-  <title>概率统计</title>
-  <link>https://qmdthings.top/notes/stats/</link>
-  <description><![CDATA[ 
-
-<p id="hitokoto">
-  hitokoto!
-</p>
-
-<script>
-  const hitokotoElement = document.querySelector("#hitokoto_text");
-
-  fetch("https://v1.hitokoto.cn?c=k")
-    .then((response) => response.json())
-    .then((data) => {
-      const hitokoto = document.querySelector("#hitokoto_text");
-      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
-      hitokoto.innerText = data.hitokoto;
-    })
-    .catch(console.error);
-
-  hitokotoElement.addEventListener("click", function (event) {
-    event.preventDefault();
-  });
-</script>
-
-
-
-
-
-
-
-<!-- -->
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
-  <guid>https://qmdthings.top/notes/stats/</guid>
-  <pubDate>Sat, 25 Apr 2026 05:59:51 GMT</pubDate>
+  <pubDate>Sun, 26 Apr 2026 09:00:57 GMT</pubDate>
 </item>
 </channel>
 </rss>
