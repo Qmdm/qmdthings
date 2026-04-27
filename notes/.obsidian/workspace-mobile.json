@@ -112,7 +112,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "材料力学/材料力学.qmd",
+            "file": "chem/engineering-chemistry.qmd",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -170,8 +170,8 @@
   "active": "48fc17f2cef46c69",
   "lastOpenFiles": [
     "mgmt/POM.qmd",
-    "mgmt/index.qmd",
     "chem/engineering-chemistry.qmd",
+    "mgmt/index.qmd",
     "stats/probability-statistics.qmd",
     "材料力学/材料力学.html",
     "材料力学/材料力学_files",

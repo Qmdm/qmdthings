@@ -1991,17 +1991,17 @@ F--&gt; F1["四副构件"]
 <h3 class="anchored" data-anchor-id="吉布斯自由能-gibbs-free-energy">1.5 吉布斯自由能 (Gibbs Free Energy)</h3>
 <p>吉布斯自由能是判断反应自发性的统一标准 。</p>
 <ul>
-<li><strong>吉布斯自由能定义</strong> ：<img src="https://latex.codecogs.com/png.latex?G%20=%20H%20-%20TS"> 。</li>
-<li><strong>吉布斯方程</strong> ： <img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20=%20%5CDelta%20H%20-%20T%5CDelta%20S"></li>
-<li><strong>自发性判据（恒温、恒压、不作非体积功）</strong> ：
+<li><p><strong>吉布斯自由能定义</strong> ：<img src="https://latex.codecogs.com/png.latex?G%20=%20H%20-%20TS"> 。</p></li>
+<li><p><strong>吉布斯方程</strong> ： <img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20=%20%5CDelta%20H%20-%20T%5CDelta%20S"> 在恒温理想条件下： <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20G-G%5E%5Cominus=%5Cint%20dG=%5Cint%20VdP-SdT=%5Cint%20%5Cfrac%7BnRT%7D%7BP%7DdP=nRT%5Cln(%5Cfrac%7BP%7D%7BP%5E%5Cominus%7D)%0A"></p></li>
+<li><p><strong>自发性判据（恒温、恒压、不作非体积功）</strong> ：</p>
 <ul>
 <li><img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20%3C%200">：自发过程 。</li>
 <li><img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20=%200">：平衡状态 。</li>
 <li><img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20%3E%200">：非自发过程 。</li>
 </ul></li>
-<li><strong>标准摩尔生成吉布斯自由能 (<img src="https://latex.codecogs.com/png.latex?%5CDelta_f%20G_m%5E%5Cominus">)</strong> ：在标准状态下，由最稳定单质生成 1 mol 某物质时的吉布斯自由能变 。</li>
-<li><strong>标准摩尔反应吉布斯自由能变 (<img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%5E%5Cominus">) 计算</strong> ： <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%5E%5Cominus%20=%20%5Csum%20%5Cnu_B%20%5CDelta_f%20G_m%5E%5Cominus(B)"></li>
-<li><strong>温度对反应自发性的影响</strong> ：
+<li><p><strong>标准摩尔生成吉布斯自由能 (<img src="https://latex.codecogs.com/png.latex?%5CDelta_f%20G_m%5E%5Cominus">)</strong> ：在标准状态下，由最稳定单质生成 1 mol 某物质时的吉布斯自由能变 。</p></li>
+<li><p><strong>标准摩尔反应吉布斯自由能变 (<img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%5E%5Cominus">) 计算</strong> ： <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%5E%5Cominus%20=%20%5Csum%20%5Cnu_B%20%5CDelta_f%20G_m%5E%5Cominus(B)=G%5E%7B%5Cominus%7D(%E7%94%9F%E6%88%90%E7%89%A9)-G%5E%7B%5Cominus%7D(%E5%8F%8D%E5%BA%94%E7%89%A9)"></p></li>
+<li><p><strong>温度对反应自发性的影响</strong> ：</p>
 <ul>
 <li>当 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20H%20%3C%200,%20%5CDelta%20S%20%3E%200"> 时，任何温度下 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20%3C%200">，均自发 。</li>
 <li>当 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20H%20%3E%200,%20%5CDelta%20S%20%3C%200"> 时，任何温度下 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20%3E%200">，均不自发 。</li>
@@ -2035,20 +2035,21 @@ F--&gt; F1["四副构件"]
 <section id="标准平衡常数-kominus" class="level4">
 <h4 class="anchored" data-anchor-id="标准平衡常数-kominus">2.1.2 标准平衡常数 (<img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus">)</h4>
 <ul>
-<li><strong>概念</strong>：衡量反应进行程度的特征常数。<img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus"> 越大，正反应进行的程度越大。</li>
-<li><strong>计算公式</strong>（以 <img src="https://latex.codecogs.com/png.latex?aA(g)+bB(aq)%20%5Crightleftharpoons%20xX(g)+yY(aq)"> 为例）： <img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus%20=%20%5Cfrac%7B%5C%7Bp(X)/p%5E%5Cominus%5C%7D%5Ex%20%5C%7Bc(Y)/c%5E%5Cominus%5C%7D%5Ey%7D%7B%5C%7Bp(A)/p%5E%5Cominus%5C%7D%5Ea%20%5C%7Bc(B)/c%5E%5Cominus%5C%7D%5Eb%7D">
+<li><p><strong>概念</strong>：衡量反应进行程度的特征常数。<img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus"> 越大，正反应进行的程度越大。</p></li>
+<li><p><strong>计算公式</strong>（以 <img src="https://latex.codecogs.com/png.latex?aA(g)+bB(aq)%20%5Crightleftharpoons%20xX(g)+yY(aq)"> 为例）： <img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus%20=%20%5Cfrac%7B%5C%7Bp(X)/p%5E%5Cominus%5C%7D%5Ex%20%5C%7Bc(Y)/c%5E%5Cominus%5C%7D%5Ey%7D%7B%5C%7Bp(A)/p%5E%5Cominus%5C%7D%5Ea%20%5C%7Bc(B)/c%5E%5Cominus%5C%7D%5Eb%7D"></p>
 <ul>
 <li><strong>变量含义</strong>：<img src="https://latex.codecogs.com/png.latex?p"> 为气体分压；<img src="https://latex.codecogs.com/png.latex?p%5E%5Cominus"> 为标准压力 (<img src="https://latex.codecogs.com/png.latex?100%20%5Ctext%7B%20kPa%7D">)；<img src="https://latex.codecogs.com/png.latex?c"> 为物质的量浓度；<img src="https://latex.codecogs.com/png.latex?c%5E%5Cominus"> 为标准浓度 (<img src="https://latex.codecogs.com/png.latex?1%20%5Ctext%7B%20mol%7D%5Ccdot%5Ctext%7BL%7D%5E%7B-1%7D">)。</li>
 <li><strong>注意</strong>：纯液体和纯固体不列入表达式，视为“1”。</li>
 </ul></li>
-<li><strong>与吉布斯自由能的关系</strong>： <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%5E%5Cominus%20=%20-RT%20%5Cln%20K%5E%5Cominus">
+<li><p><strong>与吉布斯自由能的关系</strong>： <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%5E%5Cominus%20=%5Csum%20%5Cnu_i%5Cmu_i=-RT%5Csum%20%5Cnu_i%5Cln%5Cfrac%7BP_i%7D%7BP%5E%7B%5Cominus%7D%7D=-RT%20%5Cln%20K%5E%5Cominus"></p>
 <ul>
 <li><p><strong>变量含义</strong>：<img src="https://latex.codecogs.com/png.latex?R"> 为摩尔气体常数；<img src="https://latex.codecogs.com/png.latex?T"> 为热力学温度。</p></li>
-<li><p>化学势</p></li>
-<li></li>
-<li><p>化学势<img src="https://latex.codecogs.com/png.latex?%5Cmu_i">是系统中某组分 i 的“逃逸趋势”或“扩散驱动力”的定量描述。</p></li>
+<li><p>化学势<img src="https://latex.codecogs.com/png.latex?%5Cmu_i">是系统中某组分 i 的“逃逸趋势”或“扩散驱动力”的定量描述。</p>
+<pre><code>  $$
+  \mu_i=(\frac{\partial G}{\partial n_i})_{T,P,n_{j\ne i}}
+  $$</code></pre></li>
 </ul></li>
-<li><strong>多重平衡规则</strong>：若一个反应可以看作是若干个分步反应之和（或差），则总反应的 <img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus"> 等于各分步反应平衡常数的乘积（或商）。</li>
+<li><p><strong>多重平衡规则</strong>：若一个反应可以看作是若干个分步反应之和（或差），则总反应的 <img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus"> 等于各分步反应平衡常数的乘积（或商）。</p></li>
 </ul>
 </section>
 <section id="化学平衡的移动" class="level4">
@@ -2061,7 +2062,7 @@ F--&gt; F1["四副构件"]
 <li><img src="https://latex.codecogs.com/png.latex?Q%20%3E%20K%5E%5Cominus">：反应逆向进行。</li>
 <li><img src="https://latex.codecogs.com/png.latex?Q%20=%20K%5E%5Cominus">：反应达平衡状态。</li>
 </ul></li>
-<li><strong>温度与平衡常数的关系（范特霍夫方程）</strong>： <img src="https://latex.codecogs.com/png.latex?%5Cln%20%5Cfrac%7BK%5E%5Cominus_2%7D%7BK%5E%5Cominus_1%7D%20=%20%5Cfrac%7B%5CDelta_r%20H_m%5E%5Cominus%7D%7BR%7D%20%5Cleft(%20%5Cfrac%7B1%7D%7BT_1%7D%20-%20%5Cfrac%7B1%7D%7BT_2%7D%20%5Cright)"></li>
+<li><strong>温度与平衡常数的关系（范特霍夫方程）</strong>： <img src="https://latex.codecogs.com/png.latex?%0A%5CDelta_rH_m%5E%7B%5Cominus%7D%20%5Cpropto%20%5CDelta_rG_m%5E%7B%5Cominus%7D=-RT%5Cln%20K%5E%7B%5Cominus%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%5Cln%20%5Cfrac%7BK%5E%5Cominus_2%7D%7BK%5E%5Cominus_1%7D%20=%20%5Cfrac%7B%5CDelta_r%20H_m%5E%5Cominus%7D%7BR%7D%20%5Cleft(%20%5Cfrac%7B1%7D%7BT_1%7D%20-%20%5Cfrac%7B1%7D%7BT_2%7D%20%5Cright)"></li>
 </ul>
 <hr>
 </section>
@@ -2081,7 +2082,7 @@ F--&gt; F1["四副构件"]
 <li><strong>基元反应</strong>：反应物分子在接触碰撞中直接转化为产物的反应。</li>
 <li><strong>定律</strong>：基元反应速率与各反应物浓度的化学计量数绝对值为幂的乘积成正比。</li>
 </ul></li>
-<li><strong>速率方程（通用）</strong>： <img src="https://latex.codecogs.com/png.latex?v%20=%20k%20c_A%5E%5Calpha%20c_B%5E%5Cbeta">
+<li><strong>速率方程（通用）</strong>： <img src="https://latex.codecogs.com/png.latex?v%20=%20k%20c_A%5E%5Calpha%20c_B%5E%5Cbeta=k%20c_A%5E%7B%5Cnu_A%7D%20c_B%5E%7B%5Cnu_B%7D">
 <ul>
 <li><strong>变量含义</strong>：<img src="https://latex.codecogs.com/png.latex?k"> 为速率常数（与温度、催化剂有关）；<img src="https://latex.codecogs.com/png.latex?%5Calpha,%20%5Cbeta"> 为分级数，<img src="https://latex.codecogs.com/png.latex?%5Calpha+%5Cbeta"> 为总反应级数。</li>
 </ul></li>
@@ -2093,7 +2094,7 @@ F--&gt; F1["四副构件"]
 <li><strong>零级反应</strong>：速率与浓度无关，<img src="https://latex.codecogs.com/png.latex?v%20=%20k">。</li>
 <li><strong>一级反应</strong>：速率与浓度的一次方成正比。
 <ul>
-<li><strong>积分公式</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cln%20%5Cfrac%7Bc_0%7D%7Bc%7D%20=%20kt"> 。</li>
+<li><strong>积分公式</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cln%20%5Cfrac%7Bc_0%7D%7Bc%7D%20=%20kt%20%5CRightarrow%20c=c_0e%5E%7B-kt%7D"> 。</li>
 <li><strong>半衰期</strong>：<img src="https://latex.codecogs.com/png.latex?t_%7B1/2%7D%20=%20%5Cfrac%7B%5Cln%202%7D%7Bk%7D%20%5Capprox%20%5Cfrac%7B0.693%7D%7Bk%7D">（与起始浓度无关）。</li>
 </ul></li>
 </ul>
@@ -2104,11 +2105,22 @@ F--&gt; F1["四副构件"]
 <li><strong>碰撞理论</strong>：反应物分子必须发生<strong>有效碰撞</strong>才能反应。
 <ul>
 <li><strong>活化分子</strong>：能量较高、能发生有效碰撞的分子。</li>
-<li><strong>活化能 (<img src="https://latex.codecogs.com/png.latex?E_a">)</strong>：活化分子具有的最低能量与反应物分子平均能量之差。</li>
+<li><strong>活化能 (<img src="https://latex.codecogs.com/png.latex?E_a">)</strong>：活化分子具有的最低能量与反应物分子平均能量之差。是反应物达到活化状态所需要的能量。 <img src="https://latex.codecogs.com/png.latex?E_a%20=%20%5Clangle%20E%5E*%20%5Crangle%20-%20%5Clangle%20E_%7B%5Ctext%7B%E5%8F%8D%E5%BA%94%E7%89%A9%7D%7D%20%5Crangle%20%5Cge%200%0A"></li>
 </ul></li>
-<li><strong>温度的影响（阿伦尼乌斯公式）</strong>： <img src="https://latex.codecogs.com/png.latex?k%20=%20A%20%5Ccdot%20e%5E%7B-E_a/RT%7D">
+<li><strong>温度的影响（阿伦尼乌斯公式）</strong>： <img src="https://latex.codecogs.com/png.latex?k%20=%20A%20%5Ccdot%20e%5E%7B-E_a/RT%7D"></li>
+<li><strong>艾琳方程对阿伦尼乌斯的热力学化</strong>： <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20%20%20%20%20%20%20A=%5Cfrac%20%7Bk_BT%7D%7Bh%7D,E_a=%5CDelta%20G%5E%7B%5Cddagger%7D=%5CDelta%20H%5E%7B%5Cddagger%7D-T%5CDelta%20S%5E%7B%5Cddagger%7D%0A%20%20">
 <ul>
-<li>变形式：<img src="https://latex.codecogs.com/png.latex?%5Cln%20%5Cfrac%7Bk_2%7D%7Bk_1%7D%20=%20%5Cfrac%7BE_a%7D%7BR%7D%20%5Cleft(%20%5Cfrac%7B1%7D%7BT_1%7D%20-%20%5Cfrac%7B1%7D%7BT_2%7D%20%5Cright)"> 。</li>
+<li><img src="https://latex.codecogs.com/png.latex?k_B"> ：玻尔兹曼常数</li>
+<li><img src="https://latex.codecogs.com/png.latex?h"> ：普朗克常数</li>
+<li><img src="https://latex.codecogs.com/png.latex?T"> ：热力学温度</li>
+</ul>
+<ol type="1">
+<li><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Bk_B%20T%7D%7Bh%7D"> ：代表普适频率，即过渡态沿反应坐标分解为产物的基本振动频率。</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%5E%7B%5Cddagger%7D"> ：决定反应速率的能垒高度。 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%5E%7B%5Cddagger%7D"> 越小，反应越快。</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5CDelta%20S%5E%7B%5Cddagger%7D"> ：若过渡态结构比反应物更“拥挤”或更“有序”，<img src="https://latex.codecogs.com/png.latex?%5CDelta%20S%5E%7B%5Cddagger%7D"> 为负值，会降低反应速率（体现在指前因子变小）。</li>
+</ol>
+<ul>
+<li>变形式：<img src="https://latex.codecogs.com/png.latex?%5Cln%20%5Cfrac%7Bk_2%7D%7Bk_1%7D%20=%20%5Cfrac%7BE_a%7D%7BR%7D%20%5Cleft(%20%5Cfrac%7B1%7D%7BT_1%7D%20-%20%5Cfrac%7B1%7D%7BT_2%7D%20%5Cright)%5CRightarrow%20E_a=RT%5E2%5Cfrac%7Bd%20%5Cln%20k%7D%7Bd%20T%7D"> 。 <img src="https://latex.codecogs.com/png.latex?K=%5Cfrac%7Bk_%E6%AD%A3%7D%7Bk_%E9%80%86%7D%5CRightarrow%20%5CDelta_rH%5E%7B%5Cominus%7D=E_a(%E6%AD%A3)-E_a(%E9%80%86)"></li>
 <li><strong>结论</strong>：温度升高，<img src="https://latex.codecogs.com/png.latex?k"> 增大，反应速率加快。</li>
 </ul></li>
 <li><strong>活化能的影响</strong>：<img src="https://latex.codecogs.com/png.latex?E_a"> 越小，反应速率越快。</li>
@@ -2130,7 +2142,6 @@ F--&gt; F1["四副构件"]
 </section>
 <section id="溶液" class="level1">
 <h1>溶液</h1>
-<p>根据《工程化学基础教程》第三章“溶液”的内容，为您详细梳理每一个小节及三级标题下的知识点、概念与公式，并标注变量含义：</p>
 <section id="分散系-disperse-systems" class="level3">
 <h3 class="anchored" data-anchor-id="分散系-disperse-systems">3.1 分散系 (Disperse Systems)</h3>
 <ul>
@@ -2180,7 +2191,7 @@ F--&gt; F1["四副构件"]
 <section id="几种溶液浓度之间的关系" class="level4">
 <h4 class="anchored" data-anchor-id="几种溶液浓度之间的关系">3.2.5 几种溶液浓度之间的关系</h4>
 <ul>
-<li><strong>常用换算公式</strong>：<img src="https://latex.codecogs.com/png.latex?c_B%20=%20%5Cfrac%7B1000%20%5Crho%20w_B%7D%7BM_B%7D"> 。</li>
+<li><strong>常用换算公式</strong>：<img src="https://latex.codecogs.com/png.latex?c_B%20=%20%5Cfrac%7B1000%20%5Crho%20w_B%7D%7BM_B%7D"> 。（cm/1000rho）</li>
 <li><strong>变量含义</strong>：<img src="https://latex.codecogs.com/png.latex?%5Crho"> 为溶液密度 (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7Bg%7D%5Ccdot%5Ctext%7Bcm%7D%5E%7B-3%7D">)；<img src="https://latex.codecogs.com/png.latex?w_B"> 为质量分数；<img src="https://latex.codecogs.com/png.latex?M_B"> 为溶质摩尔质量。</li>
 </ul>
 <hr>
@@ -2208,8 +2219,15 @@ F--&gt; F1["四副构件"]
 <h4 class="anchored" data-anchor-id="渗透压-pi">3.3.3 渗透压 (<img src="https://latex.codecogs.com/png.latex?%5CPi">)</h4>
 <ul>
 <li><strong>公式（范特霍夫方程）</strong>：<img src="https://latex.codecogs.com/png.latex?%5CPi%20=%20c_B%20R%20T"> 。</li>
-<li><strong>变量含义</strong>：<img src="https://latex.codecogs.com/png.latex?%5CPi"> 为渗透压 (Pa)；<img src="https://latex.codecogs.com/png.latex?c_B"> 为物质的量浓度；<img src="https://latex.codecogs.com/png.latex?R"> 为气体常数 (<img src="https://latex.codecogs.com/png.latex?8.314%20%5Ctext%7B%20J%7D%5Ccdot%5Ctext%7Bmol%7D%5E%7B-1%7D%5Ccdot%5Ctext%7BK%7D%5E%7B-1%7D">)；<img src="https://latex.codecogs.com/png.latex?T"> 为热力学温度。</li>
+<li><strong>变量含义</strong>：
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?%5CPi"> 为渗透压 (Pa)；</li>
+<li><img src="https://latex.codecogs.com/png.latex?c_B"> 为物质的量浓度；</li>
+<li><img src="https://latex.codecogs.com/png.latex?R"> 为气体常数 (<img src="https://latex.codecogs.com/png.latex?8.314%20%5Ctext%7B%20J%7D%5Ccdot%5Ctext%7Bmol%7D%5E%7B-1%7D%5Ccdot%5Ctext%7BK%7D%5E%7B-1%7D">)；</li>
+<li><img src="https://latex.codecogs.com/png.latex?T"> 为热力学温度。</li>
+</ul></li>
 </ul>
+<p>依数性的根源在于熵效应。溶质粒子的加入增加了系统的混乱度（熵），使得溶剂的化学势降低，从而改变了相平衡条件（液-气、液-固平衡线移动），液态相（溶液）的稳定区间被拓宽。</p>
 <hr>
 </section>
 </section>
@@ -2234,9 +2252,9 @@ F--&gt; F1["四副构件"]
 <section id="弱酸弱碱的解离平衡" class="level3">
 <h3 class="anchored" data-anchor-id="弱酸弱碱的解离平衡">3.5 弱酸、弱碱的解离平衡</h3>
 <section id="一元弱酸弱碱的解离平衡" class="level4">
-<h4 class="anchored" data-anchor-id="一元弱酸弱碱的解离平衡">3.5.1 一元弱酸、弱碱的解离平衡</h4>
+<h4 class="anchored" data-anchor-id="一元弱酸弱碱的解离平衡">3.5.1 <em>一元</em>弱酸、弱碱的解离平衡</h4>
 <ul>
-<li><strong>近似计算式</strong>：当 <img src="https://latex.codecogs.com/png.latex?c/K_a%20%5Cge%20400"> 时，<img src="https://latex.codecogs.com/png.latex?c(H%5E+)%20%5Capprox%20%5Csqrt%7Bc%20K_a%7D"> 。</li>
+<li><strong>近似计算式</strong>：当 <img src="https://latex.codecogs.com/png.latex?c/K_a%20%5Cge%20400"> 时，<img src="https://latex.codecogs.com/png.latex?c(H%5E+)%20%5Capprox%20c%5Calpha%20=%5Csqrt%7Bc%20K_a%7D"> 。</li>
 <li><strong>奥斯特瓦尔德稀释定律</strong>：<img src="https://latex.codecogs.com/png.latex?%5Calpha%20=%20%5Csqrt%7BK_a%20/%20c%7D"> 。</li>
 </ul>
 </section>
@@ -2260,7 +2278,7 @@ F--&gt; F1["四副构件"]
 <section id="缓冲作用原理" class="level4">
 <h4 class="anchored" data-anchor-id="缓冲作用原理">3.6.1 缓冲作用原理</h4>
 <ul>
-<li><strong>组成</strong>：通常由弱酸及其盐（如 <img src="https://latex.codecogs.com/png.latex?HAc-NaAc">）或弱碱及其盐组成为缓冲对。</li>
+<li><strong>组成</strong>：通常由<strong>弱酸及其盐</strong>（如 <img src="https://latex.codecogs.com/png.latex?HAc-NaAc">）或<strong>弱碱及其盐</strong>组成为缓冲对。</li>
 </ul>
 </section>
 <section id="缓冲溶液-ph-的计算" class="level4">
@@ -2452,7 +2470,7 @@ F--&gt; F1["四副构件"]
 <li><img src="https://latex.codecogs.com/png.latex?Q">：反应商 。</li>
 <li>在 <img src="https://latex.codecogs.com/png.latex?298.15%5Ctext%7B%20K%7D"> 时，常用对数简式为：<img src="https://latex.codecogs.com/png.latex?E%20=%20E%5E%5Cominus%20-%20%5Cfrac%7B0.0592%7D%7Bn%7D%20%5Clg%20Q"> 。</li>
 </ul></li>
-<li><strong>标准平衡常数（<img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus">）与标准电动势（<img src="https://latex.codecogs.com/png.latex?E%5E%5Cominus">）的关系</strong>： <img src="https://latex.codecogs.com/png.latex?%5Clg%20K%5E%5Cominus%20=%20%5Cfrac%7BnE%5E%5Cominus%7D%7B0.0592%7D"></li>
+<li><strong>标准平衡常数（<img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus">）与标准电动势（<img src="https://latex.codecogs.com/png.latex?E%5E%5Cominus">）的关系</strong>： <img src="https://latex.codecogs.com/png.latex?E=0,%5C;%5Clg%20K%5E%5Cominus%20=%20%5Cfrac%7BnE%5E%5Cominus%7D%7B0.0592%7D"></li>
 </ul>
 <hr>
 </section>
@@ -2738,7 +2756,6 @@ F--&gt; F1["四副构件"]
 </section>
 <section id="无机物单质及化合物" class="level1">
 <h1>无机物单质及化合物</h1>
-<p>根据《工程化学基础教程》第六章“无机物单质及化合物”的内容，为您详细列举每一小节及三级标题下的知识点、概念与公式，并标注变量含义：</p>
 <section id="元素化学概述" class="level3">
 <h3 class="anchored" data-anchor-id="元素化学概述">6.1 元素化学概述</h3>
 <ul>
@@ -3155,7 +3172,6 @@ F--&gt; F1["四副构件"]
 </section>
 <section id="合成高分子材料" class="level1">
 <h1>合成高分子材料</h1>
-<p>根据《工程化学基础教程》第九章“合成高分子材料”的内容，为您详细列举每一小节及三级标题下的知识点、核心概念与公式：</p>
 <section id="高分子化合物概论" class="level3">
 <h3 class="anchored" data-anchor-id="高分子化合物概论">9.1 高分子化合物概论</h3>
 <section id="高分子化合物的基本概念" class="level4">
@@ -3378,7 +3394,7 @@ F--&gt; F1["四副构件"]
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
   <guid>https://qmdthings.top/notes/mgmt/POM.html</guid>
-  <pubDate>Sun, 26 Apr 2026 09:00:57 GMT</pubDate>
+  <pubDate>Mon, 27 Apr 2026 08:44:58 GMT</pubDate>
 </item>
 <item>
   <title></title>
@@ -3483,7 +3499,7 @@ F--&gt; F1["四副构件"]
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
   <guid>https://qmdthings.top/notes/elec/electrical-technology-1.html</guid>
-  <pubDate>Sun, 26 Apr 2026 09:00:57 GMT</pubDate>
+  <pubDate>Mon, 27 Apr 2026 08:44:58 GMT</pubDate>
 </item>
 </channel>
 </rss>

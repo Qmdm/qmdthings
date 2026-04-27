@@ -104,14 +104,22 @@ image: "http://img.qmdthings.top/1777096502335.png"
 
 *   **吉布斯自由能定义** ：$G = H - TS$ 。
 *   **吉布斯方程** ：
-    $$\Delta G = \Delta H - T\Delta S$$ 
+    $$\Delta G = \Delta H - T\Delta S$$
+     在恒温理想条件下：
+    $$
+	    G-G^\ominus=\int dG=\int VdP-SdT=\int \frac{nRT}{P}dP=nRT\ln(\frac{P}{P^\ominus})
+    $$
+    
+    
+    
 *   **自发性判据（恒温、恒压、不作非体积功）** ：
     *   $\Delta G < 0$：自发过程 。
     *   $\Delta G = 0$：平衡状态 。
     *   $\Delta G > 0$：非自发过程 。
 *   **标准摩尔生成吉布斯自由能 ($\Delta_f G_m^\ominus$)** ：在标准状态下，由最稳定单质生成 1 mol 某物质时的吉布斯自由能变 。
 *   **标准摩尔反应吉布斯自由能变 ($\Delta_r G_m^\ominus$) 计算** ：
-    $$\Delta_r G_m^\ominus = \sum \nu_B \Delta_f G_m^\ominus(B)$$ 
+    $$\Delta_r G_m^\ominus = \sum \nu_B \Delta_f G_m^\ominus(B)=G^{\ominus}(生成物)-G^{\ominus}(反应物)$$
+     
 *   **温度对反应自发性的影响** ：
     *   当 $\Delta H < 0, \Delta S > 0$ 时，任何温度下 $\Delta G < 0$，均自发 。
     *   当 $\Delta H > 0, \Delta S < 0$ 时，任何温度下 $\Delta G > 0$，均不自发 。
@@ -142,12 +150,17 @@ image: "http://img.qmdthings.top/1777096502335.png"
     *   **变量含义**：$p$ 为气体分压；$p^\ominus$ 为标准压力 ($100 \text{ kPa}$)；$c$ 为物质的量浓度；$c^\ominus$ 为标准浓度 ($1 \text{ mol}\cdot\text{L}^{-1}$)。
     *   **注意**：纯液体和纯固体不列入表达式，视为“1”。
 *   **与吉布斯自由能的关系**：
-    $$\Delta_r G_m^\ominus = -RT \ln K^\ominus$$ 
+    $$\Delta_r G_m^\ominus =\sum \nu_i\mu_i=-RT\sum \nu_i\ln\frac{P_i}{P^{\ominus}}=-RT \ln K^\ominus$$
+    
+     
     *   **变量含义**：$R$ 为摩尔气体常数；$T$ 为热力学温度。
     
-	- 化学势
-	- 
 	- 化学势$\mu_i$是系统中某组分 i 的“逃逸趋势”或“扩散驱动力”的定量描述。
+
+			$$
+			\mu_i=(\frac{\partial G}{\partial n_i})_{T,P,n_{j\ne i}}
+			$$
+			
     
 *   **多重平衡规则**：若一个反应可以看作是若干个分步反应之和（或差），则总反应的 $K^\ominus$ 等于各分步反应平衡常数的乘积（或商）。
 
@@ -158,7 +171,11 @@ image: "http://img.qmdthings.top/1777096502335.png"
     *   $Q > K^\ominus$：反应逆向进行。
     *   $Q = K^\ominus$：反应达平衡状态。
 *   **温度与平衡常数的关系（范特霍夫方程）**：
-    $$\ln \frac{K^\ominus_2}{K^\ominus_1} = \frac{\Delta_r H_m^\ominus}{R} \left( \frac{1}{T_1} - \frac{1}{T_2} \right)$$ 
+$$
+\Delta_rH_m^{\ominus} \propto \Delta_rG_m^{\ominus}=-RT\ln K^{\ominus}
+$$
+$$\ln \frac{K^\ominus_2}{K^\ominus_1} = \frac{\Delta_r H_m^\ominus}{R} \left( \frac{1}{T_1} - \frac{1}{T_2} \right)$$
+ 
 
 ---
 
@@ -173,24 +190,41 @@ image: "http://img.qmdthings.top/1777096502335.png"
     *   **基元反应**：反应物分子在接触碰撞中直接转化为产物的反应。
     *   **定律**：基元反应速率与各反应物浓度的化学计量数绝对值为幂的乘积成正比。
 *   **速率方程（通用）**：
-    $$v = k c_A^\alpha c_B^\beta$$ 
+    $$v = k c_A^\alpha c_B^\beta=k c_A^{\nu_A} c_B^{\nu_B}$$ 
     *   **变量含义**：$k$ 为速率常数（与温度、催化剂有关）；$\alpha, \beta$ 为分级数，$\alpha+\beta$ 为总反应级数。
 
 #### 2.2.2 反应级数
 *   **零级反应**：速率与浓度无关，$v = k$。
 *   **一级反应**：速率与浓度的一次方成正比。
-    *   **积分公式**：$\ln \frac{c_0}{c} = kt$ 。
+    *   **积分公式**：$\ln \frac{c_0}{c} = kt \Rightarrow c=c_0e^{-kt}$ 。
     *   **半衰期**：$t_{1/2} = \frac{\ln 2}{k} \approx \frac{0.693}{k}$（与起始浓度无关）。
 
 #### 2.2.3 化学反应速率的影响因素
 *   **碰撞理论**：反应物分子必须发生**有效碰撞**才能反应。
     *   **活化分子**：能量较高、能发生有效碰撞的分子。
-    *   **活化能 ($E_a$)**：活化分子具有的最低能量与反应物分子平均能量之差。
+    *   **活化能 ($E_a$)**：活化分子具有的最低能量与反应物分子平均能量之差。是反应物达到活化状态所需要的能量。
+    $$E_a = \langle E^* \rangle - \langle E_{\text{反应物}} \rangle \ge 0
+$$
 *   **温度的影响（阿伦尼乌斯公式）**：
-    $$k = A \cdot e^{-E_a/RT}$$ 
-    *   变形式：$\ln \frac{k_2}{k_1} = \frac{E_a}{R} \left( \frac{1}{T_1} - \frac{1}{T_2} \right)$ 。
+    $$k = A \cdot e^{-E_a/RT}$$
+- **艾琳方程对阿伦尼乌斯的热力学化**：
+	$$
+			A=\frac {k_BT}{h},E_a=\Delta G^{\ddagger}=\Delta H^{\ddagger}-T\Delta S^{\ddagger}
+	$$
+	- $k_B$ ：玻尔兹曼常数
+	- $h$ ：普朗克常数
+	- $T$ ：热力学温度
+
+	1. $\frac{k_B T}{h}$ ：代表普适频率，即过渡态沿反应坐标分解为产物的基本振动频率。
+	2. $\Delta G^{\ddagger}$ ：决定反应速率的能垒高度。 $\Delta G^{\ddagger}$ 越小，反应越快。
+	3. $\Delta S^{\ddagger}$ ：若过渡态结构比反应物更“拥挤”或更“有序”，$\Delta S^{\ddagger}$ 为负值，会降低反应速率（体现在指前因子变小）。
+
+	
+    *   变形式：$\ln \frac{k_2}{k_1} = \frac{E_a}{R} \left( \frac{1}{T_1} - \frac{1}{T_2} \right)\Rightarrow E_a=RT^2\frac{d \ln k}{d T}$ 。
+    $$K=\frac{k_正}{k_逆}\Rightarrow \Delta_rH^{\ominus}=E_a(正)-E_a(逆)$$
     *   **结论**：温度升高，$k$ 增大，反应速率加快。
 *   **活化能的影响**：$E_a$ 越小，反应速率越快。
+
 
 #### 2.2.4 催化剂与催化作用
 *   **特征**：
@@ -200,8 +234,6 @@ image: "http://img.qmdthings.top/1777096502335.png"
     4.  具有高度的选择性（专一性）。
 
 # 溶液
-
-根据《工程化学基础教程》第三章“溶液”的内容，为您详细梳理每一个小节及三级标题下的知识点、概念与公式，并标注变量含义：
 
 ### 3.1 分散系 (Disperse Systems)
 
@@ -233,7 +265,7 @@ image: "http://img.qmdthings.top/1777096502335.png"
 *   **变量含义**：$n_B$ 为溶质物质的量；$m_A$ 为**溶剂**的质量（单位 **kg**）。
 
 #### 3.2.5 几种溶液浓度之间的关系
-*   **常用换算公式**：$c_B = \frac{1000 \rho w_B}{M_B}$ 。
+*   **常用换算公式**：$c_B = \frac{1000 \rho w_B}{M_B}$ 。（cm/1000rho）
 *   **变量含义**：$\rho$ 为溶液密度 ($\text{g}\cdot\text{cm}^{-3}$)；$w_B$ 为质量分数；$M_B$ 为溶质摩尔质量。
 
 ---
@@ -252,7 +284,14 @@ image: "http://img.qmdthings.top/1777096502335.png"
 
 #### 3.3.3 渗透压 ($\Pi$)
 *   **公式（范特霍夫方程）**：$\Pi = c_B R T$ 。
-*   **变量含义**：$\Pi$ 为渗透压 (Pa)；$c_B$ 为物质的量浓度；$R$ 为气体常数 ($8.314 \text{ J}\cdot\text{mol}^{-1}\cdot\text{K}^{-1}$)；$T$ 为热力学温度。
+*   **变量含义**：
+	* $\Pi$ 为渗透压 (Pa)；
+	* $c_B$ 为物质的量浓度；
+	* $R$ 为气体常数 ($8.314 \text{ J}\cdot\text{mol}^{-1}\cdot\text{K}^{-1}$)；
+	* $T$ 为热力学温度。
+
+依数性的根源在于熵效应。溶质粒子的加入增加了系统的混乱度（熵），使得溶剂的化学势降低，从而改变了相平衡条件（液-气、液-固平衡线移动），液态相（溶液）的稳定区间被拓宽。
+
 
 ---
 
@@ -270,8 +309,8 @@ image: "http://img.qmdthings.top/1777096502335.png"
 
 ### 3.5 弱酸、弱碱的解离平衡
 
-#### 3.5.1 一元弱酸、弱碱的解离平衡
-*   **近似计算式**：当 $c/K_a \ge 400$ 时，$c(H^+) \approx \sqrt{c K_a}$ 。
+#### 3.5.1 *一元*弱酸、弱碱的解离平衡
+*   **近似计算式**：当 $c/K_a \ge 400$ 时，$c(H^+) \approx c\alpha =\sqrt{c K_a}$ 。
 *   **奥斯特瓦尔德稀释定律**：$\alpha = \sqrt{K_a / c}$ 。
 
 #### 3.5.2 多元弱酸、弱碱的解离平衡
@@ -286,7 +325,7 @@ image: "http://img.qmdthings.top/1777096502335.png"
 ### 3.6 缓冲溶液
 
 #### 3.6.1 缓冲作用原理
-*   **组成**：通常由弱酸及其盐（如 $HAc-NaAc$）或弱碱及其盐组成为缓冲对。
+*   **组成**：通常由**弱酸及其盐**（如 $HAc-NaAc$）或**弱碱及其盐**组成为缓冲对。
 
 #### 3.6.2 缓冲溶液 pH 的计算
 *   **公式**：$pH = pK^\ominus_a + \lg \frac{c_{\text{共轭碱}}}{c_{\text{弱酸}}}$ 。
@@ -409,7 +448,8 @@ image: "http://img.qmdthings.top/1777096502335.png"
     *   $Q$：反应商 。
     *   在 $298.15\text{ K}$ 时，常用对数简式为：$E = E^\ominus - \frac{0.0592}{n} \lg Q$ 。
 *   **标准平衡常数（$K^\ominus$）与标准电动势（$E^\ominus$）的关系**：
-    $$\lg K^\ominus = \frac{nE^\ominus}{0.0592}$$ 
+    $$E=0,\;\lg K^\ominus = \frac{nE^\ominus}{0.0592}$$
+ 
 
 ---
 
@@ -590,8 +630,6 @@ image: "http://img.qmdthings.top/1777096502335.png"
 
 
 # 无机物单质及化合物
-
-根据《工程化学基础教程》第六章“无机物单质及化合物”的内容，为您详细列举每一小节及三级标题下的知识点、概念与公式，并标注变量含义：
 
 ### 6.1 元素化学概述
 
@@ -881,8 +919,6 @@ image: "http://img.qmdthings.top/1777096502335.png"
     *   $\mu$：偶极矩（$C \cdot m$）；$q$：电荷量（$C$）；$l$：正负电荷重心距离（$m$）。用于衡量分子的极性 。
 
 # 合成高分子材料
-
-根据《工程化学基础教程》第九章“合成高分子材料”的内容，为您详细列举每一小节及三级标题下的知识点、核心概念与公式：
 
 ### 9.1 高分子化合物概论
 
