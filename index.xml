@@ -1875,1425 +1875,1824 @@ F--&gt; F1["四副构件"]
 
 
 
-<section id="热化学基础" class="level1">
-<h1>热化学基础</h1>
-<section id="热化学的基本概念" class="level3">
-<h3 class="anchored" data-anchor-id="热化学的基本概念">1.1 热化学的基本概念</h3>
-<p>本节介绍了热力学研究的基础术语 。</p>
+<section id="热化学基础" class="level1 page-columns page-full" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> 热化学基础</h1>
+<section id="热化学的基本概念" class="level2 page-columns page-full" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="热化学的基本概念"><span class="header-section-number">1.1</span> 热化学的基本概念</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="核心术语：系统与环境">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>核心术语：系统与环境
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>系统</strong>：热力学研究的对象。<strong>环境</strong>：系统以外与系统有密切联系的部分。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>系统类型</th>
+<th style="text-align: center;">物质交换</th>
+<th style="text-align: center;">能量交换</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>敞开系统</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td>开口烧杯</td>
+</tr>
+<tr class="even">
+<td>封闭系统</td>
+<td style="text-align: center;">✗</td>
+<td style="text-align: center;">✓</td>
+<td>密封气缸（最常见）</td>
+</tr>
+<tr class="odd">
+<td>隔离系统</td>
+<td style="text-align: center;">✗</td>
+<td style="text-align: center;">✗</td>
+<td>理想绝热容器</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<dl>
+<dt><strong>相 (Phase)</strong></dt>
+<dd>
+系统中具有相同物理性质和化学性质的均匀部分。
+</dd>
+<dt><strong>状态函数</strong></dt>
+<dd>
+描述系统状态的物理量，其变化量<strong>只取决于始态和终态</strong>，与途径无关。功 <img src="https://latex.codecogs.com/png.latex?W"> 和热量 <img src="https://latex.codecogs.com/png.latex?Q"> 都<strong>不是</strong>状态函数。
+</dd>
+</dl>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>性质分类</strong></p>
 <ul>
-<li><strong>系统与环境 (System and Environment)</strong> ：
+<li><strong>广度性质</strong>（加和）：<img src="https://latex.codecogs.com/png.latex?V,%20m,%20U,%20H,%20S"></li>
+<li><strong>强度性质</strong>（不加和）：<img src="https://latex.codecogs.com/png.latex?T,%20p,%20%5Crho"></li>
+</ul>
+</div></div><dl>
+<dt><strong>过程与途径</strong></dt>
+<dd>
+常见过程：恒压 (<img src="https://latex.codecogs.com/png.latex?dp=0">)、恒容 (<img src="https://latex.codecogs.com/png.latex?dV=0">)、恒温 (<img src="https://latex.codecogs.com/png.latex?dT=0">)、绝热 (<img src="https://latex.codecogs.com/png.latex?Q=0">)。
+</dd>
+</dl>
+<hr>
+</section>
+<section id="热力学第一定律" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="热力学第一定律"><span class="header-section-number">1.2</span> 热力学第一定律</h2>
+<div class="callout callout-style-default callout-important callout-titled" title="第一定律">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>第一定律
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><img src="https://latex.codecogs.com/png.latex?%5CDelta%20U%20=%20Q%20+%20W"></p>
+<p>能量守恒定律在热力学中的量化表达。<img src="https://latex.codecogs.com/png.latex?%5CDelta%20U"> 仅取决于始末状态。</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>热 <img src="https://latex.codecogs.com/png.latex?Q"></strong></p>
+<p>系统与环境因温度差交换的能量。</p>
 <ul>
-<li><strong>系统</strong>：热力学研究的对象 。</li>
-<li><strong>环境</strong>：系统以外，与系统有密切联系的其他部分 。</li>
-<li><strong>分类</strong>：
+<li>系统<strong>吸热</strong>：<img src="https://latex.codecogs.com/png.latex?Q%20%3E%200"></li>
+<li>系统<strong>放热</strong>：<img src="https://latex.codecogs.com/png.latex?Q%20%3C%200"></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>功 <img src="https://latex.codecogs.com/png.latex?W"></strong></p>
+<p>除热以外传递的其他能量形式。</p>
 <ul>
-<li><strong>敞开系统</strong>：既有物质交换，又有能量交换 。</li>
-<li><strong>封闭系统</strong>：只有能量交换，没有物质交换（热力学研究中最常见） 。</li>
-<li><strong>隔离系统（孤立系统）</strong>：既无物质交换，也无能量交换 。</li>
-</ul></li>
-</ul></li>
-<li><strong>相 (Phase)</strong> ：系统中具有相同物理性质和化学性质的均匀部分。</li>
-<li><strong>状态与状态函数 (State and State Function)</strong> ：
-<ul>
-<li><p><strong>状态</strong>：由一系列物理量（如压力 <img src="https://latex.codecogs.com/png.latex?p">、体积 <img src="https://latex.codecogs.com/png.latex?V">、温度 <img src="https://latex.codecogs.com/png.latex?T">、物质的量 <img src="https://latex.codecogs.com/png.latex?n">）综合表现出的系统状况 。</p></li>
-<li><p><strong>状态函数</strong>：描述系统状态的物理量 。其特点是：</p>
+<li>环境对系统做功：<img src="https://latex.codecogs.com/png.latex?W%20%3E%200"></li>
+<li>系统对环境做功：<img src="https://latex.codecogs.com/png.latex?W%20%3C%200"></li>
+</ul>
+</div>
+</div>
+<p><strong>体积功公式：</strong> <img src="https://latex.codecogs.com/png.latex?W%20=%20-p_%7B%5Ctext%7B%E7%8E%AF%E5%A2%83%7D%7D%20%5Ccdot%20%5CDelta%20V%20=%20-p_%7B%5Ctext%7B%E7%8E%AF%E5%A2%83%7D%7D(V_2%20-%20V_1)"></p>
+<dl>
+<dt><strong>可逆过程 (Reversible Process)</strong></dt>
+<dd>
+理想化过程，系统与环境能同时复原且不留任何影响。
+</dd>
+</dl>
+<hr>
+</section>
+<section id="热化学" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="热化学"><span class="header-section-number">1.3</span> 热化学</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">恒容与恒压</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">盖斯定律</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">标准摩尔反应焓</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>条件</th>
+<th>关系</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>恒容反应热 <img src="https://latex.codecogs.com/png.latex?Q_V"></td>
+<td><img src="https://latex.codecogs.com/png.latex?dV=0">，无非体积功</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5CDelta%20U%20=%20Q_V"></td>
+</tr>
+<tr class="even">
+<td>恒压反应热 <img src="https://latex.codecogs.com/png.latex?Q_p"></td>
+<td><img src="https://latex.codecogs.com/png.latex?dp=0">，无非体积功</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5CDelta%20H%20=%20Q_p"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>焓的定义</strong>：<img src="https://latex.codecogs.com/png.latex?H%20%5Cequiv%20U%20+%20pV"></p>
+<p><img src="https://latex.codecogs.com/png.latex?Q_p%20-%20Q_V%20=%20%5CDelta%20H%20-%20%5CDelta%20U%20=%20%5Csum%20%5Cnu_B(g)%5C,%20RT"></p>
+<p>其中 <img src="https://latex.codecogs.com/png.latex?%5Csum%20%5Cnu_B(g)"> 为气态产物与气态反应物化学计量数之差。</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
+<div class="callout callout-style-default callout-tip callout-titled" title="Hess's Law">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hess’s Law
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>化学反应的反应热<strong>只与始态和终态有关</strong>，与途径无关。</p>
+</div>
+</div>
+<p>可利用已知反应的 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20H"> 代数叠加，求未知反应的 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20H">。</p>
+</div>
+<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
+<p><strong>标准摩尔生成焓 <img src="https://latex.codecogs.com/png.latex?%5CDelta_f%20H_m%5E%5Cominus"></strong>：标准状态下由最稳定单质生成 1 mol 物质的反应热。规定<strong>指定单质的标准生成焓为零</strong>。</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cboxed%7B%5CDelta_r%20H_m%5E%5Cominus(T)%20=%20%5Csum%20%5Cnu_B%5C,%20%5CDelta_f%20H_m%5E%5Cominus(B,%5C,%20T)%7D"></p>
+<p>即：<img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20H_m%5E%5Cominus%20=%20%5Csum%20%5CDelta_f%20H_m%5E%5Cominus(%5Ctext%7B%E4%BA%A7%E7%89%A9%7D)%20-%20%5Csum%20%5CDelta_f%20H_m%5E%5Cominus(%5Ctext%7B%E5%8F%8D%E5%BA%94%E7%89%A9%7D)"></p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="熵-entropy" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="熵-entropy"><span class="header-section-number">1.4</span> 熵 (Entropy)</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="热力学第二、三定律">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>热力学第二、三定律
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>第二定律</strong>：在隔离系统中，自发反应必伴随熵的增加，<img src="https://latex.codecogs.com/png.latex?%5CDelta%20S_%7B%5Ctext%7B%E9%9A%94%E7%A6%BB%7D%7D%20%3E%200">。</p>
+<p><strong>第三定律</strong>：0 K 时，一切纯物质完美晶体的熵等于零。</p>
+</div>
+</div>
+<p>熵 <img src="https://latex.codecogs.com/png.latex?S"> 是状态函数，衡量系统微观粒子的混乱程度，系统越混乱，熵值越大。</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20S_m%5E%5Cominus%20=%20%5Csum%20%5Cnu_B%5C,%20S_m%5E%5Cominus(B)"></p>
+<p><strong>经验规律</strong>（同一物质）：<img src="https://latex.codecogs.com/png.latex?S(g)%20%3E%20S(l)%20%3E%20S(s)">；气态物质分子数增加的反应 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20S%20%3E%200">。</p>
+<hr>
+</section>
+<section id="吉布斯自由能-gibbs-free-energy" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="吉布斯自由能-gibbs-free-energy"><span class="header-section-number">1.5</span> 吉布斯自由能 (Gibbs Free Energy)</h2>
+<div class="callout callout-style-default callout-important callout-titled" title="自发性判据（恒温恒压，不做非体积功）">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>自发性判据（恒温恒压，不做非体积功）
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20=%20%5CDelta%20H%20-%20T%5CDelta%20S"></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?%5CDelta%20G"></th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?%3C%200"></td>
+<td>自发过程</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?=%200"></td>
+<td>平衡状态</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?%3E%200"></td>
+<td>非自发过程</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><strong>化学势与压力的关系</strong>（恒温理想气体）：</p>
+<p><img src="https://latex.codecogs.com/png.latex?G%20-%20G%5E%5Cominus%20=%20nRT%5Cln%5C!%5Cleft(%5Cfrac%7BP%7D%7BP%5E%5Cominus%7D%5Cright)"></p>
+<p><strong>标准摩尔反应吉布斯自由能变：</strong></p>
+<p><img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%5E%5Cominus%20=%20%5Csum%20%5Cnu_B%5C,%20%5CDelta_f%20G_m%5E%5Cominus(B)%20=%20G%5E%5Cominus(%5Ctext%7B%E7%94%9F%E6%88%90%E7%89%A9%7D)%20-%20G%5E%5Cominus(%5Ctext%7B%E5%8F%8D%E5%BA%94%E7%89%A9%7D)"></p>
+<p><strong>温度对自发性的影响：</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?%5CDelta%20H"></th>
+<th style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?%5CDelta%20S"></th>
+<th>自发性</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?-"></td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?+"></td>
+<td>任何温度自发</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?+"></td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?-"></td>
+<td>任何温度不自发</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?-"></td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?-"></td>
+<td>低温自发</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?+"></td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?+"></td>
+<td>高温自发</td>
+</tr>
+</tbody>
+</table>
+<p>转向温度：<img src="https://latex.codecogs.com/png.latex?T_%7B%5Ctext%7B%E8%BD%AC%7D%7D%20%5Capprox%20%5Cdfrac%7B%5CDelta_r%20H_m%5E%5Cominus%7D%7B%5CDelta_r%20S_m%5E%5Cominus%7D"></p>
+<hr>
+</section>
+</section>
+<section id="化学平衡与化学反应速率" class="level1 page-columns page-full" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> 化学平衡与化学反应速率</h1>
+<section id="化学平衡" class="level2 page-columns page-full" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="化学平衡"><span class="header-section-number">2.1</span> 化学平衡</h2>
+<section id="标准平衡常数-kominus" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="标准平衡常数-kominus">标准平衡常数 <img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus"></h3>
+<div class="callout callout-style-default callout-note callout-titled" title="平衡常数的基本特征">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>平衡常数的基本特征
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus"> 是衡量反应进行程度的特征常数，仅与<strong>温度</strong>有关，<img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus"> 越大正反应程度越大。</p>
+</div>
+</div>
+<p>对反应 <img src="https://latex.codecogs.com/png.latex?aA(g)+bB(aq)%20%5Crightleftharpoons%20xX(g)+yY(aq)">：</p>
+<p><img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus%20=%20%5Cfrac%7B%5C%7Bp(X)/p%5E%5Cominus%5C%7D%5Ex%5C,%20%5C%7Bc(Y)/c%5E%5Cominus%5C%7D%5Ey%7D%7B%5C%7Bp(A)/p%5E%5Cominus%5C%7D%5Ea%5C,%20%5C%7Bc(B)/c%5E%5Cominus%5C%7D%5Eb%7D"></p>
+<div class="callout callout-style-default callout-caution callout-titled" title="注意">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>注意
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>纯液体和纯固体不列入表达式，视为 <img src="https://latex.codecogs.com/png.latex?1">。</p>
+</div>
+</div>
+<p><strong>与吉布斯自由能的关系：</strong></p>
+<p><img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%5E%5Cominus%20=%20-RT%5Cln%20K%5E%5Cominus"></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>化学势</strong></p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cmu_i%20=%20%5Cleft(%5Cfrac%7B%5Cpartial%20G%7D%7B%5Cpartial%20n_i%7D%5Cright)_%7BT,P,n_%7Bj%5Cne%20i%7D%7D"></p>
+<p>描述组分 <img src="https://latex.codecogs.com/png.latex?i"> 的”逃逸趋势”或”扩散驱动力”。</p>
+</div></div><p><strong>多重平衡规则</strong>：总反应 <img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus"> 等于各分步反应平衡常数的乘积（或商）。</p>
+<hr>
+</section>
+<section id="化学平衡的移动" class="level3">
+<h3 class="anchored" data-anchor-id="化学平衡的移动">化学平衡的移动</h3>
+<div class="callout callout-style-default callout-tip callout-titled" title="勒夏特列原理 (Le Chatelier's Principle)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>勒夏特列原理 (Le Chatelier’s Principle)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>改变平衡系统的条件（浓度、压力、温度），平衡向<strong>减弱该改变</strong>的方向移动。</p>
+</div>
+</div>
+<p><strong>判据</strong>：通过反应商 <img src="https://latex.codecogs.com/png.latex?Q"> 与 <img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus"> 比较：</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">关系</th>
+<th>方向</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?Q%20%3C%20K%5E%5Cominus"></td>
+<td>正向进行</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?Q%20=%20K%5E%5Cominus"></td>
+<td>平衡</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?Q%20%3E%20K%5E%5Cominus"></td>
+<td>逆向进行</td>
+</tr>
+</tbody>
+</table>
+<p><strong>范特霍夫方程</strong>（温度与平衡常数）：</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cln%5Cfrac%7BK%5E%5Cominus_2%7D%7BK%5E%5Cominus_1%7D%20=%20%5Cfrac%7B%5CDelta_r%20H_m%5E%5Cominus%7D%7BR%7D%5Cleft(%5Cfrac%7B1%7D%7BT_1%7D%20-%20%5Cfrac%7B1%7D%7BT_2%7D%5Cright)"></p>
+<hr>
+</section>
+</section>
+<section id="化学反应速率" class="level2 page-columns page-full" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="化学反应速率"><span class="header-section-number">2.2</span> 化学反应速率</h2>
+<section id="速率方程与反应级数" class="level3">
+<h3 class="anchored" data-anchor-id="速率方程与反应级数">速率方程与反应级数</h3>
+<p><strong>瞬时速率</strong>：<img src="https://latex.codecogs.com/png.latex?v%20=%20%5Cdfrac%7B1%7D%7B%5Cnu_B%7D%5Cdfrac%7Bdc_B%7D%7Bdt%7D"></p>
+<p><strong>速率方程（通用）：</strong></p>
+<p><img src="https://latex.codecogs.com/png.latex?v%20=%20k%5C,%20c_A%5E%5Calpha%5C,%20c_B%5E%5Cbeta"></p>
+<p>其中 <img src="https://latex.codecogs.com/png.latex?k"> 为速率常数（与温度、催化剂有关），<img src="https://latex.codecogs.com/png.latex?%5Calpha+%5Cbeta"> 为总反应级数。</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" aria-controls="tabset-2-1" aria-selected="true" href="">零级反应</a></li><li class="nav-item"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" aria-controls="tabset-2-2" aria-selected="false" href="">一级反应</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" aria-labelledby="tabset-2-1-tab">
+<p>速率与浓度无关：<img src="https://latex.codecogs.com/png.latex?v%20=%20k"></p>
+</div>
+<div id="tabset-2-2" class="tab-pane" aria-labelledby="tabset-2-2-tab">
+<p><img src="https://latex.codecogs.com/png.latex?%5Cln%5Cfrac%7Bc_0%7D%7Bc%7D%20=%20kt%20%5Cimplies%20c%20=%20c_0%20e%5E%7B-kt%7D"></p>
+<p><strong>半衰期</strong>（与起始浓度无关）：</p>
+<p><img src="https://latex.codecogs.com/png.latex?t_%7B1/2%7D%20=%20%5Cfrac%7B%5Cln%202%7D%7Bk%7D%20%5Capprox%20%5Cfrac%7B0.693%7D%7Bk%7D"></p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="温度与活化能" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="温度与活化能">温度与活化能</h3>
+<div class="callout callout-style-default callout-important callout-titled" title="Arrhenius 公式">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Arrhenius 公式
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><img src="https://latex.codecogs.com/png.latex?k%20=%20A%20%5Ccdot%20e%5E%7B-E_a/RT%7D"></p>
+<p>变形：<img src="https://latex.codecogs.com/png.latex?%5Cln%5Cdfrac%7Bk_2%7D%7Bk_1%7D%20=%20%5Cdfrac%7BE_a%7D%7BR%7D%5C!%5Cleft(%5Cdfrac%7B1%7D%7BT_1%7D-%5Cdfrac%7B1%7D%7BT_2%7D%5Cright)">，<img src="https://latex.codecogs.com/png.latex?%5Cquad%20E_a%20=%20RT%5E2%5Cdfrac%7Bd%5Cln%20k%7D%7BdT%7D"></p>
+</div>
+</div>
+<p><strong>活化能的物理含义：</strong></p>
+<p><img src="https://latex.codecogs.com/png.latex?E_a%20=%20%5Clangle%20E%5E*%5Crangle%20-%20%5Clangle%20E_%7B%5Ctext%7B%E5%8F%8D%E5%BA%94%E7%89%A9%7D%7D%5Crangle%20%5Cge%200"></p>
+<p><strong>Eyring 方程</strong>（热力学化）：</p>
+<p><img src="https://latex.codecogs.com/png.latex?A%20=%20%5Cfrac%7Bk_BT%7D%7Bh%7D,%20%5Cquad%20E_a%20=%20%5CDelta%20G%5E%5Cddagger%20=%20%5CDelta%20H%5E%5Cddagger%20-%20T%5CDelta%20S%5E%5Cddagger"></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="https://latex.codecogs.com/png.latex?k_B">：玻尔兹曼常数<br>
+<img src="https://latex.codecogs.com/png.latex?h">：普朗克常数<br>
+<img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%5E%5Cddagger">：过渡态能垒，越小反应越快<br>
+<img src="https://latex.codecogs.com/png.latex?%5CDelta%20S%5E%5Cddagger%20%3C%200"> 时过渡态更有序，降低反应速率</p>
+</div></div><p><strong>正逆反应活化能与焓变：</strong></p>
+<p><img src="https://latex.codecogs.com/png.latex?K%20=%20%5Cfrac%7Bk_%5Ctext%7B%E6%AD%A3%7D%7D%7Bk_%5Ctext%7B%E9%80%86%7D%7D%20%5Cimplies%20%5CDelta_rH%5E%5Cominus%20=%20E_a(%5Ctext%7B%E6%AD%A3%7D)%20-%20E_a(%5Ctext%7B%E9%80%86%7D)"></p>
+<hr>
+</section>
+<section id="催化剂" class="level3">
+<h3 class="anchored" data-anchor-id="催化剂">催化剂</h3>
+<div class="callout callout-style-default callout-note callout-titled" title="催化作用要点">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>催化作用要点
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
-<li>状态一定，其值一定 。</li>
-<li><strong>变化量只取决于始态和终态</strong>，与变化的途径无关 。</li>
+<li>加快反应速率，自身组成和质量不变</li>
+<li>改变反应途径，<strong>降低活化能</strong> <img src="https://latex.codecogs.com/png.latex?E_%7Bac%7D%20%3C%20E_a"></li>
+<li><strong>不能</strong>改变平衡状态，只能缩短达到平衡的时间</li>
+<li>具有高度选择性（专一性）</li>
 </ol>
-<p>功<img src="https://latex.codecogs.com/png.latex?W">和热量<img src="https://latex.codecogs.com/png.latex?Q">都不是状态函数。</p></li>
-<li><p><strong>性质分类</strong>：</p>
-<ul>
-<li><strong>广度性质</strong>：具有加和性，如体积 <img src="https://latex.codecogs.com/png.latex?V">、质量 <img src="https://latex.codecogs.com/png.latex?m">、热力学能 <img src="https://latex.codecogs.com/png.latex?U">、焓 <img src="https://latex.codecogs.com/png.latex?H">、熵 <img src="https://latex.codecogs.com/png.latex?S"> 。</li>
-<li><strong>强度性质</strong>：不具加和性，其值与物质的量无关，如温度 <img src="https://latex.codecogs.com/png.latex?T">、压力 <img src="https://latex.codecogs.com/png.latex?p">、密度 <img src="https://latex.codecogs.com/png.latex?%5Crho"> 。</li>
-</ul></li>
-</ul></li>
-<li><strong>过程与途径 (Process and Path)</strong> ：
-<ul>
-<li><strong>过程</strong>：系统状态发生的变化，常见的有恒压过程 (<img src="https://latex.codecogs.com/png.latex?dp=0">)、恒容过程 (<img src="https://latex.codecogs.com/png.latex?dV=0">)、恒温过程 (<img src="https://latex.codecogs.com/png.latex?dT=0">) 和绝热过程 (<img src="https://latex.codecogs.com/png.latex?Q=0">) 。</li>
-<li><strong>途径</strong>：实现过程的具体步骤 。</li>
-</ul></li>
-</ul>
+</div>
+</div>
 <hr>
 </section>
-<section id="热力学第一定律" class="level3">
-<h3 class="anchored" data-anchor-id="热力学第一定律">1.2 热力学第一定律</h3>
-<p>热力学第一定律是能量守恒定律在热力学中的量化体现 。</p>
-<ul>
-<li><strong>热 (<img src="https://latex.codecogs.com/png.latex?Q">) 和功 (<img src="https://latex.codecogs.com/png.latex?W">)</strong> ：
-<ul>
-<li><strong>热 (<img src="https://latex.codecogs.com/png.latex?Q">)</strong>：系统与环境间由于温度差而交换的能量。 系统吸热为正，放热为负 。</li>
-<li><strong>功 (<img src="https://latex.codecogs.com/png.latex?W">)</strong>：除热以外传递的其他能量形式。 环境对系统做功为正，系统对环境做功为负 。</li>
-<li><strong>体积功公式</strong>： <img src="https://latex.codecogs.com/png.latex?W%20=%20-p_%7B%E7%8E%AF%E5%A2%83%7D%20%5Ccdot%20%5CDelta%20V%20=%20-p_%7B%E7%8E%AF%E5%A2%83%7D%20%5Ccdot%20(V_2%20-%20V_1)">
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?p_%7B%E7%8E%AF%E5%A2%83%7D">：环境压力。</li>
-<li><img src="https://latex.codecogs.com/png.latex?%5CDelta%20V">：系统体积的变化量。</li>
-</ul></li>
-</ul></li>
-<li><strong>热力学能 (<img src="https://latex.codecogs.com/png.latex?U">)</strong> ：系统内部全部能量的总和（亦称内能）。</li>
-<li><strong>热力学第一定律数学表达式</strong>： <img src="https://latex.codecogs.com/png.latex?%5CDelta%20U%20=%20U_2%20-%20U_1%20=%20Q%20+%20W">
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?%5CDelta%20U">：系统热力学能的变化量 。</li>
-</ul></li>
-<li><strong>可逆过程 (Reversible Process)</strong> ：一种理想化的过程，其特点是系统与环境能同时复原且不留下任何影响 。</li>
-</ul>
+</section>
+</section>
+<section id="溶液" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> 溶液</h1>
+<section id="分散系" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="分散系"><span class="header-section-number">3.1</span> 分散系</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>类型</th>
+<th style="text-align: center;">粒径</th>
+<th>特征</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>分子/离子分散系</td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?%3C1%5Ctext%7B%20nm%7D"></td>
+<td>单相，均匀透明</td>
+<td>真溶液</td>
+</tr>
+<tr class="even">
+<td>胶体分散系</td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?1%5Csim100%5Ctext%7B%20nm%7D"></td>
+<td>多相</td>
+<td>溶胶</td>
+</tr>
+<tr class="odd">
+<td>粗分散系</td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?%3E100%5Ctext%7B%20nm%7D"></td>
+<td>多相，不均匀</td>
+<td>悬浊液、乳浊液</td>
+</tr>
+</tbody>
+</table>
 <hr>
 </section>
-<section id="热化学" class="level3">
-<h3 class="anchored" data-anchor-id="热化学">1.3 热化学</h3>
-<p>研究化学反应中热与能量变化的定量关系 。</p>
-<ul>
-<li><strong>恒容反应热 (<img src="https://latex.codecogs.com/png.latex?Q_V">)</strong> ：
-<ul>
-<li>在恒容且不做非体积功的过程中：<img src="https://latex.codecogs.com/png.latex?%5CDelta%20U%20=%20Q_V"> 。</li>
-</ul></li>
-<li><strong>恒压反应热 (<img src="https://latex.codecogs.com/png.latex?Q_p">) 与焓 (<img src="https://latex.codecogs.com/png.latex?H">)</strong> ：
-<ul>
-<li><strong>焓的定义</strong>：<img src="https://latex.codecogs.com/png.latex?H%20=%20U%20+%20pV"> 。</li>
-<li>在恒压且不做非体积功的过程中：<img src="https://latex.codecogs.com/png.latex?%5CDelta%20H%20=%20Q_p"> 。</li>
-<li><img src="https://latex.codecogs.com/png.latex?%5CDelta%20H%20%3E%200"> 为吸热反应；<img src="https://latex.codecogs.com/png.latex?%5CDelta%20H%20%3C%200"> 为放热反应 。</li>
-</ul></li>
-<li><strong><img src="https://latex.codecogs.com/png.latex?Q_p"> 与 <img src="https://latex.codecogs.com/png.latex?Q_V"> 的关系</strong> ：
-<ul>
-<li>对于气体反应（假设为理想气体）： <img src="https://latex.codecogs.com/png.latex?Q_p%20-%20Q_V%20=%20%5CDelta%20H%20-%20%5CDelta%20U%20=%20%5Csum%20%5Cnu_B(g)%20RT">
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?%5Csum%20%5Cnu_B(g)">：反应方程式中气态产物与气态反应物化学计量数之差（产物取正，反应物取负） 。</li>
-<li><img src="https://latex.codecogs.com/png.latex?R">：摩尔气体常数 (<img src="https://latex.codecogs.com/png.latex?8.314%20%5Ctext%7B%20J%7D%20%5Ccdot%20%5Ctext%7Bmol%7D%5E%7B-1%7D%20%5Ccdot%20%5Ctext%7BK%7D%5E%7B-1%7D">)。</li>
-<li><img src="https://latex.codecogs.com/png.latex?T">：热力学温度 。</li>
-</ul></li>
-</ul></li>
-<li><strong>盖斯定律 (Hess’s Law)</strong> ：化学反应的反应热只与始态和终态有关，而与途径无关 。</li>
-<li><strong>标准摩尔生成焓 (<img src="https://latex.codecogs.com/png.latex?%5CDelta_f%20H_m%5E%5Cominus">)</strong> ：在标准状态下，由最稳定的单质生成 1 mol 某物质时的反应热。规定<strong>指定单质的标准生成焓为零</strong> 。</li>
-<li><strong>标准摩尔反应焓 (<img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20H_m%5E%5Cominus">) 计算</strong> ： <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20H_m%5E%5Cominus(T)%20=%20%5Csum%20%5Cnu_B%20%5CDelta_f%20H_m%5E%5Cominus(B,%20T)">
-<ul>
-<li>即：<img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20H_m%5E%5Cominus%20=%20%5Csum%20%5CDelta_f%20H_m%5E%5Cominus(%5Ctext%7B%E4%BA%A7%E7%89%A9%7D)%20-%20%5Csum%20%5CDelta_f%20H_m%5E%5Cominus(%5Ctext%7B%E5%8F%8D%E5%BA%94%E7%89%A9%7D)"> 。</li>
-</ul></li>
-</ul>
+<section id="溶液浓度的表示方法" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="溶液浓度的表示方法"><span class="header-section-number">3.2</span> 溶液浓度的表示方法</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" aria-controls="tabset-3-1" aria-selected="true" href="">质量分数 <img src="https://latex.codecogs.com/png.latex?w_B"></a></li><li class="nav-item"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" aria-controls="tabset-3-2" aria-selected="false" href="">物质的量浓度 <img src="https://latex.codecogs.com/png.latex?c_B"></a></li><li class="nav-item"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" aria-controls="tabset-3-3" aria-selected="false" href="">摩尔分数 <img src="https://latex.codecogs.com/png.latex?x_B"></a></li><li class="nav-item"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" aria-controls="tabset-3-4" aria-selected="false" href="">质量摩尔浓度 <img src="https://latex.codecogs.com/png.latex?m_B"></a></li><li class="nav-item"><a class="nav-link" id="tabset-3-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-5" aria-controls="tabset-3-5" aria-selected="false" href="">换算关系</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" aria-labelledby="tabset-3-1-tab">
+<p><img src="https://latex.codecogs.com/png.latex?w_B%20=%20%5Cfrac%7Bm_B%7D%7Bm%7D%20%5Ctimes%20100%5C%25"></p>
+<p><img src="https://latex.codecogs.com/png.latex?m_B">：溶质质量；<img src="https://latex.codecogs.com/png.latex?m">：溶液总质量</p>
+</div>
+<div id="tabset-3-2" class="tab-pane" aria-labelledby="tabset-3-2-tab">
+<p><img src="https://latex.codecogs.com/png.latex?c_B%20=%20%5Cfrac%7Bn_B%7D%7BV%7D"></p>
+<p><img src="https://latex.codecogs.com/png.latex?n_B">（mol）；<img src="https://latex.codecogs.com/png.latex?V">（L）</p>
+</div>
+<div id="tabset-3-3" class="tab-pane" aria-labelledby="tabset-3-3-tab">
+<p><img src="https://latex.codecogs.com/png.latex?x_B%20=%20%5Cfrac%7Bn_B%7D%7Bn_A%20+%20n_B%7D"></p>
+<p><img src="https://latex.codecogs.com/png.latex?n_A,%20n_B">：溶剂、溶质的物质的量</p>
+</div>
+<div id="tabset-3-4" class="tab-pane" aria-labelledby="tabset-3-4-tab">
+<p><img src="https://latex.codecogs.com/png.latex?m_B%20=%20%5Cfrac%7Bn_B%7D%7Bm_A%7D"></p>
+<p><img src="https://latex.codecogs.com/png.latex?m_A">：<strong>溶剂</strong>质量（kg）</p>
+</div>
+<div id="tabset-3-5" class="tab-pane" aria-labelledby="tabset-3-5-tab">
+<p><img src="https://latex.codecogs.com/png.latex?c_B%20=%20%5Cfrac%7B1000%5Crho%20w_B%7D%7BM_B%7D"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Crho">（<img src="https://latex.codecogs.com/png.latex?%5Ctext%7Bg%C2%B7cm%7D%5E%7B-3%7D">）；<img src="https://latex.codecogs.com/png.latex?w_B">：质量分数；<img src="https://latex.codecogs.com/png.latex?M_B">：摩尔质量</p>
+</div>
+</div>
+</div>
 <hr>
 </section>
-<section id="熵-entropy" class="level3">
-<h3 class="anchored" data-anchor-id="熵-entropy">1.4 熵 (Entropy)</h3>
-<p>熵用于衡量系统内部微观粒子的混乱程度 。</p>
+<section id="稀溶液的依数性" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="稀溶液的依数性"><span class="header-section-number">3.3</span> 稀溶液的依数性</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="适用前提">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>适用前提
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>稀的、<strong>非挥发性</strong>、<strong>非电解质</strong>溶液。依数性的根源在于<strong>熵效应</strong>：溶质降低溶剂化学势，拓宽液态稳定区间。</p>
+</div>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 30%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>依数性</th>
+<th>公式</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>蒸气压下降（拉乌尔定律）</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5CDelta%20p%20=%20p%5E*_A%20%5Ccdot%20x_B"></td>
+<td><img src="https://latex.codecogs.com/png.latex?x_B">：溶质摩尔分数</td>
+</tr>
+<tr class="even">
+<td>沸点升高</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5CDelta%20T_b%20=%20K_b%20%5Ccdot%20b_B"></td>
+<td><img src="https://latex.codecogs.com/png.latex?K_b">：沸点升高常数</td>
+</tr>
+<tr class="odd">
+<td>凝固点下降</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5CDelta%20T_f%20=%20K_f%20%5Ccdot%20b_B"></td>
+<td><img src="https://latex.codecogs.com/png.latex?K_f">：凝固点下降常数</td>
+</tr>
+<tr class="even">
+<td>渗透压</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5CPi%20=%20c_B%20RT"></td>
+<td>范特霍夫方程</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="酸碱理论" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="酸碱理论"><span class="header-section-number">3.4</span> 酸碱理论</h2>
+<p><strong>酸碱质子理论</strong>：酸是质子（<img src="https://latex.codecogs.com/png.latex?H%5E+">）给予体；碱是质子接受体。</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Ctext%7B%E9%85%B8%7D%20%5Crightleftharpoons%20%5Ctext%7B%E7%A2%B1%7D%20+%20H%5E+%20%5Cqquad%20%5Ctext%7B%EF%BC%88%E9%85%B8%E8%B6%8A%E5%BC%BA%EF%BC%8C%E5%85%B1%E8%BD%AD%E7%A2%B1%E8%B6%8A%E5%BC%B1%EF%BC%89%7D"></p>
+<p><img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus_w%20=%20c'(H_3O%5E+)%5Ccdot%20c'(OH%5E-)%20=%201.0%5Ctimes10%5E%7B-14%7D%20%5Cquad%20(298.15%5Ctext%7B%20K%7D)"></p>
+<hr>
+</section>
+<section id="弱酸弱碱的解离平衡" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="弱酸弱碱的解离平衡"><span class="header-section-number">3.5</span> 弱酸弱碱的解离平衡</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" aria-controls="tabset-4-1" aria-selected="true" href="">一元弱酸</a></li><li class="nav-item"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" aria-controls="tabset-4-2" aria-selected="false" href="">多元弱酸</a></li><li class="nav-item"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" aria-controls="tabset-4-3" aria-selected="false" href="">离子效应</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" aria-labelledby="tabset-4-1-tab">
+<p>当 <img src="https://latex.codecogs.com/png.latex?c/K_a%20%5Cge%20400"> 时：</p>
+<p><img src="https://latex.codecogs.com/png.latex?c(H%5E+)%20%5Capprox%20%5Csqrt%7Bc%20K_a%7D"></p>
+<p><strong>奥斯特瓦尔德稀释定律</strong>：<img src="https://latex.codecogs.com/png.latex?%5Calpha%20=%20%5Csqrt%7BK_a/c%7D"></p>
+</div>
+<div id="tabset-4-2" class="tab-pane" aria-labelledby="tabset-4-2-tab">
+<p>分步解离，<img src="https://latex.codecogs.com/png.latex?K_%7Ba1%7D%20%5Cgg%20K_%7Ba2%7D">，计算 <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BpH%7D"> 主要考虑第一步。</p>
+</div>
+<div id="tabset-4-3" class="tab-pane" aria-labelledby="tabset-4-3-tab">
+<p><strong>同离子效应</strong>：加入含相同离子的强电解质 → 解离度<strong>降低</strong></p>
+<p><strong>盐效应</strong>：加入不含相同离子的强电解质 → 解离度<strong>略增</strong></p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="缓冲溶液" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="缓冲溶液"><span class="header-section-number">3.6</span> 缓冲溶液</h2>
+<div class="callout callout-style-default callout-tip callout-titled" title="Henderson-Hasselbalch 公式">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Henderson-Hasselbalch 公式
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><img src="https://latex.codecogs.com/png.latex?pH%20=%20pK%5E%5Cominus_a%20+%20%5Clg%5Cfrac%7Bc_%7B%5Ctext%7B%E5%85%B1%E8%BD%AD%E7%A2%B1%7D%7D%7D%7Bc_%7B%5Ctext%7B%E5%BC%B1%E9%85%B8%7D%7D%7D"></p>
+<p>有效缓冲范围：<img src="https://latex.codecogs.com/png.latex?pH%20=%20pK%5E%5Cominus_a%20%5Cpm%201"></p>
+</div>
+</div>
+<p><strong>组成</strong>：弱酸及其盐（如 <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BHAc-NaAc%7D">）或弱碱及其盐。<br>
+<strong>缓冲容量</strong>：浓度越大或比值越接近 1，容量越大。</p>
+<hr>
+</section>
+<section id="沉淀溶解平衡" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="沉淀溶解平衡"><span class="header-section-number">3.7</span> 沉淀溶解平衡</h2>
+<p><img src="https://latex.codecogs.com/png.latex?A_nB_m(s)%20%5Crightleftharpoons%20nA%5E%7Bm+%7D(aq)%20+%20mB%5E%7Bn-%7D(aq)"></p>
+<p><img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus_%7Bsp%7D%20=%20%5C%7Bc'(A%5E%7Bm+%7D)%5C%7D%5En%20%5Ccdot%20%5C%7Bc'(B%5E%7Bn-%7D)%5C%7D%5Em"></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">判据</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?Q_i%20%3E%20K_%7Bsp%7D"></td>
+<td>产生沉淀</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?Q_i%20%3C%20K_%7Bsp%7D"></td>
+<td>无沉淀（或沉淀溶解）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>溶解沉淀的方法</strong>：生成弱电解质（加酸）、生成配合物、发生氧化还原反应。<br>
+<strong>转化规律</strong>：溶解度较大的沉淀→溶解度更小的沉淀。</p>
+<hr>
+</section>
+<section id="胶体与表面活性剂" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="胶体与表面活性剂"><span class="header-section-number">3.8</span> 胶体与表面活性剂</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><strong>胶体的性质</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>性质类别</th>
+<th>现象</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>光学性质</td>
+<td>丁铎尔效应</td>
+</tr>
+<tr class="even">
+<td>动力性质</td>
+<td>布朗运动</td>
+</tr>
+<tr class="odd">
+<td>电学性质</td>
+<td>电泳、电渗</td>
+</tr>
+</tbody>
+</table>
+<p><strong>稳定因素</strong>：胶粒带电、水化膜保护、布朗运动</p>
+<p><strong>聚沉方法</strong>：加电解质、异号溶胶混合、加热</p>
+</div><div class="column" style="width:40%;">
+<p><strong>表面活性剂</strong></p>
 <ul>
-<li><strong>熵 (<img src="https://latex.codecogs.com/png.latex?S">)</strong> ：状态函数。系统越混乱，熵值越大 。</li>
-<li><strong>热力学第二定律与熵增加原理</strong> ：在隔离系统中，自发反应必伴随着熵的增加，即 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20S_%7B%E9%9A%94%E7%A6%BB%7D%20%3E%200"> 。</li>
-<li><strong>热力学第三定律</strong> ：在 0 K 时，一切纯物质的完美晶体的熵等于零 。</li>
-<li><strong>标准摩尔熵变 (<img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20S_m%5E%5Cominus">) 计算</strong> ： <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20S_m%5E%5Cominus%20=%20%5Csum%20%5Cnu_B%20S_m%5E%5Cominus(B)"></li>
-<li><strong>过程熵变的经验规律</strong> ：
+<li>结构：亲水基 + 疏水（亲油）基</li>
+<li><strong>CMC</strong>：临界胶束浓度，超过后溶液性质突变</li>
+<li>四大作用：润湿、乳化、发泡、增溶/洗涤</li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="水体污染指标" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="水体污染指标"><span class="header-section-number">3.9</span> 水体污染指标</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>指标</th>
+<th>全称</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SS</td>
+<td>悬浮固体</td>
+<td>水中不溶性固体颗粒</td>
+</tr>
+<tr class="even">
+<td>BOD</td>
+<td>生化需氧量</td>
+<td>微生物分解有机物耗氧量</td>
+</tr>
+<tr class="odd">
+<td>COD</td>
+<td>化学需氧量</td>
+<td>化学氧化有机物耗氧量</td>
+</tr>
+<tr class="even">
+<td>TOC</td>
+<td>总有机碳</td>
+<td>有机污染物总量</td>
+</tr>
+</tbody>
+</table>
+<p><strong>三级处理</strong>：物理（筛滤、沉淀）→ 化学（中和、混凝、电解）→ 生物（微生物降解）</p>
+<hr>
+</section>
+</section>
+<section id="氧化还原与电化学" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 氧化还原与电化学</h1>
+<section id="基本概念" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="基本概念"><span class="header-section-number">4.1</span> 基本概念</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="氧化还原的实质">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>氧化还原的实质
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>电子的<strong>得失或偏移</strong>。氧化数升高 → 氧化；氧化数降低 → 还原。</p>
+</div>
+</div>
+<p><strong>氧化数规则：</strong></p>
 <ol type="1">
-<li>同一物质：<img src="https://latex.codecogs.com/png.latex?S(g)%20%3E%20S(l)%20%3E%20S(s)"> 。</li>
-<li>气态物质分子数增加的反应，<img src="https://latex.codecogs.com/png.latex?%5CDelta%20S%20%3E%200"> 。</li>
-</ol></li>
-</ul>
-<hr>
-</section>
-<section id="吉布斯自由能-gibbs-free-energy" class="level3">
-<h3 class="anchored" data-anchor-id="吉布斯自由能-gibbs-free-energy">1.5 吉布斯自由能 (Gibbs Free Energy)</h3>
-<p>吉布斯自由能是判断反应自发性的统一标准 。</p>
-<ul>
-<li><p><strong>吉布斯自由能定义</strong> ：<img src="https://latex.codecogs.com/png.latex?G%20=%20H%20-%20TS"> 。</p></li>
-<li><p><strong>吉布斯方程</strong> ： <img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20=%20%5CDelta%20H%20-%20T%5CDelta%20S"> 在恒温理想条件下： <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20G-G%5E%5Cominus=%5Cint%20dG=%5Cint%20VdP-SdT=%5Cint%20%5Cfrac%7BnRT%7D%7BP%7DdP=nRT%5Cln(%5Cfrac%7BP%7D%7BP%5E%5Cominus%7D)%0A"></p></li>
-<li><p><strong>自发性判据（恒温、恒压、不作非体积功）</strong> ：</p>
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20%3C%200">：自发过程 。</li>
-<li><img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20=%200">：平衡状态 。</li>
-<li><img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20%3E%200">：非自发过程 。</li>
-</ul></li>
-<li><p><strong>标准摩尔生成吉布斯自由能 (<img src="https://latex.codecogs.com/png.latex?%5CDelta_f%20G_m%5E%5Cominus">)</strong> ：在标准状态下，由最稳定单质生成 1 mol 某物质时的吉布斯自由能变 。</p></li>
-<li><p><strong>标准摩尔反应吉布斯自由能变 (<img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%5E%5Cominus">) 计算</strong> ： <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%5E%5Cominus%20=%20%5Csum%20%5Cnu_B%20%5CDelta_f%20G_m%5E%5Cominus(B)=G%5E%7B%5Cominus%7D(%E7%94%9F%E6%88%90%E7%89%A9)-G%5E%7B%5Cominus%7D(%E5%8F%8D%E5%BA%94%E7%89%A9)"></p></li>
-<li><p><strong>温度对反应自发性的影响</strong> ：</p>
-<ul>
-<li>当 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20H%20%3C%200,%20%5CDelta%20S%20%3E%200"> 时，任何温度下 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20%3C%200">，均自发 。</li>
-<li>当 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20H%20%3E%200,%20%5CDelta%20S%20%3C%200"> 时，任何温度下 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%20%3E%200">，均不自发 。</li>
-<li>当 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20H"> 和 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20S"> 符号相同时，反应方向受温度影响，<strong>转向温度</strong>公式为： <img src="https://latex.codecogs.com/png.latex?T_%7B%E8%BD%AC%7D%20%5Capprox%20%5Cfrac%7B%5CDelta_r%20H_m%5E%5Cominus%7D%7B%5CDelta_r%20S_m%5E%5Cominus%7D"></li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="化学平衡与化学反应速率" class="level1">
-<h1>化学平衡与化学反应速率</h1>
-<section id="化学平衡-chemical-equilibrium" class="level3">
-<h3 class="anchored" data-anchor-id="化学平衡-chemical-equilibrium">2.1 化学平衡 (Chemical Equilibrium)</h3>
-<p>本节研究在一定条件下反应能达到的极限。</p>
-<section id="化学平衡常数" class="level4">
-<h4 class="anchored" data-anchor-id="化学平衡常数">2.1.1 化学平衡常数</h4>
-<ul>
-<li><strong>可逆反应与不可逆反应</strong>：
-<ul>
-<li><strong>可逆反应</strong>：在同一条件下，既能向正方向进行又能向逆方向进行的反应。</li>
-<li><strong>不可逆反应</strong>：反应几乎能完全变为产物，产物不能直接回到反应物。</li>
-</ul></li>
-<li><strong>化学平衡的基本特征</strong>：
-<ol type="1">
-<li><strong>动态平衡</strong>：微观上正、逆反应仍以相同速率进行。</li>
-<li><strong>组成固定</strong>：反应达平衡时，各物质浓度不再随时间改变。</li>
-<li><strong>途径无关</strong>：平衡组成与达到平衡的途径无关。</li>
-<li><strong>相对性</strong>：条件改变时，平衡会发生移动。</li>
-</ol></li>
-</ul>
-</section>
-<section id="标准平衡常数-kominus" class="level4">
-<h4 class="anchored" data-anchor-id="标准平衡常数-kominus">2.1.2 标准平衡常数 (<img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus">)</h4>
-<ul>
-<li><p><strong>概念</strong>：衡量反应进行程度的特征常数。<img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus"> 越大，正反应进行的程度越大。</p></li>
-<li><p><strong>计算公式</strong>（以 <img src="https://latex.codecogs.com/png.latex?aA(g)+bB(aq)%20%5Crightleftharpoons%20xX(g)+yY(aq)"> 为例）： <img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus%20=%20%5Cfrac%7B%5C%7Bp(X)/p%5E%5Cominus%5C%7D%5Ex%20%5C%7Bc(Y)/c%5E%5Cominus%5C%7D%5Ey%7D%7B%5C%7Bp(A)/p%5E%5Cominus%5C%7D%5Ea%20%5C%7Bc(B)/c%5E%5Cominus%5C%7D%5Eb%7D"></p>
-<ul>
-<li><strong>变量含义</strong>：<img src="https://latex.codecogs.com/png.latex?p"> 为气体分压；<img src="https://latex.codecogs.com/png.latex?p%5E%5Cominus"> 为标准压力 (<img src="https://latex.codecogs.com/png.latex?100%20%5Ctext%7B%20kPa%7D">)；<img src="https://latex.codecogs.com/png.latex?c"> 为物质的量浓度；<img src="https://latex.codecogs.com/png.latex?c%5E%5Cominus"> 为标准浓度 (<img src="https://latex.codecogs.com/png.latex?1%20%5Ctext%7B%20mol%7D%5Ccdot%5Ctext%7BL%7D%5E%7B-1%7D">)。</li>
-<li><strong>注意</strong>：纯液体和纯固体不列入表达式，视为“1”。</li>
-</ul></li>
-<li><p><strong>与吉布斯自由能的关系</strong>： <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%5E%5Cominus%20=%5Csum%20%5Cnu_i%5Cmu_i=-RT%5Csum%20%5Cnu_i%5Cln%5Cfrac%7BP_i%7D%7BP%5E%7B%5Cominus%7D%7D=-RT%20%5Cln%20K%5E%5Cominus"></p>
-<ul>
-<li><p><strong>变量含义</strong>：<img src="https://latex.codecogs.com/png.latex?R"> 为摩尔气体常数；<img src="https://latex.codecogs.com/png.latex?T"> 为热力学温度。</p></li>
-<li><p>化学势<img src="https://latex.codecogs.com/png.latex?%5Cmu_i">是系统中某组分 i 的“逃逸趋势”或“扩散驱动力”的定量描述。</p>
-<pre><code>  $$
-  \mu_i=(\frac{\partial G}{\partial n_i})_{T,P,n_{j\ne i}}
-  $$</code></pre></li>
-</ul></li>
-<li><p><strong>多重平衡规则</strong>：若一个反应可以看作是若干个分步反应之和（或差），则总反应的 <img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus"> 等于各分步反应平衡常数的乘积（或商）。</p></li>
-</ul>
-</section>
-<section id="化学平衡的移动" class="level4">
-<h4 class="anchored" data-anchor-id="化学平衡的移动">2.1.3 化学平衡的移动</h4>
-<ul>
-<li><strong>勒夏特列原理 (Le Chatelier’s Principle)</strong>：改变平衡系统的条件（浓度、压力、温度），平衡向着<strong>减弱这种改变</strong>的方向移动。</li>
-<li><strong>平衡移动方向的判据</strong>：通过反应商 (<img src="https://latex.codecogs.com/png.latex?Q">) 与 <img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus"> 比较：
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?Q%20%3C%20K%5E%5Cominus">：反应正向进行。</li>
-<li><img src="https://latex.codecogs.com/png.latex?Q%20%3E%20K%5E%5Cominus">：反应逆向进行。</li>
-<li><img src="https://latex.codecogs.com/png.latex?Q%20=%20K%5E%5Cominus">：反应达平衡状态。</li>
-</ul></li>
-<li><strong>温度与平衡常数的关系（范特霍夫方程）</strong>： <img src="https://latex.codecogs.com/png.latex?%0A%5CDelta_rH_m%5E%7B%5Cominus%7D%20%5Cpropto%20%5CDelta_rG_m%5E%7B%5Cominus%7D=-RT%5Cln%20K%5E%7B%5Cominus%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%5Cln%20%5Cfrac%7BK%5E%5Cominus_2%7D%7BK%5E%5Cominus_1%7D%20=%20%5Cfrac%7B%5CDelta_r%20H_m%5E%5Cominus%7D%7BR%7D%20%5Cleft(%20%5Cfrac%7B1%7D%7BT_1%7D%20-%20%5Cfrac%7B1%7D%7BT_2%7D%20%5Cright)"></li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="化学反应速率-chemical-reaction-rate" class="level3">
-<h3 class="anchored" data-anchor-id="化学反应速率-chemical-reaction-rate">2.2 化学反应速率 (Chemical Reaction Rate)</h3>
-<p>本节研究反应进得的快慢程度及其影响因素。</p>
-<section id="化学反应速率与反应级数" class="level4">
-<h4 class="anchored" data-anchor-id="化学反应速率与反应级数">2.2.1 化学反应速率与反应级数</h4>
-<ul>
-<li><strong>反应速率定义</strong>：单位时间内反应物浓度的减小或生成物浓度的增加。
-<ul>
-<li><strong>瞬时速率</strong>：<img src="https://latex.codecogs.com/png.latex?v%20=%20%5Cfrac%7B1%7D%7B%5Cnu_B%7D%20%5Cfrac%7Bdc_B%7D%7Bdt%7D"> 。</li>
-</ul></li>
-<li><strong>基元反应与质量作用定律</strong>：
-<ul>
-<li><strong>基元反应</strong>：反应物分子在接触碰撞中直接转化为产物的反应。</li>
-<li><strong>定律</strong>：基元反应速率与各反应物浓度的化学计量数绝对值为幂的乘积成正比。</li>
-</ul></li>
-<li><strong>速率方程（通用）</strong>： <img src="https://latex.codecogs.com/png.latex?v%20=%20k%20c_A%5E%5Calpha%20c_B%5E%5Cbeta=k%20c_A%5E%7B%5Cnu_A%7D%20c_B%5E%7B%5Cnu_B%7D">
-<ul>
-<li><strong>变量含义</strong>：<img src="https://latex.codecogs.com/png.latex?k"> 为速率常数（与温度、催化剂有关）；<img src="https://latex.codecogs.com/png.latex?%5Calpha,%20%5Cbeta"> 为分级数，<img src="https://latex.codecogs.com/png.latex?%5Calpha+%5Cbeta"> 为总反应级数。</li>
-</ul></li>
-</ul>
-</section>
-<section id="反应级数" class="level4">
-<h4 class="anchored" data-anchor-id="反应级数">2.2.2 反应级数</h4>
-<ul>
-<li><strong>零级反应</strong>：速率与浓度无关，<img src="https://latex.codecogs.com/png.latex?v%20=%20k">。</li>
-<li><strong>一级反应</strong>：速率与浓度的一次方成正比。
-<ul>
-<li><strong>积分公式</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cln%20%5Cfrac%7Bc_0%7D%7Bc%7D%20=%20kt%20%5CRightarrow%20c=c_0e%5E%7B-kt%7D"> 。</li>
-<li><strong>半衰期</strong>：<img src="https://latex.codecogs.com/png.latex?t_%7B1/2%7D%20=%20%5Cfrac%7B%5Cln%202%7D%7Bk%7D%20%5Capprox%20%5Cfrac%7B0.693%7D%7Bk%7D">（与起始浓度无关）。</li>
-</ul></li>
-</ul>
-</section>
-<section id="化学反应速率的影响因素" class="level4">
-<h4 class="anchored" data-anchor-id="化学反应速率的影响因素">2.2.3 化学反应速率的影响因素</h4>
-<ul>
-<li><strong>碰撞理论</strong>：反应物分子必须发生<strong>有效碰撞</strong>才能反应。
-<ul>
-<li><strong>活化分子</strong>：能量较高、能发生有效碰撞的分子。</li>
-<li><strong>活化能 (<img src="https://latex.codecogs.com/png.latex?E_a">)</strong>：活化分子具有的最低能量与反应物分子平均能量之差。是反应物达到活化状态所需要的能量。 <img src="https://latex.codecogs.com/png.latex?E_a%20=%20%5Clangle%20E%5E*%20%5Crangle%20-%20%5Clangle%20E_%7B%5Ctext%7B%E5%8F%8D%E5%BA%94%E7%89%A9%7D%7D%20%5Crangle%20%5Cge%200%0A"></li>
-</ul></li>
-<li><strong>温度的影响（阿伦尼乌斯公式）</strong>： <img src="https://latex.codecogs.com/png.latex?k%20=%20A%20%5Ccdot%20e%5E%7B-E_a/RT%7D"></li>
-<li><strong>艾琳方程对阿伦尼乌斯的热力学化</strong>： <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20%20%20%20%20%20%20A=%5Cfrac%20%7Bk_BT%7D%7Bh%7D,E_a=%5CDelta%20G%5E%7B%5Cddagger%7D=%5CDelta%20H%5E%7B%5Cddagger%7D-T%5CDelta%20S%5E%7B%5Cddagger%7D%0A%20%20">
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?k_B"> ：玻尔兹曼常数</li>
-<li><img src="https://latex.codecogs.com/png.latex?h"> ：普朗克常数</li>
-<li><img src="https://latex.codecogs.com/png.latex?T"> ：热力学温度</li>
-</ul>
-<ol type="1">
-<li><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Bk_B%20T%7D%7Bh%7D"> ：代表普适频率，即过渡态沿反应坐标分解为产物的基本振动频率。</li>
-<li><img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%5E%7B%5Cddagger%7D"> ：决定反应速率的能垒高度。 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20G%5E%7B%5Cddagger%7D"> 越小，反应越快。</li>
-<li><img src="https://latex.codecogs.com/png.latex?%5CDelta%20S%5E%7B%5Cddagger%7D"> ：若过渡态结构比反应物更“拥挤”或更“有序”，<img src="https://latex.codecogs.com/png.latex?%5CDelta%20S%5E%7B%5Cddagger%7D"> 为负值，会降低反应速率（体现在指前因子变小）。</li>
+<li>单质中原子氧化数为零</li>
+<li>中性分子各原子氧化数代数和为零；离子的代数和等于电荷数</li>
+<li>H 通常为 <img src="https://latex.codecogs.com/png.latex?+1">（活泼金属氢化物中 <img src="https://latex.codecogs.com/png.latex?-1">）；O 通常为 <img src="https://latex.codecogs.com/png.latex?-2">（过氧化物中 <img src="https://latex.codecogs.com/png.latex?-1">）</li>
 </ol>
-<ul>
-<li>变形式：<img src="https://latex.codecogs.com/png.latex?%5Cln%20%5Cfrac%7Bk_2%7D%7Bk_1%7D%20=%20%5Cfrac%7BE_a%7D%7BR%7D%20%5Cleft(%20%5Cfrac%7B1%7D%7BT_1%7D%20-%20%5Cfrac%7B1%7D%7BT_2%7D%20%5Cright)%5CRightarrow%20E_a=RT%5E2%5Cfrac%7Bd%20%5Cln%20k%7D%7Bd%20T%7D"> 。 <img src="https://latex.codecogs.com/png.latex?K=%5Cfrac%7Bk_%E6%AD%A3%7D%7Bk_%E9%80%86%7D%5CRightarrow%20%5CDelta_rH%5E%7B%5Cominus%7D=E_a(%E6%AD%A3)-E_a(%E9%80%86)"></li>
-<li><strong>结论</strong>：温度升高，<img src="https://latex.codecogs.com/png.latex?k"> 增大，反应速率加快。</li>
-</ul></li>
-<li><strong>活化能的影响</strong>：<img src="https://latex.codecogs.com/png.latex?E_a"> 越小，反应速率越快。</li>
-</ul>
+<hr>
 </section>
-<section id="催化剂与催化作用" class="level4">
-<h4 class="anchored" data-anchor-id="催化剂与催化作用">2.2.4 催化剂与催化作用</h4>
+<section id="原电池" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="原电池"><span class="header-section-number">4.2</span> 原电池</h2>
+<div class="callout callout-style-default callout-important callout-titled" title="Gibbs 自由能与电动势">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Gibbs 自由能与电动势
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%20=%20-nFE%20%5Cqquad%20(%5Ctext%7B%E6%A0%87%E5%87%86%E6%80%81%EF%BC%9A%7D%20%5CDelta_r%20G_m%5E%5Cominus%20=%20-nFE%5E%5Cominus)"></p>
+<p><img src="https://latex.codecogs.com/png.latex?n">：转移电子数；<img src="https://latex.codecogs.com/png.latex?F%20%5Capprox%2096500%5Ctext%7B%20C%C2%B7mol%7D%5E%7B-1%7D">；<img src="https://latex.codecogs.com/png.latex?E">：电动势（V）</p>
+</div>
+</div>
+<p><strong>电池符号</strong>：负极在左，正极在右，<code>|</code> 表示相界面，<code>||</code> 表示盐桥</p>
+<p><img src="https://latex.codecogs.com/png.latex?(-)%5C,%5Ctext%7BZn%7D%5C,%7C%5C,%5Ctext%7BZn%7D%5E%7B2+%7D(c_1)%5C,%7C%7C%5C,%5Ctext%7BCu%7D%5E%7B2+%7D(c_2)%5C,%7C%5C,%5Ctext%7BCu%7D%5C,(+)"></p>
+<p><strong>Nernst 方程（电池）：</strong></p>
+<p><img src="https://latex.codecogs.com/png.latex?E%20=%20E%5E%5Cominus%20-%20%5Cfrac%7BRT%7D%7BnF%7D%5Cln%20Q%20%5Cxrightarrow%7B298.15%5Ctext%7B%20K%7D%7D%20E%20=%20E%5E%5Cominus%20-%20%5Cfrac%7B0.0592%7D%7Bn%7D%5Clg%20Q"></p>
+<p><strong><img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus"> 与 <img src="https://latex.codecogs.com/png.latex?E%5E%5Cominus"> 的关系</strong>（<img src="https://latex.codecogs.com/png.latex?E=0"> 时平衡）：</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Clg%20K%5E%5Cominus%20=%20%5Cfrac%7BnE%5E%5Cominus%7D%7B0.0592%7D"></p>
+<hr>
+</section>
+<section id="电极电势" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="电极电势"><span class="header-section-number">4.3</span> 电极电势</h2>
+<p><strong>标准氢电极</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cphi%5E%5Cominus%20=%200.0000%5Ctext%7B%20V%7D">，符号为 <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPt%7D%7C%5Ctext%7BH%7D_2(100%5Ctext%7B%20kPa%7D)%7C%5Ctext%7BH%7D%5E+(1%5Ctext%7B%20mol%C2%B7L%7D%5E%7B-1%7D)"></p>
+<p><strong>Nernst 方程（电极）</strong>：</p>
+<p>对半反应 <img src="https://latex.codecogs.com/png.latex?a%5Ctext%7BA(%E6%B0%A7%E5%8C%96%E6%80%81)%7D%20+%20ne%5E-%20%5Crightleftharpoons%20b%5Ctext%7BB(%E8%BF%98%E5%8E%9F%E6%80%81)%7D">：</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cphi%20=%20%5Cphi%5E%5Cominus%20+%20%5Cfrac%7B0.0592%7D%7Bn%7D%5Clg%5Cfrac%7B%5C%7Bc(%5Ctext%7B%E6%B0%A7%E5%8C%96%E6%80%81%7D)/c%5E%5Cominus%5C%7D%5Ea%7D%7B%5C%7Bc(%5Ctext%7B%E8%BF%98%E5%8E%9F%E6%80%81%7D)/c%5E%5Cominus%5C%7D%5Eb%7D"></p>
+<p><strong>应用：</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>应用</th>
+<th>判据</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>氧化/还原能力</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5Cphi%5E%5Cominus"> 大 → 氧化能力强；<img src="https://latex.codecogs.com/png.latex?%5Cphi%5E%5Cominus"> 小 → 还原能力强</td>
+</tr>
+<tr class="even">
+<td>反应方向</td>
+<td><img src="https://latex.codecogs.com/png.latex?E%20%3E%200">（即 <img src="https://latex.codecogs.com/png.latex?%5Cphi_%7B%5Ctext%7B%E6%B0%A7%E5%8C%96%E5%89%82%7D%7D%20%3E%20%5Cphi_%7B%5Ctext%7B%E8%BF%98%E5%8E%9F%E5%89%82%7D%7D">）→ 自发正向</td>
+</tr>
+<tr class="odd">
+<td>反应程度</td>
+<td>由 <img src="https://latex.codecogs.com/png.latex?E%5E%5Cominus"> 计算 <img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus"></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="化学电源" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="化学电源"><span class="header-section-number">4.4</span> 化学电源</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" aria-controls="tabset-5-1" aria-selected="true" href="">一次电池</a></li><li class="nav-item"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" aria-controls="tabset-5-2" aria-selected="false" href="">二次电池</a></li><li class="nav-item"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" aria-controls="tabset-5-3" aria-selected="false" href="">燃料电池</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" aria-labelledby="tabset-5-1-tab">
+<p>放电后<strong>不可充电</strong>复原，如锌锰干电池、锌汞纽扣电池。</p>
+</div>
+<div id="tabset-5-2" class="tab-pane" aria-labelledby="tabset-5-2-tab">
+<p>可充电重复使用：铅蓄电池、镍镉、镍氢、锂离子电池。</p>
+<p><strong>铅蓄电池</strong>：<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPb%7D%20+%20%5Ctext%7BPbO%7D_2%20+%202%5Ctext%7BH%7D_2%5Ctext%7BSO%7D_4%20%5Crightleftharpoons%202%5Ctext%7BPbSO%7D_4%20+%202%5Ctext%7BH%7D_2%5Ctext%7BO%7D"></p>
+</div>
+<div id="tabset-5-3" class="tab-pane" aria-labelledby="tabset-5-3-tab">
+<p>连续将燃料氧化的化学能转化为电能，如氢氧燃料电池。</p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="电解" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="电解"><span class="header-section-number">4.5</span> 电解</h2>
+<p><strong>阴极</strong>（接电源负极）→ 还原反应；<strong>阳极</strong>（接电源正极）→ 氧化反应</p>
+<p><strong>应用</strong>：化工制备（烧碱）、电解提纯、电镀、阳极氧化、电刷镀</p>
+<hr>
+</section>
+<section id="金属腐蚀与防护" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="金属腐蚀与防护"><span class="header-section-number">4.6</span> 金属腐蚀与防护</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" aria-controls="tabset-6-1" aria-selected="true" href="">腐蚀类型</a></li><li class="nav-item"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" aria-controls="tabset-6-2" aria-selected="false" href="">防护方法</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1" class="tab-pane active" aria-labelledby="tabset-6-1-tab">
+<p><strong>化学腐蚀</strong>：单纯化学作用，如高温脱碳</p>
+<p><strong>电化学腐蚀</strong>：形成原电池引起</p>
 <ul>
-<li><strong>特征</strong>：
+<li>析氢腐蚀：酸性介质，阴极析出 <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BH%7D_2"></li>
+<li>吸氧腐蚀：中性/弱碱性介质，最常见</li>
+</ul>
+</div>
+<div id="tabset-6-2" class="tab-pane" aria-labelledby="tabset-6-2-tab">
 <ol type="1">
-<li>加快反应速率，但反应前后自身组成和质量不变。</li>
-<li><strong>原理</strong>：改变反应途径，<strong>降低活化能</strong> (<img src="https://latex.codecogs.com/png.latex?E_%7Bac%7D%20%3C%20E_a">)，使活化分子分数增加。</li>
-<li>不能改变平衡状态，只能缩短达到平衡的时间。</li>
-<li>具有高度的选择性（专一性）。</li>
-</ol></li>
-</ul>
-</section>
-</section>
-</section>
-<section id="溶液" class="level1">
-<h1>溶液</h1>
-<section id="分散系-disperse-systems" class="level3">
-<h3 class="anchored" data-anchor-id="分散系-disperse-systems">3.1 分散系 (Disperse Systems)</h3>
+<li><strong>改变介质</strong>：加缓蚀剂</li>
+<li><strong>表面覆盖</strong>：电镀、刷漆</li>
+<li><strong>电化学保护</strong>
 <ul>
-<li><strong>知识点</strong>：一种或几种物质（分散相/分散质）分散在另一种物质（分散介质）中形成的系统。</li>
-<li><strong>三级标题内容</strong>：
-<ul>
-<li><strong>分类（按粒子大小）</strong>：
+<li>牺牲阳极法：连接更活泼金属作负极</li>
+<li>外加电流法：被保护金属接电源负极</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="物质结构基础" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 物质结构基础</h1>
+<section id="核外电子的运动状态" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="核外电子的运动状态"><span class="header-section-number">5.1</span> 核外电子的运动状态</h2>
+<section id="量子化与波粒二象性" class="level3">
+<h3 class="anchored" data-anchor-id="量子化与波粒二象性">量子化与波粒二象性</h3>
+<div class="callout callout-style-default callout-note callout-titled" title="Bohr 模型">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Bohr 模型
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>电子在固定轨道运动不辐射能量；轨道和能量量子化。</p>
+<p><img src="https://latex.codecogs.com/png.latex?E_n%20=%20-%5Cfrac%7BR_H%7D%7Bn%5E2%7D%20=%20-%5Cfrac%7B13.6%7D%7Bn%5E2%7D%5Ctext%7B%20(eV)%7D"></p>
+<p><img src="https://latex.codecogs.com/png.latex?R_H%20=%202.179%5Ctimes10%5E%7B-18%7D%5Ctext%7B%20J%7D">，<img src="https://latex.codecogs.com/png.latex?n%20=%201,2,3,%5Cdots"></p>
+</div>
+</div>
+<p><strong>de Broglie 关系式：</strong></p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Clambda%20=%20%5Cfrac%7Bh%7D%7Bp%7D%20=%20%5Cfrac%7Bh%7D%7Bmv%7D"></p>
+<p><strong>Heisenberg 不确定原理</strong>：微观粒子的位置和动量不能同时准确测定。</p>
+<hr>
+</section>
+<section id="四个量子数" class="level3">
+<h3 class="anchored" data-anchor-id="四个量子数">四个量子数</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>量子数</th>
+<th style="text-align: center;">符号</th>
+<th>取值</th>
+<th>决定</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>主量子数</td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?n"></td>
+<td><img src="https://latex.codecogs.com/png.latex?1,2,3,%5Cdots"></td>
+<td>能级高低、轨道大小</td>
+</tr>
+<tr class="even">
+<td>角量子数</td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?l"></td>
+<td><img src="https://latex.codecogs.com/png.latex?0,1,%5Cdots,n-1"></td>
+<td>轨道形状（<img src="https://latex.codecogs.com/png.latex?s,p,d,f">）</td>
+</tr>
+<tr class="odd">
+<td>磁量子数</td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?m"></td>
+<td><img src="https://latex.codecogs.com/png.latex?0,%5Cpm1,%5Cdots,%5Cpm%20l"></td>
+<td>轨道空间取向</td>
+</tr>
+<tr class="even">
+<td>自旋量子数</td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?m_s"></td>
+<td><img src="https://latex.codecogs.com/png.latex?%5Cpm%5Ctfrac%7B1%7D%7B2%7D"></td>
+<td>电子自旋方向</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://latex.codecogs.com/png.latex?%7C%5Cpsi%7C%5E2">：电子在空间某点出现的<strong>概率密度</strong>（电子云）。</p>
+<p><strong>能级交错</strong>：屏蔽效应 + 钻穿效应导致 <img src="https://latex.codecogs.com/png.latex?E_%7B4s%7D%20%3C%20E_%7B3d%7D"> 等倒置现象。</p>
+<hr>
+</section>
+</section>
+<section id="核外电子排布" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="核外电子排布"><span class="header-section-number">5.2</span> 核外电子排布</h2>
+<div class="callout callout-style-default callout-important callout-titled" title="三大原则">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>三大原则
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
-<li><strong>分子/离子分散系</strong>：粒径 <img src="https://latex.codecogs.com/png.latex?%3C%201%5Ctext%7B%20nm%7D">，如真溶液，属于单相系统。</li>
-<li><strong>胶体分散系</strong>：粒径 <img src="https://latex.codecogs.com/png.latex?1%20%5Csim%20100%5Ctext%7B%20nm%7D">，属于多相系统。</li>
-<li><strong>粗分散系</strong>：粒径 <img src="https://latex.codecogs.com/png.latex?%3E%20100%5Ctext%7B%20nm%7D">，如悬浊液、乳浊液，属于多相系统。</li>
-</ol></li>
-</ul></li>
-</ul>
+<li><strong>能量最低原理</strong>：电子尽可能占据能量最低的轨道</li>
+<li><strong>Pauli 不相容原理</strong>：一个轨道最多容纳两个自旋相反的电子</li>
+<li><strong>Hund 规则</strong>：简并轨道上优先以相同自旋方式单占</li>
+</ol>
+</div>
+</div>
+<p><strong>特例</strong>：半充满（<img src="https://latex.codecogs.com/png.latex?d%5E5,%20p%5E3">）和全充满（<img src="https://latex.codecogs.com/png.latex?d%5E%7B10%7D,%20p%5E6">）具有额外稳定性。</p>
+<p><strong>周期表分区</strong>：根据价电子构型分为 <img src="https://latex.codecogs.com/png.latex?s,%20p,%20d,%20ds,%20f"> 区。</p>
+<p><strong>原子参数周期性：</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>参数</th>
+<th style="text-align: center;">同周期（左→右）</th>
+<th style="text-align: center;">同族（上→下）</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>原子半径</td>
+<td style="text-align: center;">减小</td>
+<td style="text-align: center;">增大</td>
+</tr>
+<tr class="even">
+<td>电离能 <img src="https://latex.codecogs.com/png.latex?I"></td>
+<td style="text-align: center;">增大</td>
+<td style="text-align: center;">减小</td>
+</tr>
+<tr class="odd">
+<td>电负性 <img src="https://latex.codecogs.com/png.latex?%5Cchi"></td>
+<td style="text-align: center;">增大</td>
+<td style="text-align: center;">减小</td>
+</tr>
+</tbody>
+</table>
+<p>氟的电负性最高（<img src="https://latex.codecogs.com/png.latex?%5Cchi%20=%204.0">）。</p>
 <hr>
 </section>
-<section id="溶液浓度的表示方法" class="level3">
-<h3 class="anchored" data-anchor-id="溶液浓度的表示方法">3.2 溶液浓度的表示方法</h3>
-<section id="质量分数-w_b" class="level4">
-<h4 class="anchored" data-anchor-id="质量分数-w_b">3.2.1 质量分数 (<img src="https://latex.codecogs.com/png.latex?w_B">)</h4>
-<ul>
-<li><strong>公式</strong>：<img src="https://latex.codecogs.com/png.latex?w_B%20=%20%5Cfrac%7Bm_B%7D%7Bm%7D%20%5Ctimes%20100%5C%25"> 。</li>
-<li><strong>变量含义</strong>：<img src="https://latex.codecogs.com/png.latex?m_B"> 为溶质 B 的质量；<img src="https://latex.codecogs.com/png.latex?m"> 为溶液总质量（溶质+溶剂）。</li>
-</ul>
-</section>
-<section id="物质的量浓度-c_b" class="level4">
-<h4 class="anchored" data-anchor-id="物质的量浓度-c_b">3.2.2 物质的量浓度 (<img src="https://latex.codecogs.com/png.latex?c_B">)</h4>
-<ul>
-<li><strong>公式</strong>：<img src="https://latex.codecogs.com/png.latex?c_B%20=%20%5Cfrac%7Bn_B%7D%7BV%7D"> 。</li>
-<li><strong>变量含义</strong>：<img src="https://latex.codecogs.com/png.latex?n_B"> 为溶质 B 的物质的量（单位 mol）；<img src="https://latex.codecogs.com/png.latex?V"> 为溶液总体积（单位 L）。</li>
-</ul>
-</section>
-<section id="摩尔分数-x_b" class="level4">
-<h4 class="anchored" data-anchor-id="摩尔分数-x_b">3.2.3 摩尔分数 (<img src="https://latex.codecogs.com/png.latex?x_B">)</h4>
-<ul>
-<li><strong>公式</strong>：<img src="https://latex.codecogs.com/png.latex?x_B%20=%20%5Cfrac%7Bn_B%7D%7Bn_A%20+%20n_B%7D"> 。</li>
-<li><strong>变量含义</strong>：<img src="https://latex.codecogs.com/png.latex?n_A"> 和 <img src="https://latex.codecogs.com/png.latex?n_B"> 分别为溶剂和溶质的物质的量。</li>
-</ul>
-</section>
-<section id="质量摩尔浓度-b_b-或-m_b" class="level4">
-<h4 class="anchored" data-anchor-id="质量摩尔浓度-b_b-或-m_b">3.2.4 质量摩尔浓度 (<img src="https://latex.codecogs.com/png.latex?b_B"> 或 <img src="https://latex.codecogs.com/png.latex?m_B">)</h4>
-<ul>
-<li><strong>公式</strong>：<img src="https://latex.codecogs.com/png.latex?m_B%20=%20%5Cfrac%7Bn_B%7D%7Bm_A%7D"> 。</li>
-<li><strong>变量含义</strong>：<img src="https://latex.codecogs.com/png.latex?n_B"> 为溶质物质的量；<img src="https://latex.codecogs.com/png.latex?m_A"> 为<strong>溶剂</strong>的质量（单位 <strong>kg</strong>）。</li>
-</ul>
-</section>
-<section id="几种溶液浓度之间的关系" class="level4">
-<h4 class="anchored" data-anchor-id="几种溶液浓度之间的关系">3.2.5 几种溶液浓度之间的关系</h4>
-<ul>
-<li><strong>常用换算公式</strong>：<img src="https://latex.codecogs.com/png.latex?c_B%20=%20%5Cfrac%7B1000%20%5Crho%20w_B%7D%7BM_B%7D"> 。（cm/1000rho）</li>
-<li><strong>变量含义</strong>：<img src="https://latex.codecogs.com/png.latex?%5Crho"> 为溶液密度 (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7Bg%7D%5Ccdot%5Ctext%7Bcm%7D%5E%7B-3%7D">)；<img src="https://latex.codecogs.com/png.latex?w_B"> 为质量分数；<img src="https://latex.codecogs.com/png.latex?M_B"> 为溶质摩尔质量。</li>
-</ul>
+<section id="价键理论" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="价键理论"><span class="header-section-number">5.3</span> 价键理论</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" aria-controls="tabset-7-1" aria-selected="true" href="">离子键</a></li><li class="nav-item"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" aria-controls="tabset-7-2" aria-selected="false" href="">共价键</a></li><li class="nav-item"><a class="nav-link" id="tabset-7-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-3" aria-controls="tabset-7-3" aria-selected="false" href="">杂化轨道</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1" class="tab-pane active" aria-labelledby="tabset-7-1-tab">
+<p>本质：正负离子间的静电引力。</p>
+<p>特点：<strong>无方向性、无饱和性</strong></p>
+</div>
+<div id="tabset-7-2" class="tab-pane" aria-labelledby="tabset-7-2-tab">
+<p>本质：原子轨道重叠，电子云密度在两核间增大。</p>
+<p>特点：<strong>有方向性、有饱和性</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>键型</th>
+<th>重叠方式</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="https://latex.codecogs.com/png.latex?%5Csigma"> 键</td>
+<td>“头碰头”</td>
+<td>沿轴线，可自由旋转</td>
+</tr>
+<tr class="even">
+<td><img src="https://latex.codecogs.com/png.latex?%5Cpi"> 键</td>
+<td>“肩并肩”</td>
+<td>垂直轴线，不能旋转</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tabset-7-3" class="tab-pane" aria-labelledby="tabset-7-3-tab">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>杂化类型</th>
+<th>空间构型</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="https://latex.codecogs.com/png.latex?sp"></td>
+<td>直线型</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5Ctext%7BBeCl%7D_2"></td>
+</tr>
+<tr class="even">
+<td><img src="https://latex.codecogs.com/png.latex?sp%5E2"></td>
+<td>平面三角形</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5Ctext%7BBF%7D_3"></td>
+</tr>
+<tr class="odd">
+<td><img src="https://latex.codecogs.com/png.latex?sp%5E3">（等性）</td>
+<td>正四面体</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5Ctext%7BCH%7D_4"></td>
+</tr>
+<tr class="even">
+<td><img src="https://latex.codecogs.com/png.latex?sp%5E3">（不等性）</td>
+<td>三角锥型</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5Ctext%7BNH%7D_3"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 <hr>
 </section>
-</section>
-<section id="稀溶液的依数性" class="level3">
-<h3 class="anchored" data-anchor-id="稀溶液的依数性">3.3 稀溶液的依数性</h3>
-<p><strong>前提</strong>：适用于稀的、非挥发性、非电解质溶液。</p>
-<section id="溶液的蒸气压下降拉乌尔定律" class="level4">
-<h4 class="anchored" data-anchor-id="溶液的蒸气压下降拉乌尔定律">3.3.1 溶液的蒸气压下降（拉乌尔定律）</h4>
-<ul>
-<li><strong>公式</strong>：<img src="https://latex.codecogs.com/png.latex?%5CDelta%20p%20=%20p%5E*_A%20%5Ccdot%20x_B"> 。</li>
-<li><strong>变量含义</strong>：<img src="https://latex.codecogs.com/png.latex?%5CDelta%20p"> 为蒸气压下降值；<img src="https://latex.codecogs.com/png.latex?p%5E*_A"> 为纯溶剂蒸气压；<img src="https://latex.codecogs.com/png.latex?x_B"> 为溶质的摩尔分数。</li>
-</ul>
-</section>
-<section id="溶液的沸点升高和凝固点下降" class="level4">
-<h4 class="anchored" data-anchor-id="溶液的沸点升高和凝固点下降">3.3.2 溶液的沸点升高和凝固点下降</h4>
-<ul>
-<li><strong>沸点升高公式</strong>：<img src="https://latex.codecogs.com/png.latex?%5CDelta%20T_b%20=%20K_b%20%5Ccdot%20b_B"> 。</li>
-<li><strong>凝固点下降公式</strong>：<img src="https://latex.codecogs.com/png.latex?%5CDelta%20T_f%20=%20K_f%20%5Ccdot%20b_B"> 。</li>
-<li><strong>变量含义</strong>：<img src="https://latex.codecogs.com/png.latex?%5CDelta%20T"> 为变化值；<img src="https://latex.codecogs.com/png.latex?K_b/K_f"> 分别为沸点升高/凝固点下降常数（仅与溶剂性质有关）；<img src="https://latex.codecogs.com/png.latex?b_B"> 为质量摩尔浓度。</li>
-</ul>
-</section>
-<section id="渗透压-pi" class="level4">
-<h4 class="anchored" data-anchor-id="渗透压-pi">3.3.3 渗透压 (<img src="https://latex.codecogs.com/png.latex?%5CPi">)</h4>
-<ul>
-<li><strong>公式（范特霍夫方程）</strong>：<img src="https://latex.codecogs.com/png.latex?%5CPi%20=%20c_B%20R%20T"> 。</li>
-<li><strong>变量含义</strong>：
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?%5CPi"> 为渗透压 (Pa)；</li>
-<li><img src="https://latex.codecogs.com/png.latex?c_B"> 为物质的量浓度；</li>
-<li><img src="https://latex.codecogs.com/png.latex?R"> 为气体常数 (<img src="https://latex.codecogs.com/png.latex?8.314%20%5Ctext%7B%20J%7D%5Ccdot%5Ctext%7Bmol%7D%5E%7B-1%7D%5Ccdot%5Ctext%7BK%7D%5E%7B-1%7D">)；</li>
-<li><img src="https://latex.codecogs.com/png.latex?T"> 为热力学温度。</li>
-</ul></li>
-</ul>
-<p>依数性的根源在于熵效应。溶质粒子的加入增加了系统的混乱度（熵），使得溶剂的化学势降低，从而改变了相平衡条件（液-气、液-固平衡线移动），液态相（溶液）的稳定区间被拓宽。</p>
-<hr>
-</section>
-</section>
-<section id="酸碱理论" class="level3">
-<h3 class="anchored" data-anchor-id="酸碱理论">3.4 酸碱理论</h3>
-<section id="酸碱质子理论" class="level4">
-<h4 class="anchored" data-anchor-id="酸碱质子理论">3.4.1 酸碱质子理论</h4>
-<ul>
-<li><strong>核心概念</strong>：酸是质子 (<img src="https://latex.codecogs.com/png.latex?H%5E+">) 给予体；碱是质子接受体。</li>
-<li><strong>共轭酸碱对</strong>：酸 <img src="https://latex.codecogs.com/png.latex?%5Crightleftharpoons"> 碱 + <img src="https://latex.codecogs.com/png.latex?H%5E+">。酸越强，其共轭碱越弱。</li>
-</ul>
-</section>
-<section id="酸碱的相对强弱" class="level4">
-<h4 class="anchored" data-anchor-id="酸碱的相对强弱">3.4.2 酸碱的相对强弱</h4>
-<ul>
-<li><strong>水的自解离</strong>：<img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus_w%20=%20c'(H_3O%5E+)%20%5Ccdot%20c'(OH%5E-)"> 。</li>
-<li><strong>数值</strong>：298.15 K 时，<img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus_w%20=%201.0%20%5Ctimes%2010%5E%7B-14%7D">，<img src="https://latex.codecogs.com/png.latex?pH%20+%20pOH%20=%2014"> 。</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="弱酸弱碱的解离平衡" class="level3">
-<h3 class="anchored" data-anchor-id="弱酸弱碱的解离平衡">3.5 弱酸、弱碱的解离平衡</h3>
-<section id="一元弱酸弱碱的解离平衡" class="level4">
-<h4 class="anchored" data-anchor-id="一元弱酸弱碱的解离平衡">3.5.1 <em>一元</em>弱酸、弱碱的解离平衡</h4>
-<ul>
-<li><strong>近似计算式</strong>：当 <img src="https://latex.codecogs.com/png.latex?c/K_a%20%5Cge%20400"> 时，<img src="https://latex.codecogs.com/png.latex?c(H%5E+)%20%5Capprox%20c%5Calpha%20=%5Csqrt%7Bc%20K_a%7D"> 。</li>
-<li><strong>奥斯特瓦尔德稀释定律</strong>：<img src="https://latex.codecogs.com/png.latex?%5Calpha%20=%20%5Csqrt%7BK_a%20/%20c%7D"> 。</li>
-</ul>
-</section>
-<section id="多元弱酸弱碱的解离平衡" class="level4">
-<h4 class="anchored" data-anchor-id="多元弱酸弱碱的解离平衡">3.5.2 多元弱酸、弱碱的解离平衡</h4>
-<ul>
-<li><strong>规律</strong>：分步解离，通常 <img src="https://latex.codecogs.com/png.latex?K_%7Ba1%7D%20%5Cgg%20K_%7Ba2%7D">，计算 <img src="https://latex.codecogs.com/png.latex?pH"> 时主要考虑第一步解离。</li>
-</ul>
-</section>
-<section id="同离子效应和盐效应" class="level4">
-<h4 class="anchored" data-anchor-id="同离子效应和盐效应">3.5.3 同离子效应和盐效应</h4>
-<ul>
-<li><strong>同离子效应</strong>：加入含有相同离子的强电解质，使弱电解质解离度<strong>降低</strong>。</li>
-<li><strong>盐效应</strong>：加入不含相同离子的强电解质，使弱电解质解离度<strong>略有增加</strong>。</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="缓冲溶液" class="level3">
-<h3 class="anchored" data-anchor-id="缓冲溶液">3.6 缓冲溶液</h3>
-<section id="缓冲作用原理" class="level4">
-<h4 class="anchored" data-anchor-id="缓冲作用原理">3.6.1 缓冲作用原理</h4>
-<ul>
-<li><strong>组成</strong>：通常由<strong>弱酸及其盐</strong>（如 <img src="https://latex.codecogs.com/png.latex?HAc-NaAc">）或<strong>弱碱及其盐</strong>组成为缓冲对。</li>
-</ul>
-</section>
-<section id="缓冲溶液-ph-的计算" class="level4">
-<h4 class="anchored" data-anchor-id="缓冲溶液-ph-的计算">3.6.2 缓冲溶液 pH 的计算</h4>
-<ul>
-<li><strong>公式</strong>：<img src="https://latex.codecogs.com/png.latex?pH%20=%20pK%5E%5Cominus_a%20+%20%5Clg%20%5Cfrac%7Bc_%7B%5Ctext%7B%E5%85%B1%E8%BD%AD%E7%A2%B1%7D%7D%7D%7Bc_%7B%5Ctext%7B%E5%BC%B1%E9%85%B8%7D%7D%7D"> 。</li>
-<li><strong>变量含义</strong>：<img src="https://latex.codecogs.com/png.latex?pK%5E%5Cominus_a%20=%20-%5Clg%20K_a">；<img src="https://latex.codecogs.com/png.latex?c"> 为组分的初始浓度。</li>
-</ul>
-</section>
-<section id="缓冲容量" class="level4">
-<h4 class="anchored" data-anchor-id="缓冲容量">3.6.3 缓冲容量</h4>
-<ul>
-<li><strong>知识点</strong>：缓冲能力有限。浓度越大或比值接近 1 时，缓冲容量越大。</li>
-<li><strong>有效范围</strong>：<img src="https://latex.codecogs.com/png.latex?pH%20=%20pK%5E%5Cominus_a%20%5Cpm%201"> 。</li>
-</ul>
-</section>
-<section id="标准缓冲溶液" class="level4">
-<h4 class="anchored" data-anchor-id="标准缓冲溶液">3.6.4 标准缓冲溶液</h4>
-<ul>
-<li><strong>用途</strong>：用于 pH 计的定位校正。</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="沉淀溶解平衡" class="level3">
-<h3 class="anchored" data-anchor-id="沉淀溶解平衡">3.7 沉淀溶解平衡</h3>
-<section id="溶度积和溶度积规则" class="level4">
-<h4 class="anchored" data-anchor-id="溶度积和溶度积规则">3.7.1 溶度积和溶度积规则</h4>
-<ul>
-<li><strong>溶度积 (<img src="https://latex.codecogs.com/png.latex?K_%7Bsp%7D">)</strong>：<img src="https://latex.codecogs.com/png.latex?A_nB_m(s)%20%5Crightleftharpoons%20nA%5E%7Bm+%7D(aq)%20+%20mB%5E%7Bn-%7D(aq)"> 的平衡常数 <img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus_%7Bsp%7D%20=%20%5C%7Bc'(A%5E%7Bm+%7D)%5C%7D%5En%20%5Ccdot%20%5C%7Bc'(B%5E%7Bn-%7D)%5C%7D%5Em"> 。</li>
-<li><strong>规则</strong>：离积 <img src="https://latex.codecogs.com/png.latex?Q_i%20%3E%20K_%7Bsp%7D"> 产生沉淀；<img src="https://latex.codecogs.com/png.latex?Q_i%20%3C%20K_%7Bsp%7D"> 无沉淀（或原沉淀溶解）。</li>
-</ul>
-</section>
-<section id="沉淀的生成和溶解" class="level4">
-<h4 class="anchored" data-anchor-id="沉淀的生成和溶解">3.7.2 沉淀的生成和溶解</h4>
-<ul>
-<li><strong>溶解方法</strong>：生成弱电解质（如加酸）、生成配合物或发生氧化还原反应。</li>
-</ul>
-</section>
-<section id="分步沉淀和沉淀的转化" class="level4">
-<h4 class="anchored" data-anchor-id="分步沉淀和沉淀的转化">3.7.3 分步沉淀和沉淀的转化</h4>
-<ul>
-<li><strong>转化规律</strong>：溶解度较大的沉淀容易向溶解度更小的沉淀转化。</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="胶体" class="level3">
-<h3 class="anchored" data-anchor-id="胶体">3.8 胶体</h3>
-<section id="实质与分散体系的分类" class="level4">
-<h4 class="anchored" data-anchor-id="实质与分散体系的分类">3.8.1 实质与分散体系的分类</h4>
-<ul>
-<li><strong>核心</strong>：多相、高分散系统。</li>
-</ul>
-</section>
-<section id="胶体的性质" class="level4">
-<h4 class="anchored" data-anchor-id="胶体的性质">3.8.2 胶体的性质</h4>
-<ul>
-<li><strong>光学性质</strong>：丁铎尔效应。</li>
-<li><strong>动力性质</strong>：布朗运动。</li>
-<li><strong>电学性质</strong>：电泳和电渗。</li>
-</ul>
-</section>
-<section id="稳定性和聚沉" class="level4">
-<h4 class="anchored" data-anchor-id="稳定性和聚沉">3.8.3 稳定性和聚沉</h4>
-<ul>
-<li><strong>稳定因素</strong>：胶粒带电、水化膜保护作用、布朗运动。</li>
-<li><strong>聚沉方法</strong>：加电解质、异号溶胶混合、加热。</li>
-</ul>
-</section>
-<section id="凝胶" class="level4">
-<h4 class="anchored" data-anchor-id="凝胶">3.8.4 凝胶</h4>
-<ul>
-<li><strong>知识点</strong>：胶粒连接形成网状结构。具有触变性。</li>
-</ul>
+<section id="分子间作用力与晶体" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="分子间作用力与晶体"><span class="header-section-number">5.4</span> 分子间作用力与晶体</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><strong>范德华力</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>类型</th>
+<th>存在于</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>取向力</td>
+<td>极性分子之间</td>
+</tr>
+<tr class="even">
+<td>诱导力</td>
+<td>极性 + 非极性分子</td>
+</tr>
+<tr class="odd">
+<td>色散力</td>
+<td>所有分子间</td>
+</tr>
+</tbody>
+</table>
+<p><strong>氢键</strong>：H 与 F、O、N 结合后再与另一个 F、O、N 的孤对电子吸引，显著提高熔沸点。</p>
+</div><div class="column" style="width:45%;">
+<p><strong>晶体类型</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>晶体</th>
+<th>结合力</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>离子</td>
+<td>离子键</td>
+<td>NaCl</td>
+</tr>
+<tr class="even">
+<td>原子</td>
+<td>共价键</td>
+<td>金刚石</td>
+</tr>
+<tr class="odd">
+<td>分子</td>
+<td>范德华/氢键</td>
+<td>干冰</td>
+</tr>
+<tr class="even">
+<td>金属</td>
+<td>金属键</td>
+<td>Cu</td>
+</tr>
+<tr class="odd">
+<td>混合</td>
+<td>层内共价/层间范德华</td>
+<td>石墨</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <hr>
 </section>
 </section>
-<section id="表面活性剂" class="level3">
-<h3 class="anchored" data-anchor-id="表面活性剂">3.9 表面活性剂</h3>
-<section id="表面活性剂及其分类" class="level4">
-<h4 class="anchored" data-anchor-id="表面活性剂及其分类">3.9.1 表面活性剂及其分类</h4>
-<ul>
-<li><strong>结构</strong>：由亲水基团和疏水（亲油）基团组成。</li>
-</ul>
+<section id="无机物单质及化合物" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> 无机物单质及化合物</h1>
+<section id="元素概述" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="元素概述"><span class="header-section-number">6.1</span> 元素概述</h2>
+<p><strong>地壳中含量最高的元素</strong>：氧（48.6%）&gt; 硅（26.3%）&gt; 铝 &gt; 铁</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>存在形式</th>
+<th>特征</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>游离态</td>
+<td>以单质存在</td>
+<td>Au、Ag、Pt、稀有气体</td>
+</tr>
+<tr class="even">
+<td>化合态</td>
+<td>以化合物存在</td>
+<td>大多数金属（氧化物、硫化物、盐）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>稀土元素</strong>：镧系（15种）+ Sc + Y = 共17种</p>
+<hr>
 </section>
-<section id="基本性质" class="level4">
-<h4 class="anchored" data-anchor-id="基本性质">3.9.2 基本性质</h4>
-<ul>
-<li><strong>CMC</strong>：临界胶束浓度。当浓度超过 CMC 时，开始形成胶束，溶液性质发生突变。</li>
-</ul>
+<section id="金属冶金" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="金属冶金"><span class="header-section-number">6.2</span> 金属冶金</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>方法</th>
+<th>原理</th>
+<th>适用</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>火法冶金</td>
+<td>高温 C 或 CO 还原</td>
+<td>中等活泼金属（铁）</td>
+</tr>
+<tr class="even">
+<td>湿法冶金</td>
+<td>酸碱浸出 + 置换/电解</td>
+<td>低活泼金属</td>
+</tr>
+<tr class="odd">
+<td>电冶金</td>
+<td>电解熔融盐</td>
+<td>活泼金属（Na、Al）</td>
+</tr>
+</tbody>
+</table>
+<hr>
 </section>
-<section id="应用" class="level4">
-<h4 class="anchored" data-anchor-id="应用">3.9.3 应用</h4>
-<ul>
-<li><strong>四大作用</strong>：润湿、乳化、发泡、增溶/洗涤。</li>
-</ul>
+<section id="过渡元素及配位化合物" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="过渡元素及配位化合物"><span class="header-section-number">6.3</span> 过渡元素及配位化合物</h2>
+<p><strong>过渡元素特征</strong>：多氧化态（Mn 可呈 +2 至 +7）、颜色多样、易形成配合物</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>试剂</th>
+<th style="text-align: center;">介质</th>
+<th>产物</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="https://latex.codecogs.com/png.latex?%5Ctext%7BKMnO%7D_4"></td>
+<td style="text-align: center;">酸性</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5Ctext%7BMn%7D%5E%7B2+%7D"></td>
+</tr>
+<tr class="even">
+<td><img src="https://latex.codecogs.com/png.latex?%5Ctext%7BKMnO%7D_4"></td>
+<td style="text-align: center;">中性</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5Ctext%7BMnO%7D_2"></td>
+</tr>
+<tr class="odd">
+<td><img src="https://latex.codecogs.com/png.latex?%5Ctext%7BKMnO%7D_4"></td>
+<td style="text-align: center;">强碱性</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5Ctext%7BMnO%7D_4%5E%7B2-%7D"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>配合物稳定常数：</strong></p>
+<p><img src="https://latex.codecogs.com/png.latex?K_%7B%5Ctext%7B%E7%A8%B3%7D%7D%20=%20%5Cfrac%7Bc(%5BML_n%5D)/c%5E%7B%5Cominus%7D%7D%7B%5Bc(M)/c%5E%7B%5Cominus%7D%5D%5C,%5Bc(L)/c%5E%7B%5Cominus%7D%5D%5En%7D"></p>
+<p><strong>配合平衡移动</strong>：加入强酸（酸效应）或形成更难溶沉淀的离子会破坏配合平衡。</p>
+<hr>
+</section>
+<section id="镧系收缩与稀有气体" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="镧系收缩与稀有气体"><span class="header-section-number">6.4</span> 镧系收缩与稀有气体</h2>
+<p><strong>镧系收缩</strong>：随原子序数增加，原子及离子半径逐一缩小，导致镧系元素化学性质极其相近，分离困难。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>稀有气体用途</th>
+<th>气体</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>电弧焊接保护气</td>
+<td>Ar</td>
+</tr>
+<tr class="even">
+<td>电光源（霓虹灯）</td>
+<td>Ne、Kr</td>
+</tr>
+<tr class="odd">
+<td>超低温环境</td>
+<td>液 He</td>
+</tr>
+</tbody>
+</table>
 <hr>
 </section>
 </section>
-<section id="水和水体污染" class="level3">
-<h3 class="anchored" data-anchor-id="水和水体污染">3.10 水和水体污染</h3>
-<section id="天然水的组成" class="level4">
-<h4 class="anchored" data-anchor-id="天然水的组成">3.10.1 天然水的组成</h4>
-<ul>
-<li><strong>成分</strong>：含有 <img src="https://latex.codecogs.com/png.latex?K%5E+%E3%80%81Na%5E+%E3%80%81Ca%5E%7B2+%7D%E3%80%81Cl%5E-%E3%80%81SO_4%5E%7B2-%7D"> 等离子及溶解气体。</li>
-</ul>
+<section id="金属材料与无机非金属材料" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> 金属材料与无机非金属材料</h1>
+<section id="常见金属与合金" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="常见金属与合金"><span class="header-section-number">7.1</span> 常见金属与合金</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-8-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-1" aria-controls="tabset-8-1" aria-selected="true" href="">钢铁</a></li><li class="nav-item"><a class="nav-link" id="tabset-8-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-2" aria-controls="tabset-8-2" aria-selected="false" href="">铜合金</a></li><li class="nav-item"><a class="nav-link" id="tabset-8-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-3" aria-controls="tabset-8-3" aria-selected="false" href="">铝及铝合金</a></li><li class="nav-item"><a class="nav-link" id="tabset-8-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-4" aria-controls="tabset-8-4" aria-selected="false" href="">功能合金</a></li></ul>
+<div class="tab-content">
+<div id="tabset-8-1" class="tab-pane active" aria-labelledby="tabset-8-1-tab">
+<p><strong>主要铁矿石：</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>矿石</th>
+<th>化学式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>磁铁矿</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5Ctext%7BFeO%C2%B7Fe%7D_2%5Ctext%7BO%7D_3"></td>
+</tr>
+<tr class="even">
+<td>赤铁矿</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5Ctext%7BFe%7D_2%5Ctext%7BO%7D_3"></td>
+</tr>
+<tr class="odd">
+<td>黄铁矿</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5Ctext%7BFeS%7D_2"></td>
+</tr>
+<tr class="even">
+<td>菱铁矿</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5Ctext%7BFeCO%7D_3"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>铁碳合金分类：</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">含碳量</th>
+<th>特性</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>生铁</td>
+<td style="text-align: center;">3%～4%</td>
+<td>硬脆，耐压耐磨</td>
+</tr>
+<tr class="even">
+<td>钢</td>
+<td style="text-align: center;">0.03%～2%</td>
+<td>综合力学性能好</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tabset-8-2" class="tab-pane" aria-labelledby="tabset-8-2-tab">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>合金</th>
+<th>组成</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>黄铜</td>
+<td>Cu-Zn（锌 10%~40%）</td>
+<td>力学性能好，抗腐蚀</td>
+</tr>
+<tr class="even">
+<td>青铜</td>
+<td>Cu 基（非 Zn/Ni）</td>
+<td>包括锡青铜、铝青铜等</td>
+</tr>
+</tbody>
+</table>
+<p>纯铜：红紫色，导电性仅次于银。</p>
+</div>
+<div id="tabset-8-3" class="tab-pane" aria-labelledby="tabset-8-3-tab">
+<p>铝是地壳中<strong>含量最丰富的金属元素</strong>，表面易形成致密氧化膜，抗腐蚀性强。</p>
+<p><strong>刚玉</strong>（<img src="https://latex.codecogs.com/png.latex?%5Calpha%5Ctext%7B-Al%7D_2%5Ctext%7BO%7D_3">）：硬度仅次于金刚石</p>
+<p><strong>铝合金</strong>：硬铝、超硬铝、铝镁合金，广泛用于航空、机械、船舶</p>
+</div>
+<div id="tabset-8-4" class="tab-pane" aria-labelledby="tabset-8-4-tab">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>材料</th>
+<th>特性</th>
+<th>典型</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>记忆合金</td>
+<td>特定温度下恢复初始形状</td>
+<td>TiNi 合金</td>
+</tr>
+<tr class="even">
+<td>储氢合金</td>
+<td>可逆大量吸/释放 <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BH%7D_2"></td>
+<td><img src="https://latex.codecogs.com/png.latex?%5Ctext%7BLaNi%7D_5"></td>
+</tr>
+</tbody>
+</table>
+<p>储氢合金组成：放热型金属 A（La、Ti、Mg）+ 催化活性金属 B（Ni、Co、Fe）</p>
+</div>
+</div>
+</div>
+<hr>
 </section>
-<section id="水体污染" class="level4">
-<h4 class="anchored" data-anchor-id="水体污染">3.10.2 水体污染</h4>
+<section id="新型无机非金属材料" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="新型无机非金属材料"><span class="header-section-number">7.2</span> 新型无机非金属材料</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-9-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-1" aria-controls="tabset-9-1" aria-selected="true" href="">光导纤维</a></li><li class="nav-item"><a class="nav-link" id="tabset-9-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-2" aria-controls="tabset-9-2" aria-selected="false" href="">超导材料</a></li><li class="nav-item"><a class="nav-link" id="tabset-9-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-3" aria-controls="tabset-9-3" aria-selected="false" href="">生物陶瓷</a></li><li class="nav-item"><a class="nav-link" id="tabset-9-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-4" aria-controls="tabset-9-4" aria-selected="false" href="">压电与光电</a></li></ul>
+<div class="tab-content">
+<div id="tabset-9-1" class="tab-pane active" aria-labelledby="tabset-9-1-tab">
+<p>内芯折射率 &gt; 外套，利用全内反射传输信号。</p>
+</div>
+<div id="tabset-9-2" class="tab-pane" aria-labelledby="tabset-9-2-tab">
 <ul>
-<li><strong>核心指标</strong>：
+<li>核心特性：<strong>零电阻 + 抗磁性</strong></li>
+<li>临界温度 <img src="https://latex.codecogs.com/png.latex?T_c">：进入超导态的温度</li>
+<li>分类：低温超导 / 高温超导（如钇钡铜氧陶瓷）</li>
+</ul>
+</div>
+<div id="tabset-9-3" class="tab-pane" aria-labelledby="tabset-9-3-tab">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>类型</th>
+<th>示例</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>惰性</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5Ctext%7BAl%7D_2%5Ctext%7BO%7D_3">、<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BZrO%7D_2"></td>
+<td>人工关节</td>
+</tr>
+<tr class="even">
+<td>活性</td>
+<td>羟基磷灰石</td>
+<td>与骨形成化学键合</td>
+</tr>
+<tr class="odd">
+<td>可吸收</td>
+<td>磷酸三钙</td>
+<td>体内降解诱导新骨</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tabset-9-4" class="tab-pane" aria-labelledby="tabset-9-4-tab">
+<p><strong>压电效应</strong>：压力 → 电荷（量与压力成正比）；<strong>逆压电效应</strong>：电场 → 形变</p>
+<p>应用：点火器、声纳、超声成像</p>
+<p><strong>光电效应</strong>：光照 → 电导率变化或电动势</p>
+<p>应用：LED、光电传感器、太阳能电池</p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="建筑胶凝材料" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="建筑胶凝材料"><span class="header-section-number">7.3</span> 建筑胶凝材料</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-10-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-1" aria-controls="tabset-10-1" aria-selected="true" href="">石灰</a></li><li class="nav-item"><a class="nav-link" id="tabset-10-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-2" aria-controls="tabset-10-2" aria-selected="false" href="">石膏</a></li><li class="nav-item"><a class="nav-link" id="tabset-10-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-3" aria-controls="tabset-10-3" aria-selected="false" href="">水泥</a></li><li class="nav-item"><a class="nav-link" id="tabset-10-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-4" aria-controls="tabset-10-4" aria-selected="false" href="">腐蚀与防护</a></li></ul>
+<div class="tab-content">
+<div id="tabset-10-1" class="tab-pane active" aria-labelledby="tabset-10-1-tab">
+<p><img src="https://latex.codecogs.com/png.latex?%5Ctext%7BCaCO%7D_3%20%5Cxrightarrow%7B900%5Csim1100%5E%5Ccirc%5Ctext%7BC%7D%7D%20%5Ctext%7BCaO%7D%20+%20%5Ctext%7BCO%7D_2%5Cuparrow"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Ctext%7BCaO%7D%20+%20%5Ctext%7BH%7D_2%5Ctext%7BO%7D%20%5Crightarrow%20%5Ctext%7BCa(OH)%7D_2%20%5Cquad%20%5CDelta_rH_m%20=%20-64.9%5Ctext%7B%20kJ/mol%7D"></p>
+<p>碳化（硬化）：<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BCa(OH)%7D_2%20+%20%5Ctext%7BCO%7D_2%20+%20n%5Ctext%7BH%7D_2%5Ctext%7BO%7D%20%5Crightarrow%20%5Ctext%7BCaCO%7D_3%20+%20(n+1)%5Ctext%7BH%7D_2%5Ctext%7BO%7D"></p>
+</div>
+<div id="tabset-10-2" class="tab-pane" aria-labelledby="tabset-10-2-tab">
+<p><img src="https://latex.codecogs.com/png.latex?%5Ctext%7BCaSO%7D_4%5Ccdot%5Ctfrac%7B1%7D%7B2%7D%5Ctext%7BH%7D_2%5Ctext%7BO%7D%20+%20%5Ctfrac%7B3%7D%7B2%7D%5Ctext%7BH%7D_2%5Ctext%7BO%7D%20%5Crightarrow%20%5Ctext%7BCaSO%7D_4%5Ccdot2%5Ctext%7BH%7D_2%5Ctext%7BO%7D"></p>
+</div>
+<div id="tabset-10-3" class="tab-pane" aria-labelledby="tabset-10-3-tab">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">简写</th>
+<th>成分</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?C_3S"></td>
+<td><img src="https://latex.codecogs.com/png.latex?3%5Ctext%7BCaO%C2%B7SiO%7D_2"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?C_2S"></td>
+<td><img src="https://latex.codecogs.com/png.latex?2%5Ctext%7BCaO%C2%B7SiO%7D_2"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?C_3A"></td>
+<td><img src="https://latex.codecogs.com/png.latex?3%5Ctext%7BCaO%C2%B7Al%7D_2%5Ctext%7BO%7D_3"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?C_4AF"></td>
+<td><img src="https://latex.codecogs.com/png.latex?4%5Ctext%7BCaO%C2%B7Al%7D_2%5Ctext%7BO%7D_3%5Ctext%7B%C2%B7Fe%7D_2%5Ctext%7BO%7D_3"></td>
+</tr>
+</tbody>
+</table>
+<p>石膏作用：调节凝结时间，防止”闪凝”。</p>
+</div>
+<div id="tabset-10-4" class="tab-pane" aria-labelledby="tabset-10-4-tab">
+<p><strong>腐蚀类型</strong>：溶解腐蚀（软水溶解 <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BCa(OH)%7D_2">）、盐类腐蚀（硫酸盐/镁盐膨胀）、碳化（<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BCO%7D_2"> 降低 pH，破坏钢筋钝化膜）</p>
+<p><strong>防护</strong>：提高密实度、涂保护层、电化学保护（牺牲阳极法）</p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="有机化学和有机化合物" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> 有机化学和有机化合物</h1>
+<section id="有机化合物概述" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="有机化合物概述"><span class="header-section-number">8.1</span> 有机化合物概述</h2>
+<p><strong>有机物特点</strong>：以碳为基础，共价键成链/环，熔沸点低，难溶于水，易燃，反应慢且多副反应。</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-11-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-11-1" aria-controls="tabset-11-1" aria-selected="true" href="">按碳骨架分类</a></li><li class="nav-item"><a class="nav-link" id="tabset-11-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-11-2" aria-controls="tabset-11-2" aria-selected="false" href="">命名规则</a></li><li class="nav-item"><a class="nav-link" id="tabset-11-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-11-3" aria-controls="tabset-11-3" aria-selected="false" href="">同分异构体</a></li></ul>
+<div class="tab-content">
+<div id="tabset-11-1" class="tab-pane active" aria-labelledby="tabset-11-1-tab">
 <ol type="1">
-<li><strong>SS</strong>：悬浮固体。</li>
-<li><strong>BOD</strong>：生化需氧量。</li>
-<li><strong>COD</strong>：化学需氧量。</li>
-<li><strong>TOC</strong>：总有机碳。</li>
-</ol></li>
-</ul>
+<li><strong>开链化合物</strong>（脂肪族）：链状</li>
+<li><strong>碳环化合物</strong>：脂环 / 芳香族</li>
+<li><strong>杂环化合物</strong>：环中含 O、N、S 等杂原子</li>
+</ol>
+</div>
+<div id="tabset-11-2" class="tab-pane" aria-labelledby="tabset-11-2-tab">
+<p><strong>烷烃</strong>： 1. 选含取代基最多、最长的碳链为主链 2. 从靠近取代基端编号 3. 取代基从小到大排序，数字间用”,“，数字与汉字间用”-”</p>
+<p><strong>烯/炔烃</strong>：主链须含双键/三键，从靠近多重键端编号</p>
+<p><strong>芳烃</strong>：以苯环为母体，用邻/间/对或 1,2-/1,3-/1,4-</p>
+</div>
+<div id="tabset-11-3" class="tab-pane" aria-labelledby="tabset-11-3-tab">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>类型</th>
+<th>子类</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>构造异构</td>
+<td>碳链异构、位置异构、官能团异构</td>
+</tr>
+<tr class="even">
+<td>立体异构</td>
+<td>构象异构、构型异构</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<hr>
 </section>
-<section id="污水的处理" class="level4">
-<h4 class="anchored" data-anchor-id="污水的处理">3.10.3 污水的处理</h4>
-<ul>
-<li><strong>三级处理</strong>：物理处理（筛滤、沉淀）、化学处理（中和、混凝、电解）、生物处理（利用微生物降解）。</li>
-</ul>
+<section id="重要有机反应类型" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="重要有机反应类型"><span class="header-section-number">8.2</span> 重要有机反应类型</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>反应</th>
+<th>特征</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>取代反应</td>
+<td>原子/基团被替换</td>
+<td>烷烃卤代、酯化</td>
+</tr>
+<tr class="even">
+<td>加成反应</td>
+<td>不饱和键打开</td>
+<td>烯烃加氢</td>
+</tr>
+<tr class="odd">
+<td>消去反应</td>
+<td>脱小分子形成不饱和键</td>
+<td>醇脱水成烯</td>
+</tr>
+<tr class="even">
+<td>聚合反应</td>
+<td>加聚（无副产物）/ 缩聚（有小分子副产物）</td>
+<td>PE 合成、尼龙</td>
+</tr>
+</tbody>
+</table>
+<hr>
 </section>
-</section>
-</section>
-<section id="氧化还原与电化学" class="level1">
-<h1>氧化还原与电化学</h1>
-<section id="氧化还原反应的基本概念" class="level3">
-<h3 class="anchored" data-anchor-id="氧化还原反应的基本概念">4.1 氧化还原反应的基本概念</h3>
-<ul>
-<li><strong>氧化还原反应的实质</strong>：电子的得失或偏移 。</li>
-</ul>
-<section id="氧化和还原" class="level4">
-<h4 class="anchored" data-anchor-id="氧化和还原">4.1.1 氧化和还原</h4>
-<ul>
-<li><strong>氧化（Oxidation）</strong>：物质失去电子的作用 。</li>
-<li><strong>还原（Reduction）</strong>：物质获得电子的作用 。</li>
-<li><strong>氧化剂与还原剂</strong>：氧化剂在反应中得电子，自身被还原；还原剂在反应中失电子，自身被氧化 。</li>
-<li><strong>氧化还原半反应</strong>：任何氧化还原反应都可拆分为氧化半反应和还原半反应，电子得失数必须相等 。</li>
-</ul>
-</section>
-<section id="氧化数" class="level4">
-<h4 class="anchored" data-anchor-id="氧化数">4.1.2 氧化数</h4>
-<ul>
-<li><strong>氧化数（Oxidation Number）</strong>：指某元素一个原子的表观核电荷数 。</li>
-<li><strong>氧化数规则</strong>：
+<section id="各类有机物性质" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="各类有机物性质"><span class="header-section-number">8.3</span> 各类有机物性质</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-12-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-12-1" aria-controls="tabset-12-1" aria-selected="true" href="">烃</a></li><li class="nav-item"><a class="nav-link" id="tabset-12-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-12-2" aria-controls="tabset-12-2" aria-selected="false" href="">含氧化合物</a></li><li class="nav-item"><a class="nav-link" id="tabset-12-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-12-3" aria-controls="tabset-12-3" aria-selected="false" href="">卤代烃</a></li></ul>
+<div class="tab-content">
+<div id="tabset-12-1" class="tab-pane active" aria-labelledby="tabset-12-1-tab">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>类别</th>
+<th style="text-align: center;">杂化</th>
+<th>特征反应</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>烷烃</td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?sp%5E3"></td>
+<td>卤代（取代），化学性质稳定</td>
+</tr>
+<tr class="even">
+<td>烯烃</td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?sp%5E2"></td>
+<td>亲电加成（马氏规则），顺反异构</td>
+</tr>
+<tr class="odd">
+<td>炔烃</td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?sp"></td>
+<td>亲电加成；末端炔烃有弱酸性</td>
+</tr>
+<tr class="even">
+<td>芳烃</td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?sp%5E2"></td>
+<td>亲电取代（卤代、硝化、磺化、傅-克），难加成</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tabset-12-2" class="tab-pane" aria-labelledby="tabset-12-2-tab">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>类别</th>
+<th>特征</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>醇</td>
+<td>分子间氢键，沸点高；脱水成烯/醚；伯醇→醛→酸，仲醇→酮</td>
+</tr>
+<tr class="even">
+<td>酚</td>
+<td><img src="https://latex.codecogs.com/png.latex?p%5Ctext%7B-%7D%5Cpi"> 共轭，酸性强于醇；与 <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BFeCl%7D_3"> 显紫色</td>
+</tr>
+<tr class="odd">
+<td>醛</td>
+<td>亲核加成（HCN、NaHSO₃、醇）；银镜反应；费林反应（砖红色）</td>
+</tr>
+<tr class="even">
+<td>酮</td>
+<td>亲核加成；通常不发生银镜/费林反应</td>
+</tr>
+<tr class="odd">
+<td>羧酸</td>
+<td>酸性 &gt; 酚 &gt; 碳酸；生成酰卤、酸酐、酯、酰胺</td>
+</tr>
+<tr class="even">
+<td>酯</td>
+<td>酸性水解（可逆）；碱性水解（皂化，不可逆）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tabset-12-3" class="tab-pane" aria-labelledby="tabset-12-3-tab">
 <ol type="1">
-<li>单质中原子氧化数为零 。</li>
-<li>中性分子中各原子氧化数代数和为零；离子的氧化数代数和等于其电荷数 。</li>
-<li>氢在化合物中通常为+1（活泼金属氢化物中为-1）；氧通常为-2（过氧化物中为-1） 。</li>
-</ol></li>
-<li><strong>判断依据</strong>：氧化数升高的过程称为氧化，氧化数降低的过程称为还原 。</li>
-</ul>
+<li><strong>亲核取代</strong>：水解→醇，氨解→胺，氰解→增长碳链</li>
+<li><strong>消去反应</strong>：碱性醇溶液中 → 烯烃</li>
+<li><strong>格氏试剂</strong>：<img src="https://latex.codecogs.com/png.latex?R%5Ctext%7B-%7DX%20+%20%5Ctext%7BMg%7D%20%5Cxrightarrow%7B%5Ctext%7B%E6%97%A0%E6%B0%B4%E4%B9%99%E9%86%9A%7D%7D%20%5Ctext%7BRMgX%7D"></li>
+</ol>
+</div>
+</div>
+</div>
+<p><strong>偶极矩</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cmu%20=%20q%20%5Ccdot%20l">（衡量分子极性，单位 <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BC%C2%B7m%7D">）</p>
 <hr>
 </section>
 </section>
-<section id="原电池" class="level3">
-<h3 class="anchored" data-anchor-id="原电池">4.2 原电池</h3>
-<ul>
-<li><strong>定义</strong>：将化学能转变为电能的装置 。</li>
-</ul>
-<section id="原电池-1" class="level4">
-<h4 class="anchored" data-anchor-id="原电池-1">4.2.1 原电池</h4>
-<ul>
-<li><strong>组成</strong>：由两个半电池（电极）和盐桥组成 。</li>
-<li><strong>正负极判定</strong>：电子流出的电极称为<strong>负极</strong>（发生氧化反应），电子流入的电极称为<strong>正极</strong>（发生还原反应） 。</li>
-<li><strong>电池符号书写</strong>：
-<ul>
-<li>通常负极在左，正极在右，用“|”表示相界面，“||”表示盐桥 。</li>
-<li>例如：<img src="https://latex.codecogs.com/png.latex?(-)%5Ctext%7BZn%7D%20%7C%20%5Ctext%7BZn%7D%5E%7B2+%7D(c_1)%20%7C%7C%20%5Ctext%7BCu%7D%5E%7B2+%7D(c_2)%20%7C%20%5Ctext%7BCu%7D(+)"> 。</li>
-</ul></li>
-</ul>
-</section>
-<section id="原电池的能量变化" class="level4">
-<h4 class="anchored" data-anchor-id="原电池的能量变化">4.2.2 原电池的能量变化</h4>
-<ul>
-<li><strong>吉布斯自由能变（<img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m">）与电动势（<img src="https://latex.codecogs.com/png.latex?E">）的关系</strong>： <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%20=%20-nFE">
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?n">：反应中转移的电子数 。</li>
-<li><img src="https://latex.codecogs.com/png.latex?F">：法拉第常数（约 <img src="https://latex.codecogs.com/png.latex?96500%20%5Ctext%7B%20C%7D%5Ccdot%5Ctext%7Bmol%7D%5E%7B-1%7D">） 。</li>
-<li><img src="https://latex.codecogs.com/png.latex?E">：原电池的电动势（单位 V） 。</li>
-</ul></li>
-<li><strong>标准状态下</strong>：<img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20G_m%5E%5Cominus%20=%20-nFE%5E%5Cominus"> 。</li>
-<li><strong>电池反应的能斯特（Nernst）方程</strong>： <img src="https://latex.codecogs.com/png.latex?E%20=%20E%5E%5Cominus%20-%20%5Cfrac%7BRT%7D%7BnF%7D%20%5Cln%20Q">
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?Q">：反应商 。</li>
-<li>在 <img src="https://latex.codecogs.com/png.latex?298.15%5Ctext%7B%20K%7D"> 时，常用对数简式为：<img src="https://latex.codecogs.com/png.latex?E%20=%20E%5E%5Cominus%20-%20%5Cfrac%7B0.0592%7D%7Bn%7D%20%5Clg%20Q"> 。</li>
-</ul></li>
-<li><strong>标准平衡常数（<img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus">）与标准电动势（<img src="https://latex.codecogs.com/png.latex?E%5E%5Cominus">）的关系</strong>： <img src="https://latex.codecogs.com/png.latex?E=0,%5C;%5Clg%20K%5E%5Cominus%20=%20%5Cfrac%7BnE%5E%5Cominus%7D%7B0.0592%7D"></li>
-</ul>
+<section id="合成高分子材料" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> 合成高分子材料</h1>
+<section id="基本概念-1" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="基本概念-1"><span class="header-section-number">9.1</span> 基本概念</h2>
+<p><strong>高分子化合物</strong>：相对分子质量 <img src="https://latex.codecogs.com/png.latex?%3E%2010%5E4">，主要以共价键结合。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>术语</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>单体</td>
+<td>能聚合的低分子化合物</td>
+</tr>
+<tr class="even">
+<td>结构单元（链节）</td>
+<td>链中重复出现的最小单位</td>
+</tr>
+<tr class="odd">
+<td>聚合度 <img src="https://latex.codecogs.com/png.latex?%5Cchi">（或 <img src="https://latex.codecogs.com/png.latex?P">）</td>
+<td>链节数目</td>
+</tr>
+</tbody>
+</table>
+<p><strong>基本特点</strong>：多分散性（平均相对分子质量）、无气态、独特弹性/塑性/绝缘性</p>
 <hr>
 </section>
-</section>
-<section id="电极电势" class="level3">
-<h3 class="anchored" data-anchor-id="电极电势">4.3 电极电势</h3>
-<section id="标准电极电势" class="level4">
-<h4 class="anchored" data-anchor-id="标准电极电势">4.3.1 标准电极电势</h4>
-<ul>
-<li><strong>双电层理论</strong>：金属浸入溶液时，由于金属离子溶解和溶液中离子沉积达到平衡，在金属表面与溶液界面形成电势差 。</li>
-<li><strong>计算公式</strong>：<img src="https://latex.codecogs.com/png.latex?E%20=%20%5Cphi(%5Ctext%7B%E6%AD%A3%E6%9E%81%7D)%20-%20%5Cphi(%5Ctext%7B%E8%B4%9F%E6%9E%81%7D)"> 。
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cphi">：电极电势 。</li>
-</ul></li>
-</ul>
-</section>
-<section id="标准氢电极" class="level4">
-<h4 class="anchored" data-anchor-id="标准氢电极">4.3.2 标准氢电极</h4>
-<ul>
-<li><strong>定义</strong>：规定在标准状态下，标准氢电极的电极电势为零（<img src="https://latex.codecogs.com/png.latex?0.0000%5Ctext%7B%20V%7D">） 。</li>
-<li><strong>符号</strong>：<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPt%7D%20%7C%20%5Ctext%7BH%7D_2(100%5Ctext%7B%20kPa%7D)%20%7C%20%5Ctext%7BH%7D%5E+(1%5Ctext%7B%20mol%7D%5Ccdot%5Ctext%7BL%7D%5E%7B-1%7D)"> 。</li>
-</ul>
-</section>
-<section id="参比电极" class="level4">
-<h4 class="anchored" data-anchor-id="参比电极">4.3.3 参比电极</h4>
-<ul>
-<li><strong>常用电极</strong>：甘汞电极和氯化银电极，其电势稳定且易于制备 。</li>
-</ul>
-</section>
-<section id="标准电极电势表" class="level4">
-<h4 class="anchored" data-anchor-id="标准电极电势表">4.3.4 标准电极电势表</h4>
-<ul>
-<li><strong>意义</strong>：表中 <img src="https://latex.codecogs.com/png.latex?%5Cphi%5E%5Cominus"> 值越大，该电对氧化型物质的氧化能力越强；<img src="https://latex.codecogs.com/png.latex?%5Cphi%5E%5Cominus"> 值越小，还原型物质的还原能力越强 。</li>
-</ul>
-</section>
-<section id="能斯特方程及电极电势的应用" class="level4">
-<h4 class="anchored" data-anchor-id="能斯特方程及电极电势的应用">4.3.5 能斯特方程及电极电势的应用</h4>
-<ul>
-<li><strong>电极电势的能斯特方程</strong>： 对于半反应 <img src="https://latex.codecogs.com/png.latex?a%5Ctext%7BA(%E6%B0%A7%E5%8C%96%E6%80%81)%7D%20+%20ne%5E-%20%5Crightleftharpoons%20b%5Ctext%7BB(%E8%BF%98%E5%8E%9F%E6%80%81)%7D">： <img src="https://latex.codecogs.com/png.latex?%5Cphi%20=%20%5Cphi%5E%5Cominus%20+%20%5Cfrac%7B0.0592%7D%7Bn%7D%20%5Clg%20%5Cfrac%7B%5C%7Bc(%5Ctext%7B%E6%B0%A7%E5%8C%96%E6%80%81%7D)/c%5E%5Cominus%5C%7D%5Ea%7D%7B%5C%7Bc(%5Ctext%7B%E8%BF%98%E5%8E%9F%E6%80%81%7D)/c%5E%5Cominus%5C%7D%5Eb%7D"></li>
-<li><strong>应用</strong>：
-<ol type="1">
-<li><strong>比较氧化剂和还原剂的相对强弱</strong>：电势高的氧化能力强，电势低的还原能力强 。</li>
-<li><strong>判断氧化还原反应进行的方向</strong>：只要 <img src="https://latex.codecogs.com/png.latex?E%20%3E%200">（即 <img src="https://latex.codecogs.com/png.latex?%5Cphi_%7B%5Ctext%7B%E6%B0%A7%E5%8C%96%E5%89%82%7D%7D%20%3E%20%5Cphi_%7B%5Ctext%7B%E8%BF%98%E5%8E%9F%E5%89%82%7D%7D">），反应即可自发正向进行 。</li>
-<li><strong>判断氧化还原反应进行的程度</strong>：通过 <img src="https://latex.codecogs.com/png.latex?E%5E%5Cominus"> 计算 <img src="https://latex.codecogs.com/png.latex?K%5E%5Cominus"> 。</li>
-</ol></li>
-</ul>
+<section id="合成反应" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="合成反应"><span class="header-section-number">9.2</span> 合成反应</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="加聚 vs 缩聚">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>加聚 vs 缩聚
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 45%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>加聚反应</th>
+<th>缩聚反应</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>副产物</td>
+<td>无</td>
+<td>有（<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BH%7D_2%5Ctext%7BO%7D">、<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BNH%7D_3"> 等）</td>
+</tr>
+<tr class="even">
+<td>组成</td>
+<td>高聚物与单体相同</td>
+<td>高聚物与单体不同</td>
+</tr>
+<tr class="odd">
+<td>示例</td>
+<td><img src="https://latex.codecogs.com/png.latex?n%5Ctext%7BCH%7D_2%7B=%7D%5Ctext%7BCH%7D_2%20%5Cto%20%5B%5Ctext%7BCH%7D_2%5Ctext%7B-CH%7D_2%5D_n"></td>
+<td>尼龙-66</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <hr>
 </section>
-</section>
-<section id="化学电源" class="level3">
-<h3 class="anchored" data-anchor-id="化学电源">4.4 化学电源</h3>
-<section id="一次电池" class="level4">
-<h4 class="anchored" data-anchor-id="一次电池">4.4.1 一次电池</h4>
-<ul>
-<li><strong>特点</strong>：放电后不能再充电复原，如锌锰干电池、锌汞纽扣电池 。</li>
-</ul>
-</section>
-<section id="二次电池" class="level4">
-<h4 class="anchored" data-anchor-id="二次电池">4.4.2 二次电池</h4>
-<ul>
-<li><strong>特点</strong>：可充电重复使用，如铅蓄电池、镍镉电池、镍氢电池、锂离子电池 。</li>
-<li><strong>铅蓄电池反应</strong>：<img src="https://latex.codecogs.com/png.latex?Pb%20+%20PbO_2%20+%202H_2SO_4%20%5Crightleftharpoons%202PbSO_4%20+%202H_2O"> 。</li>
-</ul>
-</section>
-<section id="燃料电池" class="level4">
-<h4 class="anchored" data-anchor-id="燃料电池">4.4.3 燃料电池</h4>
-<ul>
-<li><strong>特点</strong>：连续将燃料氧化产生的化学能转化为电能，如氢氧燃料电池 。</li>
-</ul>
+<section id="结构与性能" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="结构与性能"><span class="header-section-number">9.3</span> 结构与性能</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>结构类型</th>
+<th>热学性质</th>
+<th>溶解性</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>线型结构</td>
+<td>热塑性</td>
+<td>可溶</td>
+</tr>
+<tr class="even">
+<td>支链型结构</td>
+<td>热塑性</td>
+<td>可溶</td>
+</tr>
+<tr class="odd">
+<td>体型（网状）</td>
+<td>热固性</td>
+<td>不溶（只溶胀）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>老化</strong>：光、热、氧导致裂解（链断裂）或交联（链变性）。</p>
 <hr>
 </section>
-</section>
-<section id="电解" class="level3">
-<h3 class="anchored" data-anchor-id="电解">4.5 电解</h3>
-<section id="电解原理" class="level4">
-<h4 class="anchored" data-anchor-id="电解原理">4.5.1 电解原理</h4>
-<ul>
-<li><strong>定义</strong>：将电能转化为化学能的装置 。</li>
-<li><strong>电极反应</strong>：阴极接电源负极，发生还原反应；阳极接电源正极，发生氧化反应 。</li>
-</ul>
-</section>
-<section id="电解的应用" class="level4">
-<h4 class="anchored" data-anchor-id="电解的应用">4.5.2 电解的应用</h4>
-<ul>
-<li><strong>领域</strong>：化工制备（如烧碱）、电解提纯、电镀、阳极氧化、电刷镀 。</li>
-</ul>
+<section id="三大合成高分子材料" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="三大合成高分子材料"><span class="header-section-number">9.4</span> 三大合成高分子材料</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-13-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-13-1" aria-controls="tabset-13-1" aria-selected="true" href="">塑料</a></li><li class="nav-item"><a class="nav-link" id="tabset-13-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-13-2" aria-controls="tabset-13-2" aria-selected="false" href="">合成橡胶</a></li><li class="nav-item"><a class="nav-link" id="tabset-13-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-13-3" aria-controls="tabset-13-3" aria-selected="false" href="">纤维</a></li></ul>
+<div class="tab-content">
+<div id="tabset-13-1" class="tab-pane active" aria-labelledby="tabset-13-1-tab">
+<p><strong>通用塑料</strong>：PE、PP、PVC、PS、ABS（产量大，价格低）</p>
+<p><strong>工程塑料</strong>：PA（尼龙）、PC（聚碳酸酯）；特种型：PPS、PEEK</p>
+</div>
+<div id="tabset-13-2" class="tab-pane" aria-labelledby="tabset-13-2-tab">
+<p>高弹性高聚物，经<strong>硫化</strong>（线型→网状）提高强度。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>品种</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>丁苯橡胶（SBR）</td>
+<td>产量最大</td>
+</tr>
+<tr class="even">
+<td>丁腈橡胶（NBR）</td>
+<td>耐油</td>
+</tr>
+<tr class="odd">
+<td>硅橡胶（SR）</td>
+<td>耐高低温</td>
+</tr>
+<tr class="even">
+<td>顺丁橡胶（BR）</td>
+<td>综合性能好</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tabset-13-3" class="tab-pane" aria-labelledby="tabset-13-3-tab">
+<p>长径比 <img src="https://latex.codecogs.com/png.latex?%3E%201000:1">，结晶能力强，熔点高。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>名称</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>涤纶（聚酯）</td>
+<td>挺括不皱，易洗快干</td>
+</tr>
+<tr class="even">
+<td>尼龙（聚酰胺）</td>
+<td>耐磨，韧性极优</td>
+</tr>
+<tr class="odd">
+<td>腈纶（聚丙烯腈）</td>
+<td>蓬松保暖，“合成羊毛”</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 <hr>
 </section>
-</section>
-<section id="金属腐蚀" class="level3">
-<h3 class="anchored" data-anchor-id="金属腐蚀">4.6 金属腐蚀</h3>
-<section id="腐蚀的分类" class="level4">
-<h4 class="anchored" data-anchor-id="腐蚀的分类">4.6.1 腐蚀的分类</h4>
-<ul>
-<li><strong>化学腐蚀</strong>：单纯化学作用引起的破坏，如金属的高温脱碳 。</li>
-<li><strong>电化学腐蚀</strong>：由于形成原电池引起的腐蚀，分为：
-<ol type="1">
-<li><strong>析氢腐蚀</strong>：酸性介质中阴极析出氢气 。</li>
-<li><strong>吸氧腐蚀</strong>：中性或弱碱性介质中，氧在阴极被还原，是金属在大气中最常见的腐蚀类型 。</li>
-</ol></li>
-</ul>
-</section>
-<section id="金属腐蚀的防护" class="level4">
-<h4 class="anchored" data-anchor-id="金属腐蚀的防护">4.6.2 金属腐蚀的防护</h4>
-<ul>
-<li><strong>方法</strong>：
-<ol type="1">
-<li><strong>改变介质性质</strong>：如加缓蚀剂 。</li>
-<li><strong>表面覆盖保护层</strong>：如电镀、刷漆 。</li>
-<li><strong>电化学保护</strong>：
-<ul>
-<li><strong>牺牲阳极保护法</strong>：连接更活泼的金属作负极 。</li>
-<li><strong>外加电流保护法</strong>：将被保护金属与外加直流电源负极相连 。</li>
-</ul></li>
-</ol></li>
-</ul>
-</section>
-</section>
-</section>
-<section id="物质结构基础" class="level1">
-<h1>物质结构基础</h1>
-<section id="核外电子的运动状态" class="level3">
-<h3 class="anchored" data-anchor-id="核外电子的运动状态">5.1 核外电子的运动状态</h3>
-<section id="核外电子运动的量子化特性" class="level4">
-<h4 class="anchored" data-anchor-id="核外电子运动的量子化特性">5.1.1 核外电子运动的量子化特性</h4>
-<ul>
-<li><strong>氢原子光谱</strong>：是不连续的线状光谱，反映了原子内部能量的量子化 。</li>
-<li><strong>玻尔（Bohr）原子模型理论</strong>：
-<ul>
-<li><strong>核心假设</strong>：电子在固定轨道运动不辐射能量；轨道和能量是量子化的 。</li>
-<li><strong>氢原子能级公式</strong>： <img src="https://latex.codecogs.com/png.latex?E_n%20=%20-%5Cfrac%7BR_H%7D%7Bn%5E2%7D%20%5Cquad%20%5Ctext%7B%E6%88%96%7D%20%5Cquad%20E_n%20=%20-%5Cfrac%7B13.6%7D%7Bn%5E2%7D%20%5Ctext%7B%20(eV)%7D">
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?E_n">：第 <img src="https://latex.codecogs.com/png.latex?n"> 个能级的能量；</li>
-<li><img src="https://latex.codecogs.com/png.latex?R_H">：里德堡常数（<img src="https://latex.codecogs.com/png.latex?2.179%20%5Ctimes%2010%5E%7B-18%7D%20%5Ctext%7B%20J%7D">）；</li>
-<li><img src="https://latex.codecogs.com/png.latex?n">：主量子数（<img src="https://latex.codecogs.com/png.latex?1,%202,%203,%20%5Cdots">）。</li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
-<section id="核外电子运动的波粒二象性" class="level4">
-<h4 class="anchored" data-anchor-id="核外电子运动的波粒二象性">5.1.2 核外电子运动的波粒二象性</h4>
-<ul>
-<li><strong>德布罗意（de Broglie）关系式</strong>： <img src="https://latex.codecogs.com/png.latex?%5Clambda%20=%20%5Cfrac%7Bh%7D%7Bp%7D%20=%20%5Cfrac%7Bh%7D%7Bmv%7D">
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?%5Clambda">：微观粒子的波长；</li>
-<li><img src="https://latex.codecogs.com/png.latex?h">：普朗克常数；</li>
-<li><img src="https://latex.codecogs.com/png.latex?m">、<img src="https://latex.codecogs.com/png.latex?v">、<img src="https://latex.codecogs.com/png.latex?p">：粒子的质量、运动速度和动量。</li>
-</ul></li>
-<li><strong>海森堡（Heisenberg）不确定原理</strong>：微观粒子的位置和动量不能同时准确测定 。</li>
-</ul>
-</section>
-<section id="核外电子运动状态的描述" class="level4">
-<h4 class="anchored" data-anchor-id="核外电子运动状态的描述">5.1.3 核外电子运动状态的描述</h4>
-<ul>
-<li><strong>薛定谔方程</strong>：描述电子运动规律的波动方程，其解为波函数 <img src="https://latex.codecogs.com/png.latex?%5Cpsi">（即原子轨道） 。</li>
-<li><strong>四个量子数</strong>：
-<ol type="1">
-<li><strong>主量子数 (<img src="https://latex.codecogs.com/png.latex?n">)</strong>：决定电子能级高低和轨道大小 (<img src="https://latex.codecogs.com/png.latex?1,%202,%203,%20%5Cdots">) 。</li>
-<li><strong>角量子数 (<img src="https://latex.codecogs.com/png.latex?l">)</strong>：决定原子轨道的形状 (<img src="https://latex.codecogs.com/png.latex?0,%201,%20%5Cdots,%20n-1">)。分别对应 <img src="https://latex.codecogs.com/png.latex?s,%20p,%20d,%20f"> 等轨道 。</li>
-<li><strong>磁量子数 (<img src="https://latex.codecogs.com/png.latex?m">)</strong>：决定原子轨道在空间的伸展方向 (<img src="https://latex.codecogs.com/png.latex?0,%20%5Cpm%201,%20%5Cdots,%20%5Cpm%20l">) 。</li>
-<li><strong>自旋量子数 (<img src="https://latex.codecogs.com/png.latex?m_s">)</strong>：描述电子的自旋方向 (<img src="https://latex.codecogs.com/png.latex?%5Cpm%201/2">) 。</li>
-</ol></li>
-<li><strong>概率密度与电子云</strong>：<img src="https://latex.codecogs.com/png.latex?%7C%5Cpsi%7C%5E2"> 表示电子在空间某点出现的概率密度 。</li>
-</ul>
-</section>
-<section id="多电子原子轨道能级" class="level4">
-<h4 class="anchored" data-anchor-id="多电子原子轨道能级">5.1.4 多电子原子轨道能级</h4>
-<ul>
-<li><strong>屏蔽效应与钻穿效应</strong>：内层电子对核电荷有屏蔽作用，降低了核对有效电荷 <img src="https://latex.codecogs.com/png.latex?Z%5E*"> 的吸引；外层电子进入核附近区域的能力称为钻穿效应 。</li>
-<li><strong>能级交错</strong>：由于上述效应，出现 <img src="https://latex.codecogs.com/png.latex?E_%7B4s%7D%20%3C%20E_%7B3d%7D"> 等能量倒置现象 。</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="原子核外电子的排布与元素周期律" class="level3">
-<h3 class="anchored" data-anchor-id="原子核外电子的排布与元素周期律">5.2 原子核外电子的排布与元素周期律</h3>
-<section id="基态原子的核外电子排布规律" class="level4">
-<h4 class="anchored" data-anchor-id="基态原子的核外电子排布规律">5.2.1 基态原子的核外电子排布规律</h4>
-<ul>
-<li><strong>三大原则</strong>：
-<ol type="1">
-<li><strong>能量最低原理</strong>：电子尽可能占据能量最低的轨道 。</li>
-<li><strong>保里（Pauli）不相容原理</strong>：一个轨道最多容纳两个自旋相反的电子 。</li>
-<li><strong>洪德（Hund）规则</strong>：电子在简并轨道（能量相同）上优先以相同自旋方式单占 。</li>
-</ol></li>
-<li><strong>特例</strong>：半充满（<img src="https://latex.codecogs.com/png.latex?d%5E5,%20p%5E3">）和全充满（<img src="https://latex.codecogs.com/png.latex?d%5E%7B10%7D,%20p%5E6">）状态具有额外的稳定性 。</li>
-</ul>
-</section>
-<section id="核外电子分布与元素周期律" class="level4">
-<h4 class="anchored" data-anchor-id="核外电子分布与元素周期律">5.2.2 核外电子分布与元素周期律</h4>
-<ul>
-<li><strong>周期、族与分区</strong>：根据价电子构型将周期表分为 <img src="https://latex.codecogs.com/png.latex?s,%20p,%20d,%20ds,%20f"> 区 。</li>
-</ul>
-</section>
-<section id="原子参数的周期性" class="level4">
-<h4 class="anchored" data-anchor-id="原子参数的周期性">5.2.3 原子参数的周期性</h4>
-<ul>
-<li><strong>原子半径</strong>：同周期从左向右减小，同族自上而下增大 。</li>
-<li><strong>电离能 (<img src="https://latex.codecogs.com/png.latex?I">)</strong>：气态原子失去电子所需最低能量。</li>
-<li><strong>电负性 (<img src="https://latex.codecogs.com/png.latex?%5Cchi">)</strong>：原子在分子中吸引电子的能力。氟的电负性最高（4.0） 。</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="价键理论" class="level3">
-<h3 class="anchored" data-anchor-id="价键理论">5.3 价键理论</h3>
-<section id="离子键理论" class="level4">
-<h4 class="anchored" data-anchor-id="离子键理论">5.3.1 离子键理论</h4>
-<ul>
-<li><strong>本质</strong>：正负离子间的静电引力。特点是无方向性和无饱和性 。</li>
-</ul>
-</section>
-<section id="共价键本质" class="level4">
-<h4 class="anchored" data-anchor-id="共价键本质">5.3.2 共价键本质</h4>
-<ul>
-<li><strong>本质</strong>：原子轨道的重叠，电子云密度在两核间增大，吸引两核而成键 。</li>
-</ul>
-</section>
-<section id="价键理论基本要点与共价键特点" class="level4">
-<h4 class="anchored" data-anchor-id="价键理论基本要点与共价键特点">5.3.3 价键理论基本要点与共价键特点</h4>
-<ul>
-<li><strong>饱和性与方向性</strong>：取决于未成对电子数和轨道重叠的最大方向 。</li>
-<li><strong>键的类型</strong>：
-<ul>
-<li><strong><img src="https://latex.codecogs.com/png.latex?%5Csigma"> 键</strong>：沿轴线“头碰头”重叠，可自由旋转 。</li>
-<li><strong><img src="https://latex.codecogs.com/png.latex?%5Cpi"> 键</strong>：垂直轴线“肩并肩”重叠 。</li>
-</ul></li>
-<li><strong>键参数</strong>：键能 (<img src="https://latex.codecogs.com/png.latex?E">)、键长 (<img src="https://latex.codecogs.com/png.latex?L">)、键角 (<img src="https://latex.codecogs.com/png.latex?%5Ctheta">) 和键的极性 。</li>
-</ul>
-</section>
-<section id="杂化轨道理论" class="level4">
-<h4 class="anchored" data-anchor-id="杂化轨道理论">5.3.4 杂化轨道理论</h4>
-<ul>
-<li><strong>核心概念</strong>：原子成键时，能量相近的原子轨道重新组合成一组能量、形状、方向完全相同的新轨道 。</li>
-<li><strong>常见类型</strong>：
-<ul>
-<li><strong><img src="https://latex.codecogs.com/png.latex?sp"> 杂化</strong>：直线型（如 <img src="https://latex.codecogs.com/png.latex?BeCl_2">） 。</li>
-<li><strong><img src="https://latex.codecogs.com/png.latex?sp%5E2"> 杂化</strong>：平面三角形（如 <img src="https://latex.codecogs.com/png.latex?BF_3">） 。</li>
-<li><strong><img src="https://latex.codecogs.com/png.latex?sp%5E3"> 杂化</strong>：正四面体（如 <img src="https://latex.codecogs.com/png.latex?CH_4">）或三角锥型（不等性杂化，如 <img src="https://latex.codecogs.com/png.latex?NH_3">） 。</li>
-</ul></li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="分子的极性" class="level3">
-<h3 class="anchored" data-anchor-id="分子的极性">5.4 分子的极性</h3>
-<section id="分子间的吸引作用范德华力" class="level4">
-<h4 class="anchored" data-anchor-id="分子间的吸引作用范德华力">5.4.1 分子间的吸引作用（范德华力）</h4>
-<ul>
-<li><strong>取向力</strong>：极性分子之间 。</li>
-<li><strong>诱导力</strong>：极性分子与非极性分子之间 。</li>
-<li><strong>色散力</strong>：瞬时偶极产生的力，存在于所有分子间 。</li>
-</ul>
-</section>
-<section id="氢键" class="level4">
-<h4 class="anchored" data-anchor-id="氢键">5.4.2 氢键</h4>
-<ul>
-<li><strong>形成条件</strong>：H与电负性极大、半径极小的 F、O、N 结合，并与另一个 F、O、N 的孤对电子产生吸引 。</li>
-<li><strong>影响</strong>：显著提高物质的熔沸点（如 <img src="https://latex.codecogs.com/png.latex?H_2O,%20NH_3,%20HF">） 。</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="晶体性质与常见晶体结构类型" class="level3">
-<h3 class="anchored" data-anchor-id="晶体性质与常见晶体结构类型">5.5 晶体性质与常见晶体结构类型</h3>
-<section id="晶体的性质" class="level4">
-<h4 class="anchored" data-anchor-id="晶体的性质">5.5.1 晶体的性质</h4>
-<ul>
-<li><strong>特征</strong>：自限性、各向异性、定温熔点等 。</li>
-</ul>
-</section>
-<section id="晶体的类型" class="level4">
-<h4 class="anchored" data-anchor-id="晶体的类型">5.5.2 晶体的类型</h4>
-<ul>
-<li><strong>离子晶体</strong>：正负离子间靠离子键结合（如 <img src="https://latex.codecogs.com/png.latex?NaCl">），硬度大、熔点高 。</li>
-<li><strong>原子（共价）晶体</strong>：原子间靠共价键形成空间网状结构（如金刚石、<img src="https://latex.codecogs.com/png.latex?SiO_2">），硬度极高、熔点极高 。</li>
-<li><strong>分子晶体</strong>：分子间靠范德华力或氢键结合（如干冰、冰），熔沸点低、硬度小 。</li>
-<li><strong>金属晶体</strong>：金属阳离子与自由电子结合（如铜、铁），具有良好的导电性、延展性 。</li>
-<li><strong>混合晶体</strong>：如石墨，层内为共价键，层间为范德华力 。</li>
-</ul>
-</section>
-</section>
-</section>
-<section id="无机物单质及化合物" class="level1">
-<h1>无机物单质及化合物</h1>
-<section id="元素化学概述" class="level3">
-<h3 class="anchored" data-anchor-id="元素化学概述">6.1 元素化学概述</h3>
-<ul>
-<li><strong>6.1.1 元素的发现</strong>
-<ul>
-<li><strong>知识点</strong>：目前已知118种元素，其中92种为天然存在，其余为人工合成 。元素的发现史与炼丹术、冶金技术的发展密切相关 。</li>
-</ul></li>
-<li><strong>6.1.2 元素在自然界中的分布</strong>
-<ul>
-<li><strong>丰度 (Abundance)</strong>：元素在地球表层（地壳）中的质量分数百分数 。</li>
-<li><strong>分布规律</strong>：地壳中含量最高的两种元素是<strong>氧 (48.6%)</strong> 和 <strong>硅 (26.3%)</strong> 。</li>
-</ul></li>
-<li><strong>6.1.3 元素的分类</strong>
-<ul>
-<li><strong>金属与非金属</strong>：周期表对角线左下方为金属，右上方为非金属 。</li>
-<li><strong>稀有元素 (Rare elements)</strong>：自然界含量少、发现晚或提取困难的元素，如锂、钛、稀土元素等 。</li>
-<li><strong>稀土元素 (RE)</strong>：包括镧系元素（15种）以及钪 (Sc) 和钇 (Y)，共17种 。</li>
-</ul></li>
-<li><strong>6.1.4 元素在自然界的存在形式</strong>
-<ul>
-<li><strong>游离态 (Free state)</strong>：以单质形式存在，如金、银、铂及稀有气体 。</li>
-<li><strong>化合态 (Combined state)</strong>：以化合物形式存在，大多数金属元素在自然界中以矿石（氧化物、硫化物、盐类）形式存在 。</li>
-</ul></li>
-</ul>
-<hr>
-</section>
-<section id="金属概论" class="level3">
-<h3 class="anchored" data-anchor-id="金属概论">6.2 金属概论</h3>
-<ul>
-<li><strong>6.2.1 金属物理通性与分类</strong>
-<ul>
-<li><strong>物理通性</strong>：具有金属光泽、良好的导电性、导热性和延展性 。</li>
-<li><strong>分类</strong>：
-<ol type="1">
-<li><strong>黑色金属</strong>：铁 (Fe)、锰 (Mn)、铬 (Cr) 。</li>
-<li><strong>有色金属</strong>：除上述三者以外的其他金属 。</li>
-<li><strong>密度分类</strong>：轻金属 (密度 &lt; <img src="https://latex.codecogs.com/png.latex?5%5Ctext%7Bg%7D%5Ccdot%5Ctext%7Bcm%7D%5E%7B-3%7D">) 和重金属 。</li>
-</ol></li>
-</ul></li>
-<li><strong>6.2.2 金属在自然界中存在状态</strong>
-<ul>
-<li><strong>知识点</strong>：活泼金属多以氧化物或盐的形式存在；不活泼金属（如金、铂）可呈游离态 。</li>
-</ul></li>
-<li><strong>6.2.3 金属的一般制备方法（冶金学）</strong>
-<ul>
-<li><strong>火法冶金 (Pyrometallurgy)</strong>：利用高温下的氧化还原反应，通过碳或一氧化碳还原金属氧化物（如高炉炼铁） 。</li>
-<li><strong>湿法冶金 (Hydrometallurgy)</strong>：利用酸、碱或盐溶液将金属浸出，再用置换或电解法提取 。</li>
-<li><strong>电冶金 (Electrometallurgy)</strong>：电解熔融盐制取活泼金属（如制钠、铝）或电解精炼金属（如精炼铜） 。</li>
-</ul></li>
-</ul>
-<hr>
-</section>
-<section id="非金属单质" class="level3">
-<h3 class="anchored" data-anchor-id="非金属单质">6.3 非金属单质</h3>
-<ul>
-<li><strong>6.3.1 周期系中非金属元素</strong>
-<ul>
-<li><strong>知识点</strong>：共22种，除氢外均在 p 区 。</li>
-</ul></li>
-<li><strong>6.3.2 非金属单质的结构与物理性质</strong>
-<ul>
-<li><strong>结构</strong>：稀有气体为单原子分子；多数形成共价分子（<img src="https://latex.codecogs.com/png.latex?O_2,%20N_2">）或巨型共价晶体（金刚石、晶体硅） 。</li>
-<li><strong>性质</strong>：石墨具有良好的层间滑动性和导电性，常用作润滑剂和电极 。</li>
-</ul></li>
-<li><strong>6.3.3 非金属单质的化学性质</strong>
-<ul>
-<li><strong>氧化性</strong>：氟 (<img src="https://latex.codecogs.com/png.latex?F_2">) 是最强的氧化剂 。</li>
-<li><strong>还原性</strong>：碳、氢、硅在高温下是优良的还原剂，可还原金属氧化物 。</li>
-<li><strong>公式示例</strong>：与非金属反应：<img src="https://latex.codecogs.com/png.latex?H_2%20+%20Cl_2%20%5Crightarrow%202HCl"> 。</li>
-</ul></li>
-<li><strong>6.3.4 非金属单质的一般制备方法</strong>
-<ul>
-<li><strong>氧化阴离子法</strong>：电解食盐水制取氯气 。</li>
-<li><strong>还原正价元素</strong>：如高温下氢气还原四氯化硅： <img src="https://latex.codecogs.com/png.latex?SiCl_4%20+%202H_2%20%5Cxrightarrow%7B%5Ctext%7B%E9%AB%98%E6%B8%A9%7D%7D%20Si%20+%204HCl">
-<ul>
-<li><strong>变量含义</strong>：<img src="https://latex.codecogs.com/png.latex?SiCl_4"> 为四氯化硅，<img src="https://latex.codecogs.com/png.latex?Si"> 为晶体硅。</li>
-</ul></li>
-</ul></li>
-</ul>
-<hr>
-</section>
-<section id="主族元素化合物" class="level3">
-<h3 class="anchored" data-anchor-id="主族元素化合物">6.4 主族元素化合物</h3>
-<ul>
-<li><strong>6.4.1 主族元素化合物的物理性质</strong>
-<ul>
-<li><strong>卤化物</strong>：分为离子型（如 <img src="https://latex.codecogs.com/png.latex?NaCl">）和共价型（如 <img src="https://latex.codecogs.com/png.latex?TiCl_4">，易挥发） 。</li>
-<li><strong>氧化物分类</strong>：碱性氧化物、酸性氧化物、两性氧化物（如 <img src="https://latex.codecogs.com/png.latex?Al_2O_3">）和中性氧化物（如 <img src="https://latex.codecogs.com/png.latex?CO">） 。</li>
-<li><strong>硅酸盐</strong>：结构基本单元是 <strong><img src="https://latex.codecogs.com/png.latex?SiO_4"> 四面体</strong> 。</li>
-</ul></li>
-<li><strong>6.4.2 主要主族元素化合物的化学性质及一般反应规律</strong>
-<ul>
-<li><strong>水解性</strong>：主族卤化物常见的水解反应，如 <img src="https://latex.codecogs.com/png.latex?SnCl_2%20+%20H_2O%20%5Crightarrow%20Sn(OH)Cl%20+%20HCl"> 。</li>
-<li><strong>碳酸盐热稳定性</strong>：同一主族内，阳离子半径增大，碳酸盐稳定性增强 。</li>
-<li><strong>稳定性排序</strong>：<img src="https://latex.codecogs.com/png.latex?BeCO_3%20%3C%20MgCO_3%20%3C%20CaCO_3%20%3C%20SrCO_3%20%3C%20BaCO_3"> 。</li>
-</ul></li>
-</ul>
-<hr>
-</section>
-<section id="过渡元素及配位化合物" class="level3">
-<h3 class="anchored" data-anchor-id="过渡元素及配位化合物">6.5 过渡元素及配位化合物</h3>
-<ul>
-<li><strong>6.5.1 过渡元素通论</strong>
-<ul>
-<li><strong>特征</strong>：多氧化态（如锰可呈 +2 到 +7 价）、颜色多样、易形成配合物 。</li>
-</ul></li>
-<li><strong>6.5.2 几种过渡元素化合物的简介</strong>
-<ul>
-<li><strong>重铬酸钾 (<img src="https://latex.codecogs.com/png.latex?K_2Cr_2O_7">)</strong>：在酸性介质中是强氧化剂 。</li>
-<li><strong>高锰酸钾 (<img src="https://latex.codecogs.com/png.latex?KMnO_4">)</strong>：氧化性随 pH 变化，酸性产物为 <img src="https://latex.codecogs.com/png.latex?Mn%5E%7B2+%7D">，中性为 <img src="https://latex.codecogs.com/png.latex?MnO_2">，强碱性为 <img src="https://latex.codecogs.com/png.latex?MnO_4%5E%7B2-%7D"> 。</li>
-</ul></li>
-<li><strong>6.5.3 配位化合物及应用</strong>
-<ul>
-<li><strong>配合物组成</strong>：中心离子、配体（Ligand）、配位数、内界（配合离子）和外界 。</li>
-<li><strong>稳定常数 (<img src="https://latex.codecogs.com/png.latex?K_%7B%5Ctext%7B%E7%A8%B3%7D%7D">)</strong>：衡量配合物在溶液中的稳定性 。 <img src="https://latex.codecogs.com/png.latex?K_%7B%5Ctext%7B%E7%A8%B3%7D%7D%20=%20%5Cfrac%7Bc(%5BML_n%5D)/c%5E%7B%5Cominus%7D%7D%7B%5Bc(M)/c%5E%7B%5Cominus%7D%5D%5Bc(L)/c%5E%7B%5Cominus%7D%5D%5En%7D">
-<ul>
-<li><strong>变量含义</strong>：<img src="https://latex.codecogs.com/png.latex?%5BML_n%5D"> 为配合物，<img src="https://latex.codecogs.com/png.latex?M"> 为中心离子，<img src="https://latex.codecogs.com/png.latex?L"> 为配体，<img src="https://latex.codecogs.com/png.latex?n"> 为配位数。</li>
-</ul></li>
-<li><strong>配合平衡移动</strong>：加入强酸（酸效应）或加入能形成更难溶沉淀的离子会破坏配合平衡 。</li>
-</ul></li>
-</ul>
-<hr>
-</section>
-<section id="镧系元素和锕系元素及稀土元素的应用" class="level3">
-<h3 class="anchored" data-anchor-id="镧系元素和锕系元素及稀土元素的应用">6.6 镧系元素和锕系元素及稀土元素的应用</h3>
-<ul>
-<li><strong>6.6.1 镧系元素和锕系元素简介</strong>
-<ul>
-<li><strong>镧系收缩 (Lanthanide Contraction)</strong>：随原子序数增加，原子及离子半径逐一缩小的现象 。</li>
-<li><strong>影响</strong>：导致镧系元素化学性质极其相近，分离极其困难 。</li>
-</ul></li>
-<li><strong>6.6.2 稀土元素的应用</strong>
-<ul>
-<li><strong>领域</strong>：广泛用于玻璃抛光、石油催化裂化、永磁材料（如钕铁硼）及激光材料 。</li>
-</ul></li>
-</ul>
-<hr>
-</section>
-<section id="稀有气体" class="level3">
-<h3 class="anchored" data-anchor-id="稀有气体">6.7 稀有气体</h3>
-<ul>
-<li><strong>6.7.1 稀有气体及其发现史</strong>
-<ul>
-<li><strong>特点</strong>：具有 8 电子稳定构型（He 为 2），化学性质极不活泼，通常以单原子分子存在 。</li>
-</ul></li>
-<li><strong>6.7.2 稀有气体的应用</strong>
-<ul>
-<li><strong>用途</strong>：电弧焊接的保护气、电光源（霓虹灯）、液氦用于制造超低温环境 。</li>
-</ul></li>
-</ul>
-<hr>
-</section>
-<section id="无机化学工业" class="level3">
-<h3 class="anchored" data-anchor-id="无机化学工业">6.8 无机化学工业</h3>
-<ul>
-<li><strong>重要产品</strong>：硫酸 (<img src="https://latex.codecogs.com/png.latex?H_2SO_4">) 被称为“工业之母”；合成氨 (<img src="https://latex.codecogs.com/png.latex?NH_3">) 是生产肥料和化工产品的重原料 。</li>
-</ul>
-</section>
-</section>
-<section id="金属材料与无机非金属材料" class="level1">
-<h1>金属材料与无机非金属材料</h1>
-<section id="常见的金属与其合金材料" class="level3">
-<h3 class="anchored" data-anchor-id="常见的金属与其合金材料">7.1 常见的金属与其合金材料</h3>
-<ul>
-<li><strong>7.1.1 钢铁</strong>
-<ul>
-<li><strong>基本概念</strong>：铁是地壳中含量仅次于铝的金属元素 。</li>
-<li><strong>主要铁矿石</strong>：磁铁矿 (<img src="https://latex.codecogs.com/png.latex?FeO%20%5Ccdot%20Fe_2O_3">)、赤铁矿 (<img src="https://latex.codecogs.com/png.latex?Fe_2O_3">)、褐铁矿 [<img src="https://latex.codecogs.com/png.latex?Fe_2O_3%20%5Ccdot%202Fe(OH)_3">]、黄铁矿 (<img src="https://latex.codecogs.com/png.latex?FeS_2">) 和菱铁矿 (<img src="https://latex.codecogs.com/png.latex?FeCO_3">) 。</li>
-<li><strong>生铁 (Pig Iron)</strong>：含碳量 3%~4% 的铁碳合金，硬而脆，耐压耐磨 。分为白口铁、灰口铁和球墨铸铁 。</li>
-<li><strong>钢 (Steel)</strong>：含碳量 0.03%~2% 的铁碳合金 。
-<ul>
-<li><strong>碳钢</strong>：分为低碳钢、中碳钢和高碳钢 。</li>
-<li><strong>合金钢</strong>：在碳钢中加入锰、钼、钒、镍、铬等元素以获得高强度、高韧性等特殊性能 。</li>
-</ul></li>
-</ul></li>
-<li><strong>7.1.2 铜及其合金</strong>
-<ul>
-<li><strong>物理性质</strong>：纯铜呈红紫色，具有良好的韧性和延展性，导电性仅次于银 。</li>
-<li><strong>黄铜 (Brass)</strong>：铜锌合金（含锌 10%~40%），力学性能好且抗腐蚀 。</li>
-<li><strong>青铜 (Bronze)</strong>：除黄铜、白铜以外的铜合金，包括锡青铜、铝青铜、铍青铜等 。</li>
-</ul></li>
-<li><strong>7.1.3 铝及其合金</strong>
-<ul>
-<li><strong>基本性质</strong>：铝是地壳中含量最丰富的金属元素，密度小，具有良好的导电、导热性和极强的抗腐蚀性（表面易形成致密氧化膜） 。</li>
-<li><strong>刚玉</strong>：结晶状态的 <img src="https://latex.codecogs.com/png.latex?%5Calpha-Al_2O_3">，硬度仅次于金刚石 。</li>
-<li><strong>铝合金</strong>：包括硬铝、超硬铝、铝镁合金等，广泛用于航空、机械及制船工业 。</li>
-</ul></li>
-<li><strong>7.1.4 新型功能合金材料</strong>
-<ul>
-<li><strong>记忆合金 (Shape Memory Alloy)</strong>：如钛镍合金，具有在特定温度下恢复初始形状的功能 。</li>
-<li><strong>储氢合金 (Hydrogen Storage Alloy)</strong>：能可逆地大量吸收和释放氢气的功能材料 。
-<ul>
-<li><strong>组成</strong>：由放热型金属 A（如 La, Ti, Mg）和催化活性金属 B（如 Ni, Co, Fe）按比例组成，如 <img src="https://latex.codecogs.com/png.latex?LaNi_5"> 。</li>
-</ul></li>
-</ul></li>
-</ul>
-<hr>
-</section>
-<section id="新型无机非金属材料" class="level3">
-<h3 class="anchored" data-anchor-id="新型无机非金属材料">7.2 新型无机非金属材料</h3>
-<ul>
-<li><strong>7.2.1 光导纤维</strong>
-<ul>
-<li><strong>结构与原理</strong>：由内芯和外套两层透明玻璃纤维组成，利用光在界面的多次全反射传输信号 。内芯折射率大于外套 。</li>
-</ul></li>
-<li><strong>7.2.2 超导材料</strong>
-<ul>
-<li><strong>核心特性</strong>：零电阻和抗磁性 。</li>
-<li><strong>临界温度 (<img src="https://latex.codecogs.com/png.latex?T_c">)</strong>：材料进入超导态的特定温度 。</li>
-<li><strong>分类</strong>：分为低温超导材料和高温超导材料（如钇钡铜氧陶瓷） 。</li>
-</ul></li>
-<li><strong>7.2.3 生物陶瓷</strong>
-<ul>
-<li><strong>分类</strong>：
-<ol type="1">
-<li><strong>惰性生物陶瓷</strong>：如氧化铝、氧化锆，用于人工关节 。</li>
-<li><strong>活性生物陶瓷</strong>：如羟基磷灰石，能与骨组织形成化学键合 。</li>
-<li><strong>可吸收生物陶瓷</strong>：如磷酸三钙，在体内能被逐渐吸收并诱导新骨生长 。</li>
-</ol></li>
-</ul></li>
-<li><strong>7.2.4 光电材料</strong>
-<ul>
-<li><strong>光电效应</strong>：材料受光照射产生电导率变化或电动势的现象 。</li>
-<li><strong>应用</strong>：致发光器件（LED）、光电传感器和太阳能电池（如铜铟硒薄膜电池） 。</li>
-</ul></li>
-<li><strong>7.2.5 压电材料</strong>
-<ul>
-<li><strong>压电效应</strong>：受到压力时在两端面出现电荷，电荷量与压力成正比 。</li>
-<li><strong>逆压电效应</strong>：外加电场导致材料发生机械形变 。</li>
-<li><strong>应用</strong>：压电陶瓷点火器、声纳、超声成像等 。</li>
-</ul></li>
-</ul>
-<hr>
-</section>
-<section id="建筑胶凝材料" class="level3">
-<h3 class="anchored" data-anchor-id="建筑胶凝材料">7.3 建筑胶凝材料</h3>
-<ul>
-<li><strong>7.3.1 石灰</strong>
-<ul>
-<li><strong>烧制公式</strong>：<img src="https://latex.codecogs.com/png.latex?CaCO_3%20%5Cxrightarrow%7B900%5Csim%201100%5E%5Ccirc%5Ctext%7BC%7D%7D%20CaO%20+%20CO_2%20%5Cuparrow"> 。</li>
-<li><strong>熟化（消化）</strong>：生石灰与水反应生成熟石灰 [<img src="https://latex.codecogs.com/png.latex?Ca(OH)_2">]，放出大量热并体积膨胀 。
-<ul>
-<li><strong>公式</strong>：<img src="https://latex.codecogs.com/png.latex?CaO%20+%20H_2O%20%5Crightarrow%20Ca(OH)_2">, <img src="https://latex.codecogs.com/png.latex?%5CDelta_r%20H_m%20=%20-64.9%5Ctext%7B%20kJ/mol%7D"> 。</li>
-</ul></li>
-<li><strong>硬化过程</strong>：包括水分蒸发导致的结晶和与空气中 <img src="https://latex.codecogs.com/png.latex?CO_2"> 反应的碳化过程 。
-<ul>
-<li><strong>碳化公式</strong>：<img src="https://latex.codecogs.com/png.latex?Ca(OH)_2%20+%20CO_2%20+%20nH_2O%20%5Crightarrow%20CaCO_3%20+%20(n+1)H_2O"> 。</li>
-</ul></li>
-</ul></li>
-<li><strong>7.3.2 石膏</strong>
-<ul>
-<li><strong>生产</strong>：天然二水石膏 (<img src="https://latex.codecogs.com/png.latex?CaSO_4%20%5Ccdot%202H_2O">) 加热脱水生成 <img src="https://latex.codecogs.com/png.latex?%5Cbeta"> 型半水石膏（建筑石膏） 。</li>
-<li><strong>水化硬化</strong>：半水石膏加水还原为二水石膏 。
-<ul>
-<li><strong>公式</strong>：<img src="https://latex.codecogs.com/png.latex?CaSO_4%20%5Ccdot%201/2H_2O%20+%203/2H_2O%20%5Crightarrow%20CaSO_4%20%5Ccdot%202H_2O"> 。</li>
-</ul></li>
-</ul></li>
-<li><strong>7.3.3 水泥</strong>
-<ul>
-<li><strong>硅酸盐水泥熟料组分</strong>：硅酸三钙 (<img src="https://latex.codecogs.com/png.latex?3CaO%20%5Ccdot%20SiO_2">, <img src="https://latex.codecogs.com/png.latex?C_3S">)、硅酸二钙 (<img src="https://latex.codecogs.com/png.latex?2CaO%20%5Ccdot%20SiO_2">, <img src="https://latex.codecogs.com/png.latex?C_2S">)、铝酸三钙 (<img src="https://latex.codecogs.com/png.latex?3CaO%20%5Ccdot%20Al_2O_3">, <img src="https://latex.codecogs.com/png.latex?C_3A">)、铁铝酸四钙 (<img src="https://latex.codecogs.com/png.latex?4CaO%20%5Ccdot%20Al_2O_3%20%5Ccdot%20Fe_2O_3">, <img src="https://latex.codecogs.com/png.latex?C_4AF">) 。</li>
-<li><strong>石膏的作用</strong>：调节凝结时间，防止水泥发生“闪凝”现象 。</li>
-</ul></li>
-<li><strong>7.3.4 钢筋混凝土的腐蚀与防腐</strong>
-<ul>
-<li><strong>腐蚀类型</strong>：溶解腐蚀（软水溶解 <img src="https://latex.codecogs.com/png.latex?Ca(OH)_2">）、盐类腐蚀（硫酸盐、镁盐与水泥组分反应导致体积膨胀或结构破坏） 。</li>
-<li><strong>碳化（中性化）</strong>：<img src="https://latex.codecogs.com/png.latex?CO_2"> 渗入导致混凝土 pH 值降低，使钢筋表面的钝化膜破坏 。</li>
-<li><strong>防腐措施</strong>：提高密实度、涂保护层、电化学保护（如牺牲阳极保护法） 。</li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="有机化学和有机化合物" class="level1">
-<h1>有机化学和有机化合物</h1>
-<section id="有机化合物和有机化学" class="level3">
-<h3 class="anchored" data-anchor-id="有机化合物和有机化学">8.1 有机化合物和有机化学</h3>
-<ul>
-<li><strong>8.1.1 有机化合物的特点</strong>
-<ul>
-<li><strong>组成</strong>：以碳元素为基础，通常含有 H、O、N、P、S 及卤素 。</li>
-<li><strong>结构</strong>：碳原子间以<strong>共价键</strong>形成碳链或碳环 。</li>
-<li><strong>物理性质</strong>：熔点和沸点较低，难溶于水，易溶于有机溶剂；多为非电解质，不导电 。</li>
-<li><strong>化学性质</strong>：多数易燃烧，反应速率较慢且常伴有副反应 。</li>
-</ul></li>
-<li><strong>8.1.2 有机化合物的分类</strong>
-<ul>
-<li><strong>按碳骨架分类</strong>：
-<ol type="1">
-<li><strong>开链化合物（脂肪族）</strong>：原子相互连接成链状 。</li>
-<li><strong>碳环化合物</strong>：分为脂环化合物和芳香族化合物 。</li>
-<li><strong>杂环化合物</strong>：环中含有除碳以外的杂原子（如 O、N、S 等） 。</li>
-</ol></li>
-<li><strong>按官能团分类</strong>：核心概念为<strong>官能团</strong>（决定有机物化学性质的原子或原子团），如碳碳双键、羟基、羧基等 。</li>
-</ul></li>
-<li><strong>8.1.3 有机化合物的命名</strong>
-<ul>
-<li><strong>烷烃系统命名法</strong>：
-<ol type="1">
-<li><strong>选主链</strong>：含有取代基最多、最长的碳链 。</li>
-<li><strong>编号</strong>：从靠近取代基的一端开始 。</li>
-<li><strong>书写</strong>：取代基按从小到大排序，位置数字间用“,”隔开，数字与汉字间用“-”隔开 。</li>
-</ol></li>
-<li><strong>烯烃和炔烃</strong>：主链须包含双键或三键，编号从靠近多重键端开始 。</li>
-<li><strong>芳烃</strong>：以苯环为母体，取代基位置可用邻、间、对或 1,2-、1,3-、1,4- 表示 。</li>
-</ul></li>
-</ul>
-<hr>
-</section>
-<section id="有机化合物的结构特点" class="level3">
-<h3 class="anchored" data-anchor-id="有机化合物的结构特点">8.2 有机化合物的结构特点</h3>
-<ul>
-<li><strong>碳原子特性</strong>：最外层有 4 个电子，不易得失电子，倾向于通过共价键达到 8 电子稳定结构 。</li>
-<li><strong>成键方式</strong>：碳原子间可形成单键、双键或三键，也能形成长短不一的链或环 。</li>
-</ul>
-<hr>
-</section>
-<section id="有机化合物同分异构体" class="level3">
-<h3 class="anchored" data-anchor-id="有机化合物同分异构体">8.3 有机化合物同分异构体</h3>
-<ul>
-<li><strong>定义</strong>：分子式相同但结构不同的现象 。</li>
-<li><strong>分类</strong>：
-<ol type="1">
-<li><strong>构造异构</strong>：包括碳链异构、位置异构和官能团异构 。</li>
-<li><strong>立体异构</strong>：包括构象异构和构型异构 。</li>
-</ol></li>
-</ul>
-<hr>
-</section>
-<section id="有机物的重要反应" class="level3">
-<h3 class="anchored" data-anchor-id="有机物的重要反应">8.4 有机物的重要反应</h3>
-<ul>
-<li><strong>主要反应类型</strong>：
-<ol type="1">
-<li><strong>取代反应</strong>：原子或原子团被取代（如烷烃卤代、酯化反应） 。</li>
-<li><strong>加成反应</strong>：不饱和键打开并结合其他原子（如烯烃加氢） 。</li>
-<li><strong>消去反应</strong>：脱去小分子形成不饱和键（如醇脱水成烯） 。</li>
-<li><strong>氧化与还原</strong>：加氧去氢为氧化，去氧加氢为还原 。</li>
-<li><strong>聚合反应</strong>：包括加聚反应和缩聚反应 。</li>
-</ol></li>
-</ul>
-<hr>
-</section>
-<section id="有机物的结构基本性质及用途" class="level3">
-<h3 class="anchored" data-anchor-id="有机物的结构基本性质及用途">8.5 有机物的结构、基本性质及用途</h3>
-<ul>
-<li><strong>8.5.1 烷烃</strong>
-<ul>
-<li><strong>结构</strong>：碳原子均为 <img src="https://latex.codecogs.com/png.latex?sp%5E3"> 杂化，只含 <img src="https://latex.codecogs.com/png.latex?%5Csigma"> 键，可自由旋转 。</li>
-<li><strong>性质</strong>：常温下 <img src="https://latex.codecogs.com/png.latex?C_1%20%5Csim%20C_4"> 为气体；化学性质稳定，不与强酸碱、强氧化剂反应 。</li>
-</ul></li>
-<li><strong>8.5.2 烯烃</strong>
-<ul>
-<li><strong>结构</strong>：碳原子为 <img src="https://latex.codecogs.com/png.latex?sp%5E2"> 杂化，包含一个 <img src="https://latex.codecogs.com/png.latex?%5Csigma"> 键和一个 <img src="https://latex.codecogs.com/png.latex?%5Cpi"> 键 。</li>
-<li><strong>顺反异构</strong>：由于双键不能旋转，且双键两端连接不同原子或基团产生 。</li>
-<li><strong>化学反应</strong>：遵循<strong>马氏规则</strong>（亲电加成时，氢原子加在含氢较多的双键碳上） 。</li>
-</ul></li>
-<li><strong>8.5.3 炔烃</strong>
-<ul>
-<li><strong>结构</strong>：碳原子为 <img src="https://latex.codecogs.com/png.latex?sp"> 杂化，直线型，包含一个 <img src="https://latex.codecogs.com/png.latex?%5Csigma"> 键和两个 <img src="https://latex.codecogs.com/png.latex?%5Cpi"> 键 。</li>
-<li><strong>末端炔烃酸性</strong>：<img src="https://latex.codecogs.com/png.latex?C%20%5Cequiv%20C-H"> 上的 H 具有微弱酸性，可与金属作用生成乙炔银或乙炔亚铜 。</li>
-</ul></li>
-<li><strong>8.5.4 芳烃</strong>
-<ul>
-<li><strong>结构</strong>：<img src="https://latex.codecogs.com/png.latex?sp%5E2"> 杂化，六角平面结构，存在离域大 <img src="https://latex.codecogs.com/png.latex?%5Cpi"> 键 。</li>
-<li><strong>反应</strong>：易发生亲电取代（卤代、硝化、磺化、傅-克反应），难加成 。</li>
-</ul></li>
-<li><strong>8.5.5 卤代烃</strong>
-<ul>
-<li><strong>重要反应</strong>：
-<ol type="1">
-<li><strong>亲核取代</strong>：水解成醇、氨解成胺、氰解增长碳链 。</li>
-<li><strong>消去反应</strong>：在碱性醇溶液中生成烯烃 。</li>
-<li><strong>格氏试剂生成</strong>：<img src="https://latex.codecogs.com/png.latex?R-X%20+%20Mg%20%5Cxrightarrow%7B%5Ctext%7B%E6%97%A0%E6%B0%B4%E4%B9%99%E9%86%9A%7D%7D%20RMgX"> 。</li>
-</ol></li>
-</ul></li>
-<li><strong>8.5.6 醇</strong>
-<ul>
-<li><strong>物理性质</strong>：存在分子间氢键，沸点高于相应质量的烷烃 。</li>
-<li><strong>反应</strong>：与活泼金属反应放出 <img src="https://latex.codecogs.com/png.latex?H_2">；脱水反应（内脱水成烯，间脱水成醚）；氧化反应（伯醇成醛/酸，仲醇成酮） 。</li>
-</ul></li>
-<li><strong>8.5.7 酚</strong>
-<ul>
-<li><strong>酸性</strong>：由于 <img src="https://latex.codecogs.com/png.latex?p-%5Cpi"> 共轭，酸性强于醇，能与 NaOH 反应 。</li>
-<li><strong>显色反应</strong>：与 <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BFeCl%7D_3"> 产生紫色等特征颜色 。</li>
-</ul></li>
-<li><strong>8.5.8 醛和酮</strong>
-<ul>
-<li><strong>亲核加成</strong>：与 HCN、<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BNaHSO%7D_3">、醇（成缩醛/酮）加成 。</li>
-<li><strong>区别反应</strong>：醛能发生<strong>银镜反应</strong>（与托伦试剂）或产生砖红色沉淀（与费林试剂），酮通常不反应 。</li>
-</ul></li>
-<li><strong>8.5.9 羧酸</strong>
-<ul>
-<li><strong>酸性</strong>：强于酚和碳酸 。</li>
-<li><strong>衍生物生成</strong>：生成酰卤、酸酐、酯、酰胺 。</li>
-</ul></li>
-<li><strong>8.5.10 酯</strong>
-<ul>
-<li><strong>水解反应</strong>：
-<ul>
-<li>酸性水解：可逆 。</li>
-<li>碱性水解：不可逆，称为<strong>皂化反应</strong> 。</li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
-<section id="核心公式与变量" class="level3">
-<h3 class="anchored" data-anchor-id="核心公式与变量">核心公式与变量</h3>
-<ul>
-<li><strong>偶极矩公式</strong>：<img src="https://latex.codecogs.com/png.latex?%5Cmu%20=%20q%20%5Ccdot%20l">
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cmu">：偶极矩（<img src="https://latex.codecogs.com/png.latex?C%20%5Ccdot%20m">）；<img src="https://latex.codecogs.com/png.latex?q">：电荷量（<img src="https://latex.codecogs.com/png.latex?C">）；<img src="https://latex.codecogs.com/png.latex?l">：正负电荷重心距离（<img src="https://latex.codecogs.com/png.latex?m">）。用于衡量分子的极性 。</li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="合成高分子材料" class="level1">
-<h1>合成高分子材料</h1>
-<section id="高分子化合物概论" class="level3">
-<h3 class="anchored" data-anchor-id="高分子化合物概论">9.1 高分子化合物概论</h3>
-<section id="高分子化合物的基本概念" class="level4">
-<h4 class="anchored" data-anchor-id="高分子化合物的基本概念">9.1.1 高分子化合物的基本概念</h4>
-<ul>
-<li><strong>高分子化合物（高聚物/聚合物）</strong>：由众多原子或原子团主要以<strong>共价键</strong>结合而成的相对分子质量在 <strong>10,000 以上</strong>的化合物 。</li>
-<li><strong>核心术语</strong>：
-<ul>
-<li><strong>主链</strong>：构成高分子骨架结构的化学键合原子集合 。</li>
-<li><strong>侧基/侧链</strong>：连接在主链原子上的原子或原子团 。</li>
-<li><strong>单体（Monomer）</strong>：能通过聚合反应形成高分子化合物的低分子化合物 。</li>
-<li><strong>结构单元（链节）</strong>：在高分子链中重复出现的最小单位 。</li>
-<li><strong>聚合度（Degree of Polymerization, DP）</strong>：高分子化合物中单体单元的数目，常用符号 <strong><img src="https://latex.codecogs.com/png.latex?%5Cchi"></strong> 或 <strong><img src="https://latex.codecogs.com/png.latex?P"></strong> 表示 。</li>
-</ul></li>
-<li><strong>基本特点</strong>：
-<ol type="1">
-<li><strong>相对分子质量大</strong>：一般大于 <img src="https://latex.codecogs.com/png.latex?10%5E4">，多在 <img src="https://latex.codecogs.com/png.latex?10%5E5%20%5Csim%2010%5E6"> 之间 。</li>
-<li><strong>多分散性</strong>：高分子不是单一相对分子质量，而是不同长度分子的混合物，其实质是<strong>平均相对分子质量</strong> 。</li>
-<li><strong>结构的复杂性</strong>：涉及原子种类繁多、排列多样，链形态有线状、支链状、体型（网状）等 。</li>
-<li><strong>性能特点</strong>：具有独特的弹性、塑性、绝缘性和成型性；只有固态和液态，不存在气态 。</li>
-</ol></li>
-</ul>
-</section>
-<section id="高分子化合物的合成" class="level4">
-<h4 class="anchored" data-anchor-id="高分子化合物的合成">9.1.2 高分子化合物的合成</h4>
-<ul>
-<li><strong>加成聚合反应（加聚反应）</strong>：一种或几种单体化合成高聚物，反应过程中<strong>无低分子副产物</strong>生成，高聚物与单体具有相同的化学组成 。
-<ul>
-<li><strong>公式示例</strong>：<img src="https://latex.codecogs.com/png.latex?nCH_2=CH_2%20%5Crightarrow%20%5BCH_2-CH_2%5D_n">（乙烯聚合） 。</li>
-</ul></li>
-<li><strong>缩合聚合反应（缩聚反应）</strong>：具有两个或两个以上官能团的单体相互缩合并<strong>产生小分子副产物</strong>（如 <img src="https://latex.codecogs.com/png.latex?H_2O%E3%80%81NH_3%E3%80%81HCl"> 等）的聚合过程 。
-<ul>
-<li><strong>尼龙-66 合成示例</strong>： <img src="https://latex.codecogs.com/png.latex?nNH_2(CH_2)_6NH_2%20+%20nHOOC(CH_2)_4COOH%20%5Crightarrow%20%5BNH(CH_2)_6NHCO(CH_2)_4CO%5D_n%20+%20(2n-1)H_2O"> 。</li>
-</ul></li>
-</ul>
-</section>
-<section id="高分子化合物的结构与性能" class="level4">
-<h4 class="anchored" data-anchor-id="高分子化合物的结构与性能">9.1.3 高分子化合物的结构与性能</h4>
-<ul>
-<li><strong>三类结构</strong>：
-<ol type="1">
-<li><strong>线型结构</strong>：分子链呈长链线状，具有<strong>热塑性</strong>（受热熔融，冷却硬化），可溶解 。</li>
-<li><strong>支链型结构</strong>：主链上有支链，性质与线型类似 。</li>
-<li><strong>体型（网状）结构</strong>：链间通过化学键交联形成，具有<strong>热固性</strong>（成型后不再熔融），不溶解只溶胀 。</li>
-</ol></li>
-<li><strong>核心性能</strong>：
-<ul>
-<li><strong>塑性与弹性</strong>：受外力拉伸可变形，除去外力可恢复（弹性）或保持（塑性） 。</li>
-<li><strong>老化</strong>：在光、热、氧等因素下发生化学变化使性能逐渐变坏的现象，包括<strong>裂解反应</strong>（链断裂）和<strong>交联反应</strong>（链变性） 。</li>
-</ul></li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="三大经典合成高分子材料简介" class="level3">
-<h3 class="anchored" data-anchor-id="三大经典合成高分子材料简介">9.2 三大经典合成高分子材料简介</h3>
-<section id="塑料" class="level4">
-<h4 class="anchored" data-anchor-id="塑料">9.2.1 塑料</h4>
-<ul>
-<li><strong>分类</strong>：
-<ol type="1">
-<li><strong>通用塑料</strong>：产量大、用途广、价格便宜。包括：<strong>聚乙烯（PE）</strong>、<strong>聚丙烯（PP）</strong>、<strong>聚氯乙烯（PVC）</strong>、<strong>聚苯乙烯（PS）</strong>及 <strong>ABS 树脂</strong> 。</li>
-<li><strong>工程塑料</strong>：高性能，可作工业零件或外壳。分为通用型（如聚酰胺/尼龙 PA、聚碳酸酯 PC）和特种型（如聚苯硫醚 PPS、聚醚醚酮 PEEK） 。</li>
-</ol></li>
-</ul>
-</section>
-<section id="合成橡胶" class="level4">
-<h4 class="anchored" data-anchor-id="合成橡胶">9.2.2 合成橡胶</h4>
-<ul>
-<li><strong>基本特性</strong>：具有极高弹性的高聚物 。</li>
-<li><strong>硫化</strong>：将线型高分子通过硫桥转变为网状结构，提高强度和弹性，降低塑性 。</li>
-<li><strong>重要品种</strong>：丁苯橡胶（SBR，产量最大）、丁腈橡胶（NBR，耐油）、硅橡胶（SR，耐高低温）、顺丁橡胶（BR，综合性能好） 。</li>
-</ul>
-</section>
-<section id="纤维" class="level4">
-<h4 class="anchored" data-anchor-id="纤维">9.2.3 纤维</h4>
-<ul>
-<li><strong>特点</strong>：长径比大于 1000:1，具有较强结晶能力和高熔点 。</li>
-<li><strong>合成纤维“六大纶”中重点介绍</strong>：
-<ol type="1">
-<li><strong>聚酯纤维（涤纶）</strong>：挺括不皱、易洗快干 。</li>
-<li><strong>聚酰胺纤维（尼龙）</strong>：耐磨性、韧性极优 。</li>
-<li><strong>聚丙烯腈纤维（腈纶）</strong>：蓬松卷曲、保暖性好，有“合成羊毛”之称 。</li>
-</ol></li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="其它高分子材料简介" class="level3">
-<h3 class="anchored" data-anchor-id="其它高分子材料简介">9.3 其它高分子材料简介</h3>
-<section id="合成胶黏剂" class="level4">
-<h4 class="anchored" data-anchor-id="合成胶黏剂">9.3.1 合成胶黏剂</h4>
-<ul>
-<li><strong>组成</strong>：由<strong>主剂</strong>（起粘合作用，如合成树脂或橡胶）和<strong>助剂</strong>（固化剂、溶剂、增塑剂等）组成 。</li>
-<li><strong>固化类型</strong>：热熔型、溶剂型、乳液型、热固型 。</li>
-<li><strong>胶结理论</strong>：机械理论、吸附理论、扩散理论、静电理论及化学键理论 。</li>
-</ul>
-</section>
-<section id="涂料" class="level4">
-<h4 class="anchored" data-anchor-id="涂料">9.3.2 涂料</h4>
-<ul>
-<li><strong>组成</strong>：基料（成膜物质）、颜料、溶剂和助剂 。</li>
-<li><strong>功能</strong>：装饰、防锈、防腐、防水等 。</li>
-<li><strong>常见品种</strong>：环氧树脂涂料（附着力强）、聚氨酯涂料（综合性能优）、酚醛树脂涂料（历史悠久） 。</li>
-</ul>
-</section>
-<section id="离子交换树脂" class="level4">
-<h4 class="anchored" data-anchor-id="离子交换树脂">9.3.3 离子交换树脂</h4>
-<ul>
-<li><strong>定义</strong>：含有能交换离子的活性基团、具有网状结构的高分子化合物 。</li>
-<li><strong>类型</strong>：
-<ol type="1">
-<li><strong>阳离子交换树脂</strong>：含酸性基团（如 <img src="https://latex.codecogs.com/png.latex?-SO_3H"> 为强酸性，<img src="https://latex.codecogs.com/png.latex?-COOH"> 为弱酸性） 。</li>
-<li><strong>阴离子交换树脂</strong>：含碱性基团（如季铵基为强碱性，氨基为弱碱性） 。</li>
-</ol></li>
-<li><strong>应用</strong>：硬水软化、脱盐水制造、废液处理及稀有元素提取 。</li>
-</ul>
+<section id="其他高分子材料" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="其他高分子材料"><span class="header-section-number">9.5</span> 其他高分子材料</h2>
+<p><strong>合成胶黏剂</strong>：主剂（合成树脂/橡胶）+ 助剂（固化剂、溶剂、增塑剂）</p>
+<p>固化类型：热熔型、溶剂型、乳液型、热固型</p>
+<p><strong>离子交换树脂：</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 45%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>类型</th>
+<th>活性基团</th>
+<th>代表</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>阳离子交换树脂</td>
+<td>酸性基（<img src="https://latex.codecogs.com/png.latex?-%5Ctext%7BSO%7D_3%5Ctext%7BH%7D">，<img src="https://latex.codecogs.com/png.latex?-%5Ctext%7BCOOH%7D">）</td>
+<td>强酸/弱酸型</td>
+</tr>
+<tr class="even">
+<td>阴离子交换树脂</td>
+<td>碱性基（季铵基、氨基）</td>
+<td>强碱/弱碱型</td>
+</tr>
+</tbody>
+</table>
+<p><strong>应用</strong>：硬水软化、脱盐水制造、废液处理、稀有元素提取</p>
 
 
 <!-- -->
 
-</section>
 </section>
 </section>
 
@@ -3394,7 +3793,7 @@ F--&gt; F1["四副构件"]
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
   <guid>https://qmdthings.top/notes/mgmt/POM.html</guid>
-  <pubDate>Mon, 27 Apr 2026 08:44:58 GMT</pubDate>
+  <pubDate>Mon, 27 Apr 2026 12:01:45 GMT</pubDate>
 </item>
 <item>
   <title></title>
@@ -3499,7 +3898,7 @@ F--&gt; F1["四副构件"]
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div> ]]></description>
   <guid>https://qmdthings.top/notes/elec/electrical-technology-1.html</guid>
-  <pubDate>Mon, 27 Apr 2026 08:44:58 GMT</pubDate>
+  <pubDate>Mon, 27 Apr 2026 12:01:45 GMT</pubDate>
 </item>
 </channel>
 </rss>
