@@ -3,11 +3,9 @@
     "listing": "/index.html",
     "items": [
       "/notes/mgmt/POM.html",
-      "/notes/elec/electrical-technology-2.html",
-      "/notes/elec/electrical-technology-1.html",
-      "/notes/elec/circuits.html",
-      "/notes/elec/circuit-analysis.html",
+      "/notes/elec/electrical-technology.html",
       "/notes/mech/mechanical-principles.html",
+      "/notes/mech/a.html",
       "/notes/mech/materials-mechanics.html",
       "/notes/stats/probability-statistics.html",
       "/posts/开始/index.html",

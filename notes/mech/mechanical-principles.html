@@ -392,11 +392,11 @@ window.Quarto = {
  <span class="dropdown-text">Chem</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../notes/elec/circuit-analysis.html">
+    <a class="dropdown-item" href="../../notes/elec/electrical-technology.html">
  <span class="dropdown-text">Elec</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../notes/mech/materials-mechanics.html">
+    <a class="dropdown-item" href="../../notes/mech/a.html">
  <span class="dropdown-text">Mech</span></a>
   </li>  
         <li>
@@ -450,7 +450,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Notes</li><li class="breadcrumb-item"><a href="../../notes/mech/materials-mechanics.html">Mech</a></li><li class="breadcrumb-item"><a href="../../notes/mech/mechanical-principles.html">机械原理</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Notes</li><li class="breadcrumb-item"><a href="../../notes/mech/a.html">Mech</a></li><li class="breadcrumb-item"><a href="../../notes/mech/mechanical-principles.html">机械原理</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -462,7 +462,7 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Notes</li><li class="breadcrumb-item"><a href="../../notes/mech/materials-mechanics.html">Mech</a></li><li class="breadcrumb-item"><a href="../../notes/mech/mechanical-principles.html">机械原理</a></li></ol></nav>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Notes</li><li class="breadcrumb-item"><a href="../../notes/mech/a.html">Mech</a></li><li class="breadcrumb-item"><a href="../../notes/mech/mechanical-principles.html">机械原理</a></li></ol></nav>
       <div class="quarto-title-block"><div><h1 class="title">机械原理</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source Code</button></div></div>
                   <div>
         <div class="description">
@@ -543,26 +543,8 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/elec/circuit-analysis.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">电路的暂态分析</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notes/elec/circuits.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Circuits</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notes/elec/electrical-technology-1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">正弦交流电</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notes/elec/electrical-technology-2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Electrical Technology 2</span></a>
+  <a href="../../notes/elec/electrical-technology.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">电工技术</span></a>
   </div>
 </li>
       </ul>
@@ -576,6 +558,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/mech/a.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">材料力学</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notes/mech/materials-mechanics.html" class="sidebar-item-text sidebar-link">
@@ -749,7 +737,7 @@ window.Quarto = {
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">graph LR
-A["零件"]--&gt;B["构件"]--&gt;C["机构"]--&gt;D["机器"]
+A--&gt;B--&gt;C--&gt;D
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -771,48 +759,48 @@ A["零件"]--&gt;B["构件"]--&gt;C["机构"]--&gt;D["机器"]
 <div>
 <pre class="mermaid mermaid-js">graph LR
 
-A["运动副分类"] --&gt; B["按副元素接触形式"]
-B --&gt; B1["低副: 通过面接触构成"]
-B --&gt; B2["高副: 通过点或线接触构成"]
+A --&gt; B
+B --&gt; B1
+B --&gt; B2
 
-A --&gt; C["按相对运动形式"]
+A --&gt; C
 
-subgraph K ["复合平面运动副"]
-C1["平面运动副"]
-C2["空间运动副"]
+subgraph K 
+C1
+C2
 end
 
 C --&gt; C1
 C --&gt; C2
 
 
-subgraph L ["基本运动副"]
-C1a["转动副/回转副R"]
-C1b["移动副P"]
+subgraph L 
+C1a
+C1b
 end
 
-C1 --&gt; C1a["转动副/回转副R"]
-C1 --&gt; C1b["移动副P"]
-C1 --&gt; C1b["平面副F"]
+C1 --&gt; C1a
+C1 --&gt; C1b
+C1 --&gt; C1b
 
-C2 --&gt; C2a["螺旋副H"]
-C2 --&gt; C2b["球面副S"]
-C2 --&gt; C2c["槽销副RP/球销副/圆柱副C等"]
+C2 --&gt; C2a
+C2 --&gt; C2b
+C2 --&gt; C2c
 
-A --&gt; D["按封闭方式"]
-D --&gt; D1["几何封闭: 靠副元素几何形状封闭"]
-D --&gt; D2["力封闭: 靠重力、弹簧力等封闭"]
+A --&gt; D
+D --&gt; D1
+D --&gt; D2
 
-A --&gt; E["按引入约束的数目"]
-E --&gt; E1["I 级副: 引入 1 个约束"]
-E --&gt; E2["II 级副: 引入 2 个约束"]
-E --&gt; E3["..."]
-E --&gt; E4["V 级副: 引入 5 个约束"]
+A --&gt; E
+E --&gt; E1
+E --&gt; E2
+E --&gt; E3
+E --&gt; E4
 
-A--&gt; F["运动副的链接情况"]
-F--&gt; F1["单副构件"]
-F--&gt; F1["两副构件"]
-F--&gt; F1["四副构件"]
+A--&gt; F
+F--&gt; F1
+F--&gt; F1
+F--&gt; F1
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -887,8 +875,8 @@ F--&gt; F1["四副构件"]
 <section id="运动分析的方法" class="level4">
 <h4 class="anchored" data-anchor-id="运动分析的方法">1. 运动分析的方法</h4>
 <ul>
-<li><strong>图解法</strong>：直观、简单，适用于对机构在特定位置的运动分析，主要包括<strong>矢量方程图解法</strong>和<strong>瞬心法</strong> [1, 6]。</li>
-<li><strong>解析法</strong>：精度高，适用于整个运动循环的连续分析，便于利用计算机进行机构优化设计 [1]。</li>
+<li><strong>图解法</strong>：直观、简单，适用于对机构在特定位置的运动分析，主要包括<strong>矢量方程图解法</strong>和<strong>瞬心法</strong> 。</li>
+<li><strong>解析法</strong>：精度高，适用于整个运动循环的连续分析，便于利用计算机进行机构优化设计 。</li>
 </ul>
 </section>
 <section id="瞬心法分析步骤" class="level4">
@@ -899,15 +887,15 @@ F--&gt; F1["四副构件"]
 <li>利用瞬心点速度相等的特性求解角速度或线速度。</li>
 </ul>
 </section>
-<section id="矢量方程图解法-相对运动解法-6-8" class="level4">
-<h4 class="anchored" data-anchor-id="矢量方程图解法-相对运动解法-6-8">3. 矢量方程图解法 (相对运动解法) [6, 8]</h4>
+<section id="矢量方程图解法-相对运动解法" class="level4">
+<h4 class="anchored" data-anchor-id="矢量方程图解法-相对运动解法">3. 矢量方程图解法 (相对运动解法)</h4>
 <ul>
 <li>依据理论力学的运动合成原理：<span class="math inline">\(\text{绝对运动} = \text{牵连运动} + \text{相对运动}\)</span>。</li>
 <li>需要选取合适的速度比例尺 <span class="math inline">\(\mu_v\)</span> 和加速度比例尺 <span class="math inline">\(\mu_a\)</span>。</li>
 </ul>
 </section>
-<section id="解析法常用工具-9-10" class="level4">
-<h4 class="anchored" data-anchor-id="解析法常用工具-9-10">4. 解析法常用工具 [9, 10]</h4>
+<section id="解析法常用工具" class="level4">
+<h4 class="anchored" data-anchor-id="解析法常用工具">4. 解析法常用工具</h4>
 <ul>
 <li><strong>复数矢量法</strong>：利用欧拉公式将矢量方程转化为代数方程。</li>
 <li><strong>矩阵法</strong>：建立位置矩阵方程，通过求导得到速度和加速度矩阵方程。</li>
@@ -916,8 +904,8 @@ F--&gt; F1["四副构件"]
 </section>
 <section id="三-核心公式-formulas" class="level3">
 <h3 class="anchored" data-anchor-id="三-核心公式-formulas">三、 核心公式 (Formulas)</h3>
-<section id="比例尺计算-1-8" class="level4">
-<h4 class="anchored" data-anchor-id="比例尺计算-1-8">1. 比例尺计算 [1, 8]</h4>
+<section id="比例尺计算" class="level4">
+<h4 class="anchored" data-anchor-id="比例尺计算">1. 比例尺计算</h4>
 <ul>
 <li>长度比例尺：<span class="math inline">\(\mu_l = \frac{实际长度(m)}{图上长度(mm)}\)</span></li>
 <li>速度比例尺：<span class="math inline">\(\mu_v = \frac{实际速度(m/s)}{图上速度(mm)}\)</span></li>
@@ -927,24 +915,24 @@ F--&gt; F1["四副构件"]
 <h4 class="anchored" data-anchor-id="瞬心数量公式">2. 瞬心数量公式</h4>
 <p><span class="math display">\[K = \frac{N(N-1)}{2}\]</span> （其中 <span class="math inline">\(N\)</span> 为构件总数，含机架）</p>
 </section>
-<section id="矢量位移方程封闭矢量环-11" class="level4">
-<h4 class="anchored" data-anchor-id="矢量位移方程封闭矢量环-11">3. 矢量位移方程（封闭矢量环） [11]</h4>
+<section id="矢量位移方程封闭矢量环" class="level4">
+<h4 class="anchored" data-anchor-id="矢量位移方程封闭矢量环">3. 矢量位移方程（封闭矢量环）</h4>
 <p><span class="math display">\[\sum \vec{l}_i = 0\]</span></p>
 </section>
-<section id="速度矢量方程同一构件两点间-8" class="level4">
-<h4 class="anchored" data-anchor-id="速度矢量方程同一构件两点间-8">4. 速度矢量方程（同一构件两点间） [8]</h4>
+<section id="速度矢量方程同一构件两点间" class="level4">
+<h4 class="anchored" data-anchor-id="速度矢量方程同一构件两点间">4. 速度矢量方程（同一构件两点间）</h4>
 <p><span class="math display">\[\vec{v}_C = \vec{v}_B + \vec{v}_{CB}\]</span> 其中：<span class="math inline">\(v_{CB} = \omega \cdot l_{BC}\)</span>，方向垂直于 <span class="math inline">\(BC\)</span>。</p>
 </section>
-<section id="加速度矢量方程同一构件两点间-8" class="level4">
-<h4 class="anchored" data-anchor-id="加速度矢量方程同一构件两点间-8">5. 加速度矢量方程（同一构件两点间） [8]</h4>
+<section id="加速度矢量方程同一构件两点间" class="level4">
+<h4 class="anchored" data-anchor-id="加速度矢量方程同一构件两点间">5. 加速度矢量方程（同一构件两点间）</h4>
 <p><span class="math display">\[\vec{a}_C = \vec{a}_B + \vec{a}_{CB}^n + \vec{a}_{CB}^t\]</span> * <strong>法向加速度</strong>：<span class="math inline">\(a_{CB}^n = \omega^2 \cdot l_{BC}\)</span>，方向由 <span class="math inline">\(C\)</span> 指向 <span class="math inline">\(B\)</span>。 * <strong>切向加速度</strong>：<span class="math inline">\(a_{CB}^t = \alpha \cdot l_{BC}\)</span>，方向垂直于 <span class="math inline">\(BC\)</span>。</p>
 </section>
-<section id="哥氏加速度计算公式-4" class="level4">
-<h4 class="anchored" data-anchor-id="哥氏加速度计算公式-4">6. 哥氏加速度计算公式 [4]</h4>
+<section id="哥氏加速度计算公式" class="level4">
+<h4 class="anchored" data-anchor-id="哥氏加速度计算公式">6. 哥氏加速度计算公式</h4>
 <p><span class="math display">\[a^k = 2\omega \cdot v_r\]</span> （其中 <span class="math inline">\(\omega\)</span> 为牵连角速度，<span class="math inline">\(v_r\)</span> 为相对速度。方向：将 <span class="math inline">\(v_r\)</span> 顺着 <span class="math inline">\(\omega\)</span> 的转向转过 <span class="math inline">\(90^\circ\)</span>）</p>
 </section>
-<section id="矩阵分析通用形式-12" class="level4">
-<h4 class="anchored" data-anchor-id="矩阵分析通用形式-12">7. 矩阵分析通用形式 [12]</h4>
+<section id="矩阵分析通用形式" class="level4">
+<h4 class="anchored" data-anchor-id="矩阵分析通用形式">7. 矩阵分析通用形式</h4>
 <ul>
 <li>速度分析：<span class="math inline">\(A\omega = \omega_1 B\)</span></li>
 <li>加速度分析：<span class="math inline">\(A\alpha = -\dot{A}\omega + \omega_1 \dot{B}\)</span></li>
