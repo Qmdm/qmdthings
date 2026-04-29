@@ -71,7 +71,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../notes/elec/circuit-analysis.html" rel="next">
+<link href="../../notes/elec/electrical-technology.html" rel="next">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -389,11 +389,11 @@ window.Quarto = {
  <span class="dropdown-text">Chem</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../notes/elec/circuit-analysis.html">
+    <a class="dropdown-item" href="../../notes/elec/electrical-technology.html">
  <span class="dropdown-text">Elec</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../notes/mech/materials-mechanics.html">
+    <a class="dropdown-item" href="../../notes/mech/a.html">
  <span class="dropdown-text">Mech</span></a>
   </li>  
         <li>
@@ -540,26 +540,8 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/elec/circuit-analysis.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">电路的暂态分析</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notes/elec/circuits.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Circuits</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notes/elec/electrical-technology-1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">正弦交流电</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notes/elec/electrical-technology-2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Electrical Technology 2</span></a>
+  <a href="../../notes/elec/electrical-technology.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">电工技术</span></a>
   </div>
 </li>
       </ul>
@@ -573,6 +555,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/mech/a.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">材料力学</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notes/mech/materials-mechanics.html" class="sidebar-item-text sidebar-link">
@@ -658,7 +646,10 @@ window.Quarto = {
   <li><a href="#稀溶液的依数性" id="toc-稀溶液的依数性" class="nav-link" data-scroll-target="#稀溶液的依数性"><span class="header-section-number">3.3</span> 稀溶液的依数性</a></li>
   <li><a href="#酸碱理论" id="toc-酸碱理论" class="nav-link" data-scroll-target="#酸碱理论"><span class="header-section-number">3.4</span> 酸碱理论</a></li>
   <li><a href="#弱酸弱碱的解离平衡" id="toc-弱酸弱碱的解离平衡" class="nav-link" data-scroll-target="#弱酸弱碱的解离平衡"><span class="header-section-number">3.5</span> 弱酸弱碱的解离平衡</a></li>
-  <li><a href="#缓冲溶液" id="toc-缓冲溶液" class="nav-link" data-scroll-target="#缓冲溶液"><span class="header-section-number">3.6</span> 缓冲溶液</a></li>
+  <li><a href="#缓冲溶液" id="toc-缓冲溶液" class="nav-link" data-scroll-target="#缓冲溶液"><span class="header-section-number">3.6</span> 缓冲溶液</a>
+  <ul class="collapse">
+  <li><a href="#缓冲容量与有效范围的推导" id="toc-缓冲容量与有效范围的推导" class="nav-link" data-scroll-target="#缓冲容量与有效范围的推导">缓冲容量与有效范围的推导</a></li>
+  </ul></li>
   <li><a href="#沉淀溶解平衡" id="toc-沉淀溶解平衡" class="nav-link" data-scroll-target="#沉淀溶解平衡"><span class="header-section-number">3.7</span> 沉淀溶解平衡</a></li>
   <li><a href="#胶体与表面活性剂" id="toc-胶体与表面活性剂" class="nav-link" data-scroll-target="#胶体与表面活性剂"><span class="header-section-number">3.8</span> 胶体与表面活性剂</a></li>
   <li><a href="#水体污染指标" id="toc-水体污染指标" class="nav-link" data-scroll-target="#水体污染指标"><span class="header-section-number">3.9</span> 水体污染指标</a></li>
@@ -1341,7 +1332,72 @@ window.Quarto = {
 </div>
 <p><strong>组成</strong>：弱酸及其盐（如 <span class="math inline">\(\text{HAc-NaAc}\)</span>）或弱碱及其盐。<br>
 <strong>缓冲容量</strong>：浓度越大或比值越接近 1，容量越大。</p>
+<section id="缓冲容量与有效范围的推导" class="level3">
+<h3 class="anchored" data-anchor-id="缓冲容量与有效范围的推导">缓冲容量与有效范围的推导</h3>
+<p><strong>缓冲容量</strong> <span class="math inline">\(\beta\)</span> 定义为使 1 L 溶液改变 1 个 pH 单位所需加入强碱的物质的量：</p>
+<p><span class="math display">\[\beta = \frac{dc_b}{d\text{pH}} \approx 2.303 \times \frac{[\text{HA}][\text{A}^-]}{[\text{HA}] + [\text{A}^-]}\]</span></p>
+<p>令 <span class="math inline">\(r = [\text{A}^-]/[\text{HA}]\)</span>，<span class="math inline">\(c_\text{总} = [\text{HA}] + [\text{A}^-]\)</span>，代入化简得：</p>
+<p><span class="math display">\[\beta(r) = 2.303\, c_{\text{总}} \cdot \frac{r}{(1+r)^2}\]</span></p>
+<p><span class="math inline">\(\beta\)</span> 由两个因子决定：<span class="math inline">\(c_\text{总}\)</span> 越大 <span class="math inline">\(\beta\)</span> 越大；<span class="math inline">\(\dfrac{r}{(1+r)^2}\)</span> 在 <span class="math inline">\(r=1\)</span> 时取最大值 <span class="math inline">\(\dfrac{1}{4}\)</span>。</p>
+<p><strong>为何有效范围是 <span class="math inline">\(\pm 1\)</span>？</strong></p>
+<p>由 H-H 方程，<span class="math inline">\(r = 10^{\text{pH} - pK_a}\)</span>，故 <span class="math inline">\(r\)</span> 偏离 1 对应 pH 偏离 <span class="math inline">\(pK_a\)</span>：</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(r\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\text{pH}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\dfrac{r}{(1+r)^2}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\beta / \beta_{\max}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(pK_a\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0.250\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(100\%\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(10\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(pK_a + 1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\approx 0.083\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\approx 33\%\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(0.1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(pK_a - 1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\approx 0.083\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\approx 33\%\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(100\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(pK_a + 2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\approx 0.010\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\approx 4\%\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled" title="$\pm 1$ 的由来">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><span class="math inline">\(\pm 1\)</span> 的由来
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(r = 10\)</span> 或 <span class="math inline">\(0.1\)</span> 时 <span class="math inline">\(\beta\)</span> 降至最大值的约 <span class="math inline">\(\frac{1}{3}\)</span>，通常视为缓冲能力显著不足的阈值。<span class="math inline">\(pH = pK_a \pm 1\)</span> 正好对应这一边界，因此被约定为<strong>有效缓冲范围</strong>。这是一个基于缓冲容量衰减的经验边界，而非严格推导的结论。</p>
+</div>
+</div>
+<p><strong>应用要点：</strong></p>
+<ul>
+<li>选择缓冲体系时，应使目标 pH 落在所选缓冲对的 <span class="math inline">\(pK_a \pm 1\)</span> 范围内</li>
+<li><span class="math inline">\(\text{pH} = pK_a\)</span> 时缓冲能力最强</li>
+<li><span class="math inline">\(c_\text{总}\)</span> 越大，<span class="math inline">\(\beta\)</span> 越大，可耐受的酸碱量越大</li>
+</ul>
 <hr>
+</section>
 </section>
 <section id="沉淀溶解平衡" class="level2" data-number="3.7">
 <h2 data-number="3.7" class="anchored" data-anchor-id="沉淀溶解平衡"><span class="header-section-number">3.7</span> 沉淀溶解平衡</h2>
@@ -3035,8 +3091,8 @@ window.Quarto = {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../notes/elec/circuit-analysis.html" class="pagination-link" aria-label="电路的暂态分析">
-        <span class="nav-page-text">电路的暂态分析</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../notes/elec/electrical-technology.html" class="pagination-link" aria-label="电工技术">
+        <span class="nav-page-text">电工技术</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
@@ -3453,663 +3509,696 @@ window.Quarto = {
 <span id="cb1-411"><a href="#cb1-411"></a>**组成**：弱酸及其盐（如 $\text{HAc-NaAc}$）或弱碱及其盐。  </span>
 <span id="cb1-412"><a href="#cb1-412"></a>**缓冲容量**：浓度越大或比值越接近 1，容量越大。</span>
 <span id="cb1-413"><a href="#cb1-413"></a></span>
-<span id="cb1-414"><a href="#cb1-414"></a>---</span>
+<span id="cb1-414"><a href="#cb1-414"></a><span class="fu">### 缓冲容量与有效范围的推导</span></span>
 <span id="cb1-415"><a href="#cb1-415"></a></span>
-<span id="cb1-416"><a href="#cb1-416"></a><span class="fu">## 沉淀溶解平衡</span></span>
+<span id="cb1-416"><a href="#cb1-416"></a>**缓冲容量** $\beta$ 定义为使 1 L 溶液改变 1 个 pH 单位所需加入强碱的物质的量：</span>
 <span id="cb1-417"><a href="#cb1-417"></a></span>
-<span id="cb1-418"><a href="#cb1-418"></a>$$A_nB_m(s) \rightleftharpoons nA^{m+}(aq) + mB^{n-}(aq)$$</span>
+<span id="cb1-418"><a href="#cb1-418"></a>$$\beta = \frac{dc_b}{d\text{pH}} \approx 2.303 \times \frac{<span class="co">[</span><span class="ot">\text{HA}</span><span class="co">][\text{A}^-]</span>}{<span class="co">[</span><span class="ot">\text{HA}</span><span class="co">]</span> + <span class="co">[</span><span class="ot">\text{A}^-</span><span class="co">]</span>}$$</span>
 <span id="cb1-419"><a href="#cb1-419"></a></span>
-<span id="cb1-420"><a href="#cb1-420"></a>$$K^\ominus_{sp} = <span class="sc">\{</span>c'(A^{m+})<span class="sc">\}</span>^n \cdot <span class="sc">\{</span>c'(B^{n-})<span class="sc">\}</span>^m$$</span>
+<span id="cb1-420"><a href="#cb1-420"></a>令 $r = <span class="co">[</span><span class="ot">\text{A}^-</span><span class="co">]</span>/<span class="co">[</span><span class="ot">\text{HA}</span><span class="co">]</span>$，$c_\text{总} = <span class="co">[</span><span class="ot">\text{HA}</span><span class="co">]</span> + <span class="co">[</span><span class="ot">\text{A}^-</span><span class="co">]</span>$，代入化简得：</span>
 <span id="cb1-421"><a href="#cb1-421"></a></span>
-<span id="cb1-422"><a href="#cb1-422"></a><span class="pp">|</span> 判据 <span class="pp">|</span> 结果 <span class="pp">|</span></span>
-<span id="cb1-423"><a href="#cb1-423"></a><span class="pp">|:----:|------|</span></span>
-<span id="cb1-424"><a href="#cb1-424"></a><span class="pp">|</span> $Q_i &gt; K_{sp}$ <span class="pp">|</span> 产生沉淀 <span class="pp">|</span></span>
-<span id="cb1-425"><a href="#cb1-425"></a><span class="pp">|</span> $Q_i &lt; K_{sp}$ <span class="pp">|</span> 无沉淀（或沉淀溶解）<span class="pp">|</span></span>
-<span id="cb1-426"><a href="#cb1-426"></a></span>
-<span id="cb1-427"><a href="#cb1-427"></a>**溶解沉淀的方法**：生成弱电解质（加酸）、生成配合物、发生氧化还原反应。  </span>
-<span id="cb1-428"><a href="#cb1-428"></a>**转化规律**：溶解度较大的沉淀→溶解度更小的沉淀。</span>
+<span id="cb1-422"><a href="#cb1-422"></a>$$\beta(r) = 2.303\, c_{\text{总}} \cdot \frac{r}{(1+r)^2}$$</span>
+<span id="cb1-423"><a href="#cb1-423"></a></span>
+<span id="cb1-424"><a href="#cb1-424"></a>$\beta$ 由两个因子决定：$c_\text{总}$ 越大 $\beta$ 越大；$\dfrac{r}{(1+r)^2}$ 在 $r=1$ 时取最大值 $\dfrac{1}{4}$。</span>
+<span id="cb1-425"><a href="#cb1-425"></a></span>
+<span id="cb1-426"><a href="#cb1-426"></a>**为何有效范围是 $\pm 1$？**</span>
+<span id="cb1-427"><a href="#cb1-427"></a></span>
+<span id="cb1-428"><a href="#cb1-428"></a>由 H-H 方程，$r = 10^{\text{pH} - pK_a}$，故 $r$ 偏离 1 对应 pH 偏离 $pK_a$：</span>
 <span id="cb1-429"><a href="#cb1-429"></a></span>
-<span id="cb1-430"><a href="#cb1-430"></a>---</span>
-<span id="cb1-431"><a href="#cb1-431"></a></span>
-<span id="cb1-432"><a href="#cb1-432"></a><span class="fu">## 胶体与表面活性剂</span></span>
-<span id="cb1-433"><a href="#cb1-433"></a></span>
-<span id="cb1-434"><a href="#cb1-434"></a>:::: {.columns}</span>
-<span id="cb1-435"><a href="#cb1-435"></a></span>
-<span id="cb1-436"><a href="#cb1-436"></a>::: {.column width="60%"}</span>
-<span id="cb1-437"><a href="#cb1-437"></a>**胶体的性质**</span>
-<span id="cb1-438"><a href="#cb1-438"></a></span>
-<span id="cb1-439"><a href="#cb1-439"></a><span class="pp">|</span> 性质类别 <span class="pp">|</span> 现象 <span class="pp">|</span></span>
-<span id="cb1-440"><a href="#cb1-440"></a><span class="pp">|----------|------|</span></span>
-<span id="cb1-441"><a href="#cb1-441"></a><span class="pp">|</span> 光学性质 <span class="pp">|</span> 丁铎尔效应 <span class="pp">|</span></span>
-<span id="cb1-442"><a href="#cb1-442"></a><span class="pp">|</span> 动力性质 <span class="pp">|</span> 布朗运动 <span class="pp">|</span></span>
-<span id="cb1-443"><a href="#cb1-443"></a><span class="pp">|</span> 电学性质 <span class="pp">|</span> 电泳、电渗 <span class="pp">|</span></span>
-<span id="cb1-444"><a href="#cb1-444"></a></span>
-<span id="cb1-445"><a href="#cb1-445"></a>**稳定因素**：胶粒带电、水化膜保护、布朗运动</span>
+<span id="cb1-430"><a href="#cb1-430"></a><span class="pp">|</span> $r$ <span class="pp">|</span> $\text{pH}$ <span class="pp">|</span> $\dfrac{r}{(1+r)^2}$ <span class="pp">|</span> $\beta / \beta_{\max}$ <span class="pp">|</span></span>
+<span id="cb1-431"><a href="#cb1-431"></a><span class="pp">|:---:|:-----------:|:--------------------:|:----------------------:|</span></span>
+<span id="cb1-432"><a href="#cb1-432"></a><span class="pp">|</span> $1$ <span class="pp">|</span> $pK_a$ <span class="pp">|</span> $0.250$ <span class="pp">|</span> $100\%$ <span class="pp">|</span></span>
+<span id="cb1-433"><a href="#cb1-433"></a><span class="pp">|</span> $10$ <span class="pp">|</span> $pK_a + 1$ <span class="pp">|</span> $\approx 0.083$ <span class="pp">|</span> $\approx 33\%$ <span class="pp">|</span></span>
+<span id="cb1-434"><a href="#cb1-434"></a><span class="pp">|</span> $0.1$ <span class="pp">|</span> $pK_a - 1$ <span class="pp">|</span> $\approx 0.083$ <span class="pp">|</span> $\approx 33\%$ <span class="pp">|</span></span>
+<span id="cb1-435"><a href="#cb1-435"></a><span class="pp">|</span> $100$ <span class="pp">|</span> $pK_a + 2$ <span class="pp">|</span> $\approx 0.010$ <span class="pp">|</span> $\approx 4\%$ <span class="pp">|</span></span>
+<span id="cb1-436"><a href="#cb1-436"></a></span>
+<span id="cb1-437"><a href="#cb1-437"></a>::: {.callout-note title="$\pm 1$ 的由来"}</span>
+<span id="cb1-438"><a href="#cb1-438"></a>$r = 10$ 或 $0.1$ 时 $\beta$ 降至最大值的约 $\frac{1}{3}$，通常视为缓冲能力显著不足的阈值。$pH = pK_a \pm 1$ 正好对应这一边界，因此被约定为**有效缓冲范围**。这是一个基于缓冲容量衰减的经验边界，而非严格推导的结论。</span>
+<span id="cb1-439"><a href="#cb1-439"></a>:::</span>
+<span id="cb1-440"><a href="#cb1-440"></a></span>
+<span id="cb1-441"><a href="#cb1-441"></a>**应用要点：**</span>
+<span id="cb1-442"><a href="#cb1-442"></a></span>
+<span id="cb1-443"><a href="#cb1-443"></a><span class="ss">- </span>选择缓冲体系时，应使目标 pH 落在所选缓冲对的 $pK_a \pm 1$ 范围内</span>
+<span id="cb1-444"><a href="#cb1-444"></a><span class="ss">- </span>$\text{pH} = pK_a$ 时缓冲能力最强</span>
+<span id="cb1-445"><a href="#cb1-445"></a><span class="ss">- </span>$c_\text{总}$ 越大，$\beta$ 越大，可耐受的酸碱量越大</span>
 <span id="cb1-446"><a href="#cb1-446"></a></span>
-<span id="cb1-447"><a href="#cb1-447"></a>**聚沉方法**：加电解质、异号溶胶混合、加热</span>
-<span id="cb1-448"><a href="#cb1-448"></a>:::</span>
-<span id="cb1-449"><a href="#cb1-449"></a></span>
-<span id="cb1-450"><a href="#cb1-450"></a>::: {.column width="40%"}</span>
-<span id="cb1-451"><a href="#cb1-451"></a>**表面活性剂**</span>
+<span id="cb1-447"><a href="#cb1-447"></a>---</span>
+<span id="cb1-448"><a href="#cb1-448"></a></span>
+<span id="cb1-449"><a href="#cb1-449"></a><span class="fu">## 沉淀溶解平衡</span></span>
+<span id="cb1-450"><a href="#cb1-450"></a></span>
+<span id="cb1-451"><a href="#cb1-451"></a>$$A_nB_m(s) \rightleftharpoons nA^{m+}(aq) + mB^{n-}(aq)$$</span>
 <span id="cb1-452"><a href="#cb1-452"></a></span>
-<span id="cb1-453"><a href="#cb1-453"></a><span class="ss">- </span>结构：亲水基 + 疏水（亲油）基</span>
-<span id="cb1-454"><a href="#cb1-454"></a><span class="ss">- </span>**CMC**：临界胶束浓度，超过后溶液性质突变</span>
-<span id="cb1-455"><a href="#cb1-455"></a><span class="ss">- </span>四大作用：润湿、乳化、发泡、增溶/洗涤</span>
-<span id="cb1-456"><a href="#cb1-456"></a>:::</span>
-<span id="cb1-457"><a href="#cb1-457"></a></span>
-<span id="cb1-458"><a href="#cb1-458"></a>::::</span>
+<span id="cb1-453"><a href="#cb1-453"></a>$$K^\ominus_{sp} = <span class="sc">\{</span>c'(A^{m+})<span class="sc">\}</span>^n \cdot <span class="sc">\{</span>c'(B^{n-})<span class="sc">\}</span>^m$$</span>
+<span id="cb1-454"><a href="#cb1-454"></a></span>
+<span id="cb1-455"><a href="#cb1-455"></a><span class="pp">|</span> 判据 <span class="pp">|</span> 结果 <span class="pp">|</span></span>
+<span id="cb1-456"><a href="#cb1-456"></a><span class="pp">|:----:|------|</span></span>
+<span id="cb1-457"><a href="#cb1-457"></a><span class="pp">|</span> $Q_i &gt; K_{sp}$ <span class="pp">|</span> 产生沉淀 <span class="pp">|</span></span>
+<span id="cb1-458"><a href="#cb1-458"></a><span class="pp">|</span> $Q_i &lt; K_{sp}$ <span class="pp">|</span> 无沉淀（或沉淀溶解）<span class="pp">|</span></span>
 <span id="cb1-459"><a href="#cb1-459"></a></span>
-<span id="cb1-460"><a href="#cb1-460"></a>---</span>
-<span id="cb1-461"><a href="#cb1-461"></a></span>
-<span id="cb1-462"><a href="#cb1-462"></a><span class="fu">## 水体污染指标</span></span>
-<span id="cb1-463"><a href="#cb1-463"></a></span>
-<span id="cb1-464"><a href="#cb1-464"></a><span class="pp">|</span> 指标 <span class="pp">|</span> 全称 <span class="pp">|</span> 含义 <span class="pp">|</span></span>
-<span id="cb1-465"><a href="#cb1-465"></a><span class="pp">|------|------|------|</span></span>
-<span id="cb1-466"><a href="#cb1-466"></a><span class="pp">|</span> SS <span class="pp">|</span> 悬浮固体 <span class="pp">|</span> 水中不溶性固体颗粒 <span class="pp">|</span></span>
-<span id="cb1-467"><a href="#cb1-467"></a><span class="pp">|</span> BOD <span class="pp">|</span> 生化需氧量 <span class="pp">|</span> 微生物分解有机物耗氧量 <span class="pp">|</span></span>
-<span id="cb1-468"><a href="#cb1-468"></a><span class="pp">|</span> COD <span class="pp">|</span> 化学需氧量 <span class="pp">|</span> 化学氧化有机物耗氧量 <span class="pp">|</span></span>
-<span id="cb1-469"><a href="#cb1-469"></a><span class="pp">|</span> TOC <span class="pp">|</span> 总有机碳 <span class="pp">|</span> 有机污染物总量 <span class="pp">|</span></span>
-<span id="cb1-470"><a href="#cb1-470"></a></span>
-<span id="cb1-471"><a href="#cb1-471"></a>**三级处理**：物理（筛滤、沉淀）→ 化学（中和、混凝、电解）→ 生物（微生物降解）</span>
-<span id="cb1-472"><a href="#cb1-472"></a></span>
-<span id="cb1-473"><a href="#cb1-473"></a>---</span>
-<span id="cb1-474"><a href="#cb1-474"></a></span>
-<span id="cb1-475"><a href="#cb1-475"></a><span class="fu"># 氧化还原与电化学</span></span>
-<span id="cb1-476"><a href="#cb1-476"></a></span>
-<span id="cb1-477"><a href="#cb1-477"></a><span class="fu">## 基本概念</span></span>
-<span id="cb1-478"><a href="#cb1-478"></a></span>
-<span id="cb1-479"><a href="#cb1-479"></a>::: {.callout-note title="氧化还原的实质"}</span>
-<span id="cb1-480"><a href="#cb1-480"></a>电子的**得失或偏移**。氧化数升高 → 氧化；氧化数降低 → 还原。</span>
+<span id="cb1-460"><a href="#cb1-460"></a>**溶解沉淀的方法**：生成弱电解质（加酸）、生成配合物、发生氧化还原反应。  </span>
+<span id="cb1-461"><a href="#cb1-461"></a>**转化规律**：溶解度较大的沉淀→溶解度更小的沉淀。</span>
+<span id="cb1-462"><a href="#cb1-462"></a></span>
+<span id="cb1-463"><a href="#cb1-463"></a>---</span>
+<span id="cb1-464"><a href="#cb1-464"></a></span>
+<span id="cb1-465"><a href="#cb1-465"></a><span class="fu">## 胶体与表面活性剂</span></span>
+<span id="cb1-466"><a href="#cb1-466"></a></span>
+<span id="cb1-467"><a href="#cb1-467"></a>:::: {.columns}</span>
+<span id="cb1-468"><a href="#cb1-468"></a></span>
+<span id="cb1-469"><a href="#cb1-469"></a>::: {.column width="60%"}</span>
+<span id="cb1-470"><a href="#cb1-470"></a>**胶体的性质**</span>
+<span id="cb1-471"><a href="#cb1-471"></a></span>
+<span id="cb1-472"><a href="#cb1-472"></a><span class="pp">|</span> 性质类别 <span class="pp">|</span> 现象 <span class="pp">|</span></span>
+<span id="cb1-473"><a href="#cb1-473"></a><span class="pp">|----------|------|</span></span>
+<span id="cb1-474"><a href="#cb1-474"></a><span class="pp">|</span> 光学性质 <span class="pp">|</span> 丁铎尔效应 <span class="pp">|</span></span>
+<span id="cb1-475"><a href="#cb1-475"></a><span class="pp">|</span> 动力性质 <span class="pp">|</span> 布朗运动 <span class="pp">|</span></span>
+<span id="cb1-476"><a href="#cb1-476"></a><span class="pp">|</span> 电学性质 <span class="pp">|</span> 电泳、电渗 <span class="pp">|</span></span>
+<span id="cb1-477"><a href="#cb1-477"></a></span>
+<span id="cb1-478"><a href="#cb1-478"></a>**稳定因素**：胶粒带电、水化膜保护、布朗运动</span>
+<span id="cb1-479"><a href="#cb1-479"></a></span>
+<span id="cb1-480"><a href="#cb1-480"></a>**聚沉方法**：加电解质、异号溶胶混合、加热</span>
 <span id="cb1-481"><a href="#cb1-481"></a>:::</span>
 <span id="cb1-482"><a href="#cb1-482"></a></span>
-<span id="cb1-483"><a href="#cb1-483"></a>**氧化数规则：**</span>
-<span id="cb1-484"><a href="#cb1-484"></a></span>
-<span id="cb1-485"><a href="#cb1-485"></a><span class="ss">1. </span>单质中原子氧化数为零</span>
-<span id="cb1-486"><a href="#cb1-486"></a><span class="ss">2. </span>中性分子各原子氧化数代数和为零；离子的代数和等于电荷数</span>
-<span id="cb1-487"><a href="#cb1-487"></a><span class="ss">3. </span>H 通常为 $+1$（活泼金属氢化物中 $-1$）；O 通常为 $-2$（过氧化物中 $-1$）</span>
-<span id="cb1-488"><a href="#cb1-488"></a></span>
-<span id="cb1-489"><a href="#cb1-489"></a>---</span>
+<span id="cb1-483"><a href="#cb1-483"></a>::: {.column width="40%"}</span>
+<span id="cb1-484"><a href="#cb1-484"></a>**表面活性剂**</span>
+<span id="cb1-485"><a href="#cb1-485"></a></span>
+<span id="cb1-486"><a href="#cb1-486"></a><span class="ss">- </span>结构：亲水基 + 疏水（亲油）基</span>
+<span id="cb1-487"><a href="#cb1-487"></a><span class="ss">- </span>**CMC**：临界胶束浓度，超过后溶液性质突变</span>
+<span id="cb1-488"><a href="#cb1-488"></a><span class="ss">- </span>四大作用：润湿、乳化、发泡、增溶/洗涤</span>
+<span id="cb1-489"><a href="#cb1-489"></a>:::</span>
 <span id="cb1-490"><a href="#cb1-490"></a></span>
-<span id="cb1-491"><a href="#cb1-491"></a><span class="fu">## 原电池</span></span>
+<span id="cb1-491"><a href="#cb1-491"></a>::::</span>
 <span id="cb1-492"><a href="#cb1-492"></a></span>
-<span id="cb1-493"><a href="#cb1-493"></a>::: {.callout-important title="Gibbs 自由能与电动势"}</span>
-<span id="cb1-494"><a href="#cb1-494"></a>$$\Delta_r G_m = -nFE \qquad (\text{标准态：} \Delta_r G_m^\ominus = -nFE^\ominus)$$</span>
-<span id="cb1-495"><a href="#cb1-495"></a></span>
-<span id="cb1-496"><a href="#cb1-496"></a>$n$：转移电子数；$F \approx 96500\text{ C·mol}^{-1}$；$E$：电动势（V）</span>
-<span id="cb1-497"><a href="#cb1-497"></a>:::</span>
-<span id="cb1-498"><a href="#cb1-498"></a></span>
-<span id="cb1-499"><a href="#cb1-499"></a>**电池符号**：负极在左，正极在右，<span class="in">`|`</span> 表示相界面，<span class="in">`||`</span> 表示盐桥</span>
-<span id="cb1-500"><a href="#cb1-500"></a></span>
-<span id="cb1-501"><a href="#cb1-501"></a>$$(-)\,\text{Zn}\,|\,\text{Zn}^{2+}(c_1)\,||\,\text{Cu}^{2+}(c_2)\,|\,\text{Cu}\,(+)$$</span>
-<span id="cb1-502"><a href="#cb1-502"></a></span>
-<span id="cb1-503"><a href="#cb1-503"></a>**Nernst 方程（电池）：**</span>
-<span id="cb1-504"><a href="#cb1-504"></a></span>
-<span id="cb1-505"><a href="#cb1-505"></a>$$E = E^\ominus - \frac{RT}{nF}\ln Q \xrightarrow{298.15\text{ K}} E = E^\ominus - \frac{0.0592}{n}\lg Q$$</span>
-<span id="cb1-506"><a href="#cb1-506"></a></span>
-<span id="cb1-507"><a href="#cb1-507"></a>**$K^\ominus$ 与 $E^\ominus$ 的关系**（$E=0$ 时平衡）：</span>
-<span id="cb1-508"><a href="#cb1-508"></a></span>
-<span id="cb1-509"><a href="#cb1-509"></a>$$\lg K^\ominus = \frac{nE^\ominus}{0.0592}$$</span>
-<span id="cb1-510"><a href="#cb1-510"></a></span>
-<span id="cb1-511"><a href="#cb1-511"></a>---</span>
-<span id="cb1-512"><a href="#cb1-512"></a></span>
-<span id="cb1-513"><a href="#cb1-513"></a><span class="fu">## 电极电势</span></span>
-<span id="cb1-514"><a href="#cb1-514"></a></span>
-<span id="cb1-515"><a href="#cb1-515"></a>**标准氢电极**：$\phi^\ominus = 0.0000\text{ V}$，符号为 $\text{Pt}|\text{H}_2(100\text{ kPa})|\text{H}^+(1\text{ mol·L}^{-1})$</span>
-<span id="cb1-516"><a href="#cb1-516"></a></span>
-<span id="cb1-517"><a href="#cb1-517"></a>**Nernst 方程（电极）**：</span>
-<span id="cb1-518"><a href="#cb1-518"></a></span>
-<span id="cb1-519"><a href="#cb1-519"></a>对半反应 $a\text{A(氧化态)} + ne^- \rightleftharpoons b\text{B(还原态)}$：</span>
-<span id="cb1-520"><a href="#cb1-520"></a></span>
-<span id="cb1-521"><a href="#cb1-521"></a>$$\phi = \phi^\ominus + \frac{0.0592}{n}\lg\frac{<span class="sc">\{</span>c(\text{氧化态})/c^\ominus<span class="sc">\}</span>^a}{<span class="sc">\{</span>c(\text{还原态})/c^\ominus<span class="sc">\}</span>^b}$$</span>
-<span id="cb1-522"><a href="#cb1-522"></a></span>
-<span id="cb1-523"><a href="#cb1-523"></a>**应用：**</span>
-<span id="cb1-524"><a href="#cb1-524"></a></span>
-<span id="cb1-525"><a href="#cb1-525"></a><span class="pp">|</span> 应用 <span class="pp">|</span> 判据 <span class="pp">|</span></span>
-<span id="cb1-526"><a href="#cb1-526"></a><span class="pp">|------|------|</span></span>
-<span id="cb1-527"><a href="#cb1-527"></a><span class="pp">|</span> 氧化/还原能力 <span class="pp">|</span> $\phi^\ominus$ 大 → 氧化能力强；$\phi^\ominus$ 小 → 还原能力强 <span class="pp">|</span></span>
-<span id="cb1-528"><a href="#cb1-528"></a><span class="pp">|</span> 反应方向 <span class="pp">|</span> $E &gt; 0$（即 $\phi_{\text{氧化剂}} &gt; \phi_{\text{还原剂}}$）→ 自发正向 <span class="pp">|</span></span>
-<span id="cb1-529"><a href="#cb1-529"></a><span class="pp">|</span> 反应程度 <span class="pp">|</span> 由 $E^\ominus$ 计算 $K^\ominus$ <span class="pp">|</span></span>
-<span id="cb1-530"><a href="#cb1-530"></a></span>
-<span id="cb1-531"><a href="#cb1-531"></a>---</span>
-<span id="cb1-532"><a href="#cb1-532"></a></span>
-<span id="cb1-533"><a href="#cb1-533"></a><span class="fu">## 化学电源</span></span>
-<span id="cb1-534"><a href="#cb1-534"></a></span>
-<span id="cb1-535"><a href="#cb1-535"></a>::: {.panel-tabset}</span>
-<span id="cb1-536"><a href="#cb1-536"></a></span>
-<span id="cb1-537"><a href="#cb1-537"></a><span class="fu">### 一次电池</span></span>
-<span id="cb1-538"><a href="#cb1-538"></a></span>
-<span id="cb1-539"><a href="#cb1-539"></a>放电后**不可充电**复原，如锌锰干电池、锌汞纽扣电池。</span>
-<span id="cb1-540"><a href="#cb1-540"></a></span>
-<span id="cb1-541"><a href="#cb1-541"></a><span class="fu">### 二次电池</span></span>
-<span id="cb1-542"><a href="#cb1-542"></a></span>
-<span id="cb1-543"><a href="#cb1-543"></a>可充电重复使用：铅蓄电池、镍镉、镍氢、锂离子电池。</span>
-<span id="cb1-544"><a href="#cb1-544"></a></span>
-<span id="cb1-545"><a href="#cb1-545"></a>**铅蓄电池**：$\text{Pb} + \text{PbO}_2 + 2\text{H}_2\text{SO}_4 \rightleftharpoons 2\text{PbSO}_4 + 2\text{H}_2\text{O}$</span>
-<span id="cb1-546"><a href="#cb1-546"></a></span>
-<span id="cb1-547"><a href="#cb1-547"></a><span class="fu">### 燃料电池</span></span>
-<span id="cb1-548"><a href="#cb1-548"></a></span>
-<span id="cb1-549"><a href="#cb1-549"></a>连续将燃料氧化的化学能转化为电能，如氢氧燃料电池。</span>
-<span id="cb1-550"><a href="#cb1-550"></a></span>
-<span id="cb1-551"><a href="#cb1-551"></a>:::</span>
-<span id="cb1-552"><a href="#cb1-552"></a></span>
-<span id="cb1-553"><a href="#cb1-553"></a>---</span>
-<span id="cb1-554"><a href="#cb1-554"></a></span>
-<span id="cb1-555"><a href="#cb1-555"></a><span class="fu">## 电解</span></span>
-<span id="cb1-556"><a href="#cb1-556"></a></span>
-<span id="cb1-557"><a href="#cb1-557"></a>**阴极**（接电源负极）→ 还原反应；**阳极**（接电源正极）→ 氧化反应</span>
-<span id="cb1-558"><a href="#cb1-558"></a></span>
-<span id="cb1-559"><a href="#cb1-559"></a>**应用**：化工制备（烧碱）、电解提纯、电镀、阳极氧化、电刷镀</span>
-<span id="cb1-560"><a href="#cb1-560"></a></span>
-<span id="cb1-561"><a href="#cb1-561"></a>---</span>
-<span id="cb1-562"><a href="#cb1-562"></a></span>
-<span id="cb1-563"><a href="#cb1-563"></a><span class="fu">## 金属腐蚀与防护</span></span>
-<span id="cb1-564"><a href="#cb1-564"></a></span>
-<span id="cb1-565"><a href="#cb1-565"></a>::: {.panel-tabset}</span>
-<span id="cb1-566"><a href="#cb1-566"></a></span>
-<span id="cb1-567"><a href="#cb1-567"></a><span class="fu">### 腐蚀类型</span></span>
-<span id="cb1-568"><a href="#cb1-568"></a></span>
-<span id="cb1-569"><a href="#cb1-569"></a>**化学腐蚀**：单纯化学作用，如高温脱碳</span>
-<span id="cb1-570"><a href="#cb1-570"></a></span>
-<span id="cb1-571"><a href="#cb1-571"></a>**电化学腐蚀**：形成原电池引起</span>
-<span id="cb1-572"><a href="#cb1-572"></a></span>
-<span id="cb1-573"><a href="#cb1-573"></a><span class="ss">- </span>析氢腐蚀：酸性介质，阴极析出 $\text{H}_2$</span>
-<span id="cb1-574"><a href="#cb1-574"></a><span class="ss">- </span>吸氧腐蚀：中性/弱碱性介质，最常见</span>
+<span id="cb1-493"><a href="#cb1-493"></a>---</span>
+<span id="cb1-494"><a href="#cb1-494"></a></span>
+<span id="cb1-495"><a href="#cb1-495"></a><span class="fu">## 水体污染指标</span></span>
+<span id="cb1-496"><a href="#cb1-496"></a></span>
+<span id="cb1-497"><a href="#cb1-497"></a><span class="pp">|</span> 指标 <span class="pp">|</span> 全称 <span class="pp">|</span> 含义 <span class="pp">|</span></span>
+<span id="cb1-498"><a href="#cb1-498"></a><span class="pp">|------|------|------|</span></span>
+<span id="cb1-499"><a href="#cb1-499"></a><span class="pp">|</span> SS <span class="pp">|</span> 悬浮固体 <span class="pp">|</span> 水中不溶性固体颗粒 <span class="pp">|</span></span>
+<span id="cb1-500"><a href="#cb1-500"></a><span class="pp">|</span> BOD <span class="pp">|</span> 生化需氧量 <span class="pp">|</span> 微生物分解有机物耗氧量 <span class="pp">|</span></span>
+<span id="cb1-501"><a href="#cb1-501"></a><span class="pp">|</span> COD <span class="pp">|</span> 化学需氧量 <span class="pp">|</span> 化学氧化有机物耗氧量 <span class="pp">|</span></span>
+<span id="cb1-502"><a href="#cb1-502"></a><span class="pp">|</span> TOC <span class="pp">|</span> 总有机碳 <span class="pp">|</span> 有机污染物总量 <span class="pp">|</span></span>
+<span id="cb1-503"><a href="#cb1-503"></a></span>
+<span id="cb1-504"><a href="#cb1-504"></a>**三级处理**：物理（筛滤、沉淀）→ 化学（中和、混凝、电解）→ 生物（微生物降解）</span>
+<span id="cb1-505"><a href="#cb1-505"></a></span>
+<span id="cb1-506"><a href="#cb1-506"></a>---</span>
+<span id="cb1-507"><a href="#cb1-507"></a></span>
+<span id="cb1-508"><a href="#cb1-508"></a><span class="fu"># 氧化还原与电化学</span></span>
+<span id="cb1-509"><a href="#cb1-509"></a></span>
+<span id="cb1-510"><a href="#cb1-510"></a><span class="fu">## 基本概念</span></span>
+<span id="cb1-511"><a href="#cb1-511"></a></span>
+<span id="cb1-512"><a href="#cb1-512"></a>::: {.callout-note title="氧化还原的实质"}</span>
+<span id="cb1-513"><a href="#cb1-513"></a>电子的**得失或偏移**。氧化数升高 → 氧化；氧化数降低 → 还原。</span>
+<span id="cb1-514"><a href="#cb1-514"></a>:::</span>
+<span id="cb1-515"><a href="#cb1-515"></a></span>
+<span id="cb1-516"><a href="#cb1-516"></a>**氧化数规则：**</span>
+<span id="cb1-517"><a href="#cb1-517"></a></span>
+<span id="cb1-518"><a href="#cb1-518"></a><span class="ss">1. </span>单质中原子氧化数为零</span>
+<span id="cb1-519"><a href="#cb1-519"></a><span class="ss">2. </span>中性分子各原子氧化数代数和为零；离子的代数和等于电荷数</span>
+<span id="cb1-520"><a href="#cb1-520"></a><span class="ss">3. </span>H 通常为 $+1$（活泼金属氢化物中 $-1$）；O 通常为 $-2$（过氧化物中 $-1$）</span>
+<span id="cb1-521"><a href="#cb1-521"></a></span>
+<span id="cb1-522"><a href="#cb1-522"></a>---</span>
+<span id="cb1-523"><a href="#cb1-523"></a></span>
+<span id="cb1-524"><a href="#cb1-524"></a><span class="fu">## 原电池</span></span>
+<span id="cb1-525"><a href="#cb1-525"></a></span>
+<span id="cb1-526"><a href="#cb1-526"></a>::: {.callout-important title="Gibbs 自由能与电动势"}</span>
+<span id="cb1-527"><a href="#cb1-527"></a>$$\Delta_r G_m = -nFE \qquad (\text{标准态：} \Delta_r G_m^\ominus = -nFE^\ominus)$$</span>
+<span id="cb1-528"><a href="#cb1-528"></a></span>
+<span id="cb1-529"><a href="#cb1-529"></a>$n$：转移电子数；$F \approx 96500\text{ C·mol}^{-1}$；$E$：电动势（V）</span>
+<span id="cb1-530"><a href="#cb1-530"></a>:::</span>
+<span id="cb1-531"><a href="#cb1-531"></a></span>
+<span id="cb1-532"><a href="#cb1-532"></a>**电池符号**：负极在左，正极在右，<span class="in">`|`</span> 表示相界面，<span class="in">`||`</span> 表示盐桥</span>
+<span id="cb1-533"><a href="#cb1-533"></a></span>
+<span id="cb1-534"><a href="#cb1-534"></a>$$(-)\,\text{Zn}\,|\,\text{Zn}^{2+}(c_1)\,||\,\text{Cu}^{2+}(c_2)\,|\,\text{Cu}\,(+)$$</span>
+<span id="cb1-535"><a href="#cb1-535"></a></span>
+<span id="cb1-536"><a href="#cb1-536"></a>**Nernst 方程（电池）：**</span>
+<span id="cb1-537"><a href="#cb1-537"></a></span>
+<span id="cb1-538"><a href="#cb1-538"></a>$$E = E^\ominus - \frac{RT}{nF}\ln Q \xrightarrow{298.15\text{ K}} E = E^\ominus - \frac{0.0592}{n}\lg Q$$</span>
+<span id="cb1-539"><a href="#cb1-539"></a></span>
+<span id="cb1-540"><a href="#cb1-540"></a>**$K^\ominus$ 与 $E^\ominus$ 的关系**（$E=0$ 时平衡）：</span>
+<span id="cb1-541"><a href="#cb1-541"></a></span>
+<span id="cb1-542"><a href="#cb1-542"></a>$$\lg K^\ominus = \frac{nE^\ominus}{0.0592}$$</span>
+<span id="cb1-543"><a href="#cb1-543"></a></span>
+<span id="cb1-544"><a href="#cb1-544"></a>---</span>
+<span id="cb1-545"><a href="#cb1-545"></a></span>
+<span id="cb1-546"><a href="#cb1-546"></a><span class="fu">## 电极电势</span></span>
+<span id="cb1-547"><a href="#cb1-547"></a></span>
+<span id="cb1-548"><a href="#cb1-548"></a>**标准氢电极**：$\phi^\ominus = 0.0000\text{ V}$，符号为 $\text{Pt}|\text{H}_2(100\text{ kPa})|\text{H}^+(1\text{ mol·L}^{-1})$</span>
+<span id="cb1-549"><a href="#cb1-549"></a></span>
+<span id="cb1-550"><a href="#cb1-550"></a>**Nernst 方程（电极）**：</span>
+<span id="cb1-551"><a href="#cb1-551"></a></span>
+<span id="cb1-552"><a href="#cb1-552"></a>对半反应 $a\text{A(氧化态)} + ne^- \rightleftharpoons b\text{B(还原态)}$：</span>
+<span id="cb1-553"><a href="#cb1-553"></a></span>
+<span id="cb1-554"><a href="#cb1-554"></a>$$\phi = \phi^\ominus + \frac{0.0592}{n}\lg\frac{<span class="sc">\{</span>c(\text{氧化态})/c^\ominus<span class="sc">\}</span>^a}{<span class="sc">\{</span>c(\text{还原态})/c^\ominus<span class="sc">\}</span>^b}$$</span>
+<span id="cb1-555"><a href="#cb1-555"></a></span>
+<span id="cb1-556"><a href="#cb1-556"></a>**应用：**</span>
+<span id="cb1-557"><a href="#cb1-557"></a></span>
+<span id="cb1-558"><a href="#cb1-558"></a><span class="pp">|</span> 应用 <span class="pp">|</span> 判据 <span class="pp">|</span></span>
+<span id="cb1-559"><a href="#cb1-559"></a><span class="pp">|------|------|</span></span>
+<span id="cb1-560"><a href="#cb1-560"></a><span class="pp">|</span> 氧化/还原能力 <span class="pp">|</span> $\phi^\ominus$ 大 → 氧化能力强；$\phi^\ominus$ 小 → 还原能力强 <span class="pp">|</span></span>
+<span id="cb1-561"><a href="#cb1-561"></a><span class="pp">|</span> 反应方向 <span class="pp">|</span> $E &gt; 0$（即 $\phi_{\text{氧化剂}} &gt; \phi_{\text{还原剂}}$）→ 自发正向 <span class="pp">|</span></span>
+<span id="cb1-562"><a href="#cb1-562"></a><span class="pp">|</span> 反应程度 <span class="pp">|</span> 由 $E^\ominus$ 计算 $K^\ominus$ <span class="pp">|</span></span>
+<span id="cb1-563"><a href="#cb1-563"></a></span>
+<span id="cb1-564"><a href="#cb1-564"></a>---</span>
+<span id="cb1-565"><a href="#cb1-565"></a></span>
+<span id="cb1-566"><a href="#cb1-566"></a><span class="fu">## 化学电源</span></span>
+<span id="cb1-567"><a href="#cb1-567"></a></span>
+<span id="cb1-568"><a href="#cb1-568"></a>::: {.panel-tabset}</span>
+<span id="cb1-569"><a href="#cb1-569"></a></span>
+<span id="cb1-570"><a href="#cb1-570"></a><span class="fu">### 一次电池</span></span>
+<span id="cb1-571"><a href="#cb1-571"></a></span>
+<span id="cb1-572"><a href="#cb1-572"></a>放电后**不可充电**复原，如锌锰干电池、锌汞纽扣电池。</span>
+<span id="cb1-573"><a href="#cb1-573"></a></span>
+<span id="cb1-574"><a href="#cb1-574"></a><span class="fu">### 二次电池</span></span>
 <span id="cb1-575"><a href="#cb1-575"></a></span>
-<span id="cb1-576"><a href="#cb1-576"></a><span class="fu">### 防护方法</span></span>
+<span id="cb1-576"><a href="#cb1-576"></a>可充电重复使用：铅蓄电池、镍镉、镍氢、锂离子电池。</span>
 <span id="cb1-577"><a href="#cb1-577"></a></span>
-<span id="cb1-578"><a href="#cb1-578"></a><span class="ss">1. </span>**改变介质**：加缓蚀剂</span>
-<span id="cb1-579"><a href="#cb1-579"></a><span class="ss">2. </span>**表面覆盖**：电镀、刷漆</span>
-<span id="cb1-580"><a href="#cb1-580"></a><span class="ss">3. </span>**电化学保护**</span>
-<span id="cb1-581"><a href="#cb1-581"></a><span class="ss">   - </span>牺牲阳极法：连接更活泼金属作负极</span>
-<span id="cb1-582"><a href="#cb1-582"></a><span class="ss">   - </span>外加电流法：被保护金属接电源负极</span>
+<span id="cb1-578"><a href="#cb1-578"></a>**铅蓄电池**：$\text{Pb} + \text{PbO}_2 + 2\text{H}_2\text{SO}_4 \rightleftharpoons 2\text{PbSO}_4 + 2\text{H}_2\text{O}$</span>
+<span id="cb1-579"><a href="#cb1-579"></a></span>
+<span id="cb1-580"><a href="#cb1-580"></a><span class="fu">### 燃料电池</span></span>
+<span id="cb1-581"><a href="#cb1-581"></a></span>
+<span id="cb1-582"><a href="#cb1-582"></a>连续将燃料氧化的化学能转化为电能，如氢氧燃料电池。</span>
 <span id="cb1-583"><a href="#cb1-583"></a></span>
 <span id="cb1-584"><a href="#cb1-584"></a>:::</span>
 <span id="cb1-585"><a href="#cb1-585"></a></span>
 <span id="cb1-586"><a href="#cb1-586"></a>---</span>
 <span id="cb1-587"><a href="#cb1-587"></a></span>
-<span id="cb1-588"><a href="#cb1-588"></a><span class="fu"># 物质结构基础</span></span>
+<span id="cb1-588"><a href="#cb1-588"></a><span class="fu">## 电解</span></span>
 <span id="cb1-589"><a href="#cb1-589"></a></span>
-<span id="cb1-590"><a href="#cb1-590"></a><span class="fu">## 核外电子的运动状态</span></span>
+<span id="cb1-590"><a href="#cb1-590"></a>**阴极**（接电源负极）→ 还原反应；**阳极**（接电源正极）→ 氧化反应</span>
 <span id="cb1-591"><a href="#cb1-591"></a></span>
-<span id="cb1-592"><a href="#cb1-592"></a><span class="fu">### 量子化与波粒二象性</span></span>
+<span id="cb1-592"><a href="#cb1-592"></a>**应用**：化工制备（烧碱）、电解提纯、电镀、阳极氧化、电刷镀</span>
 <span id="cb1-593"><a href="#cb1-593"></a></span>
-<span id="cb1-594"><a href="#cb1-594"></a>::: {.callout-note title="Bohr 模型"}</span>
-<span id="cb1-595"><a href="#cb1-595"></a>电子在固定轨道运动不辐射能量；轨道和能量量子化。</span>
-<span id="cb1-596"><a href="#cb1-596"></a></span>
-<span id="cb1-597"><a href="#cb1-597"></a>$$E_n = -\frac{R_H}{n^2} = -\frac{13.6}{n^2}\text{ (eV)}$$</span>
-<span id="cb1-598"><a href="#cb1-598"></a></span>
-<span id="cb1-599"><a href="#cb1-599"></a>$R_H = 2.179\times10^{-18}\text{ J}$，$n = 1,2,3,\dots$</span>
-<span id="cb1-600"><a href="#cb1-600"></a>:::</span>
+<span id="cb1-594"><a href="#cb1-594"></a>---</span>
+<span id="cb1-595"><a href="#cb1-595"></a></span>
+<span id="cb1-596"><a href="#cb1-596"></a><span class="fu">## 金属腐蚀与防护</span></span>
+<span id="cb1-597"><a href="#cb1-597"></a></span>
+<span id="cb1-598"><a href="#cb1-598"></a>::: {.panel-tabset}</span>
+<span id="cb1-599"><a href="#cb1-599"></a></span>
+<span id="cb1-600"><a href="#cb1-600"></a><span class="fu">### 腐蚀类型</span></span>
 <span id="cb1-601"><a href="#cb1-601"></a></span>
-<span id="cb1-602"><a href="#cb1-602"></a>**de Broglie 关系式：**</span>
+<span id="cb1-602"><a href="#cb1-602"></a>**化学腐蚀**：单纯化学作用，如高温脱碳</span>
 <span id="cb1-603"><a href="#cb1-603"></a></span>
-<span id="cb1-604"><a href="#cb1-604"></a>$$\lambda = \frac{h}{p} = \frac{h}{mv}$$</span>
+<span id="cb1-604"><a href="#cb1-604"></a>**电化学腐蚀**：形成原电池引起</span>
 <span id="cb1-605"><a href="#cb1-605"></a></span>
-<span id="cb1-606"><a href="#cb1-606"></a>**Heisenberg 不确定原理**：微观粒子的位置和动量不能同时准确测定。</span>
-<span id="cb1-607"><a href="#cb1-607"></a></span>
-<span id="cb1-608"><a href="#cb1-608"></a>---</span>
-<span id="cb1-609"><a href="#cb1-609"></a></span>
-<span id="cb1-610"><a href="#cb1-610"></a><span class="fu">### 四个量子数</span></span>
-<span id="cb1-611"><a href="#cb1-611"></a></span>
-<span id="cb1-612"><a href="#cb1-612"></a><span class="pp">|</span> 量子数 <span class="pp">|</span> 符号 <span class="pp">|</span> 取值 <span class="pp">|</span> 决定 <span class="pp">|</span></span>
-<span id="cb1-613"><a href="#cb1-613"></a><span class="pp">|--------|:----:|------|------|</span></span>
-<span id="cb1-614"><a href="#cb1-614"></a><span class="pp">|</span> 主量子数 <span class="pp">|</span> $n$ <span class="pp">|</span> $1,2,3,\dots$ <span class="pp">|</span> 能级高低、轨道大小 <span class="pp">|</span></span>
-<span id="cb1-615"><a href="#cb1-615"></a><span class="pp">|</span> 角量子数 <span class="pp">|</span> $l$ <span class="pp">|</span> $0,1,\dots,n-1$ <span class="pp">|</span> 轨道形状（$s,p,d,f$）<span class="pp">|</span></span>
-<span id="cb1-616"><a href="#cb1-616"></a><span class="pp">|</span> 磁量子数 <span class="pp">|</span> $m$ <span class="pp">|</span> $0,\pm1,\dots,\pm l$ <span class="pp">|</span> 轨道空间取向 <span class="pp">|</span></span>
-<span id="cb1-617"><a href="#cb1-617"></a><span class="pp">|</span> 自旋量子数 <span class="pp">|</span> $m_s$ <span class="pp">|</span> $\pm\tfrac{1}{2}$ <span class="pp">|</span> 电子自旋方向 <span class="pp">|</span></span>
+<span id="cb1-606"><a href="#cb1-606"></a><span class="ss">- </span>析氢腐蚀：酸性介质，阴极析出 $\text{H}_2$</span>
+<span id="cb1-607"><a href="#cb1-607"></a><span class="ss">- </span>吸氧腐蚀：中性/弱碱性介质，最常见</span>
+<span id="cb1-608"><a href="#cb1-608"></a></span>
+<span id="cb1-609"><a href="#cb1-609"></a><span class="fu">### 防护方法</span></span>
+<span id="cb1-610"><a href="#cb1-610"></a></span>
+<span id="cb1-611"><a href="#cb1-611"></a><span class="ss">1. </span>**改变介质**：加缓蚀剂</span>
+<span id="cb1-612"><a href="#cb1-612"></a><span class="ss">2. </span>**表面覆盖**：电镀、刷漆</span>
+<span id="cb1-613"><a href="#cb1-613"></a><span class="ss">3. </span>**电化学保护**</span>
+<span id="cb1-614"><a href="#cb1-614"></a><span class="ss">   - </span>牺牲阳极法：连接更活泼金属作负极</span>
+<span id="cb1-615"><a href="#cb1-615"></a><span class="ss">   - </span>外加电流法：被保护金属接电源负极</span>
+<span id="cb1-616"><a href="#cb1-616"></a></span>
+<span id="cb1-617"><a href="#cb1-617"></a>:::</span>
 <span id="cb1-618"><a href="#cb1-618"></a></span>
-<span id="cb1-619"><a href="#cb1-619"></a>$|\psi|^2$：电子在空间某点出现的**概率密度**（电子云）。</span>
+<span id="cb1-619"><a href="#cb1-619"></a>---</span>
 <span id="cb1-620"><a href="#cb1-620"></a></span>
-<span id="cb1-621"><a href="#cb1-621"></a>**能级交错**：屏蔽效应 + 钻穿效应导致 $E_{4s} &lt; E_{3d}$ 等倒置现象。</span>
+<span id="cb1-621"><a href="#cb1-621"></a><span class="fu"># 物质结构基础</span></span>
 <span id="cb1-622"><a href="#cb1-622"></a></span>
-<span id="cb1-623"><a href="#cb1-623"></a>---</span>
+<span id="cb1-623"><a href="#cb1-623"></a><span class="fu">## 核外电子的运动状态</span></span>
 <span id="cb1-624"><a href="#cb1-624"></a></span>
-<span id="cb1-625"><a href="#cb1-625"></a><span class="fu">## 核外电子排布</span></span>
+<span id="cb1-625"><a href="#cb1-625"></a><span class="fu">### 量子化与波粒二象性</span></span>
 <span id="cb1-626"><a href="#cb1-626"></a></span>
-<span id="cb1-627"><a href="#cb1-627"></a>::: {.callout-important title="三大原则"}</span>
-<span id="cb1-628"><a href="#cb1-628"></a><span class="ss">1. </span>**能量最低原理**：电子尽可能占据能量最低的轨道</span>
-<span id="cb1-629"><a href="#cb1-629"></a><span class="ss">2. </span>**Pauli 不相容原理**：一个轨道最多容纳两个自旋相反的电子</span>
-<span id="cb1-630"><a href="#cb1-630"></a><span class="ss">3. </span>**Hund 规则**：简并轨道上优先以相同自旋方式单占</span>
-<span id="cb1-631"><a href="#cb1-631"></a>:::</span>
-<span id="cb1-632"><a href="#cb1-632"></a></span>
-<span id="cb1-633"><a href="#cb1-633"></a>**特例**：半充满（$d^5, p^3$）和全充满（$d^{10}, p^6$）具有额外稳定性。</span>
+<span id="cb1-627"><a href="#cb1-627"></a>::: {.callout-note title="Bohr 模型"}</span>
+<span id="cb1-628"><a href="#cb1-628"></a>电子在固定轨道运动不辐射能量；轨道和能量量子化。</span>
+<span id="cb1-629"><a href="#cb1-629"></a></span>
+<span id="cb1-630"><a href="#cb1-630"></a>$$E_n = -\frac{R_H}{n^2} = -\frac{13.6}{n^2}\text{ (eV)}$$</span>
+<span id="cb1-631"><a href="#cb1-631"></a></span>
+<span id="cb1-632"><a href="#cb1-632"></a>$R_H = 2.179\times10^{-18}\text{ J}$，$n = 1,2,3,\dots$</span>
+<span id="cb1-633"><a href="#cb1-633"></a>:::</span>
 <span id="cb1-634"><a href="#cb1-634"></a></span>
-<span id="cb1-635"><a href="#cb1-635"></a>**周期表分区**：根据价电子构型分为 $s, p, d, ds, f$ 区。</span>
+<span id="cb1-635"><a href="#cb1-635"></a>**de Broglie 关系式：**</span>
 <span id="cb1-636"><a href="#cb1-636"></a></span>
-<span id="cb1-637"><a href="#cb1-637"></a>**原子参数周期性：**</span>
+<span id="cb1-637"><a href="#cb1-637"></a>$$\lambda = \frac{h}{p} = \frac{h}{mv}$$</span>
 <span id="cb1-638"><a href="#cb1-638"></a></span>
-<span id="cb1-639"><a href="#cb1-639"></a><span class="pp">|</span> 参数 <span class="pp">|</span> 同周期（左→右） <span class="pp">|</span> 同族（上→下）<span class="pp">|</span></span>
-<span id="cb1-640"><a href="#cb1-640"></a><span class="pp">|------|:--------------:|:-----------:|</span></span>
-<span id="cb1-641"><a href="#cb1-641"></a><span class="pp">|</span> 原子半径 <span class="pp">|</span> 减小 <span class="pp">|</span> 增大 <span class="pp">|</span></span>
-<span id="cb1-642"><a href="#cb1-642"></a><span class="pp">|</span> 电离能 $I$ <span class="pp">|</span> 增大 <span class="pp">|</span> 减小 <span class="pp">|</span></span>
-<span id="cb1-643"><a href="#cb1-643"></a><span class="pp">|</span> 电负性 $\chi$ <span class="pp">|</span> 增大 <span class="pp">|</span> 减小 <span class="pp">|</span></span>
+<span id="cb1-639"><a href="#cb1-639"></a>**Heisenberg 不确定原理**：微观粒子的位置和动量不能同时准确测定。</span>
+<span id="cb1-640"><a href="#cb1-640"></a></span>
+<span id="cb1-641"><a href="#cb1-641"></a>---</span>
+<span id="cb1-642"><a href="#cb1-642"></a></span>
+<span id="cb1-643"><a href="#cb1-643"></a><span class="fu">### 四个量子数</span></span>
 <span id="cb1-644"><a href="#cb1-644"></a></span>
-<span id="cb1-645"><a href="#cb1-645"></a>氟的电负性最高（$\chi = 4.0$）。</span>
-<span id="cb1-646"><a href="#cb1-646"></a></span>
-<span id="cb1-647"><a href="#cb1-647"></a>---</span>
-<span id="cb1-648"><a href="#cb1-648"></a></span>
-<span id="cb1-649"><a href="#cb1-649"></a><span class="fu">## 价键理论</span></span>
-<span id="cb1-650"><a href="#cb1-650"></a></span>
-<span id="cb1-651"><a href="#cb1-651"></a>::: {.panel-tabset}</span>
-<span id="cb1-652"><a href="#cb1-652"></a></span>
-<span id="cb1-653"><a href="#cb1-653"></a><span class="fu">### 离子键</span></span>
-<span id="cb1-654"><a href="#cb1-654"></a></span>
-<span id="cb1-655"><a href="#cb1-655"></a>本质：正负离子间的静电引力。</span>
-<span id="cb1-656"><a href="#cb1-656"></a></span>
-<span id="cb1-657"><a href="#cb1-657"></a>特点：**无方向性、无饱和性**</span>
-<span id="cb1-658"><a href="#cb1-658"></a></span>
-<span id="cb1-659"><a href="#cb1-659"></a><span class="fu">### 共价键</span></span>
-<span id="cb1-660"><a href="#cb1-660"></a></span>
-<span id="cb1-661"><a href="#cb1-661"></a>本质：原子轨道重叠，电子云密度在两核间增大。</span>
-<span id="cb1-662"><a href="#cb1-662"></a></span>
-<span id="cb1-663"><a href="#cb1-663"></a>特点：**有方向性、有饱和性**</span>
-<span id="cb1-664"><a href="#cb1-664"></a></span>
-<span id="cb1-665"><a href="#cb1-665"></a><span class="pp">|</span> 键型 <span class="pp">|</span> 重叠方式 <span class="pp">|</span> 特点 <span class="pp">|</span></span>
-<span id="cb1-666"><a href="#cb1-666"></a><span class="pp">|------|----------|------|</span></span>
-<span id="cb1-667"><a href="#cb1-667"></a><span class="pp">|</span> $\sigma$ 键 <span class="pp">|</span> "头碰头" <span class="pp">|</span> 沿轴线，可自由旋转 <span class="pp">|</span></span>
-<span id="cb1-668"><a href="#cb1-668"></a><span class="pp">|</span> $\pi$ 键 <span class="pp">|</span> "肩并肩" <span class="pp">|</span> 垂直轴线，不能旋转 <span class="pp">|</span></span>
+<span id="cb1-645"><a href="#cb1-645"></a><span class="pp">|</span> 量子数 <span class="pp">|</span> 符号 <span class="pp">|</span> 取值 <span class="pp">|</span> 决定 <span class="pp">|</span></span>
+<span id="cb1-646"><a href="#cb1-646"></a><span class="pp">|--------|:----:|------|------|</span></span>
+<span id="cb1-647"><a href="#cb1-647"></a><span class="pp">|</span> 主量子数 <span class="pp">|</span> $n$ <span class="pp">|</span> $1,2,3,\dots$ <span class="pp">|</span> 能级高低、轨道大小 <span class="pp">|</span></span>
+<span id="cb1-648"><a href="#cb1-648"></a><span class="pp">|</span> 角量子数 <span class="pp">|</span> $l$ <span class="pp">|</span> $0,1,\dots,n-1$ <span class="pp">|</span> 轨道形状（$s,p,d,f$）<span class="pp">|</span></span>
+<span id="cb1-649"><a href="#cb1-649"></a><span class="pp">|</span> 磁量子数 <span class="pp">|</span> $m$ <span class="pp">|</span> $0,\pm1,\dots,\pm l$ <span class="pp">|</span> 轨道空间取向 <span class="pp">|</span></span>
+<span id="cb1-650"><a href="#cb1-650"></a><span class="pp">|</span> 自旋量子数 <span class="pp">|</span> $m_s$ <span class="pp">|</span> $\pm\tfrac{1}{2}$ <span class="pp">|</span> 电子自旋方向 <span class="pp">|</span></span>
+<span id="cb1-651"><a href="#cb1-651"></a></span>
+<span id="cb1-652"><a href="#cb1-652"></a>$|\psi|^2$：电子在空间某点出现的**概率密度**（电子云）。</span>
+<span id="cb1-653"><a href="#cb1-653"></a></span>
+<span id="cb1-654"><a href="#cb1-654"></a>**能级交错**：屏蔽效应 + 钻穿效应导致 $E_{4s} &lt; E_{3d}$ 等倒置现象。</span>
+<span id="cb1-655"><a href="#cb1-655"></a></span>
+<span id="cb1-656"><a href="#cb1-656"></a>---</span>
+<span id="cb1-657"><a href="#cb1-657"></a></span>
+<span id="cb1-658"><a href="#cb1-658"></a><span class="fu">## 核外电子排布</span></span>
+<span id="cb1-659"><a href="#cb1-659"></a></span>
+<span id="cb1-660"><a href="#cb1-660"></a>::: {.callout-important title="三大原则"}</span>
+<span id="cb1-661"><a href="#cb1-661"></a><span class="ss">1. </span>**能量最低原理**：电子尽可能占据能量最低的轨道</span>
+<span id="cb1-662"><a href="#cb1-662"></a><span class="ss">2. </span>**Pauli 不相容原理**：一个轨道最多容纳两个自旋相反的电子</span>
+<span id="cb1-663"><a href="#cb1-663"></a><span class="ss">3. </span>**Hund 规则**：简并轨道上优先以相同自旋方式单占</span>
+<span id="cb1-664"><a href="#cb1-664"></a>:::</span>
+<span id="cb1-665"><a href="#cb1-665"></a></span>
+<span id="cb1-666"><a href="#cb1-666"></a>**特例**：半充满（$d^5, p^3$）和全充满（$d^{10}, p^6$）具有额外稳定性。</span>
+<span id="cb1-667"><a href="#cb1-667"></a></span>
+<span id="cb1-668"><a href="#cb1-668"></a>**周期表分区**：根据价电子构型分为 $s, p, d, ds, f$ 区。</span>
 <span id="cb1-669"><a href="#cb1-669"></a></span>
-<span id="cb1-670"><a href="#cb1-670"></a><span class="fu">### 杂化轨道</span></span>
+<span id="cb1-670"><a href="#cb1-670"></a>**原子参数周期性：**</span>
 <span id="cb1-671"><a href="#cb1-671"></a></span>
-<span id="cb1-672"><a href="#cb1-672"></a><span class="pp">|</span> 杂化类型 <span class="pp">|</span> 空间构型 <span class="pp">|</span> 示例 <span class="pp">|</span></span>
-<span id="cb1-673"><a href="#cb1-673"></a><span class="pp">|----------|----------|------|</span></span>
-<span id="cb1-674"><a href="#cb1-674"></a><span class="pp">|</span> $sp$ <span class="pp">|</span> 直线型 <span class="pp">|</span> $\text{BeCl}_2$ <span class="pp">|</span></span>
-<span id="cb1-675"><a href="#cb1-675"></a><span class="pp">|</span> $sp^2$ <span class="pp">|</span> 平面三角形 <span class="pp">|</span> $\text{BF}_3$ <span class="pp">|</span></span>
-<span id="cb1-676"><a href="#cb1-676"></a><span class="pp">|</span> $sp^3$（等性）<span class="pp">|</span> 正四面体 <span class="pp">|</span> $\text{CH}_4$ <span class="pp">|</span></span>
-<span id="cb1-677"><a href="#cb1-677"></a><span class="pp">|</span> $sp^3$（不等性）<span class="pp">|</span> 三角锥型 <span class="pp">|</span> $\text{NH}_3$ <span class="pp">|</span></span>
-<span id="cb1-678"><a href="#cb1-678"></a></span>
-<span id="cb1-679"><a href="#cb1-679"></a>:::</span>
-<span id="cb1-680"><a href="#cb1-680"></a></span>
-<span id="cb1-681"><a href="#cb1-681"></a>---</span>
-<span id="cb1-682"><a href="#cb1-682"></a></span>
-<span id="cb1-683"><a href="#cb1-683"></a><span class="fu">## 分子间作用力与晶体</span></span>
-<span id="cb1-684"><a href="#cb1-684"></a></span>
-<span id="cb1-685"><a href="#cb1-685"></a>:::: {.columns}</span>
-<span id="cb1-686"><a href="#cb1-686"></a></span>
-<span id="cb1-687"><a href="#cb1-687"></a>::: {.column width="55%"}</span>
-<span id="cb1-688"><a href="#cb1-688"></a>**范德华力**</span>
+<span id="cb1-672"><a href="#cb1-672"></a><span class="pp">|</span> 参数 <span class="pp">|</span> 同周期（左→右） <span class="pp">|</span> 同族（上→下）<span class="pp">|</span></span>
+<span id="cb1-673"><a href="#cb1-673"></a><span class="pp">|------|:--------------:|:-----------:|</span></span>
+<span id="cb1-674"><a href="#cb1-674"></a><span class="pp">|</span> 原子半径 <span class="pp">|</span> 减小 <span class="pp">|</span> 增大 <span class="pp">|</span></span>
+<span id="cb1-675"><a href="#cb1-675"></a><span class="pp">|</span> 电离能 $I$ <span class="pp">|</span> 增大 <span class="pp">|</span> 减小 <span class="pp">|</span></span>
+<span id="cb1-676"><a href="#cb1-676"></a><span class="pp">|</span> 电负性 $\chi$ <span class="pp">|</span> 增大 <span class="pp">|</span> 减小 <span class="pp">|</span></span>
+<span id="cb1-677"><a href="#cb1-677"></a></span>
+<span id="cb1-678"><a href="#cb1-678"></a>氟的电负性最高（$\chi = 4.0$）。</span>
+<span id="cb1-679"><a href="#cb1-679"></a></span>
+<span id="cb1-680"><a href="#cb1-680"></a>---</span>
+<span id="cb1-681"><a href="#cb1-681"></a></span>
+<span id="cb1-682"><a href="#cb1-682"></a><span class="fu">## 价键理论</span></span>
+<span id="cb1-683"><a href="#cb1-683"></a></span>
+<span id="cb1-684"><a href="#cb1-684"></a>::: {.panel-tabset}</span>
+<span id="cb1-685"><a href="#cb1-685"></a></span>
+<span id="cb1-686"><a href="#cb1-686"></a><span class="fu">### 离子键</span></span>
+<span id="cb1-687"><a href="#cb1-687"></a></span>
+<span id="cb1-688"><a href="#cb1-688"></a>本质：正负离子间的静电引力。</span>
 <span id="cb1-689"><a href="#cb1-689"></a></span>
-<span id="cb1-690"><a href="#cb1-690"></a><span class="pp">|</span> 类型 <span class="pp">|</span> 存在于 <span class="pp">|</span></span>
-<span id="cb1-691"><a href="#cb1-691"></a><span class="pp">|------|--------|</span></span>
-<span id="cb1-692"><a href="#cb1-692"></a><span class="pp">|</span> 取向力 <span class="pp">|</span> 极性分子之间 <span class="pp">|</span></span>
-<span id="cb1-693"><a href="#cb1-693"></a><span class="pp">|</span> 诱导力 <span class="pp">|</span> 极性 + 非极性分子 <span class="pp">|</span></span>
-<span id="cb1-694"><a href="#cb1-694"></a><span class="pp">|</span> 色散力 <span class="pp">|</span> 所有分子间 <span class="pp">|</span></span>
+<span id="cb1-690"><a href="#cb1-690"></a>特点：**无方向性、无饱和性**</span>
+<span id="cb1-691"><a href="#cb1-691"></a></span>
+<span id="cb1-692"><a href="#cb1-692"></a><span class="fu">### 共价键</span></span>
+<span id="cb1-693"><a href="#cb1-693"></a></span>
+<span id="cb1-694"><a href="#cb1-694"></a>本质：原子轨道重叠，电子云密度在两核间增大。</span>
 <span id="cb1-695"><a href="#cb1-695"></a></span>
-<span id="cb1-696"><a href="#cb1-696"></a>**氢键**：H 与 F、O、N 结合后再与另一个 F、O、N 的孤对电子吸引，显著提高熔沸点。</span>
-<span id="cb1-697"><a href="#cb1-697"></a>:::</span>
-<span id="cb1-698"><a href="#cb1-698"></a></span>
-<span id="cb1-699"><a href="#cb1-699"></a>::: {.column width="45%"}</span>
-<span id="cb1-700"><a href="#cb1-700"></a>**晶体类型**</span>
-<span id="cb1-701"><a href="#cb1-701"></a></span>
-<span id="cb1-702"><a href="#cb1-702"></a><span class="pp">|</span> 晶体 <span class="pp">|</span> 结合力 <span class="pp">|</span> 示例 <span class="pp">|</span></span>
-<span id="cb1-703"><a href="#cb1-703"></a><span class="pp">|------|--------|------|</span></span>
-<span id="cb1-704"><a href="#cb1-704"></a><span class="pp">|</span> 离子 <span class="pp">|</span> 离子键 <span class="pp">|</span> NaCl <span class="pp">|</span></span>
-<span id="cb1-705"><a href="#cb1-705"></a><span class="pp">|</span> 原子 <span class="pp">|</span> 共价键 <span class="pp">|</span> 金刚石 <span class="pp">|</span></span>
-<span id="cb1-706"><a href="#cb1-706"></a><span class="pp">|</span> 分子 <span class="pp">|</span> 范德华/氢键 <span class="pp">|</span> 干冰 <span class="pp">|</span></span>
-<span id="cb1-707"><a href="#cb1-707"></a><span class="pp">|</span> 金属 <span class="pp">|</span> 金属键 <span class="pp">|</span> Cu <span class="pp">|</span></span>
-<span id="cb1-708"><a href="#cb1-708"></a><span class="pp">|</span> 混合 <span class="pp">|</span> 层内共价/层间范德华 <span class="pp">|</span> 石墨 <span class="pp">|</span></span>
-<span id="cb1-709"><a href="#cb1-709"></a>:::</span>
-<span id="cb1-710"><a href="#cb1-710"></a></span>
-<span id="cb1-711"><a href="#cb1-711"></a>::::</span>
-<span id="cb1-712"><a href="#cb1-712"></a></span>
-<span id="cb1-713"><a href="#cb1-713"></a>---</span>
-<span id="cb1-714"><a href="#cb1-714"></a></span>
-<span id="cb1-715"><a href="#cb1-715"></a><span class="fu"># 无机物单质及化合物</span></span>
-<span id="cb1-716"><a href="#cb1-716"></a></span>
-<span id="cb1-717"><a href="#cb1-717"></a><span class="fu">## 元素概述</span></span>
-<span id="cb1-718"><a href="#cb1-718"></a></span>
-<span id="cb1-719"><a href="#cb1-719"></a>**地壳中含量最高的元素**：氧（48.6%）&gt; 硅（26.3%）&gt; 铝 &gt; 铁</span>
-<span id="cb1-720"><a href="#cb1-720"></a></span>
-<span id="cb1-721"><a href="#cb1-721"></a><span class="pp">|</span> 存在形式 <span class="pp">|</span> 特征 <span class="pp">|</span> 示例 <span class="pp">|</span></span>
-<span id="cb1-722"><a href="#cb1-722"></a><span class="pp">|----------|------|------|</span></span>
-<span id="cb1-723"><a href="#cb1-723"></a><span class="pp">|</span> 游离态 <span class="pp">|</span> 以单质存在 <span class="pp">|</span> Au、Ag、Pt、稀有气体 <span class="pp">|</span></span>
-<span id="cb1-724"><a href="#cb1-724"></a><span class="pp">|</span> 化合态 <span class="pp">|</span> 以化合物存在 <span class="pp">|</span> 大多数金属（氧化物、硫化物、盐）<span class="pp">|</span></span>
-<span id="cb1-725"><a href="#cb1-725"></a></span>
-<span id="cb1-726"><a href="#cb1-726"></a>**稀土元素**：镧系（15种）+ Sc + Y = 共17种</span>
-<span id="cb1-727"><a href="#cb1-727"></a></span>
-<span id="cb1-728"><a href="#cb1-728"></a>---</span>
-<span id="cb1-729"><a href="#cb1-729"></a></span>
-<span id="cb1-730"><a href="#cb1-730"></a><span class="fu">## 金属冶金</span></span>
+<span id="cb1-696"><a href="#cb1-696"></a>特点：**有方向性、有饱和性**</span>
+<span id="cb1-697"><a href="#cb1-697"></a></span>
+<span id="cb1-698"><a href="#cb1-698"></a><span class="pp">|</span> 键型 <span class="pp">|</span> 重叠方式 <span class="pp">|</span> 特点 <span class="pp">|</span></span>
+<span id="cb1-699"><a href="#cb1-699"></a><span class="pp">|------|----------|------|</span></span>
+<span id="cb1-700"><a href="#cb1-700"></a><span class="pp">|</span> $\sigma$ 键 <span class="pp">|</span> "头碰头" <span class="pp">|</span> 沿轴线，可自由旋转 <span class="pp">|</span></span>
+<span id="cb1-701"><a href="#cb1-701"></a><span class="pp">|</span> $\pi$ 键 <span class="pp">|</span> "肩并肩" <span class="pp">|</span> 垂直轴线，不能旋转 <span class="pp">|</span></span>
+<span id="cb1-702"><a href="#cb1-702"></a></span>
+<span id="cb1-703"><a href="#cb1-703"></a><span class="fu">### 杂化轨道</span></span>
+<span id="cb1-704"><a href="#cb1-704"></a></span>
+<span id="cb1-705"><a href="#cb1-705"></a><span class="pp">|</span> 杂化类型 <span class="pp">|</span> 空间构型 <span class="pp">|</span> 示例 <span class="pp">|</span></span>
+<span id="cb1-706"><a href="#cb1-706"></a><span class="pp">|----------|----------|------|</span></span>
+<span id="cb1-707"><a href="#cb1-707"></a><span class="pp">|</span> $sp$ <span class="pp">|</span> 直线型 <span class="pp">|</span> $\text{BeCl}_2$ <span class="pp">|</span></span>
+<span id="cb1-708"><a href="#cb1-708"></a><span class="pp">|</span> $sp^2$ <span class="pp">|</span> 平面三角形 <span class="pp">|</span> $\text{BF}_3$ <span class="pp">|</span></span>
+<span id="cb1-709"><a href="#cb1-709"></a><span class="pp">|</span> $sp^3$（等性）<span class="pp">|</span> 正四面体 <span class="pp">|</span> $\text{CH}_4$ <span class="pp">|</span></span>
+<span id="cb1-710"><a href="#cb1-710"></a><span class="pp">|</span> $sp^3$（不等性）<span class="pp">|</span> 三角锥型 <span class="pp">|</span> $\text{NH}_3$ <span class="pp">|</span></span>
+<span id="cb1-711"><a href="#cb1-711"></a></span>
+<span id="cb1-712"><a href="#cb1-712"></a>:::</span>
+<span id="cb1-713"><a href="#cb1-713"></a></span>
+<span id="cb1-714"><a href="#cb1-714"></a>---</span>
+<span id="cb1-715"><a href="#cb1-715"></a></span>
+<span id="cb1-716"><a href="#cb1-716"></a><span class="fu">## 分子间作用力与晶体</span></span>
+<span id="cb1-717"><a href="#cb1-717"></a></span>
+<span id="cb1-718"><a href="#cb1-718"></a>:::: {.columns}</span>
+<span id="cb1-719"><a href="#cb1-719"></a></span>
+<span id="cb1-720"><a href="#cb1-720"></a>::: {.column width="55%"}</span>
+<span id="cb1-721"><a href="#cb1-721"></a>**范德华力**</span>
+<span id="cb1-722"><a href="#cb1-722"></a></span>
+<span id="cb1-723"><a href="#cb1-723"></a><span class="pp">|</span> 类型 <span class="pp">|</span> 存在于 <span class="pp">|</span></span>
+<span id="cb1-724"><a href="#cb1-724"></a><span class="pp">|------|--------|</span></span>
+<span id="cb1-725"><a href="#cb1-725"></a><span class="pp">|</span> 取向力 <span class="pp">|</span> 极性分子之间 <span class="pp">|</span></span>
+<span id="cb1-726"><a href="#cb1-726"></a><span class="pp">|</span> 诱导力 <span class="pp">|</span> 极性 + 非极性分子 <span class="pp">|</span></span>
+<span id="cb1-727"><a href="#cb1-727"></a><span class="pp">|</span> 色散力 <span class="pp">|</span> 所有分子间 <span class="pp">|</span></span>
+<span id="cb1-728"><a href="#cb1-728"></a></span>
+<span id="cb1-729"><a href="#cb1-729"></a>**氢键**：H 与 F、O、N 结合后再与另一个 F、O、N 的孤对电子吸引，显著提高熔沸点。</span>
+<span id="cb1-730"><a href="#cb1-730"></a>:::</span>
 <span id="cb1-731"><a href="#cb1-731"></a></span>
-<span id="cb1-732"><a href="#cb1-732"></a><span class="pp">|</span> 方法 <span class="pp">|</span> 原理 <span class="pp">|</span> 适用 <span class="pp">|</span></span>
-<span id="cb1-733"><a href="#cb1-733"></a><span class="pp">|------|------|------|</span></span>
-<span id="cb1-734"><a href="#cb1-734"></a><span class="pp">|</span> 火法冶金 <span class="pp">|</span> 高温 C 或 CO 还原 <span class="pp">|</span> 中等活泼金属（铁）<span class="pp">|</span></span>
-<span id="cb1-735"><a href="#cb1-735"></a><span class="pp">|</span> 湿法冶金 <span class="pp">|</span> 酸碱浸出 + 置换/电解 <span class="pp">|</span> 低活泼金属 <span class="pp">|</span></span>
-<span id="cb1-736"><a href="#cb1-736"></a><span class="pp">|</span> 电冶金 <span class="pp">|</span> 电解熔融盐 <span class="pp">|</span> 活泼金属（Na、Al）<span class="pp">|</span></span>
-<span id="cb1-737"><a href="#cb1-737"></a></span>
-<span id="cb1-738"><a href="#cb1-738"></a>---</span>
-<span id="cb1-739"><a href="#cb1-739"></a></span>
-<span id="cb1-740"><a href="#cb1-740"></a><span class="fu">## 过渡元素及配位化合物</span></span>
-<span id="cb1-741"><a href="#cb1-741"></a></span>
-<span id="cb1-742"><a href="#cb1-742"></a>**过渡元素特征**：多氧化态（Mn 可呈 +2 至 +7）、颜色多样、易形成配合物</span>
+<span id="cb1-732"><a href="#cb1-732"></a>::: {.column width="45%"}</span>
+<span id="cb1-733"><a href="#cb1-733"></a>**晶体类型**</span>
+<span id="cb1-734"><a href="#cb1-734"></a></span>
+<span id="cb1-735"><a href="#cb1-735"></a><span class="pp">|</span> 晶体 <span class="pp">|</span> 结合力 <span class="pp">|</span> 示例 <span class="pp">|</span></span>
+<span id="cb1-736"><a href="#cb1-736"></a><span class="pp">|------|--------|------|</span></span>
+<span id="cb1-737"><a href="#cb1-737"></a><span class="pp">|</span> 离子 <span class="pp">|</span> 离子键 <span class="pp">|</span> NaCl <span class="pp">|</span></span>
+<span id="cb1-738"><a href="#cb1-738"></a><span class="pp">|</span> 原子 <span class="pp">|</span> 共价键 <span class="pp">|</span> 金刚石 <span class="pp">|</span></span>
+<span id="cb1-739"><a href="#cb1-739"></a><span class="pp">|</span> 分子 <span class="pp">|</span> 范德华/氢键 <span class="pp">|</span> 干冰 <span class="pp">|</span></span>
+<span id="cb1-740"><a href="#cb1-740"></a><span class="pp">|</span> 金属 <span class="pp">|</span> 金属键 <span class="pp">|</span> Cu <span class="pp">|</span></span>
+<span id="cb1-741"><a href="#cb1-741"></a><span class="pp">|</span> 混合 <span class="pp">|</span> 层内共价/层间范德华 <span class="pp">|</span> 石墨 <span class="pp">|</span></span>
+<span id="cb1-742"><a href="#cb1-742"></a>:::</span>
 <span id="cb1-743"><a href="#cb1-743"></a></span>
-<span id="cb1-744"><a href="#cb1-744"></a><span class="pp">|</span> 试剂 <span class="pp">|</span> 介质 <span class="pp">|</span> 产物 <span class="pp">|</span></span>
-<span id="cb1-745"><a href="#cb1-745"></a><span class="pp">|------|:----:|------|</span></span>
-<span id="cb1-746"><a href="#cb1-746"></a><span class="pp">|</span> $\text{KMnO}_4$ <span class="pp">|</span> 酸性 <span class="pp">|</span> $\text{Mn}^{2+}$ <span class="pp">|</span></span>
-<span id="cb1-747"><a href="#cb1-747"></a><span class="pp">|</span> $\text{KMnO}_4$ <span class="pp">|</span> 中性 <span class="pp">|</span> $\text{MnO}_2$ <span class="pp">|</span></span>
-<span id="cb1-748"><a href="#cb1-748"></a><span class="pp">|</span> $\text{KMnO}_4$ <span class="pp">|</span> 强碱性 <span class="pp">|</span> $\text{MnO}_4^{2-}$ <span class="pp">|</span></span>
+<span id="cb1-744"><a href="#cb1-744"></a>::::</span>
+<span id="cb1-745"><a href="#cb1-745"></a></span>
+<span id="cb1-746"><a href="#cb1-746"></a>---</span>
+<span id="cb1-747"><a href="#cb1-747"></a></span>
+<span id="cb1-748"><a href="#cb1-748"></a><span class="fu"># 无机物单质及化合物</span></span>
 <span id="cb1-749"><a href="#cb1-749"></a></span>
-<span id="cb1-750"><a href="#cb1-750"></a>**配合物稳定常数：**</span>
+<span id="cb1-750"><a href="#cb1-750"></a><span class="fu">## 元素概述</span></span>
 <span id="cb1-751"><a href="#cb1-751"></a></span>
-<span id="cb1-752"><a href="#cb1-752"></a>$$K_{\text{稳}} = \frac{c(<span class="co">[</span><span class="ot">ML_n</span><span class="co">]</span>)/c^{\ominus}}{<span class="co">[</span><span class="ot">c(M)/c^{\ominus}</span><span class="co">]</span>\,<span class="co">[</span><span class="ot">c(L)/c^{\ominus}</span><span class="co">]</span>^n}$$</span>
+<span id="cb1-752"><a href="#cb1-752"></a>**地壳中含量最高的元素**：氧（48.6%）&gt; 硅（26.3%）&gt; 铝 &gt; 铁</span>
 <span id="cb1-753"><a href="#cb1-753"></a></span>
-<span id="cb1-754"><a href="#cb1-754"></a>**配合平衡移动**：加入强酸（酸效应）或形成更难溶沉淀的离子会破坏配合平衡。</span>
-<span id="cb1-755"><a href="#cb1-755"></a></span>
-<span id="cb1-756"><a href="#cb1-756"></a>---</span>
-<span id="cb1-757"><a href="#cb1-757"></a></span>
-<span id="cb1-758"><a href="#cb1-758"></a><span class="fu">## 镧系收缩与稀有气体</span></span>
-<span id="cb1-759"><a href="#cb1-759"></a></span>
-<span id="cb1-760"><a href="#cb1-760"></a>**镧系收缩**：随原子序数增加，原子及离子半径逐一缩小，导致镧系元素化学性质极其相近，分离困难。</span>
-<span id="cb1-761"><a href="#cb1-761"></a></span>
-<span id="cb1-762"><a href="#cb1-762"></a><span class="pp">|</span> 稀有气体用途 <span class="pp">|</span> 气体 <span class="pp">|</span></span>
-<span id="cb1-763"><a href="#cb1-763"></a><span class="pp">|------|------|</span></span>
-<span id="cb1-764"><a href="#cb1-764"></a><span class="pp">|</span> 电弧焊接保护气 <span class="pp">|</span> Ar <span class="pp">|</span></span>
-<span id="cb1-765"><a href="#cb1-765"></a><span class="pp">|</span> 电光源（霓虹灯）<span class="pp">|</span> Ne、Kr <span class="pp">|</span></span>
-<span id="cb1-766"><a href="#cb1-766"></a><span class="pp">|</span> 超低温环境 <span class="pp">|</span> 液 He <span class="pp">|</span></span>
-<span id="cb1-767"><a href="#cb1-767"></a></span>
-<span id="cb1-768"><a href="#cb1-768"></a>---</span>
-<span id="cb1-769"><a href="#cb1-769"></a></span>
-<span id="cb1-770"><a href="#cb1-770"></a><span class="fu"># 金属材料与无机非金属材料</span></span>
-<span id="cb1-771"><a href="#cb1-771"></a></span>
-<span id="cb1-772"><a href="#cb1-772"></a><span class="fu">## 常见金属与合金</span></span>
-<span id="cb1-773"><a href="#cb1-773"></a></span>
-<span id="cb1-774"><a href="#cb1-774"></a>::: {.panel-tabset}</span>
-<span id="cb1-775"><a href="#cb1-775"></a></span>
-<span id="cb1-776"><a href="#cb1-776"></a><span class="fu">### 钢铁</span></span>
-<span id="cb1-777"><a href="#cb1-777"></a></span>
-<span id="cb1-778"><a href="#cb1-778"></a>**主要铁矿石：**</span>
-<span id="cb1-779"><a href="#cb1-779"></a></span>
-<span id="cb1-780"><a href="#cb1-780"></a><span class="pp">|</span> 矿石 <span class="pp">|</span> 化学式 <span class="pp">|</span></span>
-<span id="cb1-781"><a href="#cb1-781"></a><span class="pp">|------|--------|</span></span>
-<span id="cb1-782"><a href="#cb1-782"></a><span class="pp">|</span> 磁铁矿 <span class="pp">|</span> $\text{FeO·Fe}_2\text{O}_3$ <span class="pp">|</span></span>
-<span id="cb1-783"><a href="#cb1-783"></a><span class="pp">|</span> 赤铁矿 <span class="pp">|</span> $\text{Fe}_2\text{O}_3$ <span class="pp">|</span></span>
-<span id="cb1-784"><a href="#cb1-784"></a><span class="pp">|</span> 黄铁矿 <span class="pp">|</span> $\text{FeS}_2$ <span class="pp">|</span></span>
-<span id="cb1-785"><a href="#cb1-785"></a><span class="pp">|</span> 菱铁矿 <span class="pp">|</span> $\text{FeCO}_3$ <span class="pp">|</span></span>
+<span id="cb1-754"><a href="#cb1-754"></a><span class="pp">|</span> 存在形式 <span class="pp">|</span> 特征 <span class="pp">|</span> 示例 <span class="pp">|</span></span>
+<span id="cb1-755"><a href="#cb1-755"></a><span class="pp">|----------|------|------|</span></span>
+<span id="cb1-756"><a href="#cb1-756"></a><span class="pp">|</span> 游离态 <span class="pp">|</span> 以单质存在 <span class="pp">|</span> Au、Ag、Pt、稀有气体 <span class="pp">|</span></span>
+<span id="cb1-757"><a href="#cb1-757"></a><span class="pp">|</span> 化合态 <span class="pp">|</span> 以化合物存在 <span class="pp">|</span> 大多数金属（氧化物、硫化物、盐）<span class="pp">|</span></span>
+<span id="cb1-758"><a href="#cb1-758"></a></span>
+<span id="cb1-759"><a href="#cb1-759"></a>**稀土元素**：镧系（15种）+ Sc + Y = 共17种</span>
+<span id="cb1-760"><a href="#cb1-760"></a></span>
+<span id="cb1-761"><a href="#cb1-761"></a>---</span>
+<span id="cb1-762"><a href="#cb1-762"></a></span>
+<span id="cb1-763"><a href="#cb1-763"></a><span class="fu">## 金属冶金</span></span>
+<span id="cb1-764"><a href="#cb1-764"></a></span>
+<span id="cb1-765"><a href="#cb1-765"></a><span class="pp">|</span> 方法 <span class="pp">|</span> 原理 <span class="pp">|</span> 适用 <span class="pp">|</span></span>
+<span id="cb1-766"><a href="#cb1-766"></a><span class="pp">|------|------|------|</span></span>
+<span id="cb1-767"><a href="#cb1-767"></a><span class="pp">|</span> 火法冶金 <span class="pp">|</span> 高温 C 或 CO 还原 <span class="pp">|</span> 中等活泼金属（铁）<span class="pp">|</span></span>
+<span id="cb1-768"><a href="#cb1-768"></a><span class="pp">|</span> 湿法冶金 <span class="pp">|</span> 酸碱浸出 + 置换/电解 <span class="pp">|</span> 低活泼金属 <span class="pp">|</span></span>
+<span id="cb1-769"><a href="#cb1-769"></a><span class="pp">|</span> 电冶金 <span class="pp">|</span> 电解熔融盐 <span class="pp">|</span> 活泼金属（Na、Al）<span class="pp">|</span></span>
+<span id="cb1-770"><a href="#cb1-770"></a></span>
+<span id="cb1-771"><a href="#cb1-771"></a>---</span>
+<span id="cb1-772"><a href="#cb1-772"></a></span>
+<span id="cb1-773"><a href="#cb1-773"></a><span class="fu">## 过渡元素及配位化合物</span></span>
+<span id="cb1-774"><a href="#cb1-774"></a></span>
+<span id="cb1-775"><a href="#cb1-775"></a>**过渡元素特征**：多氧化态（Mn 可呈 +2 至 +7）、颜色多样、易形成配合物</span>
+<span id="cb1-776"><a href="#cb1-776"></a></span>
+<span id="cb1-777"><a href="#cb1-777"></a><span class="pp">|</span> 试剂 <span class="pp">|</span> 介质 <span class="pp">|</span> 产物 <span class="pp">|</span></span>
+<span id="cb1-778"><a href="#cb1-778"></a><span class="pp">|------|:----:|------|</span></span>
+<span id="cb1-779"><a href="#cb1-779"></a><span class="pp">|</span> $\text{KMnO}_4$ <span class="pp">|</span> 酸性 <span class="pp">|</span> $\text{Mn}^{2+}$ <span class="pp">|</span></span>
+<span id="cb1-780"><a href="#cb1-780"></a><span class="pp">|</span> $\text{KMnO}_4$ <span class="pp">|</span> 中性 <span class="pp">|</span> $\text{MnO}_2$ <span class="pp">|</span></span>
+<span id="cb1-781"><a href="#cb1-781"></a><span class="pp">|</span> $\text{KMnO}_4$ <span class="pp">|</span> 强碱性 <span class="pp">|</span> $\text{MnO}_4^{2-}$ <span class="pp">|</span></span>
+<span id="cb1-782"><a href="#cb1-782"></a></span>
+<span id="cb1-783"><a href="#cb1-783"></a>**配合物稳定常数：**</span>
+<span id="cb1-784"><a href="#cb1-784"></a></span>
+<span id="cb1-785"><a href="#cb1-785"></a>$$K_{\text{稳}} = \frac{c(<span class="co">[</span><span class="ot">ML_n</span><span class="co">]</span>)/c^{\ominus}}{<span class="co">[</span><span class="ot">c(M)/c^{\ominus}</span><span class="co">]</span>\,<span class="co">[</span><span class="ot">c(L)/c^{\ominus}</span><span class="co">]</span>^n}$$</span>
 <span id="cb1-786"><a href="#cb1-786"></a></span>
-<span id="cb1-787"><a href="#cb1-787"></a>**铁碳合金分类：**</span>
+<span id="cb1-787"><a href="#cb1-787"></a>**配合平衡移动**：加入强酸（酸效应）或形成更难溶沉淀的离子会破坏配合平衡。</span>
 <span id="cb1-788"><a href="#cb1-788"></a></span>
-<span id="cb1-789"><a href="#cb1-789"></a><span class="pp">|</span> <span class="pp">|</span> 含碳量 <span class="pp">|</span> 特性 <span class="pp">|</span></span>
-<span id="cb1-790"><a href="#cb1-790"></a><span class="pp">|</span>--<span class="pp">|:------:|------|</span></span>
-<span id="cb1-791"><a href="#cb1-791"></a><span class="pp">|</span> 生铁 <span class="pp">|</span> 3%～4% <span class="pp">|</span> 硬脆，耐压耐磨 <span class="pp">|</span></span>
-<span id="cb1-792"><a href="#cb1-792"></a><span class="pp">|</span> 钢 <span class="pp">|</span> 0.03%～2% <span class="pp">|</span> 综合力学性能好 <span class="pp">|</span></span>
-<span id="cb1-793"><a href="#cb1-793"></a></span>
-<span id="cb1-794"><a href="#cb1-794"></a><span class="fu">### 铜合金</span></span>
-<span id="cb1-795"><a href="#cb1-795"></a></span>
-<span id="cb1-796"><a href="#cb1-796"></a><span class="pp">|</span> 合金 <span class="pp">|</span> 组成 <span class="pp">|</span> 特点 <span class="pp">|</span></span>
-<span id="cb1-797"><a href="#cb1-797"></a><span class="pp">|------|------|------|</span></span>
-<span id="cb1-798"><a href="#cb1-798"></a><span class="pp">|</span> 黄铜 <span class="pp">|</span> Cu-Zn（锌 10%~40%）<span class="pp">|</span> 力学性能好，抗腐蚀 <span class="pp">|</span></span>
-<span id="cb1-799"><a href="#cb1-799"></a><span class="pp">|</span> 青铜 <span class="pp">|</span> Cu 基（非 Zn/Ni）<span class="pp">|</span> 包括锡青铜、铝青铜等 <span class="pp">|</span></span>
+<span id="cb1-789"><a href="#cb1-789"></a>---</span>
+<span id="cb1-790"><a href="#cb1-790"></a></span>
+<span id="cb1-791"><a href="#cb1-791"></a><span class="fu">## 镧系收缩与稀有气体</span></span>
+<span id="cb1-792"><a href="#cb1-792"></a></span>
+<span id="cb1-793"><a href="#cb1-793"></a>**镧系收缩**：随原子序数增加，原子及离子半径逐一缩小，导致镧系元素化学性质极其相近，分离困难。</span>
+<span id="cb1-794"><a href="#cb1-794"></a></span>
+<span id="cb1-795"><a href="#cb1-795"></a><span class="pp">|</span> 稀有气体用途 <span class="pp">|</span> 气体 <span class="pp">|</span></span>
+<span id="cb1-796"><a href="#cb1-796"></a><span class="pp">|------|------|</span></span>
+<span id="cb1-797"><a href="#cb1-797"></a><span class="pp">|</span> 电弧焊接保护气 <span class="pp">|</span> Ar <span class="pp">|</span></span>
+<span id="cb1-798"><a href="#cb1-798"></a><span class="pp">|</span> 电光源（霓虹灯）<span class="pp">|</span> Ne、Kr <span class="pp">|</span></span>
+<span id="cb1-799"><a href="#cb1-799"></a><span class="pp">|</span> 超低温环境 <span class="pp">|</span> 液 He <span class="pp">|</span></span>
 <span id="cb1-800"><a href="#cb1-800"></a></span>
-<span id="cb1-801"><a href="#cb1-801"></a>纯铜：红紫色，导电性仅次于银。</span>
+<span id="cb1-801"><a href="#cb1-801"></a>---</span>
 <span id="cb1-802"><a href="#cb1-802"></a></span>
-<span id="cb1-803"><a href="#cb1-803"></a><span class="fu">### 铝及铝合金</span></span>
+<span id="cb1-803"><a href="#cb1-803"></a><span class="fu"># 金属材料与无机非金属材料</span></span>
 <span id="cb1-804"><a href="#cb1-804"></a></span>
-<span id="cb1-805"><a href="#cb1-805"></a>铝是地壳中**含量最丰富的金属元素**，表面易形成致密氧化膜，抗腐蚀性强。</span>
+<span id="cb1-805"><a href="#cb1-805"></a><span class="fu">## 常见金属与合金</span></span>
 <span id="cb1-806"><a href="#cb1-806"></a></span>
-<span id="cb1-807"><a href="#cb1-807"></a>**刚玉**（$\alpha\text{-Al}_2\text{O}_3$）：硬度仅次于金刚石</span>
+<span id="cb1-807"><a href="#cb1-807"></a>::: {.panel-tabset}</span>
 <span id="cb1-808"><a href="#cb1-808"></a></span>
-<span id="cb1-809"><a href="#cb1-809"></a>**铝合金**：硬铝、超硬铝、铝镁合金，广泛用于航空、机械、船舶</span>
+<span id="cb1-809"><a href="#cb1-809"></a><span class="fu">### 钢铁</span></span>
 <span id="cb1-810"><a href="#cb1-810"></a></span>
-<span id="cb1-811"><a href="#cb1-811"></a><span class="fu">### 功能合金</span></span>
+<span id="cb1-811"><a href="#cb1-811"></a>**主要铁矿石：**</span>
 <span id="cb1-812"><a href="#cb1-812"></a></span>
-<span id="cb1-813"><a href="#cb1-813"></a><span class="pp">|</span> 材料 <span class="pp">|</span> 特性 <span class="pp">|</span> 典型 <span class="pp">|</span></span>
-<span id="cb1-814"><a href="#cb1-814"></a><span class="pp">|------|------|------|</span></span>
-<span id="cb1-815"><a href="#cb1-815"></a><span class="pp">|</span> 记忆合金 <span class="pp">|</span> 特定温度下恢复初始形状 <span class="pp">|</span> TiNi 合金 <span class="pp">|</span></span>
-<span id="cb1-816"><a href="#cb1-816"></a><span class="pp">|</span> 储氢合金 <span class="pp">|</span> 可逆大量吸/释放 $\text{H}_2$ <span class="pp">|</span> $\text{LaNi}_5$ <span class="pp">|</span></span>
-<span id="cb1-817"><a href="#cb1-817"></a></span>
-<span id="cb1-818"><a href="#cb1-818"></a>储氢合金组成：放热型金属 A（La、Ti、Mg）+ 催化活性金属 B（Ni、Co、Fe）</span>
+<span id="cb1-813"><a href="#cb1-813"></a><span class="pp">|</span> 矿石 <span class="pp">|</span> 化学式 <span class="pp">|</span></span>
+<span id="cb1-814"><a href="#cb1-814"></a><span class="pp">|------|--------|</span></span>
+<span id="cb1-815"><a href="#cb1-815"></a><span class="pp">|</span> 磁铁矿 <span class="pp">|</span> $\text{FeO·Fe}_2\text{O}_3$ <span class="pp">|</span></span>
+<span id="cb1-816"><a href="#cb1-816"></a><span class="pp">|</span> 赤铁矿 <span class="pp">|</span> $\text{Fe}_2\text{O}_3$ <span class="pp">|</span></span>
+<span id="cb1-817"><a href="#cb1-817"></a><span class="pp">|</span> 黄铁矿 <span class="pp">|</span> $\text{FeS}_2$ <span class="pp">|</span></span>
+<span id="cb1-818"><a href="#cb1-818"></a><span class="pp">|</span> 菱铁矿 <span class="pp">|</span> $\text{FeCO}_3$ <span class="pp">|</span></span>
 <span id="cb1-819"><a href="#cb1-819"></a></span>
-<span id="cb1-820"><a href="#cb1-820"></a>:::</span>
+<span id="cb1-820"><a href="#cb1-820"></a>**铁碳合金分类：**</span>
 <span id="cb1-821"><a href="#cb1-821"></a></span>
-<span id="cb1-822"><a href="#cb1-822"></a>---</span>
-<span id="cb1-823"><a href="#cb1-823"></a></span>
-<span id="cb1-824"><a href="#cb1-824"></a><span class="fu">## 新型无机非金属材料</span></span>
-<span id="cb1-825"><a href="#cb1-825"></a></span>
-<span id="cb1-826"><a href="#cb1-826"></a>::: {.panel-tabset}</span>
-<span id="cb1-827"><a href="#cb1-827"></a></span>
-<span id="cb1-828"><a href="#cb1-828"></a><span class="fu">### 光导纤维</span></span>
-<span id="cb1-829"><a href="#cb1-829"></a></span>
-<span id="cb1-830"><a href="#cb1-830"></a>内芯折射率 &gt; 外套，利用全内反射传输信号。</span>
-<span id="cb1-831"><a href="#cb1-831"></a></span>
-<span id="cb1-832"><a href="#cb1-832"></a><span class="fu">### 超导材料</span></span>
+<span id="cb1-822"><a href="#cb1-822"></a><span class="pp">|</span> <span class="pp">|</span> 含碳量 <span class="pp">|</span> 特性 <span class="pp">|</span></span>
+<span id="cb1-823"><a href="#cb1-823"></a><span class="pp">|</span>--<span class="pp">|:------:|------|</span></span>
+<span id="cb1-824"><a href="#cb1-824"></a><span class="pp">|</span> 生铁 <span class="pp">|</span> 3%～4% <span class="pp">|</span> 硬脆，耐压耐磨 <span class="pp">|</span></span>
+<span id="cb1-825"><a href="#cb1-825"></a><span class="pp">|</span> 钢 <span class="pp">|</span> 0.03%～2% <span class="pp">|</span> 综合力学性能好 <span class="pp">|</span></span>
+<span id="cb1-826"><a href="#cb1-826"></a></span>
+<span id="cb1-827"><a href="#cb1-827"></a><span class="fu">### 铜合金</span></span>
+<span id="cb1-828"><a href="#cb1-828"></a></span>
+<span id="cb1-829"><a href="#cb1-829"></a><span class="pp">|</span> 合金 <span class="pp">|</span> 组成 <span class="pp">|</span> 特点 <span class="pp">|</span></span>
+<span id="cb1-830"><a href="#cb1-830"></a><span class="pp">|------|------|------|</span></span>
+<span id="cb1-831"><a href="#cb1-831"></a><span class="pp">|</span> 黄铜 <span class="pp">|</span> Cu-Zn（锌 10%~40%）<span class="pp">|</span> 力学性能好，抗腐蚀 <span class="pp">|</span></span>
+<span id="cb1-832"><a href="#cb1-832"></a><span class="pp">|</span> 青铜 <span class="pp">|</span> Cu 基（非 Zn/Ni）<span class="pp">|</span> 包括锡青铜、铝青铜等 <span class="pp">|</span></span>
 <span id="cb1-833"><a href="#cb1-833"></a></span>
-<span id="cb1-834"><a href="#cb1-834"></a><span class="ss">- </span>核心特性：**零电阻 + 抗磁性**</span>
-<span id="cb1-835"><a href="#cb1-835"></a><span class="ss">- </span>临界温度 $T_c$：进入超导态的温度</span>
-<span id="cb1-836"><a href="#cb1-836"></a><span class="ss">- </span>分类：低温超导 / 高温超导（如钇钡铜氧陶瓷）</span>
+<span id="cb1-834"><a href="#cb1-834"></a>纯铜：红紫色，导电性仅次于银。</span>
+<span id="cb1-835"><a href="#cb1-835"></a></span>
+<span id="cb1-836"><a href="#cb1-836"></a><span class="fu">### 铝及铝合金</span></span>
 <span id="cb1-837"><a href="#cb1-837"></a></span>
-<span id="cb1-838"><a href="#cb1-838"></a><span class="fu">### 生物陶瓷</span></span>
+<span id="cb1-838"><a href="#cb1-838"></a>铝是地壳中**含量最丰富的金属元素**，表面易形成致密氧化膜，抗腐蚀性强。</span>
 <span id="cb1-839"><a href="#cb1-839"></a></span>
-<span id="cb1-840"><a href="#cb1-840"></a><span class="pp">|</span> 类型 <span class="pp">|</span> 示例 <span class="pp">|</span> 用途 <span class="pp">|</span></span>
-<span id="cb1-841"><a href="#cb1-841"></a><span class="pp">|------|------|------|</span></span>
-<span id="cb1-842"><a href="#cb1-842"></a><span class="pp">|</span> 惰性 <span class="pp">|</span> $\text{Al}_2\text{O}_3$、$\text{ZrO}_2$ <span class="pp">|</span> 人工关节 <span class="pp">|</span></span>
-<span id="cb1-843"><a href="#cb1-843"></a><span class="pp">|</span> 活性 <span class="pp">|</span> 羟基磷灰石 <span class="pp">|</span> 与骨形成化学键合 <span class="pp">|</span></span>
-<span id="cb1-844"><a href="#cb1-844"></a><span class="pp">|</span> 可吸收 <span class="pp">|</span> 磷酸三钙 <span class="pp">|</span> 体内降解诱导新骨 <span class="pp">|</span></span>
+<span id="cb1-840"><a href="#cb1-840"></a>**刚玉**（$\alpha\text{-Al}_2\text{O}_3$）：硬度仅次于金刚石</span>
+<span id="cb1-841"><a href="#cb1-841"></a></span>
+<span id="cb1-842"><a href="#cb1-842"></a>**铝合金**：硬铝、超硬铝、铝镁合金，广泛用于航空、机械、船舶</span>
+<span id="cb1-843"><a href="#cb1-843"></a></span>
+<span id="cb1-844"><a href="#cb1-844"></a><span class="fu">### 功能合金</span></span>
 <span id="cb1-845"><a href="#cb1-845"></a></span>
-<span id="cb1-846"><a href="#cb1-846"></a><span class="fu">### 压电与光电</span></span>
-<span id="cb1-847"><a href="#cb1-847"></a></span>
-<span id="cb1-848"><a href="#cb1-848"></a>**压电效应**：压力 → 电荷（量与压力成正比）；**逆压电效应**：电场 → 形变</span>
-<span id="cb1-849"><a href="#cb1-849"></a></span>
-<span id="cb1-850"><a href="#cb1-850"></a>应用：点火器、声纳、超声成像</span>
-<span id="cb1-851"><a href="#cb1-851"></a></span>
-<span id="cb1-852"><a href="#cb1-852"></a>**光电效应**：光照 → 电导率变化或电动势</span>
-<span id="cb1-853"><a href="#cb1-853"></a></span>
-<span id="cb1-854"><a href="#cb1-854"></a>应用：LED、光电传感器、太阳能电池</span>
-<span id="cb1-855"><a href="#cb1-855"></a></span>
-<span id="cb1-856"><a href="#cb1-856"></a>:::</span>
-<span id="cb1-857"><a href="#cb1-857"></a></span>
-<span id="cb1-858"><a href="#cb1-858"></a>---</span>
-<span id="cb1-859"><a href="#cb1-859"></a></span>
-<span id="cb1-860"><a href="#cb1-860"></a><span class="fu">## 建筑胶凝材料</span></span>
-<span id="cb1-861"><a href="#cb1-861"></a></span>
-<span id="cb1-862"><a href="#cb1-862"></a>::: {.panel-tabset}</span>
-<span id="cb1-863"><a href="#cb1-863"></a></span>
-<span id="cb1-864"><a href="#cb1-864"></a><span class="fu">### 石灰</span></span>
-<span id="cb1-865"><a href="#cb1-865"></a></span>
-<span id="cb1-866"><a href="#cb1-866"></a>$$\text{CaCO}_3 \xrightarrow{900\sim1100^\circ\text{C}} \text{CaO} + \text{CO}_2\uparrow$$</span>
-<span id="cb1-867"><a href="#cb1-867"></a></span>
-<span id="cb1-868"><a href="#cb1-868"></a>$$\text{CaO} + \text{H}_2\text{O} \rightarrow \text{Ca(OH)}_2 \quad \Delta_rH_m = -64.9\text{ kJ/mol}$$</span>
-<span id="cb1-869"><a href="#cb1-869"></a></span>
-<span id="cb1-870"><a href="#cb1-870"></a>碳化（硬化）：$\text{Ca(OH)}_2 + \text{CO}_2 + n\text{H}_2\text{O} \rightarrow \text{CaCO}_3 + (n+1)\text{H}_2\text{O}$</span>
-<span id="cb1-871"><a href="#cb1-871"></a></span>
-<span id="cb1-872"><a href="#cb1-872"></a><span class="fu">### 石膏</span></span>
-<span id="cb1-873"><a href="#cb1-873"></a></span>
-<span id="cb1-874"><a href="#cb1-874"></a>$$\text{CaSO}_4\cdot\tfrac{1}{2}\text{H}_2\text{O} + \tfrac{3}{2}\text{H}_2\text{O} \rightarrow \text{CaSO}_4\cdot2\text{H}_2\text{O}$$</span>
-<span id="cb1-875"><a href="#cb1-875"></a></span>
-<span id="cb1-876"><a href="#cb1-876"></a><span class="fu">### 水泥</span></span>
-<span id="cb1-877"><a href="#cb1-877"></a></span>
-<span id="cb1-878"><a href="#cb1-878"></a><span class="pp">|</span> 简写 <span class="pp">|</span> 成分 <span class="pp">|</span></span>
-<span id="cb1-879"><a href="#cb1-879"></a><span class="pp">|:----:|------|</span></span>
-<span id="cb1-880"><a href="#cb1-880"></a><span class="pp">|</span> $C_3S$ <span class="pp">|</span> $3\text{CaO·SiO}_2$ <span class="pp">|</span></span>
-<span id="cb1-881"><a href="#cb1-881"></a><span class="pp">|</span> $C_2S$ <span class="pp">|</span> $2\text{CaO·SiO}_2$ <span class="pp">|</span></span>
-<span id="cb1-882"><a href="#cb1-882"></a><span class="pp">|</span> $C_3A$ <span class="pp">|</span> $3\text{CaO·Al}_2\text{O}_3$ <span class="pp">|</span></span>
-<span id="cb1-883"><a href="#cb1-883"></a><span class="pp">|</span> $C_4AF$ <span class="pp">|</span> $4\text{CaO·Al}_2\text{O}_3\text{·Fe}_2\text{O}_3$ <span class="pp">|</span></span>
+<span id="cb1-846"><a href="#cb1-846"></a><span class="pp">|</span> 材料 <span class="pp">|</span> 特性 <span class="pp">|</span> 典型 <span class="pp">|</span></span>
+<span id="cb1-847"><a href="#cb1-847"></a><span class="pp">|------|------|------|</span></span>
+<span id="cb1-848"><a href="#cb1-848"></a><span class="pp">|</span> 记忆合金 <span class="pp">|</span> 特定温度下恢复初始形状 <span class="pp">|</span> TiNi 合金 <span class="pp">|</span></span>
+<span id="cb1-849"><a href="#cb1-849"></a><span class="pp">|</span> 储氢合金 <span class="pp">|</span> 可逆大量吸/释放 $\text{H}_2$ <span class="pp">|</span> $\text{LaNi}_5$ <span class="pp">|</span></span>
+<span id="cb1-850"><a href="#cb1-850"></a></span>
+<span id="cb1-851"><a href="#cb1-851"></a>储氢合金组成：放热型金属 A（La、Ti、Mg）+ 催化活性金属 B（Ni、Co、Fe）</span>
+<span id="cb1-852"><a href="#cb1-852"></a></span>
+<span id="cb1-853"><a href="#cb1-853"></a>:::</span>
+<span id="cb1-854"><a href="#cb1-854"></a></span>
+<span id="cb1-855"><a href="#cb1-855"></a>---</span>
+<span id="cb1-856"><a href="#cb1-856"></a></span>
+<span id="cb1-857"><a href="#cb1-857"></a><span class="fu">## 新型无机非金属材料</span></span>
+<span id="cb1-858"><a href="#cb1-858"></a></span>
+<span id="cb1-859"><a href="#cb1-859"></a>::: {.panel-tabset}</span>
+<span id="cb1-860"><a href="#cb1-860"></a></span>
+<span id="cb1-861"><a href="#cb1-861"></a><span class="fu">### 光导纤维</span></span>
+<span id="cb1-862"><a href="#cb1-862"></a></span>
+<span id="cb1-863"><a href="#cb1-863"></a>内芯折射率 &gt; 外套，利用全内反射传输信号。</span>
+<span id="cb1-864"><a href="#cb1-864"></a></span>
+<span id="cb1-865"><a href="#cb1-865"></a><span class="fu">### 超导材料</span></span>
+<span id="cb1-866"><a href="#cb1-866"></a></span>
+<span id="cb1-867"><a href="#cb1-867"></a><span class="ss">- </span>核心特性：**零电阻 + 抗磁性**</span>
+<span id="cb1-868"><a href="#cb1-868"></a><span class="ss">- </span>临界温度 $T_c$：进入超导态的温度</span>
+<span id="cb1-869"><a href="#cb1-869"></a><span class="ss">- </span>分类：低温超导 / 高温超导（如钇钡铜氧陶瓷）</span>
+<span id="cb1-870"><a href="#cb1-870"></a></span>
+<span id="cb1-871"><a href="#cb1-871"></a><span class="fu">### 生物陶瓷</span></span>
+<span id="cb1-872"><a href="#cb1-872"></a></span>
+<span id="cb1-873"><a href="#cb1-873"></a><span class="pp">|</span> 类型 <span class="pp">|</span> 示例 <span class="pp">|</span> 用途 <span class="pp">|</span></span>
+<span id="cb1-874"><a href="#cb1-874"></a><span class="pp">|------|------|------|</span></span>
+<span id="cb1-875"><a href="#cb1-875"></a><span class="pp">|</span> 惰性 <span class="pp">|</span> $\text{Al}_2\text{O}_3$、$\text{ZrO}_2$ <span class="pp">|</span> 人工关节 <span class="pp">|</span></span>
+<span id="cb1-876"><a href="#cb1-876"></a><span class="pp">|</span> 活性 <span class="pp">|</span> 羟基磷灰石 <span class="pp">|</span> 与骨形成化学键合 <span class="pp">|</span></span>
+<span id="cb1-877"><a href="#cb1-877"></a><span class="pp">|</span> 可吸收 <span class="pp">|</span> 磷酸三钙 <span class="pp">|</span> 体内降解诱导新骨 <span class="pp">|</span></span>
+<span id="cb1-878"><a href="#cb1-878"></a></span>
+<span id="cb1-879"><a href="#cb1-879"></a><span class="fu">### 压电与光电</span></span>
+<span id="cb1-880"><a href="#cb1-880"></a></span>
+<span id="cb1-881"><a href="#cb1-881"></a>**压电效应**：压力 → 电荷（量与压力成正比）；**逆压电效应**：电场 → 形变</span>
+<span id="cb1-882"><a href="#cb1-882"></a></span>
+<span id="cb1-883"><a href="#cb1-883"></a>应用：点火器、声纳、超声成像</span>
 <span id="cb1-884"><a href="#cb1-884"></a></span>
-<span id="cb1-885"><a href="#cb1-885"></a>石膏作用：调节凝结时间，防止"闪凝"。</span>
+<span id="cb1-885"><a href="#cb1-885"></a>**光电效应**：光照 → 电导率变化或电动势</span>
 <span id="cb1-886"><a href="#cb1-886"></a></span>
-<span id="cb1-887"><a href="#cb1-887"></a><span class="fu">### 腐蚀与防护</span></span>
+<span id="cb1-887"><a href="#cb1-887"></a>应用：LED、光电传感器、太阳能电池</span>
 <span id="cb1-888"><a href="#cb1-888"></a></span>
-<span id="cb1-889"><a href="#cb1-889"></a>**腐蚀类型**：溶解腐蚀（软水溶解 $\text{Ca(OH)}_2$）、盐类腐蚀（硫酸盐/镁盐膨胀）、碳化（$\text{CO}_2$ 降低 pH，破坏钢筋钝化膜）</span>
+<span id="cb1-889"><a href="#cb1-889"></a>:::</span>
 <span id="cb1-890"><a href="#cb1-890"></a></span>
-<span id="cb1-891"><a href="#cb1-891"></a>**防护**：提高密实度、涂保护层、电化学保护（牺牲阳极法）</span>
+<span id="cb1-891"><a href="#cb1-891"></a>---</span>
 <span id="cb1-892"><a href="#cb1-892"></a></span>
-<span id="cb1-893"><a href="#cb1-893"></a>:::</span>
+<span id="cb1-893"><a href="#cb1-893"></a><span class="fu">## 建筑胶凝材料</span></span>
 <span id="cb1-894"><a href="#cb1-894"></a></span>
-<span id="cb1-895"><a href="#cb1-895"></a>---</span>
+<span id="cb1-895"><a href="#cb1-895"></a>::: {.panel-tabset}</span>
 <span id="cb1-896"><a href="#cb1-896"></a></span>
-<span id="cb1-897"><a href="#cb1-897"></a><span class="fu"># 有机化学和有机化合物</span></span>
+<span id="cb1-897"><a href="#cb1-897"></a><span class="fu">### 石灰</span></span>
 <span id="cb1-898"><a href="#cb1-898"></a></span>
-<span id="cb1-899"><a href="#cb1-899"></a><span class="fu">## 有机化合物概述</span></span>
+<span id="cb1-899"><a href="#cb1-899"></a>$$\text{CaCO}_3 \xrightarrow{900\sim1100^\circ\text{C}} \text{CaO} + \text{CO}_2\uparrow$$</span>
 <span id="cb1-900"><a href="#cb1-900"></a></span>
-<span id="cb1-901"><a href="#cb1-901"></a>**有机物特点**：以碳为基础，共价键成链/环，熔沸点低，难溶于水，易燃，反应慢且多副反应。</span>
+<span id="cb1-901"><a href="#cb1-901"></a>$$\text{CaO} + \text{H}_2\text{O} \rightarrow \text{Ca(OH)}_2 \quad \Delta_rH_m = -64.9\text{ kJ/mol}$$</span>
 <span id="cb1-902"><a href="#cb1-902"></a></span>
-<span id="cb1-903"><a href="#cb1-903"></a>::: {.panel-tabset}</span>
+<span id="cb1-903"><a href="#cb1-903"></a>碳化（硬化）：$\text{Ca(OH)}_2 + \text{CO}_2 + n\text{H}_2\text{O} \rightarrow \text{CaCO}_3 + (n+1)\text{H}_2\text{O}$</span>
 <span id="cb1-904"><a href="#cb1-904"></a></span>
-<span id="cb1-905"><a href="#cb1-905"></a><span class="fu">### 按碳骨架分类</span></span>
+<span id="cb1-905"><a href="#cb1-905"></a><span class="fu">### 石膏</span></span>
 <span id="cb1-906"><a href="#cb1-906"></a></span>
-<span id="cb1-907"><a href="#cb1-907"></a><span class="ss">1. </span>**开链化合物**（脂肪族）：链状</span>
-<span id="cb1-908"><a href="#cb1-908"></a><span class="ss">2. </span>**碳环化合物**：脂环 / 芳香族</span>
-<span id="cb1-909"><a href="#cb1-909"></a><span class="ss">3. </span>**杂环化合物**：环中含 O、N、S 等杂原子</span>
+<span id="cb1-907"><a href="#cb1-907"></a>$$\text{CaSO}_4\cdot\tfrac{1}{2}\text{H}_2\text{O} + \tfrac{3}{2}\text{H}_2\text{O} \rightarrow \text{CaSO}_4\cdot2\text{H}_2\text{O}$$</span>
+<span id="cb1-908"><a href="#cb1-908"></a></span>
+<span id="cb1-909"><a href="#cb1-909"></a><span class="fu">### 水泥</span></span>
 <span id="cb1-910"><a href="#cb1-910"></a></span>
-<span id="cb1-911"><a href="#cb1-911"></a><span class="fu">### 命名规则</span></span>
-<span id="cb1-912"><a href="#cb1-912"></a></span>
-<span id="cb1-913"><a href="#cb1-913"></a>**烷烃**：</span>
-<span id="cb1-914"><a href="#cb1-914"></a><span class="ss">1. </span>选含取代基最多、最长的碳链为主链</span>
-<span id="cb1-915"><a href="#cb1-915"></a><span class="ss">2. </span>从靠近取代基端编号</span>
-<span id="cb1-916"><a href="#cb1-916"></a><span class="ss">3. </span>取代基从小到大排序，数字间用","，数字与汉字间用"-"</span>
+<span id="cb1-911"><a href="#cb1-911"></a><span class="pp">|</span> 简写 <span class="pp">|</span> 成分 <span class="pp">|</span></span>
+<span id="cb1-912"><a href="#cb1-912"></a><span class="pp">|:----:|------|</span></span>
+<span id="cb1-913"><a href="#cb1-913"></a><span class="pp">|</span> $C_3S$ <span class="pp">|</span> $3\text{CaO·SiO}_2$ <span class="pp">|</span></span>
+<span id="cb1-914"><a href="#cb1-914"></a><span class="pp">|</span> $C_2S$ <span class="pp">|</span> $2\text{CaO·SiO}_2$ <span class="pp">|</span></span>
+<span id="cb1-915"><a href="#cb1-915"></a><span class="pp">|</span> $C_3A$ <span class="pp">|</span> $3\text{CaO·Al}_2\text{O}_3$ <span class="pp">|</span></span>
+<span id="cb1-916"><a href="#cb1-916"></a><span class="pp">|</span> $C_4AF$ <span class="pp">|</span> $4\text{CaO·Al}_2\text{O}_3\text{·Fe}_2\text{O}_3$ <span class="pp">|</span></span>
 <span id="cb1-917"><a href="#cb1-917"></a></span>
-<span id="cb1-918"><a href="#cb1-918"></a>**烯/炔烃**：主链须含双键/三键，从靠近多重键端编号</span>
+<span id="cb1-918"><a href="#cb1-918"></a>石膏作用：调节凝结时间，防止"闪凝"。</span>
 <span id="cb1-919"><a href="#cb1-919"></a></span>
-<span id="cb1-920"><a href="#cb1-920"></a>**芳烃**：以苯环为母体，用邻/间/对或 1,2-/1,3-/1,4-</span>
+<span id="cb1-920"><a href="#cb1-920"></a><span class="fu">### 腐蚀与防护</span></span>
 <span id="cb1-921"><a href="#cb1-921"></a></span>
-<span id="cb1-922"><a href="#cb1-922"></a><span class="fu">### 同分异构体</span></span>
+<span id="cb1-922"><a href="#cb1-922"></a>**腐蚀类型**：溶解腐蚀（软水溶解 $\text{Ca(OH)}_2$）、盐类腐蚀（硫酸盐/镁盐膨胀）、碳化（$\text{CO}_2$ 降低 pH，破坏钢筋钝化膜）</span>
 <span id="cb1-923"><a href="#cb1-923"></a></span>
-<span id="cb1-924"><a href="#cb1-924"></a><span class="pp">|</span> 类型 <span class="pp">|</span> 子类 <span class="pp">|</span></span>
-<span id="cb1-925"><a href="#cb1-925"></a><span class="pp">|------|------|</span></span>
-<span id="cb1-926"><a href="#cb1-926"></a><span class="pp">|</span> 构造异构 <span class="pp">|</span> 碳链异构、位置异构、官能团异构 <span class="pp">|</span></span>
-<span id="cb1-927"><a href="#cb1-927"></a><span class="pp">|</span> 立体异构 <span class="pp">|</span> 构象异构、构型异构 <span class="pp">|</span></span>
-<span id="cb1-928"><a href="#cb1-928"></a></span>
-<span id="cb1-929"><a href="#cb1-929"></a>:::</span>
-<span id="cb1-930"><a href="#cb1-930"></a></span>
-<span id="cb1-931"><a href="#cb1-931"></a>---</span>
-<span id="cb1-932"><a href="#cb1-932"></a></span>
-<span id="cb1-933"><a href="#cb1-933"></a><span class="fu">## 重要有机反应类型</span></span>
-<span id="cb1-934"><a href="#cb1-934"></a></span>
-<span id="cb1-935"><a href="#cb1-935"></a><span class="pp">|</span> 反应 <span class="pp">|</span> 特征 <span class="pp">|</span> 示例 <span class="pp">|</span></span>
-<span id="cb1-936"><a href="#cb1-936"></a><span class="pp">|------|------|------|</span></span>
-<span id="cb1-937"><a href="#cb1-937"></a><span class="pp">|</span> 取代反应 <span class="pp">|</span> 原子/基团被替换 <span class="pp">|</span> 烷烃卤代、酯化 <span class="pp">|</span></span>
-<span id="cb1-938"><a href="#cb1-938"></a><span class="pp">|</span> 加成反应 <span class="pp">|</span> 不饱和键打开 <span class="pp">|</span> 烯烃加氢 <span class="pp">|</span></span>
-<span id="cb1-939"><a href="#cb1-939"></a><span class="pp">|</span> 消去反应 <span class="pp">|</span> 脱小分子形成不饱和键 <span class="pp">|</span> 醇脱水成烯 <span class="pp">|</span></span>
-<span id="cb1-940"><a href="#cb1-940"></a><span class="pp">|</span> 聚合反应 <span class="pp">|</span> 加聚（无副产物）/ 缩聚（有小分子副产物）<span class="pp">|</span> PE 合成、尼龙 <span class="pp">|</span></span>
-<span id="cb1-941"><a href="#cb1-941"></a></span>
-<span id="cb1-942"><a href="#cb1-942"></a>---</span>
+<span id="cb1-924"><a href="#cb1-924"></a>**防护**：提高密实度、涂保护层、电化学保护（牺牲阳极法）</span>
+<span id="cb1-925"><a href="#cb1-925"></a></span>
+<span id="cb1-926"><a href="#cb1-926"></a>:::</span>
+<span id="cb1-927"><a href="#cb1-927"></a></span>
+<span id="cb1-928"><a href="#cb1-928"></a>---</span>
+<span id="cb1-929"><a href="#cb1-929"></a></span>
+<span id="cb1-930"><a href="#cb1-930"></a><span class="fu"># 有机化学和有机化合物</span></span>
+<span id="cb1-931"><a href="#cb1-931"></a></span>
+<span id="cb1-932"><a href="#cb1-932"></a><span class="fu">## 有机化合物概述</span></span>
+<span id="cb1-933"><a href="#cb1-933"></a></span>
+<span id="cb1-934"><a href="#cb1-934"></a>**有机物特点**：以碳为基础，共价键成链/环，熔沸点低，难溶于水，易燃，反应慢且多副反应。</span>
+<span id="cb1-935"><a href="#cb1-935"></a></span>
+<span id="cb1-936"><a href="#cb1-936"></a>::: {.panel-tabset}</span>
+<span id="cb1-937"><a href="#cb1-937"></a></span>
+<span id="cb1-938"><a href="#cb1-938"></a><span class="fu">### 按碳骨架分类</span></span>
+<span id="cb1-939"><a href="#cb1-939"></a></span>
+<span id="cb1-940"><a href="#cb1-940"></a><span class="ss">1. </span>**开链化合物**（脂肪族）：链状</span>
+<span id="cb1-941"><a href="#cb1-941"></a><span class="ss">2. </span>**碳环化合物**：脂环 / 芳香族</span>
+<span id="cb1-942"><a href="#cb1-942"></a><span class="ss">3. </span>**杂环化合物**：环中含 O、N、S 等杂原子</span>
 <span id="cb1-943"><a href="#cb1-943"></a></span>
-<span id="cb1-944"><a href="#cb1-944"></a><span class="fu">## 各类有机物性质</span></span>
+<span id="cb1-944"><a href="#cb1-944"></a><span class="fu">### 命名规则</span></span>
 <span id="cb1-945"><a href="#cb1-945"></a></span>
-<span id="cb1-946"><a href="#cb1-946"></a>::: {.panel-tabset}</span>
-<span id="cb1-947"><a href="#cb1-947"></a></span>
-<span id="cb1-948"><a href="#cb1-948"></a><span class="fu">### 烃</span></span>
-<span id="cb1-949"><a href="#cb1-949"></a></span>
-<span id="cb1-950"><a href="#cb1-950"></a><span class="pp">|</span> 类别 <span class="pp">|</span> 杂化 <span class="pp">|</span> 特征反应 <span class="pp">|</span></span>
-<span id="cb1-951"><a href="#cb1-951"></a><span class="pp">|------|:----:|----------|</span></span>
-<span id="cb1-952"><a href="#cb1-952"></a><span class="pp">|</span> 烷烃 <span class="pp">|</span> $sp^3$ <span class="pp">|</span> 卤代（取代），化学性质稳定 <span class="pp">|</span></span>
-<span id="cb1-953"><a href="#cb1-953"></a><span class="pp">|</span> 烯烃 <span class="pp">|</span> $sp^2$ <span class="pp">|</span> 亲电加成（马氏规则），顺反异构 <span class="pp">|</span></span>
-<span id="cb1-954"><a href="#cb1-954"></a><span class="pp">|</span> 炔烃 <span class="pp">|</span> $sp$ <span class="pp">|</span> 亲电加成；末端炔烃有弱酸性 <span class="pp">|</span></span>
-<span id="cb1-955"><a href="#cb1-955"></a><span class="pp">|</span> 芳烃 <span class="pp">|</span> $sp^2$ <span class="pp">|</span> 亲电取代（卤代、硝化、磺化、傅-克），难加成 <span class="pp">|</span></span>
+<span id="cb1-946"><a href="#cb1-946"></a>**烷烃**：</span>
+<span id="cb1-947"><a href="#cb1-947"></a><span class="ss">1. </span>选含取代基最多、最长的碳链为主链</span>
+<span id="cb1-948"><a href="#cb1-948"></a><span class="ss">2. </span>从靠近取代基端编号</span>
+<span id="cb1-949"><a href="#cb1-949"></a><span class="ss">3. </span>取代基从小到大排序，数字间用","，数字与汉字间用"-"</span>
+<span id="cb1-950"><a href="#cb1-950"></a></span>
+<span id="cb1-951"><a href="#cb1-951"></a>**烯/炔烃**：主链须含双键/三键，从靠近多重键端编号</span>
+<span id="cb1-952"><a href="#cb1-952"></a></span>
+<span id="cb1-953"><a href="#cb1-953"></a>**芳烃**：以苯环为母体，用邻/间/对或 1,2-/1,3-/1,4-</span>
+<span id="cb1-954"><a href="#cb1-954"></a></span>
+<span id="cb1-955"><a href="#cb1-955"></a><span class="fu">### 同分异构体</span></span>
 <span id="cb1-956"><a href="#cb1-956"></a></span>
-<span id="cb1-957"><a href="#cb1-957"></a><span class="fu">### 含氧化合物</span></span>
-<span id="cb1-958"><a href="#cb1-958"></a></span>
-<span id="cb1-959"><a href="#cb1-959"></a><span class="pp">|</span> 类别 <span class="pp">|</span> 特征 <span class="pp">|</span></span>
-<span id="cb1-960"><a href="#cb1-960"></a><span class="pp">|------|------|</span></span>
-<span id="cb1-961"><a href="#cb1-961"></a><span class="pp">|</span> 醇 <span class="pp">|</span> 分子间氢键，沸点高；脱水成烯/醚；伯醇→醛→酸，仲醇→酮 <span class="pp">|</span></span>
-<span id="cb1-962"><a href="#cb1-962"></a><span class="pp">|</span> 酚 <span class="pp">|</span> $p\text{-}\pi$ 共轭，酸性强于醇；与 $\text{FeCl}_3$ 显紫色 <span class="pp">|</span></span>
-<span id="cb1-963"><a href="#cb1-963"></a><span class="pp">|</span> 醛 <span class="pp">|</span> 亲核加成（HCN、NaHSO₃、醇）；银镜反应；费林反应（砖红色）<span class="pp">|</span></span>
-<span id="cb1-964"><a href="#cb1-964"></a><span class="pp">|</span> 酮 <span class="pp">|</span> 亲核加成；通常不发生银镜/费林反应 <span class="pp">|</span></span>
-<span id="cb1-965"><a href="#cb1-965"></a><span class="pp">|</span> 羧酸 <span class="pp">|</span> 酸性 &gt; 酚 &gt; 碳酸；生成酰卤、酸酐、酯、酰胺 <span class="pp">|</span></span>
-<span id="cb1-966"><a href="#cb1-966"></a><span class="pp">|</span> 酯 <span class="pp">|</span> 酸性水解（可逆）；碱性水解（皂化，不可逆）<span class="pp">|</span></span>
+<span id="cb1-957"><a href="#cb1-957"></a><span class="pp">|</span> 类型 <span class="pp">|</span> 子类 <span class="pp">|</span></span>
+<span id="cb1-958"><a href="#cb1-958"></a><span class="pp">|------|------|</span></span>
+<span id="cb1-959"><a href="#cb1-959"></a><span class="pp">|</span> 构造异构 <span class="pp">|</span> 碳链异构、位置异构、官能团异构 <span class="pp">|</span></span>
+<span id="cb1-960"><a href="#cb1-960"></a><span class="pp">|</span> 立体异构 <span class="pp">|</span> 构象异构、构型异构 <span class="pp">|</span></span>
+<span id="cb1-961"><a href="#cb1-961"></a></span>
+<span id="cb1-962"><a href="#cb1-962"></a>:::</span>
+<span id="cb1-963"><a href="#cb1-963"></a></span>
+<span id="cb1-964"><a href="#cb1-964"></a>---</span>
+<span id="cb1-965"><a href="#cb1-965"></a></span>
+<span id="cb1-966"><a href="#cb1-966"></a><span class="fu">## 重要有机反应类型</span></span>
 <span id="cb1-967"><a href="#cb1-967"></a></span>
-<span id="cb1-968"><a href="#cb1-968"></a><span class="fu">### 卤代烃</span></span>
-<span id="cb1-969"><a href="#cb1-969"></a></span>
-<span id="cb1-970"><a href="#cb1-970"></a><span class="ss">1. </span>**亲核取代**：水解→醇，氨解→胺，氰解→增长碳链</span>
-<span id="cb1-971"><a href="#cb1-971"></a><span class="ss">2. </span>**消去反应**：碱性醇溶液中 → 烯烃</span>
-<span id="cb1-972"><a href="#cb1-972"></a><span class="ss">3. </span>**格氏试剂**：$R\text{-}X + \text{Mg} \xrightarrow{\text{无水乙醚}} \text{RMgX}$</span>
-<span id="cb1-973"><a href="#cb1-973"></a></span>
-<span id="cb1-974"><a href="#cb1-974"></a>:::</span>
-<span id="cb1-975"><a href="#cb1-975"></a></span>
-<span id="cb1-976"><a href="#cb1-976"></a>**偶极矩**：$\mu = q \cdot l$（衡量分子极性，单位 $\text{C·m}$）</span>
-<span id="cb1-977"><a href="#cb1-977"></a></span>
-<span id="cb1-978"><a href="#cb1-978"></a>---</span>
-<span id="cb1-979"><a href="#cb1-979"></a></span>
-<span id="cb1-980"><a href="#cb1-980"></a><span class="fu"># 合成高分子材料</span></span>
-<span id="cb1-981"><a href="#cb1-981"></a></span>
-<span id="cb1-982"><a href="#cb1-982"></a><span class="fu">## 基本概念</span></span>
-<span id="cb1-983"><a href="#cb1-983"></a></span>
-<span id="cb1-984"><a href="#cb1-984"></a>**高分子化合物**：相对分子质量 $&gt; 10^4$，主要以共价键结合。</span>
-<span id="cb1-985"><a href="#cb1-985"></a></span>
-<span id="cb1-986"><a href="#cb1-986"></a><span class="pp">|</span> 术语 <span class="pp">|</span> 含义 <span class="pp">|</span></span>
-<span id="cb1-987"><a href="#cb1-987"></a><span class="pp">|------|------|</span></span>
-<span id="cb1-988"><a href="#cb1-988"></a><span class="pp">|</span> 单体 <span class="pp">|</span> 能聚合的低分子化合物 <span class="pp">|</span></span>
-<span id="cb1-989"><a href="#cb1-989"></a><span class="pp">|</span> 结构单元（链节）<span class="pp">|</span> 链中重复出现的最小单位 <span class="pp">|</span></span>
-<span id="cb1-990"><a href="#cb1-990"></a><span class="pp">|</span> 聚合度 $\chi$（或 $P$）<span class="pp">|</span> 链节数目 <span class="pp">|</span></span>
+<span id="cb1-968"><a href="#cb1-968"></a><span class="pp">|</span> 反应 <span class="pp">|</span> 特征 <span class="pp">|</span> 示例 <span class="pp">|</span></span>
+<span id="cb1-969"><a href="#cb1-969"></a><span class="pp">|------|------|------|</span></span>
+<span id="cb1-970"><a href="#cb1-970"></a><span class="pp">|</span> 取代反应 <span class="pp">|</span> 原子/基团被替换 <span class="pp">|</span> 烷烃卤代、酯化 <span class="pp">|</span></span>
+<span id="cb1-971"><a href="#cb1-971"></a><span class="pp">|</span> 加成反应 <span class="pp">|</span> 不饱和键打开 <span class="pp">|</span> 烯烃加氢 <span class="pp">|</span></span>
+<span id="cb1-972"><a href="#cb1-972"></a><span class="pp">|</span> 消去反应 <span class="pp">|</span> 脱小分子形成不饱和键 <span class="pp">|</span> 醇脱水成烯 <span class="pp">|</span></span>
+<span id="cb1-973"><a href="#cb1-973"></a><span class="pp">|</span> 聚合反应 <span class="pp">|</span> 加聚（无副产物）/ 缩聚（有小分子副产物）<span class="pp">|</span> PE 合成、尼龙 <span class="pp">|</span></span>
+<span id="cb1-974"><a href="#cb1-974"></a></span>
+<span id="cb1-975"><a href="#cb1-975"></a>---</span>
+<span id="cb1-976"><a href="#cb1-976"></a></span>
+<span id="cb1-977"><a href="#cb1-977"></a><span class="fu">## 各类有机物性质</span></span>
+<span id="cb1-978"><a href="#cb1-978"></a></span>
+<span id="cb1-979"><a href="#cb1-979"></a>::: {.panel-tabset}</span>
+<span id="cb1-980"><a href="#cb1-980"></a></span>
+<span id="cb1-981"><a href="#cb1-981"></a><span class="fu">### 烃</span></span>
+<span id="cb1-982"><a href="#cb1-982"></a></span>
+<span id="cb1-983"><a href="#cb1-983"></a><span class="pp">|</span> 类别 <span class="pp">|</span> 杂化 <span class="pp">|</span> 特征反应 <span class="pp">|</span></span>
+<span id="cb1-984"><a href="#cb1-984"></a><span class="pp">|------|:----:|----------|</span></span>
+<span id="cb1-985"><a href="#cb1-985"></a><span class="pp">|</span> 烷烃 <span class="pp">|</span> $sp^3$ <span class="pp">|</span> 卤代（取代），化学性质稳定 <span class="pp">|</span></span>
+<span id="cb1-986"><a href="#cb1-986"></a><span class="pp">|</span> 烯烃 <span class="pp">|</span> $sp^2$ <span class="pp">|</span> 亲电加成（马氏规则），顺反异构 <span class="pp">|</span></span>
+<span id="cb1-987"><a href="#cb1-987"></a><span class="pp">|</span> 炔烃 <span class="pp">|</span> $sp$ <span class="pp">|</span> 亲电加成；末端炔烃有弱酸性 <span class="pp">|</span></span>
+<span id="cb1-988"><a href="#cb1-988"></a><span class="pp">|</span> 芳烃 <span class="pp">|</span> $sp^2$ <span class="pp">|</span> 亲电取代（卤代、硝化、磺化、傅-克），难加成 <span class="pp">|</span></span>
+<span id="cb1-989"><a href="#cb1-989"></a></span>
+<span id="cb1-990"><a href="#cb1-990"></a><span class="fu">### 含氧化合物</span></span>
 <span id="cb1-991"><a href="#cb1-991"></a></span>
-<span id="cb1-992"><a href="#cb1-992"></a>**基本特点**：多分散性（平均相对分子质量）、无气态、独特弹性/塑性/绝缘性</span>
-<span id="cb1-993"><a href="#cb1-993"></a></span>
-<span id="cb1-994"><a href="#cb1-994"></a>---</span>
-<span id="cb1-995"><a href="#cb1-995"></a></span>
-<span id="cb1-996"><a href="#cb1-996"></a><span class="fu">## 合成反应</span></span>
-<span id="cb1-997"><a href="#cb1-997"></a></span>
-<span id="cb1-998"><a href="#cb1-998"></a>::: {.callout-note title="加聚 vs 缩聚"}</span>
-<span id="cb1-999"><a href="#cb1-999"></a></span>
-<span id="cb1-1000"><a href="#cb1-1000"></a><span class="pp">|</span> <span class="pp">|</span> 加聚反应 <span class="pp">|</span> 缩聚反应 <span class="pp">|</span></span>
-<span id="cb1-1001"><a href="#cb1-1001"></a><span class="pp">|</span>--<span class="pp">|----------|----------|</span></span>
-<span id="cb1-1002"><a href="#cb1-1002"></a><span class="pp">|</span> 副产物 <span class="pp">|</span> 无 <span class="pp">|</span> 有（$\text{H}_2\text{O}$、$\text{NH}_3$ 等）<span class="pp">|</span></span>
-<span id="cb1-1003"><a href="#cb1-1003"></a><span class="pp">|</span> 组成 <span class="pp">|</span> 高聚物与单体相同 <span class="pp">|</span> 高聚物与单体不同 <span class="pp">|</span></span>
-<span id="cb1-1004"><a href="#cb1-1004"></a><span class="pp">|</span> 示例 <span class="pp">|</span> $n\text{CH}_2{=}\text{CH}_2 \to <span class="co">[</span><span class="ot">\text{CH}_2\text{-CH}_2</span><span class="co">]</span>_n$ <span class="pp">|</span> 尼龙-66 <span class="pp">|</span></span>
-<span id="cb1-1005"><a href="#cb1-1005"></a></span>
-<span id="cb1-1006"><a href="#cb1-1006"></a>:::</span>
-<span id="cb1-1007"><a href="#cb1-1007"></a></span>
-<span id="cb1-1008"><a href="#cb1-1008"></a>---</span>
-<span id="cb1-1009"><a href="#cb1-1009"></a></span>
-<span id="cb1-1010"><a href="#cb1-1010"></a><span class="fu">## 结构与性能</span></span>
-<span id="cb1-1011"><a href="#cb1-1011"></a></span>
-<span id="cb1-1012"><a href="#cb1-1012"></a><span class="pp">|</span> 结构类型 <span class="pp">|</span> 热学性质 <span class="pp">|</span> 溶解性 <span class="pp">|</span></span>
-<span id="cb1-1013"><a href="#cb1-1013"></a><span class="pp">|----------|----------|--------|</span></span>
-<span id="cb1-1014"><a href="#cb1-1014"></a><span class="pp">|</span> 线型结构 <span class="pp">|</span> 热塑性 <span class="pp">|</span> 可溶 <span class="pp">|</span></span>
-<span id="cb1-1015"><a href="#cb1-1015"></a><span class="pp">|</span> 支链型结构 <span class="pp">|</span> 热塑性 <span class="pp">|</span> 可溶 <span class="pp">|</span></span>
-<span id="cb1-1016"><a href="#cb1-1016"></a><span class="pp">|</span> 体型（网状）<span class="pp">|</span> 热固性 <span class="pp">|</span> 不溶（只溶胀）<span class="pp">|</span></span>
-<span id="cb1-1017"><a href="#cb1-1017"></a></span>
-<span id="cb1-1018"><a href="#cb1-1018"></a>**老化**：光、热、氧导致裂解（链断裂）或交联（链变性）。</span>
-<span id="cb1-1019"><a href="#cb1-1019"></a></span>
-<span id="cb1-1020"><a href="#cb1-1020"></a>---</span>
-<span id="cb1-1021"><a href="#cb1-1021"></a></span>
-<span id="cb1-1022"><a href="#cb1-1022"></a><span class="fu">## 三大合成高分子材料</span></span>
-<span id="cb1-1023"><a href="#cb1-1023"></a></span>
-<span id="cb1-1024"><a href="#cb1-1024"></a>::: {.panel-tabset}</span>
-<span id="cb1-1025"><a href="#cb1-1025"></a></span>
-<span id="cb1-1026"><a href="#cb1-1026"></a><span class="fu">### 塑料</span></span>
-<span id="cb1-1027"><a href="#cb1-1027"></a></span>
-<span id="cb1-1028"><a href="#cb1-1028"></a>**通用塑料**：PE、PP、PVC、PS、ABS（产量大，价格低）</span>
-<span id="cb1-1029"><a href="#cb1-1029"></a></span>
-<span id="cb1-1030"><a href="#cb1-1030"></a>**工程塑料**：PA（尼龙）、PC（聚碳酸酯）；特种型：PPS、PEEK</span>
-<span id="cb1-1031"><a href="#cb1-1031"></a></span>
-<span id="cb1-1032"><a href="#cb1-1032"></a><span class="fu">### 合成橡胶</span></span>
-<span id="cb1-1033"><a href="#cb1-1033"></a></span>
-<span id="cb1-1034"><a href="#cb1-1034"></a>高弹性高聚物，经**硫化**（线型→网状）提高强度。</span>
-<span id="cb1-1035"><a href="#cb1-1035"></a></span>
-<span id="cb1-1036"><a href="#cb1-1036"></a><span class="pp">|</span> 品种 <span class="pp">|</span> 特点 <span class="pp">|</span></span>
-<span id="cb1-1037"><a href="#cb1-1037"></a><span class="pp">|------|------|</span></span>
-<span id="cb1-1038"><a href="#cb1-1038"></a><span class="pp">|</span> 丁苯橡胶（SBR）<span class="pp">|</span> 产量最大 <span class="pp">|</span></span>
-<span id="cb1-1039"><a href="#cb1-1039"></a><span class="pp">|</span> 丁腈橡胶（NBR）<span class="pp">|</span> 耐油 <span class="pp">|</span></span>
-<span id="cb1-1040"><a href="#cb1-1040"></a><span class="pp">|</span> 硅橡胶（SR）<span class="pp">|</span> 耐高低温 <span class="pp">|</span></span>
-<span id="cb1-1041"><a href="#cb1-1041"></a><span class="pp">|</span> 顺丁橡胶（BR）<span class="pp">|</span> 综合性能好 <span class="pp">|</span></span>
+<span id="cb1-992"><a href="#cb1-992"></a><span class="pp">|</span> 类别 <span class="pp">|</span> 特征 <span class="pp">|</span></span>
+<span id="cb1-993"><a href="#cb1-993"></a><span class="pp">|------|------|</span></span>
+<span id="cb1-994"><a href="#cb1-994"></a><span class="pp">|</span> 醇 <span class="pp">|</span> 分子间氢键，沸点高；脱水成烯/醚；伯醇→醛→酸，仲醇→酮 <span class="pp">|</span></span>
+<span id="cb1-995"><a href="#cb1-995"></a><span class="pp">|</span> 酚 <span class="pp">|</span> $p\text{-}\pi$ 共轭，酸性强于醇；与 $\text{FeCl}_3$ 显紫色 <span class="pp">|</span></span>
+<span id="cb1-996"><a href="#cb1-996"></a><span class="pp">|</span> 醛 <span class="pp">|</span> 亲核加成（HCN、NaHSO₃、醇）；银镜反应；费林反应（砖红色）<span class="pp">|</span></span>
+<span id="cb1-997"><a href="#cb1-997"></a><span class="pp">|</span> 酮 <span class="pp">|</span> 亲核加成；通常不发生银镜/费林反应 <span class="pp">|</span></span>
+<span id="cb1-998"><a href="#cb1-998"></a><span class="pp">|</span> 羧酸 <span class="pp">|</span> 酸性 &gt; 酚 &gt; 碳酸；生成酰卤、酸酐、酯、酰胺 <span class="pp">|</span></span>
+<span id="cb1-999"><a href="#cb1-999"></a><span class="pp">|</span> 酯 <span class="pp">|</span> 酸性水解（可逆）；碱性水解（皂化，不可逆）<span class="pp">|</span></span>
+<span id="cb1-1000"><a href="#cb1-1000"></a></span>
+<span id="cb1-1001"><a href="#cb1-1001"></a><span class="fu">### 卤代烃</span></span>
+<span id="cb1-1002"><a href="#cb1-1002"></a></span>
+<span id="cb1-1003"><a href="#cb1-1003"></a><span class="ss">1. </span>**亲核取代**：水解→醇，氨解→胺，氰解→增长碳链</span>
+<span id="cb1-1004"><a href="#cb1-1004"></a><span class="ss">2. </span>**消去反应**：碱性醇溶液中 → 烯烃</span>
+<span id="cb1-1005"><a href="#cb1-1005"></a><span class="ss">3. </span>**格氏试剂**：$R\text{-}X + \text{Mg} \xrightarrow{\text{无水乙醚}} \text{RMgX}$</span>
+<span id="cb1-1006"><a href="#cb1-1006"></a></span>
+<span id="cb1-1007"><a href="#cb1-1007"></a>:::</span>
+<span id="cb1-1008"><a href="#cb1-1008"></a></span>
+<span id="cb1-1009"><a href="#cb1-1009"></a>**偶极矩**：$\mu = q \cdot l$（衡量分子极性，单位 $\text{C·m}$）</span>
+<span id="cb1-1010"><a href="#cb1-1010"></a></span>
+<span id="cb1-1011"><a href="#cb1-1011"></a>---</span>
+<span id="cb1-1012"><a href="#cb1-1012"></a></span>
+<span id="cb1-1013"><a href="#cb1-1013"></a><span class="fu"># 合成高分子材料</span></span>
+<span id="cb1-1014"><a href="#cb1-1014"></a></span>
+<span id="cb1-1015"><a href="#cb1-1015"></a><span class="fu">## 基本概念</span></span>
+<span id="cb1-1016"><a href="#cb1-1016"></a></span>
+<span id="cb1-1017"><a href="#cb1-1017"></a>**高分子化合物**：相对分子质量 $&gt; 10^4$，主要以共价键结合。</span>
+<span id="cb1-1018"><a href="#cb1-1018"></a></span>
+<span id="cb1-1019"><a href="#cb1-1019"></a><span class="pp">|</span> 术语 <span class="pp">|</span> 含义 <span class="pp">|</span></span>
+<span id="cb1-1020"><a href="#cb1-1020"></a><span class="pp">|------|------|</span></span>
+<span id="cb1-1021"><a href="#cb1-1021"></a><span class="pp">|</span> 单体 <span class="pp">|</span> 能聚合的低分子化合物 <span class="pp">|</span></span>
+<span id="cb1-1022"><a href="#cb1-1022"></a><span class="pp">|</span> 结构单元（链节）<span class="pp">|</span> 链中重复出现的最小单位 <span class="pp">|</span></span>
+<span id="cb1-1023"><a href="#cb1-1023"></a><span class="pp">|</span> 聚合度 $\chi$（或 $P$）<span class="pp">|</span> 链节数目 <span class="pp">|</span></span>
+<span id="cb1-1024"><a href="#cb1-1024"></a></span>
+<span id="cb1-1025"><a href="#cb1-1025"></a>**基本特点**：多分散性（平均相对分子质量）、无气态、独特弹性/塑性/绝缘性</span>
+<span id="cb1-1026"><a href="#cb1-1026"></a></span>
+<span id="cb1-1027"><a href="#cb1-1027"></a>---</span>
+<span id="cb1-1028"><a href="#cb1-1028"></a></span>
+<span id="cb1-1029"><a href="#cb1-1029"></a><span class="fu">## 合成反应</span></span>
+<span id="cb1-1030"><a href="#cb1-1030"></a></span>
+<span id="cb1-1031"><a href="#cb1-1031"></a>::: {.callout-note title="加聚 vs 缩聚"}</span>
+<span id="cb1-1032"><a href="#cb1-1032"></a></span>
+<span id="cb1-1033"><a href="#cb1-1033"></a><span class="pp">|</span> <span class="pp">|</span> 加聚反应 <span class="pp">|</span> 缩聚反应 <span class="pp">|</span></span>
+<span id="cb1-1034"><a href="#cb1-1034"></a><span class="pp">|</span>--<span class="pp">|----------|----------|</span></span>
+<span id="cb1-1035"><a href="#cb1-1035"></a><span class="pp">|</span> 副产物 <span class="pp">|</span> 无 <span class="pp">|</span> 有（$\text{H}_2\text{O}$、$\text{NH}_3$ 等）<span class="pp">|</span></span>
+<span id="cb1-1036"><a href="#cb1-1036"></a><span class="pp">|</span> 组成 <span class="pp">|</span> 高聚物与单体相同 <span class="pp">|</span> 高聚物与单体不同 <span class="pp">|</span></span>
+<span id="cb1-1037"><a href="#cb1-1037"></a><span class="pp">|</span> 示例 <span class="pp">|</span> $n\text{CH}_2{=}\text{CH}_2 \to <span class="co">[</span><span class="ot">\text{CH}_2\text{-CH}_2</span><span class="co">]</span>_n$ <span class="pp">|</span> 尼龙-66 <span class="pp">|</span></span>
+<span id="cb1-1038"><a href="#cb1-1038"></a></span>
+<span id="cb1-1039"><a href="#cb1-1039"></a>:::</span>
+<span id="cb1-1040"><a href="#cb1-1040"></a></span>
+<span id="cb1-1041"><a href="#cb1-1041"></a>---</span>
 <span id="cb1-1042"><a href="#cb1-1042"></a></span>
-<span id="cb1-1043"><a href="#cb1-1043"></a><span class="fu">### 纤维</span></span>
+<span id="cb1-1043"><a href="#cb1-1043"></a><span class="fu">## 结构与性能</span></span>
 <span id="cb1-1044"><a href="#cb1-1044"></a></span>
-<span id="cb1-1045"><a href="#cb1-1045"></a>长径比 $&gt; 1000:1$，结晶能力强，熔点高。</span>
-<span id="cb1-1046"><a href="#cb1-1046"></a></span>
-<span id="cb1-1047"><a href="#cb1-1047"></a><span class="pp">|</span> 名称 <span class="pp">|</span> 特点 <span class="pp">|</span></span>
-<span id="cb1-1048"><a href="#cb1-1048"></a><span class="pp">|------|------|</span></span>
-<span id="cb1-1049"><a href="#cb1-1049"></a><span class="pp">|</span> 涤纶（聚酯）<span class="pp">|</span> 挺括不皱，易洗快干 <span class="pp">|</span></span>
-<span id="cb1-1050"><a href="#cb1-1050"></a><span class="pp">|</span> 尼龙（聚酰胺）<span class="pp">|</span> 耐磨，韧性极优 <span class="pp">|</span></span>
-<span id="cb1-1051"><a href="#cb1-1051"></a><span class="pp">|</span> 腈纶（聚丙烯腈）<span class="pp">|</span> 蓬松保暖，"合成羊毛" <span class="pp">|</span></span>
+<span id="cb1-1045"><a href="#cb1-1045"></a><span class="pp">|</span> 结构类型 <span class="pp">|</span> 热学性质 <span class="pp">|</span> 溶解性 <span class="pp">|</span></span>
+<span id="cb1-1046"><a href="#cb1-1046"></a><span class="pp">|----------|----------|--------|</span></span>
+<span id="cb1-1047"><a href="#cb1-1047"></a><span class="pp">|</span> 线型结构 <span class="pp">|</span> 热塑性 <span class="pp">|</span> 可溶 <span class="pp">|</span></span>
+<span id="cb1-1048"><a href="#cb1-1048"></a><span class="pp">|</span> 支链型结构 <span class="pp">|</span> 热塑性 <span class="pp">|</span> 可溶 <span class="pp">|</span></span>
+<span id="cb1-1049"><a href="#cb1-1049"></a><span class="pp">|</span> 体型（网状）<span class="pp">|</span> 热固性 <span class="pp">|</span> 不溶（只溶胀）<span class="pp">|</span></span>
+<span id="cb1-1050"><a href="#cb1-1050"></a></span>
+<span id="cb1-1051"><a href="#cb1-1051"></a>**老化**：光、热、氧导致裂解（链断裂）或交联（链变性）。</span>
 <span id="cb1-1052"><a href="#cb1-1052"></a></span>
-<span id="cb1-1053"><a href="#cb1-1053"></a>:::</span>
+<span id="cb1-1053"><a href="#cb1-1053"></a>---</span>
 <span id="cb1-1054"><a href="#cb1-1054"></a></span>
-<span id="cb1-1055"><a href="#cb1-1055"></a>---</span>
+<span id="cb1-1055"><a href="#cb1-1055"></a><span class="fu">## 三大合成高分子材料</span></span>
 <span id="cb1-1056"><a href="#cb1-1056"></a></span>
-<span id="cb1-1057"><a href="#cb1-1057"></a><span class="fu">## 其他高分子材料</span></span>
+<span id="cb1-1057"><a href="#cb1-1057"></a>::: {.panel-tabset}</span>
 <span id="cb1-1058"><a href="#cb1-1058"></a></span>
-<span id="cb1-1059"><a href="#cb1-1059"></a>**合成胶黏剂**：主剂（合成树脂/橡胶）+ 助剂（固化剂、溶剂、增塑剂）</span>
+<span id="cb1-1059"><a href="#cb1-1059"></a><span class="fu">### 塑料</span></span>
 <span id="cb1-1060"><a href="#cb1-1060"></a></span>
-<span id="cb1-1061"><a href="#cb1-1061"></a>固化类型：热熔型、溶剂型、乳液型、热固型</span>
+<span id="cb1-1061"><a href="#cb1-1061"></a>**通用塑料**：PE、PP、PVC、PS、ABS（产量大，价格低）</span>
 <span id="cb1-1062"><a href="#cb1-1062"></a></span>
-<span id="cb1-1063"><a href="#cb1-1063"></a>**离子交换树脂：**</span>
+<span id="cb1-1063"><a href="#cb1-1063"></a>**工程塑料**：PA（尼龙）、PC（聚碳酸酯）；特种型：PPS、PEEK</span>
 <span id="cb1-1064"><a href="#cb1-1064"></a></span>
-<span id="cb1-1065"><a href="#cb1-1065"></a><span class="pp">|</span> 类型 <span class="pp">|</span> 活性基团 <span class="pp">|</span> 代表 <span class="pp">|</span></span>
-<span id="cb1-1066"><a href="#cb1-1066"></a><span class="pp">|------|----------|------|</span></span>
-<span id="cb1-1067"><a href="#cb1-1067"></a><span class="pp">|</span> 阳离子交换树脂 <span class="pp">|</span> 酸性基（$-\text{SO}_3\text{H}$，$-\text{COOH}$）<span class="pp">|</span> 强酸/弱酸型 <span class="pp">|</span></span>
-<span id="cb1-1068"><a href="#cb1-1068"></a><span class="pp">|</span> 阴离子交换树脂 <span class="pp">|</span> 碱性基（季铵基、氨基）<span class="pp">|</span> 强碱/弱碱型 <span class="pp">|</span></span>
-<span id="cb1-1069"><a href="#cb1-1069"></a></span>
-<span id="cb1-1070"><a href="#cb1-1070"></a>**应用**：硬水软化、脱盐水制造、废液处理、稀有元素提取</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-1065"><a href="#cb1-1065"></a><span class="fu">### 合成橡胶</span></span>
+<span id="cb1-1066"><a href="#cb1-1066"></a></span>
+<span id="cb1-1067"><a href="#cb1-1067"></a>高弹性高聚物，经**硫化**（线型→网状）提高强度。</span>
+<span id="cb1-1068"><a href="#cb1-1068"></a></span>
+<span id="cb1-1069"><a href="#cb1-1069"></a><span class="pp">|</span> 品种 <span class="pp">|</span> 特点 <span class="pp">|</span></span>
+<span id="cb1-1070"><a href="#cb1-1070"></a><span class="pp">|------|------|</span></span>
+<span id="cb1-1071"><a href="#cb1-1071"></a><span class="pp">|</span> 丁苯橡胶（SBR）<span class="pp">|</span> 产量最大 <span class="pp">|</span></span>
+<span id="cb1-1072"><a href="#cb1-1072"></a><span class="pp">|</span> 丁腈橡胶（NBR）<span class="pp">|</span> 耐油 <span class="pp">|</span></span>
+<span id="cb1-1073"><a href="#cb1-1073"></a><span class="pp">|</span> 硅橡胶（SR）<span class="pp">|</span> 耐高低温 <span class="pp">|</span></span>
+<span id="cb1-1074"><a href="#cb1-1074"></a><span class="pp">|</span> 顺丁橡胶（BR）<span class="pp">|</span> 综合性能好 <span class="pp">|</span></span>
+<span id="cb1-1075"><a href="#cb1-1075"></a></span>
+<span id="cb1-1076"><a href="#cb1-1076"></a><span class="fu">### 纤维</span></span>
+<span id="cb1-1077"><a href="#cb1-1077"></a></span>
+<span id="cb1-1078"><a href="#cb1-1078"></a>长径比 $&gt; 1000:1$，结晶能力强，熔点高。</span>
+<span id="cb1-1079"><a href="#cb1-1079"></a></span>
+<span id="cb1-1080"><a href="#cb1-1080"></a><span class="pp">|</span> 名称 <span class="pp">|</span> 特点 <span class="pp">|</span></span>
+<span id="cb1-1081"><a href="#cb1-1081"></a><span class="pp">|------|------|</span></span>
+<span id="cb1-1082"><a href="#cb1-1082"></a><span class="pp">|</span> 涤纶（聚酯）<span class="pp">|</span> 挺括不皱，易洗快干 <span class="pp">|</span></span>
+<span id="cb1-1083"><a href="#cb1-1083"></a><span class="pp">|</span> 尼龙（聚酰胺）<span class="pp">|</span> 耐磨，韧性极优 <span class="pp">|</span></span>
+<span id="cb1-1084"><a href="#cb1-1084"></a><span class="pp">|</span> 腈纶（聚丙烯腈）<span class="pp">|</span> 蓬松保暖，"合成羊毛" <span class="pp">|</span></span>
+<span id="cb1-1085"><a href="#cb1-1085"></a></span>
+<span id="cb1-1086"><a href="#cb1-1086"></a>:::</span>
+<span id="cb1-1087"><a href="#cb1-1087"></a></span>
+<span id="cb1-1088"><a href="#cb1-1088"></a>---</span>
+<span id="cb1-1089"><a href="#cb1-1089"></a></span>
+<span id="cb1-1090"><a href="#cb1-1090"></a><span class="fu">## 其他高分子材料</span></span>
+<span id="cb1-1091"><a href="#cb1-1091"></a></span>
+<span id="cb1-1092"><a href="#cb1-1092"></a>**合成胶黏剂**：主剂（合成树脂/橡胶）+ 助剂（固化剂、溶剂、增塑剂）</span>
+<span id="cb1-1093"><a href="#cb1-1093"></a></span>
+<span id="cb1-1094"><a href="#cb1-1094"></a>固化类型：热熔型、溶剂型、乳液型、热固型</span>
+<span id="cb1-1095"><a href="#cb1-1095"></a></span>
+<span id="cb1-1096"><a href="#cb1-1096"></a>**离子交换树脂：**</span>
+<span id="cb1-1097"><a href="#cb1-1097"></a></span>
+<span id="cb1-1098"><a href="#cb1-1098"></a><span class="pp">|</span> 类型 <span class="pp">|</span> 活性基团 <span class="pp">|</span> 代表 <span class="pp">|</span></span>
+<span id="cb1-1099"><a href="#cb1-1099"></a><span class="pp">|------|----------|------|</span></span>
+<span id="cb1-1100"><a href="#cb1-1100"></a><span class="pp">|</span> 阳离子交换树脂 <span class="pp">|</span> 酸性基（$-\text{SO}_3\text{H}$，$-\text{COOH}$）<span class="pp">|</span> 强酸/弱酸型 <span class="pp">|</span></span>
+<span id="cb1-1101"><a href="#cb1-1101"></a><span class="pp">|</span> 阴离子交换树脂 <span class="pp">|</span> 碱性基（季铵基、氨基）<span class="pp">|</span> 强碱/弱碱型 <span class="pp">|</span></span>
+<span id="cb1-1102"><a href="#cb1-1102"></a></span>
+<span id="cb1-1103"><a href="#cb1-1103"></a>**应用**：硬水软化、脱盐水制造、废液处理、稀有元素提取</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

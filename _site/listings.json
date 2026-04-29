@@ -2,14 +2,12 @@
   {
     "listing": "/index.html",
     "items": [
-      "/notes/elec/electrical-technology-1.html",
-      "/notes/elec/circuits.html",
-      "/notes/elec/electrical-technology-2.html",
+      "/notes/elec/electrical-technology.html",
       "/notes/mgmt/POM.html",
-      "/notes/elec/circuit-analysis.html",
       "/notes/stats/probability-statistics.html",
       "/notes/mech/materials-mechanics.html",
       "/notes/mech/mechanical-principles.html",
+      "/notes/mech/a.html",
       "/posts/开始/index.html",
       "/notes/chem/engineering-chemistry.html"
     ]
