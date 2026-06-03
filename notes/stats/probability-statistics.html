@@ -83,9 +83,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-97ddc2f64b3eb64c87b3f3988fe26c52.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-dafeffac8def0da2a01b09affad7fa01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-f25588385acd988dfaecfc7d6ba4fc23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-dafeffac8def0da2a01b09affad7fa01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-22cc3003e9aeef30e93ff496d574c135.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-50d1ade18999d442ddde15d5822f6c5a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-22cc3003e9aeef30e93ff496d574c135.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -372,8 +372,8 @@ window.Quarto = {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-blogs">    
         <li class="dropdown-header">Posts</li>
         <li>
-    <a class="dropdown-item" href="../../posts/开始/index.html">
- <span class="dropdown-text">热化学基础</span></a>
+    <a class="dropdown-item" href="../../posts/从0开始的Bevy之旅/index.html">
+ <span class="dropdown-text">Index</span></a>
   </li>  
     </ul>
   </li>
@@ -392,7 +392,7 @@ window.Quarto = {
  <span class="dropdown-text">Elec</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../notes/mech/a.html">
+    <a class="dropdown-item" href="../../notes/mech/materials-mechanics.html">
  <span class="dropdown-text">Mech</span></a>
   </li>  
         <li>
@@ -526,6 +526,12 @@ window.Quarto = {
  <span class="menu-text">工程化学基础教程</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/chem/engineering-thermodynamics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">工程化学基础教程</span></a>
+  </div>
+</li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
@@ -554,12 +560,6 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notes/mech/a.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">材料力学</span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notes/mech/materials-mechanics.html" class="sidebar-item-text sidebar-link">
@@ -1493,7 +1493,24 @@ window.Quarto = {
 </section>
 <section id="三大抽样分布-three-major-distributions" class="level4">
 <h4 class="anchored" data-anchor-id="三大抽样分布-three-major-distributions">2. 三大抽样分布 (Three Major Distributions)</h4>
-<p>这三个分布是基于正态总体构造出的统计量分布： * <strong><span class="math inline">\(\chi^2\)</span> (卡方) 分布</strong>： * <strong>构造</strong>：<span class="math inline">\(\chi^2 = X_1^2 + X_2^2 + \dots + X_n^2\)</span>，其中 <span class="math inline">\(X_i \sim N(0,1)\)</span> 且独立 。 * <strong>参数</strong>：自由度 <span class="math inline">\(n\)</span> 。 * <strong>性质</strong>：<span class="math inline">\(E(\chi^2) = n\)</span>，<span class="math inline">\(D(\chi^2) = 2n\)</span> 。 * <strong><span class="math inline">\(t\)</span> 分布</strong>： * <strong>构造</strong>：<span class="math inline">\(t = \frac{X}{\sqrt{Y/n}}\)</span>，其中 <span class="math inline">\(X \sim N(0,1)\)</span>，<span class="math inline">\(Y \sim \chi^2(n)\)</span> 且独立 。 * <strong>特征</strong>：曲线关于原点对称，随自由度 <span class="math inline">\(n\)</span> 增大而趋近于标准正态分布 。 * <strong><span class="math inline">\(F\)</span> 分布</strong>： * <strong>构造</strong>：<span class="math inline">\(F = \frac{X/n_1}{Y/n_2}\)</span>，其中 <span class="math inline">\(X \sim \chi^2(n_1)\)</span>，<span class="math inline">\(Y \sim \chi^2(n_2)\)</span> 且独立 。</p>
+<p>这三个分布是基于正态总体构造出的统计量分布：</p>
+<ul>
+<li><p><strong><span class="math inline">\(\chi^2\)</span> (卡方) 分布</strong>：</p>
+<ul>
+<li><p><strong>构造</strong>：<span class="math inline">\(\chi^2 = X_1^2 + X_2^2 + \dots + X_n^2\)</span>，其中 <span class="math inline">\(X_i \sim N(0,1)\)</span> 且独立 。</p></li>
+<li><p><strong>参数</strong>：自由度 <span class="math inline">\(n\)</span> 。</p></li>
+<li><p><strong>性质</strong>：<span class="math inline">\(E(\chi^2) = n\)</span>，<span class="math inline">\(D(\chi^2) = 2n\)</span> 。</p></li>
+</ul></li>
+<li><p><strong><span class="math inline">\(t\)</span> 分布</strong>：</p>
+<ul>
+<li><p><strong>构造</strong>：<span class="math inline">\(t = \frac{X}{\sqrt{Y/n}}\)</span>，其中 <span class="math inline">\(X \sim N(0,1)\)</span>，<span class="math inline">\(Y \sim \chi^2(n)\)</span> 且独立 。</p></li>
+<li><p><strong>特征</strong>：曲线关于原点对称，随自由度 <span class="math inline">\(n\)</span> 增大而趋近于标准正态分布 。</p></li>
+</ul></li>
+<li><p><strong><span class="math inline">\(F\)</span> 分布</strong>：</p>
+<ul>
+<li><strong>构造</strong>：<span class="math inline">\(F = \frac{X/n_1}{Y/n_2}\)</span>，其中 <span class="math inline">\(X \sim \chi^2(n_1)\)</span>，<span class="math inline">\(Y \sim \chi^2(n_2)\)</span> 且独立 。</li>
+</ul></li>
+</ul>
 </section>
 <section id="正态总体的抽样分布定理-重点" class="level4">
 <h4 class="anchored" data-anchor-id="正态总体的抽样分布定理-重点">3. 正态总体的抽样分布定理 (重点)</h4>
@@ -3065,421 +3082,429 @@ window.Quarto = {
 <span id="cb4-507"><a href="#cb4-507"></a></span>
 <span id="cb4-508"><a href="#cb4-508"></a><span class="fu">#### 2. 三大抽样分布 (Three Major Distributions)</span></span>
 <span id="cb4-509"><a href="#cb4-509"></a>这三个分布是基于正态总体构造出的统计量分布：</span>
-<span id="cb4-510"><a href="#cb4-510"></a><span class="ss">*   </span>**$\chi^2$ (卡方) 分布**：</span>
-<span id="cb4-511"><a href="#cb4-511"></a><span class="ss">    *   </span>**构造**：$\chi^2 = X_1^2 + X_2^2 + \dots + X_n^2$，其中 $X_i \sim N(0,1)$ 且独立 。</span>
-<span id="cb4-512"><a href="#cb4-512"></a><span class="ss">    *   </span>**参数**：自由度 $n$ 。</span>
-<span id="cb4-513"><a href="#cb4-513"></a><span class="ss">    *   </span>**性质**：$E(\chi^2) = n$，$D(\chi^2) = 2n$ 。</span>
-<span id="cb4-514"><a href="#cb4-514"></a><span class="ss">*   </span>**$t$ 分布**：</span>
-<span id="cb4-515"><a href="#cb4-515"></a><span class="ss">    *   </span>**构造**：$t = \frac{X}{\sqrt{Y/n}}$，其中 $X \sim N(0,1)$，$Y \sim \chi^2(n)$ 且独立 。</span>
-<span id="cb4-516"><a href="#cb4-516"></a><span class="ss">    *   </span>**特征**：曲线关于原点对称，随自由度 $n$ 增大而趋近于标准正态分布 。</span>
-<span id="cb4-517"><a href="#cb4-517"></a><span class="ss">*   </span>**$F$ 分布**：</span>
-<span id="cb4-518"><a href="#cb4-518"></a><span class="ss">    *   </span>**构造**：$F = \frac{X/n_1}{Y/n_2}$，其中 $X \sim \chi^2(n_1)$，$Y \sim \chi^2(n_2)$ 且独立 。</span>
-<span id="cb4-519"><a href="#cb4-519"></a></span>
-<span id="cb4-520"><a href="#cb4-520"></a><span class="fu">#### 3. 正态总体的抽样分布定理 (重点)</span></span>
-<span id="cb4-521"><a href="#cb4-521"></a>设 $X \sim N(\mu, \sigma^2)$，$\bar{X}$ 和 $S^2$ 分别为样本均值和方差：</span>
-<span id="cb4-522"><a href="#cb4-522"></a><span class="ss">*   </span>**定理一**：$\bar{X} \sim N(\mu, \frac{\sigma^2}{n})$ 。</span>
-<span id="cb4-523"><a href="#cb4-523"></a><span class="ss">*   </span>**定理二**：$\frac{(n-1)S^2}{\sigma^2} \sim \chi^2(n-1)$，且 $\bar{X}$ 与 $S^2$ **相互独立** 。</span>
-<span id="cb4-524"><a href="#cb4-524"></a><span class="ss">*   </span>**定理三**：$\frac{\bar{X}-\mu}{S/\sqrt{n}} \sim t(n-1)$（当 $\sigma$ 未知时使用 $S$ 代替）。</span>
-<span id="cb4-525"><a href="#cb4-525"></a><span class="ss">*   </span>**定理四 (两个正态总体)**：$\frac{S_1^2/S_2^2}{\sigma_1^2/\sigma_2^2} \sim F(n_1-1, n_2-1)$ 。</span>
-<span id="cb4-526"><a href="#cb4-526"></a></span>
-<span id="cb4-527"><a href="#cb4-527"></a><span class="fu">### 变量含义汇总表</span></span>
-<span id="cb4-528"><a href="#cb4-528"></a><span class="ss">*   </span>**$n$**：样本容量。</span>
-<span id="cb4-529"><a href="#cb4-529"></a><span class="ss">*   </span>**$\mu$**：总体期望（均值）。</span>
-<span id="cb4-530"><a href="#cb4-530"></a><span class="ss">*   </span>**$\sigma^2$**：总体方差。</span>
-<span id="cb4-531"><a href="#cb4-531"></a><span class="ss">*   </span>**$\bar{X}$**：样本均值（统计量）。</span>
-<span id="cb4-532"><a href="#cb4-532"></a><span class="ss">*   </span>**$S^2$**：样本方差（统计量）。</span>
-<span id="cb4-533"><a href="#cb4-533"></a><span class="ss">*   </span>**$n-1$**：自由度（Degrees of Freedom），指独立随机变量的个数 。</span>
-<span id="cb4-534"><a href="#cb4-534"></a><span class="ss">*   </span>**$\Phi(x)$**：标准正态分布函数 。</span>
-<span id="cb4-535"><a href="#cb4-535"></a></span>
-<span id="cb4-536"><a href="#cb4-536"></a></span>
-<span id="cb4-537"><a href="#cb4-537"></a><span class="fu"># 7. 参数估计</span></span>
-<span id="cb4-538"><a href="#cb4-538"></a></span>
-<span id="cb4-539"><a href="#cb4-539"></a><span class="fu">### 点估计 (Point Estimation)</span></span>
-<span id="cb4-540"><a href="#cb4-540"></a></span>
-<span id="cb4-541"><a href="#cb4-541"></a>点估计的目标是用样本构造一个统计量，作为未知参数的近似值 。</span>
-<span id="cb4-542"><a href="#cb4-542"></a></span>
-<span id="cb4-543"><a href="#cb4-543"></a><span class="fu">#### 1. 矩估计法 (Method of Moments)</span></span>
-<span id="cb4-544"><a href="#cb4-544"></a><span class="ss">*   </span>**基本思想**：利用“样本矩”依概率收敛于“总体矩”的性质，用样本矩估计总体矩 。</span>
-<span id="cb4-545"><a href="#cb4-545"></a><span class="ss">*   </span>**操作步骤**：</span>
-<span id="cb4-546"><a href="#cb4-546"></a><span class="ss">    1.  </span>设总体有 $k$ 个未知参数 $\theta_1, \dots, \theta_k$。</span>
-<span id="cb4-547"><a href="#cb4-547"></a><span class="ss">    2.  </span>建立方程组：令总体 $l$ 阶矩 $\mu_l = E(X^l)$ 等于样本 $l$ 阶矩 $A_l = \frac{1}{n} \sum X_i^l$ 。</span>
-<span id="cb4-548"><a href="#cb4-548"></a><span class="ss">    3.  </span>解方程组求得参数的估计值 $\hat{\theta}_j$ 。</span>
-<span id="cb4-549"><a href="#cb4-549"></a><span class="ss">*   </span>**变量含义**：</span>
-<span id="cb4-550"><a href="#cb4-550"></a><span class="ss">    *   </span>$X_i$：样本观测值。</span>
-<span id="cb4-551"><a href="#cb4-551"></a><span class="ss">    *   </span>$n$：样本容量。</span>
-<span id="cb4-552"><a href="#cb4-552"></a><span class="ss">    *   </span>$\mu_l$：总体矩（包含待求参数）。</span>
-<span id="cb4-553"><a href="#cb4-553"></a><span class="ss">    *   </span>$A_l$：样本矩。</span>
-<span id="cb4-554"><a href="#cb4-554"></a></span>
-<span id="cb4-555"><a href="#cb4-555"></a><span class="fu">#### 2. 最大似然估计法 (Maximum Likelihood Estimation, MLE)</span></span>
-<span id="cb4-556"><a href="#cb4-556"></a><span class="ss">*   </span>**基本思想**：寻找一组参数值，使得已发生的样本观察值出现的概率最大 。</span>
-<span id="cb4-557"><a href="#cb4-557"></a><span class="ss">*   </span>**似然函数 $L(\theta)$**：</span>
-<span id="cb4-558"><a href="#cb4-558"></a><span class="ss">    *   </span>**离散型**：$L(\theta) = \prod_{i=1}^n P(X_i = x_i; \theta)$ 。</span>
-<span id="cb4-559"><a href="#cb4-559"></a><span class="ss">    *   </span>**连续型**：$L(\theta) = \prod_{i=1}^n f(x_i; \theta)$ 。</span>
-<span id="cb4-560"><a href="#cb4-560"></a><span class="ss">*   </span>**计算方法**：通常取对数似然函数 $\ln L(\theta)$，求导并令其为 0，解**对数似然方程**得到估计值 。</span>
-<span id="cb4-561"><a href="#cb4-561"></a><span class="ss">*   </span>**不变性原则**：若 $\hat{\theta}$ 是 $\theta$ 的最大似然估计，则 $g(\hat{\theta})$ 也是 $g(\theta)$ 的最大似然估计 。</span>
+<span id="cb4-510"><a href="#cb4-510"></a></span>
+<span id="cb4-511"><a href="#cb4-511"></a><span class="ss">*   </span>**$\chi^2$ (卡方) 分布**：</span>
+<span id="cb4-512"><a href="#cb4-512"></a></span>
+<span id="cb4-513"><a href="#cb4-513"></a><span class="ss">    *   </span>**构造**：$\chi^2 = X_1^2 + X_2^2 + \dots + X_n^2$，其中 $X_i \sim N(0,1)$ 且独立 。</span>
+<span id="cb4-514"><a href="#cb4-514"></a>    </span>
+<span id="cb4-515"><a href="#cb4-515"></a><span class="ss">    *   </span>**参数**：自由度 $n$ 。</span>
+<span id="cb4-516"><a href="#cb4-516"></a>    </span>
+<span id="cb4-517"><a href="#cb4-517"></a><span class="ss">    *   </span>**性质**：$E(\chi^2) = n$，$D(\chi^2) = 2n$ 。</span>
+<span id="cb4-518"><a href="#cb4-518"></a>    </span>
+<span id="cb4-519"><a href="#cb4-519"></a><span class="ss">*   </span>**$t$ 分布**：</span>
+<span id="cb4-520"><a href="#cb4-520"></a><span class="ss">    *   </span>**构造**：$t = \frac{X}{\sqrt{Y/n}}$，其中 $X \sim N(0,1)$，$Y \sim \chi^2(n)$ 且独立 。</span>
+<span id="cb4-521"><a href="#cb4-521"></a>    </span>
+<span id="cb4-522"><a href="#cb4-522"></a><span class="ss">    *   </span>**特征**：曲线关于原点对称，随自由度 $n$ 增大而趋近于标准正态分布 。</span>
+<span id="cb4-523"><a href="#cb4-523"></a></span>
+<span id="cb4-524"><a href="#cb4-524"></a><span class="ss">*   </span>**$F$ 分布**：</span>
+<span id="cb4-525"><a href="#cb4-525"></a></span>
+<span id="cb4-526"><a href="#cb4-526"></a><span class="ss">    *   </span>**构造**：$F = \frac{X/n_1}{Y/n_2}$，其中 $X \sim \chi^2(n_1)$，$Y \sim \chi^2(n_2)$ 且独立 。</span>
+<span id="cb4-527"><a href="#cb4-527"></a></span>
+<span id="cb4-528"><a href="#cb4-528"></a><span class="fu">#### 3. 正态总体的抽样分布定理 (重点)</span></span>
+<span id="cb4-529"><a href="#cb4-529"></a>设 $X \sim N(\mu, \sigma^2)$，$\bar{X}$ 和 $S^2$ 分别为样本均值和方差：</span>
+<span id="cb4-530"><a href="#cb4-530"></a><span class="ss">*   </span>**定理一**：$\bar{X} \sim N(\mu, \frac{\sigma^2}{n})$ 。</span>
+<span id="cb4-531"><a href="#cb4-531"></a><span class="ss">*   </span>**定理二**：$\frac{(n-1)S^2}{\sigma^2} \sim \chi^2(n-1)$，且 $\bar{X}$ 与 $S^2$ **相互独立** 。</span>
+<span id="cb4-532"><a href="#cb4-532"></a><span class="ss">*   </span>**定理三**：$\frac{\bar{X}-\mu}{S/\sqrt{n}} \sim t(n-1)$（当 $\sigma$ 未知时使用 $S$ 代替）。</span>
+<span id="cb4-533"><a href="#cb4-533"></a><span class="ss">*   </span>**定理四 (两个正态总体)**：$\frac{S_1^2/S_2^2}{\sigma_1^2/\sigma_2^2} \sim F(n_1-1, n_2-1)$ 。</span>
+<span id="cb4-534"><a href="#cb4-534"></a></span>
+<span id="cb4-535"><a href="#cb4-535"></a><span class="fu">### 变量含义汇总表</span></span>
+<span id="cb4-536"><a href="#cb4-536"></a><span class="ss">*   </span>**$n$**：样本容量。</span>
+<span id="cb4-537"><a href="#cb4-537"></a><span class="ss">*   </span>**$\mu$**：总体期望（均值）。</span>
+<span id="cb4-538"><a href="#cb4-538"></a><span class="ss">*   </span>**$\sigma^2$**：总体方差。</span>
+<span id="cb4-539"><a href="#cb4-539"></a><span class="ss">*   </span>**$\bar{X}$**：样本均值（统计量）。</span>
+<span id="cb4-540"><a href="#cb4-540"></a><span class="ss">*   </span>**$S^2$**：样本方差（统计量）。</span>
+<span id="cb4-541"><a href="#cb4-541"></a><span class="ss">*   </span>**$n-1$**：自由度（Degrees of Freedom），指独立随机变量的个数 。</span>
+<span id="cb4-542"><a href="#cb4-542"></a><span class="ss">*   </span>**$\Phi(x)$**：标准正态分布函数 。</span>
+<span id="cb4-543"><a href="#cb4-543"></a></span>
+<span id="cb4-544"><a href="#cb4-544"></a></span>
+<span id="cb4-545"><a href="#cb4-545"></a><span class="fu"># 7. 参数估计</span></span>
+<span id="cb4-546"><a href="#cb4-546"></a></span>
+<span id="cb4-547"><a href="#cb4-547"></a><span class="fu">### 点估计 (Point Estimation)</span></span>
+<span id="cb4-548"><a href="#cb4-548"></a></span>
+<span id="cb4-549"><a href="#cb4-549"></a>点估计的目标是用样本构造一个统计量，作为未知参数的近似值 。</span>
+<span id="cb4-550"><a href="#cb4-550"></a></span>
+<span id="cb4-551"><a href="#cb4-551"></a><span class="fu">#### 1. 矩估计法 (Method of Moments)</span></span>
+<span id="cb4-552"><a href="#cb4-552"></a><span class="ss">*   </span>**基本思想**：利用“样本矩”依概率收敛于“总体矩”的性质，用样本矩估计总体矩 。</span>
+<span id="cb4-553"><a href="#cb4-553"></a><span class="ss">*   </span>**操作步骤**：</span>
+<span id="cb4-554"><a href="#cb4-554"></a><span class="ss">    1.  </span>设总体有 $k$ 个未知参数 $\theta_1, \dots, \theta_k$。</span>
+<span id="cb4-555"><a href="#cb4-555"></a><span class="ss">    2.  </span>建立方程组：令总体 $l$ 阶矩 $\mu_l = E(X^l)$ 等于样本 $l$ 阶矩 $A_l = \frac{1}{n} \sum X_i^l$ 。</span>
+<span id="cb4-556"><a href="#cb4-556"></a><span class="ss">    3.  </span>解方程组求得参数的估计值 $\hat{\theta}_j$ 。</span>
+<span id="cb4-557"><a href="#cb4-557"></a><span class="ss">*   </span>**变量含义**：</span>
+<span id="cb4-558"><a href="#cb4-558"></a><span class="ss">    *   </span>$X_i$：样本观测值。</span>
+<span id="cb4-559"><a href="#cb4-559"></a><span class="ss">    *   </span>$n$：样本容量。</span>
+<span id="cb4-560"><a href="#cb4-560"></a><span class="ss">    *   </span>$\mu_l$：总体矩（包含待求参数）。</span>
+<span id="cb4-561"><a href="#cb4-561"></a><span class="ss">    *   </span>$A_l$：样本矩。</span>
 <span id="cb4-562"><a href="#cb4-562"></a></span>
-<span id="cb4-563"><a href="#cb4-563"></a>---</span>
-<span id="cb4-564"><a href="#cb4-564"></a></span>
-<span id="cb4-565"><a href="#cb4-565"></a><span class="fu">### 基于截尾样本的最大似然估计</span></span>
-<span id="cb4-566"><a href="#cb4-566"></a>*注：此内容在某些大纲中为选学或针对可靠性工程 。*</span>
-<span id="cb4-567"><a href="#cb4-567"></a><span class="ss">*   </span>**概念**：当实验在固定时间 $t_0$ 停止，或者在观测到前 $m$ 个失效后停止时，利用已观测到的失效数据及未失效个体的数量信息进行估计 。</span>
-<span id="cb4-568"><a href="#cb4-568"></a><span class="ss">*   </span>**公式推导**：似然函数需包含已失效部分的密度连乘及未失效部分的生存概率 。</span>
-<span id="cb4-569"><a href="#cb4-569"></a></span>
-<span id="cb4-570"><a href="#cb4-570"></a>---</span>
-<span id="cb4-571"><a href="#cb4-571"></a></span>
-<span id="cb4-572"><a href="#cb4-572"></a><span class="fu">### 估计量的评选标准 (Criteria for Evaluators)</span></span>
-<span id="cb4-573"><a href="#cb4-573"></a></span>
-<span id="cb4-574"><a href="#cb4-574"></a>当存在多个估计量时，我们需要标准来衡量其好坏：</span>
-<span id="cb4-575"><a href="#cb4-575"></a></span>
-<span id="cb4-576"><a href="#cb4-576"></a><span class="ss">1.  </span>**无偏性 (Unbiasedness)**</span>
-<span id="cb4-577"><a href="#cb4-577"></a><span class="ss">    *   </span>**定义**：若 $E(\hat{\theta}) = \theta$，则称 $\hat{\theta}$ 为 $\theta$ 的**无偏估计量** 。</span>
-<span id="cb4-578"><a href="#cb4-578"></a><span class="ss">    *   </span>**意义**：表示多次估计的平均值等于真实值，不存在系统误差 。</span>
+<span id="cb4-563"><a href="#cb4-563"></a><span class="fu">#### 2. 最大似然估计法 (Maximum Likelihood Estimation, MLE)</span></span>
+<span id="cb4-564"><a href="#cb4-564"></a><span class="ss">*   </span>**基本思想**：寻找一组参数值，使得已发生的样本观察值出现的概率最大 。</span>
+<span id="cb4-565"><a href="#cb4-565"></a><span class="ss">*   </span>**似然函数 $L(\theta)$**：</span>
+<span id="cb4-566"><a href="#cb4-566"></a><span class="ss">    *   </span>**离散型**：$L(\theta) = \prod_{i=1}^n P(X_i = x_i; \theta)$ 。</span>
+<span id="cb4-567"><a href="#cb4-567"></a><span class="ss">    *   </span>**连续型**：$L(\theta) = \prod_{i=1}^n f(x_i; \theta)$ 。</span>
+<span id="cb4-568"><a href="#cb4-568"></a><span class="ss">*   </span>**计算方法**：通常取对数似然函数 $\ln L(\theta)$，求导并令其为 0，解**对数似然方程**得到估计值 。</span>
+<span id="cb4-569"><a href="#cb4-569"></a><span class="ss">*   </span>**不变性原则**：若 $\hat{\theta}$ 是 $\theta$ 的最大似然估计，则 $g(\hat{\theta})$ 也是 $g(\theta)$ 的最大似然估计 。</span>
+<span id="cb4-570"><a href="#cb4-570"></a></span>
+<span id="cb4-571"><a href="#cb4-571"></a>---</span>
+<span id="cb4-572"><a href="#cb4-572"></a></span>
+<span id="cb4-573"><a href="#cb4-573"></a><span class="fu">### 基于截尾样本的最大似然估计</span></span>
+<span id="cb4-574"><a href="#cb4-574"></a>*注：此内容在某些大纲中为选学或针对可靠性工程 。*</span>
+<span id="cb4-575"><a href="#cb4-575"></a><span class="ss">*   </span>**概念**：当实验在固定时间 $t_0$ 停止，或者在观测到前 $m$ 个失效后停止时，利用已观测到的失效数据及未失效个体的数量信息进行估计 。</span>
+<span id="cb4-576"><a href="#cb4-576"></a><span class="ss">*   </span>**公式推导**：似然函数需包含已失效部分的密度连乘及未失效部分的生存概率 。</span>
+<span id="cb4-577"><a href="#cb4-577"></a></span>
+<span id="cb4-578"><a href="#cb4-578"></a>---</span>
 <span id="cb4-579"><a href="#cb4-579"></a></span>
-<span id="cb4-580"><a href="#cb4-580"></a><span class="ss">2.  </span>**有效性 (Efficiency)**</span>
-<span id="cb4-581"><a href="#cb4-581"></a><span class="ss">    *   </span>**定义**：在所有无偏估计量中，方差越小的估计量越“有效” 。</span>
-<span id="cb4-582"><a href="#cb4-582"></a><span class="ss">    *   </span>**判别**：若 $D(\hat{\theta}_1) \le D(\hat{\theta}_2)$，则 $\hat{\theta}_1$ 比 $\hat{\theta}_2$ 有效 。</span>
+<span id="cb4-580"><a href="#cb4-580"></a><span class="fu">### 估计量的评选标准 (Criteria for Evaluators)</span></span>
+<span id="cb4-581"><a href="#cb4-581"></a></span>
+<span id="cb4-582"><a href="#cb4-582"></a>当存在多个估计量时，我们需要标准来衡量其好坏：</span>
 <span id="cb4-583"><a href="#cb4-583"></a></span>
-<span id="cb4-584"><a href="#cb4-584"></a><span class="ss">3.  </span>**相合性/一致性 (Consistency)**</span>
-<span id="cb4-585"><a href="#cb4-585"></a><span class="ss">    *   </span>**定义**：当样本量 $n \to \infty$ 时，估计量 $\hat{\theta}$ 依概率收敛于真实的 $\theta$ 。</span>
-<span id="cb4-586"><a href="#cb4-586"></a></span>
-<span id="cb4-587"><a href="#cb4-587"></a>---</span>
-<span id="cb4-588"><a href="#cb4-588"></a></span>
-<span id="cb4-589"><a href="#cb4-589"></a><span class="fu">### 区间估计 (Interval Estimation)</span></span>
-<span id="cb4-590"><a href="#cb4-590"></a></span>
-<span id="cb4-591"><a href="#cb4-591"></a><span class="fu">#### 1. 置信区间 (Confidence Interval)</span></span>
-<span id="cb4-592"><a href="#cb4-592"></a><span class="ss">*   </span>**概念**：给定置信水平 $1-\alpha$，确定两个统计量 $\underline{\theta}$ 和 $\bar{\theta}$，使得 $P<span class="sc">\{</span>\underline{\theta} &lt; \theta &lt; \bar{\theta}<span class="sc">\}</span> \ge 1-\alpha$ 。</span>
-<span id="cb4-593"><a href="#cb4-593"></a><span class="ss">*   </span>**变量含义**：</span>
-<span id="cb4-594"><a href="#cb4-594"></a><span class="ss">    *   </span>$1-\alpha$：**置信水平**（常用 0.95 或 0.99）。</span>
-<span id="cb4-595"><a href="#cb4-595"></a><span class="ss">    *   </span>$\alpha$：显著性水平。</span>
-<span id="cb4-596"><a href="#cb4-596"></a><span class="ss">    *   </span>$(\underline{\theta},\bar{\theta} )$：**置信区间** 。</span>
-<span id="cb4-597"><a href="#cb4-597"></a></span>
-<span id="cb4-598"><a href="#cb4-598"></a><span class="fu">#### 2. 枢轴量法 (Pivotal Quantity Method)</span></span>
-<span id="cb4-599"><a href="#cb4-599"></a><span class="ss">*   </span>构造一个关于样本和待求参数 $\theta$ 的函数，使其分布已知且**不含任何未知参数** 。</span>
-<span id="cb4-600"><a href="#cb4-600"></a></span>
-<span id="cb4-601"><a href="#cb4-601"></a>---</span>
-<span id="cb4-602"><a href="#cb4-602"></a></span>
-<span id="cb4-603"><a href="#cb4-603"></a><span class="fu">### 正态总体参数的区间估计 (核心重点)</span></span>
-<span id="cb4-604"><a href="#cb4-604"></a></span>
-<span id="cb4-605"><a href="#cb4-605"></a>基于第六章的抽样分布，下表总结了最重要的置信区间公式 ：</span>
-<span id="cb4-606"><a href="#cb4-606"></a></span>
-<span id="cb4-607"><a href="#cb4-607"></a><span class="pp">|</span> 估计对象 <span class="pp">|</span> 条件 <span class="pp">|</span> 枢轴量及其分布 <span class="pp">|</span> 置信区间公式 <span class="pp">|</span></span>
-<span id="cb4-608"><a href="#cb4-608"></a><span class="pp">| :---</span> <span class="pp">| :---</span> <span class="pp">| :---</span> <span class="pp">| :---</span> <span class="pp">|</span></span>
-<span id="cb4-609"><a href="#cb4-609"></a><span class="pp">|</span> **均值 $\mu$** <span class="pp">|</span> $\sigma^2$ 已知 <span class="pp">|</span> $Z = \frac{\bar{X}-\mu}{\sigma/\sqrt{n}} \sim N(0,1)$ <span class="pp">|</span> $(\bar{X} \pm z_{\alpha/2} \frac{\sigma}{\sqrt{n}})$ <span class="pp">|</span></span>
-<span id="cb4-610"><a href="#cb4-610"></a><span class="pp">|</span> **均值 $\mu$** <span class="pp">|</span> $\sigma^2$ 未知 <span class="pp">|</span> $t = \frac{\bar{X}-\mu}{S/\sqrt{n}} \sim t(n-1)$ <span class="pp">|</span> $(\bar{X} \pm t_{\alpha/2}(n-1) \frac{S}{\sqrt{n}})$ <span class="pp">|</span></span>
-<span id="cb4-611"><a href="#cb4-611"></a><span class="pp">|</span> **方差 $\sigma^2$** <span class="pp">|</span> $\mu$ 未知 <span class="pp">|</span> $\chi^2 = \frac{(n-1)S^2}{\sigma^2} \sim \chi^2(n-1)$ <span class="pp">|</span> $(\frac{(n-1)S^2}{\chi^2_{\alpha/2}(n-1)}, \frac{(n-1)S^2}{\chi^2_{1-\alpha/2}(n-1)})$ <span class="pp">|</span></span>
-<span id="cb4-612"><a href="#cb4-612"></a><span class="pp">|</span> **均值差 $\mu_1-\mu_2$** <span class="pp">|</span> 方差已知 <span class="pp">|</span> $Z$ 分布  <span class="pp">|</span> $(\bar{X}-\bar{Y}) \pm z_{\alpha/2}\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}$ <span class="pp">|</span></span>
-<span id="cb4-613"><a href="#cb4-613"></a><span class="pp">|</span> **方差比 $\sigma_1^2/\sigma_2^2$** <span class="pp">|</span> 均值未知 <span class="pp">|</span> $F = \frac{S_1^2/\sigma_1^2}{S_2^2/\sigma_2^2} \sim F(n_1-1, n_2-1)$ <span class="pp">|</span> $(\frac{S_1^2/S_2^2}{F_{\alpha/2}}, \frac{S_1^2/S_2^2}{F_{1-\alpha/2}})$ <span class="pp">|</span></span>
+<span id="cb4-584"><a href="#cb4-584"></a><span class="ss">1.  </span>**无偏性 (Unbiasedness)**</span>
+<span id="cb4-585"><a href="#cb4-585"></a><span class="ss">    *   </span>**定义**：若 $E(\hat{\theta}) = \theta$，则称 $\hat{\theta}$ 为 $\theta$ 的**无偏估计量** 。</span>
+<span id="cb4-586"><a href="#cb4-586"></a><span class="ss">    *   </span>**意义**：表示多次估计的平均值等于真实值，不存在系统误差 。</span>
+<span id="cb4-587"><a href="#cb4-587"></a></span>
+<span id="cb4-588"><a href="#cb4-588"></a><span class="ss">2.  </span>**有效性 (Efficiency)**</span>
+<span id="cb4-589"><a href="#cb4-589"></a><span class="ss">    *   </span>**定义**：在所有无偏估计量中，方差越小的估计量越“有效” 。</span>
+<span id="cb4-590"><a href="#cb4-590"></a><span class="ss">    *   </span>**判别**：若 $D(\hat{\theta}_1) \le D(\hat{\theta}_2)$，则 $\hat{\theta}_1$ 比 $\hat{\theta}_2$ 有效 。</span>
+<span id="cb4-591"><a href="#cb4-591"></a></span>
+<span id="cb4-592"><a href="#cb4-592"></a><span class="ss">3.  </span>**相合性/一致性 (Consistency)**</span>
+<span id="cb4-593"><a href="#cb4-593"></a><span class="ss">    *   </span>**定义**：当样本量 $n \to \infty$ 时，估计量 $\hat{\theta}$ 依概率收敛于真实的 $\theta$ 。</span>
+<span id="cb4-594"><a href="#cb4-594"></a></span>
+<span id="cb4-595"><a href="#cb4-595"></a>---</span>
+<span id="cb4-596"><a href="#cb4-596"></a></span>
+<span id="cb4-597"><a href="#cb4-597"></a><span class="fu">### 区间估计 (Interval Estimation)</span></span>
+<span id="cb4-598"><a href="#cb4-598"></a></span>
+<span id="cb4-599"><a href="#cb4-599"></a><span class="fu">#### 1. 置信区间 (Confidence Interval)</span></span>
+<span id="cb4-600"><a href="#cb4-600"></a><span class="ss">*   </span>**概念**：给定置信水平 $1-\alpha$，确定两个统计量 $\underline{\theta}$ 和 $\bar{\theta}$，使得 $P<span class="sc">\{</span>\underline{\theta} &lt; \theta &lt; \bar{\theta}<span class="sc">\}</span> \ge 1-\alpha$ 。</span>
+<span id="cb4-601"><a href="#cb4-601"></a><span class="ss">*   </span>**变量含义**：</span>
+<span id="cb4-602"><a href="#cb4-602"></a><span class="ss">    *   </span>$1-\alpha$：**置信水平**（常用 0.95 或 0.99）。</span>
+<span id="cb4-603"><a href="#cb4-603"></a><span class="ss">    *   </span>$\alpha$：显著性水平。</span>
+<span id="cb4-604"><a href="#cb4-604"></a><span class="ss">    *   </span>$(\underline{\theta},\bar{\theta} )$：**置信区间** 。</span>
+<span id="cb4-605"><a href="#cb4-605"></a></span>
+<span id="cb4-606"><a href="#cb4-606"></a><span class="fu">#### 2. 枢轴量法 (Pivotal Quantity Method)</span></span>
+<span id="cb4-607"><a href="#cb4-607"></a><span class="ss">*   </span>构造一个关于样本和待求参数 $\theta$ 的函数，使其分布已知且**不含任何未知参数** 。</span>
+<span id="cb4-608"><a href="#cb4-608"></a></span>
+<span id="cb4-609"><a href="#cb4-609"></a>---</span>
+<span id="cb4-610"><a href="#cb4-610"></a></span>
+<span id="cb4-611"><a href="#cb4-611"></a><span class="fu">### 正态总体参数的区间估计 (核心重点)</span></span>
+<span id="cb4-612"><a href="#cb4-612"></a></span>
+<span id="cb4-613"><a href="#cb4-613"></a>基于第六章的抽样分布，下表总结了最重要的置信区间公式 ：</span>
 <span id="cb4-614"><a href="#cb4-614"></a></span>
-<span id="cb4-615"><a href="#cb4-615"></a>**变量汇总说明**：</span>
-<span id="cb4-616"><a href="#cb4-616"></a><span class="ss">*   </span>$\bar{X}$：样本均值。</span>
-<span id="cb4-617"><a href="#cb4-617"></a><span class="ss">*   </span>$S^2$：样本方差（分母为 $n-1$）。</span>
-<span id="cb4-618"><a href="#cb4-618"></a><span class="ss">*   </span>$z_{\alpha/2}$：标准正态分布的上侧 $\alpha/2$ 分位点。</span>
-<span id="cb4-619"><a href="#cb4-619"></a><span class="ss">*   </span>$t_{\alpha/2}(n-1)$：$t$ 分布的分位点。</span>
-<span id="cb4-620"><a href="#cb4-620"></a><span class="ss">*   </span>$n$：样本容量。</span>
-<span id="cb4-621"><a href="#cb4-621"></a></span>
-<span id="cb4-622"><a href="#cb4-622"></a>---</span>
-<span id="cb4-623"><a href="#cb4-623"></a></span>
-<span id="cb4-624"><a href="#cb4-624"></a><span class="fu">### (0-1) 分布参数的区间估计</span></span>
-<span id="cb4-625"><a href="#cb4-625"></a><span class="ss">*   </span>**背景**：当样本量 $n$ 较大（$n &gt; 50$）时，利用中心极限定理进行近似 。</span>
-<span id="cb4-626"><a href="#cb4-626"></a><span class="ss">*   </span>**公式**：基于 $\frac{\bar{X}-p}{\sqrt{p(1-p)/n}} \approx N(0,1)$，解关于 $p$ 的二次不等式得到近似区间 。</span>
-<span id="cb4-627"><a href="#cb4-627"></a></span>
-<span id="cb4-628"><a href="#cb4-628"></a>---</span>
+<span id="cb4-615"><a href="#cb4-615"></a><span class="pp">|</span> 估计对象 <span class="pp">|</span> 条件 <span class="pp">|</span> 枢轴量及其分布 <span class="pp">|</span> 置信区间公式 <span class="pp">|</span></span>
+<span id="cb4-616"><a href="#cb4-616"></a><span class="pp">| :---</span> <span class="pp">| :---</span> <span class="pp">| :---</span> <span class="pp">| :---</span> <span class="pp">|</span></span>
+<span id="cb4-617"><a href="#cb4-617"></a><span class="pp">|</span> **均值 $\mu$** <span class="pp">|</span> $\sigma^2$ 已知 <span class="pp">|</span> $Z = \frac{\bar{X}-\mu}{\sigma/\sqrt{n}} \sim N(0,1)$ <span class="pp">|</span> $(\bar{X} \pm z_{\alpha/2} \frac{\sigma}{\sqrt{n}})$ <span class="pp">|</span></span>
+<span id="cb4-618"><a href="#cb4-618"></a><span class="pp">|</span> **均值 $\mu$** <span class="pp">|</span> $\sigma^2$ 未知 <span class="pp">|</span> $t = \frac{\bar{X}-\mu}{S/\sqrt{n}} \sim t(n-1)$ <span class="pp">|</span> $(\bar{X} \pm t_{\alpha/2}(n-1) \frac{S}{\sqrt{n}})$ <span class="pp">|</span></span>
+<span id="cb4-619"><a href="#cb4-619"></a><span class="pp">|</span> **方差 $\sigma^2$** <span class="pp">|</span> $\mu$ 未知 <span class="pp">|</span> $\chi^2 = \frac{(n-1)S^2}{\sigma^2} \sim \chi^2(n-1)$ <span class="pp">|</span> $(\frac{(n-1)S^2}{\chi^2_{\alpha/2}(n-1)}, \frac{(n-1)S^2}{\chi^2_{1-\alpha/2}(n-1)})$ <span class="pp">|</span></span>
+<span id="cb4-620"><a href="#cb4-620"></a><span class="pp">|</span> **均值差 $\mu_1-\mu_2$** <span class="pp">|</span> 方差已知 <span class="pp">|</span> $Z$ 分布  <span class="pp">|</span> $(\bar{X}-\bar{Y}) \pm z_{\alpha/2}\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}$ <span class="pp">|</span></span>
+<span id="cb4-621"><a href="#cb4-621"></a><span class="pp">|</span> **方差比 $\sigma_1^2/\sigma_2^2$** <span class="pp">|</span> 均值未知 <span class="pp">|</span> $F = \frac{S_1^2/\sigma_1^2}{S_2^2/\sigma_2^2} \sim F(n_1-1, n_2-1)$ <span class="pp">|</span> $(\frac{S_1^2/S_2^2}{F_{\alpha/2}}, \frac{S_1^2/S_2^2}{F_{1-\alpha/2}})$ <span class="pp">|</span></span>
+<span id="cb4-622"><a href="#cb4-622"></a></span>
+<span id="cb4-623"><a href="#cb4-623"></a>**变量汇总说明**：</span>
+<span id="cb4-624"><a href="#cb4-624"></a><span class="ss">*   </span>$\bar{X}$：样本均值。</span>
+<span id="cb4-625"><a href="#cb4-625"></a><span class="ss">*   </span>$S^2$：样本方差（分母为 $n-1$）。</span>
+<span id="cb4-626"><a href="#cb4-626"></a><span class="ss">*   </span>$z_{\alpha/2}$：标准正态分布的上侧 $\alpha/2$ 分位点。</span>
+<span id="cb4-627"><a href="#cb4-627"></a><span class="ss">*   </span>$t_{\alpha/2}(n-1)$：$t$ 分布的分位点。</span>
+<span id="cb4-628"><a href="#cb4-628"></a><span class="ss">*   </span>$n$：样本容量。</span>
 <span id="cb4-629"><a href="#cb4-629"></a></span>
-<span id="cb4-630"><a href="#cb4-630"></a><span class="fu">### 单侧置信区间 (One-sided Confidence Intervals)</span></span>
-<span id="cb4-631"><a href="#cb4-631"></a><span class="ss">*   </span>**应用场景**：在某些实际问题中，只需关注参数的下限（如设备寿命）或上限（如杂质含量）。</span>
-<span id="cb4-632"><a href="#cb4-632"></a><span class="ss">*   </span>**计算差异**：使用置信水平 $\alpha$ 对应的单侧分位点（如 $z_\alpha$ 或 $t_\alpha$）代替双侧的 $\alpha/2$ 。</span>
-<span id="cb4-633"><a href="#cb4-633"></a><span class="ss">    *   </span>**单侧置信下限**：$(\underline{\theta}, +\infty)$，使得 $P<span class="sc">\{</span>\theta &gt; \underline{\theta}<span class="sc">\}</span> \ge 1-\alpha$ 。</span>
-<span id="cb4-634"><a href="#cb4-634"></a><span class="ss">    *   </span>**单侧置信上限**：$(-\infty, \bar{\theta})$，使得 $P<span class="sc">\{</span>\theta &lt; \bar{\theta}<span class="sc">\}</span> \ge 1-\alpha$ 。</span>
+<span id="cb4-630"><a href="#cb4-630"></a>---</span>
+<span id="cb4-631"><a href="#cb4-631"></a></span>
+<span id="cb4-632"><a href="#cb4-632"></a><span class="fu">### (0-1) 分布参数的区间估计</span></span>
+<span id="cb4-633"><a href="#cb4-633"></a><span class="ss">*   </span>**背景**：当样本量 $n$ 较大（$n &gt; 50$）时，利用中心极限定理进行近似 。</span>
+<span id="cb4-634"><a href="#cb4-634"></a><span class="ss">*   </span>**公式**：基于 $\frac{\bar{X}-p}{\sqrt{p(1-p)/n}} \approx N(0,1)$，解关于 $p$ 的二次不等式得到近似区间 。</span>
 <span id="cb4-635"><a href="#cb4-635"></a></span>
-<span id="cb4-636"><a href="#cb4-636"></a>**学习建议**：</span>
-<span id="cb4-637"><a href="#cb4-637"></a><span class="ss">1.  </span>**点估计**重点掌握**矩估计**和**最大似然估计**的计算流程。</span>
-<span id="cb4-638"><a href="#cb4-638"></a><span class="ss">2.  </span>**置信区间**需牢记**不同条件（已知或未知方差）下枢轴量的选择**，这是解题的关键。</span>
-<span id="cb4-639"><a href="#cb4-639"></a></span>
-<span id="cb4-640"><a href="#cb4-640"></a></span>
-<span id="cb4-641"><a href="#cb4-641"></a><span class="fu"># 8. 假设检验</span></span>
-<span id="cb4-642"><a href="#cb4-642"></a></span>
-<span id="cb4-643"><a href="#cb4-643"></a><span class="fu">### 假设检验的基本概念</span></span>
-<span id="cb4-644"><a href="#cb4-644"></a></span>
-<span id="cb4-645"><a href="#cb4-645"></a>本节奠定了假设检验的思想基础，即**“小概率原理”**。</span>
-<span id="cb4-646"><a href="#cb4-646"></a></span>
-<span id="cb4-647"><a href="#cb4-647"></a><span class="ss">1.  </span>**统计假设 (Statistical Hypothesis)**</span>
-<span id="cb4-648"><a href="#cb4-648"></a><span class="ss">    *   </span>**原假设 (Null Hypothesis, $H_0$)**：通常是我们想要验证或保护的假设（如“生产过程正常”），表示没有显著差异 。</span>
-<span id="cb4-649"><a href="#cb4-649"></a><span class="ss">    *   </span>**备择假设 (Alternative Hypothesis, $H_1$)**：原假设的对立面 。</span>
+<span id="cb4-636"><a href="#cb4-636"></a>---</span>
+<span id="cb4-637"><a href="#cb4-637"></a></span>
+<span id="cb4-638"><a href="#cb4-638"></a><span class="fu">### 单侧置信区间 (One-sided Confidence Intervals)</span></span>
+<span id="cb4-639"><a href="#cb4-639"></a><span class="ss">*   </span>**应用场景**：在某些实际问题中，只需关注参数的下限（如设备寿命）或上限（如杂质含量）。</span>
+<span id="cb4-640"><a href="#cb4-640"></a><span class="ss">*   </span>**计算差异**：使用置信水平 $\alpha$ 对应的单侧分位点（如 $z_\alpha$ 或 $t_\alpha$）代替双侧的 $\alpha/2$ 。</span>
+<span id="cb4-641"><a href="#cb4-641"></a><span class="ss">    *   </span>**单侧置信下限**：$(\underline{\theta}, +\infty)$，使得 $P<span class="sc">\{</span>\theta &gt; \underline{\theta}<span class="sc">\}</span> \ge 1-\alpha$ 。</span>
+<span id="cb4-642"><a href="#cb4-642"></a><span class="ss">    *   </span>**单侧置信上限**：$(-\infty, \bar{\theta})$，使得 $P<span class="sc">\{</span>\theta &lt; \bar{\theta}<span class="sc">\}</span> \ge 1-\alpha$ 。</span>
+<span id="cb4-643"><a href="#cb4-643"></a></span>
+<span id="cb4-644"><a href="#cb4-644"></a>**学习建议**：</span>
+<span id="cb4-645"><a href="#cb4-645"></a><span class="ss">1.  </span>**点估计**重点掌握**矩估计**和**最大似然估计**的计算流程。</span>
+<span id="cb4-646"><a href="#cb4-646"></a><span class="ss">2.  </span>**置信区间**需牢记**不同条件（已知或未知方差）下枢轴量的选择**，这是解题的关键。</span>
+<span id="cb4-647"><a href="#cb4-647"></a></span>
+<span id="cb4-648"><a href="#cb4-648"></a></span>
+<span id="cb4-649"><a href="#cb4-649"></a><span class="fu"># 8. 假设检验</span></span>
 <span id="cb4-650"><a href="#cb4-650"></a></span>
-<span id="cb4-651"><a href="#cb4-651"></a><span class="ss">2.  </span>**双边检验与单边检验**</span>
-<span id="cb4-652"><a href="#cb4-652"></a><span class="ss">    *   </span>**双边检验**：$H_0: \theta = \theta_0$ vs $H_1: \theta \ne \theta_0$ 。</span>
-<span id="cb4-653"><a href="#cb4-653"></a><span class="ss">    *   </span>**右边检验**：$H_0: \theta \le \theta_0$ vs $H_1: \theta &gt; \theta_0$ 。</span>
-<span id="cb4-654"><a href="#cb4-654"></a><span class="ss">    *   </span>**左边检验**：$H_0: \theta \ge \theta_0$ vs $H_1: \theta &lt; \theta_0$ 。</span>
-<span id="cb4-655"><a href="#cb4-655"></a></span>
-<span id="cb4-656"><a href="#cb4-656"></a><span class="ss">3.  </span>**两类错误 (Two Types of Errors)**</span>
-<span id="cb4-657"><a href="#cb4-657"></a><span class="ss">    *   </span>**第一类错误（弃真错误）**：$H_0$ 为真却拒绝了 $H_0$。发生的概率记为 $\alpha$ 。</span>
-<span id="cb4-658"><a href="#cb4-658"></a><span class="ss">    *   </span>**第二类错误（取伪错误）**：$H_0$ 为假却接受了 $H_0$。发生的概率记为 $\beta$ 。</span>
-<span id="cb4-659"><a href="#cb4-659"></a><span class="ss">    *   </span>*注：在样本容量 $n$ 固定时，$\alpha$ 与 $\beta$ 往往此消彼长。*</span>
-<span id="cb4-660"><a href="#cb4-660"></a></span>
-<span id="cb4-661"><a href="#cb4-661"></a><span class="ss">4.  </span>**检验统计量与拒绝域**</span>
-<span id="cb4-662"><a href="#cb4-662"></a><span class="ss">    *   </span>**检验统计量**：用于决策的随机变量 。</span>
-<span id="cb4-663"><a href="#cb4-663"></a><span class="ss">    *   </span>**显著性水平 $\alpha$**：允许犯第一类错误的最大概率，通常取 0.05 或 0.01 。</span>
-<span id="cb4-664"><a href="#cb4-664"></a><span class="ss">    *   </span>**拒绝域 ($W$)**：当检验统计量的观测值落入该区域时，拒绝 $H_0$ 。</span>
-<span id="cb4-665"><a href="#cb4-665"></a></span>
-<span id="cb4-666"><a href="#cb4-666"></a>---</span>
-<span id="cb4-667"><a href="#cb4-667"></a></span>
-<span id="cb4-668"><a href="#cb4-668"></a><span class="fu">### 正态总体均值的假设检验</span></span>
-<span id="cb4-669"><a href="#cb4-669"></a></span>
-<span id="cb4-670"><a href="#cb4-670"></a>本节针对不同条件下对均值 $\mu$ 的检验。</span>
-<span id="cb4-671"><a href="#cb4-671"></a></span>
-<span id="cb4-672"><a href="#cb4-672"></a><span class="ss">1.  </span>**$\sigma^2$ 已知情形（Z 检验）**</span>
-<span id="cb4-673"><a href="#cb4-673"></a><span class="ss">    *   </span>**检验统计量**：**$Z = \frac{\bar{X} - \mu_0}{\sigma/\sqrt{n}} \sim N(0,1)$** 。</span>
-<span id="cb4-674"><a href="#cb4-674"></a><span class="ss">    *   </span>**拒绝域 (双边)**：$|Z| \ge z_{\alpha/2}$ 。</span>
-<span id="cb4-675"><a href="#cb4-675"></a><span class="ss">    *   </span>**变量含义**：$\bar{X}$ 为样本均值，$\mu_0$ 为假设的总体均值，$\sigma$ 为总体标准差，$n$ 为样本量。</span>
-<span id="cb4-676"><a href="#cb4-676"></a></span>
-<span id="cb4-677"><a href="#cb4-677"></a><span class="ss">2.  </span>**$\sigma^2$ 未知情形（t 检验）**</span>
-<span id="cb4-678"><a href="#cb4-678"></a><span class="ss">    *   </span>**检验统计量**：**$t = \frac{\bar{X} - \mu_0}{S/\sqrt{n}} \sim t(n-1)$** 。</span>
-<span id="cb4-679"><a href="#cb4-679"></a><span class="ss">    *   </span>**拒绝域 (双边)**：$|t| \ge t_{\alpha/2}(n-1)$ 。</span>
-<span id="cb4-680"><a href="#cb4-680"></a><span class="ss">    *   </span>**变量含义**：$S$ 为样本标准差（分母为 $n-1$ 的估计量）。</span>
-<span id="cb4-681"><a href="#cb4-681"></a></span>
-<span id="cb4-682"><a href="#cb4-682"></a>---</span>
-<span id="cb4-683"><a href="#cb4-683"></a></span>
-<span id="cb4-684"><a href="#cb4-684"></a><span class="fu">### 正态总体方差的假设检验</span></span>
-<span id="cb4-685"><a href="#cb4-685"></a></span>
-<span id="cb4-686"><a href="#cb4-686"></a>针对总体波动程度 $\sigma^2$ 的检验。</span>
-<span id="cb4-687"><a href="#cb4-687"></a></span>
-<span id="cb4-688"><a href="#cb4-688"></a><span class="ss">1.  </span>**单一总体方差的检验 ($\chi^2$ 检验)**</span>
-<span id="cb4-689"><a href="#cb4-689"></a><span class="ss">    *   </span>**检验统计量**：**$\chi^2 = \frac{(n-1)S^2}{\sigma_0^2} \sim \chi^2(n-1)$** 。</span>
-<span id="cb4-690"><a href="#cb4-690"></a><span class="ss">    *   </span>**变量含义**：$\sigma_0^2$ 为假设的总体方差值。</span>
-<span id="cb4-691"><a href="#cb4-691"></a><span class="ss">    *   </span>**拒绝域 (双边)**：$\chi^2 \le \chi^2_{1-\alpha/2}(n-1)$ 或 $\chi^2 \ge \chi^2_{\alpha/2}(n-1)$ 。</span>
-<span id="cb4-692"><a href="#cb4-692"></a></span>
-<span id="cb4-693"><a href="#cb4-693"></a><span class="ss">2.  </span>**两个总体方差比例的检验 (F 检验)**</span>
-<span id="cb4-694"><a href="#cb4-694"></a><span class="ss">    *   </span>**背景**：用于比较两个生产线的稳定性。</span>
-<span id="cb4-695"><a href="#cb4-695"></a><span class="ss">    *   </span>**检验统计量**：**$F = \frac{S_1^2}{S_2^2} \sim F(n_1-1, n_2-1)$** (在 $H_0: \sigma_1^2 = \sigma_2^2$ 条件下) 。</span>
-<span id="cb4-696"><a href="#cb4-696"></a><span class="ss">    *   </span>**拒绝域 (双边)**：$F \le F_{1-\alpha/2}$ 或 $F \ge F_{\alpha/2}$ 。</span>
-<span id="cb4-697"><a href="#cb4-697"></a></span>
-<span id="cb4-698"><a href="#cb4-698"></a>---</span>
-<span id="cb4-699"><a href="#cb4-699"></a></span>
-<span id="cb4-700"><a href="#cb4-700"></a><span class="fu">### 两个正态总体均值差的检验</span></span>
-<span id="cb4-701"><a href="#cb4-701"></a></span>
-<span id="cb4-702"><a href="#cb4-702"></a><span class="ss">1.  </span>**独立样本均值差检验 ($t$ 检验)**</span>
-<span id="cb4-703"><a href="#cb4-703"></a><span class="ss">    *   </span>前提：两个总体相互独立且方差相等 $\sigma_1^2 = \sigma_2^2$ 。</span>
-<span id="cb4-704"><a href="#cb4-704"></a><span class="ss">    *   </span>**检验统计量**：**$t = \frac{(\bar{X} - \bar{Y}) - \delta}{S_w \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}} \sim t(n_1+n_2-2)$** 。</span>
-<span id="cb4-705"><a href="#cb4-705"></a><span class="ss">    *   </span>**变量含义**：$S_w$ 是**混合样本标准差**，$S_w = \sqrt{\frac{(n_1-1)S_1^2 + (n_2-1)S_2^2}{n_1+n_2-2}}$ 。</span>
-<span id="cb4-706"><a href="#cb4-706"></a></span>
-<span id="cb4-707"><a href="#cb4-707"></a><span class="ss">2.  </span>**成对数据均值差检验 (Paired t-test)**</span>
-<span id="cb4-708"><a href="#cb4-708"></a><span class="ss">    *   </span>**方法**：先求出每一对观察值的差 $D_i = X_i - Y_i$，再对 $D$ 服从正态分布的均值 $\mu_D$ 进行单一总体的 $t$ 检验 。</span>
+<span id="cb4-651"><a href="#cb4-651"></a><span class="fu">### 假设检验的基本概念</span></span>
+<span id="cb4-652"><a href="#cb4-652"></a></span>
+<span id="cb4-653"><a href="#cb4-653"></a>本节奠定了假设检验的思想基础，即**“小概率原理”**。</span>
+<span id="cb4-654"><a href="#cb4-654"></a></span>
+<span id="cb4-655"><a href="#cb4-655"></a><span class="ss">1.  </span>**统计假设 (Statistical Hypothesis)**</span>
+<span id="cb4-656"><a href="#cb4-656"></a><span class="ss">    *   </span>**原假设 (Null Hypothesis, $H_0$)**：通常是我们想要验证或保护的假设（如“生产过程正常”），表示没有显著差异 。</span>
+<span id="cb4-657"><a href="#cb4-657"></a><span class="ss">    *   </span>**备择假设 (Alternative Hypothesis, $H_1$)**：原假设的对立面 。</span>
+<span id="cb4-658"><a href="#cb4-658"></a></span>
+<span id="cb4-659"><a href="#cb4-659"></a><span class="ss">2.  </span>**双边检验与单边检验**</span>
+<span id="cb4-660"><a href="#cb4-660"></a><span class="ss">    *   </span>**双边检验**：$H_0: \theta = \theta_0$ vs $H_1: \theta \ne \theta_0$ 。</span>
+<span id="cb4-661"><a href="#cb4-661"></a><span class="ss">    *   </span>**右边检验**：$H_0: \theta \le \theta_0$ vs $H_1: \theta &gt; \theta_0$ 。</span>
+<span id="cb4-662"><a href="#cb4-662"></a><span class="ss">    *   </span>**左边检验**：$H_0: \theta \ge \theta_0$ vs $H_1: \theta &lt; \theta_0$ 。</span>
+<span id="cb4-663"><a href="#cb4-663"></a></span>
+<span id="cb4-664"><a href="#cb4-664"></a><span class="ss">3.  </span>**两类错误 (Two Types of Errors)**</span>
+<span id="cb4-665"><a href="#cb4-665"></a><span class="ss">    *   </span>**第一类错误（弃真错误）**：$H_0$ 为真却拒绝了 $H_0$。发生的概率记为 $\alpha$ 。</span>
+<span id="cb4-666"><a href="#cb4-666"></a><span class="ss">    *   </span>**第二类错误（取伪错误）**：$H_0$ 为假却接受了 $H_0$。发生的概率记为 $\beta$ 。</span>
+<span id="cb4-667"><a href="#cb4-667"></a><span class="ss">    *   </span>*注：在样本容量 $n$ 固定时，$\alpha$ 与 $\beta$ 往往此消彼长。*</span>
+<span id="cb4-668"><a href="#cb4-668"></a></span>
+<span id="cb4-669"><a href="#cb4-669"></a><span class="ss">4.  </span>**检验统计量与拒绝域**</span>
+<span id="cb4-670"><a href="#cb4-670"></a><span class="ss">    *   </span>**检验统计量**：用于决策的随机变量 。</span>
+<span id="cb4-671"><a href="#cb4-671"></a><span class="ss">    *   </span>**显著性水平 $\alpha$**：允许犯第一类错误的最大概率，通常取 0.05 或 0.01 。</span>
+<span id="cb4-672"><a href="#cb4-672"></a><span class="ss">    *   </span>**拒绝域 ($W$)**：当检验统计量的观测值落入该区域时，拒绝 $H_0$ 。</span>
+<span id="cb4-673"><a href="#cb4-673"></a></span>
+<span id="cb4-674"><a href="#cb4-674"></a>---</span>
+<span id="cb4-675"><a href="#cb4-675"></a></span>
+<span id="cb4-676"><a href="#cb4-676"></a><span class="fu">### 正态总体均值的假设检验</span></span>
+<span id="cb4-677"><a href="#cb4-677"></a></span>
+<span id="cb4-678"><a href="#cb4-678"></a>本节针对不同条件下对均值 $\mu$ 的检验。</span>
+<span id="cb4-679"><a href="#cb4-679"></a></span>
+<span id="cb4-680"><a href="#cb4-680"></a><span class="ss">1.  </span>**$\sigma^2$ 已知情形（Z 检验）**</span>
+<span id="cb4-681"><a href="#cb4-681"></a><span class="ss">    *   </span>**检验统计量**：**$Z = \frac{\bar{X} - \mu_0}{\sigma/\sqrt{n}} \sim N(0,1)$** 。</span>
+<span id="cb4-682"><a href="#cb4-682"></a><span class="ss">    *   </span>**拒绝域 (双边)**：$|Z| \ge z_{\alpha/2}$ 。</span>
+<span id="cb4-683"><a href="#cb4-683"></a><span class="ss">    *   </span>**变量含义**：$\bar{X}$ 为样本均值，$\mu_0$ 为假设的总体均值，$\sigma$ 为总体标准差，$n$ 为样本量。</span>
+<span id="cb4-684"><a href="#cb4-684"></a></span>
+<span id="cb4-685"><a href="#cb4-685"></a><span class="ss">2.  </span>**$\sigma^2$ 未知情形（t 检验）**</span>
+<span id="cb4-686"><a href="#cb4-686"></a><span class="ss">    *   </span>**检验统计量**：**$t = \frac{\bar{X} - \mu_0}{S/\sqrt{n}} \sim t(n-1)$** 。</span>
+<span id="cb4-687"><a href="#cb4-687"></a><span class="ss">    *   </span>**拒绝域 (双边)**：$|t| \ge t_{\alpha/2}(n-1)$ 。</span>
+<span id="cb4-688"><a href="#cb4-688"></a><span class="ss">    *   </span>**变量含义**：$S$ 为样本标准差（分母为 $n-1$ 的估计量）。</span>
+<span id="cb4-689"><a href="#cb4-689"></a></span>
+<span id="cb4-690"><a href="#cb4-690"></a>---</span>
+<span id="cb4-691"><a href="#cb4-691"></a></span>
+<span id="cb4-692"><a href="#cb4-692"></a><span class="fu">### 正态总体方差的假设检验</span></span>
+<span id="cb4-693"><a href="#cb4-693"></a></span>
+<span id="cb4-694"><a href="#cb4-694"></a>针对总体波动程度 $\sigma^2$ 的检验。</span>
+<span id="cb4-695"><a href="#cb4-695"></a></span>
+<span id="cb4-696"><a href="#cb4-696"></a><span class="ss">1.  </span>**单一总体方差的检验 ($\chi^2$ 检验)**</span>
+<span id="cb4-697"><a href="#cb4-697"></a><span class="ss">    *   </span>**检验统计量**：**$\chi^2 = \frac{(n-1)S^2}{\sigma_0^2} \sim \chi^2(n-1)$** 。</span>
+<span id="cb4-698"><a href="#cb4-698"></a><span class="ss">    *   </span>**变量含义**：$\sigma_0^2$ 为假设的总体方差值。</span>
+<span id="cb4-699"><a href="#cb4-699"></a><span class="ss">    *   </span>**拒绝域 (双边)**：$\chi^2 \le \chi^2_{1-\alpha/2}(n-1)$ 或 $\chi^2 \ge \chi^2_{\alpha/2}(n-1)$ 。</span>
+<span id="cb4-700"><a href="#cb4-700"></a></span>
+<span id="cb4-701"><a href="#cb4-701"></a><span class="ss">2.  </span>**两个总体方差比例的检验 (F 检验)**</span>
+<span id="cb4-702"><a href="#cb4-702"></a><span class="ss">    *   </span>**背景**：用于比较两个生产线的稳定性。</span>
+<span id="cb4-703"><a href="#cb4-703"></a><span class="ss">    *   </span>**检验统计量**：**$F = \frac{S_1^2}{S_2^2} \sim F(n_1-1, n_2-1)$** (在 $H_0: \sigma_1^2 = \sigma_2^2$ 条件下) 。</span>
+<span id="cb4-704"><a href="#cb4-704"></a><span class="ss">    *   </span>**拒绝域 (双边)**：$F \le F_{1-\alpha/2}$ 或 $F \ge F_{\alpha/2}$ 。</span>
+<span id="cb4-705"><a href="#cb4-705"></a></span>
+<span id="cb4-706"><a href="#cb4-706"></a>---</span>
+<span id="cb4-707"><a href="#cb4-707"></a></span>
+<span id="cb4-708"><a href="#cb4-708"></a><span class="fu">### 两个正态总体均值差的检验</span></span>
 <span id="cb4-709"><a href="#cb4-709"></a></span>
-<span id="cb4-710"><a href="#cb4-710"></a>---</span>
-<span id="cb4-711"><a href="#cb4-711"></a></span>
-<span id="cb4-712"><a href="#cb4-712"></a><span class="fu">### 分布拟合检验 ($\chi^2$ 拟合检验)</span></span>
-<span id="cb4-713"><a href="#cb4-713"></a></span>
-<span id="cb4-714"><a href="#cb4-714"></a>本节讨论如何判断一组观测数据是否来自某种特定的分布（如正态分布或泊松分布）。</span>
-<span id="cb4-715"><a href="#cb4-715"></a></span>
-<span id="cb4-716"><a href="#cb4-716"></a><span class="ss">1.  </span>**基本思想**：将实际观测频数与理论期望频数进行比较 。</span>
-<span id="cb4-717"><a href="#cb4-717"></a><span class="ss">2.  </span>**检验统计量**：**$\chi^2 = \sum_{i=1}^k \frac{(f_i - n\hat{p}_i)^2}{n\hat{p}_i}$** 。</span>
-<span id="cb4-718"><a href="#cb4-718"></a><span class="ss">3.  </span>**变量含义**：</span>
-<span id="cb4-719"><a href="#cb4-719"></a><span class="ss">    *   </span>$f_i$：第 $i$ 个类别的**实际频数**。</span>
-<span id="cb4-720"><a href="#cb4-720"></a><span class="ss">    *   </span>$n\hat{p}_i$：假设成立下的**期望频数**。</span>
-<span id="cb4-721"><a href="#cb4-721"></a><span class="ss">    *   </span>$k$：分类数。</span>
-<span id="cb4-722"><a href="#cb4-722"></a><span class="ss">4.  </span>**自由度推导**：自由度为 $k-r-1$，其中 $r$ 是从样本中估计的参数个数 。</span>
+<span id="cb4-710"><a href="#cb4-710"></a><span class="ss">1.  </span>**独立样本均值差检验 ($t$ 检验)**</span>
+<span id="cb4-711"><a href="#cb4-711"></a><span class="ss">    *   </span>前提：两个总体相互独立且方差相等 $\sigma_1^2 = \sigma_2^2$ 。</span>
+<span id="cb4-712"><a href="#cb4-712"></a><span class="ss">    *   </span>**检验统计量**：**$t = \frac{(\bar{X} - \bar{Y}) - \delta}{S_w \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}} \sim t(n_1+n_2-2)$** 。</span>
+<span id="cb4-713"><a href="#cb4-713"></a><span class="ss">    *   </span>**变量含义**：$S_w$ 是**混合样本标准差**，$S_w = \sqrt{\frac{(n_1-1)S_1^2 + (n_2-1)S_2^2}{n_1+n_2-2}}$ 。</span>
+<span id="cb4-714"><a href="#cb4-714"></a></span>
+<span id="cb4-715"><a href="#cb4-715"></a><span class="ss">2.  </span>**成对数据均值差检验 (Paired t-test)**</span>
+<span id="cb4-716"><a href="#cb4-716"></a><span class="ss">    *   </span>**方法**：先求出每一对观察值的差 $D_i = X_i - Y_i$，再对 $D$ 服从正态分布的均值 $\mu_D$ 进行单一总体的 $t$ 检验 。</span>
+<span id="cb4-717"><a href="#cb4-717"></a></span>
+<span id="cb4-718"><a href="#cb4-718"></a>---</span>
+<span id="cb4-719"><a href="#cb4-719"></a></span>
+<span id="cb4-720"><a href="#cb4-720"></a><span class="fu">### 分布拟合检验 ($\chi^2$ 拟合检验)</span></span>
+<span id="cb4-721"><a href="#cb4-721"></a></span>
+<span id="cb4-722"><a href="#cb4-722"></a>本节讨论如何判断一组观测数据是否来自某种特定的分布（如正态分布或泊松分布）。</span>
 <span id="cb4-723"><a href="#cb4-723"></a></span>
-<span id="cb4-724"><a href="#cb4-724"></a>---</span>
-<span id="cb4-725"><a href="#cb4-725"></a></span>
-<span id="cb4-726"><a href="#cb4-726"></a><span class="fu">### 扩展知识点</span></span>
-<span id="cb4-727"><a href="#cb4-727"></a></span>
-<span id="cb4-728"><a href="#cb4-728"></a><span class="ss">*   </span>**p 值检验法 (p-value)**：指在 $H_0$ 为真的条件下，观察到的样本结果或更极端结果出现的概率 。</span>
-<span id="cb4-729"><a href="#cb4-729"></a><span class="ss">    *   </span>**判定标准**：若 $p \le \alpha$，拒绝 $H_0$；若 $p &gt; \alpha$，不能拒绝 $H_0$ 。</span>
-<span id="cb4-730"><a href="#cb4-730"></a><span class="ss">*   </span>**置信区间与假设检验的关系**：双边假设检验拒绝 $H_0$ 等价于参数的置信区间不包含假设值 $\mu_0$ 。</span>
+<span id="cb4-724"><a href="#cb4-724"></a><span class="ss">1.  </span>**基本思想**：将实际观测频数与理论期望频数进行比较 。</span>
+<span id="cb4-725"><a href="#cb4-725"></a><span class="ss">2.  </span>**检验统计量**：**$\chi^2 = \sum_{i=1}^k \frac{(f_i - n\hat{p}_i)^2}{n\hat{p}_i}$** 。</span>
+<span id="cb4-726"><a href="#cb4-726"></a><span class="ss">3.  </span>**变量含义**：</span>
+<span id="cb4-727"><a href="#cb4-727"></a><span class="ss">    *   </span>$f_i$：第 $i$ 个类别的**实际频数**。</span>
+<span id="cb4-728"><a href="#cb4-728"></a><span class="ss">    *   </span>$n\hat{p}_i$：假设成立下的**期望频数**。</span>
+<span id="cb4-729"><a href="#cb4-729"></a><span class="ss">    *   </span>$k$：分类数。</span>
+<span id="cb4-730"><a href="#cb4-730"></a><span class="ss">4.  </span>**自由度推导**：自由度为 $k-r-1$，其中 $r$ 是从样本中估计的参数个数 。</span>
 <span id="cb4-731"><a href="#cb4-731"></a></span>
-<span id="cb4-732"><a href="#cb4-732"></a>**核心变量速查**：</span>
-<span id="cb4-733"><a href="#cb4-733"></a><span class="ss">*   </span>$\alpha$：弃真概率。</span>
-<span id="cb4-734"><a href="#cb4-734"></a><span class="ss">*   </span>$\bar{X}, \bar{Y}$：样本均值。</span>
-<span id="cb4-735"><a href="#cb4-735"></a><span class="ss">*   </span>$S^2$：样本方差。</span>
-<span id="cb4-736"><a href="#cb4-736"></a><span class="ss">*   </span>$n, m$：样本容量。</span>
-<span id="cb4-737"><a href="#cb4-737"></a><span class="ss">*   </span>$z, t, \chi^2, F$：分别对应标准正态、学生、卡方、费舍尔分布的统计量。</span>
-<span id="cb4-738"><a href="#cb4-738"></a></span>
-<span id="cb4-739"><a href="#cb4-739"></a><span class="fu"># 9. 方差分析</span></span>
-<span id="cb4-740"><a href="#cb4-740"></a></span>
-<span id="cb4-741"><a href="#cb4-741"></a><span class="fu">### 单因素试验的方差分析 (Single-Factor ANOVA)</span></span>
-<span id="cb4-742"><a href="#cb4-742"></a></span>
-<span id="cb4-743"><a href="#cb4-743"></a>研究一个因素（如不同的原料、不同的工艺）对实验指标的影响。</span>
-<span id="cb4-744"><a href="#cb4-744"></a></span>
-<span id="cb4-745"><a href="#cb4-745"></a><span class="fu">#### 1. 基本概念</span></span>
-<span id="cb4-746"><a href="#cb4-746"></a><span class="ss">*   </span>**因素 (Factor)**：实验中要考察的变量，记为 $A$。</span>
-<span id="cb4-747"><a href="#cb4-747"></a><span class="ss">*   </span>**水平 (Level)**：因素的不同状态，设共有 $s$ 个水平 $A_1, A_2, \dots, A_s$。</span>
-<span id="cb4-748"><a href="#cb4-748"></a><span class="ss">*   </span>**指标 (Response Variable)**：实验的观测值 $X$。</span>
-<span id="cb4-749"><a href="#cb4-749"></a></span>
-<span id="cb4-750"><a href="#cb4-750"></a><span class="fu">#### 2. 模型假设</span></span>
-<span id="cb4-751"><a href="#cb4-751"></a><span class="ss">*   </span>**独立性**：各水平下的观测值相互独立。</span>
-<span id="cb4-752"><a href="#cb4-752"></a><span class="ss">*   </span>**正态性**：每一水平下的总体服从正态分布 $X_{ij} \sim N(\mu_i, \sigma^2)$。</span>
-<span id="cb4-753"><a href="#cb4-753"></a><span class="ss">*   </span>**方差齐性**：各总体方差相等（均为 $\sigma^2$）。</span>
-<span id="cb4-754"><a href="#cb4-754"></a><span class="ss">*   </span>**效应表示法**：令 $\mu = \frac{1}{n}\sum n_i\mu_i$ 为总均值，$\delta_i = \mu_i - \mu$ 为因素效应，且 $\sum n_i\delta_i = 0$。</span>
-<span id="cb4-755"><a href="#cb4-755"></a></span>
-<span id="cb4-756"><a href="#cb4-756"></a><span class="fu">#### 3. 统计假设</span></span>
-<span id="cb4-757"><a href="#cb4-757"></a><span class="ss">*   </span>**原假设 $H_0$**：$\mu_1 = \mu_2 = \dots = \mu_s$（或 $\delta_1 = \delta_2 = \dots = \delta_s = 0$）。</span>
-<span id="cb4-758"><a href="#cb4-758"></a><span class="ss">*   </span>**备择假设 $H_1$**：$\mu_i$ 不全相等。</span>
-<span id="cb4-759"><a href="#cb4-759"></a></span>
-<span id="cb4-760"><a href="#cb4-760"></a><span class="fu">#### 4. 平方和的分解（核心推导）</span></span>
-<span id="cb4-761"><a href="#cb4-761"></a><span class="ss">*   </span>**总平方和 ($S_T$)**：反映全部观测数据的总波动。</span>
-<span id="cb4-762"><a href="#cb4-762"></a><span class="ss">*   </span>**效应平方和 ($S_A$)**：反映水平间的差异（由因素引起）。</span>
-<span id="cb4-763"><a href="#cb4-763"></a><span class="ss">*   </span>**误差平方和 ($S_E$)**：反映水平内的随机误差。</span>
-<span id="cb4-764"><a href="#cb4-764"></a><span class="ss">*   </span>**推导过程**：</span>
-<span id="cb4-765"><a href="#cb4-765"></a>    $$S_T = \sum_{i=1}^s\sum_{j=1}^{n_i}(X_{ij} - \bar{X})^2 = \sum_{i=1}^s\sum_{j=1}^{n_i} a^2$$</span>
-<span id="cb4-766"><a href="#cb4-766"></a>    $$= \sum\sum(X_{ij} - \bar{X}_{i\cdot})^2 + \sum n_i(\bar{X}_{i\cdot} - \bar{X})^2 + 0 = S_E + S_A$$</span>
-<span id="cb4-767"><a href="#cb4-767"></a>    *(注：中间项乘积和为0，因为 $\sum(X_{ij} - \bar{X}_{i\cdot}) = 0$)*。</span>
-<span id="cb4-768"><a href="#cb4-768"></a></span>
-<span id="cb4-769"><a href="#cb4-769"></a><span class="fu">#### 5. 检验统计量 (F 检验)</span></span>
-<span id="cb4-770"><a href="#cb4-770"></a><span class="ss">*   </span>**均方 (Mean Square)**：$MS_A = \frac{S_A}{s-1}$， $MS_E = \frac{S_E}{n-s}$。</span>
-<span id="cb4-771"><a href="#cb4-771"></a><span class="ss">*   </span>**统计量**：**$F = \frac{MS_A}{MS_E} \sim F(s-1, n-s)$**。</span>
-<span id="cb4-772"><a href="#cb4-772"></a><span class="ss">*   </span>**决策规则**：若 $F &gt; F_{\alpha}(s-1, n-s)$，则拒绝 $H_0$，说明因素 A 影响显著。</span>
-<span id="cb4-773"><a href="#cb4-773"></a></span>
-<span id="cb4-774"><a href="#cb4-774"></a>---</span>
-<span id="cb4-775"><a href="#cb4-775"></a></span>
-<span id="cb4-776"><a href="#cb4-776"></a><span class="fu">### 双因素试验的方差分析 (Two-Factor ANOVA)</span></span>
-<span id="cb4-777"><a href="#cb4-777"></a></span>
-<span id="cb4-778"><a href="#cb4-778"></a>研究两个因素（如温度和压力）同时对实验结果的影响。</span>
-<span id="cb4-779"><a href="#cb4-779"></a></span>
-<span id="cb4-780"><a href="#cb4-780"></a><span class="fu">#### 1. 分类</span></span>
-<span id="cb4-781"><a href="#cb4-781"></a><span class="ss">*   </span>**不考虑交互作用**：因素 A 和 B 独立产生影响。</span>
-<span id="cb4-782"><a href="#cb4-782"></a><span class="ss">*   </span>**考虑交互作用 ($A \times B$)**：两个因素结合时会产生额外的效应（如某种药剂在特定温度下才有效）。</span>
+<span id="cb4-732"><a href="#cb4-732"></a>---</span>
+<span id="cb4-733"><a href="#cb4-733"></a></span>
+<span id="cb4-734"><a href="#cb4-734"></a><span class="fu">### 扩展知识点</span></span>
+<span id="cb4-735"><a href="#cb4-735"></a></span>
+<span id="cb4-736"><a href="#cb4-736"></a><span class="ss">*   </span>**p 值检验法 (p-value)**：指在 $H_0$ 为真的条件下，观察到的样本结果或更极端结果出现的概率 。</span>
+<span id="cb4-737"><a href="#cb4-737"></a><span class="ss">    *   </span>**判定标准**：若 $p \le \alpha$，拒绝 $H_0$；若 $p &gt; \alpha$，不能拒绝 $H_0$ 。</span>
+<span id="cb4-738"><a href="#cb4-738"></a><span class="ss">*   </span>**置信区间与假设检验的关系**：双边假设检验拒绝 $H_0$ 等价于参数的置信区间不包含假设值 $\mu_0$ 。</span>
+<span id="cb4-739"><a href="#cb4-739"></a></span>
+<span id="cb4-740"><a href="#cb4-740"></a>**核心变量速查**：</span>
+<span id="cb4-741"><a href="#cb4-741"></a><span class="ss">*   </span>$\alpha$：弃真概率。</span>
+<span id="cb4-742"><a href="#cb4-742"></a><span class="ss">*   </span>$\bar{X}, \bar{Y}$：样本均值。</span>
+<span id="cb4-743"><a href="#cb4-743"></a><span class="ss">*   </span>$S^2$：样本方差。</span>
+<span id="cb4-744"><a href="#cb4-744"></a><span class="ss">*   </span>$n, m$：样本容量。</span>
+<span id="cb4-745"><a href="#cb4-745"></a><span class="ss">*   </span>$z, t, \chi^2, F$：分别对应标准正态、学生、卡方、费舍尔分布的统计量。</span>
+<span id="cb4-746"><a href="#cb4-746"></a></span>
+<span id="cb4-747"><a href="#cb4-747"></a><span class="fu"># 9. 方差分析</span></span>
+<span id="cb4-748"><a href="#cb4-748"></a></span>
+<span id="cb4-749"><a href="#cb4-749"></a><span class="fu">### 单因素试验的方差分析 (Single-Factor ANOVA)</span></span>
+<span id="cb4-750"><a href="#cb4-750"></a></span>
+<span id="cb4-751"><a href="#cb4-751"></a>研究一个因素（如不同的原料、不同的工艺）对实验指标的影响。</span>
+<span id="cb4-752"><a href="#cb4-752"></a></span>
+<span id="cb4-753"><a href="#cb4-753"></a><span class="fu">#### 1. 基本概念</span></span>
+<span id="cb4-754"><a href="#cb4-754"></a><span class="ss">*   </span>**因素 (Factor)**：实验中要考察的变量，记为 $A$。</span>
+<span id="cb4-755"><a href="#cb4-755"></a><span class="ss">*   </span>**水平 (Level)**：因素的不同状态，设共有 $s$ 个水平 $A_1, A_2, \dots, A_s$。</span>
+<span id="cb4-756"><a href="#cb4-756"></a><span class="ss">*   </span>**指标 (Response Variable)**：实验的观测值 $X$。</span>
+<span id="cb4-757"><a href="#cb4-757"></a></span>
+<span id="cb4-758"><a href="#cb4-758"></a><span class="fu">#### 2. 模型假设</span></span>
+<span id="cb4-759"><a href="#cb4-759"></a><span class="ss">*   </span>**独立性**：各水平下的观测值相互独立。</span>
+<span id="cb4-760"><a href="#cb4-760"></a><span class="ss">*   </span>**正态性**：每一水平下的总体服从正态分布 $X_{ij} \sim N(\mu_i, \sigma^2)$。</span>
+<span id="cb4-761"><a href="#cb4-761"></a><span class="ss">*   </span>**方差齐性**：各总体方差相等（均为 $\sigma^2$）。</span>
+<span id="cb4-762"><a href="#cb4-762"></a><span class="ss">*   </span>**效应表示法**：令 $\mu = \frac{1}{n}\sum n_i\mu_i$ 为总均值，$\delta_i = \mu_i - \mu$ 为因素效应，且 $\sum n_i\delta_i = 0$。</span>
+<span id="cb4-763"><a href="#cb4-763"></a></span>
+<span id="cb4-764"><a href="#cb4-764"></a><span class="fu">#### 3. 统计假设</span></span>
+<span id="cb4-765"><a href="#cb4-765"></a><span class="ss">*   </span>**原假设 $H_0$**：$\mu_1 = \mu_2 = \dots = \mu_s$（或 $\delta_1 = \delta_2 = \dots = \delta_s = 0$）。</span>
+<span id="cb4-766"><a href="#cb4-766"></a><span class="ss">*   </span>**备择假设 $H_1$**：$\mu_i$ 不全相等。</span>
+<span id="cb4-767"><a href="#cb4-767"></a></span>
+<span id="cb4-768"><a href="#cb4-768"></a><span class="fu">#### 4. 平方和的分解（核心推导）</span></span>
+<span id="cb4-769"><a href="#cb4-769"></a><span class="ss">*   </span>**总平方和 ($S_T$)**：反映全部观测数据的总波动。</span>
+<span id="cb4-770"><a href="#cb4-770"></a><span class="ss">*   </span>**效应平方和 ($S_A$)**：反映水平间的差异（由因素引起）。</span>
+<span id="cb4-771"><a href="#cb4-771"></a><span class="ss">*   </span>**误差平方和 ($S_E$)**：反映水平内的随机误差。</span>
+<span id="cb4-772"><a href="#cb4-772"></a><span class="ss">*   </span>**推导过程**：</span>
+<span id="cb4-773"><a href="#cb4-773"></a>    $$S_T = \sum_{i=1}^s\sum_{j=1}^{n_i}(X_{ij} - \bar{X})^2 = \sum_{i=1}^s\sum_{j=1}^{n_i} a^2$$</span>
+<span id="cb4-774"><a href="#cb4-774"></a>    $$= \sum\sum(X_{ij} - \bar{X}_{i\cdot})^2 + \sum n_i(\bar{X}_{i\cdot} - \bar{X})^2 + 0 = S_E + S_A$$</span>
+<span id="cb4-775"><a href="#cb4-775"></a>    *(注：中间项乘积和为0，因为 $\sum(X_{ij} - \bar{X}_{i\cdot}) = 0$)*。</span>
+<span id="cb4-776"><a href="#cb4-776"></a></span>
+<span id="cb4-777"><a href="#cb4-777"></a><span class="fu">#### 5. 检验统计量 (F 检验)</span></span>
+<span id="cb4-778"><a href="#cb4-778"></a><span class="ss">*   </span>**均方 (Mean Square)**：$MS_A = \frac{S_A}{s-1}$， $MS_E = \frac{S_E}{n-s}$。</span>
+<span id="cb4-779"><a href="#cb4-779"></a><span class="ss">*   </span>**统计量**：**$F = \frac{MS_A}{MS_E} \sim F(s-1, n-s)$**。</span>
+<span id="cb4-780"><a href="#cb4-780"></a><span class="ss">*   </span>**决策规则**：若 $F &gt; F_{\alpha}(s-1, n-s)$，则拒绝 $H_0$，说明因素 A 影响显著。</span>
+<span id="cb4-781"><a href="#cb4-781"></a></span>
+<span id="cb4-782"><a href="#cb4-782"></a>---</span>
 <span id="cb4-783"><a href="#cb4-783"></a></span>
-<span id="cb4-784"><a href="#cb4-784"></a><span class="fu">#### 2. 平方和分解公式</span></span>
-<span id="cb4-785"><a href="#cb4-785"></a>在考虑交互作用时，总波动被拆分为四部分：</span>
-<span id="cb4-786"><a href="#cb4-786"></a>**$S_T = S_A + S_B + S_{A \times B} + S_E$**</span>
-<span id="cb4-787"><a href="#cb4-787"></a><span class="ss">*   </span>**$S_A, S_B$**：主效应平方和。</span>
-<span id="cb4-788"><a href="#cb4-788"></a><span class="ss">*   </span>**$S_{A \times B}$**：交互作用平方和。</span>
-<span id="cb4-789"><a href="#cb4-789"></a><span class="ss">*   </span>**$S_E$**：随机误差平方和（要求每个组合下有重复实验）。</span>
-<span id="cb4-790"><a href="#cb4-790"></a></span>
-<span id="cb4-791"><a href="#cb4-791"></a><span class="fu">#### 3. 统计推断</span></span>
-<span id="cb4-792"><a href="#cb4-792"></a>需要分别对因素 A、因素 B 及交互作用 $A \times B$ 进行三次 F 检验。</span>
-<span id="cb4-793"><a href="#cb4-793"></a></span>
-<span id="cb4-794"><a href="#cb4-794"></a>---</span>
-<span id="cb4-795"><a href="#cb4-795"></a></span>
-<span id="cb4-796"><a href="#cb4-796"></a><span class="fu">### 正交试验设计及其方差分析 (Orthogonal Design)</span></span>
-<span id="cb4-797"><a href="#cb4-797"></a></span>
-<span id="cb4-798"><a href="#cb4-798"></a>*注：此内容在 Source 5 中被详细列出。*</span>
-<span id="cb4-799"><a href="#cb4-799"></a><span class="ss">*   </span>**正交表**：利用特定的表格（如 $L_9(3^4)$）安排实验，旨在用最少的实验次数覆盖多种因素的组合。</span>
-<span id="cb4-800"><a href="#cb4-800"></a><span class="ss">*   </span>**方差分析步骤**：</span>
-<span id="cb4-801"><a href="#cb4-801"></a><span class="ss">    1. </span>计算各列的极差 $R$，判断因素的主次顺序。</span>
-<span id="cb4-802"><a href="#cb4-802"></a><span class="ss">    2. </span>计算各因素的偏差平方和。</span>
-<span id="cb4-803"><a href="#cb4-803"></a><span class="ss">    3. </span>找出波动最小的一项或列作为误差项 $S_E$，进行 F 检验。</span>
-<span id="cb4-804"><a href="#cb4-804"></a></span>
-<span id="cb4-805"><a href="#cb4-805"></a>---</span>
-<span id="cb4-806"><a href="#cb4-806"></a></span>
-<span id="cb4-807"><a href="#cb4-807"></a><span class="fu">### 变量含义汇总说明表</span></span>
-<span id="cb4-808"><a href="#cb4-808"></a></span>
-<span id="cb4-809"><a href="#cb4-809"></a><span class="pp">|</span> 变量                     <span class="pp">|</span> 含义                    <span class="pp">|</span> 备注           <span class="pp">|</span></span>
-<span id="cb4-810"><a href="#cb4-810"></a><span class="pp">| :---------------------</span> <span class="pp">| :--------------------</span> <span class="pp">| :-----------</span> <span class="pp">|</span></span>
-<span id="cb4-811"><a href="#cb4-811"></a><span class="pp">|</span> **$X_{ij}$**           <span class="pp">|</span> 第 $i$ 个水平下的第 $j$ 次实验值 <span class="pp">|</span> 原始数据         <span class="pp">|</span></span>
-<span id="cb4-812"><a href="#cb4-812"></a><span class="pp">|</span> **$n$**                <span class="pp">|</span> 总实验次数                 <span class="pp">|</span> 所有观测值个数之和    <span class="pp">|</span></span>
-<span id="cb4-813"><a href="#cb4-813"></a><span class="pp">|</span> **$s, r$**             <span class="pp">|</span> 因素 A 和 B 的水平个数        <span class="pp">|</span> 分类数          <span class="pp">|</span></span>
-<span id="cb4-814"><a href="#cb4-814"></a><span class="pp">|</span> **$\bar{X}_{i\cdot}$** <span class="pp">|</span> 水平 $A_i$ 下的样本均值       <span class="pp">|</span> 局部平衡点        <span class="pp">|</span></span>
-<span id="cb4-815"><a href="#cb4-815"></a><span class="pp">|</span> **$\bar{X}$**          <span class="pp">|</span> 所有观测值的总均值             <span class="pp">|</span> 整体重心         <span class="pp">|</span></span>
-<span id="cb4-816"><a href="#cb4-816"></a><span class="pp">|</span> **$S_A$**              <span class="pp">|</span> 因素 A 引起的离差平方和         <span class="pp">|</span> 反映“水平间”差异    <span class="pp">|</span></span>
-<span id="cb4-817"><a href="#cb4-817"></a><span class="pp">|</span> **$S_E$**              <span class="pp">|</span> 误差平方和                 <span class="pp">|</span> 反映“水平内”随机波动  <span class="pp">|</span></span>
-<span id="cb4-818"><a href="#cb4-818"></a><span class="pp">|</span> **$s-1$**              <span class="pp">|</span> 因素 A 的自由度             <span class="pp">|</span> 用于求均方        <span class="pp">|</span></span>
-<span id="cb4-819"><a href="#cb4-819"></a><span class="pp">|</span> **$n-s$**              <span class="pp">|</span> 误差项的自由度               <span class="pp">|</span> 用于求均方        <span class="pp">|</span></span>
-<span id="cb4-820"><a href="#cb4-820"></a><span class="pp">|</span> **$F$**                <span class="pp">|</span> 效应均方与误差均方的比值          <span class="pp">|</span> 判定差异是否由随机性造成 <span class="pp">|</span></span>
-<span id="cb4-821"><a href="#cb4-821"></a></span>
-<span id="cb4-822"><a href="#cb4-822"></a>**学习要点总结**：</span>
-<span id="cb4-823"><a href="#cb4-823"></a><span class="ss">1.  </span>**方差分析的本质**：是通过比较“由于水平不同造成的波动”和“由实验误差造成的波动”的大小，来判断均值是否有显著差异 。</span>
-<span id="cb4-824"><a href="#cb4-824"></a><span class="ss">2.  </span>**方差分析表**：考试和应用中，通常将 $S, df, MS, F$ 填入一张标准表格，以便清晰地进行决策。</span>
-<span id="cb4-825"><a href="#cb4-825"></a></span>
-<span id="cb4-826"><a href="#cb4-826"></a></span>
-<span id="cb4-827"><a href="#cb4-827"></a><span class="fu"># 10. 回归分析</span></span>
-<span id="cb4-828"><a href="#cb4-828"></a></span>
+<span id="cb4-784"><a href="#cb4-784"></a><span class="fu">### 双因素试验的方差分析 (Two-Factor ANOVA)</span></span>
+<span id="cb4-785"><a href="#cb4-785"></a></span>
+<span id="cb4-786"><a href="#cb4-786"></a>研究两个因素（如温度和压力）同时对实验结果的影响。</span>
+<span id="cb4-787"><a href="#cb4-787"></a></span>
+<span id="cb4-788"><a href="#cb4-788"></a><span class="fu">#### 1. 分类</span></span>
+<span id="cb4-789"><a href="#cb4-789"></a><span class="ss">*   </span>**不考虑交互作用**：因素 A 和 B 独立产生影响。</span>
+<span id="cb4-790"><a href="#cb4-790"></a><span class="ss">*   </span>**考虑交互作用 ($A \times B$)**：两个因素结合时会产生额外的效应（如某种药剂在特定温度下才有效）。</span>
+<span id="cb4-791"><a href="#cb4-791"></a></span>
+<span id="cb4-792"><a href="#cb4-792"></a><span class="fu">#### 2. 平方和分解公式</span></span>
+<span id="cb4-793"><a href="#cb4-793"></a>在考虑交互作用时，总波动被拆分为四部分：</span>
+<span id="cb4-794"><a href="#cb4-794"></a>**$S_T = S_A + S_B + S_{A \times B} + S_E$**</span>
+<span id="cb4-795"><a href="#cb4-795"></a><span class="ss">*   </span>**$S_A, S_B$**：主效应平方和。</span>
+<span id="cb4-796"><a href="#cb4-796"></a><span class="ss">*   </span>**$S_{A \times B}$**：交互作用平方和。</span>
+<span id="cb4-797"><a href="#cb4-797"></a><span class="ss">*   </span>**$S_E$**：随机误差平方和（要求每个组合下有重复实验）。</span>
+<span id="cb4-798"><a href="#cb4-798"></a></span>
+<span id="cb4-799"><a href="#cb4-799"></a><span class="fu">#### 3. 统计推断</span></span>
+<span id="cb4-800"><a href="#cb4-800"></a>需要分别对因素 A、因素 B 及交互作用 $A \times B$ 进行三次 F 检验。</span>
+<span id="cb4-801"><a href="#cb4-801"></a></span>
+<span id="cb4-802"><a href="#cb4-802"></a>---</span>
+<span id="cb4-803"><a href="#cb4-803"></a></span>
+<span id="cb4-804"><a href="#cb4-804"></a><span class="fu">### 正交试验设计及其方差分析 (Orthogonal Design)</span></span>
+<span id="cb4-805"><a href="#cb4-805"></a></span>
+<span id="cb4-806"><a href="#cb4-806"></a>*注：此内容在 Source 5 中被详细列出。*</span>
+<span id="cb4-807"><a href="#cb4-807"></a><span class="ss">*   </span>**正交表**：利用特定的表格（如 $L_9(3^4)$）安排实验，旨在用最少的实验次数覆盖多种因素的组合。</span>
+<span id="cb4-808"><a href="#cb4-808"></a><span class="ss">*   </span>**方差分析步骤**：</span>
+<span id="cb4-809"><a href="#cb4-809"></a><span class="ss">    1. </span>计算各列的极差 $R$，判断因素的主次顺序。</span>
+<span id="cb4-810"><a href="#cb4-810"></a><span class="ss">    2. </span>计算各因素的偏差平方和。</span>
+<span id="cb4-811"><a href="#cb4-811"></a><span class="ss">    3. </span>找出波动最小的一项或列作为误差项 $S_E$，进行 F 检验。</span>
+<span id="cb4-812"><a href="#cb4-812"></a></span>
+<span id="cb4-813"><a href="#cb4-813"></a>---</span>
+<span id="cb4-814"><a href="#cb4-814"></a></span>
+<span id="cb4-815"><a href="#cb4-815"></a><span class="fu">### 变量含义汇总说明表</span></span>
+<span id="cb4-816"><a href="#cb4-816"></a></span>
+<span id="cb4-817"><a href="#cb4-817"></a><span class="pp">|</span> 变量                     <span class="pp">|</span> 含义                    <span class="pp">|</span> 备注           <span class="pp">|</span></span>
+<span id="cb4-818"><a href="#cb4-818"></a><span class="pp">| :---------------------</span> <span class="pp">| :--------------------</span> <span class="pp">| :-----------</span> <span class="pp">|</span></span>
+<span id="cb4-819"><a href="#cb4-819"></a><span class="pp">|</span> **$X_{ij}$**           <span class="pp">|</span> 第 $i$ 个水平下的第 $j$ 次实验值 <span class="pp">|</span> 原始数据         <span class="pp">|</span></span>
+<span id="cb4-820"><a href="#cb4-820"></a><span class="pp">|</span> **$n$**                <span class="pp">|</span> 总实验次数                 <span class="pp">|</span> 所有观测值个数之和    <span class="pp">|</span></span>
+<span id="cb4-821"><a href="#cb4-821"></a><span class="pp">|</span> **$s, r$**             <span class="pp">|</span> 因素 A 和 B 的水平个数        <span class="pp">|</span> 分类数          <span class="pp">|</span></span>
+<span id="cb4-822"><a href="#cb4-822"></a><span class="pp">|</span> **$\bar{X}_{i\cdot}$** <span class="pp">|</span> 水平 $A_i$ 下的样本均值       <span class="pp">|</span> 局部平衡点        <span class="pp">|</span></span>
+<span id="cb4-823"><a href="#cb4-823"></a><span class="pp">|</span> **$\bar{X}$**          <span class="pp">|</span> 所有观测值的总均值             <span class="pp">|</span> 整体重心         <span class="pp">|</span></span>
+<span id="cb4-824"><a href="#cb4-824"></a><span class="pp">|</span> **$S_A$**              <span class="pp">|</span> 因素 A 引起的离差平方和         <span class="pp">|</span> 反映“水平间”差异    <span class="pp">|</span></span>
+<span id="cb4-825"><a href="#cb4-825"></a><span class="pp">|</span> **$S_E$**              <span class="pp">|</span> 误差平方和                 <span class="pp">|</span> 反映“水平内”随机波动  <span class="pp">|</span></span>
+<span id="cb4-826"><a href="#cb4-826"></a><span class="pp">|</span> **$s-1$**              <span class="pp">|</span> 因素 A 的自由度             <span class="pp">|</span> 用于求均方        <span class="pp">|</span></span>
+<span id="cb4-827"><a href="#cb4-827"></a><span class="pp">|</span> **$n-s$**              <span class="pp">|</span> 误差项的自由度               <span class="pp">|</span> 用于求均方        <span class="pp">|</span></span>
+<span id="cb4-828"><a href="#cb4-828"></a><span class="pp">|</span> **$F$**                <span class="pp">|</span> 效应均方与误差均方的比值          <span class="pp">|</span> 判定差异是否由随机性造成 <span class="pp">|</span></span>
 <span id="cb4-829"><a href="#cb4-829"></a></span>
-<span id="cb4-830"><a href="#cb4-830"></a>---</span>
-<span id="cb4-831"><a href="#cb4-831"></a></span>
-<span id="cb4-832"><a href="#cb4-832"></a><span class="fu">### 回归分析概述 (Overview)</span></span>
+<span id="cb4-830"><a href="#cb4-830"></a>**学习要点总结**：</span>
+<span id="cb4-831"><a href="#cb4-831"></a><span class="ss">1.  </span>**方差分析的本质**：是通过比较“由于水平不同造成的波动”和“由实验误差造成的波动”的大小，来判断均值是否有显著差异 。</span>
+<span id="cb4-832"><a href="#cb4-832"></a><span class="ss">2.  </span>**方差分析表**：考试和应用中，通常将 $S, df, MS, F$ 填入一张标准表格，以便清晰地进行决策。</span>
 <span id="cb4-833"><a href="#cb4-833"></a></span>
-<span id="cb4-834"><a href="#cb4-834"></a>本节主要介绍回归分析的基本任务和建模背景。</span>
-<span id="cb4-835"><a href="#cb4-835"></a></span>
-<span id="cb4-836"><a href="#cb4-836"></a><span class="ss">1.  </span>**回归分析的任务**：</span>
-<span id="cb4-837"><a href="#cb4-837"></a><span class="ss">    *   </span>确定变量间的数学关系式（回归方程）。</span>
-<span id="cb4-838"><a href="#cb4-838"></a><span class="ss">    *   </span>对关系的密切程度进行统计检验。</span>
-<span id="cb4-839"><a href="#cb4-839"></a><span class="ss">    *   </span>利用回归方程进行预测和控制。</span>
-<span id="cb4-840"><a href="#cb4-840"></a><span class="ss">2.  </span>**相关关系的分类**：</span>
-<span id="cb4-841"><a href="#cb4-841"></a><span class="ss">    *   </span>**函数关系**：确定性关系（如 $y=ax$）。</span>
-<span id="cb4-842"><a href="#cb4-842"></a><span class="ss">    *   </span>**相关关系**：非确定性关系，受随机因素影响（如身高与体重的关系）。</span>
+<span id="cb4-834"><a href="#cb4-834"></a></span>
+<span id="cb4-835"><a href="#cb4-835"></a><span class="fu"># 10. 回归分析</span></span>
+<span id="cb4-836"><a href="#cb4-836"></a></span>
+<span id="cb4-837"><a href="#cb4-837"></a></span>
+<span id="cb4-838"><a href="#cb4-838"></a>---</span>
+<span id="cb4-839"><a href="#cb4-839"></a></span>
+<span id="cb4-840"><a href="#cb4-840"></a><span class="fu">### 回归分析概述 (Overview)</span></span>
+<span id="cb4-841"><a href="#cb4-841"></a></span>
+<span id="cb4-842"><a href="#cb4-842"></a>本节主要介绍回归分析的基本任务和建模背景。</span>
 <span id="cb4-843"><a href="#cb4-843"></a></span>
-<span id="cb4-844"><a href="#cb4-844"></a>---</span>
-<span id="cb4-845"><a href="#cb4-845"></a></span>
-<span id="cb4-846"><a href="#cb4-846"></a><span class="fu">### 参数估计 (Parameter Estimation)</span></span>
-<span id="cb4-847"><a href="#cb4-847"></a></span>
-<span id="cb4-848"><a href="#cb4-848"></a>本节讨论如何利用样本数据确定一元线性回归模型中的未知参数。</span>
-<span id="cb4-849"><a href="#cb4-849"></a></span>
-<span id="cb4-850"><a href="#cb4-850"></a><span class="ss">1.  </span>**一元线性回归模型**：</span>
-<span id="cb4-851"><a href="#cb4-851"></a><span class="ss">    *   </span>**模型公式**：**$Y = \beta_0 + \beta_1 x + \epsilon$**。</span>
-<span id="cb4-852"><a href="#cb4-852"></a><span class="ss">    *   </span>**变量含义**：</span>
-<span id="cb4-853"><a href="#cb4-853"></a><span class="ss">        *   </span>$Y$：因变量（随机变量）。</span>
-<span id="cb4-854"><a href="#cb4-854"></a><span class="ss">        *   </span>$x$：自变量（一般认为是可精确测量的普通变量）。</span>
-<span id="cb4-855"><a href="#cb4-855"></a><span class="ss">        *   </span>$\beta_0, \beta_1$：待估参数（回归系数）。</span>
-<span id="cb4-856"><a href="#cb4-856"></a><span class="ss">        *   </span>$\epsilon$：随机误差，通常假设 $\epsilon \sim N(0, \sigma^2)$。</span>
+<span id="cb4-844"><a href="#cb4-844"></a><span class="ss">1.  </span>**回归分析的任务**：</span>
+<span id="cb4-845"><a href="#cb4-845"></a><span class="ss">    *   </span>确定变量间的数学关系式（回归方程）。</span>
+<span id="cb4-846"><a href="#cb4-846"></a><span class="ss">    *   </span>对关系的密切程度进行统计检验。</span>
+<span id="cb4-847"><a href="#cb4-847"></a><span class="ss">    *   </span>利用回归方程进行预测和控制。</span>
+<span id="cb4-848"><a href="#cb4-848"></a><span class="ss">2.  </span>**相关关系的分类**：</span>
+<span id="cb4-849"><a href="#cb4-849"></a><span class="ss">    *   </span>**函数关系**：确定性关系（如 $y=ax$）。</span>
+<span id="cb4-850"><a href="#cb4-850"></a><span class="ss">    *   </span>**相关关系**：非确定性关系，受随机因素影响（如身高与体重的关系）。</span>
+<span id="cb4-851"><a href="#cb4-851"></a></span>
+<span id="cb4-852"><a href="#cb4-852"></a>---</span>
+<span id="cb4-853"><a href="#cb4-853"></a></span>
+<span id="cb4-854"><a href="#cb4-854"></a><span class="fu">### 参数估计 (Parameter Estimation)</span></span>
+<span id="cb4-855"><a href="#cb4-855"></a></span>
+<span id="cb4-856"><a href="#cb4-856"></a>本节讨论如何利用样本数据确定一元线性回归模型中的未知参数。</span>
 <span id="cb4-857"><a href="#cb4-857"></a></span>
-<span id="cb4-858"><a href="#cb4-858"></a><span class="ss">2.  </span>**最小二乘法 (Least Squares Method)**：</span>
-<span id="cb4-859"><a href="#cb4-859"></a><span class="ss">    *   </span>**核心思想**：寻找估计值 $\hat{\beta}_0, \hat{\beta}_1$，使得观测值 $y_i$ 与拟合值 $\hat{y}_i$ 之间的**残差平方和 $Q$ 最小**。</span>
-<span id="cb4-860"><a href="#cb4-860"></a><span class="ss">    *   </span>**目标函数**：$Q(\beta_0, \beta_1) = \sum_{i=1}^n (y_i - \beta_0 - \beta_1 x_i)^2 \to \min$。</span>
-<span id="cb4-861"><a href="#cb4-861"></a><span class="ss">    *   </span>**正规方程组推导**（利用连等号简述）：</span>
-<span id="cb4-862"><a href="#cb4-862"></a>        $\frac{\partial Q}{\partial \beta_0} = -2\sum(y_i - \beta_0 - \beta_1 x_i) = 0$</span>
-<span id="cb4-863"><a href="#cb4-863"></a>        $\frac{\partial Q}{\partial \beta_1} = -2\sum(y_i - \beta_0 - \beta_1 x_i)x_i = 0$</span>
-<span id="cb4-864"><a href="#cb4-864"></a><span class="ss">    *   </span>**求解结果**：</span>
-<span id="cb4-865"><a href="#cb4-865"></a><span class="ss">        *   </span>**$\hat{\beta}_1 = \frac{S_{xy}}{S_{xx}}$**</span>
-<span id="cb4-866"><a href="#cb4-866"></a><span class="ss">        *   </span>**$\hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x}$**</span>
-<span id="cb4-867"><a href="#cb4-867"></a><span class="ss">    *   </span>**相关中间变量**：</span>
-<span id="cb4-868"><a href="#cb4-868"></a><span class="ss">        *   </span>$S_{xx} = \sum (x_i - \bar{x})^2$：自变量的离差平方和。</span>
-<span id="cb4-869"><a href="#cb4-869"></a><span class="ss">        *   </span>$S_{xy} = \sum (x_i - \bar{x})(y_i - \bar{y})$：自变量与因变量的离差乘积和。</span>
-<span id="cb4-870"><a href="#cb4-870"></a></span>
-<span id="cb4-871"><a href="#cb4-871"></a>---</span>
-<span id="cb4-872"><a href="#cb4-872"></a></span>
-<span id="cb4-873"><a href="#cb4-873"></a><span class="fu">### 假设检验 (Hypothesis Testing)</span></span>
-<span id="cb4-874"><a href="#cb4-874"></a></span>
-<span id="cb4-875"><a href="#cb4-875"></a>建立模型后，必须检验 $x$ 与 $y$ 之间的线性关系是否显著。</span>
-<span id="cb4-876"><a href="#cb4-876"></a></span>
-<span id="cb4-877"><a href="#cb4-877"></a><span class="ss">1.  </span>**显著性检验 (F 检验)**：</span>
-<span id="cb4-878"><a href="#cb4-878"></a><span class="ss">    *   </span>**平方和分解**（核心推导）：</span>
-<span id="cb4-879"><a href="#cb4-879"></a>        **$S_T = S_R + S_E$**</span>
-<span id="cb4-880"><a href="#cb4-880"></a><span class="ss">        *   </span>$S_T = \sum (y_i - \bar{y})^2$：**总平方和**，反映 $y$ 的总波动。</span>
-<span id="cb4-881"><a href="#cb4-881"></a><span class="ss">        *   </span>$S_R = \sum (\hat{y}_i - \bar{y})^2$：**回归平方和**，由 $x$ 引起的变化。</span>
-<span id="cb4-882"><a href="#cb4-882"></a><span class="ss">        *   </span>$S_E = \sum (y_i - \hat{y}_i)^2$：**残差平方和**，由随机误差引起。</span>
-<span id="cb4-883"><a href="#cb4-883"></a><span class="ss">    *   </span>**检验统计量**：**$F = \frac{S_R / 1}{S_E / (n-2)} \sim F(1, n-2)$**。</span>
-<span id="cb4-884"><a href="#cb4-884"></a><span class="ss">    *   </span>**判断依据**：若 $F &gt; F_\alpha$，说明 $x$ 对 $y$ 的线性影响显著。</span>
-<span id="cb4-885"><a href="#cb4-885"></a></span>
-<span id="cb4-886"><a href="#cb4-886"></a><span class="ss">2.  </span>**相关系数检验 (r 检验)**：</span>
-<span id="cb4-887"><a href="#cb4-887"></a><span class="ss">    *   </span>**相关系数 $r$**：**$r = \frac{S_{xy}}{\sqrt{S_{xx} S_{yy}}}$**。</span>
-<span id="cb4-888"><a href="#cb4-888"></a><span class="ss">    *   </span>**含义**：$|r|$ 越接近 1，线性相关性越强；$|r|=0$ 则不相关。</span>
-<span id="cb4-889"><a href="#cb4-889"></a></span>
-<span id="cb4-890"><a href="#cb4-890"></a>---</span>
-<span id="cb4-891"><a href="#cb4-891"></a></span>
-<span id="cb4-892"><a href="#cb4-892"></a><span class="fu">### 预测与控制 (Prediction and Control)</span></span>
+<span id="cb4-858"><a href="#cb4-858"></a><span class="ss">1.  </span>**一元线性回归模型**：</span>
+<span id="cb4-859"><a href="#cb4-859"></a><span class="ss">    *   </span>**模型公式**：**$Y = \beta_0 + \beta_1 x + \epsilon$**。</span>
+<span id="cb4-860"><a href="#cb4-860"></a><span class="ss">    *   </span>**变量含义**：</span>
+<span id="cb4-861"><a href="#cb4-861"></a><span class="ss">        *   </span>$Y$：因变量（随机变量）。</span>
+<span id="cb4-862"><a href="#cb4-862"></a><span class="ss">        *   </span>$x$：自变量（一般认为是可精确测量的普通变量）。</span>
+<span id="cb4-863"><a href="#cb4-863"></a><span class="ss">        *   </span>$\beta_0, \beta_1$：待估参数（回归系数）。</span>
+<span id="cb4-864"><a href="#cb4-864"></a><span class="ss">        *   </span>$\epsilon$：随机误差，通常假设 $\epsilon \sim N(0, \sigma^2)$。</span>
+<span id="cb4-865"><a href="#cb4-865"></a></span>
+<span id="cb4-866"><a href="#cb4-866"></a><span class="ss">2.  </span>**最小二乘法 (Least Squares Method)**：</span>
+<span id="cb4-867"><a href="#cb4-867"></a><span class="ss">    *   </span>**核心思想**：寻找估计值 $\hat{\beta}_0, \hat{\beta}_1$，使得观测值 $y_i$ 与拟合值 $\hat{y}_i$ 之间的**残差平方和 $Q$ 最小**。</span>
+<span id="cb4-868"><a href="#cb4-868"></a><span class="ss">    *   </span>**目标函数**：$Q(\beta_0, \beta_1) = \sum_{i=1}^n (y_i - \beta_0 - \beta_1 x_i)^2 \to \min$。</span>
+<span id="cb4-869"><a href="#cb4-869"></a><span class="ss">    *   </span>**正规方程组推导**（利用连等号简述）：</span>
+<span id="cb4-870"><a href="#cb4-870"></a>        $\frac{\partial Q}{\partial \beta_0} = -2\sum(y_i - \beta_0 - \beta_1 x_i) = 0$</span>
+<span id="cb4-871"><a href="#cb4-871"></a>        $\frac{\partial Q}{\partial \beta_1} = -2\sum(y_i - \beta_0 - \beta_1 x_i)x_i = 0$</span>
+<span id="cb4-872"><a href="#cb4-872"></a><span class="ss">    *   </span>**求解结果**：</span>
+<span id="cb4-873"><a href="#cb4-873"></a><span class="ss">        *   </span>**$\hat{\beta}_1 = \frac{S_{xy}}{S_{xx}}$**</span>
+<span id="cb4-874"><a href="#cb4-874"></a><span class="ss">        *   </span>**$\hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x}$**</span>
+<span id="cb4-875"><a href="#cb4-875"></a><span class="ss">    *   </span>**相关中间变量**：</span>
+<span id="cb4-876"><a href="#cb4-876"></a><span class="ss">        *   </span>$S_{xx} = \sum (x_i - \bar{x})^2$：自变量的离差平方和。</span>
+<span id="cb4-877"><a href="#cb4-877"></a><span class="ss">        *   </span>$S_{xy} = \sum (x_i - \bar{x})(y_i - \bar{y})$：自变量与因变量的离差乘积和。</span>
+<span id="cb4-878"><a href="#cb4-878"></a></span>
+<span id="cb4-879"><a href="#cb4-879"></a>---</span>
+<span id="cb4-880"><a href="#cb4-880"></a></span>
+<span id="cb4-881"><a href="#cb4-881"></a><span class="fu">### 假设检验 (Hypothesis Testing)</span></span>
+<span id="cb4-882"><a href="#cb4-882"></a></span>
+<span id="cb4-883"><a href="#cb4-883"></a>建立模型后，必须检验 $x$ 与 $y$ 之间的线性关系是否显著。</span>
+<span id="cb4-884"><a href="#cb4-884"></a></span>
+<span id="cb4-885"><a href="#cb4-885"></a><span class="ss">1.  </span>**显著性检验 (F 检验)**：</span>
+<span id="cb4-886"><a href="#cb4-886"></a><span class="ss">    *   </span>**平方和分解**（核心推导）：</span>
+<span id="cb4-887"><a href="#cb4-887"></a>        **$S_T = S_R + S_E$**</span>
+<span id="cb4-888"><a href="#cb4-888"></a><span class="ss">        *   </span>$S_T = \sum (y_i - \bar{y})^2$：**总平方和**，反映 $y$ 的总波动。</span>
+<span id="cb4-889"><a href="#cb4-889"></a><span class="ss">        *   </span>$S_R = \sum (\hat{y}_i - \bar{y})^2$：**回归平方和**，由 $x$ 引起的变化。</span>
+<span id="cb4-890"><a href="#cb4-890"></a><span class="ss">        *   </span>$S_E = \sum (y_i - \hat{y}_i)^2$：**残差平方和**，由随机误差引起。</span>
+<span id="cb4-891"><a href="#cb4-891"></a><span class="ss">    *   </span>**检验统计量**：**$F = \frac{S_R / 1}{S_E / (n-2)} \sim F(1, n-2)$**。</span>
+<span id="cb4-892"><a href="#cb4-892"></a><span class="ss">    *   </span>**判断依据**：若 $F &gt; F_\alpha$，说明 $x$ 对 $y$ 的线性影响显著。</span>
 <span id="cb4-893"><a href="#cb4-893"></a></span>
-<span id="cb4-894"><a href="#cb4-894"></a><span class="ss">1.  </span>**点预测**：对于给定的 $x = x_0$，预测值为 **$\hat{y}_0 = \hat{\beta}_0 + \hat{\beta}_1 x_0$**。</span>
-<span id="cb4-895"><a href="#cb4-895"></a><span class="ss">2.  </span>**区间预测**：在给定的置信水平 $1-\alpha$ 下，确定 $y_0$ 的可能范围。</span>
-<span id="cb4-896"><a href="#cb4-896"></a><span class="ss">    *   </span>预测区间不仅考虑参数估计的误差，还需考虑随机误差 $\epsilon$ 的波动。</span>
+<span id="cb4-894"><a href="#cb4-894"></a><span class="ss">2.  </span>**相关系数检验 (r 检验)**：</span>
+<span id="cb4-895"><a href="#cb4-895"></a><span class="ss">    *   </span>**相关系数 $r$**：**$r = \frac{S_{xy}}{\sqrt{S_{xx} S_{yy}}}$**。</span>
+<span id="cb4-896"><a href="#cb4-896"></a><span class="ss">    *   </span>**含义**：$|r|$ 越接近 1，线性相关性越强；$|r|=0$ 则不相关。</span>
 <span id="cb4-897"><a href="#cb4-897"></a></span>
 <span id="cb4-898"><a href="#cb4-898"></a>---</span>
 <span id="cb4-899"><a href="#cb4-899"></a></span>
-<span id="cb4-900"><a href="#cb4-900"></a><span class="fu">### 非线性回归的线性化处理 (Linearization)</span></span>
+<span id="cb4-900"><a href="#cb4-900"></a><span class="fu">### 预测与控制 (Prediction and Control)</span></span>
 <span id="cb4-901"><a href="#cb4-901"></a></span>
-<span id="cb4-902"><a href="#cb4-902"></a>对于某些非线性关系，可以通过变量代换转化为线性回归来处理。</span>
-<span id="cb4-903"><a href="#cb4-903"></a></span>
-<span id="cb4-904"><a href="#cb4-904"></a><span class="ss">*   </span>**指数模型**：$y = a e^{bx}$ $\implies$ 取对数：$\ln y = \ln a + bx$。</span>
-<span id="cb4-905"><a href="#cb4-905"></a><span class="ss">*   </span>**幂函数模型**：$y = a x^b$ $\implies$ 取对数：$\ln y = \ln a + b \ln x$。</span>
-<span id="cb4-906"><a href="#cb4-906"></a><span class="ss">*   </span>**变量含义**：代换后，将 $\ln y$ 看作新的 $Y'$，$\ln x$ 看作新的 $X'$，再套用二节的线性公式即可。</span>
+<span id="cb4-902"><a href="#cb4-902"></a><span class="ss">1.  </span>**点预测**：对于给定的 $x = x_0$，预测值为 **$\hat{y}_0 = \hat{\beta}_0 + \hat{\beta}_1 x_0$**。</span>
+<span id="cb4-903"><a href="#cb4-903"></a><span class="ss">2.  </span>**区间预测**：在给定的置信水平 $1-\alpha$ 下，确定 $y_0$ 的可能范围。</span>
+<span id="cb4-904"><a href="#cb4-904"></a><span class="ss">    *   </span>预测区间不仅考虑参数估计的误差，还需考虑随机误差 $\epsilon$ 的波动。</span>
+<span id="cb4-905"><a href="#cb4-905"></a></span>
+<span id="cb4-906"><a href="#cb4-906"></a>---</span>
 <span id="cb4-907"><a href="#cb4-907"></a></span>
-<span id="cb4-908"><a href="#cb4-908"></a>---</span>
+<span id="cb4-908"><a href="#cb4-908"></a><span class="fu">### 非线性回归的线性化处理 (Linearization)</span></span>
 <span id="cb4-909"><a href="#cb4-909"></a></span>
-<span id="cb4-910"><a href="#cb4-910"></a><span class="fu">### 变量汇总说明表</span></span>
+<span id="cb4-910"><a href="#cb4-910"></a>对于某些非线性关系，可以通过变量代换转化为线性回归来处理。</span>
 <span id="cb4-911"><a href="#cb4-911"></a></span>
-<span id="cb4-912"><a href="#cb4-912"></a><span class="pp">|</span> 变量符号 <span class="pp">|</span> 含义 <span class="pp">|</span> 备注 <span class="pp">|</span></span>
-<span id="cb4-913"><a href="#cb4-913"></a><span class="pp">| :---</span> <span class="pp">| :---</span> <span class="pp">| :---</span> <span class="pp">|</span></span>
-<span id="cb4-914"><a href="#cb4-914"></a><span class="pp">|</span> **$n$** <span class="pp">|</span> 样本容量 <span class="pp">|</span> 观测数据的对数 <span class="pp">|</span></span>
-<span id="cb4-915"><a href="#cb4-915"></a><span class="pp">|</span> **$\hat{y}$** <span class="pp">|</span> 回归拟合值 <span class="pp">|</span> 根据模型计算出的预测值 <span class="pp">|</span></span>
-<span id="cb4-916"><a href="#cb4-916"></a><span class="pp">|</span> **$\bar{x}, \bar{y}$** <span class="pp">|</span> 样本均值 <span class="pp">|</span> 数据的中心点 <span class="pp">|</span></span>
-<span id="cb4-917"><a href="#cb4-917"></a><span class="pp">|</span> **$S_E$** <span class="pp">|</span> 残差平方和 <span class="pp">|</span> 模型未能解释的波动 <span class="pp">|</span></span>
-<span id="cb4-918"><a href="#cb4-918"></a><span class="pp">|</span> **$\sigma^2$** <span class="pp">|</span> 误差方差 <span class="pp">|</span> 反映模型精度，估计值为 $\hat{\sigma}^2 = \frac{S_E}{n-2}$ <span class="pp">|</span></span>
-<span id="cb4-919"><a href="#cb4-919"></a><span class="pp">|</span> **$R^2$** <span class="pp">|</span> 判定系数 <span class="pp">|</span> $R^2 = S_R / S_T$，越接近1模型拟合越好 <span class="pp">|</span></span>
-<span id="cb4-920"><a href="#cb4-920"></a></span>
-<span id="cb4-921"><a href="#cb4-921"></a>**学习建议**：</span>
-<span id="cb4-922"><a href="#cb4-922"></a><span class="ss">1.  </span>**重点**：掌握最小二乘法的计算步骤和 $F$ 检验的原理。</span>
-<span id="cb4-923"><a href="#cb4-923"></a><span class="ss">2.  </span>**技巧**：在计算 $S_{xx}$ 和 $S_{xy}$ 时，利用计算器的统计功能可以大幅提高准确度。</span>
-<span id="cb4-924"><a href="#cb4-924"></a><span class="ss">3.  </span>**后续扩展**：部分教材（如浙大版 ）还会涉及**多元线性回归**，其逻辑与一元相似，但需使用矩阵运算处理。</span>
+<span id="cb4-912"><a href="#cb4-912"></a><span class="ss">*   </span>**指数模型**：$y = a e^{bx}$ $\implies$ 取对数：$\ln y = \ln a + bx$。</span>
+<span id="cb4-913"><a href="#cb4-913"></a><span class="ss">*   </span>**幂函数模型**：$y = a x^b$ $\implies$ 取对数：$\ln y = \ln a + b \ln x$。</span>
+<span id="cb4-914"><a href="#cb4-914"></a><span class="ss">*   </span>**变量含义**：代换后，将 $\ln y$ 看作新的 $Y'$，$\ln x$ 看作新的 $X'$，再套用二节的线性公式即可。</span>
+<span id="cb4-915"><a href="#cb4-915"></a></span>
+<span id="cb4-916"><a href="#cb4-916"></a>---</span>
+<span id="cb4-917"><a href="#cb4-917"></a></span>
+<span id="cb4-918"><a href="#cb4-918"></a><span class="fu">### 变量汇总说明表</span></span>
+<span id="cb4-919"><a href="#cb4-919"></a></span>
+<span id="cb4-920"><a href="#cb4-920"></a><span class="pp">|</span> 变量符号 <span class="pp">|</span> 含义 <span class="pp">|</span> 备注 <span class="pp">|</span></span>
+<span id="cb4-921"><a href="#cb4-921"></a><span class="pp">| :---</span> <span class="pp">| :---</span> <span class="pp">| :---</span> <span class="pp">|</span></span>
+<span id="cb4-922"><a href="#cb4-922"></a><span class="pp">|</span> **$n$** <span class="pp">|</span> 样本容量 <span class="pp">|</span> 观测数据的对数 <span class="pp">|</span></span>
+<span id="cb4-923"><a href="#cb4-923"></a><span class="pp">|</span> **$\hat{y}$** <span class="pp">|</span> 回归拟合值 <span class="pp">|</span> 根据模型计算出的预测值 <span class="pp">|</span></span>
+<span id="cb4-924"><a href="#cb4-924"></a><span class="pp">|</span> **$\bar{x}, \bar{y}$** <span class="pp">|</span> 样本均值 <span class="pp">|</span> 数据的中心点 <span class="pp">|</span></span>
+<span id="cb4-925"><a href="#cb4-925"></a><span class="pp">|</span> **$S_E$** <span class="pp">|</span> 残差平方和 <span class="pp">|</span> 模型未能解释的波动 <span class="pp">|</span></span>
+<span id="cb4-926"><a href="#cb4-926"></a><span class="pp">|</span> **$\sigma^2$** <span class="pp">|</span> 误差方差 <span class="pp">|</span> 反映模型精度，估计值为 $\hat{\sigma}^2 = \frac{S_E}{n-2}$ <span class="pp">|</span></span>
+<span id="cb4-927"><a href="#cb4-927"></a><span class="pp">|</span> **$R^2$** <span class="pp">|</span> 判定系数 <span class="pp">|</span> $R^2 = S_R / S_T$，越接近1模型拟合越好 <span class="pp">|</span></span>
+<span id="cb4-928"><a href="#cb4-928"></a></span>
+<span id="cb4-929"><a href="#cb4-929"></a>**学习建议**：</span>
+<span id="cb4-930"><a href="#cb4-930"></a><span class="ss">1.  </span>**重点**：掌握最小二乘法的计算步骤和 $F$ 检验的原理。</span>
+<span id="cb4-931"><a href="#cb4-931"></a><span class="ss">2.  </span>**技巧**：在计算 $S_{xx}$ 和 $S_{xy}$ 时，利用计算器的统计功能可以大幅提高准确度。</span>
+<span id="cb4-932"><a href="#cb4-932"></a><span class="ss">3.  </span>**后续扩展**：部分教材（如浙大版 ）还会涉及**多元线性回归**，其逻辑与一元相似，但需使用矩阵运算处理。</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

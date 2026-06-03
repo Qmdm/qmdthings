@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "开始/index.qmd",
+                "file": "从0开始的Bevy之旅/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -169,6 +169,12 @@
       "qmd-as-md-obsidian:Toggle Quarto Preview": false
     }
   },
-  "active": "5fe934797a3006f8",
-  "lastOpenFiles": []
+  "active": "781a922324024089",
+  "lastOpenFiles": [
+    "Linux/Linux 上面也有.md",
+    "从0开始的Bevy之旅/index.md",
+    "从0开始的Bevy之旅",
+    "开始/index.qmd",
+    "Linux"
+  ]
 }
