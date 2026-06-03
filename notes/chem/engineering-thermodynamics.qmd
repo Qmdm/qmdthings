@@ -1,8 +1,0 @@
----
-title: "工程化学基础教程"
-author: "QMD"
-date: "2026/03/09"
-description: "工程化学基础教程知识点总结"
-categories: [ "化学" ]
----
-
