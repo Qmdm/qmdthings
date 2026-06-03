@@ -85,9 +85,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -413,7 +413,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(12)</span></div><div class="category" data-category="JUU3JTk0JUI1JUU1JUI3JUE1JUU2JThBJTgwJUU2JTlDJUFG">电工技术 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="JUU1JThDJTk2JUU1JUFEJUE2">化学 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="JUU2JUE4JUExJUU2JThCJTlGJUU3JTk0JUI1JUU4JUI3JUFG">模拟电路 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="JUU2JTk1JUIwJUU1JUFEJTk3JUU3JTk0JUI1JUU4JUI3JUFG">数字电路 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="JUU5JTgwJTlGJUU5JTgwJTlB">速通 <span class="quarto-category-count">(5)</span></div><div class="category" data-category="R2FtZXM=">Games <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -428,9 +428,372 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-title" data-direction="asc">
+        Title
+      </option>
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Oldest
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Newest
+      </option>
+      <option value="listing-author" data-direction="asc">
+        Author
+      </option>
+    </select>
+  </div>
 </div>
 <div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1777799472617" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="thumbnail"><a href="./QBlogs/Android/在你的Android上面部署ArchLinux.html" class="no-external">
 
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./QBlogs/Android/在你的Android上面部署ArchLinux.html" class="no-external"></a>
+</h3>
+<div class="delink listing-description"><a href="./QBlogs/Android/在你的Android上面部署ArchLinux.html" class="no-external">
+
+  hitokoto!
+
+</a></div>
+</div>
+<div class="metadata">
+<a href="./QBlogs/Android/在你的Android上面部署ArchLinux.html" class="no-external">
+<div class="listing-author">
+Zhang San
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1780508513027" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
+<div class="thumbnail"><a href="./QNotes/Elec/电工技术的一些小思考.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./QNotes/Elec/电工技术的一些小思考.html" class="no-external"></a>
+</h3>
+<div class="delink listing-description"><a href="./QNotes/Elec/电工技术的一些小思考.html" class="no-external">
+
+  hitokoto!
+
+</a></div>
+</div>
+<div class="metadata">
+<a href="./QNotes/Elec/电工技术的一些小思考.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="R2FtZXM=" data-listing-date-sort="1778774400000" data-listing-file-modified-sort="1780508513023" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="thumbnail"><a href="./QNotes/Comp/bevy-engine.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./QNotes/Comp/bevy-engine.html" class="no-external">bevy-engine</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('R2FtZXM='); return false;">Games</div>
+
+</div>
+<div class="delink listing-description"><a href="./QNotes/Comp/bevy-engine.html" class="no-external">
+<p>bevy之旅</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./QNotes/Comp/bevy-engine.html" class="no-external">
+<div class="listing-date">
+May 15, 2026
+</div>
+<div class="listing-author">
+QMD
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="JUU2JUE4JUExJUU2JThCJTlGJUU3JTk0JUI1JUU4JUI3JUFG" data-listing-date-sort="1778774400000" data-listing-file-modified-sort="1780508513023" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="thumbnail"><a href="./QNotes/Elec/analog-circuit.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./QNotes/Elec/analog-circuit.html" class="no-external">模拟电路</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU2JUE4JUExJUU2JThCJTlGJUU3JTk0JUI1JUU4JUI3JUFG'); return false;">模拟电路</div>
+
+</div>
+<div class="delink listing-description"><a href="./QNotes/Elec/analog-circuit.html" class="no-external">
+<p>模拟电路速通</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./QNotes/Elec/analog-circuit.html" class="no-external">
+<div class="listing-date">
+May 15, 2026
+</div>
+<div class="listing-author">
+QMD
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="JUU2JTk1JUIwJUU1JUFEJTk3JUU3JTk0JUI1JUU4JUI3JUFG" data-listing-date-sort="1778774400000" data-listing-file-modified-sort="1780508513023" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="thumbnail"><a href="./QNotes/Elec/digit-circuit.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./QNotes/Elec/digit-circuit.html" class="no-external">数字电路</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU2JTk1JUIwJUU1JUFEJTk3JUU3JTk0JUI1JUU4JUI3JUFG'); return false;">数字电路</div>
+
+</div>
+<div class="delink listing-description"><a href="./QNotes/Elec/digit-circuit.html" class="no-external">
+<p>数字电路速通</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./QNotes/Elec/digit-circuit.html" class="no-external">
+<div class="listing-date">
+May 15, 2026
+</div>
+<div class="listing-author">
+QMD
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="JUU5JTgwJTlGJUU5JTgwJTlB" data-listing-date-sort="1778428800000" data-listing-file-modified-sort="1780508513027" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="26" data-listing-word-count-sort="5017">
+<div class="thumbnail"><a href="./QNotes/Mech/engineering-thermodynamics.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./QNotes/Mech/engineering-thermodynamics.html" class="no-external">工程热力学</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU5JTgwJTlGJUU5JTgwJTlB'); return false;">速通</div>
+
+</div>
+<div class="delink listing-description"><a href="./QNotes/Mech/engineering-thermodynamics.html" class="no-external">
+<p>一文快速掌握全书</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./QNotes/Mech/engineering-thermodynamics.html" class="no-external">
+<div class="listing-date">
+May 11, 2026
+</div>
+<div class="listing-author">
+QMD
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-categories="JUU3JTk0JUI1JUU1JUI3JUE1JUU2JThBJTgwJUU2JTlDJUFG" data-listing-date-sort="1775750400000" data-listing-file-modified-sort="1780508513027" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="76" data-listing-word-count-sort="15089">
+<div class="thumbnail"><a href="./QNotes/Elec/electrical-technology.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./QNotes/Elec/electrical-technology.html" class="no-external">电工技术</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU3JTk0JUI1JUU1JUI3JUE1JUU2JThBJTgwJUU2JTlDJUFG'); return false;">电工技术</div>
+
+</div>
+<div class="delink listing-description"><a href="./QNotes/Elec/electrical-technology.html" class="no-external">
+<p>电工技术知识点总结</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./QNotes/Elec/electrical-technology.html" class="no-external">
+<div class="listing-date">
+Apr 10, 2026
+</div>
+<div class="listing-author">
+QMD
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-categories="JUU5JTgwJTlGJUU5JTgwJTlB" data-listing-date-sort="1775750400000" data-listing-file-modified-sort="1780508513027" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24" data-listing-word-count-sort="4751">
+<div class="thumbnail"><a href="./QNotes/Mech/materials-mechanics.html" class="no-external">
+
+<img loading="lazy" src="http://img.qmdthings.top/1777096502342.jpg" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./QNotes/Mech/materials-mechanics.html" class="no-external">材料力学</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU5JTgwJTlGJUU5JTgwJTlB'); return false;">速通</div>
+
+</div>
+<div class="delink listing-description"><a href="./QNotes/Mech/materials-mechanics.html" class="no-external">
+<p>一文快速掌握全书</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./QNotes/Mech/materials-mechanics.html" class="no-external">
+<div class="listing-date">
+Apr 10, 2026
+</div>
+<div class="listing-author">
+QMD
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="8" data-categories="JUU5JTgwJTlGJUU5JTgwJTlB" data-listing-date-sort="1775750400000" data-listing-file-modified-sort="1780508513027" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="840">
+<div class="thumbnail"><a href="./QNotes/Mech/mechanical-principles.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./QNotes/Mech/mechanical-principles.html" class="no-external">机械原理</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU5JTgwJTlGJUU5JTgwJTlB'); return false;">速通</div>
+
+</div>
+<div class="delink listing-description"><a href="./QNotes/Mech/mechanical-principles.html" class="no-external">
+<p>一文快速掌握全书</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./QNotes/Mech/mechanical-principles.html" class="no-external">
+<div class="listing-date">
+Apr 10, 2026
+</div>
+<div class="listing-author">
+QMD
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="9" data-categories="JUU5JTgwJTlGJUU5JTgwJTlB" data-listing-date-sort="1775750400000" data-listing-file-modified-sort="1777649578783" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24" data-listing-word-count-sort="4793">
+<div class="thumbnail"><a href="./QNotes/Math/POM.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./QNotes/Math/POM.html" class="no-external">生产管理</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU5JTgwJTlGJUU5JTgwJTlB'); return false;">速通</div>
+
+</div>
+<div class="delink listing-description"><a href="./QNotes/Math/POM.html" class="no-external">
+<p>一文快速掌握全书</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./QNotes/Math/POM.html" class="no-external">
+<div class="listing-date">
+Apr 10, 2026
+</div>
+<div class="listing-author">
+QMD
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="10" data-categories="JUU5JTgwJTlGJUU5JTgwJTlB" data-listing-date-sort="1775750400000" data-listing-file-modified-sort="1778813862596" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="26" data-listing-word-count-sort="5178">
+<div class="thumbnail"><a href="./QNotes/Math/probability-statistics.html" class="no-external">
+
+<p class="card-img-top"><img loading='lazy' src="QNotes/Math/probability-statistics_files/figure-html/unnamed-chunk-2-1.svg"  class="thumbnail-image card-img"/></p>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./QNotes/Math/probability-statistics.html" class="no-external">概率论与数理统计</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU5JTgwJTlGJUU5JTgwJTlB'); return false;">速通</div>
+
+</div>
+<div class="delink listing-description"><a href="./QNotes/Math/probability-statistics.html" class="no-external">
+<p>一文快速掌握全书</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./QNotes/Math/probability-statistics.html" class="no-external">
+<div class="listing-date">
+Apr 10, 2026
+</div>
+<div class="listing-author">
+QMD
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="11" data-categories="JUU1JThDJTk2JUU1JUFEJUE2" data-listing-date-sort="1772985600000" data-listing-file-modified-sort="1780508513027" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1774">
+<div class="thumbnail"><a href="./QNotes/Mech/engineering-chemistry.html" class="no-external">
+
+<img loading="lazy" src="http://img.qmdthings.top/1777096502335.png" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./QNotes/Mech/engineering-chemistry.html" class="no-external">工程化学基础教程</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU1JThDJTk2JUU1JUFEJUE2'); return false;">化学</div>
+
+</div>
+<div class="delink listing-description"><a href="./QNotes/Mech/engineering-chemistry.html" class="no-external">
+<p>工程化学基础教程知识点总结</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./QNotes/Mech/engineering-chemistry.html" class="no-external">
+<div class="listing-date">
+Mar 9, 2026
+</div>
+<div class="listing-author">
+QMD
+</div>
+</a>
+</div>
+</div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->

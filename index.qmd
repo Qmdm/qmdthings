@@ -2,8 +2,8 @@
 title: "杂乱的Notes/Blogs"
 listing:
   contents: 
-    - posts
-    - notes
+    - QBlogs
+    - QNotes
   feed: true
   sort: "date desc"
   type: default

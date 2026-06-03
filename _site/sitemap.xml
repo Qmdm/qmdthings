@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://qmdthings.top/index.html</loc>
-    <lastmod>2026-04-10T15:58:29.000Z</lastmod>
+    <lastmod>2026-06-03T17:47:11.315Z</lastmod>
   </url>
   <url>
     <loc>https://qmdthings.top/setup/电子电路.html</loc>
@@ -13,20 +13,28 @@
     <lastmod>2026-04-12T13:58:56.000Z</lastmod>
   </url>
   <url>
-    <loc>https://qmdthings.top/notes/stats/probability-statistics.html</loc>
-    <lastmod>2026-05-08T02:38:44.731Z</lastmod>
+    <loc>https://qmdthings.top/QNotes/Math/POM.html</loc>
+    <lastmod>2026-05-01T15:32:58.783Z</lastmod>
   </url>
   <url>
-    <loc>https://qmdthings.top/notes/mech/mechanical-principles.html</loc>
-    <lastmod>2026-04-23T13:51:17.000Z</lastmod>
+    <loc>https://qmdthings.top/QNotes/Mech/materials-mechanics.html</loc>
+    <lastmod>2026-06-03T17:41:53.027Z</lastmod>
   </url>
   <url>
-    <loc>https://qmdthings.top/notes/elec/electrical-technology.html</loc>
-    <lastmod>2026-04-28T11:45:53.000Z</lastmod>
+    <loc>https://qmdthings.top/QNotes/Mech/engineering-chemistry.html</loc>
+    <lastmod>2026-06-03T17:41:53.027Z</lastmod>
   </url>
   <url>
-    <loc>https://qmdthings.top/notes/chem/engineering-chemistry.html</loc>
-    <lastmod>2026-04-28T09:07:01.000Z</lastmod>
+    <loc>https://qmdthings.top/QNotes/Elec/digit-circuit.html</loc>
+    <lastmod>2026-06-03T17:41:53.023Z</lastmod>
+  </url>
+  <url>
+    <loc>https://qmdthings.top/QNotes/Elec/electrical-technology.html</loc>
+    <lastmod>2026-06-03T17:41:53.027Z</lastmod>
+  </url>
+  <url>
+    <loc>https://qmdthings.top/QBlogs/Android/在你的Android上面部署ArchLinux.html</loc>
+    <lastmod>2026-05-03T09:11:12.617Z</lastmod>
   </url>
   <url>
     <loc>https://qmdthings.top/fun/生活/Linux上面也有NFC!.html</loc>
@@ -34,7 +42,7 @@
   </url>
   <url>
     <loc>https://qmdthings.top/about/qmd.html</loc>
-    <lastmod>2026-04-10T15:58:29.000Z</lastmod>
+    <lastmod>2026-06-03T17:19:29.610Z</lastmod>
   </url>
   <url>
     <loc>https://qmdthings.top/error/404.html</loc>
@@ -45,20 +53,28 @@
     <lastmod>2026-04-29T04:29:20.000Z</lastmod>
   </url>
   <url>
-    <loc>https://qmdthings.top/notes/chem/engineering-thermodynamics.html</loc>
-    <lastmod>2026-04-29T06:52:58.000Z</lastmod>
+    <loc>https://qmdthings.top/QNotes/Comp/bevy-engine.html</loc>
+    <lastmod>2026-06-03T17:41:53.023Z</lastmod>
   </url>
   <url>
-    <loc>https://qmdthings.top/notes/mech/materials-mechanics.html</loc>
-    <lastmod>2026-04-28T12:50:33.000Z</lastmod>
+    <loc>https://qmdthings.top/QNotes/Elec/analog-circuit.html</loc>
+    <lastmod>2026-06-03T17:41:53.023Z</lastmod>
   </url>
   <url>
-    <loc>https://qmdthings.top/notes/mgmt/POM.html</loc>
-    <lastmod>2026-04-29T01:26:03.000Z</lastmod>
+    <loc>https://qmdthings.top/QNotes/Elec/电工技术的一些小思考.html</loc>
+    <lastmod>2026-06-03T17:41:53.027Z</lastmod>
   </url>
   <url>
-    <loc>https://qmdthings.top/posts/从0开始的Bevy之旅/index.html</loc>
-    <lastmod>2026-04-29T04:35:39.000Z</lastmod>
+    <loc>https://qmdthings.top/QNotes/Mech/engineering-thermodynamics.html</loc>
+    <lastmod>2026-06-03T17:41:53.027Z</lastmod>
+  </url>
+  <url>
+    <loc>https://qmdthings.top/QNotes/Mech/mechanical-principles.html</loc>
+    <lastmod>2026-06-03T17:41:53.027Z</lastmod>
+  </url>
+  <url>
+    <loc>https://qmdthings.top/QNotes/Math/probability-statistics.html</loc>
+    <lastmod>2026-05-15T02:57:42.596Z</lastmod>
   </url>
   <url>
     <loc>https://qmdthings.top/setup/机械原理.html</loc>
@@ -67,81 +83,5 @@
   <url>
     <loc>https://qmdthings.top/setup/集合.html</loc>
     <lastmod>2026-04-12T14:09:04.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://qmdthings.top/QNotes/stats/probability-statistics.html</loc>
-    <lastmod>2026-05-01T15:32:58.783Z</lastmod>
-  </url>
-  <url>
-    <loc>https://qmdthings.top/QNotes/mech/materials-mechanics.html</loc>
-    <lastmod>2026-05-01T15:32:58.783Z</lastmod>
-  </url>
-  <url>
-    <loc>https://qmdthings.top/QNotes/mech/a.html</loc>
-    <lastmod>2026-05-01T15:32:58.783Z</lastmod>
-  </url>
-  <url>
-    <loc>https://qmdthings.top/QNotes/chem/engineering-chemistry.html</loc>
-    <lastmod>2026-05-01T15:32:58.782Z</lastmod>
-  </url>
-  <url>
-    <loc>https://qmdthings.top/QBlogs/Android/在你的Android上面部署ArchLinux.html</loc>
-    <lastmod>2026-05-03T09:11:12.617Z</lastmod>
-  </url>
-  <url>
-    <loc>https://qmdthings.top/QNotes/elec/electrical-technology.html</loc>
-    <lastmod>2026-05-01T15:32:58.782Z</lastmod>
-  </url>
-  <url>
-    <loc>https://qmdthings.top/QNotes/mech/mechanical-principles.html</loc>
-    <lastmod>2026-05-01T15:32:58.783Z</lastmod>
-  </url>
-  <url>
-    <loc>https://qmdthings.top/QNotes/mgmt/POM.html</loc>
-    <lastmod>2026-05-01T15:32:58.783Z</lastmod>
-  </url>
-  <url>
-    <loc>https://qmdthings.top/QNotes/Math/probability-statistics.html</loc>
-    <lastmod>2026-05-15T02:57:42.596Z</lastmod>
-  </url>
-  <url>
-    <loc>https://qmdthings.top/QNotes/ME/mechanical-principles.html</loc>
-    <lastmod>2026-05-01T15:32:58.783Z</lastmod>
-  </url>
-  <url>
-    <loc>https://qmdthings.top/QNotes/ME/engineering-thermodynamics.html</loc>
-    <lastmod>2026-05-20T07:15:39.787Z</lastmod>
-  </url>
-  <url>
-    <loc>https://qmdthings.top/QNotes/EE/电工技术的一些小思考.html</loc>
-    <lastmod>2026-05-26T12:09:22.604Z</lastmod>
-  </url>
-  <url>
-    <loc>https://qmdthings.top/QNotes/EE/analog-circuit.html</loc>
-    <lastmod>2026-05-15T02:43:41.432Z</lastmod>
-  </url>
-  <url>
-    <loc>https://qmdthings.top/QNotes/CS/bevy-engine.html</loc>
-    <lastmod>2026-05-15T01:54:57.668Z</lastmod>
-  </url>
-  <url>
-    <loc>https://qmdthings.top/QNotes/EE/electrical-technology.html</loc>
-    <lastmod>2026-05-15T01:34:09.600Z</lastmod>
-  </url>
-  <url>
-    <loc>https://qmdthings.top/QNotes/EE/digit-circuit.html</loc>
-    <lastmod>2026-05-15T02:43:39.280Z</lastmod>
-  </url>
-  <url>
-    <loc>https://qmdthings.top/QNotes/ME/engineering-chemistry.html</loc>
-    <lastmod>2026-05-01T15:32:58.782Z</lastmod>
-  </url>
-  <url>
-    <loc>https://qmdthings.top/QNotes/ME/materials-mechanics.html</loc>
-    <lastmod>2026-05-15T10:44:03.388Z</lastmod>
-  </url>
-  <url>
-    <loc>https://qmdthings.top/QNotes/Math/POM.html</loc>
-    <lastmod>2026-05-01T15:32:58.783Z</lastmod>
   </url>
 </urlset>
