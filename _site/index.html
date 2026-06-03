@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.36">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -41,14 +41,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-48ce32951128c622c7c0bd2481e33cf2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-cabbc756652408d113a0442e4f5e5e62.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-48ce32951128c622c7c0bd2481e33cf2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-97ddc2f64b3eb64c87b3f3988fe26c52.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-78caa50454599efaa552ffce86488d1f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-97ddc2f64b3eb64c87b3f3988fe26c52.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6ae62c7143198874f3ebcfe87447500c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-5ccfda529eba86a06c1f0944bf0d4f7d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-6ae62c7143198874f3ebcfe87447500c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-22cc3003e9aeef30e93ff496d574c135.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-50d1ade18999d442ddde15d5822f6c5a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-22cc3003e9aeef30e93ff496d574c135.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -85,9 +85,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -345,11 +345,6 @@ window.Quarto = {
  <span class="menu-text">Blogs</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-blogs">    
-        <li class="dropdown-header">Posts</li>
-        <li>
-    <a class="dropdown-item" href="./posts/开始/index.html">
- <span class="dropdown-text">热化学基础</span></a>
-  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -357,27 +352,6 @@ window.Quarto = {
  <span class="menu-text">Notes</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-notes">    
-        <li class="dropdown-header">Notes</li>
-        <li>
-    <a class="dropdown-item" href="./notes/chem/engineering-chemistry.html">
- <span class="dropdown-text">Chem</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./notes/elec/electrical-technology.html">
- <span class="dropdown-text">Elec</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./notes/mech/a.html">
- <span class="dropdown-text">Mech</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./notes/mgmt/POM.html">
- <span class="dropdown-text">Mgmt</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./notes/stats/probability-statistics.html">
- <span class="dropdown-text">Stats</span></a>
-  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -439,7 +413,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(8)</span></div><div class="category" data-category="JUU3JTk0JUI1JUU1JUI3JUE1JUU2JThBJTgwJUU2JTlDJUFG">电工技术 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2">工程化学 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="JUU1JThDJTk2JUU1JUFEJUE2">化学 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="JUU5JTgwJTlGJUU5JTgwJTlB">速通 <span class="quarto-category-count">(5)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -454,267 +428,9 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-author" data-direction="asc">
-        Author
-      </option>
-    </select>
-  </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="JUU3JTk0JUI1JUU1JUI3JUE1JUU2JThBJTgwJUU2JTlDJUFG" data-listing-date-sort="1775779200000" data-listing-file-modified-sort="1777376753224" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="76" data-listing-word-count-sort="15090">
-<div class="thumbnail"><a href="./notes/elec/electrical-technology.html" class="no-external">
 
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./notes/elec/electrical-technology.html" class="no-external">电工技术</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU3JTk0JUI1JUU1JUI3JUE1JUU2JThBJTgwJUU2JTlDJUFG'); return false;">电工技术</div>
-
-</div>
-<div class="delink listing-description"><a href="./notes/elec/electrical-technology.html" class="no-external">
-<p>电工技术知识点总结</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./notes/elec/electrical-technology.html" class="no-external">
-<div class="listing-date">
-Apr 10, 2026
-</div>
-<div class="listing-author">
-QMD
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="JUU5JTgwJTlGJUU5JTgwJTlB" data-listing-date-sort="1775779200000" data-listing-file-modified-sort="1777425963262" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24" data-listing-word-count-sort="4793">
-<div class="thumbnail"><a href="./notes/mgmt/POM.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./notes/mgmt/POM.html" class="no-external">生产管理</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU5JTgwJTlGJUU5JTgwJTlB'); return false;">速通</div>
-
-</div>
-<div class="delink listing-description"><a href="./notes/mgmt/POM.html" class="no-external">
-<p>一文快速掌握全书</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./notes/mgmt/POM.html" class="no-external">
-<div class="listing-date">
-Apr 10, 2026
-</div>
-<div class="listing-author">
-QMD
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="JUU5JTgwJTlGJUU5JTgwJTlB" data-listing-date-sort="1775779200000" data-listing-file-modified-sort="1777002107493" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="26" data-listing-word-count-sort="5173">
-<div class="thumbnail"><a href="./notes/stats/probability-statistics.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="notes/stats/probability-statistics_files/figure-html/unnamed-chunk-2-1.svg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./notes/stats/probability-statistics.html" class="no-external">概率论与数理统计</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU5JTgwJTlGJUU5JTgwJTlB'); return false;">速通</div>
-
-</div>
-<div class="delink listing-description"><a href="./notes/stats/probability-statistics.html" class="no-external">
-<p>一文快速掌握全书</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./notes/stats/probability-statistics.html" class="no-external">
-<div class="listing-date">
-Apr 10, 2026
-</div>
-<div class="listing-author">
-QMD
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="JUU5JTgwJTlGJUU5JTgwJTlB" data-listing-date-sort="1775779200000" data-listing-file-modified-sort="1777380633822" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="19" data-listing-word-count-sort="3693">
-<div class="thumbnail"><a href="./notes/mech/materials-mechanics.html" class="no-external">
-
-<img loading="lazy" src="http://img.qmdthings.top/1777096502342.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./notes/mech/materials-mechanics.html" class="no-external">材料力学</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU5JTgwJTlGJUU5JTgwJTlB'); return false;">速通</div>
-
-</div>
-<div class="delink listing-description"><a href="./notes/mech/materials-mechanics.html" class="no-external">
-<p>一文快速掌握全书</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./notes/mech/materials-mechanics.html" class="no-external">
-<div class="listing-date">
-Apr 10, 2026
-</div>
-<div class="listing-author">
-QMD
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="JUU5JTgwJTlGJUU5JTgwJTlB" data-listing-date-sort="1775779200000" data-listing-file-modified-sort="1776952277243" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="840">
-<div class="thumbnail"><a href="./notes/mech/mechanical-principles.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./notes/mech/mechanical-principles.html" class="no-external">机械原理</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU5JTgwJTlGJUU5JTgwJTlB'); return false;">速通</div>
-
-</div>
-<div class="delink listing-description"><a href="./notes/mech/mechanical-principles.html" class="no-external">
-<p>一文快速掌握全书</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./notes/mech/mechanical-principles.html" class="no-external">
-<div class="listing-date">
-Apr 10, 2026
-</div>
-<div class="listing-author">
-QMD
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="JUU5JTgwJTlGJUU5JTgwJTlB" data-listing-date-sort="1775779200000" data-listing-file-modified-sort="1777377483072" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="20" data-listing-word-count-sort="3891">
-<div class="thumbnail"><a href="./notes/mech/a.html" class="no-external">
-
-<img loading="lazy" src="http://img.qmdthings.top/1777096502342.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./notes/mech/a.html" class="no-external">材料力学</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU5JTgwJTlGJUU5JTgwJTlB'); return false;">速通</div>
-
-</div>
-<div class="delink listing-description"><a href="./notes/mech/a.html" class="no-external">
-<p>一文快速掌握全书</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./notes/mech/a.html" class="no-external">
-<div class="listing-date">
-Apr 10, 2026
-</div>
-<div class="listing-author">
-QMD
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2" data-listing-date-sort="1773014400000" data-listing-file-modified-sort="1775836709849" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<div class="thumbnail"><a href="./posts/开始/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/开始/index.html" class="no-external">热化学基础</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU1JUI3JUE1JUU3JUE4JThCJUU1JThDJTk2JUU1JUFEJUE2'); return false;">工程化学</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/开始/index.html" class="no-external">
-<p>工程化学的第一章</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/开始/index.html" class="no-external">
-<div class="listing-date">
-Mar 9, 2026
-</div>
-<div class="listing-author">
-QMD
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="JUU1JThDJTk2JUU1JUFEJUE2" data-listing-date-sort="1773014400000" data-listing-file-modified-sort="1777367221732" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1774">
-<div class="thumbnail"><a href="./notes/chem/engineering-chemistry.html" class="no-external">
-
-<img loading="lazy" src="http://img.qmdthings.top/1777096502335.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./notes/chem/engineering-chemistry.html" class="no-external">工程化学基础教程</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU1JThDJTk2JUU1JUFEJUE2'); return false;">化学</div>
-
-</div>
-<div class="delink listing-description"><a href="./notes/chem/engineering-chemistry.html" class="no-external">
-<p>工程化学基础教程知识点总结</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./notes/chem/engineering-chemistry.html" class="no-external">
-<div class="listing-date">
-Mar 9, 2026
-</div>
-<div class="listing-author">
-QMD
-</div>
-</a>
-</div>
-</div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->

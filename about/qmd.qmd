@@ -5,9 +5,6 @@ image-alt: 这里应该有一只濑户璨
 about:
   template: jolla
   links:
-    - icon: github
-      text: Github
-      href: https://github.com/Qmdm
     - icon: envelope
       text: Email
       href: mailto:qmd@ctgu.edu.cn
