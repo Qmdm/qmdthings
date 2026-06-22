@@ -1,0 +1,15 @@
+{
+  "hash": "ce143f0a1745d0af064f442550a87508",
+  "result": {
+    "engine": "knitr",
+    "markdown": "",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

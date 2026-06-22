@@ -1,6 +1,5 @@
 # Build output
 _site/
-_freeze/
 
 # Quarto
 .quartoignore 
