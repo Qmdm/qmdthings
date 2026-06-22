@@ -128,11 +128,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     a.textContent = "hitokoto!";
     p.appendChild(a);
     main.prepend(p);
-    fetch("https://v1.hitokoto.cn?c=k")
+    fetch("https://v1.jinrishici.com/all.json")
       .then(r => r.json())
       .then(data => {
-        a.href = "https://hitokoto.cn/?uuid=" + data.uuid;
-        a.textContent = data.hitokoto;
+        a.textContent = data.content + "　—— " + data.author + "《" + data.work + "》";
       })
       .catch(console.error);
     a.addEventListener("click", e => e.preventDefault());
