@@ -4,7 +4,8 @@ listing:
   contents: 
     - QBlogs
     - QNotes
-  feed: true
+  feed:
+    type: partial
   sort: "date desc"
   type: default
   categories: true
