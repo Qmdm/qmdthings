@@ -128,12 +128,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="QMD的杂物间">
-<meta property="og:description" content="琐事随笔">
 <meta property="og:image" content="https://qmdthings.top/assets/share-cards/default.jpg">
 <meta property="og:site_name" content="QMD的杂物间">
 <meta property="og:locale" content="zh_CN">
 <meta name="twitter:title" content="QMD的杂物间">
-<meta name="twitter:description" content="琐事随笔">
 <meta name="twitter:image" content="https://qmdthings.top/assets/share-cards/default.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -475,26 +473,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content"><div class="quarto-title-block"><div class="quarto-title-tools-only"><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source Code</button></div></div>
 
-<p id="hitokoto">
-  <a href="#" id="hitokoto_text" style="text-decoration: none">hitokoto!</a>
-</p>
-
-<script>
-  const hitokotoElement = document.querySelector("#hitokoto_text");
-
-  fetch("https://v1.hitokoto.cn?c=k")
-    .then((response) => response.json())
-    .then((data) => {
-      const hitokoto = document.querySelector("#hitokoto_text");
-      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
-      hitokoto.innerText = data.hitokoto;
-    })
-    .catch(console.error);
-
-  hitokotoElement.addEventListener("click", function (event) {
-    event.preventDefault();
-  });
-</script>
 
 
 
