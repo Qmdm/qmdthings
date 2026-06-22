@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>QMD的杂物间</title>
+<link>https://qmdthings.top/</link>
+<atom:link href="https://qmdthings.top/index.xml" rel="self" type="application/rss+xml"/>
+<description>琐事随笔</description>
+<generator>quarto-1.9.38</generator>
+<lastBuildDate>Fri, 15 May 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>bevy-engine</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/QNotes/Comp/bevy-engine.html</link>
+  <description><![CDATA[ bevy之旅 ]]></description>
+  <category>Games</category>
+  <guid>https://qmdthings.top/QNotes/Comp/bevy-engine.html</guid>
+  <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>模拟电路</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/QNotes/Elec/analog-circuit.html</link>
+  <description><![CDATA[ 模拟电路速通 ]]></description>
+  <category>模拟电路</category>
+  <guid>https://qmdthings.top/QNotes/Elec/analog-circuit.html</guid>
+  <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>数字电路</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/QNotes/Elec/digit-circuit.html</link>
+  <description><![CDATA[ 数字电路速通 ]]></description>
+  <category>数字电路</category>
+  <guid>https://qmdthings.top/QNotes/Elec/digit-circuit.html</guid>
+  <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>工程热力学</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/QNotes/Mech/engineering-thermodynamics.html</link>
+  <description><![CDATA[ 一文快速掌握全书 ]]></description>
+  <category>速通</category>
+  <guid>https://qmdthings.top/QNotes/Mech/engineering-thermodynamics.html</guid>
+  <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>在你的Android上面部署ArchLinux</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/QBlogs/Android/在你的Android上面部署ArchLinux.html</link>
+  <description><![CDATA[ 在 Android 设备上通过 chroot 部署 Arch Linux 的完整教程 ]]></description>
+  <category>Android</category>
+  <category>Linux</category>
+  <guid>https://qmdthings.top/QBlogs/Android/在你的Android上面部署ArchLinux.html</guid>
+  <pubDate>Sun, 03 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>机械原理</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/QNotes/Mech/mechanical-principles.html</link>
+  <description><![CDATA[ 一文快速掌握全书 ]]></description>
+  <category>速通</category>
+  <guid>https://qmdthings.top/QNotes/Mech/mechanical-principles.html</guid>
+  <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>材料力学</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/QNotes/Mech/materials-mechanics.html</link>
+  <description><![CDATA[ 一文快速掌握全书 ]]></description>
+  <category>速通</category>
+  <guid>https://qmdthings.top/QNotes/Mech/materials-mechanics.html</guid>
+  <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
+  <media:content url="http://img.qmdthings.top/1777096502342.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>生产管理</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/QNotes/Math/POM.html</link>
+  <description><![CDATA[ 一文快速掌握全书 ]]></description>
+  <category>速通</category>
+  <guid>https://qmdthings.top/QNotes/Math/POM.html</guid>
+  <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>概率论与数理统计</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/QNotes/Math/probability-statistics.html</link>
+  <description><![CDATA[ 一文快速掌握全书 ]]></description>
+  <category>速通</category>
+  <guid>https://qmdthings.top/QNotes/Math/probability-statistics.html</guid>
+  <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>电工技术</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/QNotes/Elec/electrical-technology.html</link>
+  <description><![CDATA[ 电工技术知识点总结 ]]></description>
+  <category>电工技术</category>
+  <guid>https://qmdthings.top/QNotes/Elec/electrical-technology.html</guid>
+  <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>工程化学基础教程</title>
+  <dc:creator>QMD </dc:creator>
+  <link>https://qmdthings.top/QNotes/Mech/engineering-chemistry.html</link>
+  <description><![CDATA[ 工程化学基础教程知识点总结 ]]></description>
+  <category>化学</category>
+  <guid>https://qmdthings.top/QNotes/Mech/engineering-chemistry.html</guid>
+  <pubDate>Mon, 09 Mar 2026 00:00:00 GMT</pubDate>
+  <media:content url="http://img.qmdthings.top/1777096502335.png" medium="image" type="image/png"/>
+</item>
+</channel>
+</rss>
