@@ -71,7 +71,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../QNotes/Elec/电工技术的一些小思考.html" rel="next">
+<link href="../../QNotes/Math/POM.html" rel="next">
 <link href="../../QNotes/Elec/digit-circuit.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -385,8 +385,8 @@ window.Quarto = {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-notes">    
         <li class="dropdown-header">QNotes</li>
         <li>
-    <a class="dropdown-item" href="../../QNotes/Comp.ignore/bevy-engine.html">
- <span class="dropdown-text">Comp.ignore</span></a>
+    <a class="dropdown-item" href="../../QNotes/Comp/bevy-engine.html">
+ <span class="dropdown-text">Comp</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../QNotes/Elec/analog-circuit.html">
@@ -511,7 +511,7 @@ window.Quarto = {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">Comp.ignore</span></a>
+ <span class="menu-text">Comp</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -519,7 +519,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../QNotes/Comp.ignore/bevy-engine.html" class="sidebar-item-text sidebar-link">
+  <a href="../../QNotes/Comp/bevy-engine.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">bevy-engine</span></a>
   </div>
 </li>
@@ -550,12 +550,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../QNotes/Elec/electrical-technology.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">电工技术</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../QNotes/Elec/电工技术的一些小思考.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">电工技术的一些小思考</span></a>
   </div>
 </li>
       </ul>
@@ -6381,6 +6375,12 @@ u_C = \sqrt{2}U \cos(\omega t + 120^\circ)
 <section id="学习小结-1" class="level3" data-number="10.4.6">
 <h3 data-number="10.4.6" class="anchored" data-anchor-id="学习小结-1"><span class="header-section-number">10.4.6</span> 学习小结</h3>
 <p>非电量电测技术的实质是<strong>信息的跨域传递</strong>。通过传感器，我们将无法直接记录的物理量（如波导管内的微波焦耳热。</p>
+<p>对于电路场 1. 参考方向就是电路的坐标系 2. 基尔霍夫定律: 电流的散度为0,电压的旋度为0,实际上来源于麦克斯韦方程组,我们可以将其写成一个<strong>复势</strong> <span class="math display">\[
+W(z)=\phi(x,y)+j\psi(x,y)
+\]</span> 其中 - <span class="math inline">\(W(z)\)</span>为复势,是解析的,电场与流场相互正交,因为彼此无源无旋 - <span class="math inline">\(\phi\)</span>为电势 - <span class="math inline">\(\psi\)</span>为电流 结合后面对正交时间的关系得到</p>
+<p><span class="math display">\[
+\Phi(z,t)=Re\{W(z)e^{i\omega t}\}
+\]</span></p>
 
 
 <!-- -->
@@ -6861,8 +6861,8 @@ u_C = \sqrt{2}U \cos(\omega t + 120^\circ)
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../QNotes/Elec/电工技术的一些小思考.html" class="pagination-link" aria-label="电工技术的一些小思考">
-        <span class="nav-page-text">电工技术的一些小思考</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../QNotes/Math/POM.html" class="pagination-link" aria-label="生产管理">
+        <span class="nav-page-text">生产管理</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
@@ -10377,7 +10377,24 @@ u_C = \sqrt{2}U \cos(\omega t + 120^\circ)
 <span id="cb1-3509"><a href="#cb1-3509"></a><span class="pp">|</span> **光电池** <span class="pp">|</span> 光强 $\to$ 电流 <span class="pp">|</span> $4.91 \mu A/cd$ <span class="pp">|</span> $1 \sim 912 cd$ <span class="pp">|</span></span>
 <span id="cb1-3510"><a href="#cb1-3510"></a></span>
 <span id="cb1-3511"><a href="#cb1-3511"></a><span class="fu">### 学习小结</span></span>
-<span id="cb1-3512"><a href="#cb1-3512"></a>非电量电测技术的实质是**信息的跨域传递**。通过传感器，我们将无法直接记录的物理量（如波导管内的微波焦耳热。</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-3512"><a href="#cb1-3512"></a>非电量电测技术的实质是**信息的跨域传递**。通过传感器，我们将无法直接记录的物理量（如波导管内的微波焦耳热。</span>
+<span id="cb1-3513"><a href="#cb1-3513"></a></span>
+<span id="cb1-3514"><a href="#cb1-3514"></a>对于电路场</span>
+<span id="cb1-3515"><a href="#cb1-3515"></a><span class="ss">1. </span>参考方向就是电路的坐标系</span>
+<span id="cb1-3516"><a href="#cb1-3516"></a><span class="ss">2. </span>基尔霍夫定律: </span>
+<span id="cb1-3517"><a href="#cb1-3517"></a>电流的散度为0,电压的旋度为0,实际上来源于麦克斯韦方程组,我们可以将其写成一个**复势**</span>
+<span id="cb1-3518"><a href="#cb1-3518"></a>$$</span>
+<span id="cb1-3519"><a href="#cb1-3519"></a>W(z)=\phi(x,y)+j\psi(x,y)</span>
+<span id="cb1-3520"><a href="#cb1-3520"></a>$$</span>
+<span id="cb1-3521"><a href="#cb1-3521"></a>其中</span>
+<span id="cb1-3522"><a href="#cb1-3522"></a><span class="ss">- </span>$W(z)$为复势,是解析的,电场与流场相互正交,因为彼此无源无旋</span>
+<span id="cb1-3523"><a href="#cb1-3523"></a><span class="ss">- </span>$\phi$为电势</span>
+<span id="cb1-3524"><a href="#cb1-3524"></a><span class="ss">- </span>$\psi$为电流</span>
+<span id="cb1-3525"><a href="#cb1-3525"></a>结合后面对正交时间的关系得到</span>
+<span id="cb1-3526"><a href="#cb1-3526"></a></span>
+<span id="cb1-3527"><a href="#cb1-3527"></a>$$</span>
+<span id="cb1-3528"><a href="#cb1-3528"></a>\Phi(z,t)=Re<span class="sc">\{</span>W(z)e^{i\omega t}<span class="sc">\}</span></span>
+<span id="cb1-3529"><a href="#cb1-3529"></a>$$</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
