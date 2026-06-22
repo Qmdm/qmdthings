@@ -1,3 +1,7 @@
 .obsidian/
 .stfolder/
 .stversions/
+
+
+*.ignore
+*.md

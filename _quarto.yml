@@ -1,6 +1,6 @@
 project:
   type: website
-  resources: [assets, posts, notes, fun, error, setup, README.md]
+  resources: [assets, QBlogs, QNotes, fun, error, setup, README.md]
 
 execute:
   freeze: auto
@@ -62,11 +62,11 @@ website:
     - id: blogs
       title: "Blogs"
       contents:
-        - auto: posts
+        - auto: QBlogs
     - id: notes
       title: "Notes"
       contents:
-        - auto: notes
+        - auto: QNotes
     - id: fun
       title: "Fun"
       contents:
