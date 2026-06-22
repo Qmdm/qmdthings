@@ -53,7 +53,7 @@ website:
       - sidebar:fun
     right:
       - icon: rss
-        href: index.xml
+        href: index.rss
       - icon: github
         href: https://github.com
 
