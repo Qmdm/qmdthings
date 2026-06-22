@@ -114,6 +114,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const main = document.querySelector("main") || document.body;
+    const p = document.createElement("p");
+    p.id = "hitokoto";
+    const a = document.createElement("a");
+    a.id = "hitokoto_text";
+    a.href = "#";
+    a.style.textDecoration = "none";
+    a.textContent = "hitokoto!";
+    p.appendChild(a);
+    main.prepend(p);
+    fetch("https://v1.hitokoto.cn?c=k")
+      .then(r => r.json())
+      .then(data => {
+        a.href = "https://hitokoto.cn/?uuid=" + data.uuid;
+        a.textContent = data.hitokoto;
+      })
+      .catch(console.error);
+    a.addEventListener("click", e => e.preventDefault());
+  });
+</script>
 <style>
   .quarto-title-banner { position: relative; overflow: hidden; }
   #wind {
@@ -400,18 +422,6 @@ window.Quarto = {
         <li>
     <a class="dropdown-item" href="../../QNotes/Mech/engineering-chemistry.html">
  <span class="dropdown-text">Mech</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fun" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Fun</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-fun">    
-        <li class="dropdown-header">Fun</li>
-        <li>
-    <a class="dropdown-item" href="../../fun/生活/helloblogs.html">
- <span class="dropdown-text">生活</span></a>
   </li>  
     </ul>
   </li>

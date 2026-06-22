@@ -13,26 +13,30 @@ license: "CC BY-NC-SA"
 
 format:
   html:
-    body-header: |
-      <p id="hitokoto">
-        <a href="#" id="hitokoto_text" style="text-decoration: none">hitokoto!</a>
-      </p>
-      <script>
-        const hitokotoElement = document.querySelector("#hitokoto_text");
-        fetch("https://v1.hitokoto.cn?c=k")
-          .then((response) => response.json())
-          .then((data) => {
-            const hitokoto = document.querySelector("#hitokoto_text");
-            hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`;
-            hitokoto.innerText = data.hitokoto;
-          })
-          .catch(console.error);
-        hitokotoElement.addEventListener("click", function (event) {
-          event.preventDefault();
-        });
-      </script>
     include-in-header:
       - text: |
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const main = document.querySelector("main") || document.body;
+              const p = document.createElement("p");
+              p.id = "hitokoto";
+              const a = document.createElement("a");
+              a.id = "hitokoto_text";
+              a.href = "#";
+              a.style.textDecoration = "none";
+              a.textContent = "hitokoto!";
+              p.appendChild(a);
+              main.prepend(p);
+              fetch("https://v1.hitokoto.cn?c=k")
+                .then(r => r.json())
+                .then(data => {
+                  a.href = "https://hitokoto.cn/?uuid=" + data.uuid;
+                  a.textContent = data.hitokoto;
+                })
+                .catch(console.error);
+              a.addEventListener("click", e => e.preventDefault());
+            });
+          </script>
           <style>
             .quarto-title-banner { position: relative; overflow: hidden; }
             #wind {
