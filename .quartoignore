@@ -2,6 +2,8 @@
 .stfolder/
 .stversions/
 
+# Project docs (not Quarto content)
+DOCS.md
 
+# Custom ignore files
 *.ignore
-*.md

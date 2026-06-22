@@ -1,4 +1,12 @@
-.quartoignore
+# Build output
+_site/
+_freeze/
+
+# Quarto
+.quartoignore 
 /.quarto/
 **/*.quarto_ipynb
 
+# Tools
+reasonix.toml
+.env
