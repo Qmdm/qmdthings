@@ -3,7 +3,7 @@
     "listing": "/index.html",
     "items": [
       "/QNotes/Elec/电工技术的一些小思考.html",
-      "/QNotes/Comp/bevy-engine.html",
+      "/QNotes/Comp.ignore/bevy-engine.html",
       "/QNotes/Elec/analog-circuit.html",
       "/QNotes/Elec/digit-circuit.html",
       "/QNotes/Mech/engineering-thermodynamics.html",
