@@ -50,7 +50,6 @@ website:
         href: about/qmd.qmd
       - sidebar:blogs
       - sidebar:notes
-      - sidebar:fun
     right:
       - icon: rss
         href: index.rss
@@ -67,10 +66,6 @@ website:
       title: "Notes"
       contents:
         - auto: QNotes
-    - id: fun
-      title: "Fun"
-      contents:
-        - auto: fun
 
 format:
   html:
