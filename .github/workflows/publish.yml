@@ -20,9 +20,6 @@ jobs:
       - name: Render Project
         run: quarto render
 
-      - name: Create .rss copy for correct Content-Type
-        run: cp _site/index.xml _site/index.rss
-
       - name: Publish to GitHub Pages
         uses: quarto-dev/quarto-actions/publish@v2
         with:

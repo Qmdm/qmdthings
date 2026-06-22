@@ -52,7 +52,7 @@ website:
       - sidebar:notes
     right:
       - icon: rss
-        href: index.rss
+        href: index.xml
       - icon: github
         href: https://github.com
 
